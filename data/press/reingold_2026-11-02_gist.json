@@ -1,0 +1,364 @@
+{
+ "schema": "press/parallelogram/v0",
+ "kind": "parallelogram",
+ "positions": "seconds",
+ "horizon": null,
+ "arc": null,
+ "transform": "none",
+ "status": "claude-draft",
+ "show": "sp01",
+ "id": "reingold_2026-11-02_gist",
+ "title": "The Gist",
+ "source": {
+  "program": "Olivia Reingold (The Free Press), post on X",
+  "network": "X",
+  "format": "post",
+  "date": "2026-11-02",
+  "title": "Abdul El-Sayed literally just repeated the gist of the claim that got him in hot water this week…",
+  "url": "https://x.com/Olivia_Reingold/status/2117421973726785541",
+  "length": 0,
+  "note": "text post, 5:01 PM PT, quoting El-Sayed that day. The ad she refers to is Rebellion PAC's (Cenk Uygur), not El-Sayed's campaign; his campaign says it isn't affiliated (PolitiFact, 10-30)"
+ },
+ "object": {
+  "label": "El-Sayed's tax line — whose taxes, whose bombs (Michigan Senate seat, two days out; ep 1.1's object, History restarting, at layer 1)",
+  "layer": 1,
+  "legislative": {
+   "void": false,
+   "note": "U.S. military aid to Israel ~$3.8B/yr under the 2016 MOU; recent supplemental spending estimated $16.3–21.7B (PolitiFact, 10-30). El-Sayed opposes military aid to Israel, Egypt, Saudi Arabia, Qatar, the UAE"
+  },
+  "zAxis": {
+   "pos": "the citizen's claim is heard — the taxes come back as schools and care, not bombs",
+   "neg": "it isn't — the claim is refused, or reframed as an attack"
+  }
+ },
+ "transformNote": "one sentence, two readings: a taxpayer's claim, or the gist of an attack — the diagnostic boundary drawn between them",
+ "names": {
+  "AE": "Abdul El-Sayed (D, Senate nominee, quoted)",
+  "OR": "Olivia Reingold (The Free Press)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.1
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.5
+  },
+  "shadowNote": "recognition — the citizen seen and answered by the state",
+  "predicates": {
+   "operative": [],
+   "stated": [
+    "taxes should be spent on you and your kids, not bombs"
+   ],
+   "challenge": [
+    "the gist of the claim that got him in hot water"
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "pay taxes · you and your kids",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "El-Sayed, quoted"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "repeated the gist · condemnation",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "Reingold — The Free Press, ruled RP on the roster 10-15"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-11-02",
+   "what": "cut for ep 1.1 (the diagnostic boundary). Scores are Claude's proposals, unruled; blind to Sailor's hypothesis. Her two lines are scored on what they face (the controversy), not on whether she's right",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 49,
+  "tier": "oscillation zone",
+  "declaredZ": null,
+  "readZ": 0.07,
+  "readZRange": [
+   0.3,
+   -0.4
+  ],
+  "stations": {
+   "LI": null,
+   "RI": null,
+   "LP": {
+    "dia": 26,
+    "spread": [
+     26,
+     26
+    ],
+    "readZ": -0.4,
+    "voices": {
+     "AE": {
+      "dia": 26,
+      "readZ": -0.4,
+      "n": 1
+     }
+    }
+   },
+   "RP": {
+    "dia": 61,
+    "spread": [
+     58,
+     64
+    ],
+    "readZ": 0.3,
+    "voices": {
+     "OR": {
+      "dia": 61,
+      "readZ": 0.3,
+      "n": 2
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "2-corner (LP quoted, RP poster)",
+   "station": null,
+   "strength": 0.8,
+   "note": "the same sentence read two ways — the boundary is the reading"
+  },
+  "lumens": 25,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "AE",
+   "station": "LP",
+   "quote": "it shouldn't be this hard to pay taxes and know that that money's gonna be spent on you and your kids, instead of dropping bombs on somebody else and their kids",
+   "touch": "O",
+   "z": -0.4,
+   "dia": 26,
+   "mode": "open",
+   "note": "a taxpayer's claim, plainly",
+   "chapter": "The line",
+   "normX": 0.371,
+   "normY": 0.5838,
+   "normZ": -0.3,
+   "quadrant": "C"
+  },
+  {
+   "t": 1,
+   "who": "OR",
+   "station": "RP",
+   "quote": "literally just repeated the gist of the claim that got him in hot water this week",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 58,
+   "mode": "open",
+   "note": "faces the controversy, not the spending",
+   "chapter": "The gist",
+   "normX": 0.6577,
+   "normY": 0.7257,
+   "normZ": 0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "treats the status quo as the baseline the claim attacks"
+  },
+  {
+   "t": 2,
+   "who": "OR",
+   "station": "RP",
+   "quote": "the essence of the highly controversial ad that caused Haley Stevens to break with him and sparked condemnation from Jewish leaders across America",
+   "touch": "F",
+   "z": 0.3,
+   "dia": 64,
+   "mode": "open",
+   "note": "ties the line to the PAC ad — which his campaign says it had no part in",
+   "chapter": "The gist",
+   "normX": 0.679,
+   "normY": 0.7385,
+   "normZ": 0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "as above"
+  }
+ ],
+ "closedform": [
+  {
+   "at": "2026-11-05T10:50:22",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 78,
+    "lumens": 17
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "The line takes up the object's flow of tax money into military aid and frames it as a choice between schools and care versus bombs, though it is a campaign line built to win a room.",
+     "flags": []
+    },
+    {
+     "i": 1,
+     "dia": 92,
+     "tier": "denominated",
+     "runs": [
+      92,
+      92,
+      92
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "The line classifies the candidate's claim as a controversy that has already put him in trouble, so it forecloses evaluation of the claim's substance before any engagement with it.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100"
+     ]
+    },
+    {
+     "i": 2,
+     "dia": 92,
+     "tier": "denominated",
+     "runs": [
+      92,
+      92,
+      92
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "The line settles the claim's standing by pointing to who broke with the candidate and who condemned it, without engaging the taxes-and-bombs claim itself.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100"
+     ]
+    }
+   ]
+  },
+  {
+   "at": "2026-11-05T12:29:07",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 75,
+    "lumens": 20
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 40,
+     "tier": "coalition",
+     "runs": [
+      40,
+      40,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "The line engages the object's real tradeoff of domestic tax spending against military spending abroad, but it is a campaign line built to win the room rather than an open statement.",
+     "flags": [
+      "agrees with Sailor's ruling"
+     ]
+    },
+    {
+     "i": 1,
+     "dia": 92,
+     "tier": "denominated",
+     "runs": [
+      92,
+      92,
+      92
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "It files El-Sayed's line under the controversy before weighing its content, so the answer is fixed in advance and nothing about the tax-and-bombs claim is examined.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100",
+      "agrees with Sailor's ruling"
+     ]
+    },
+    {
+     "i": 2,
+     "dia": 92,
+     "tier": "denominated",
+     "runs": [
+      92,
+      92,
+      97
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "It labels the line as a highly controversial ad and points to who condemned it, so the classification replaces any engagement with what the tax-and-bombs claim says.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100"
+     ]
+    }
+   ]
+  }
+ ]
+}

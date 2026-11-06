@@ -1,0 +1,343 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fp_2026-11-05_blame_game_lede",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "partial": "beta lede",
+ "partialNote": "a beta lede — headline + dek + the five paragraphs visible before the wall ('Continue Reading The Free Press'). Runs as data: printed on the paper flagged, excluded from corner composites and indices until the member is subscribed and read in full (Sailor 10-16). The full cut replaces it when the text opens.",
+ "title": "Blame Game",
+ "source": {
+  "program": "The Free Press",
+  "network": "The Free Press (Substack)",
+  "format": "print (beta lede: hed · dek · ¶1–¶5)",
+  "date": "2026-11-05",
+  "title": "Angry, Divided, and Dejected: The GOP Blame Game Has Begun",
+  "byline": "Audrey Fahlberg (Washington correspondent)",
+  "url": "https://www.thefp.com/p/angry-divided-and-dejected-the-gop",
+  "length": 6,
+  "paragraphs": 5,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-11-05_FreePress_Blame_Game/PARTIAL.md",
+  "note": "published 11-05 (feed 02:23 UTC; page modified 15:02 UTC); the 11-05 sweep matched it on 'diesel' (diesel, gasoline, fuel price), 'iran', 'tx-sen' (talarico), 'midterms' — the fullest match of any RP row in the queue. The visible page (five paragraphs to the wall) read 11-06 via the cloud fetch. Cut as a β because nothing fuller exists in RP today: Tucker's 'Blunt Message for Trump on the Midterms' and Shapiro's 'Evening Wire' owed transcripts; the other five Free Press pages are on the vote's geography (the interstate), Dreher, Israel and the newsletter; my call, flagged"
+ },
+ "positions": "blocks",
+ "horizon": "US",
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the price leg (H1c) read by the vote, from the America-First corner's reporter the day after: an 'emerging cohort of Republicans' blames the blue tsunami 'solely' on the Iran war, 'which led to steep increases in gasoline and diesel fuel prices' (the Pew short read of 10-30 linked as the primary); the holder to the Wall Street Journal as the results came in — 'Iran was a piece of it', he 'did the right thing' and 'would have done it again'; that concession read as 'permission' for the vice-president to say the war 'has been a political catastrophe' and it is past time to end it. The pump is on the visible page once, as 'gasoline and diesel fuel prices', with no number; the deal, Russia, the cargo and the Strait are not on it",
+  "layer": 1,
+  "zAxis": {
+   "pos": "prices came down by the deal before the vote, and the vote was not the pump's verdict",
+   "neg": "they did not — a cohort of the holder's own party reads the vote as the war's through the pump, and the holder concedes 'a piece of it'"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's promise — diesel 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11). On this page the holder's concession is at its smallest yet on the record — 'a piece of it' — beside 'would have done it again', and the reporter reads the concession as the office's permission slip. The visible page's vehicle is the party's mood (angry, divided, dejected; a circular firing squad; 'through with MAGA'); the mechanism (the war → the pump → the vote) is one clause in ¶4, attributed to an unnamed cohort, with diesel named and a Pew link as the number the page does not print. What is after the wall — who the cohort is, what the other factions say — is unseen",
+ "names": {
+  "FP": "the publication (hed + dek; the caption's 'a GOP civil war is brewing' is the author's)",
+  "AF": "Audrey Fahlberg (the author) — the RP corner's reporter, Dia-scored",
+  "DT": "Donald Trump (to the Wall Street Journal on election night, as the author reports ¶4) — the holder; constitutive, @O — never Dia-scored; the principal",
+  "JV": "JD Vance (as the author paraphrases his view, ¶5 — no quotation) — the office; constitutive, @O, on the fox 10-30 precedent — never Dia-scored"
+ },
+ "depth": {
+  "what": "distinct touches (O · T · B · M · X) across the opening ÷ scored lines — a measure of whether the lede says more than its headline",
+  "touches": [
+   "F",
+   "T",
+   "M"
+  ],
+  "lines": 6,
+  "value": 0.5,
+  "note": "three touches in six lines — the frame (the mood, three times), the record (Talarico by double digits; South Carolina; Kansas since 1932) and the mechanism (the war → gasoline and diesel → the vote, once). No object as a number on the visible page: the pump is 'gasoline and diesel fuel prices' with a Pew link where the figure would be. Below the 11-04 Dougherty β (0.44 with the pump priced) in substance though not in ratio; the visible text is mood first, mechanism once"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.4
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11). On this page: 'Iran was a piece of it' — the smallest concession on the record, beside 'would have done it again'",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "the count: Talarico by double digits in Texas; South Carolina's senator beaten by a candidate who had never held office; a Kansas Senate seat flipped for the first time since 1932 (¶2)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "the White House expected to lose, not this badly — 'a person familiar with the matter' (¶2)",
+     "z": -0.3
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "the holder to the WSJ: 'Iran was a piece of it'; 'did the right thing'; 'would have done it again' (¶4)",
+     "z": 0.2
+    },
+    {
+     "type": "O",
+     "label": "the office, paraphrased: the war a political catastrophe for the GOP; past time to end it (¶5)",
+     "z": -0.7
+    },
+    {
+     "type": "M",
+     "label": "an emerging cohort of Republicans: the blue tsunami 'solely' the war's, through 'steep increases in gasoline and diesel fuel prices' (¶4; Pew 10-30 linked)",
+     "z": -0.6
+    }
+   ],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Al Jazeera cut today on H6 (aj_2026-11-05_tankers_struck)"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Fox cut today on the pump from the RI? corner (fox_2026-11-05_their_own_record)"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points' 'JD ABANDONS SHIP' is the LP tape on this same object, transcript owed"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "two years ago · seven battleground states · double-digit · 1932 · Tuesday · Wednesday",
+    "denominated": "angry · divided · dejected · blame game · humiliating · impregnable · through with MAGA · circular firing squad · catastrophe · permission",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "double-digit",
+     "1932",
+     "seven battleground states",
+     "Tuesday"
+    ],
+    "denomKeywords": [
+     "angry",
+     "humiliating",
+     "firing squad",
+     "catastrophe",
+     "permission"
+    ],
+    "note": "RP (β — runs as data, not in the corner's composite): the visible page is a mood piece with one mechanism clause; the mechanism is the deal's object by name (diesel) from the holder's own party, attributed to an unnamed cohort. Read z −0.40 across six scored lines; the holder declared +0.20 on the one WSJ line"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-11-06",
+   "what": "daily cut over the 11-05 sweep (no 11-06 sweep on GitHub at 10:33 PT; the newest date in the index used, said so). Hed, dek and five paragraphs to the wall read via the cloud fetch; six scored (all inferred), two constitutive (the holder's WSJ lines; the office paraphrased). Object declared on H1c read by the vote from the RP corner's reporter. β — runs as data. The office's paraphrase carried @O though it is the author's words for his view, with the quotation absent — my call, flagged; depth 0.50 on three touches",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 31,
+  "tier": "fluid",
+  "declaredZ": 0.2,
+  "readZ": -0.4,
+  "readZRange": [
+   -0.2,
+   -0.6
+  ],
+  "stations": {
+   "LI": null,
+   "RI": null,
+   "LP": null,
+   "RP": {
+    "dia": 31,
+    "spread": [
+     18,
+     44
+    ],
+    "readZ": -0.4,
+    "voices": {
+     "AF": {
+      "dia": 29,
+      "readZ": -0.4,
+      "n": 5
+     },
+     "FP": {
+      "dia": 44,
+      "readZ": -0.4,
+      "n": 1
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "none",
+   "station": "RP",
+   "strength": 0.0,
+   "note": "one corner, six lines: the publication's one at 44, the author's five running 18–40 — the mood lines high (36, 40, 30), the count and the mechanism low (20, 18). β: a reading of the visible page only; the blame game itself (who blames whom, after ¶5) is behind the wall. Rule 5 inside the opening: the author 36 → 20 → 40 → 18 → 30 — down to the count, up to the firing squad, down to the mechanism, up to the permission slip"
+  },
+  "lumens": 27,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FP",
+   "station": "RP",
+   "quote": "Angry, divided, and dejected: the GOP blame game has begun; the defeat has turned into distancing the party from some of Trump's views — with no clear idea how to move on, with him or in spite of him",
+   "touch": "F",
+   "z": -0.4,
+   "dia": 44,
+   "mode": "open",
+   "note": "THE DOOR (hed + dek): the vehicle is the party's mood — three adjectives before a noun; the object is not in the door",
+   "chapter": "The door",
+   "normX": 0.6864,
+   "normY": 0.621,
+   "normZ": -0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a party blaming itself after the vote is the price's verdict, read as a mood"
+  },
+  {
+   "t": 1,
+   "who": "AF",
+   "station": "RP",
+   "quote": "two years ago a sweep of the popular vote and seven battleground states left Republicans confident, 'even arrogant', of their grip through the second term; on Tuesday the voters who returned him made clear they are 'through with MAGA'",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 36,
+   "mode": "open",
+   "note": "the frame: the verdict as a mood, dated against 2024",
+   "chapter": "The verdict",
+   "normX": 0.6099,
+   "normY": 0.6572,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "voters 'through with MAGA' is the price's verdict without the price"
+  },
+  {
+   "t": 2,
+   "who": "AF",
+   "station": "RP",
+   "quote": "the White House mood bleak Wednesday; aides expected to lose but not this badly ('a person familiar'); Talarico by double digits in Texas; South Carolina's senator beaten by a first-time candidate; a Kansas Senate seat flipped for the first time since 1932",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 20,
+   "mode": "open",
+   "note": "the count — the page's record line, with one anonymous source and three linked results",
+   "chapter": "The vote",
+   "normX": 0.5786,
+   "normY": 0.6048,
+   "normZ": -0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a count of flips in deep-red states is the vote in against the price"
+  },
+  {
+   "t": 3,
+   "who": "AF",
+   "station": "RP",
+   "quote": "a 'circular GOP firing squad' is forming over what went wrong and how to rebuild",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 40,
+   "mode": "open",
+   "note": "the vehicle, named — the page's highest line after the hed",
+   "chapter": "The blame game",
+   "normX": 0.6298,
+   "normY": 0.6613,
+   "normZ": -0.15,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a firing squad over what went wrong is the verdict's aftermath, not the verdict"
+  },
+  {
+   "t": 4,
+   "who": "AF",
+   "station": "RP",
+   "quote": "an emerging cohort of Republicans believes the blue tsunami should be blamed solely on the Iran war, 'which led to steep increases in gasoline and diesel fuel prices'",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 18,
+   "mode": "open",
+   "note": "THE MECHANISM, ONCE: the war → the pump → the vote, with diesel named, from the holder's own party via an unnamed cohort; the Pew short read of 10-30 linked where the number would be — the page's most fluid line",
+   "chapter": "The mechanism",
+   "normX": 0.5806,
+   "normY": 0.5934,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a cohort of the holder's party reading the vote as the war's through the pump is the price's verdict, named"
+  },
+  {
+   "t": 4,
+   "who": "DT",
+   "station": "O",
+   "quote": "'Iran was a piece of it'; 'did the right thing'; 'would have done it again' — to the Wall Street Journal on Tuesday as the results came in",
+   "touch": "O",
+   "z": 0.2,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — THE SMALLEST CONCESSION ON THE RECORD: 'a piece of it', beside the WSJ 'would have done it again' already carried on aj 11-04. Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.15,
+   "quadrant": "T"
+  },
+  {
+   "t": 5,
+   "who": "AF",
+   "station": "RP",
+   "quote": "the holder's concession gave the vice-president, widely seen as the early 2028 favourite, 'permission' to say what he has privately thought for months",
+   "touch": "F",
+   "z": -0.4,
+   "dia": 30,
+   "mode": "open",
+   "note": "the frame for the office's line: the break read as permitted, not taken — 'permission' the vehicle; 2028 the page's succession note",
+   "chapter": "The office",
+   "normX": 0.6147,
+   "normY": 0.6242,
+   "normZ": -0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a break read as permitted by the holder's concession is the verdict shared inside the ticket"
+  },
+  {
+   "t": 5,
+   "who": "JV",
+   "station": "O",
+   "quote": "the Iran war has been a political catastrophe for the GOP, and it is past time to end it (the author's paraphrase; no quotation)",
+   "touch": "O",
+   "z": -0.7,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — a later sighting of C-vance-1104-reason-is-the-war and C-vance-1104-end-the-war, in the reporter's words for the office's view. Not Dia-scored; carried @O on the fox 10-30 precedent — my call, flagged (the quotation is absent)",
+   "chapter": "The office",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": -0.525,
+   "quadrant": "T"
+  }
+ ]
+}

@@ -1,0 +1,736 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "msnow_2026-11-01_where_are_we_now",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "Where Are We Now",
+ "source": {
+  "program": "MS NOW",
+  "network": "MS NOW (YouTube clip; The Weekend)",
+  "format": "tape",
+  "date": "2026-11-01",
+  "title": "'When it came time to help the wealthy, he did it': Trump's 2024 promises vs. economic reality",
+  "url": "https://www.youtube.com/watch?v=3pXq1gV_JU4",
+  "length": 651,
+  "segments": 296,
+  "transcript": "Transcripts/press/2026-11-01/ms-now_3pXq1gV_JU4.md",
+  "hosts": "a host of The Weekend (unnamed on the captions; the show's hosts are Jonathan Capehart, Jackie Alemany and Eugene Daniels) · the holder, clipped five times (three 2024 campaign clips, two present-tense clips) · six voters in a vox pop, unnamed · Justin Wolfers (University of Michigan; Platypus Economics)",
+  "note": "published 11-01 16:30 UTC; the 11-01 sweep (matched on 'iran' and 'tariff'); transcript pulled by the Mac's 06:30 timer on 11-02. Cut 11-02 from the 11-01 sweep because no 11-02 sweep existed at run time (07:13 PT). Roster lastCut was 11-01 (Month Eight)"
+ },
+ "horizon": "US",
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the price leg (H1c) read from the LI corner two days before the vote as the holder's 2024 promise against the index. The chair sizes it — inflation 'at its current level of 3.7%' with the war named as the cause (1:06), gas '$4.17 per gallon and diesel reaching a record $6.30' (1:17) — then plays the holder in the present tense: 'your prices have come way down … there's no inflation' (2:32), 'they went up under Biden; right now they're going down' (2:52). Six voters answer the promise at the pump and the shelf; an economist names the cause row ('we've invaded Iran, energy prices have gone up', 8:21). The deal, Russia, the cargo and the Strait are not on the tape; the cure is not on the tape either",
+  "layer": 1,
+  "zAxis": {
+   "pos": "prices come down by the deal — soon — and the index turns before the vote",
+   "neg": "they do not — inflation 3.7% with the war as the cause, gas $4.17, diesel at a record $6.30, and the voters asking where the promised fall went"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's own voice, twice over and a year apart: the 2024 pledge ('bring them down very, very rapidly'; 'starting on day one, we will end inflation') and the present-tense claim of delivery ('your prices have come way down'; 'there's no inflation'; 'right now they're going down'). The chair puts the index between them — 3.7%, $4.17, a record $6.30 — and the tape's voters read the gap in their own words ('wasn't the gas prices supposed to go down? … where are we now?'). This is the Press's first LI tape with diesel sized at the pump as a record; the Surveillance floor-stand-in (10-30) had it as the linchpin, Al Jazeera (10-29) as a farm budget. The deal — the holder's cure of 10-11/10-12 — is never mentioned; neither is the dyed-diesel order of 10-05 (on the Daily Show tape cut the same day). The second half of the tape leaves the price for the tax bill and the job market (surface-bound, scored as such)",
+ "names": {
+  "HO": "a host of The Weekend (MS NOW) — unnamed on the captions — the chair",
+  "DT": "Donald Trump (five clips: three from the 2024 campaign, undated on the tape; two present-tense — a press exchange on grocery prices and a rally line) — the holder; constitutive, @O; the principal — never Dia-scored",
+  "V1": "a voter in the vox pop ('the prices keep going up, but people's wages don't') — stationed with the publication",
+  "V2": "a voter in the vox pop ('wasn't the gas prices supposed to go down?') — stationed with the publication",
+  "V3": "a voter in the vox pop ('groceries have gone up, gas has gone up') — stationed with the publication",
+  "V4": "a voter in the vox pop ('a lot of promises … fell flat') — stationed with the publication",
+  "V5": "a voter in the vox pop ('the gas, the rent, the food') — stationed with the publication",
+  "V6": "a voter in the vox pop ('feeding the rich') — stationed with the publication",
+  "JW": "Justin Wolfers (professor of economics and public policy, University of Michigan; host of Platypus Economics) — the guest, stationed with the publication"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.5
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0,
+   "note": "'bring them down very, very rapidly' / 'day one, we will end inflation' (2024) and 'your prices have come way down … there's no inflation' / 'right now they're going down' (present) — the holder's own sentences, five clips"
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "the index as the chair states it: inflation ~3% at the start of the term → 3.7% now, with the tariffs and 'the US and Israel struck Iran' in February 2026 as the causes (0:42–1:09)",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "the pump: gas $4.17 a gallon; diesel 'reaching a record' $6.30 (1:14–1:20) — the fuel the deal is for, at a record, sized on an LI tape for the first time",
+     "z": 1.0
+    },
+    {
+     "type": "T",
+     "label": "the breadth: electricity, apparel, medical services up (1:26); ACA premiums +13%, employer plans ~+10% in 2027, federal workers >10% (6:04–6:34)",
+     "z": 0.7
+    },
+    {
+     "type": "T",
+     "label": "the tax bill's distribution — top 1% +$1.8m average, bottom 50% ~+$1,200 (Center for American Progress, 1:41); the populist cuts sunset after the next presidential election, the rich's are permanent (Wolfers, 5:03–5:20) — a second object, surface-bound to the price",
+     "z": 0.5
+    },
+    {
+     "type": "T",
+     "label": "the job market: 181,000 jobs added in 2025 vs 2.2m in 2024 (the chair, 8:51); unemployment 4.2%; 'close to no population growth' (Wolfers) — surface-bound",
+     "z": 0.4
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "Trump (2024 clips): 'a plan to bring down prices and bring them down very, very rapidly'; 'starting on day one, we will end inflation and make America affordable again'; 'inflation will be in full retreat'",
+     "z": 1.0
+    },
+    {
+     "type": "O",
+     "label": "Trump (present): 'your prices have come way down … we have very low inflation … there's no inflation'; 'they went up under Biden; right now they're going down'; 'there's never been an economy like this'",
+     "z": 1.0
+    },
+    {
+     "type": "F",
+     "label": "'dubious promises'; 'brush off any and all criticism'; 'a lot of promises, a lot of buildup, and then they just fell flat'; 'feeding the rich'; 'the largest redistribution from poor to rich in a single bill'; 'when it came time to help the wealthy, he did it'",
+     "z": 0.6
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "V2, 3:18: 'they say one thing and then they do another — wasn't the gas prices supposed to go down? … where are we now?' — the promise against the pump, by a buyer",
+     "z": 0.8
+    },
+    {
+     "type": "X",
+     "label": "Wolfers, 8:07: 'the president said he would reduce prices — what was the first thing he did? a tariff war … of course we've invaded Iran, energy prices have gone up … higher bond yields … every action in the exact wrong direction' — the cause row against the promise",
+     "z": 0.8
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "3.7% · $4.17 · a record $6.30 · February 2026 · struck Iran · tariffs on nearly everything · premiums 13% · wasn't the gas prices supposed to go down · groceries have gone up · the gas, the rent, the food · invaded Iran, energy prices have gone up",
+    "denominated": "dubious promises · brush off · fell flat · feeding the rich · largest redistribution · tax cheats · he did it · exact wrong direction",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "3.7%",
+     "4.17",
+     "record 6.30",
+     "struck Iran",
+     "tariffs",
+     "premiums",
+     "supposed to go down",
+     "everything's gone up",
+     "cost of living",
+     "energy prices have gone up"
+    ],
+    "denomKeywords": [
+     "dubious",
+     "brush off",
+     "fell flat",
+     "feeding the rich",
+     "redistribution",
+     "tax cheats",
+     "wrong direction"
+    ],
+    "note": "the cable corner sizes the pump and the index in the open, puts the holder's two tenses either side of them, and lets six buyers read the gap; the second half drifts to the tax bill and jobs (surface-bound). Lowest line: the record diesel number (10); ceiling: 'feeding the rich' (52)"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — The Close, Surveillance, Odd Lots and the Bloomberg streams returned 0 items again (the four feeds share one channel id); Fox's 11-01 queue has no page on the price (its 'voters reveal' page carries 'cost of living' once)"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points, Hasan, Chapo, the Grayzone 0 items; Secular Talk 1 item, 0 hits; Bad Faith absent from the sweep's publications"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Tucker ×2 and Shapiro's 'Midterm Cheat Sheet' hit on the slate with no transcript on disk (owed); the Free Press 0 items"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-11-02",
+   "what": "cut from the 11-01 sweep (local copy, transcript on disk from the Mac's 06:30 pull); no 11-02 sweep existed at run time. The LI corner's read of the price leg two days before the vote: the index and the pump sized in the open (3.7%, $4.17, diesel at a record $6.30), the holder's promise and his present-tense denial either side of them, six buyers and an economist reading the gap. My calls: the host left unnamed (the captions never name her; The Weekend's three hosts are in the sweep's own dek for the same show); five holder clips @O as the principal, declared +1.0, the 2024 clips undated on the tape; the reporter's question at 2:44 folded into the holder's line rather than scored (not a stationed voice); the second half of the tape (the tax bill, the IRS, the job market) scored surface-bound at zero rather than left out — eight lines, which pulls the composite up and the Lumens down; V6's 'feeding the rich' scored surface-bound. Reversible",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 27,
+  "tier": "fluid",
+  "declaredZ": 1.0,
+  "readZ": -0.31,
+  "readZRange": [
+   0.0,
+   -0.7
+  ],
+  "stations": {
+   "LI": {
+    "dia": 27,
+    "spread": [
+     10,
+     52
+    ],
+    "readZ": -0.31,
+    "voices": {
+     "HO": {
+      "dia": 24,
+      "readZ": -0.3,
+      "n": 12
+     },
+     "JW": {
+      "dia": 32,
+      "readZ": -0.12,
+      "n": 5
+     },
+     "V1": {
+      "dia": 24,
+      "readZ": -0.5,
+      "n": 1
+     },
+     "V2": {
+      "dia": 22,
+      "readZ": -0.6,
+      "n": 1
+     },
+     "V3": {
+      "dia": 18,
+      "readZ": -0.6,
+      "n": 1
+     },
+     "V4": {
+      "dia": 42,
+      "readZ": -0.5,
+      "n": 1
+     },
+     "V5": {
+      "dia": 20,
+      "readZ": -0.5,
+      "n": 1
+     },
+     "V6": {
+      "dia": 52,
+      "readZ": -0.3,
+      "n": 1
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "LI",
+   "strength": 0.0,
+   "note": "one station, three chairs and a second object: the chair at 10–20 when she reads the index (3.7%, $4.17, $6.30 — the tape's floor), 34–40 when she frames the holder ('dubious', 'brush off'); the voters at 18–24 when they name what went up and 42–52 when they read the promise ('fell flat', 'feeding the rich'); the economist at 24 when he names the cause row and 44–48 when the object is the tax bill. From 4:01 the tape leaves the price for the One Big Beautiful Bill, the IRS and the job market — right domain, wrong plane — scored surface-bound at zero; the economist returns to the object once, at 8:07, with the whole cause row in one breath"
+  },
+  "lumens": 55,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 4,
+   "who": "HO",
+   "station": "LI",
+   "quote": "the top issue on voters' minds — the state of the economy; the very issue that helped propel Donald Trump to victory in 2024",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 14,
+   "mode": "open",
+   "note": "the setting: the price as the vote's object, dated to the last election",
+   "chapter": "The promise",
+   "normX": 0.4293,
+   "normY": 0.4181,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "an economy that is the top issue against the holder is a price not yet down"
+  },
+  {
+   "t": 13,
+   "who": "HO",
+   "station": "LI",
+   "quote": "during the campaign he made many dubious promises about how he was going to fix the economy",
+   "touch": "F",
+   "z": -0.4,
+   "dia": 38,
+   "mode": "open",
+   "note": "'dubious' the vehicle — the shadow framed before the clips play",
+   "chapter": "The promise",
+   "normX": 0.3877,
+   "normY": 0.3352,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "promises called dubious are promises the chair reads as unkept"
+  },
+  {
+   "t": 19,
+   "who": "DT",
+   "station": "O",
+   "quote": "Republicans have a plan to bring down prices and bring them down very, very rapidly",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — THE SHADOW, 2024 (clip undated on the tape): the fall promised, with its speed. Not Dia-scored",
+   "chapter": "The promise",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 24,
+   "who": "DT",
+   "station": "O",
+   "quote": "starting on day one, we will end inflation and make America affordable again; inflation will be in full retreat; our economy will be roaring back",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the pledge dated by its own clause: day one. Not Dia-scored",
+   "chapter": "The promise",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 42,
+   "who": "HO",
+   "station": "LI",
+   "quote": "by the time the second term began, inflation had cooled from its 2022 peak to around 3%; then tariffs on nearly everything the U.S. imports",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 16,
+   "mode": "open",
+   "note": "the baseline sized and the first cause named — the index before the war",
+   "chapter": "The index",
+   "normX": 0.4215,
+   "normY": 0.4148,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a 3% start with tariffs on top is an index the chair reads as rising"
+  },
+  {
+   "t": 59,
+   "who": "HO",
+   "station": "LI",
+   "quote": "February 2026 — the U.S. and Israel struck Iran, an ongoing war that has helped bring inflation to its current level of 3.7%",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE CAUSE ROW: the war dated and tied to the index in one sentence; the number sized",
+   "chapter": "The index",
+   "normX": 0.4211,
+   "normY": 0.4376,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "3.7% with the war as its cause is a price not coming down by a deal"
+  },
+  {
+   "t": 72,
+   "who": "HO",
+   "station": "LI",
+   "quote": "severe pain at the gas pump — prices at $4.17 per gallon and diesel reaching a record $6.30",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 10,
+   "mode": "open",
+   "note": "THE LOWEST LINE — the object sized at the pump: the fuel the deal is for, at a record. The first LI tape to carry the diesel number",
+   "chapter": "The index",
+   "normX": 0.4258,
+   "normY": 0.444,
+   "normZ": -0.525,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "diesel at a record is the deal's price leg not delivered"
+  },
+  {
+   "t": 83,
+   "who": "HO",
+   "station": "LI",
+   "quote": "not just gas and grocery costs — electricity, apparel, medical services have seen sharp increases, and are only about to get higher",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 20,
+   "mode": "open",
+   "note": "the breadth; 'only about to get higher' is the chair's forecast, unsourced",
+   "chapter": "The index",
+   "normX": 0.3991,
+   "normY": 0.4164,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "prices about to get higher read against the promised fall"
+  },
+  {
+   "t": 95,
+   "who": "HO",
+   "station": "LI",
+   "quote": "the One Big Beautiful Bill — households in the top 1% increased their wealth by an average of $1.8 million; the bottom 50% by about $1,200 (Center for American Progress)",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 30,
+   "mode": "surface-bound",
+   "note": "a second object enters: the tax bill's distribution, sized — right domain, wrong plane; the price is not in it",
+   "chapter": "The bill",
+   "normX": 0.3711,
+   "normY": 0.3906,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a distribution reads neither way on the pump; zero"
+  },
+  {
+   "t": 127,
+   "who": "HO",
+   "station": "LI",
+   "quote": "companies hesitant to invest in recruiting — a low-hire, low-fire job market, millions facing difficulty finding work; unemployment historically low at 4.2%",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 22,
+   "mode": "surface-bound",
+   "note": "jobs, sized both ways — surface-bound to the price",
+   "chapter": "The bill",
+   "normX": 0.4111,
+   "normY": 0.3937,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a job market reads neither way on the pump; zero"
+  },
+  {
+   "t": 144,
+   "who": "HO",
+   "station": "LI",
+   "quote": "Trump has continued to brush off any and all criticism about his performance on the economy",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 40,
+   "mode": "open",
+   "note": "the chair's frame for the present-tense clips: 'brush off'",
+   "chapter": "The denial",
+   "normX": 0.3439,
+   "normY": 0.364,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "criticism brushed off is a price the chair reads as still up"
+  },
+  {
+   "t": 152,
+   "who": "DT",
+   "station": "O",
+   "quote": "your prices have come way down; we have very little inflation — everyone said there'll be inflation; we brought inflation way down; there's no inflation",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — the shadow in the present tense: delivery asserted on Z (Z-assertion). Not Dia-scored",
+   "chapter": "The denial",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 171,
+   "who": "DT",
+   "station": "O",
+   "quote": "Inflation? No, you're wrong — they went up under Biden; right now they're going down; there's never been an economy like this",
+   "touch": "O",
+   "z": 1.0,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — to a reporter's question about grocery prices for people without 401Ks: the direction asserted against the asker. Not Dia-scored",
+   "chapter": "The denial",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.75,
+   "quadrant": "T"
+  },
+  {
+   "t": 187,
+   "who": "HO",
+   "station": "LI",
+   "quote": "you don't even need to listen to the facts or our word on it — just listen to the exasperated voters struggling to make ends meet",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 34,
+   "mode": "open",
+   "note": "the hand-off; 'exasperated' the vehicle",
+   "chapter": "The voters",
+   "normX": 0.3904,
+   "normY": 0.352,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "voters offered as the proof are voters the chair reads as paying more"
+  },
+  {
+   "t": 193,
+   "who": "V1",
+   "station": "LI",
+   "quote": "the prices keep going up, but people's wages don't; you're making the same",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 24,
+   "mode": "open",
+   "note": "a buyer's line: the price against the wage, direction only",
+   "chapter": "The voters",
+   "normX": 0.391,
+   "normY": 0.4025,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "prices going up against flat wages is the fall not arrived"
+  },
+  {
+   "t": 198,
+   "who": "V2",
+   "station": "LI",
+   "quote": "they say one thing and then they do another — wasn't the gas prices supposed to go down? the cost of eggs, all this stuff that's supposed to go down — and yet where are we now?",
+   "touch": "X",
+   "z": -0.6,
+   "dia": 22,
+   "mode": "open",
+   "note": "THE CHALLENGE — the promise against the pump by the buyer it was made to; THE TITLE",
+   "chapter": "The voters",
+   "normX": 0.4227,
+   "normY": 0.385,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a buyer asking where the promised fall went reads it as not come"
+  },
+  {
+   "t": 208,
+   "who": "V3",
+   "station": "LI",
+   "quote": "groceries have gone up; gas has gone up; everything's gone up",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 18,
+   "mode": "open",
+   "note": "the direction, three times, unsized",
+   "chapter": "The voters",
+   "normX": 0.401,
+   "normY": 0.4263,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "everything up is the index not turning"
+  },
+  {
+   "t": 211,
+   "who": "V4",
+   "station": "LI",
+   "quote": "with the Republicans it was a lot of promises, a lot of buildup, and then they just fell flat",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 42,
+   "mode": "open",
+   "note": "the promise read as void; 'fell flat' the vehicle",
+   "chapter": "The voters",
+   "normX": 0.3763,
+   "normY": 0.3246,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "promises that fell flat are a price not down"
+  },
+  {
+   "t": 215,
+   "who": "V5",
+   "station": "LI",
+   "quote": "the gas, the rent, the food — the cost of living is too much",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 20,
+   "mode": "open",
+   "note": "the crunch as a list, from the buyer; unsized",
+   "chapter": "The voters",
+   "normX": 0.4107,
+   "normY": 0.4041,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a cost of living called too much is the fall not arrived"
+  },
+  {
+   "t": 223,
+   "who": "V6",
+   "station": "LI",
+   "quote": "he's feeding the rich and making the rich richer and the poor poorer",
+   "touch": "F",
+   "z": -0.3,
+   "dia": 52,
+   "mode": "surface-bound",
+   "note": "THE CEILING of the voters — distribution as the frame; off the pump",
+   "chapter": "The voters",
+   "normX": 0.3569,
+   "normY": 0.2919,
+   "normZ": -0.225,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a frame about who gains reads the price only by implication"
+  },
+  {
+   "t": 241,
+   "who": "HO",
+   "station": "LI",
+   "quote": "the way that we tax the wealthy — the California ballot initiative, across states — a huge federal issue going into 2028",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 36,
+   "mode": "surface-bound",
+   "note": "the chair changes the object to the tax; the price leaves the tape until 5:49",
+   "chapter": "The bill",
+   "normX": 0.3632,
+   "normY": 0.3656,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a tax question reads neither way on the pump; zero"
+  },
+  {
+   "t": 273,
+   "who": "JW",
+   "station": "LI",
+   "quote": "the One Big Beautiful Bill — the largest redistribution from poor to rich in a single bill in American history",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 48,
+   "mode": "surface-bound",
+   "note": "the economist's frame on the second object; the superlative the vehicle",
+   "chapter": "The bill",
+   "normX": 0.3614,
+   "normY": 0.3072,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a distribution claim reads neither way on the pump; zero"
+  },
+  {
+   "t": 306,
+   "who": "JW",
+   "station": "LI",
+   "quote": "no taxes on tips, no taxes on overtime — implemented for four years, they run out just after the next presidential election; the tax cuts for the rich are permanent",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 26,
+   "mode": "surface-bound",
+   "note": "the record on the second object: the sunsets dated — the honest thing the line does",
+   "chapter": "The bill",
+   "normX": 0.379,
+   "normY": 0.405,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a sunset date reads neither way on the pump; zero"
+  },
+  {
+   "t": 322,
+   "who": "JW",
+   "station": "LI",
+   "quote": "when it came time to help the wealthy, he did it",
+   "touch": "F",
+   "z": 0.0,
+   "dia": 44,
+   "mode": "surface-bound",
+   "note": "THE CLIP'S TITLE — the frame, on the tax bill not the price",
+   "chapter": "The bill",
+   "normX": 0.3727,
+   "normY": 0.3179,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a verdict on the tax bill reads neither way on the pump; zero"
+  },
+  {
+   "t": 349,
+   "who": "HO",
+   "station": "LI",
+   "quote": "groceries are high, gas prices are high — and health care: ACA premiums jump again, employer plans up about 10% in 2027, federal workers more than 10%, Obamacare 13%",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 18,
+   "mode": "open",
+   "note": "the pump named again, then the premium sized — the breadth with numbers (the Times cited)",
+   "chapter": "The breadth",
+   "normX": 0.4216,
+   "normY": 0.4047,
+   "normZ": -0.3,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "premiums up by double digits beside a high pump is the crunch widening"
+  },
+  {
+   "t": 487,
+   "who": "JW",
+   "station": "LI",
+   "quote": "the president said he would reduce prices — what was the first thing he did? he started a tariff war; attacked immigrants, losses in the rural workforce; of course we've invaded Iran, energy prices have gone up; an enormous deficit, higher bond yields — every action in the exact wrong direction",
+   "touch": "X",
+   "z": -0.6,
+   "dia": 24,
+   "mode": "open",
+   "note": "THE CHALLENGE from the guest: the whole cause row in one breath, the war's place in it stated ('invaded Iran → energy prices'); 'exact wrong direction' the vehicle",
+   "chapter": "The cause",
+   "normX": 0.3989,
+   "normY": 0.3944,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a cause row running the wrong way is a price not coming down"
+  },
+  {
+   "t": 559,
+   "who": "JW",
+   "station": "LI",
+   "quote": "job growth is slow — a low hire, low fire job market; unemployment still 4.2%; close to no population growth for the first time in my lifetime",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 20,
+   "mode": "surface-bound",
+   "note": "the job market sized; surface-bound to the price",
+   "chapter": "The bill",
+   "normX": 0.4163,
+   "normY": 0.3992,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a job market reads neither way on the pump; zero"
+  }
+ ]
+}

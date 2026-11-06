@@ -1,0 +1,745 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "surv_2026-10-30_the_linchpin",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "The Linchpin",
+ "source": {
+  "program": "Bloomberg Surveillance",
+  "network": "Bloomberg (YouTube)",
+  "format": "tape",
+  "date": "2026-10-30",
+  "title": "Bloomberg Surveillance 10/30/2026",
+  "url": "https://www.youtube.com/watch?v=aGX2Ezs0FG4",
+  "length": 8659,
+  "segments": 2325,
+  "transcript": "Transcripts/press/2026-10-30/surveillance_aGX2Ezs0FG4.md",
+  "hosts": "Lisa Abramowicz · Annmarie Hordern (Jonathan Ferro off) · guests Darius Dale (42 Macro), Erin Covey (Cook Political Report), Tom Forte (Maxim), Jayati Bharadwaj (TD), Jonathan Golub (Seaport), Kay Haigh (Goldman Sachs) · Bloomberg's Tyler Kendall, Vonnie Quinn, Isabelle Lee",
+  "note": "published 10-30 15:38 UTC; the 10-30 sweep (matched on 'midterm' only). The whole 2:24 program is on disk — the first transcript the Mac's own pull has delivered since 10-21; only the register-touching segments are cut (the price, the Strait, the strikes after the vote, the Fed's clock, the vote's price), per the README's rule 1, as a parallelogram — not the floor (the Close is the baseline by rule; Surveillance is the RI corner's second voice). The AI-trade hour, the Amazon call, AstraZeneca and the data-center segment are not scored. Roster lastCut was null: the first Surveillance cut."
+ },
+ "horizon": "US",
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the price leg (H1c) read from the terminal on the Friday before the vote — WTI $104, 'the highest levels since near the beginning of the war'; the price measured where it lands, in the refiner's margin (Exxon refining a record $9.05bn, almost five times a year earlier; Chevron's refining nearly $5bn, four times; 'international prices are up 60%'); its cause named (the war, the Strait 'a little more challenging', Russia–Ukraine, 'diesel has been the linchpin'); and its clock set by two others — the Fed's December meeting and the strikes 'after the midterm elections'",
+  "layer": 1,
+  "zAxis": {
+   "pos": "prices come down by the deal — soon — and the market prices the relief before the vote",
+   "neg": "they do not — crude is at war highs on the Friday before the vote, the refiners book record margins on the gap, and the market's two clocks are a rate decision and a strike, neither of them the deal's"
+  }
+ },
+ "layer2": "who is paid, in what, to let the barrel through — on this tape the answer is the refiner: Chevron's Venezuelan barrels 'cost less than $20' against Brent and WTI 'north of $100' (23:23), 'the most profitable barrels in the entire world'; the cure Fox 10-29 renamed Venezuela is read here as the seller's margin, not the buyer's relief",
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's promise — diesel 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11), 'really fast' / 'very, very rapidly' at Lubbock (fox 10-29). The promise is not on this tape at all; neither is the deal by name. What is on it is the price at the level the war set, the margin the price makes for the refiner, the cause named three ways (the Strait, the strikes, Russia–Ukraine) and the holder's expected instrument — 'drafting that Truth Social post' (26:35). Where Fox Business 10-29 read the same price with the cause removed, the terminal reads it with the cause and without the holder. 'Diesel has been the linchpin' (27:37) is the deal's own fuel named as the market's hinge, by a reader who never mentions the deal",
+ "names": {
+  "LA": "Lisa Abramowicz (host)",
+  "AH": "Annmarie Hordern (host; Washington)",
+  "DD": "Darius Dale (42 Macro) — guest",
+  "TK": "Tyler Kendall (Bloomberg Washington reporter)",
+  "TF": "Tom Forte (Maxim Group) — guest",
+  "JG": "Jonathan Golub (Seaport Research Partners) — guest",
+  "KH": "Kay Haigh (Goldman Sachs) — guest",
+  "VQ": "Vonnie Quinn (Bloomberg Brief)",
+  "IL": "Isabelle Lee (Bloomberg, morning movers)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.55
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0,
+   "note": "the holder's 'really fast' — off the tape; the market's own shadow is the Fed's December meeting standing where the holder's clock should be"
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "WTI ≈$104 on 10-30, 'some of the highest levels since near the beginning of the war'; crude up >2% intraday on the prospect of renewed tensions after the election",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "Exxon Q3: refining earnings a record $9.05bn, almost five times a year earlier; overall profit the fourth highest in its history; dividend raised a 44th consecutive year; shares +52% YTD",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "Chevron Q3: refining nearly $5bn, highest on record, four times a year earlier; adjusted EPS forecast raised; Venezuelan barrels 'cost less than $20'; capex at the low end; shares +52% YTD; refining capacity run at 'almost 100%'",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "'international prices are up 60%' (Hordern, 26:51 — the world market against a White House response)",
+     "z": 0.8
+    },
+    {
+     "type": "T",
+     "label": "the CENTCOM commander (Adm. Brad Cooper, via Fox as relayed) in Washington briefing the president on military options, 10-29/30; 'reports signaling after the midterms another engagement between the United States and Iran'",
+     "z": 0.8
+    },
+    {
+     "type": "T",
+     "label": "Trump cancels in-person rallies in Kansas and Iowa days before the vote; approval at a new low of 30%; ≥20 tele-rallies instead; 44M+ early ballots, on track to pass 2022; GOP + PACs $2.1bn raised",
+     "z": 0.8
+    },
+    {
+     "type": "T",
+     "label": "the Fed: 10-year 4.9%; front end rallying 10bp then 3bp as hikes are repriced; 'the market has taken off one rate hike'; Chair Warsh 'mixed guidance at best, or no guidance'; Hassett (as relayed): 'inflation remains in the pipeline with more tightening required'",
+     "z": 0.7
+    },
+    {
+     "type": "M",
+     "label": "diesel as 'the linchpin' of the energy industry's year, with the Middle East and Russia–Ukraine as the variables (Hordern, 27:37)",
+     "z": 0.7
+    },
+    {
+     "type": "M",
+     "label": "the Strait: 'oil is getting out, but it is getting a little more challenging for some of the ships to go through' (Hordern, 2:48) — H6's throughput conceded and qualified",
+     "z": 0.7
+    },
+    {
+     "type": "B",
+     "label": "Kansas and Iowa as 'farming states highly exposed to higher diesel costs in the middle of harvest season and tariff retaliation' (Kendall, 16:24) — H1 as a farm input, the RI corner's version of aj 10-29's Arkansas budget",
+     "z": 0.7
+    },
+    {
+     "type": "B",
+     "label": "the vote as the market's 'underpriced' risk: a blue wave that could 'shut data center' build-outs (Dale, 7:46–8:14); 50% of voters oppose data centers within three miles (Kendall, 1:05:15)",
+     "z": 0.5
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "'the most salient market risk so underpriced' (Dale); 'absolutely bumper quarter' (Hordern); 'insanely strong', 'wigged out', 'squash this growth' (Golub)",
+     "z": 0.5
+    },
+    {
+     "type": "F",
+     "label": "'a headache for those in the Republican Party' — the refiners' quarter and the party's problem as one sentence (Lee, 1:16:11)",
+     "z": 0.6
+    }
+   ],
+   "challenge": [
+    {
+     "type": "X",
+     "label": "Golub, 59:05: tightening 'is not going to affect inflation coming out of oil in the Middle East' — the Fed's clock refused as the cure for the oil price; the rate crushes 'small business owners', not the barrel",
+     "z": 0.8
+    }
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — not on this tape"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "104 of WTI · highest since near the beginning of the war · a little more challenging through the Strait · after the midterm elections · $9.05 billion, five times · less than $20 a barrel · almost 100% · international prices up 60% · diesel the linchpin · inflation coming out of oil",
+    "denominated": "underpriced · absolutely bumper · insanely strong · wigged out · squash · crush · headache",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "104 of WTI",
+     "highest levels since near the beginning of the war",
+     "a little more challenging",
+     "after the midterm elections",
+     "$9.05 billion",
+     "five times higher",
+     "less than $20 a barrel",
+     "almost 100%",
+     "international prices are up 60%",
+     "diesel has been the linchpin",
+     "inflation coming out of oil in the Middle East"
+    ],
+    "denomKeywords": [
+     "underpriced",
+     "absolutely bumper",
+     "insanely strong",
+     "wigged out",
+     "squash",
+     "crush",
+     "headache"
+    ],
+    "note": "the terminal's chair: the price with its cause, read from the seller's side. Fox's RI pages are read beside it, not inside it"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-31",
+   "what": "first Surveillance cut — the 10-30 sweep (the newest in sweeps/index.json; no 10-31 file at run time), the whole 2:24 program on disk from the Mac's own pull. Register-touching segments only (rule 1), cut as a parallelogram, not the floor. The RI corner's first non-Fox read of H1c on the Press: the price with its cause and without the holder. My calls: the cut as RI parallelogram rather than a floor substitute; Dale's 'underpriced' line kept as F on the vote; the Fed-clock lines scored as M against H1c; Hassett relayed and stationed with the publication. Reversible",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 16,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.53,
+  "readZRange": [
+   -0.2,
+   -0.8
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 16,
+    "spread": [
+     6,
+     48
+    ],
+    "readZ": -0.53,
+    "voices": {
+     "AH": {
+      "dia": 14,
+      "readZ": -0.62,
+      "n": 9
+     },
+     "DD": {
+      "dia": 48,
+      "readZ": -0.2,
+      "n": 1
+     },
+     "IL": {
+      "dia": 18,
+      "readZ": -0.6,
+      "n": 1
+     },
+     "JG": {
+      "dia": 29,
+      "readZ": -0.55,
+      "n": 2
+     },
+     "KH": {
+      "dia": 22,
+      "readZ": -0.4,
+      "n": 1
+     },
+     "LA": {
+      "dia": 13,
+      "readZ": -0.46,
+      "n": 9
+     },
+     "TF": {
+      "dia": 12,
+      "readZ": -0.6,
+      "n": 1
+     },
+     "TK": {
+      "dia": 10,
+      "readZ": -0.6,
+      "n": 1
+     },
+     "VQ": {
+      "dia": 6,
+      "readZ": -0.7,
+      "n": 1
+     }
+    }
+   },
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "RI",
+   "strength": 0.0,
+   "note": "one station, two chairs: the hosts and the desk carry the record (6–20 — the number, the margin, the briefing, the clock) and the guests carry the vehicles (22–48 — 'underpriced', 'insanely strong', 'wigged out', 'squash', 'crush'). Nobody moves on the price inside one voice; Hordern goes 8 → 30 only when she reaches for the holder's post (26:35) and comes back to 6 on the refining numbers (25:56). Dale, the highest line, never names the price — his risk is the vote"
+  },
+  "lumens": 82,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 126,
+   "who": "LA",
+   "station": "RI",
+   "quote": "Hartnett sees a clearing event — tech reprises its role if oil goes lower in the first half of 2027; today, very much the wrong direction, oil rising",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 16,
+   "mode": "open",
+   "note": "the terminal's clock on the price: relief dated to next year's first half, against the holder's 'really fast'",
+   "chapter": "The open",
+   "normX": 0.5712,
+   "normY": 0.4087,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a price whose relief is a 2027 condition is not coming down by the deal before the vote"
+  },
+  {
+   "t": 140,
+   "who": "LA",
+   "station": "RI",
+   "quote": "this creeping higher has left us at some of the highest levels since near the beginning of the war",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 10,
+   "mode": "open",
+   "note": "dates the price to the war and sizes it against the war's own start",
+   "chapter": "The open",
+   "normX": 0.5612,
+   "normY": 0.43,
+   "normZ": -0.525,
+   "quadrant": "B"
+  },
+  {
+   "t": 148,
+   "who": "AH",
+   "station": "RI",
+   "quote": "104 of WTI; the top US commander in the Middle East came over to brief the president — rare for the general",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE NUMBER and the briefing in one breath, dated; the lowest line on the tape",
+   "chapter": "The briefing",
+   "normX": 0.5714,
+   "normY": 0.4531,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a hundred and four with the general in the building is a price going up"
+  },
+  {
+   "t": 164,
+   "who": "AH",
+   "station": "RI",
+   "quote": "the tension the oil market is reading: oil is getting out, but it is getting a little more challenging for ships to go through the Strait of Hormuz — and whether the US re-engages in a more committed fashion after the midterm elections, strikes in Iran",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 12,
+   "mode": "open",
+   "note": "→H6 and the force in one sentence: the Strait's throughput conceded and qualified; the strikes dated to after the vote. The market's read of the control claim",
+   "chapter": "The briefing",
+   "normX": 0.5644,
+   "normY": 0.4227,
+   "normZ": -0.525,
+   "quadrant": "B"
+  },
+  {
+   "t": 215,
+   "who": "LA",
+   "station": "RI",
+   "quote": "people retracing how many rate hikes the Fed might engage with — 4.95%",
+   "touch": "M",
+   "z": -0.3,
+   "dia": 14,
+   "mode": "open",
+   "note": "the Fed's clock as the market's: the first appearance of the substitute clock (cand-december-fomc-hike)",
+   "chapter": "The open",
+   "normX": 0.5737,
+   "normY": 0.4208,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a market counting hikes is pricing the inflation the deal was to end"
+  },
+  {
+   "t": 444,
+   "who": "DD",
+   "station": "RI",
+   "quote": "sloppy opens like this after the midterm elections — a cascading sequence of selling across the buy side; twenty years on Wall Street, never seen such a salient market risk so underpriced",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 48,
+   "mode": "open",
+   "note": "the segment's title and the tape's highest line: the vote as the risk, 'underpriced' the vehicle; the price never named",
+   "chapter": "The briefing",
+   "normX": 0.6971,
+   "normY": 0.3677,
+   "normZ": -0.15,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a reader pricing the ballot and not the pump reads neither way on the deal; the risk he names is built on the consumer the price is squeezing"
+  },
+  {
+   "t": 958,
+   "who": "LA",
+   "station": "RI",
+   "quote": "Trump cancelling in-person rallies days ahead of the midterms as new polling shows his approval hitting a new low of 30%",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 12,
+   "mode": "open",
+   "note": "the holder's standing, dated and sized — the other leg of the gas↔votes predicate",
+   "chapter": "The pullback",
+   "normX": 0.574,
+   "normY": 0.4318,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a holder at 30 on the Friday before the vote has not been credited with a price coming down"
+  },
+  {
+   "t": 982,
+   "who": "TK",
+   "station": "RI",
+   "quote": "closer-than-expected contests in key Senate races — farming states highly exposed to higher diesel costs in the middle of harvest season and tariff retaliation",
+   "touch": "B",
+   "z": -0.6,
+   "dia": 10,
+   "mode": "open",
+   "note": "H1 AS A FARM INPUT from the RI corner: diesel named as the reason the holder stays away from Kansas and Iowa (aj 10-29's Arkansas budget, now the trail)",
+   "chapter": "The pullback",
+   "normX": 0.5669,
+   "normY": 0.4354,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "diesel 'in the middle of harvest' is the deal's fuel still high where the vote is closest"
+  },
+  {
+   "t": 1359,
+   "who": "LA",
+   "station": "RI",
+   "quote": "the key issue in the election: the cost of living — in particular the price of oil, which is helping a whole host of the oil majors: BP positive, Chevron raising its adjusted EPS forecast, an incredible amount of profitability",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "one object, two registers in one sentence: the voter's cost and the majors' quarter",
+   "chapter": "The quarter",
+   "normX": 0.5619,
+   "normY": 0.4113,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a price that is the election's issue and the majors' profit has not come down"
+  },
+  {
+   "t": 1380,
+   "who": "AH",
+   "station": "RI",
+   "quote": "big oil has had an absolutely bumper quarter; higher oil prices have clearly helped — and they're running refining capacity to almost 100%",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 18,
+   "mode": "open",
+   "note": "'absolutely bumper' the vehicle; the run-rate is the record — H1's refinery leg (the deal was for diesel because the refineries are full)",
+   "chapter": "The quarter",
+   "normX": 0.5969,
+   "normY": 0.4236,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "refineries at a hundred percent is the shortage the deal was to fill, still there"
+  },
+  {
+   "t": 1403,
+   "who": "AH",
+   "station": "RI",
+   "quote": "Chevron's Venezuelan barrels cost less than $20 — the most profitable barrels in the world with Brent and WTI north of $100; this has been a huge push for the Trump administration",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 16,
+   "mode": "open",
+   "note": "→LAYER 2: THE CURE'S MARGIN — the Venezuela deal (fox 10-29's renamed cure) read as Chevron's spread, not the consumer's relief",
+   "chapter": "The quarter",
+   "normX": 0.5866,
+   "normY": 0.4232,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a cure that is an eighty-dollar margin for the seller has not reached the pump"
+  },
+  {
+   "t": 1556,
+   "who": "AH",
+   "station": "RI",
+   "quote": "all this has to do with surging gasoline and diesel prices: Exxon's refining division earned a record $9.05 billion, almost five times a year earlier; Chevron's nearly $5 billion, highest on record, four times",
+   "touch": "T",
+   "z": -0.8,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE RECORD IN NUMBERS: the price leg measured where it lands — the refiner's margin. The lowest-Dia line",
+   "chapter": "The quarter",
+   "normX": 0.5434,
+   "normY": 0.4354,
+   "normZ": -0.6,
+   "quadrant": "B"
+  },
+  {
+   "t": 1592,
+   "who": "LA",
+   "station": "RI",
+   "quote": "you wonder if there will be a response from the White House",
+   "touch": "M",
+   "z": -0.3,
+   "dia": 20,
+   "mode": "open",
+   "note": "the holder's reaction anticipated — as a response to the quarter, not to the pump",
+   "chapter": "The quarter",
+   "normX": 0.6084,
+   "normY": 0.4265,
+   "normZ": -0.225,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a holder expected to respond to the refiners has not delivered the price"
+  },
+  {
+   "t": 1595,
+   "who": "AH",
+   "station": "RI",
+   "quote": "whoever is working with the president is drafting that Truth Social post — clearly, before the midterm elections, when you see these numbers; but the problem: this is an international market, international prices are up 60%",
+   "touch": "M",
+   "z": -0.7,
+   "dia": 30,
+   "mode": "open",
+   "note": "the holder's instrument named as a post; the cause named as the world price — the sentence Fox Business 10-29 did not have. Hordern's high line (30), carried by the irony",
+   "chapter": "The quarter",
+   "normX": 0.6033,
+   "normY": 0.3662,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a post against a sixty-percent world move is not a price coming down"
+  },
+  {
+   "t": 1621,
+   "who": "LA",
+   "station": "RI",
+   "quote": "Exxon shares up 52% so far this year; Chevron up 52% also",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 8,
+   "mode": "open",
+   "note": "the price leg in equity, sized",
+   "chapter": "The quarter",
+   "normX": 0.5551,
+   "normY": 0.4348,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "the sellers' year is the buyers' price"
+  },
+  {
+   "t": 1652,
+   "who": "AH",
+   "station": "RI",
+   "quote": "for the energy industry a lot of it right now is what happens in the Middle East, and in Russia–Ukraine — because diesel has been the linchpin",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 16,
+   "mode": "open",
+   "note": "THE TITLE — →H1 named by its fuel and its seller's war, without the deal: the deal's two legs as the market's hinge",
+   "chapter": "The quarter",
+   "normX": 0.5919,
+   "normY": 0.4295,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a hinge that still turns on Russia and the Gulf is a deal that has not settled the price"
+  },
+  {
+   "t": 1940,
+   "who": "TF",
+   "station": "RI",
+   "quote": "consumers are under a lot of pressure with higher gas prices, with oil trading over $100 a barrel",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 12,
+   "mode": "open",
+   "note": "the buyer's side, from an equity analyst reading Amazon's retail quarter",
+   "chapter": "The quarter",
+   "normX": 0.5596,
+   "normY": 0.419,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a consumer under pressure from gas is the price not down"
+  },
+  {
+   "t": 3466,
+   "who": "JG",
+   "station": "RI",
+   "quote": "the economy is running really hot — GDP insanely strong, inflation surprising to the upside, yesterday and in general — and interest rates are falling on the 10-year; the market's saying the Fed will be forced to squash this growth",
+   "touch": "M",
+   "z": -0.4,
+   "dia": 30,
+   "mode": "open",
+   "note": "the PCE (fox 10-29's 'little surprise') read as the Fed's problem; 'insanely', 'wigged out', 'squash' the vehicles",
+   "chapter": "The Fed's clock",
+   "normX": 0.6312,
+   "normY": 0.3934,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "inflation surprising upward is the price leg still rising"
+  },
+  {
+   "t": 3545,
+   "who": "JG",
+   "station": "RI",
+   "quote": "making it harder for banks to lend won't stop Google or Microsoft borrowing — and it is not going to affect inflation coming out of oil in the Middle East; what it does is crush small business owners",
+   "touch": "X",
+   "z": -0.7,
+   "dia": 28,
+   "mode": "open",
+   "note": "THE CHALLENGE to the substitute clock: the oil is the cause, the rate is not the instrument — the Fed's December refused as the cure for the price",
+   "chapter": "The Fed's clock",
+   "normX": 0.596,
+   "normY": 0.3702,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "inflation 'coming out of oil in the Middle East' is a price the deal has not touched and the rate cannot"
+  },
+  {
+   "t": 3666,
+   "who": "VQ",
+   "station": "RI",
+   "quote": "Exxon topped profit expectations thanks to surging gas and diesel prices; refining earnings almost five times a year ago; overall profit the fourth highest in history; dividend raised a 44th consecutive year",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 6,
+   "mode": "open",
+   "note": "the brief: the record restated with no reader in it",
+   "chapter": "The Fed's clock",
+   "normX": 0.5643,
+   "normY": 0.4562,
+   "normZ": -0.525,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "'thanks to surging gas and diesel prices' is the deal's fuel, up, booked"
+  },
+  {
+   "t": 3806,
+   "who": "LA",
+   "station": "RI",
+   "quote": "the 10-year down almost three basis points as crude continues to rise in the face of potential renewed tensions in the Middle East",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 12,
+   "mode": "open",
+   "note": "the force as a price input, dated today",
+   "chapter": "The Fed's clock",
+   "normX": 0.5645,
+   "normY": 0.4228,
+   "normZ": -0.375,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "crude rising on the next strike is the price not coming down"
+  },
+  {
+   "t": 4459,
+   "who": "AH",
+   "station": "RI",
+   "quote": "oil moving higher with more reports signaling that after the midterms we could see another engagement between the United States and Iran",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 10,
+   "mode": "open",
+   "note": "the force's clock on the terminal: after the vote — cand-post-election-strikes from the RI corner, priced",
+   "chapter": "The close of the week",
+   "normX": 0.5564,
+   "normY": 0.426,
+   "normZ": -0.45,
+   "quadrant": "B"
+  },
+  {
+   "t": 4511,
+   "who": "LA",
+   "station": "RI",
+   "quote": "what does the Fed do in December? Kevin Hassett: inflation remains in the pipeline with more tightening required",
+   "touch": "M",
+   "z": -0.4,
+   "dia": 14,
+   "mode": "open",
+   "note": "the administration's own economist conceding the pipeline — the holder's office on the price's clock, relayed by the host",
+   "chapter": "The close of the week",
+   "normX": 0.5729,
+   "normY": 0.4201,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "an administration saying inflation is still in the pipeline is not one saying the price is down"
+  },
+  {
+   "t": 4559,
+   "who": "IL",
+   "station": "RI",
+   "quote": "Chevron and Exxon in the green, both beat as conflict in the Persian Gulf and Russia continues to roil markets — at the same time, a headache for those in the Republican Party",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 18,
+   "mode": "open",
+   "note": "the gas↔votes predicate from the movers desk: one cause, the seller's quarter and the party's headache",
+   "chapter": "The close of the week",
+   "normX": 0.5788,
+   "normY": 0.4051,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a quarter that is a party's headache is a price the party has not brought down"
+  },
+  {
+   "t": 5628,
+   "who": "KH",
+   "station": "RI",
+   "quote": "we have had a kind of oil price or commodity price shock, at the tail end of the tariffs' effect — expectations anchored because people trust the Fed",
+   "touch": "M",
+   "z": -0.4,
+   "dia": 22,
+   "mode": "open",
+   "note": "the price named as a shock; the anchor is the Fed, not the deal",
+   "chapter": "The close of the week",
+   "normX": 0.6119,
+   "normY": 0.4182,
+   "normZ": -0.3,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a shock still being absorbed is not a price coming down soon"
+  },
+  {
+   "t": 5848,
+   "who": "AH",
+   "station": "RI",
+   "quote": "the midterms could offer clearing — or more volatility: Fox reporting Trump got a high-level military briefing on potential US military options, Admiral Bradley Cooper in Washington briefing the president — volatility for the market on the oil side",
+   "touch": "T",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "the force dated and sourced (Fox; the admiral by name), priced as oil volatility — the tape closes on the strike as a price",
+   "chapter": "The close of the week",
+   "normX": 0.5823,
+   "normY": 0.4297,
+   "normZ": -0.45,
+   "quadrant": "B",
+   "zInferred": true,
+   "zWhy": "a strike priced into oil is a price going up after the vote, not down"
+  }
+ ]
+}

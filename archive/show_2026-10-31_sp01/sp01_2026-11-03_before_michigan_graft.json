@@ -1,0 +1,1813 @@
+{
+ "schema": "show/episode/v2",
+ "show": "The Parallelogram Report",
+ "aspect": "16:9",
+ "fps": 30,
+ "endHold": 1.0,
+ "passersby": {
+  "period": 40,
+  "dur": 14
+ },
+ "voice": {
+  "provider": "elevenlabs",
+  "voice_id": "2w1RxrmT0SAHYrUVv0HU",
+  "model_id": "eleven_multilingual_v2",
+  "stability": 0.45,
+  "similarity": 0.8,
+  "style": 0.2
+ },
+ "id": "sp01",
+ "title": "Episode 1.1 · History Started Up Again",
+ "notes": "Episode 1.1 (11-01; was the sp01 special — same id until the nomenclature is cleaned up). Script: data/show/ep01_1_script_v1.md. Contain lines READ (quote card). New beat fields: quake (desk shakes), globe (tracker globe spins on the pedestal), map.arc (lumens arc), map.split (home|both).",
+ "pieces": [
+  "contain_2024-10_megalopolis",
+  "trump_2026-10-24_perry_fortune",
+  "obama_2026-10_georgia_no_relief",
+  "maine_2026-10-13_collins_jackson_iran",
+  "stevens_2026-11-01_country",
+  "reingold_2026-11-02_gist"
+ ],
+ "clipsDir": "Transcripts/show/sp01/clips",
+ "clips": {
+  "intro_theme": {
+   "in": 0
+  },
+  "fukuyama_1992": {
+   "in": 0
+  },
+  "trump_01_fortune": {
+   "in": 4256
+  },
+  "obama_01_iran": {
+   "in": 0
+  },
+  "maine_01_iran": {
+   "in": 1588
+  },
+  "kevin_01_engines": {
+   "in": 0
+  },
+  "stevens_01_country": {
+   "in": 0
+  },
+  "kevin_02_engines": {
+   "in": 0
+  },
+  "obama_01_iran_crop": {
+   "in": 0
+  },
+  "mega_01_face": {
+   "in": 0
+  }
+ },
+ "pinLabels": {
+  "contain_2024-10_megalopolis": "Contain · 2024",
+  "trump_2026-10-24_perry_fortune": "Trump",
+  "obama_2026-10_georgia_no_relief": "Obama",
+  "maine_2026-10-13_collins_jackson_iran": "Maine Senate debate",
+  "stevens_2026-11-01_country": "Stevens",
+  "maine_2026-10-13_collins_jackson_iran:SC": "Collins (R) · Maine",
+  "maine_2026-10-13_collins_jackson_iran:TJ": "Jackson (D) · Maine",
+  "reingold_2026-11-02_gist:AE": "El-Sayed (quoted)",
+  "reingold_2026-11-02_gist:OR": "Reingold · The Free Press"
+ },
+ "blocks": [
+  {
+   "id": "intro",
+   "title": "",
+   "chrome": "bug",
+   "clip": true,
+   "beats": [
+    {
+     "id": "in_fly",
+     "type": "clip",
+     "src": "intro_theme",
+     "in": 0,
+     "out": 32.8,
+     "layout": "fly",
+     "flyEnd": 31.4,
+     "titleAt": 30.6,
+     "gap": 0.3,
+     "note": "10-28: the Eyewitness theme (Sailor's screen recording); the camera flies the villa — gallery, the pedestal with the supply shock tracker, the Venus — and lands on the desk"
+    }
+   ]
+  },
+  {
+   "id": "coldopen",
+   "title": "",
+   "chrome": "bug",
+   "clip": true,
+   "beats": [
+    {
+     "id": "co_feel",
+     "type": "text",
+     "text": "Did you feel that?",
+     "caption": "",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "co_quake",
+     "type": "hold",
+     "dur": 2.8,
+     "quake": true,
+     "globe": true,
+     "note": "the earthquake: the desk shakes, the globe turns like a clock"
+    },
+    {
+     "id": "co_hook2",
+     "type": "text",
+     "text": "That's history starting up again.",
+     "caption": "History starting up again",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "globe": true,
+     "globeFrom": -7.8,
+     "globeTurn": 1.2
+    },
+    {
+     "id": "co_kevin",
+     "type": "clip",
+     "src": "kevin_02_engines",
+     "in": 0.0,
+     "out": 11.5,
+     "layout": "full",
+     "note": "Kevin James at NASCAR: 'God bless our troops… Gentlemen, start your engines!' (9hMyzztXmmY 0:13–0:23) — re-ripped 0:13–0:24.5 (11-02: was cut short)",
+     "lower": [
+      "Kevin James",
+      "NASCAR"
+     ],
+     "caption": "Gentlemen, start your engines"
+    },
+    {
+     "id": "co_report",
+     "type": "text",
+     "text": "We're seeing something. This is the report.",
+     "caption": "This is the report",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "tonight",
+   "title": "Tonight",
+   "chrome": "full",
+   "beats": [
+    {
+     "id": "le_intro",
+     "text": "Welcome to the Parallelogram Report. I'm Ted Turner. Sonnetbot, Sailor, coyote, wandering the Getty Villa past midnight in the American Dream. Every dialectic here runs through Prism, the closed-form software Sailor developed. Tonight we'll think about the election happening right now, and triangulate History in graphmap constellations, with the help of y2kmindset and Megalopolis.",
+     "caption": "Ted Turner · the Parallelogram Report",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "el_dead",
+     "text": "Electoral democracy in America is dead. Dialectically speaking, none of the candidates are proposing anything to be taken seriously. And party players are actually chipping away at the metaphysical connection between person and state.",
+     "caption": "Electoral democracy in America is dead",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "st_dignity",
+     "type": "text",
+     "text": "Nobody with any dignity can take this election seriously. Not because voting doesn't matter. Because almost nobody on the ballot is talking about where history is actually happening.",
+     "caption": "Nobody with any dignity",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "nm_memo",
+     "type": "text",
+     "text": "When somebody says American democracy is dying, it sounds huge. You picture the sky falling. A formal announcement. It doesn't work like that. CNN is never going to read out a memo saying democracy just ended.",
+     "caption": "No memo from CNN",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "nm_moments",
+     "type": "text",
+     "text": "It goes in moments. Moments where the contradiction is right out in the open. Iran-Contra was one. The government sold weapons to Iran to fund a war Congress had said no to. The country found out, and things went on. This midterm is another one of those moments. Maybe the plainest yet.",
+     "caption": "It goes in moments",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "standing",
+   "title": "History",
+   "chrome": "full",
+   "clip": true,
+   "beats": [
+    {
+     "id": "st_1992",
+     "type": "text",
+     "text": "To see what's being lost, go back to 1992. I was born that year. It's the year Francis Fukuyama published The End of History. The big argument was over. Liberal democracy had won. And he knew what that might cost us.",
+     "caption": "1992 · The End of History",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "st_fuku",
+     "type": "clip",
+     "src": "fukuyama_1992",
+     "in": 502.8,
+     "out": 530.0,
+     "layout": "full",
+     "note": "Charlie Rose, 1992 — through 'risk and daring' (11-02: was cut short)",
+     "lower": [
+      "Francis Fukuyama",
+      "Charlie Rose · 1992"
+     ],
+     "caption": "Fukuyama, 1992"
+    },
+    {
+     "id": "st_promise",
+     "text": "The peace and prosperity presidential candidates are always promising us. Get it, and our horizon shrinks. When I say history, I don't mean dates and wars. I mean cultural development. The way a people's ideas, its art, the way it lives, actually move forward. By 2013, it looked like history was settling into one model. The unipolar one. The color revolutions of the 2000s. Then Euromaidan, in Kyiv, that winter. Then 2014. Russia took Crimea, and the world didn't settle after all. But the culture did.",
+     "caption": "The campaign promise · history as cultural development",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "st_contain",
+     "type": "text",
+     "text": "Two years ago, Nate — y2kmindset on Twitter — went on a podcast called Contain, hosted by Barrett Avner, to talk about Megalopolis. Somewhere in there, Nate named the decade we'd been living in. He called it the long 2014.",
+     "caption": "Contain · Barrett Avner · 2024",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "st_nate",
+     "type": "text",
+     "text": "Each cultural artifact that's come out in the last decade, since the year 2014, has been ensconced in this kind of hype cycle — based on riling up polarization among roughly two different, well-defined groups.",
+     "caption": "The long 2014",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 0,
+      "reveal": "all"
+     },
+     "quote": {
+      "text": "Each cultural artifact that's come out in the last decade, since the year 2014, has been ensconced in this kind of hype cycle — based on riling up polarization among roughly two different, well-defined groups.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 7:38"
+     }
+    },
+    {
+     "id": "co_camps",
+     "type": "text",
+     "text": "Two camps. Everything new gets run through them. We got close to the world the campaigns promise, found it unsatisfying, and split in two. The calendar kept moving. The culture didn't.",
+     "caption": "Two camps",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "st_stalled",
+     "type": "text",
+     "text": "History never ended. It tried to. It stalled for about ten years. And now it's moving again.",
+     "caption": "Stalled, and moving again",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "st_mega_off",
+     "type": "clip",
+     "src": "mega_01_face",
+     "in": 0.0,
+     "out": 2.0,
+     "layout": "full",
+     "lower": [
+      "Megalopolis",
+      "Francis Ford Coppola · 2024"
+     ],
+     "caption": "Megalopolis",
+     "note": "the bandage comes off"
+    },
+    {
+     "id": "st_mega_glow",
+     "type": "clip",
+     "src": "mega_01_face",
+     "in": 5.0,
+     "out": 7.2,
+     "layout": "full",
+     "lower": [
+      "Megalopolis",
+      "Francis Ford Coppola · 2024"
+     ],
+     "caption": "Megalopolis",
+     "note": "the face, glowing"
+    },
+    {
+     "id": "st_idealist",
+     "type": "text",
+     "text": "So how does history start up again? Not by waiting for the right candidate. By building something. An idealist project. That's what Prism is, and this show. Our small try at it.",
+     "caption": "An idealist project",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "nomemo",
+   "title": "The midterm",
+   "clip": true,
+   "beats": [
+    {
+     "id": "nm_electoral",
+     "type": "text",
+     "text": "For the whole long 2014, we kept looking for history in a candidate. Obama and hope. Then Bernie. Then Trump. Left or right, somebody was going to smash the norms and open the whole thing up.",
+     "caption": "Looking for history in a candidate",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "nm_second",
+     "type": "text",
+     "text": "I was one of those people. I used to think Bernie or Elizabeth Warren would have changed everything. Now I think they'd have been another round of Obama. A program blocked at home, while Russia and China kept moving. Before 2022, Russia supplied around forty percent of the gas Europe imported. That's where history was happening. Not in our primaries.",
+     "caption": "Where history was happening",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "nm_week",
+     "type": "text",
+     "text": "So here's this week. Same war, same gas prices. Gas was two ninety-eight before the war with Iran. It's four twenty-nine now. Diesel is over six dollars — a record.",
+     "caption": "Gas: $2.98 → $4.29 · diesel over $6",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "nm_trump_in",
+     "type": "text",
+     "text": "The president, in Perry, Georgia.",
+     "caption": "Trump · Perry, Georgia · Oct 24",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "trump_2026-10-24_perry_fortune"
+    },
+    {
+     "id": "tw_trump",
+     "type": "clip",
+     "src": "trump_01_fortune",
+     "in": 80.0,
+     "out": 117.0,
+     "layout": "reading",
+     "note": "'…fake headlines… I don't give a damn… we're making a freaking fortune… pump prices are going to come down'",
+     "piece": "trump_2026-10-24_perry_fortune"
+    },
+    {
+     "id": "nm_trump_land",
+     "type": "land",
+     "dur": 4.4,
+     "piece": "trump_2026-10-24_perry_fortune",
+     "line": 5,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "nm_obama_in",
+     "type": "text",
+     "text": "Barack Obama, at a rally in Georgia the same week.",
+     "caption": "Obama · Georgia · the same week",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "obama_2026-10_georgia_no_relief"
+    },
+    {
+     "id": "tw_obama",
+     "type": "clip",
+     "src": "obama_01_iran_crop",
+     "in": 64.0,
+     "out": 107.0,
+     "layout": "reading",
+     "note": "'Iran now has veto power over the Strait of Hormuz… this war is not over'",
+     "piece": "obama_2026-10_georgia_no_relief"
+    },
+    {
+     "id": "nm_obama_land",
+     "type": "land",
+     "dur": 4.4,
+     "piece": "obama_2026-10_georgia_no_relief",
+     "line": 4,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "nm_maine_in",
+     "type": "text",
+     "text": "The Maine Senate debate. Susan Collins is the Republican. Troy Jackson is the Democrat.",
+     "caption": "Maine Senate debate · Oct 13",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "tw_maine_tj",
+     "type": "clip",
+     "src": "maine_01_iran",
+     "in": 25.0,
+     "out": 41.0,
+     "layout": "reading",
+     "note": "Jackson: nine votes… meaningless",
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "nm_maine_tj_land",
+     "type": "land",
+     "dur": 4.4,
+     "piece": "maine_2026-10-13_collins_jackson_iran",
+     "line": 1,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "tw_maine_sc",
+     "type": "clip",
+     "src": "maine_01_iran",
+     "in": 65.0,
+     "out": 78.0,
+     "layout": "reading",
+     "note": "Collins: the president should have had a good plan",
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "nm_maine_sc_land",
+     "type": "land",
+     "dur": 4.4,
+     "piece": "maine_2026-10-13_collins_jackson_iran",
+     "line": 4,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "nm_maine_read",
+     "type": "text",
+     "text": "The Republican voted against her own party's war nine times. The Democrat says her votes don't count. Both of them blame the president.",
+     "caption": "Both blame the president",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "nm_stevens_in",
+     "type": "text",
+     "text": "And today, in Michigan. Haley Stevens is a Democratic congresswoman. She lost the Senate primary to Abdul El-Sayed. Two days before the election, here's where she stood.",
+     "caption": "Haley Stevens · Michigan · today",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "stevens_2026-11-01_country"
+    },
+    {
+     "id": "nm_stevens",
+     "type": "clip",
+     "src": "stevens_01_country",
+     "in": 13.5,
+     "out": 30.5,
+     "layout": "reading",
+     "note": "'…my vote is for Mike Rogers… We have to stand with country. We can't stand with Hasan Piker.' (in/out by keyword search on the audio — check by ear)",
+     "piece": "stevens_2026-11-01_country"
+    },
+    {
+     "id": "nm_stevens_land",
+     "type": "land",
+     "dur": 4.4,
+     "piece": "stevens_2026-11-01_country",
+     "line": 1,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "nm_stevens_read",
+     "type": "text",
+     "text": "That's her reason, in her words. Hasan Piker is a streamer who campaigned with El-Sayed. Stevens called on El-Sayed to cut ties with him back in the primary. Today she endorsed Mike Rogers, the Republican. By this morning, her chief of staff and much of her team had resigned. Think about what that is. Michigan's Democratic voters picked their nominee. She lost. Two days before the vote, she told them to vote for the other side anyway. That's a direct attack on the voters. It's anti-democratic in its own right.",
+     "caption": "An attack on the voters",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "stevens_2026-11-01_country"
+    },
+    {
+     "id": "nm_grim",
+     "type": "text",
+     "text": "And look who opened that press conference. Abigail Ronson, a spokesperson for the Rogers campaign. Federal records show she's registered as a foreign agent working for the government of Israel. Drop Site News found the filing, and Ryan Grim flagged it. A second campaign staffer is registered too. So that's the shape of it. A Democrat, a Republican, a streamer, and the war in Gaza, all in one shot, two days before the vote.",
+     "caption": "A registered foreign agent opened the press conference",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "stevens_2026-11-01_country"
+    },
+    {
+     "id": "dg_ad",
+     "type": "text",
+     "text": "So why did Stevens break? Here's what set it off. A PAC ad — not El-Sayed's campaign, a separate group — showed a couple at the grocery store who have to set seven dollars aside \"for killing Palestinians\" instead of buying eggs. It ended with Mike Rogers \"for they/them,\" a picture of Netanyahu, and \"Abdul El-Sayed is for you.\" El-Sayed's campaign says it had nothing to do with it. Stevens said the ad blamed Jews for Michigan's problems.",
+     "caption": "The ad Stevens broke over",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "dg_tweet",
+     "type": "text",
+     "text": "Then, today, Olivia Reingold of The Free Press posted this. Abdul El-Sayed literally just repeated the gist of the claim that got him in hot water this week. It shouldn't be this hard to pay taxes and know that that money's gonna be spent on you and your kids, instead of dropping bombs on somebody else and their kids. That is the essence of the highly controversial ad that caused Haley Stevens to break with him and sparked condemnation from Jewish leaders across America.",
+     "caption": "Olivia Reingold · The Free Press",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "reveal": "all"
+     },
+     "piece": "reingold_2026-11-02_gist",
+     "quote": {
+      "text": "Abdul El-Sayed literally just repeated the gist of the claim that got him in hot water this week: “It shouldn't be this hard to pay taxes and know that that money's gonna be spent on you and your kids, instead of dropping bombs on somebody else and their kids.” That is the essence of the highly controversial ad that caused Haley Stevens to break with him and sparked condemnation from Jewish leaders across America.",
+      "who": "Olivia Reingold · The Free Press",
+      "src": "X · Nov 2, 2026"
+     }
+    },
+    {
+     "id": "dg_boundary",
+     "type": "text",
+     "text": "Here's where Prism draws something we call a diagnostic boundary. It isn't a verdict. It shows where the good-faith and bad-faith readings of the same words meet. Read in good faith, El-Sayed is a citizen saying he doesn't want his taxes paying for bombs that kill other people's kids. Read in bad faith, it's the ad again, in nicer words. Reingold reads it the second way. How hard the boundary moves comes from the Diatribe score. This one's forty-nine. The middle tier. Coalition talk, people still trying to win the room.",
+     "caption": "Where the good-faith and bad-faith readings meet",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "reingold_2026-11-02_gist:AE",
+       "reingold_2026-11-02_gist:OR"
+      ],
+      "zPlanes": true,
+      "orbit": [
+       25,
+       -22
+      ],
+      "zoom": 4.6,
+      "drop": 0.35,
+      "pinLabels": [
+       "reingold_2026-11-02_gist:AE",
+       "reingold_2026-11-02_gist:OR"
+      ],
+      "boundary": {
+       "a": "reingold_2026-11-02_gist:AE",
+       "b": "reingold_2026-11-02_gist:OR",
+       "words": [
+        "READ IN GOOD FAITH",
+        "READ AS BAD FAITH"
+       ]
+      }
+     },
+     "piece": "reingold_2026-11-02_gist"
+    },
+    {
+     "id": "dg_recognition",
+     "type": "text",
+     "text": "Now go back to Fukuyama. Liberal democracy was supposed to be the end of history because it recognizes you. You're a citizen. The state acts in your name, and it has to answer to you. That ties you to what it does, whether you like it or not. So when a citizen says, I don't want my taxes behind bombs that kill civilians, liberalism owes him a good-faith hearing. Not because he's right about every war. Because that's the deal. Reading him in bad faith by default breaks the deal from the inside. That's the long 2014 again. You were promised peace and prosperity. Ask what the prosperity paid for, and you're the problem.",
+     "caption": "A citizen is owed a good-faith hearing",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "reingold_2026-11-02_gist:AE",
+       "reingold_2026-11-02_gist:OR"
+      ],
+      "zPlanes": true,
+      "orbit": [
+       -20,
+       -26
+      ],
+      "zoom": 4.8,
+      "drop": 0.35,
+      "pinLabels": [
+       "reingold_2026-11-02_gist:AE",
+       "reingold_2026-11-02_gist:OR"
+      ],
+      "boundary": {
+       "a": "reingold_2026-11-02_gist:AE",
+       "b": "reingold_2026-11-02_gist:OR",
+       "words": [
+        "READ IN GOOD FAITH",
+        "READ AS BAD FAITH"
+       ]
+      }
+     },
+     "piece": "reingold_2026-11-02_gist"
+    },
+    {
+     "id": "wl_gather",
+     "type": "text",
+     "text": "Let's put all of this on the map. Every clip tonight was a scatter of statements, one dot per line. Now each speaker folds into a single pin. Where the pin sits is the average of their lines. How high it sits is their z.",
+     "caption": "One pin per speaker",
+     "ted": "map",
+     "map": {
+      "pins": "gather",
+      "orbit": [
+       0,
+       -75
+      ],
+      "zoom": 8.0
+     }
+    },
+    {
+     "id": "wl_axes",
+     "type": "text",
+     "text": "Here's the map, flat. Left and right, side to side. Up top, the institutions — the party as it stands. Down below, the popular side — the people pushing against it. And the further a pin sits from the center, the hotter the talk.",
+     "caption": "Left · right · institutions · popular",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "trump_2026-10-24_perry_fortune",
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:SC",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country"
+      ],
+      "flat": true,
+      "orbit": [
+       0,
+       -90
+      ],
+      "zoom": 8.0,
+      "pinLabels": "all"
+     }
+    },
+    {
+     "id": "wl_flat",
+     "type": "text",
+     "text": "So here's where everyone sits. Obama, up top on the left. The Democratic establishment. Susan Collins, up top on the right. A Republican senator. Troy Jackson, down below on the left, the popular left. Trump, down below on the right, the popular right. Stevens, up top on the left. On the flat map, that's exactly where you'd expect them.",
+     "caption": "Where you'd expect them",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "trump_2026-10-24_perry_fortune",
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:SC",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country"
+      ],
+      "flat": true,
+      "orbit": [
+       0,
+       -90
+      ],
+      "zoom": 8.0,
+      "pinLabels": "all",
+      "cue": [
+       [
+        "obama_2026-10_georgia_no_relief",
+        "Obama"
+       ],
+       [
+        "maine_2026-10-13_collins_jackson_iran:SC",
+        "Collins"
+       ],
+       [
+        "maine_2026-10-13_collins_jackson_iran:TJ",
+        "Jackson"
+       ],
+       [
+        "trump_2026-10-24_perry_fortune",
+        "Trump"
+       ],
+       [
+        "stevens_2026-11-01_country",
+        "Stevens"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "wl_stand",
+     "type": "text",
+     "text": "Now stand them up. The height is the z. Did the war deliver for you, the audience? Above the plane, realized. Below it, frustrated.",
+     "caption": "Height: realized or frustrated",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "trump_2026-10-24_perry_fortune",
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:SC",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country"
+      ],
+      "zPlanes": true,
+      "orbit": [
+       30,
+       -4
+      ],
+      "zoom": 4.6,
+      "drop": 0.35
+     }
+    },
+    {
+     "id": "wl_trump",
+     "type": "text",
+     "text": "Only one pin floats. Trump's. Plus point six. For him, the war is paying off. We're making a freaking fortune.",
+     "caption": "Trump: above the plane",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "trump_2026-10-24_perry_fortune",
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:SC",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country"
+      ],
+      "zPlanes": true,
+      "orbit": [
+       30,
+       -14
+      ],
+      "zoom": 5.0,
+      "drop": 0.35,
+      "pinLabels": [
+       "trump_2026-10-24_perry_fortune"
+      ],
+      "focusPin": "trump_2026-10-24_perry_fortune",
+      "glow": [
+       "trump_2026-10-24_perry_fortune"
+      ],
+      "cue": [
+       [
+        "trump_2026-10-24_perry_fortune",
+        "Trump"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "wl_under",
+     "type": "text",
+     "text": "Now look underneath. Obama, minus point six. Jackson, minus point five. Stevens sinks too — she's measured on her own race, and she doesn't think her party's nominee delivers. And Susan Collins, the Republican. Minus point three five. Down there with the Democrats.",
+     "caption": "Below the plane",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "trump_2026-10-24_perry_fortune",
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:SC",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country"
+      ],
+      "zPlanes": true,
+      "orbit": [
+       -25,
+       16
+      ],
+      "zoom": 4.2,
+      "drop": 0.35,
+      "pinLabels": [
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country",
+       "maine_2026-10-13_collins_jackson_iran:SC"
+      ],
+      "glow": [
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country",
+       "maine_2026-10-13_collins_jackson_iran:SC"
+      ],
+      "cue": [
+       [
+        "obama_2026-10_georgia_no_relief",
+        "Obama"
+       ],
+       [
+        "maine_2026-10-13_collins_jackson_iran:TJ",
+        "Jackson"
+       ],
+       [
+        "stevens_2026-11-01_country",
+        "Stevens"
+       ],
+       [
+        "maine_2026-10-13_collins_jackson_iran:SC",
+        "Collins"
+       ]
+      ]
+     }
+    },
+    {
+     "id": "wl_measure",
+     "type": "text",
+     "text": "Take Collins' pin. This far to the right: that's the x. This far up, with the institutions: that's the y. This far below the plane: that's the z. A Republican senator, in the Republican corner, reading her own president's war as frustrated.",
+     "caption": "Collins, measured",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "trump_2026-10-24_perry_fortune",
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:SC",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country"
+      ],
+      "dim": true,
+      "measure": "maine_2026-10-13_collins_jackson_iran:SC",
+      "focusPin": "maine_2026-10-13_collins_jackson_iran:SC",
+      "glow": [
+       "maine_2026-10-13_collins_jackson_iran:SC"
+      ],
+      "pinLabels": [
+       "maine_2026-10-13_collins_jackson_iran:SC"
+      ],
+      "orbit": [
+       25,
+       14
+      ],
+      "zoom": 4.0,
+      "drop": 0.35,
+      "zPlanes": true
+     }
+    },
+    {
+     "id": "wl_read",
+     "type": "text",
+     "text": "That's what I mean when I say nobody is where the map says they should be. If the map ran on party, the right would float and the left would sink. It doesn't. Left and right still tell you where someone sits. They don't tell you whether they think it's working. The z stopped following the x. That's a coalition breaking, drawn as a picture.",
+     "caption": "The z stopped following the x",
+     "ted": "map",
+     "map": {
+      "pins": [
+       "trump_2026-10-24_perry_fortune",
+       "obama_2026-10_georgia_no_relief",
+       "maine_2026-10-13_collins_jackson_iran:SC",
+       "maine_2026-10-13_collins_jackson_iran:TJ",
+       "stevens_2026-11-01_country"
+      ],
+      "zPlanes": true,
+      "orbit": [
+       0,
+       -20
+      ],
+      "zoom": 4.6,
+      "drop": 0.35,
+      "pinLabels": "all"
+     }
+    },
+    {
+     "id": "nm_epstein",
+     "type": "text",
+     "text": "And here's one more. For years, the Epstein files were a promise. Release them, and the truth comes out. The people who promised it got the power to do it. The files were never fully released. That's the contradiction in plain view, and the country went on.",
+     "caption": "The Epstein files",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "nm_nice",
+     "type": "text",
+     "text": "So nothing falls down where you can see it. The stores are open. The coffee's good. After 2020, the government spent like it had never spent before, and the inflation that followed was the price. From your seat, a lot of it comes up realized.",
+     "caption": "From your seat: realized",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       0,
+       -30
+      ],
+      "zoom": 6.6,
+      "split": "home"
+     }
+    },
+    {
+     "id": "nm_cost",
+     "type": "text",
+     "text": "But the cost didn't go away. It moved. It's on the edge of Europe, in Ukraine. It's in Gaza. So on the map, we draw it right beside your reading. Your seat, realized. The cost, somewhere else, frustrated. Same event.",
+     "caption": "The cost, somewhere else",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       25,
+       -25
+      ],
+      "zoom": 6.4,
+      "split": "both"
+     }
+    }
+   ]
+  },
+  {
+   "id": "whatnow",
+   "title": "What now",
+   "clip": true,
+   "beats": [
+    {
+     "id": "wn_q",
+     "type": "text",
+     "text": "So if the memo's never coming, the question is: what now? What kind of talk is still possible?",
+     "caption": "What now?",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "wn_lazy",
+     "type": "text",
+     "text": "For the last ten years, the smart answer has been a kind of lazy optimism. Let the internet do its thing. It's mostly a swamp. Porn, racism, garbage. But something interesting will come out of it on its own. And some things did. Some of it was beautiful. But I think we've used that up.",
+     "caption": "Lazy optimism",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "wn_irony",
+     "type": "text",
+     "text": "Here's what happens when you have a lot of contradictions and no bigger game to play. Edmund Berger has a name for it — reciprocal contradictions. Two sides that need each other's failures. When that's all there is, the only way out is irony. People backing whoever makes the joke land.",
+     "caption": "Reciprocal contradictions",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "wn_straight",
+     "type": "text",
+     "text": "I'll be honest. It's hard to make a positive case for anyone on the ballot this year with a straight face. Not on either side. That's not a reason to stop paying attention. It's a reason to want something better to pay attention to.",
+     "caption": "Something better to pay attention to",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "twoyears",
+   "title": "Two years on",
+   "clip": true,
+   "beats": [
+    {
+     "id": "ty_mega",
+     "type": "text",
+     "text": "Which is where Megalopolis comes in. Two years ago, Francis Ford Coppola put around a hundred and twenty million dollars of his own money into a fable about an architect who can stop time. It flopped. People hated it.",
+     "caption": "Megalopolis · 2024",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ty_barrett",
+     "type": "text",
+     "text": "Barrett had a line about who hated it. Why is it that everybody I like personally, who I think is smart, really likes this movie? And then people who wear Plantasia tote bags, or pin their identity to some kind of political movement of the past eight years — just cannot understand it at all.",
+     "caption": "The tote bags",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 4
+     },
+     "quote": {
+      "text": "Why is it that everybody I like personally, who I think is smart, really likes this movie? And then people who wear Plantasia tote bags, or pin their identity to some kind of political movement of the past eight years — just cannot understand it at all.",
+      "who": "Barrett (Contain)",
+      "src": "Contain, 2024 · 12:12"
+     }
+    },
+    {
+     "id": "ty_nate",
+     "type": "text",
+     "text": "People who still put their hope in the last ten years of politics. They couldn't place it. And Nate saw why. What's interesting is how polarizing the response has been — but it doesn't really follow the typical polarization on political lines.",
+     "caption": "Not mappable",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 2
+     },
+     "quote": {
+      "text": "What's interesting is how polarizing the response has been — but it doesn't really follow the typical polarization on political lines.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 9:34"
+     }
+    },
+    {
+     "id": "fl_camp",
+     "type": "text",
+     "text": "It made people angry without telling them which camp to stand in.",
+     "caption": "No camp to stand in",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ty_digger",
+     "type": "text",
+     "text": "Digger, this fall, is the opposite. Alejandro Iñárritu and Tom Cruise. An oil man knew a giant ice shelf was going to hit Europe, and he let it happen. In its big scene, he stands in front of the European Parliament and says it out loud.",
+     "caption": "Digger · 2026",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ty_digger_clip",
+     "type": "clip",
+     "src": "digger_01_parliament",
+     "in": 0.0,
+     "out": 45.7,
+     "layout": "full",
+     "lower": [
+      "Digger",
+      "Alejandro G. Iñárritu · 2026"
+     ],
+     "caption": "Digger · the European Parliament",
+     "note": "11-03: Sailor's screen recording of the European Parliament scene, whole"
+    },
+    {
+     "id": "ty_away",
+     "type": "text",
+     "text": "That's the confession we keep waiting for. And then Digger makes its point the only way it knows how. The world ends in a wasteland. The bill gets paid by the weather. Our broken dialectics, it says, are headed for an ecological catastrophe.",
+     "caption": "Digger: the catastrophe",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ty_nocat",
+     "text": "I don't buy that part. Climate change is real, and it's happening. But I don't think a cataclysm is coming to settle the argument for us. Life goes on. The stores stay open. So here's the real question. Without a disaster to force our hand, how do we work our dialectics toward the actual problems?",
+     "caption": "Without a cataclysm, what then?",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ty_retrench",
+     "text": "Digger doesn't answer that. It retrenches. It's the same old dialectic. Progressive frustration against conservative industry. The oil man confesses, and the weather proves the activists right. Megalopolis goes somewhere else. Its dialectic is more ethereal, and more human. It isn't industry against the planet. It's about what people are for, and what they could build.",
+     "caption": "Digger retrenches · Megalopolis goes somewhere else",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ty_lumens",
+     "type": "text",
+     "text": "Here's how Prism sees that. We measure something called lumens. Lumens is how much of the actual thing gets through when someone talks. And it depends on which way you're facing. Turn toward the thing, and you catch light. Turn toward the argument about the argument, and you're in shadow, from any corner.",
+     "caption": "Lumens: which way you're facing",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       0,
+       -50
+      ],
+      "zoom": 6.8,
+      "arc": true
+     }
+    },
+    {
+     "id": "ty_toward",
+     "type": "text",
+     "text": "Digger faces the thing, then turns away. Megalopolis faces it and walks toward it. It doesn't confess. It proposes. A city. A future you can argue with.",
+     "caption": "Megalopolis proposes",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       20,
+       -45
+      ],
+      "zoom": 6.6,
+      "arc": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "club",
+   "title": "Far from the club",
+   "clip": true,
+   "beats": [
+    {
+     "id": "cl_show",
+     "type": "text",
+     "text": "That's what this show is trying to be. Prism started as an aesthetic project as much as anything. Lumens is a sense of when talk is beautiful because it's true. We're not here to tell you who to vote for. But I'll say it again. Nobody with any dignity can take this election seriously. So take history seriously instead. Turn toward the thing.",
+     "caption": "Turn toward the thing",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "cl_barrett",
+     "type": "text",
+     "text": "There's a scene in Megalopolis everybody laughs at. Barrett reads it better than anyone. It's that scene in the club where he's spinning out of control, losing his mind. That's the one part of the movie where he loses his ability to stop time — because he's indulging in society shit.",
+     "caption": "The club",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 12
+     },
+     "quote": {
+      "text": "It's that scene in the club where he's spinning out of control, losing his mind. That's the one part of the movie where he loses his ability to stop time — because he's indulging in society shit.",
+      "who": "Barrett (Contain)",
+      "src": "Contain, 2024 · 56:26"
+     }
+    },
+    {
+     "id": "cl_far",
+     "type": "text",
+     "text": "When Catalina goes to the club, he loses the one thing he has. So get as far from the club as you can. Face the thing. Gather enough light that you can give some back.",
+     "caption": "Far from the club",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "cl_face",
+     "type": "clip",
+     "src": "mega_01_face",
+     "in": 0.0,
+     "out": 16.8,
+     "layout": "full",
+     "lower": [
+      "Megalopolis",
+      "Francis Ford Coppola · 2024"
+     ],
+     "caption": "Megalopolis · the face",
+     "note": "the bandage off, Wow watching, the face glowing (0–16.8, before Voight)"
+    },
+    {
+     "id": "cl_wow",
+     "text": "That's Wow Platinum at the end there. She's wrapped up in the pettiest dialectic in the city. Money, scandal, who's up and who's down. And what gets to her is that Catalina isn't. His dialectic is inspiring. It's about the future, and what a city is for. That's what's so seductive about it. And that's what we want Prism to do. Get out of the election cycle and the news cycle, which are so regressive and so petty, and turn toward something worth wanting.",
+     "caption": "What's seductive about Catalina",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "cl_project",
+     "type": "text",
+     "text": "That's the project. Something that moves the wheel of history forward.",
+     "caption": "The wheel of history",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "globe": true
+    },
+    {
+     "id": "cl_nate",
+     "type": "text",
+     "text": "Nate gets the last word. It's kind of like the ontological argument for the existence of God. All of these structures are much more contingent than we think. If you just ask the right questions, you can actually get somewhere quite different.",
+     "caption": "Contingent",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 16
+     },
+     "quote": {
+      "text": "It's kind of like the ontological argument for the existence of God. All of these structures are much more contingent than we think. If you just ask the right questions, you can actually get somewhere quite different.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 73:43"
+     }
+    },
+    {
+     "id": "cl_nate_land",
+     "type": "land",
+     "dur": 4.4,
+     "piece": "contain_2024-10_megalopolis",
+     "line": 16,
+     "orbit": [
+      0,
+      -40
+     ],
+     "zoom": 7.0
+    },
+    {
+     "id": "cl_out2",
+     "type": "text",
+     "text": "That's the Parallelogram Report. Nate's on Twitter at y2kmindset. I'm Ted Turner. Goodnight from the Getty Villa.",
+     "caption": "Ted Turner · goodnight from the Getty Villa",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "cl_credits",
+     "type": "clip",
+     "src": "intro_theme",
+     "in": 0.0,
+     "out": 30.0,
+     "layout": "credits",
+     "gap": 0.0,
+     "credits": [
+      [
+       "THE PARALLELOGRAM REPORT",
+       "Episode 1.1 · History Started Up Again"
+      ],
+      [
+       "Written and produced by",
+       "Sailor"
+      ],
+      [
+       "Ted Turner",
+       "a sonnetbot — Sailor's thinking, put through Claude, read in a copy of his voice"
+      ],
+      [
+       "Every dialectic run through",
+       "PRISM — closed-form software developed by Sailor<br>Diatribe · z · lumens · the diagnostic boundary"
+      ],
+      [
+       "The residents of the Getty Villa",
+       "Ted Turner · Trout Fish · Matt Mondanile's Seal · Y2K · Sea Otter Princess · Petra · Kyle · Diddy Kong · Richard · Horned Sphere · Julia · Emilia · Adlib · Austin · Houston · the Sea Turtle · Edburg · Luke · Big Colin · Doctor Colin · Haley · Alrik · and the elephant in the room"
+      ],
+      [
+       "On tape",
+       "Nate (y2kmindset) and Barrett Avner, on Contain · Francis Fukuyama with Charlie Rose, 1992 · Kevin James · Donald Trump · Barack Obama · Susan Collins and Troy Jackson · Haley Stevens"
+      ],
+      [
+       "Read on air",
+       "Olivia Reingold, The Free Press"
+      ],
+      [
+       "Films",
+       "Megalopolis — Francis Ford Coppola, 2024<br>Digger — Alejandro G. Iñárritu, 2026"
+      ],
+      [
+       "Reporting",
+       "Drop Site News · Ryan Grim · PolitiFact"
+      ],
+      [
+       "Made with",
+       "Claude · ElevenLabs"
+      ],
+      [
+       "Goodnight from the Getty Villa",
+       "the Plaza · the DreamGetty"
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "landIsolate": true,
+ "pinSplit": [
+  "maine_2026-10-13_collins_jackson_iran",
+  "reingold_2026-11-02_gist"
+ ],
+ "flyKeys": [
+  [
+   0.0,
+   [
+    14,
+    -3,
+    124
+   ],
+   [
+    4,
+    -12,
+    104
+   ]
+  ],
+  [
+   0.05,
+   [
+    20,
+    -6.5,
+    90
+   ],
+   [
+    8,
+    -10.5,
+    78
+   ]
+  ],
+  [
+   0.1,
+   [
+    4,
+    -5,
+    86
+   ],
+   [
+    0,
+    -9,
+    66
+   ]
+  ],
+  [
+   0.14,
+   [
+    1,
+    2.5,
+    54
+   ],
+   [
+    0,
+    0.5,
+    34
+   ]
+  ],
+  [
+   0.18,
+   [
+    6,
+    5.5,
+    31
+   ],
+   [
+    0,
+    2.2,
+    20
+   ]
+  ],
+  [
+   0.22,
+   [
+    -6,
+    6.5,
+    21
+   ],
+   [
+    -22,
+    3,
+    6
+   ]
+  ],
+  [
+   0.26,
+   [
+    -30,
+    7,
+    21
+   ],
+   [
+    -38,
+    2.5,
+    0
+   ]
+  ],
+  [
+   0.3,
+   [
+    -46,
+    7.5,
+    2
+   ],
+   [
+    -32,
+    2,
+    -12
+   ]
+  ],
+  [
+   0.34,
+   [
+    -37,
+    4.5,
+    -25
+   ],
+   [
+    -25,
+    1.2,
+    -15
+   ]
+  ],
+  [
+   0.38,
+   [
+    -14,
+    6,
+    -23
+   ],
+   [
+    -22,
+    2,
+    -13
+   ]
+  ],
+  [
+   0.42,
+   [
+    -11,
+    5,
+    -12
+   ],
+   [
+    -18,
+    4,
+    -3
+   ]
+  ],
+  [
+   0.46,
+   [
+    -17,
+    4.1,
+    -2
+   ],
+   [
+    -24,
+    3.8,
+    -7.9
+   ]
+  ],
+  [
+   0.5,
+   [
+    -27,
+    4.1,
+    -2.5
+   ],
+   [
+    -33,
+    3.8,
+    -7.9
+   ]
+  ],
+  [
+   0.54,
+   [
+    -28.5,
+    4.2,
+    0
+   ],
+   [
+    -35.9,
+    3.8,
+    0
+   ]
+  ],
+  [
+   0.58,
+   [
+    -28,
+    4.1,
+    2.5
+   ],
+   [
+    -22,
+    3.8,
+    7.9
+   ]
+  ],
+  [
+   0.62,
+   [
+    -15,
+    3.8,
+    -0.5
+   ],
+   [
+    -5,
+    2.2,
+    2.5
+   ]
+  ],
+  [
+   0.66,
+   [
+    -5.8,
+    3.7,
+    5.6
+   ],
+   [
+    -5,
+    3.25,
+    2.5
+   ]
+  ],
+  [
+   0.7,
+   [
+    -3.3,
+    2.95,
+    1.8
+   ],
+   [
+    -5,
+    2.7,
+    2.55
+   ]
+  ],
+  [
+   0.74,
+   [
+    -2.0,
+    3.5,
+    -2.2
+   ],
+   [
+    -6,
+    3.3,
+    -3
+   ]
+  ],
+  [
+   0.78,
+   [
+    -3.8,
+    3.0,
+    -5.8
+   ],
+   [
+    -6,
+    3.1,
+    -3
+   ]
+  ],
+  [
+   0.83,
+   [
+    1.6,
+    4.7,
+    -3.4
+   ],
+   [
+    0,
+    4.3,
+    0
+   ]
+  ],
+  [
+   0.88,
+   [
+    3.2,
+    4.6,
+    1.4
+   ],
+   [
+    0,
+    4.2,
+    0
+   ]
+  ],
+  [
+   0.93,
+   [
+    "d",
+    6,
+    3.4,
+    12
+   ],
+   [
+    "d",
+    0,
+    1.8,
+    0
+   ]
+  ],
+  [
+   1.0,
+   null,
+   null
+  ]
+ ],
+ "flyKeysNote": "11-02: water, beach, river, valley, pool, steps; west along the front of the gallery, round its west end, the elephant behind it; in through the gallery's colonnade, along the north wall, the west end, the south wall; out to the G4 (behind, then its screen), the Venus, the tracker globe, the Plaza"
+}

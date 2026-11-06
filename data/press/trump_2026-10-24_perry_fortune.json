@@ -1,0 +1,543 @@
+{
+ "schema": "press/parallelogram/v0",
+ "kind": "parallelogram",
+ "positions": "seconds",
+ "horizon": null,
+ "arc": null,
+ "transform": "none",
+ "status": "claude-draft",
+ "show": "sp01",
+ "id": "trump_2026-10-24_perry_fortune",
+ "title": "A Freaking Fortune",
+ "source": {
+  "program": "Trump rally, Perry, Georgia (RSBN full speech)",
+  "network": "RSBN / YouTube",
+  "format": "tape",
+  "date": "2026-10-24",
+  "title": "FULL SPEECH: President Trump Speaks to HUGE crowds at Rally in Perry, GA - 10/24/2026",
+  "url": "https://www.youtube.com/watch?v=YxBhgK7GWrc",
+  "length": 6202,
+  "transcript": "Transcripts/show/sp01/clipsubs_YxBhgK7GWrc.en-orig.vtt",
+  "note": "checked against Roll Call Factba.se; clip = trump_01_fortune (source 4256–4373)"
+ },
+ "object": {
+  "label": "The Iran war's cost at the pump, the week before the midterm (sp01's object — History restarting — at layer 1)",
+  "layer": 1,
+  "legislative": {
+   "void": false,
+   "note": "no war authorization; Collins's nine votes against (her count) are the Senate's record; gas $2.98 pre-war → $4.29 on 10-26, diesel record over $6 (AP via Fortune)"
+  },
+  "zAxis": {
+   "pos": "the war delivers for the audience — worth what it costs, prices come down",
+   "neg": "it doesn't — prices stay up, the war goes on"
+  }
+ },
+ "transformNote": "one of three same-week voices on the war and the pump, read side by side",
+ "names": {
+  "DT": "Donald Trump"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": 0.5
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.5
+  },
+  "shadowNote": "relief — lower prices and the war over",
+  "predicates": {
+   "operative": [],
+   "stated": [],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "temporarily high · falling dramatically",
+    "denominated": "fake headlines · a freaking fortune",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "speaker"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-31",
+   "what": "cut for sp01 block 3 ('This week'). Scores are Claude's proposals, unruled; Sailor's election hypothesis is sealed and played no part",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 43,
+  "tier": "oscillation zone",
+  "declaredZ": null,
+  "readZ": 0.61,
+  "readZRange": [
+   0.8,
+   0.4
+  ],
+  "stations": {
+   "LI": null,
+   "RI": null,
+   "LP": null,
+   "RP": {
+    "dia": 43,
+    "spread": [
+     28,
+     66
+    ],
+    "readZ": 0.61,
+    "voices": {
+     "DT": {
+      "dia": 43,
+      "readZ": 0.61,
+      "n": 7
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "one voice",
+   "station": "RP",
+   "strength": 0.0,
+   "note": "single speaker"
+  },
+  "lumens": 46,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 4256,
+   "who": "DT",
+   "station": "RP",
+   "quote": "oil prices are temporarily high and will be falling dramatically… as soon as that war is over",
+   "touch": "O",
+   "z": 0.7,
+   "dia": 28,
+   "mode": "open",
+   "note": "the promise",
+   "chapter": "The pump",
+   "normX": 0.6248,
+   "normY": 0.6023,
+   "normZ": 0.525,
+   "quadrant": "D"
+  },
+  {
+   "t": 4272,
+   "who": "DT",
+   "station": "RP",
+   "quote": "the United States oil and gas business is making hundreds of billions of dollars",
+   "touch": "O",
+   "z": 0.8,
+   "dia": 36,
+   "mode": "open",
+   "note": "who the war pays",
+   "chapter": "The pump",
+   "normX": 0.6066,
+   "normY": 0.6594,
+   "normZ": 0.6,
+   "quadrant": "D"
+  },
+  {
+   "t": 4317,
+   "who": "DT",
+   "station": "RP",
+   "quote": "my people said, please don't mention that, sir, because people are paying a little higher",
+   "touch": "O",
+   "z": 0.4,
+   "dia": 30,
+   "mode": "open",
+   "note": "the cost, admitted — through his staff",
+   "chapter": "The pump",
+   "normX": 0.628,
+   "normY": 0.6103,
+   "normZ": 0.3,
+   "quadrant": "D"
+  },
+  {
+   "t": 4339,
+   "who": "DT",
+   "station": "RP",
+   "quote": "you're still paying lower than Biden and Obama",
+   "touch": "X",
+   "z": 0.5,
+   "dia": 46,
+   "mode": "open",
+   "note": "the comparison. FACT FLAG: AP has gas at $4.29 vs ~$3.07 a year earlier; higher than most of Biden's term except the 2022 peak",
+   "chapter": "The pump",
+   "normX": 0.6597,
+   "normY": 0.6653,
+   "normZ": 0.375,
+   "quadrant": "D"
+  },
+  {
+   "t": 4351,
+   "who": "DT",
+   "station": "RP",
+   "quote": "I could just see the fake headlines — talking about all the money they're making while people are suffering at the pump",
+   "touch": "F",
+   "z": 0.6,
+   "dia": 58,
+   "mode": "open",
+   "note": "writes the critics' headline himself",
+   "chapter": "The headline",
+   "normX": 0.689,
+   "normY": 0.7003,
+   "normZ": 0.45,
+   "quadrant": "D"
+  },
+  {
+   "t": 4359,
+   "who": "DT",
+   "station": "RP",
+   "quote": "I don't give a damn. I'm going to say it. We're making a freaking fortune",
+   "touch": "F",
+   "z": 0.7,
+   "dia": 66,
+   "mode": "open",
+   "note": "the defiance, aimed at the headline",
+   "chapter": "The headline",
+   "normX": 0.6749,
+   "normY": 0.7508,
+   "normZ": 0.525,
+   "quadrant": "D"
+  },
+  {
+   "t": 4365,
+   "who": "DT",
+   "station": "RP",
+   "quote": "our country is getting stronger… and those pump prices are going to come down",
+   "touch": "O",
+   "z": 0.6,
+   "dia": 40,
+   "mode": "open",
+   "note": "back to the promise",
+   "chapter": "The pump",
+   "normX": 0.6503,
+   "normY": 0.6423,
+   "normZ": 0.45,
+   "quadrant": "D"
+  }
+ ],
+ "closedform": [
+  {
+   "at": "2026-11-05T10:48:37",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 61,
+    "lumens": 29
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "Predicts pump prices will fall after the war ends, a forward claim the tracked pump and Brent rises neither confirm nor refute yet, delivered as reassurance.",
+     "flags": []
+    },
+    {
+     "i": 1,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "Claims large industry profits from the war, a flow the tracker does not measure, stated as a boast aimed at the room.",
+     "flags": []
+    },
+    {
+     "i": 2,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      84
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It concedes higher pump prices but calls a rise of about $1.30 from $2.98 to $4.29 a little, which the tracked gasoline series does not support.",
+     "flags": [
+      "runs disagree (50–84)"
+     ]
+    },
+    {
+     "i": 3,
+     "dia": 40,
+     "tier": "coalition",
+     "runs": [
+      40,
+      40,
+      40
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "argument",
+     "why": "Compares current pump prices with Biden and Obama years, a comparison the tracker does not cover, offered to win the argument rather than test it.",
+     "flags": []
+    },
+    {
+     "i": 4,
+     "dia": 92,
+     "tier": "denominated",
+     "runs": [
+      84,
+      92,
+      92
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "Labels anticipated press coverage of pump suffering as fake before engaging it, so the coverage is dismissed in advance rather than answered.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100"
+     ]
+    },
+    {
+     "i": 5,
+     "dia": 93,
+     "tier": "denominated",
+     "runs": [
+      81,
+      93,
+      93
+     ],
+     "object": "substance",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "It names profits and dismisses in advance any objection to saying so, so the response to critics is fixed before they speak.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100"
+     ]
+    },
+    {
+     "i": 6,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "Predicts pump prices will come down while the country grows stronger, a forward claim with no measurable test yet, stated to reassure the audience.",
+     "flags": []
+    }
+   ]
+  },
+  {
+   "at": "2026-11-05T12:27:12",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 56,
+    "lumens": 43
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It forecasts that prices will fall once the war ends, a claim the tracker cannot test yet, while Brent is up 76% so far.",
+     "flags": []
+    },
+    {
+     "i": 1,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      16,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "Makes a claim about industry profits from the price spike, a real cost-side flow, though the tracker does not measure profits and the line is a rally claim.",
+     "flags": [
+      "runs disagree (16–50)"
+     ]
+    },
+    {
+     "i": 2,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It admits prices are up but calls a 46% gasoline rise a little higher, which the tracker contradicts.",
+     "flags": []
+    },
+    {
+     "i": 3,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      40,
+      50,
+      60
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It makes a comparative price claim against Biden and Obama-era prices, which the tracker does not cover, while current gasoline is up 46% from pre-war.",
+     "flags": [
+      "runs disagree (40–60)"
+     ]
+    },
+    {
+     "i": 4,
+     "dia": 92,
+     "tier": "denominated",
+     "runs": [
+      92,
+      92,
+      92
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "It files future press criticism of the price pain as fake before weighing it, so the critique is dismissed in advance.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100"
+     ]
+    },
+    {
+     "i": 5,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      93
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It asserts the war is producing large profits for oil and gas, a claim about the war's economic flows aimed at rallying a crowd rather than engaging the critics.",
+     "flags": [
+      "runs disagree (50–93)"
+     ]
+    },
+    {
+     "i": 6,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It promises pump prices will come down, a future claim the tracker cannot yet test, while gasoline is up 46% so far.",
+     "flags": []
+    }
+   ]
+  }
+ ]
+}

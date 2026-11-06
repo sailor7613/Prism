@@ -1,0 +1,279 @@
+{
+ "piece": "maine_2026-10-13_collins_jackson_iran",
+ "model": "claude-haiku-5-5",
+ "at": "2026-11-05T12:28:21",
+ "tracker": "sst",
+ "facts": [
+  {
+   "id": "sst:EMM_EPMR_PTE_NUS_DPG",
+   "fact": "US regular gasoline, retail: 2.937 on 2026-02-23 (before the war) → 4.284 on 2026-10-19 (+46%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-19",
+   "tracked": true
+  },
+  {
+   "id": "sst:RBRTE",
+   "fact": "Brent crude: 71.36 on 2026-02-27 (before the war) → 125.59 on 2026-10-16 (+76%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "sst:RWTC",
+   "fact": "WTI crude: 65.87 on 2026-02-27 (before the war) → 99.93 on 2026-10-16 (+52%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "decl:legislative",
+   "fact": "no war authorization; Collins's nine votes against (her count) are the Senate's record; gas $2.98 pre-war → $4.29 on 10-26, diesel record over $6 (AP via Fortune)",
+   "source": "the piece, declared",
+   "tracked": false
+  }
+ ],
+ "usage": {
+  "input_tokens": 13410,
+  "output_tokens": 7590,
+  "model": "claude-haiku-5-5"
+ },
+ "derived": {
+  "dia": 48,
+  "lumens": 31
+ },
+ "lines": [
+  {
+   "i": 0,
+   "who": "TJ",
+   "hand": {
+    "dia": 48,
+    "touch": "X"
+   },
+   "answers": {
+    "i": 0,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "argument",
+    "place": "low",
+    "why": "He disputes whether the two candidates share a feeling about the war, which is a claim about positions rather than the war's costs or flows.",
+    "_runs": [
+     15,
+     48,
+     58
+    ]
+   },
+   "derived": {
+    "dia": 48,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (15–58)"
+    ]
+   }
+  },
+  {
+   "i": 1,
+   "who": "TJ",
+   "hand": {
+    "dia": 56,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 1,
+    "substance": false,
+    "facts_touched": [
+     "decl:legislative"
+    ],
+    "contradicts": [],
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "patterns": [
+     {
+      "n": 28,
+      "phrase": "I know she's going to say she voted against it nine times, but those are meaningless"
+     }
+    ],
+    "facing": "argument",
+    "place": "mid",
+    "why": "He classifies her vote record as meaningless before she replies and answers the anticipated reply instead of the vote record itself.",
+    "_runs": [
+     80,
+     80,
+     83
+    ]
+   },
+   "derived": {
+    "dia": 80,
+    "band": [
+     67,
+     85
+    ],
+    "stage": null,
+    "tier": "denominated",
+    "flags": []
+   }
+  },
+  {
+   "i": 2,
+   "who": "TJ",
+   "hand": {
+    "dia": 30,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 2,
+    "substance": true,
+    "facts_touched": [
+     "decl:legislative"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "He takes up the war's funding mechanism as the way to stop it, engaging its operational substance without addressing costs or prices.",
+    "_runs": [
+     50,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 3,
+   "who": "TJ",
+   "hand": {
+    "dia": 24,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 3,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "substance",
+    "others": "open",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "low",
+    "why": "He states a stance on the war itself, a should-not-have and get-out-soon judgment, without engaging costs, flows, votes, or deaths.",
+    "_runs": [
+     7,
+     7,
+     16
+    ]
+   },
+   "derived": {
+    "dia": 7,
+    "band": [
+     0,
+     33
+    ],
+    "stage": null,
+    "tier": "fluid",
+    "flags": []
+   }
+  },
+  {
+   "i": 4,
+   "who": "SC",
+   "hand": {
+    "dia": 20,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 4,
+    "substance": true,
+    "facts_touched": [
+     "sst:RBRTE"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": true,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "She engages the object's flow substance (Hormuz oil transit) and criticizes the president's planning, a stance that costs her with the president.",
+    "_runs": [
+     16,
+     58,
+     58
+    ]
+   },
+   "derived": {
+    "dia": 58,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (16–58)"
+    ]
+   }
+  },
+  {
+   "i": 5,
+   "who": "SC",
+   "hand": {
+    "dia": 38,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 5,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "argument",
+    "place": "low",
+    "why": "Pivots from the war's pump costs to general energy independence and Biden-era Keystone, changing the object rather than answering it.",
+    "_runs": [
+     15,
+     48,
+     58
+    ]
+   },
+   "derived": {
+    "dia": 48,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (15–58)"
+    ]
+   }
+  }
+ ]
+}

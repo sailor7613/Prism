@@ -1,0 +1,838 @@
+{
+ "schema": "show/episode/v2",
+ "show": "The Parallelogram Report",
+ "aspect": "16:9",
+ "fps": 30,
+ "endHold": 1.0,
+ "passersby": {
+  "period": 40,
+  "dur": 14
+ },
+ "voice": {
+  "provider": "elevenlabs",
+  "voice_id": "2w1RxrmT0SAHYrUVv0HU",
+  "model_id": "eleven_multilingual_v2",
+  "stability": 0.45,
+  "similarity": 0.8,
+  "style": 0.2
+ },
+ "id": "sp01",
+ "title": "Special · The Nice Collapse",
+ "notes": "sp01 (2026-10-31): one-off special, separate from ep02. Script: data/show/sp01_script_v5.md. Contain lines are READ by Ted (text beats with `quote` → the quote card), not played. Fukuyama plays from the 1992 screen recording via the symlink clips/fukuyama_1992.mp4 (in = 0, so clip time = tape time). New map cues not built yet: map.arc (the lumens arc, block 'flops') and map.split ('home' | 'both', block 'nice').",
+ "pieces": [
+  "contain_2024-10_megalopolis",
+  "trump_2026-10-24_perry_fortune",
+  "obama_2026-10_georgia_no_relief",
+  "maine_2026-10-13_collins_jackson_iran"
+ ],
+ "clipsDir": "Transcripts/show/sp01/clips",
+ "clips": {
+  "intro_theme": {
+   "in": 0
+  },
+  "fukuyama_1992": {
+   "in": 0
+  },
+  "trump_01_fortune": {
+   "in": 4256
+  },
+  "obama_01_iran": {
+   "in": 0
+  },
+  "maine_01_iran": {
+   "in": 1588
+  }
+ },
+ "pinLabels": {
+  "contain_2024-10_megalopolis": "Contain · 2024",
+  "trump_2026-10-24_perry_fortune": "Trump · Perry GA",
+  "obama_2026-10_georgia_no_relief": "Obama · Georgia",
+  "maine_2026-10-13_collins_jackson_iran": "Maine Senate debate"
+ },
+ "blocks": [
+  {
+   "id": "intro",
+   "title": "",
+   "chrome": "bug",
+   "clip": true,
+   "beats": [
+    {
+     "id": "in_fly",
+     "type": "clip",
+     "src": "intro_theme",
+     "in": 0,
+     "out": 32.8,
+     "layout": "fly",
+     "flyEnd": 31.4,
+     "titleAt": 30.6,
+     "gap": 0.3,
+     "note": "10-28: the Eyewitness theme (Sailor's screen recording); the camera flies the villa — gallery, the pedestal with the supply shock tracker, the Venus — and lands on the desk"
+    }
+   ]
+  },
+  {
+   "id": "coldopen",
+   "title": "",
+   "chrome": "bug",
+   "clip": true,
+   "beats": [
+    {
+     "id": "co_hook",
+     "type": "text",
+     "text": "Did you feel that? History started moving again.",
+     "caption": "History started moving again",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "co_nate",
+     "type": "text",
+     "text": "My friend Nate — Nathan, y2kmindset on Twitter — has a name for the decade that just ended. He calls it the long 2014. Here's how he put it. Each cultural artifact that's come out in the last decade, since the year 2014, has been ensconced in this kind of hype cycle — based on riling up polarization among roughly two different, well-defined groups.",
+     "caption": "The long 2014",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 0,
+      "reveal": "all"
+     },
+     "quote": {
+      "text": "Each cultural artifact that's come out in the last decade, since the year 2014, has been ensconced in this kind of hype cycle — based on riling up polarization among roughly two different, well-defined groups.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 7:38"
+     }
+    },
+    {
+     "id": "co_camps",
+     "type": "text",
+     "text": "Two camps. Everything new gets run through them. The calendar kept moving. The culture didn't.",
+     "caption": "Two camps",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "longend",
+   "title": "The long 2014 and its end",
+   "chrome": "full",
+   "clip": true,
+   "beats": [
+    {
+     "id": "le_welcome",
+     "type": "text",
+     "text": "Hello and welcome to the Getty Villa. I'm Ted Turner, and this is a Parallelogram Report special.",
+     "caption": "Ted Turner · a Parallelogram Report special",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "le_sonnet",
+     "type": "text",
+     "text": "If you're new: I'm a sonnetbot. Sailor is real. I'm what he thinks, put through Claude, an AI, and read in a copy of his voice.",
+     "caption": "Ted is a sonnetbot. Sailor is real.",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "le_1992",
+     "type": "text",
+     "text": "I was born in 1992. That's the year Francis Fukuyama published The End of History. The big argument was over. Liberal democracy won. And he didn't think that was all good news.",
+     "caption": "1992 · The End of History",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "le_fuku",
+     "type": "clip",
+     "src": "fukuyama_1992",
+     "in": 502.8,
+     "out": 530.0,
+     "layout": "full",
+     "note": "Charlie Rose, 1992 — 'I agree with them perfectly… great causes… risk and daring' (run_1992 line 30; not re-scored)",
+     "lower": [
+      "Francis Fukuyama",
+      "Charlie Rose · 1992"
+     ],
+     "caption": "Fukuyama, 1992: I agree with them perfectly"
+    },
+    {
+     "id": "le_horizon",
+     "type": "text",
+     "text": "So the end of history wasn't a wall. It was a horizon. And a horizon can move away from you.",
+     "caption": "Not a wall. A horizon.",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "le_mine",
+     "type": "text",
+     "text": "Here's how it moved for me. In 2012, Obama told Mitt Romney the 1980s wanted their foreign policy back. We didn't need to worry about Russia. In 2013, I read The End of History. In 2014, Russia took Crimea. And that same year, Fukuyama published a new book. Political Order and Political Decay.",
+     "caption": "2012 · 2013 · 2014",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "le_stall",
+     "type": "text",
+     "text": "So the culture stalled in 2014, right when history was trying to end itself. It held together for a while. By 2022, with the war in Ukraine, it was grinding.",
+     "caption": "The culture stalled",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "le_broke",
+     "type": "text",
+     "text": "Then, somewhere between the tariffs and the war with Iran, it broke. The coalitions on both sides came apart. Their contradictions all came out at once. The Epstein files were never fully released. Whatever we all used to agree was underneath everything — that was gone.",
+     "caption": "Then it broke",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "le_over",
+     "type": "text",
+     "text": "Nate's friends started saying the long 2014 was over. I think they're right.",
+     "caption": "The long 2014 is over",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "thisweek",
+   "title": "This week",
+   "clip": true,
+   "beats": [
+    {
+     "id": "tw_in",
+     "type": "text",
+     "text": "Here's what it sounds like now. Three clips. Same war, same week, same gas prices. Gas was two ninety-eight a gallon before the war with Iran. It's four twenty-nine now. Diesel is over six dollars — a record.",
+     "caption": "Gas: $2.98 → $4.29 · diesel over $6",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "tw_trump_in",
+     "type": "text",
+     "text": "Here's the president, at a rally in Perry, Georgia, on October 24th.",
+     "caption": "Trump · Perry, Georgia · Oct 24",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "trump_2026-10-24_perry_fortune"
+    },
+    {
+     "id": "tw_trump",
+     "type": "clip",
+     "src": "trump_01_fortune",
+     "in": 80.0,
+     "out": 117.0,
+     "layout": "reading",
+     "note": "'…fake headlines… I don't give a damn… we're making a freaking fortune… pump prices are going to come down'",
+     "piece": "trump_2026-10-24_perry_fortune"
+    },
+    {
+     "id": "tw_obama_in",
+     "type": "text",
+     "text": "Here's Barack Obama, at a rally in Georgia the same week.",
+     "caption": "Obama · Georgia · the same week",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "obama_2026-10_georgia_no_relief"
+    },
+    {
+     "id": "tw_obama",
+     "type": "clip",
+     "src": "obama_01_iran",
+     "in": 64.0,
+     "out": 107.0,
+     "layout": "reading",
+     "note": "'Iran now has veto power over the Strait of Hormuz… this war is not over'",
+     "piece": "obama_2026-10_georgia_no_relief"
+    },
+    {
+     "id": "tw_maine_in",
+     "type": "text",
+     "text": "And here's the Maine Senate race. Susan Collins is the Republican. Troy Jackson is the Democrat.",
+     "caption": "Maine Senate debate · Oct 13",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "tw_maine_q",
+     "type": "clip",
+     "src": "maine_01_iran",
+     "in": 0.0,
+     "out": 7.0,
+     "layout": "reading",
+     "note": "moderator: both of you seem to agree the Iran war is becoming a quagmire",
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "tw_maine_tj",
+     "type": "clip",
+     "src": "maine_01_iran",
+     "in": 25.0,
+     "out": 41.0,
+     "layout": "reading",
+     "note": "Jackson: nine votes… meaningless",
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "tw_maine_sc",
+     "type": "clip",
+     "src": "maine_01_iran",
+     "in": 65.0,
+     "out": 78.0,
+     "layout": "reading",
+     "note": "Collins: the president should have had a good plan",
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "tw_read",
+     "type": "text",
+     "text": "Listen to that last one again. The Republican senator voted against her own party's war nine times. The Democrat says her votes don't count. And both of them blame the president.",
+     "caption": "Nobody is where the map says",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     },
+     "piece": "maine_2026-10-13_collins_jackson_iran"
+    },
+    {
+     "id": "tw_broke",
+     "type": "text",
+     "text": "That's what I mean when I say the coalitions broke. Nobody is where the map says they should be.",
+     "caption": "The coalitions broke",
+     "ted": "map",
+     "map": {
+      "pins": true,
+      "orbit": [
+       0,
+       -60
+      ],
+      "zoom": 7.6,
+      "pinLabels": "all"
+     }
+    }
+   ]
+  },
+  {
+   "id": "protocol",
+   "title": "The protocol",
+   "clip": true,
+   "beats": [
+    {
+     "id": "pr_nate",
+     "type": "text",
+     "text": "Nate works with computers, and he made a point I keep coming back to. I have to mess around with system calls that I can go find in old AT&T manuals from the 1970s. TCP/IP, which the internet runs on — that's barely changed since the 80s. And all these things kind of have ideological assumptions built into them. So social media does as well.",
+     "caption": "Built-in beliefs",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 13
+     },
+     "quote": {
+      "text": "I have to mess around with system calls that I can go find in old AT&T manuals from the 1970s. TCP/IP, which the internet runs on — that's barely changed since the 80s. And all these things kind of have ideological assumptions built into them. So social media does as well.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 68:09"
+     }
+    },
+    {
+     "id": "pr_rules",
+     "type": "text",
+     "text": "The rules underneath us carry the beliefs of the people who wrote them.",
+     "caption": "The rules carry beliefs",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "pr_clark",
+     "type": "text",
+     "text": "In 1992 — the same year as Fukuyama's book — the people writing the internet's rules wrote down their own politics. One of them, David Clark, put it in two lines. We reject kings, presidents and voting. We believe in rough consensus and running code.",
+     "caption": "1992 · rough consensus and running code",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "pr_two",
+     "type": "text",
+     "text": "Two answers from the same year. Fukuyama said the argument is settled. The engineers said nobody settles it. You build what works, and you keep building.",
+     "caption": "Two answers, one year",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "pr_ossify",
+     "type": "text",
+     "text": "Engineers have a word for when that stops. Ossification. A system gets so built-in that it can't change anymore. That's the long 2014. The culture ossified. History didn't.",
+     "caption": "Ossification",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "flops",
+   "title": "Two flops",
+   "clip": true,
+   "beats": [
+    {
+     "id": "fl_two",
+     "type": "text",
+     "text": "Which brings me to two movies. Megalopolis, 2024. Francis Ford Coppola put around a hundred and twenty million dollars of his own money into a fable about an architect who can stop time. It flopped.",
+     "caption": "Megalopolis · 2024",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "fl_digger",
+     "type": "text",
+     "text": "Digger, this fall. Alejandro Iñárritu and Tom Cruise. An oil man knew a giant ice shelf was going to hit Europe, and he let it happen. It flopped harder. The same people loved both. The same people hated both.",
+     "caption": "Digger · 2026",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "fl_nate",
+     "type": "text",
+     "text": "Nate says this about Megalopolis. What's interesting is how polarizing the response has been — but it doesn't really follow the typical polarization on political lines.",
+     "caption": "Not mappable",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 2
+     },
+     "quote": {
+      "text": "What's interesting is how polarizing the response has been — but it doesn't really follow the typical polarization on political lines.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 9:34"
+     }
+    },
+    {
+     "id": "fl_camp",
+     "type": "text",
+     "text": "It made people angry without telling them which camp to stand in.",
+     "caption": "No camp to stand in",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "fl_lumens",
+     "type": "text",
+     "text": "Here's something Prism measures. We call it lumens. Lumens is how much of the actual thing gets through when someone talks. Talk about the thing itself, and the light gets through. Talk about who's on which side, and it doesn't.",
+     "caption": "Lumens: how much of the thing gets through",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       0,
+       -50
+      ],
+      "zoom": 6.8,
+      "arc": true
+     }
+    },
+    {
+     "id": "fl_facing",
+     "type": "text",
+     "text": "And it depends on which way you're facing. Not where you stand — left, right, up, down. Which way you're facing. Turn toward the thing, and you catch light. Turn toward the argument about the argument, and you're in shadow, from any corner.",
+     "caption": "Which way you're facing",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       20,
+       -45
+      ],
+      "zoom": 6.6,
+      "arc": true
+     }
+    },
+    {
+     "id": "fl_dig",
+     "type": "text",
+     "text": "Digger faces the thing. The oil man stands in front of the European Parliament and says it out loud: you needed the energy, I sold it to you. The light gets in. Then the movie turns away. It tells you it was all a play. Then it walks outside, and the world is a wasteland. So the bill gets paid by the weather.",
+     "caption": "Digger looks away",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "fl_mega",
+     "type": "text",
+     "text": "Megalopolis doesn't confess. It proposes. A city. A new material. A future you can argue with. It walks toward the thing. It's the most hopeful movie I've seen in years.",
+     "caption": "Megalopolis proposes",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "fl_barrett",
+     "type": "text",
+     "text": "Nate's host, Barrett, says why you have to catch these when they happen. Eventually somebody comes along later and is able to articulate why it was done, in a post hoc way. And by that time, it's already generally too late. You really have to savor and identify these things in the moment.",
+     "caption": "Catch it in the moment",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 5
+     },
+     "quote": {
+      "text": "Eventually somebody comes along later and is able to articulate why it was done, in a post hoc way. And by that time, it's already generally too late. You really have to savor and identify these things in the moment.",
+      "who": "Barrett (Contain)",
+      "src": "Contain, 2024 · 27:18"
+     }
+    }
+   ]
+  },
+  {
+   "id": "nice",
+   "title": "The nice collapse",
+   "clip": true,
+   "beats": [
+    {
+     "id": "ni_q",
+     "type": "text",
+     "text": "So here's the question Digger can't answer. What happens when our institutions admit their contradictions — out loud — and the world doesn't crumble?",
+     "caption": "What if the world doesn't crumble?",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ni_social",
+     "type": "text",
+     "text": "No rising water. Maybe the collapse is social. Addiction. People living on the street in Los Angeles. And what if it isn't even that? What if everything around us stays nice?",
+     "caption": "What if it stays nice?",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ni_mmt",
+     "type": "text",
+     "text": "Part of why it stays nice: after 2020, the government spent like it had never spent before. There's an idea called Modern Monetary Theory. It says a country that prints its own currency isn't limited by running out of money — it's limited by inflation. After 2020, that went from a fringe idea to roughly how Washington actually behaved. And the inflation that followed was the limit it predicted.",
+     "caption": "Modern Monetary Theory",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "ni_nate",
+     "type": "text",
+     "text": "Nate has a word for how it feels to live inside that. It feels like this weird inertia that people have been put under. And it seems like the inertia is growing stronger and stronger.",
+     "caption": "Inertia",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 8
+     },
+     "quote": {
+      "text": "It feels like this weird inertia that people have been put under. And it seems like the inertia is growing stronger and stronger.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 47:11"
+     }
+    },
+    {
+     "id": "ni_seat",
+     "type": "text",
+     "text": "Here's how that looks on Prism's map. We read every event from your seat. The American audience. Did it deliver for you? And from your seat, a lot of it did. The stores are open. The coffee's good. The reading comes up realized.",
+     "caption": "From your seat: realized",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       0,
+       -30
+      ],
+      "zoom": 6.6,
+      "split": "home"
+     }
+    },
+    {
+     "id": "ni_cost",
+     "type": "text",
+     "text": "But the cost of our contradictions didn't go away. It moved. It's on the edge of Europe, in Ukraine. It's in Gaza. So we draw it right beside your reading. Your seat, realized. The cost, somewhere else, frustrated. Same event.",
+     "caption": "The cost, somewhere else",
+     "ted": "map",
+     "map": {
+      "orbit": [
+       25,
+       -25
+      ],
+      "zoom": 6.4,
+      "split": "both"
+     }
+    },
+    {
+     "id": "ni_wound",
+     "type": "text",
+     "text": "That's the nice collapse. Nothing falls down where you can see it. The wound opens somewhere else.",
+     "caption": "The nice collapse",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       25,
+       -25
+      ],
+      "zoom": 6.4,
+      "split": "both"
+     }
+    }
+   ]
+  },
+  {
+   "id": "club",
+   "title": "Far from the club",
+   "clip": true,
+   "beats": [
+    {
+     "id": "cl_barrett",
+     "type": "text",
+     "text": "There's a scene in Megalopolis everybody laughs at. Barrett reads it better than anyone. It's that scene in the club where he's spinning out of control, losing his mind. That's the one part of the movie where he loses his ability to stop time — because he's indulging in society shit.",
+     "caption": "The club",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 11
+     },
+     "quote": {
+      "text": "It's that scene in the club where he's spinning out of control, losing his mind. That's the one part of the movie where he loses his ability to stop time — because he's indulging in society shit.",
+      "who": "Barrett (Contain)",
+      "src": "Contain, 2024 · 56:26"
+     }
+    },
+    {
+     "id": "cl_far",
+     "type": "text",
+     "text": "When Catalina goes to the club, he loses the one thing he has. So get as far from the club as you can. Face the thing. Gather enough light that you can give some back.",
+     "caption": "Far from the club",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    },
+    {
+     "id": "cl_nate",
+     "type": "text",
+     "text": "Nate gets the last word. It's kind of like the ontological argument for the existence of God. All of these structures are much more contingent than we think. If you just ask the right questions, you can actually get somewhere quite different.",
+     "caption": "Contingent",
+     "ted": "camera",
+     "piece": "contain_2024-10_megalopolis",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.0,
+      "focus": 15
+     },
+     "quote": {
+      "text": "It's kind of like the ontological argument for the existence of God. All of these structures are much more contingent than we think. If you just ask the right questions, you can actually get somewhere quite different.",
+      "who": "Nate (y2kmindset)",
+      "src": "Contain, 2024 · 73:43"
+     }
+    },
+    {
+     "id": "cl_out",
+     "type": "text",
+     "text": "That's the special. Nate's on Twitter at y2kmindset. I'm Ted Turner. Goodnight from the Getty Villa.",
+     "caption": "Ted Turner · goodnight from the Getty Villa",
+     "ted": "camera",
+     "map": {
+      "orbit": [
+       0,
+       -40
+      ],
+      "zoom": 7.2
+     }
+    }
+   ]
+  }
+ ]
+}

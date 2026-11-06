@@ -74,7 +74,7 @@ async function fetchReporter(rep, cmd, pers) {
   for (const rep of Object.keys(REPORTERS)) for (const cmd of Object.keys(CMDS)) for (let i = 0; i < pers.length; i += chunk) {
     const slice = pers.slice(i, i + chunk);
     try { const rows = await fetchReporter(rep, cmd, slice); edges.push(...rows); log(REPORTERS[rep], CMDS[cmd], slice[0] + '…' + slice[slice.length - 1], rows.length, 'rows'); }
-    catch (e) { errors.push(REPORTERS[rep] + ' ' + CMDS[cmd] + ' ' + slice[0] + ': ' + e.message); }
+    catch (e) { errors.push(REPORTERS[rep] + ' ' + CMDS[cmd] + ' ' + slice[0] + ': ' + e.message); log('✗', REPORTERS[rep], CMDS[cmd], slice[0], e.message.slice(0, 80)); }
     await sleep(KEY ? 800 : 2500);
   }
   const out = {

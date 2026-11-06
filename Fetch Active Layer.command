@@ -16,7 +16,9 @@ if ! command -v node >/dev/null 2>&1; then
   echo "✗ Node isn't installed. Install it from https://nodejs.org (LTS), then try again."
   read -r -p "Press Enter to close."; exit 1
 fi
-node scripts/comtrade.js; node scripts/active-layer.js || { echo; echo "✗ Stopped (see above)."; read -r -p "Press Enter to close."; exit 1; }
+# Comtrade only changes monthly, and without a key it rate-limits a second pull the same day: skip it if the file is under 3 days old.
+if [ -z "$(find data/active/bilateral.json -mtime -3 2>/dev/null)" ]; then node scripts/comtrade.js; else echo "Comtrade: already pulled in the last 3 days — skipping it this time."; fi
+node scripts/active-recent.js; node scripts/active-layer.js || { echo; echo "✗ Stopped (see above)."; read -r -p "Press Enter to close."; exit 1; }
 echo
 echo "✓ Done. Commit data/active in GitHub Desktop."
 echo

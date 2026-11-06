@@ -1,0 +1,520 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "scotus-order-us-v-california-2026-11-02",
+  "name": "The Supreme Court's unsigned order of 2026-11-02 denying the Justice Department's emergency application in United States v. California (the bid to set aside about 20,000 mail ballots)",
+  "place": {
+   "quadrants": [
+    "B",
+    "D",
+    "A"
+   ],
+   "band": "denominated",
+   "z": 0.5,
+   "why": "The order holds the count to rules set before the vote and stops a list that is 42% off the current roll from deciding ballots, but because it gives no reasons it settles nothing on eligibility and leaves that fight for after the votes are in."
+  }
+ },
+ "tethers": [
+  {
+   "statute": "National Voter Registration Act of 1993",
+   "cite": "52 U.S.C. § 20507(c)(2)(A) (Pub. L. 103-31)",
+   "title": "NVRA 90-day bar on systematic removals",
+   "enacted": "1993-05-20",
+   "relation": "adjacent",
+   "why": "The Ninth Circuit majority (10-30) cited the 90-day bar, with Purcell and state authority over elections; the order leaves that ruling standing but gives no reasons of its own, so the Court did not rest on it. Section and date from background.",
+   "place": {
+    "quadrants": [
+     "A",
+     "B"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "Standing law the ruling below leaned on; it neither delivers nor fails here."
+   }
+  },
+  {
+   "statute": "Voting by aliens",
+   "cite": "18 U.S.C. § 611 (added by the Illegal Immigration Reform and Immigrant Responsibility Act, Pub. L. 104-208)",
+   "title": "Federal ban on noncitizen voting in federal elections",
+   "enacted": "1996-09-30",
+   "relation": "adjacent",
+   "why": "The prohibition DOJ's suit rests on; the order does not touch it, and it remains the route for case-by-case prosecution after the count. Identification and date carried from the Thumb Drive draft (rdg_9wjfhhpxcp0d), not re-verified this run.",
+   "place": {
+    "quadrants": [
+     "C",
+     "D"
+    ],
+    "band": "fluid",
+    "z": 0,
+    "why": "Standing law the suit invoked; it neither delivers nor fails here."
+   }
+  },
+  {
+   "billId": "hr-119-22",
+   "bill": "H.R. 22",
+   "title": "SAVE Act",
+   "relation": "adjacent",
+   "statusAsOf": "Passed House 2025-04-10; received in the Senate, no vote",
+   "why": "Documentary proof of citizenship at registration: the front-end check B-fluid and D-coalition name as the fix the late list tried to stand in for.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "C"
+    ],
+    "band": "denominated",
+    "z": 0,
+    "why": "A bill that never became the instrument; it neither delivers nor fails here."
+   }
+  }
+ ],
+ "linkedBills": [
+  "hr-119-22"
+ ],
+ "title": "The Unsigned Order",
+ "category": "Elections · Supreme Court · States",
+ "date": "2026-11-02",
+ "prompt": "The Supreme Court won't make California set aside about 20,000 mail ballots DOJ flagged as likely noncitizen votes. Is that the Court keeping a bad list from deciding an election on its eve, or letting ballots be counted that no one checked?",
+ "framing": "On Monday evening, November 2, 2026, the Supreme Court denied the Justice Department's emergency request to make California set aside the mail ballots of about 20,000 registered voters DOJ calls likely noncitizens, hours after DOJ filed it. The order was brief and unsigned, gave no reasons, and had no noted dissents. It leaves two rulings standing: U.S. District Judge David O. Carter in Los Angeles turned the request down on Wednesday, October 28, and a divided Ninth Circuit panel did on Friday, October 30, warning of a \"material risk\" that the relief \"would result in disenfranchisement.\" DOJ built its list from government records and commercial data brokers; over the weekend of October 31 and November 1, a UCLA Voting Rights Project analysis found 42% of the names are not on California's current voter roll. Polls close the next day.",
+ "framingKeywords": [
+  "Supreme Court",
+  "20,000 ballots",
+  "likely noncitizens",
+  "no noted dissents",
+  "DOJ's list"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.6,
+  "seam": "A 3-vs-1 peel, not an x split: A, B and C read an order that delivers (fluid A +0.7, B +0.4, C +0.3; rims +0.8, +0.5, +0.4) and D alone reads ballots counted unchecked (fluid −0.6, rim −0.9). B crosses from its own side; C delivers while distrusting the holder.",
+  "rationale": "Who the speaker thinks should do the checking sorts the reads. B takes the Court's procedural line (Purcell, state authority) over DOJ's late list; D takes the count itself as the harm. The left gets the outcome it wanted from a Court it distrusted in August, so C signs positive by exception, not by trust.",
+  "zPattern": {
+   "centers": {
+    "A": 0.7,
+    "B": 0.4,
+    "C": 0.3,
+    "D": -0.6
+   },
+   "rims": {
+    "A": 0.8,
+    "B": 0.5,
+    "C": 0.4,
+    "D": -0.9
+   },
+   "note": "Centers are fluid z; coalition z: A +0.5, B +0.2, C +0.2, D −0.4. Every coalition sits closer to zero than its own fluid. C-denominated carries an instrument.exception (believes delivery, not by the holder's good faith; bench #14 form). Object z +0.5."
+  },
+  "ruledBy": null,
+  "date": "2026-11-03"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "The coalition band is where each station turns on its own side without changing sign: A says the people who called this Court a green light for a takeover in August shouldn't crown it now, B says the party calling the justices cowards needs a better list, C says the researchers and county officials did the work and the Court gets no thanks, and D tells the people posting about 20,000 illegal votes to look at the 42%.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the order delivers: the count goes ahead on rules set before the vote, and a late, unchecked list doesn't decide whose ballot counts",
+   "neg": "it doesn't: ballots nobody checked get counted, and the eligibility question is left until after the votes are in"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": 0.7,
+    "zReason": "Denying the application leaves Carter and the Ninth Circuit in place, so ballots get counted under California's existing citizenship-at-registration rules instead of being pulled on a data-broker match the night before polls close.",
+    "instrument": {
+     "holder": "the Supreme Court, leaving Judge Carter and the Ninth Circuit standing",
+     "trusted": true
+    },
+    "text": "The Court looked at a list where 42% of the names aren't even on California's roll and said no, the day before the election. That's Purcell doing exactly what it's supposed to do. If DOJ thinks a specific person voted illegally, § 611 is still on the books after tomorrow.",
+    "xWord": "voting rights",
+    "yWord": "Purcell",
+    "words": [
+     "disenfranchisement",
+     "data brokers",
+     "42%"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.5,
+    "zReason": "The order delivers the count, but its silence means the same Court that let the mail-voting order through in August can rule the other way next time without explaining that either.",
+    "instrument": {
+     "holder": "the Supreme Court",
+     "trusted": true
+    },
+    "text": "I'm relieved, honestly. But two months ago people I vote with, Weber included, were calling this Court a green light for a federal takeover, and tonight it's suddenly the guardian of democracy? An unsigned order with no reasons protects these ballots and nothing else, so I'd hold the victory laps.",
+    "xWord": "ballot access",
+    "yWord": "courts",
+    "words": [
+     "unsigned",
+     "August",
+     "no reasons"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "Every court that looked at the list rejected it, so the interference failed.",
+    "instrument": {
+     "holder": "the courts that stood up to Trump",
+     "trusted": true
+    },
+    "text": "Trump's DOJ tried to throw out 20,000 Californians with a data-broker list and not one justice would sign on. Election interference, caught red-handed.",
+    "xWord": "democracy",
+    "yWord": "rule of law",
+    "words": [
+     "interference",
+     "thumb drive",
+     "stopped"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.4,
+    "zReason": "Purcell and state authority over elections mean a federal court shouldn't rewrite who counts on the eve of a vote, so the order delivers a count on the rules already in place, even if eligibility questions remain.",
+    "instrument": {
+     "holder": "the Supreme Court",
+     "trusted": true
+    },
+    "text": "Noncitizen voting is already a federal crime and California already requires citizenship to register, so the law isn't the problem. The problem is DOJ showing up less than three weeks out with matches done outside SAVE that its own complaint admits may be stale. The fix is the SAVE Act and real verification at registration, not an emergency order on Monday night.",
+    "xWord": "election integrity",
+    "yWord": "Purcell",
+    "words": [
+     "SAVE Act",
+     "no noted dissents",
+     "procedure"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "The order keeps the rules steady, but it leaves real eligibility doubts to post-election challenges that are harder to win once mail ballots are mixed in.",
+    "instrument": {
+     "holder": "the Supreme Court",
+     "trusted": true
+    },
+    "text": "Not a single conservative justice noted a dissent, and some folks in my party are already calling them cowards. I get the frustration, Bumatay saw it differently, but DOJ has lost 26 of 31 of these voter-roll suits and Nevada found nobody. If the people I agree with want credibility on this, the list has to be better than this one.",
+    "xWord": "citizenship",
+    "yWord": "credibility",
+    "words": [
+     "Bumatay",
+     "26 of 31",
+     "SAVE Act"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.5,
+    "zReason": "The Court followed the law it has always followed.",
+    "instrument": {
+     "holder": "the Supreme Court",
+     "trusted": true
+    },
+    "text": "The Court applied Purcell and the law, period. Anybody screaming fraud tonight because they lost in court isn't defending the Constitution.",
+    "xWord": "law",
+    "yWord": "the Court",
+    "words": [
+     "Purcell",
+     "Constitution",
+     "order"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "The ballots get counted for now, but an order with no reasons protects nobody next time, and the subpoenas and criminal threats against election officials are still being fought separately.",
+    "instrument": {
+     "holder": "a Court that won't even explain itself",
+     "trusted": false
+    },
+    "text": "Fine, the ballots count. But look at what it took: a county refusing to open a thumb drive, a TRO to stop DOJ threatening election workers, three courts, and naturalized citizens on the list the whole time. The Court said no without saying why, so what's stopping the next list?",
+    "xWord": "voters",
+    "yWord": "organizing",
+    "words": [
+     "naturalized citizens",
+     "subpoenas",
+     "TRO"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "The order delivers this count, but it hands nothing back to the people who did the work of exposing the list, and it binds the Court to nothing.",
+    "instrument": {
+     "holder": "Roberts's Court",
+     "trusted": false
+    },
+    "text": "People on my side are treating this like the Court rescued them. It didn't; UCLA researchers who checked the names over a weekend and the county officials who found a lot of these people weren't even mailed ballots did, and the Court just declined to overrule the judges who listened. I'm glad, but I'm not thanking the same Court that waved through the mail-voting order in August.",
+    "xWord": "working people",
+    "yWord": "grassroots",
+    "words": [
+     "UCLA",
+     "county officials",
+     "August"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.4,
+    "zReason": "The ballots survived because the list was exposed, not because of the Court.",
+    "instrument": {
+     "holder": "a Court that sides with power until it can't",
+     "trusted": false,
+     "exception": "Believes the ballots will be counted because the list collapsed in public, not because of the holder's good faith."
+    },
+    "text": "A rigged list from data brokers fell apart, and the Court only backed off because it got caught. Next time they'll just do it quieter.",
+    "xWord": "the people",
+    "yWord": "power",
+    "words": [
+     "data brokers",
+     "caught",
+     "rigged"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": -0.6,
+    "zReason": "Once these mail ballots are opened and counted they can't be pulled back, so leaving eligibility for post-election challenges means the question never really gets answered.",
+    "instrument": {
+     "holder": "the Supreme Court",
+     "trusted": false
+    },
+    "text": "LA County wouldn't even open the thumb drive, and now the Court won't make anybody check before counting. So who's actually verifying these 20,000? Saying you can sort it out after the election is saying it won't get sorted out.",
+    "xWord": "citizenship",
+    "yWord": "accountability",
+    "words": [
+     "thumb drive",
+     "unchecked",
+     "post-election"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.4,
+    "zReason": "The order lets unchecked ballots in, though a list this loose was never going to be the tool that checked them.",
+    "instrument": {
+     "holder": "the Supreme Court and the Ninth Circuit majority",
+     "trusted": false
+    },
+    "text": "I still think ballots should be checked before they're counted, and Bumatay agreed. But the guys on my side posting that 20,000 illegal votes just got waved in should look at the 42% who aren't even on the roll and the data-broker matches. A sloppy list makes it easier for California to never check anything.",
+    "xWord": "verification",
+    "yWord": "skepticism",
+    "words": [
+     "Bumatay",
+     "42%",
+     "sloppy"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "Not one justice would stop noncitizen ballots from being counted.",
+    "instrument": {
+     "holder": "a Court that won't lift a finger",
+     "trusted": false
+    },
+    "text": "Twenty thousand ballots nobody checked, and not one justice would stop it. Rigged, and they didn't even bother explaining.",
+    "xWord": "America first",
+    "yWord": "rigged",
+    "words": [
+     "noncitizens",
+     "no dissents",
+     "rigged"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The Court looked at a list where 42% of the names aren't even on California's roll and said no, the day before the election. That's Purcell doing exactly what it's supposed to do.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "said no",
+    "42% of the names",
+    "Purcell"
+   ]
+  },
+  "LC": {
+   "text": "Two months ago people I vote with, Weber included, were calling this Court a green light for a federal takeover, and tonight it's suddenly the guardian of democracy?",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "people I vote with",
+    "green light",
+    "guardian of democracy"
+   ]
+  },
+  "LD": {
+   "text": "Trump's DOJ tried to throw out 20,000 Californians with a data-broker list and not one justice would sign on. Election interference, caught red-handed.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "Election interference",
+    "caught red-handed",
+    "not one justice"
+   ]
+  },
+  "RF": {
+   "text": "LA County wouldn't even open the thumb drive, and now the Court won't make anybody check before counting. So who's actually verifying these 20,000?",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "check before counting",
+    "who's actually verifying",
+    "thumb drive"
+   ]
+  },
+  "RC": {
+   "text": "Not a single conservative justice noted a dissent, and some folks in my party are already calling them cowards. If the people I agree with want credibility on this, the list has to be better than this one.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "folks in my party",
+    "calling them cowards",
+    "credibility"
+   ]
+  },
+  "RD": {
+   "text": "Twenty thousand ballots nobody checked, and not one justice would stop it. Rigged, and they didn't even bother explaining.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "Rigged",
+    "nobody checked",
+    "didn't even bother explaining"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "The Supreme Court declining to let DOJ set aside about 20,000 California mail ballots on the eve of the election.",
+  "operative": "An unsigned, reasonless denial that keeps the count on pre-election rules (Purcell, as the courts below put it) while deciding nothing about who on the list is eligible; the eligibility fight moves to after the votes are in, and to the separate TRO over threats to election officials.",
+  "inversion": "Lean, not ruled: A trusts a Court it called a green light for a federal takeover on 2026-08-24; B reads the denial of the suit as delivering after reading the suit itself as delivering (rdg_9wjfhhpxcp0d, a draft). See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-11-02",
+  "why": "Trigger day = the day the object finished forming: the order issued Monday evening 2026-11-02. The register's formedOn (11-03) is the UTC scan time of Monday-evening coverage, a report date. The register's holder (\"a federal court\") and kind (\"vote\") are corrected on the object card: the holder is the Supreme Court and the instrument is an order denying an application. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_afederal_ballots-california-court-doj",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-11-03T04:08:26.139Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (holder a federal court → the Supreme Court; kind vote → order; formedOn 11-03 → 11-02) -> window -> frame -> central object (the 11-02 order) + tethers (NVRA adjacent; 18 U.S.C. § 611 adjacent; H.R. 22 SAVE Act adjacent) + place -> axes -> twelve and object z (blind subagent; edits listed in blindAuthoring) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-11-02",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "the Court keeping a late list from deciding the count",
+    "operative": "a reasonless denial that holds the count to pre-election rules and leaves eligibility for later",
+    "inversion": "lean, not ruled: A for a Court it distrusted in August; B for both the suit and its denial"
+   },
+   "titleLean": "'The Unsigned Order' — Claude's; Sailor names Readings",
+   "sourcesInWindow": [
+    "NPR via KACU (2026-11-02): denial Monday evening, hours after the appeal was filed; ~20,000 likely noncitizens; Carter ruling (linked 10-28) and \"a broad, ongoing pattern of attempted election interference by federal officials\"; Ninth Circuit divided ruling Friday (10-30), Bennett and Sanchez majority, Bumatay dissent, \"material risk\" ... \"would result in disenfranchisement\", Purcell, state authority, NVRA 90-day bar; UCLA Voting Rights Project weekend analysis, 42% not on the current roll, naturalized citizens on the list; San Francisco TRO late Friday 10-30; subpoenas",
+    "Washington Post via Spokesman-Review (2026-11-02): order brief and unsigned, no rationale, no noted dissents; list from government records and commercial data brokers; DOJ turned the list over Friday to CHIRLA under a court order; about 9,000 (more than 40%) not on the 23.2 million rolls",
+    "Straight Arrow News (2026-10-27) and Ground News (2026-10-25): the Ninth Circuit's Sunday 10-25 hearing and its 10-26 denial (\"a self-constructed one\"), background only"
+   ],
+   "background_preWindow": [
+    "2026-10-13 thumb drive; 2026-10-15 suit filed (the Thumb Drive draft, rdg_9wjfhhpxcp0d)",
+    "2026-10-26: Ninth Circuit first declines to act before the district court rules, \"at least in part, a self-constructed one\" (Straight Arrow News)",
+    "2026-08-24: Weber on the Supreme Court's mail-voting executive-order ruling, \"a green light to President Trump's attempts to take over our election system\" (CA Secretary of State PR26-111)",
+    "DOJ voter-roll suits, 26 losses in 31; Nevada found none of the DHS-flagged people were noncitizens (carried from the Thumb Drive draft)",
+    "2025-04-10: SAVE Act (H.R. 22) passes the House (catalog)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-11-02",
+   "by": "Claude — frame-first authoring under §4c. Not a ruling.",
+   "window": "2026-11-02 (declared, see window.why)",
+   "verifiedInWindow": [
+    "Order Monday evening 2026-11-02, hours after filing (NPR)",
+    "Brief, unsigned, no rationale, no noted dissents (Washington Post via Spokesman-Review)",
+    "Ninth Circuit divided ruling Friday 2026-10-30: there is a \"material risk\" that the relief \"would result in disenfranchisement.\" (NPR)",
+    "List built from government records and commercial data brokers (Washington Post)",
+    "UCLA Voting Rights Project analysis over the 10-31/11-01 weekend: 42% of names not on the current roll (NPR; the Post gives \"more than 40 percent\")"
+   ],
+   "keptUnverifiedDate": [
+    "Carter's ruling date (Wednesday 10-28) rests on NPR's link to the ruling; no source in hand states the date in text.",
+    "Election Day is named only as \"the next day\"; no date after the window appears in the frame.",
+    "The docket number and the circuit justice were not in any source that loaded (CNN, NBC, CNBC, The Hill, the full Post would not load)."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "Anything said or filed on or after 2026-11-03, including Election Day itself and any reaction scanned that day",
+    "The outcome of the TRO appeal and of any post-election challenge"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-11-03",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/band brief, a short dated background (thumb drive, suit, the 10-26 Ninth Circuit denial and panel, Carter quote, TRO and subpoenas, UCLA findings, Weber's 08-24 line, SAVE Act, § 611, Nevada, 26 of 31), R-0921-1 with the exception form, and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place (z +0.5, quadrants [B, D, A], band denominated) authored by the same subagent, with the twelve, before the words.",
+   "rulings": "NONE — every station awaits Sailor's ruling. z, zReason, instrument as authored. Edits to text after hand-back, all mine and factual only: B-fluid \"two weeks out\" → \"less than three weeks out\" (suit filed 19 days before Election Day); B-coalition \"folks\" → \"some folks\", and \"DOJ's Civil Rights Division has lost 26 of 31 of these suits\" → \"DOJ has lost 26 of 31 of these voter-roll suits\" (this suit came from the deputy AG's office); C-coalition \"UCLA researchers and county clerks who checked the names over a weekend did, and the Court just declined to overrule them\" → names UCLA and the county officials separately and has the Court decline \"to overrule the judges who listened\" (the Court overruled no researchers); D-coalition \"aren't even registered\" → \"aren't even on the roll\" (the 42% is absence from the current roll).",
+   "authorNote": "I trust B-denominated's positive sign least: an institutional-right identity could just as easily totalize as 'Roberts's Court ducked again' and go negative, so it's a judgment call. C-denominated is the one place I used the exception, and its z could be near zero instead, since left-populist distrust of the Court may outweigh relief at the outcome. D-coalition's sign is negative, but it sits close to the line, because its self-critique of the list partly accepts the order's reasoning."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "A (left·institutional)",
+     "what": "Trusts the Supreme Court as the holder that delivered the count (fluid +0.7, trusted).",
+     "prior": "2026-08-24, Secretary of State Weber (a left-institutional voice) on the Court's mail-voting executive-order ruling: \"a green light to President Trump's attempts to take over our election system.\" A-coalition names the turn itself.",
+     "note": "Lean with a dated prior in coverage. Entered unruled."
+    },
+    {
+     "station": "B (right·institutional)",
+     "what": "Reads the denial of DOJ's suit as delivering (+0.4) after reading the suit itself as delivering (+0.4).",
+     "prior": "rdg_9wjfhhpxcp0d B-fluid (draft, 2026-10-16): \"a court gets to weigh it. Isn't that exactly how this is supposed to work?\"",
+     "note": "Lean only: the prior is a Claude draft, not a live Reading, and B's holder-trust line (let a judge decide) is consistent across both, so this may be fidelity to process rather than a flip. Sailor rules."
+    }
+   ],
+   "inversionNote": "Two leans. A's has a dated prior in coverage; B's rests on a draft.",
+   "permanence": "Not a return: the continuation of obj_thejusti_alleged-california-doj-kills (the suit, drafted 10-16 as rdg_9wjfhhpxcp0d), whose overlay note said a ruling on the motion would be a new object. This order is the last stop before Election Day; the eligibility question did not resolve — it was deferred, so watch for a post-election return under a new name (challenge, certification, prosecutions under § 611)."
+  }
+ },
+ "rid": "rdg_al8uju97ware",
+ "ridLineage": "minted 2026-11-03 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-11-03T04:08:39.368Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_afederal_ballots-california-court-doj",
+  "queuedOn": "2026-11-03",
+  "draftedOn": "2026-11-03"
+ },
+ "images": []
+}

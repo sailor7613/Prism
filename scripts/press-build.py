@@ -68,6 +68,13 @@ def build(spec):
 if __name__ == '__main__':
     spec = json.load(open(sys.argv[1]))
     doc, summary = build(spec)
+    # 11-05: the closed form's derived drafts live on the built piece, beside the hand scores — a rebuild keeps them
+    import os
+    if os.path.exists(sys.argv[2]):
+        try:
+            old = json.load(open(sys.argv[2]))
+            if old.get('closedform'): doc['closedform'] = old['closedform']
+        except Exception: pass
     json.dump(doc, open(sys.argv[2], 'w'), ensure_ascii=False, indent=1)
     print(json.dumps(summary, ensure_ascii=False))
     for k, v in (doc['scoreboard']['stations'] or {}).items():

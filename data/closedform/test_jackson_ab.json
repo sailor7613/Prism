@@ -1,0 +1,133 @@
+{
+ "piece": "test_jackson_ab",
+ "model": "claude-haiku-5-5",
+ "at": "2026-11-05T15:24:24",
+ "tracker": "sst",
+ "facts": [
+  {
+   "id": "sst:EMM_EPMR_PTE_NUS_DPG",
+   "fact": "US regular gasoline, retail: 2.937 on 2026-02-23 (before the war) → 4.284 on 2026-10-19 (+46%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-19",
+   "tracked": true
+  },
+  {
+   "id": "sst:RBRTE",
+   "fact": "Brent crude: 71.36 on 2026-02-27 (before the war) → 125.59 on 2026-10-16 (+76%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "sst:RWTC",
+   "fact": "WTI crude: 65.87 on 2026-02-27 (before the war) → 99.93 on 2026-10-16 (+52%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "decl:legislative",
+   "fact": "no war authorization; Collins's nine votes against (her count) are the Senate's record; gas $2.98 pre-war → $4.29 on 10-26, diesel record over $6 (AP via Fortune)",
+   "source": "the piece, declared",
+   "tracked": false
+  }
+ ],
+ "usage": {
+  "input_tokens": 12609,
+  "output_tokens": 3894,
+  "model": "claude-haiku-5-5"
+ },
+ "derived": {
+  "dia": 65,
+  "lumens": 0
+ },
+ "lines": [
+  {
+   "i": 0,
+   "who": "TJ",
+   "hand": {
+    "dia": 56,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 0,
+    "substance": false,
+    "facts_touched": [
+     "decl:legislative"
+    ],
+    "contradicts": [],
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "patterns": [
+     {
+      "n": 28,
+      "phrase": "I know she's going to say she voted against it nine times, but those are meaningless"
+     },
+     {
+      "n": 28,
+      "phrase": "those are meaningless"
+     }
+    ],
+    "facing": "argument",
+    "place": "mid",
+    "why": "It waves off the nine votes before she replies, answering her expected rebuttal instead of the war record itself.",
+    "_runs": [
+     80,
+     80,
+     80
+    ]
+   },
+   "derived": {
+    "dia": 80,
+    "band": [
+     67,
+     85
+    ],
+    "stage": null,
+    "tier": "denominated",
+    "flags": []
+   }
+  },
+  {
+   "i": 1,
+   "who": "TJ",
+   "hand": {
+    "dia": null,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 1,
+    "substance": true,
+    "facts_touched": [
+     "decl:legislative"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "argument",
+    "place": "mid",
+    "why": "It engages the legislative record of war powers and her inaction, arguing the votes' weight against her case without pre-empting her reply.",
+    "_runs": [
+     50,
+     50,
+     80
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (50–80)"
+    ]
+   }
+  }
+ ]
+}

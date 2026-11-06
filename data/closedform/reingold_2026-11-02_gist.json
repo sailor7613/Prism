@@ -1,0 +1,158 @@
+{
+ "piece": "reingold_2026-11-02_gist",
+ "model": "claude-haiku-5-5",
+ "at": "2026-11-05T12:29:07",
+ "tracker": "cct",
+ "facts": [
+  {
+   "id": "decl:legislative",
+   "fact": "U.S. military aid to Israel ~$3.8B/yr under the 2016 MOU; recent supplemental spending estimated $16.3–21.7B (PolitiFact, 10-30). El-Sayed opposes military aid to Israel, Egypt, Saudi Arabia, Qatar, the UAE",
+   "source": "the piece, declared",
+   "tracked": false
+  },
+  {
+   "id": "cct:none",
+   "fact": "No conflict casualty tracker yet — casualty figures for this object are not tracked.",
+   "source": "closed form",
+   "tracked": false
+  }
+ ],
+ "usage": {
+  "input_tokens": 12534,
+  "output_tokens": 4203,
+  "model": "claude-haiku-5-5"
+ },
+ "derived": {
+  "dia": 75,
+  "lumens": 20
+ },
+ "lines": [
+  {
+   "i": 0,
+   "who": "AE",
+   "hand": {
+    "dia": 26,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 0,
+    "substance": true,
+    "facts_touched": [
+     "decl:legislative"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "low",
+    "why": "The line engages the object's real tradeoff of domestic tax spending against military spending abroad, but it is a campaign line built to win the room rather than an open statement.",
+    "_runs": [
+     40,
+     40,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 40,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "agrees with Sailor's ruling"
+    ]
+   }
+  },
+  {
+   "i": 1,
+   "who": "OR",
+   "hand": {
+    "dia": 58,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 1,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "patterns": [
+     {
+      "n": 1,
+      "phrase": "literally just repeated the gist of the claim that got him in hot water this week"
+     }
+    ],
+    "facing": "argument",
+    "place": "mid",
+    "why": "It files El-Sayed's line under the controversy before weighing its content, so the answer is fixed in advance and nothing about the tax-and-bombs claim is examined.",
+    "_runs": [
+     92,
+     92,
+     92
+    ]
+   },
+   "derived": {
+    "dia": 92,
+    "band": [
+     67,
+     100
+    ],
+    "stage": null,
+    "tier": "denominated",
+    "flags": [
+     "patterns #1 say 40–65, the band says denominated 67–100",
+     "agrees with Sailor's ruling"
+    ]
+   }
+  },
+  {
+   "i": 2,
+   "who": "OR",
+   "hand": {
+    "dia": 64,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 2,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "patterns": [
+     {
+      "n": 1,
+      "phrase": "the essence of the highly controversial ad"
+     }
+    ],
+    "facing": "argument",
+    "place": "mid",
+    "why": "It labels the line as a highly controversial ad and points to who condemned it, so the classification replaces any engagement with what the tax-and-bombs claim says.",
+    "_runs": [
+     92,
+     92,
+     97
+    ]
+   },
+   "derived": {
+    "dia": 92,
+    "band": [
+     67,
+     100
+    ],
+    "stage": null,
+    "tier": "denominated",
+    "flags": [
+     "patterns #1 say 40–65, the band says denominated 67–100"
+    ]
+   }
+  }
+ ]
+}

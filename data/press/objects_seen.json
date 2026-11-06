@@ -5873,6 +5873,4054 @@
    "reduced": "3.4% · affordability",
    "why": "robots-blocked; filed from the feed's hed and dek",
    "partial": "headline + dek"
+  },
+  {
+   "id": "see-surv-1030-wti-104",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "2:20",
+    "2:28"
+   ],
+   "object": "WTI ≈$104 on 10-30, 'some of the highest levels since near the beginning of the war'; crude +2% intraday on renewed-tension reports",
+   "kind": "price",
+   "holder": "— (the market)",
+   "analog": {
+    "type": "price",
+    "ref": "see-fox-1029-q3-gdp / the PCE row — the same price leg at the index; aj 10-29's farm diesel"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the price leg at the terminal, dated; detection row (verified: false)"
+   },
+   "scored": true,
+   "reduced": "104 · highest since the war began",
+   "why": "the RI corner's first crude print on the Press with the cause attached"
+  },
+  {
+   "id": "see-surv-1030-refining-record",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "25:56",
+    "1:01:06"
+   ],
+   "object": "Exxon Q3 refining a record $9.05bn (≈5× a year earlier), overall profit fourth-highest ever, 44th dividend raise, +52% YTD; Chevron refining ≈$5bn record (4×), refining run ≈100%, +52% YTD; 'international prices up 60%'",
+   "kind": "realization",
+   "holder": "Exxon · Chevron (earnings, as reported)",
+   "analog": {
+    "type": "realization",
+    "ref": "NYT 10-30 'U.S. Oil Industry Earned Over $130 Billion in Profit During Iran War' (hed+dek only, site-blocked) — the same quarter from LI"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c measured at the refiner — the price where it lands; detection rows (verified: false); a layer-2 statement (who is paid)"
+   },
+   "scored": true,
+   "reduced": "$9.05bn, five times · $5bn, four times · 60%",
+   "why": "the deal's fuel booked as margin"
+  },
+  {
+   "id": "see-surv-1030-chevron-venezuela-margin",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "23:23"
+   ],
+   "object": "Chevron's Venezuelan barrels 'cost less than $20' against Brent/WTI 'north of $100' — 'the most profitable barrels in the entire world'; 'a huge push for the Trump administration'",
+   "kind": "price",
+   "holder": "Chevron (as reported); the administration's Venezuela deal (fox 10-29)",
+   "analog": {
+    "type": "price",
+    "ref": "see-fox-1029-venezuela-cure — the cure renamed (fox 10-29 ¶6, ¶9–¶11)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "layer 2 — who is paid, in what: the cure read as the seller's margin, not the buyer's relief; statement"
+   },
+   "scored": true,
+   "reduced": "less than $20 against north of $100",
+   "why": "the renamed cure priced on the seller's books"
+  },
+  {
+   "id": "see-surv-1030-cooper-briefing",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "2:28",
+    "1:14:19",
+    "1:37:28"
+   ],
+   "object": "the CENTCOM commander (Adm. Brad Cooper, via Fox as relayed) in Washington briefing the president on military options; 'reports signaling after the midterms another engagement between the United States and Iran'",
+   "kind": "statement",
+   "holder": "— (reports; Fox as relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes — fourteenth-plus sighting; the first with a named briefing as the record"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "slate01 / PG01 §5 — the force; record row for cand-post-election-strikes (verified: false)"
+   },
+   "scored": true,
+   "reduced": "Cooper briefing · after the midterms · priced in oil",
+   "why": "the force as a price input on the terminal"
+  },
+  {
+   "id": "see-surv-1030-farm-diesel",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "16:22"
+   ],
+   "object": "Kansas and Iowa: 'farming states highly exposed to higher diesel costs in the middle of harvest season and tariff retaliation' — the reason given for the holder's cancelled rallies",
+   "kind": "realization",
+   "holder": "— (Bloomberg's Tyler Kendall)",
+   "analog": {
+    "type": "realization",
+    "ref": "see-aj-1029-arkansas-diesel-budget — diesel 72% over an extension budget (aj 10-29)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c as a farm input, now on the trail; also slate01 — KS-Sen / IA-Sen context"
+   },
+   "scored": true,
+   "reduced": "diesel in the middle of harvest",
+   "why": "the deal's fuel where the vote is closest"
+  },
+  {
+   "id": "see-surv-1030-december-fomc",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "3:35",
+    "1:15:11",
+    "1:33:29"
+   ],
+   "object": "the Fed's December meeting as the market's clock: 'retracing how many rate hikes'; 'the market has taken off one rate hike'; Warsh 'no guidance'; Hassett (relayed): 'inflation remains in the pipeline with more tightening required' — and Golub's refusal: tightening 'is not going to affect inflation coming out of oil in the Middle East'",
+   "kind": "statement",
+   "holder": "Kevin Hassett (as relayed); the market",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-december-fomc-hike (fox 10-29: a hike at 79.6%)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-december-fomc-hike — second sighting, now with the hike being repriced down and a challenge to it as the cure; low"
+   },
+   "scored": true,
+   "reduced": "one hike taken off · inflation in the pipeline · not going to affect oil",
+   "why": "the substitute clock, challenged"
+  },
+  {
+   "id": "see-surv-1030-rally-pullback",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "15:49",
+    "16:09"
+   ],
+   "object": "Trump cancels in-person rallies in Kansas and Iowa days before the vote; approval a new low of 30%; ≥20 tele-rallies; 44M+ early ballots on track to pass 2022; GOP + PACs $2.1bn raised v. $0.4bn",
+   "kind": "activity",
+   "holder": "the White House (as reported)",
+   "analog": {
+    "type": "activity",
+    "ref": "ms-now 10-30 'on, then off, then back on again rallies' (Pxk6IQsS5RM, on disk, not cut) — the same pullback from LI"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate01 — context: the holder's standing on the Friday before the vote"
+   },
+   "scored": true,
+   "reduced": "30% · rallies cancelled · 44M",
+   "why": "the gas↔votes predicate's other leg"
+  },
+  {
+   "id": "see-surv-1030-data-center-backlash",
+   "piece": "surv_2026-10-30_the_linchpin",
+   "program": "Bloomberg Surveillance",
+   "date": "2026-10-30",
+   "t": [
+    "7:46",
+    "1:05:11"
+   ],
+   "object": "data centers as a midterm flashpoint: 50% of voters oppose build-outs within three miles; Texas the number-one state for construction; Dale: a blue wave could 'shut data center' build-outs — 'the most salient market risk so underpriced'",
+   "kind": "activity",
+   "holder": "— (Bloomberg polling as reported; Darius Dale)",
+   "analog": {
+    "type": "activity",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate01 — TX-Sen context (the data-center issue); sighting, permanence low"
+   },
+   "scored": false,
+   "reduced": "50% within three miles · underpriced",
+   "why": "a slate issue the terminal prices; not the object"
+  },
+  {
+   "id": "see-msnow-1030-reup-strikes",
+   "piece": "msnow_2026-10-30_a_spine",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "0:33"
+   ],
+   "object": "'the president now reportedly plans to re-up strikes against Iran as soon as the midterms are over' (host) — the same report on Surveillance, AJ, Fox and the FP page the same day",
+   "kind": "statement",
+   "holder": "— (reports, as relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes — now read from LI, RI and RP in one day"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "slate01 / PG01 §5 — the force; record row (verified: false)"
+   },
+   "scored": true,
+   "reduced": "re-up strikes as soon as the midterms are over",
+   "why": "the object dated to the vote from the LI chair"
+  },
+  {
+   "id": "see-msnow-1030-murphy-briefing",
+   "piece": "msnow_2026-10-30_a_spine",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "1:56",
+    "2:15"
+   ],
+   "object": "Sen. Chris Murphy briefed on the administration's 'considered plans as it relates to Iran': 'their plan is insane … devastating escalation … the likely destruction of our commitment to the rule of law' (clip); AJ 10-30 ×2 carry the same clip ('Senators briefed on Trump's insane plan')",
+   "kind": "statement",
+   "holder": "Sen. Chris Murphy (D-Conn.)",
+   "analog": {
+    "type": "statement",
+    "ref": "see-surv-1030-cooper-briefing — the other briefing the same week"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "the force's record row: a Senate briefing exists; the Murphy line itself is a reader's"
+   },
+   "scored": true,
+   "reduced": "briefed · their plan is insane",
+   "why": "a plan confirmed by the senator who was read into it"
+  },
+  {
+   "id": "see-msnow-1030-diesel-deal-russia",
+   "piece": "msnow_2026-10-30_a_spine",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "2:49"
+   ],
+   "object": "Osborn: Russia 'has supported Iran in this war that has killed Americans — and now we're doing a diesel deal with Russia; we're flipping the script'",
+   "kind": "statement",
+   "holder": "Dan Osborn (independent, NE-Sen)",
+   "analog": {
+    "type": "statement",
+    "ref": "H1 — the deal; the first line on the Press joining H1 to the force"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1 — a challenge predicate (the seller armed the enemy); layer 1 or 2 is a ruling"
+   },
+   "scored": true,
+   "reduced": "a diesel deal with Russia · killed Americans",
+   "why": "the deal and the war in one sentence"
+  },
+  {
+   "id": "see-msnow-1030-sylvia-fired",
+   "piece": "msnow_2026-10-30_a_spine",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "3:15"
+   ],
+   "object": "Hegseth fired Lt. Gen. Brett Sylvia, 'the military's key strategist or planner', accusing him of leaking; 'the president thought it was a woman'; some Republicans want Hegseth impeached (fox 10-29 'Hegseth/leak' on the queue, uncut)",
+   "kind": "appointment",
+   "holder": "Pete Hegseth (as reported)",
+   "analog": {
+    "type": "appointment",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate, low — a removal with a holder; the record (the order) owed"
+   },
+   "scored": true,
+   "reduced": "fired · the key planner",
+   "why": "the war's command on the eve of the strike"
+  },
+  {
+   "id": "see-msnow-1030-ne-sen",
+   "piece": "msnow_2026-10-30_a_spine",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "4:25"
+   ],
+   "object": "Osborn: 'the tightest Senate race in the country by margin' (the candidate's own claim)",
+   "kind": "statement",
+   "holder": "Dan Osborn",
+   "analog": {
+    "type": "statement",
+    "ref": "slate01 — NE-Sen"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate01 — NE-Sen context; a candidate's claim, unverified"
+   },
+   "scored": true,
+   "reduced": "tightest by margin",
+   "why": "the slate from the candidate's chair"
+  },
+  {
+   "id": "see-msnow-1030-no-new-wars-clip",
+   "piece": "msnow_2026-10-30_month_eight",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "0:26",
+    "0:48 (mtMgizULV0E)"
+   ],
+   "object": "the holder's own words, clipped: 'we will measure our success … by the wars we never get into'; 'I was the first president in decades who started no new wars' — against 'month eight' (a Fort Bragg-area Army veteran who voted for him 'for just one reason'); 'the war on Iran is dragging on too long … I thought it would be a month-long war'",
+   "kind": "statement",
+   "holder": "Donald Trump (clips; dates not on the tape)",
+   "analog": {
+    "type": "statement",
+    "ref": "the shadow of the force — 'not a forever war' (Vance, Fox 10-29)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 — the holder's promise as the force's shadow; constitutive, filed not scored (the clip is not cut: one MS NOW cut per day) — CUT 11-01 as msnow_2026-10-30_month_eight: the two clips scored constitutive @O (declared +1.0); the clips' dates still owed to the record"
+   },
+   "scored": true,
+   "reduced": "no new wars · month eight · don't do it",
+   "why": "the promise in the holder's voice, held by the people it was made to",
+   "station": "LI"
+  },
+  {
+   "id": "see-msnow-1030-war-approval-24",
+   "piece": "",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "dek (s9HVOeT3qKw)"
+   ],
+   "object": "'a new poll finds only 24% of adults approve of President Trump's war with Iran' — the dek; not spoken on the tape; pollster unnamed",
+   "kind": "realization",
+   "holder": "— (poll, unnamed)",
+   "analog": {
+    "type": "realization",
+    "ref": "see-surv-1030-rally-pullback — approval 30%"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row (verified: false) — the war's approval; pollster owed"
+   },
+   "scored": false,
+   "reduced": "24% approve",
+   "why": "filed from the dek"
+  },
+  {
+   "id": "see-fp-1030-reup-report",
+   "piece": "fp_2026-10-30_five_options_lede",
+   "program": "The Free Press",
+   "date": "2026-10-30",
+   "t": [
+    "¶1"
+   ],
+   "object": "'recent news reports suggest that the president is leaning in the direction of some form of renewed military action'; the reason the strike waits: escalation now 'would spook the financial markets and harm Republican candidates next Tuesday'",
+   "kind": "statement",
+   "holder": "— (reports; Aaron MacLean)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes — the RP corner's third page in three days"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "slate01 / PG01 §5 — the force, with the mechanism (the vote as the clock) stated from RP"
+   },
+   "scored": true,
+   "reduced": "leaning toward renewed military action · spook the markets · harm Republican candidates",
+   "why": "the gas↔votes predicate as a planning constraint"
+  },
+  {
+   "id": "see-fp-1030-june-mou",
+   "piece": "fp_2026-10-30_five_options_lede",
+   "program": "The Free Press",
+   "date": "2026-10-30",
+   "t": [
+    "¶2"
+   ],
+   "object": "a June memorandum of understanding 'recognizing Iranian sovereignty in the strait as a precondition for nuclear talks' that 'collapsed in less than two weeks' (as-of June, per the author)",
+   "kind": "agreement",
+   "holder": "the United States · Iran (as reported)",
+   "analog": {
+    "type": "agreement",
+    "ref": "H6 — the control claim; its own prior counter-document"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate, high — if the register has the June MOU this is a later sighting; if not, an agreement with a holder and a date. Verify"
+   },
+   "scored": true,
+   "reduced": "Iranian sovereignty in the strait · less than two weeks",
+   "why": "the control claim's signed history"
+  },
+  {
+   "id": "see-fp-1030-iran-terms",
+   "piece": "fp_2026-10-30_five_options_lede",
+   "program": "The Free Press",
+   "date": "2026-10-30",
+   "t": [
+    "¶2"
+   ],
+   "object": "Iran's terms via ISW: the US must lift the naval blockade, provide sanctions relief and recognize Iranian control over the strait before Iran concedes anything — ISW's 'sequencing problem'",
+   "kind": "statement",
+   "holder": "Iran (via ISW, as quoted)",
+   "analog": {
+    "type": "statement",
+    "ref": "iran-terms (terms.json) — AJ 10-27's three terms"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 layer 2 — the toll's ledger from the other side; statement"
+   },
+   "scored": true,
+   "reduced": "lift the blockade · sanctions relief · recognize Iranian control",
+   "why": "the counter-claim to control as a precondition"
+  },
+  {
+   "id": "see-fp-1030-transits-prewar",
+   "piece": "fp_2026-10-30_five_options_lede",
+   "program": "The Free Press",
+   "date": "2026-10-30",
+   "t": [
+    "¶3"
+   ],
+   "object": "escort operations in the Strait 'appear to have restored oil transits to near pre-war levels'; the blockade of Iranian ports 'doing meaningful economic damage'; 'other commodities … less clear'",
+   "kind": "realization",
+   "holder": "— (the author; no source given)",
+   "analog": {
+    "type": "realization",
+    "ref": "H6 — CENTCOM's 19M bbl (bp 10-15); see-surv-1030-cooper-briefing's 'a little more challenging'"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the throughput claim from RP, hedged; detection row (verified: false)"
+   },
+   "scored": true,
+   "reduced": "near pre-war levels · appear",
+   "why": "throughput as control, from the right, with a hedge"
+  },
+  {
+   "id": "see-ds-1030-if-we-win",
+   "piece": "",
+   "program": "The Daily Show",
+   "date": "2026-10-30",
+   "t": [
+    "0:17",
+    "0:34"
+   ],
+   "object": "Trump (clips): 'if you elect a Republican House and a Republican Senate … you'll get $5,000 and if you lose, you get nothing'; the Department of War 'investing a hundred million dollars, but you have to win'; Camp Lejeune claims settled 'if we win the House and the Senate'",
+   "kind": "statement",
+   "holder": "Donald Trump (clips; dates not on the tape)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press — a conditional delivery claim"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate — dated statements with a delivery claim conditioned on the vote; the record (the speech, the $5,000 mechanism) owed. Transcript on disk (ArVGfQAe2UE); not cut — not a live PG object"
+   },
+   "scored": false,
+   "reduced": "$5,000 if · a hundred million if · Lejeune if",
+   "why": "the vote as the condition on delivery"
+  },
+  {
+   "id": "see-shapiro-1030-decoy-dan",
+   "piece": "",
+   "program": "The Ben Shapiro Show",
+   "date": "2026-10-30",
+   "t": [
+    "0:06–6:00"
+   ],
+   "object": "the Alaska 'Decoy Dan' story: Peltola under investigation; the Daily Wire's midterm hub; Georgia — the whole 11.8k-word transcript is the slate, no Iran, oil or price",
+   "kind": "activity",
+   "holder": "— (as reported)",
+   "analog": {
+    "type": "activity",
+    "ref": "slate01 — AK-Sen (the two Dan Sullivans, NYT/Fox/NPR/Daily Show on the queue)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate01 — AK-Sen context; the first Shapiro transcript on disk since 10-16, not cut (no live object on the tape)"
+   },
+   "scored": false,
+   "reduced": "Decoy Dan · Peltola",
+   "why": "RP's day was the slate"
+  },
+  {
+   "id": "see-nyt-1030-oil-130bn",
+   "piece": "",
+   "program": "The New York Times",
+   "date": "2026-10-30",
+   "t": [
+    "hed",
+    "dek (site-blocked)"
+   ],
+   "object": "'U.S. Oil Industry Earned Over $130 Billion in Profit During Iran War' — almost three times what producers and refiners made in the same period of 2025",
+   "kind": "realization",
+   "holder": "— (NYT, hed + dek)",
+   "analog": {
+    "type": "realization",
+    "ref": "see-surv-1030-refining-record — the same quarter from RI"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row (verified: false) — the price leg where it lands, LI version; β, not scored"
+   },
+   "scored": false,
+   "reduced": "$130 billion · three times",
+   "why": "filed from the feed",
+   "partial": "headline + dek"
+  },
+  {
+   "id": "see-fox-1030-options-underway",
+   "piece": "fox_2026-10-30_win_or_come_home",
+   "program": "Fox News",
+   "date": "2026-10-30",
+   "t": [
+    "¶2"
+   ],
+   "object": "'officials and military sources say moves are underway to give the president options if he resumes strikes' (as reported)",
+   "kind": "statement",
+   "holder": "— (officials and military sources, as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "see-msnow-1030-reup-strikes · see-surv-1030-cooper-briefing · see-fp-1029-strike-inevitable — the same report from LI, RI and RP"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 — record row for cand-post-election-strikes, the fourth corner-sighting in three days and the first in the holder's own corner; tracker detection row (verified: false) — the primary (a briefing, an order, a named official) owed"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 8,
+   "z": -0.7,
+   "reduced": "options · if he resumes strikes",
+   "why": "the record in one reported clause, beside the promise"
+  },
+  {
+   "id": "see-fox-1030-vance-forever-war",
+   "piece": "fox_2026-10-30_win_or_come_home",
+   "program": "Fox News",
+   "date": "2026-10-30",
+   "t": [
+    "¶2"
+   ],
+   "object": "Vance (Fox News town hall, 10-29, as reported): Trump is 'not going to let Iran become a forever war'",
+   "kind": "statement",
+   "holder": "JD Vance (the holder's office)",
+   "analog": {
+    "type": "statement",
+    "ref": "see-msnow-1030-no-new-wars-clip — the holder's own phrasing; the shadow of the force"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 — constitutive statement, the holder's office's phrasing of the shadow; hypotheses.json C-vance-1029-forever-war. Noted in A Spine's transform on 10-31; filed here"
+   },
+   "scored": true,
+   "station": "O",
+   "z": 0.8,
+   "reduced": "not a forever war",
+   "why": "the promise, from the office"
+  },
+  {
+   "id": "see-fox-1030-mow-the-lawn",
+   "piece": "fox_2026-10-30_win_or_come_home",
+   "program": "Fox News",
+   "date": "2026-10-30",
+   "t": [
+    "¶8"
+   ],
+   "object": "Harrigan: win, or declare the objectives 'largely met' with 'persistent over the horizon monitoring' and strikes to 'mow the lawn every now and again'",
+   "kind": "statement",
+   "holder": "Rep. Pat Harrigan (R-N.C., House Armed Services) — a reader",
+   "analog": {
+    "type": "statement",
+    "ref": "the force's steady-state shape; 'win or come home' is the reader's binary"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 — statement (reader): the version of the force that is 'not a forever war', from inside the majority — periodic strikes. Out of the tracker (a reader's proposal)"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 28,
+   "z": -0.6,
+   "reduced": "largely met · over the horizon · mow the lawn",
+   "why": "coming home spelled out as periodic strikes"
+  },
+  {
+   "id": "see-fox-1030-involve-congress",
+   "piece": "fox_2026-10-30_win_or_come_home",
+   "program": "Fox News",
+   "date": "2026-10-30",
+   "t": [
+    "¶6",
+    "¶7"
+   ],
+   "object": "Harrigan: Trump 'needs to involve Congress' if he renews military action; 'Congress is responsible for the funding arm'",
+   "kind": "statement",
+   "holder": "Rep. Pat Harrigan — a reader",
+   "analog": {
+    "type": "vote",
+    "ref": "a war-powers resolution or an appropriations rider; Osborn's 'checks and balances … Congress's role' (A Spine, 0:47) — the same stop from LI"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate, low — cand-war-powers-stop: the same instrument asked for from two corners in two days; an object only when a resolution, a vote or rider text exists. Sailor rules"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 16,
+   "z": -0.5,
+   "reduced": "involve Congress · the funding arm",
+   "why": "the stop asked for from inside the majority"
+  },
+  {
+   "id": "see-fox-1030-centcom-50k",
+   "piece": "fox_2026-10-30_win_or_come_home",
+   "program": "Fox News",
+   "date": "2026-10-30",
+   "t": [
+    "photo caption"
+   ],
+   "object": "CENTCOM: more than 50,000 US service members in the Middle East (caption; undated on the page)",
+   "kind": "realization",
+   "holder": "— (CENTCOM, as quoted in a caption)",
+   "analog": {
+    "type": "realization",
+    "ref": "the force's footprint; see-surv-1030-cooper-briefing (the CENTCOM commander's briefing)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row (verified: false) — the CENTCOM statement is the primary; not body text, not scored"
+   },
+   "scored": false,
+   "reduced": "more than 50,000",
+   "why": "filed from the caption"
+  },
+  {
+   "id": "see-fox-1030-nc-10",
+   "piece": "fox_2026-10-30_win_or_come_home",
+   "program": "Fox News",
+   "date": "2026-10-30",
+   "t": [
+    "¶10",
+    "photo caption"
+   ],
+   "object": "NC-10 on Tuesday: Harrigan (R) v. Ashley Bell (D) v. Steve Feldman (L); Trump at a Rock Hill, S.C., rally on Thursday 10-29",
+   "kind": "activity",
+   "holder": "— (as reported)",
+   "analog": {
+    "type": "activity",
+    "ref": "slate01 — NC (with MS NOW's NC-Sen from Fort Bragg, same day); SC (the Power Rankings toss-up, fox 10-29, not cut)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate01 context; the NC-10 line scored at zero"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": 0.0,
+   "reduced": "NC-10 · Rock Hill",
+   "why": "the reader's own race"
+  },
+  {
+   "id": "see-msnow-1030-promise-clock",
+   "piece": "msnow_2026-10-30_month_eight",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "3:22",
+    "1:20"
+   ],
+   "object": "the war's promised lengths as the voters state them — 'promised to never happen, then … four weeks, a couple weeks, then … a couple months — now we're in month eight' (Juan); 'I thought it would be a month-long war' (V2)",
+   "kind": "statement",
+   "holder": "— (the promises attributed to the holder by the voters; who said each and when is not on the tape)",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's clock on the price (H1c: 'fast' → 'soon' → 'really fast') — the same shape on the war's length"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 — record row owed: the promised lengths need their statements found before they are anything; 'month eight' consistent with A Spine's 'eight months in'"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.7,
+   "reduced": "never · four weeks · a couple months · month eight",
+   "why": "the promise dated by its rephrasings"
+  },
+  {
+   "id": "see-msnow-1030-sole-reason",
+   "piece": "msnow_2026-10-30_month_eight",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "3:14",
+    "4:16"
+   ],
+   "object": "Reagan Juan (Army, five years; 2024 Trump voter): the promise not to start foreign wars 'was the sole reason'; to her 2024 self — 'don't do it'",
+   "kind": "realization",
+   "holder": "— (a voter)",
+   "analog": {
+    "type": "realization",
+    "ref": "the gas↔votes predicate's twin on the war — the war↔votes predicate, from a supporter (see-fp-1029-war-votes from RP)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate01 — NC context; the war as the ballot's reason, withdrawn in hindsight. A reader's line, not an object"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 20,
+   "z": -0.3,
+   "reduced": "the sole reason · don't do it",
+   "why": "the vote cast on the promise, re-read"
+  },
+  {
+   "id": "see-msnow-1030-toll-unsized",
+   "piece": "msnow_2026-10-30_month_eight",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "1:05",
+    "1:52",
+    "3:49"
+   ],
+   "object": "the crunch touched three times, never sized: 'starting wars that is destroying our economy' (V1); the war 'taking a toll on the economy' (Chad, as reported); 'economically wasteful' (Juan)",
+   "kind": "realization",
+   "holder": "— (voters)",
+   "analog": {
+    "type": "realization",
+    "ref": "PG01 §6 — the crunch; Fox's 'economic stability' (Win or Come Home ¶9) the RI twin"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §6 — touches, not a sighting; noted for the paper: both corners read the force on 10-30 with the price unnamed"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 40,
+   "z": -0.5,
+   "reduced": "destroying our economy · a toll · wasteful",
+   "why": "the price's side, unnamed"
+  },
+  {
+   "id": "see-msnow-1030-fort-bragg",
+   "piece": "msnow_2026-10-30_month_eight",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "0:01",
+    "1:30"
+   ],
+   "object": "NC-Sen 'a tightly contested Senate race'; the community around Fort Bragg, 'the largest military base in the country'; Fayetteville — an estimated 17% of the metro area veterans",
+   "kind": "activity",
+   "holder": "— (as reported)",
+   "analog": {
+    "type": "activity",
+    "ref": "slate01 — NC-Sen (A Spine's pass filed the Fort Bragg voters as NC-Sen context)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "slate01 — NC-Sen context, sized"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": 0.0,
+   "reduced": "tightly contested · 17% veterans",
+   "why": "the ground"
+  },
+  {
+   "id": "see-msnow-1030-culture-not-to-question",
+   "piece": "msnow_2026-10-30_month_eight",
+   "program": "MS NOW",
+   "date": "2026-10-30",
+   "t": [
+    "1:55",
+    "2:00",
+    "2:28"
+   ],
+   "object": "'part of the military culture not to question the commander-in-chief' — Chad (Afghanistan and Iraq; 2024 Trump voter): 'humble yourself amongst those appointed above you'; an unnamed veteran: 'we have to be able to speak out; that's why I served'",
+   "kind": "statement",
+   "holder": "— (voters)",
+   "analog": {
+    "type": null,
+    "ref": "none — a reading refused and a reading defended; the tape's ceiling (58)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §5 — a frame on whether to read the force at all, not a sighting of it; scored vacancy at zero. Kept for the paper (the horizon guard: a high Dia says the line left the object, not that the speaker can't find it)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 58,
+   "z": 0.0,
+   "reduced": "humble yourself · speak out",
+   "why": "the reading refused, then defended"
+  },
+  {
+   "id": "see-msnow-1101-index-37",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "0:42",
+    "0:59"
+   ],
+   "object": "inflation 'cooled to around 3%' by the start of the term; then tariffs; then 'February 2026, the U.S. and Israel struck Iran … an ongoing war that has helped bring inflation to its current level of 3.7%'",
+   "kind": "price",
+   "holder": "— (the chair; no source cited — BLS by the number)",
+   "analog": {
+    "type": "price",
+    "ref": "PG01 §6 — the index; Fox 10-29 (PCE 3.6%) the RI twin, read without the cause"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "a detection row, verified: false — the September index with the war named as cause from the LI corner"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": -0.6,
+   "reduced": "3% · tariffs · struck Iran · 3.7%",
+   "why": "the cause row, sized"
+  },
+  {
+   "id": "see-msnow-1101-pump-record-diesel",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "1:12"
+   ],
+   "object": "'severe pain at the gas pump — $4.17 per gallon and diesel reaching a record $6.30'",
+   "kind": "price",
+   "holder": "— (the chair; AAA by the look of it — owed)",
+   "analog": {
+    "type": "price",
+    "ref": "H1c — the price leg; Surveillance 10-30 ('diesel the linchpin'), AJ 10-29 (diesel 72% over a farm budget)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "a detection row, verified: false — the first LI tape to size diesel at the pump; 'a record'"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": -0.7,
+   "reduced": "$4.17 · a record $6.30",
+   "why": "the object sized at the pump"
+  },
+  {
+   "id": "see-msnow-1101-trump-2024-pledge",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "0:19",
+    "0:24",
+    "0:29"
+   ],
+   "object": "Trump, 2024 campaign clips (undated on the tape): 'a plan to bring down prices and bring them down very, very rapidly'; 'starting on day one, we will end inflation and make America affordable again'; 'inflation will be in full retreat'",
+   "kind": "statement",
+   "holder": "the President (as candidate)",
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 — the holder's clock on the price (10-11 'coming down, in record numbers, and fast'; Lubbock 'really fast') descends from this"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 statements — constitutive, the shadow's first tense; hypotheses C-trump-2024-day-one"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 1.0,
+   "reduced": "very, very rapidly · day one · full retreat",
+   "why": "the pledge the clock descends from"
+  },
+  {
+   "id": "see-msnow-1101-trump-no-inflation",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "2:32",
+    "2:51"
+   ],
+   "object": "Trump, present tense (clips undated): 'your prices have come way down … we have very little inflation … there's no inflation'; to a reporter on grocery prices: 'No, you're wrong — they went up under Biden; right now they're going down; there's never been an economy like this'",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 — Z-assertion; the Daily Show's 'they're not very high' (ds_2026-11-01) the comic twin"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 statements — constitutive, the shadow's present tense; hypotheses C-trump-nd-prices-way-down"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 1.0,
+   "reduced": "come way down · no inflation · going down",
+   "why": "delivery asserted against the asker"
+  },
+  {
+   "id": "see-msnow-1101-voters-where-are-we-now",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "3:13",
+    "3:18",
+    "3:28",
+    "3:31",
+    "3:35",
+    "3:43"
+   ],
+   "object": "six voters (vox pop, unnamed): 'the prices keep going up, but people's wages don't'; 'wasn't the gas prices supposed to go down? the cost of eggs … where are we now?'; 'groceries have gone up, gas has gone up, everything's gone up'; 'a lot of promises … fell flat'; 'the gas, the rent, the food — the cost of living is too much'; 'feeding the rich'",
+   "kind": "realization",
+   "holder": "— (voters)",
+   "analog": {
+    "type": "realization",
+    "ref": "PG01 §6 — the crunch from buyers; the Fort Bragg voters (msnow 10-30) the force's twin"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §6 — the promise read against the pump by the buyers; the title line is V2's"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 30,
+   "z": -0.5,
+   "reduced": "supposed to go down · where are we now · everything's gone up · fell flat",
+   "why": "the gap read at the shelf"
+  },
+  {
+   "id": "see-msnow-1101-wolfers-cause-row",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "8:07"
+   ],
+   "object": "Justin Wolfers: 'the president said he would reduce prices — what was the first thing he did? he started a tariff war … attacked immigrants … huge losses in the rural workforce … of course we've invaded Iran, energy prices have gone up … enormous budget deficit … higher bond yields — every action in the exact wrong direction'",
+   "kind": "realization",
+   "holder": "— (guest economist)",
+   "analog": {
+    "type": "realization",
+    "ref": "PG01 — the cause row; Fox 10-29 read the same index with the cause removed"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 §6 — a reader's test (out of the tracker); the war's place in the price stated from LI in one sentence"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 24,
+   "z": -0.6,
+   "reduced": "tariff war · invaded Iran · energy prices have gone up · wrong direction",
+   "why": "the cause row from the LI corner"
+  },
+  {
+   "id": "see-msnow-1101-premiums",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "5:49",
+    "6:01"
+   ],
+   "object": "ACA premiums 'jump again' — 13%; employer plans (~150m people) ~+10% in 2027; federal workers >10% (the chair, citing the New York Times)",
+   "kind": "price",
+   "holder": "— (as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "the crunch's breadth, not H1c"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "context, verified: false — the breadth of the crunch sized beside the pump"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 18,
+   "z": -0.4,
+   "reduced": "premiums 13% · 10% in 2027",
+   "why": "the breadth, sized"
+  },
+  {
+   "id": "see-msnow-1101-obbb-sunsets",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "1:35",
+    "4:33",
+    "5:06",
+    "5:22"
+   ],
+   "object": "the One Big Beautiful Bill: top 1% +$1.8m average, bottom 50% ~+$1,200 (Center for American Progress); 'no taxes on tips, no taxes on overtime' run out 'just after the next presidential election', the top-rate cuts permanent; IRS cuts (Wolfers); the California tax initiative (the chair)",
+   "kind": "statement",
+   "holder": "— (as reported; the bill is law)",
+   "analog": {
+    "type": "law",
+    "ref": "a second object — not PG01's"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "a candidate only if the sunsets become a vote; the California initiative is slate context. Scored surface-bound at zero on this cut (Claude's call)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 36,
+   "z": 0.0,
+   "reduced": "$1.8m vs $1,200 · run out after the next election · permanent · he did it",
+   "why": "right domain, wrong plane"
+  },
+  {
+   "id": "see-msnow-1101-jobs-181k",
+   "piece": "msnow_2026-11-01_where_are_we_now",
+   "program": "MS NOW",
+   "date": "2026-11-01",
+   "t": [
+    "2:07",
+    "8:45",
+    "9:19"
+   ],
+   "object": "'a low-hire, low-fire job market'; 181,000 jobs added in 2025 vs 2.2 million in 2024 (the chair); unemployment 4.2%; 'close to no population growth' (Wolfers)",
+   "kind": "price",
+   "holder": "— (as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "none on PG01 — the labor plane"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "context, verified: false; surface-bound to the price"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 21,
+   "z": 0.0,
+   "reduced": "181,000 vs 2.2m · 4.2% · no population growth",
+   "why": "jobs, sized both ways"
+  },
+  {
+   "id": "see-ds-1101-not-very-high",
+   "piece": "ds_2026-11-01_gas_gaslighting",
+   "program": "The Daily Show",
+   "date": "2026-11-01",
+   "t": [
+    "10:41",
+    "10:44"
+   ],
+   "object": "Trump, to a reporter's 'how much longer will Americans continue to see these high gas prices': 'well, they're not very high … you think they're high? they're not high' (clip undated)",
+   "kind": "statement",
+   "holder": "the President",
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 — Z-assertion; MS NOW 11-01 'your prices have come way down' the straight twin"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "PG01 statements — constitutive; hypotheses C-trump-nd-not-very-high"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 1.0,
+   "reduced": "not very high · not high",
+   "why": "the shadow at the pump, present tense"
+  },
+  {
+   "id": "see-ds-1101-dyed-diesel-eo",
+   "piece": "ds_2026-11-01_gas_gaslighting",
+   "program": "The Daily Show",
+   "date": "2026-10-05",
+   "t": [
+    "14:18",
+    "14:24",
+    "15:00"
+   ],
+   "object": "Trump, the Nebraska rally ('last night' on the tape; 2026-10-05 by the record): 'tonight I'm going to sign a historic executive order to officially waive the off-road requirement and allow anyone to purchase tax-free red dye diesel for any reason'; then 'red dye diesel — do you know what that is? I don't know what the hell it is, but whatever it is it's supposed to be very good'",
+   "kind": "ruling",
+   "holder": "the President",
+   "analog": {
+    "type": "ruling",
+    "ref": "the farm-relief program ($8bn, AJ 10-29) — the holder's cash cure on the same fuel; this is the tax cure, a week before the deal"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate cand-dyed-diesel-eo (an EO; 'temporarily' per the wires; text and term owed) — also a PG01 record row, verified: false: the holder's first instrument on the diesel price, new to the Press. Dated by the record, not the tape — a recap; the window rule stated"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 1.0,
+   "reduced": "waive the off-road requirement · tax-free red dye diesel · for any reason · don't know what the hell it is",
+   "why": "the holder's first cure on diesel, played back four weeks late"
+  },
+  {
+   "id": "see-ds-1101-end-the-war",
+   "piece": "ds_2026-11-01_gas_gaslighting",
+   "program": "The Daily Show",
+   "date": "2026-11-01",
+   "t": [
+    "15:29"
+   ],
+   "object": "the host: 'a discount off red dye diesel is not going to get the country back on your side — you need to do something like end the war … something big'",
+   "kind": "realization",
+   "holder": "— (the host)",
+   "analog": {
+    "type": "realization",
+    "ref": "PG01 — the cure sized against the cause; Wolfers' cause row (msnow 11-01) the straight twin"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "a reader's test (out of the tracker); the only line on the tape that names what moves the price"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 46,
+   "z": -0.5,
+   "reduced": "discount off red dye diesel · end the war",
+   "why": "the cure against the cause"
+  },
+  {
+   "id": "see-ds-1101-cancel-the-midterms",
+   "piece": "ds_2026-11-01_gas_gaslighting",
+   "program": "The Daily Show",
+   "date": "2026-11-01",
+   "t": [
+    "2:58",
+    "3:34"
+   ],
+   "object": "'Donald Trump once again floated the idea of canceling the midterms' (reported clip); the host: 'you can't cancel elections'",
+   "kind": "statement",
+   "holder": "the President (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "slate — the holder on the election itself; the DOJ election-year cluster (Alaska, Fulton County)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "filed as context, not scored — not on the object; the remark's date and wording owed"
+   },
+   "scored": false,
+   "station": "LI",
+   "dia": null,
+   "z": 0.0,
+   "reduced": "canceling the midterms",
+   "why": "not on the object; filed"
+  },
+  {
+   "id": "see-ds-1101-fulton-ballots-seized",
+   "piece": "ds_2026-11-01_gas_gaslighting",
+   "program": "The Daily Show",
+   "date": "2026-11-01",
+   "t": [
+    "7:17"
+   ],
+   "object": "'the FBI has seized all of the 2020 election ballots from Fulton County, Georgia' (reported in a news clip on the tape; the host: 'you got to get over 2020')",
+   "kind": "activity",
+   "holder": "the FBI / DOJ (as reported)",
+   "analog": {
+    "type": "activity",
+    "ref": "slate — the DOJ's election-year activity (the Alaska suit, the California list) already on the slate"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "filed as context, verified: false — not on the object; the date of the seizure not on the tape"
+   },
+   "scored": false,
+   "station": "LI",
+   "dia": null,
+   "z": 0.0,
+   "reduced": "seized the 2020 ballots · Fulton County",
+   "why": "not on the object; filed"
+  },
+  {
+   "id": "see-ds-1101-daylight-saving",
+   "piece": "ds_2026-11-01_gas_gaslighting",
+   "program": "The Daily Show",
+   "date": "2026-11-01",
+   "t": [
+    "15:43"
+   ],
+   "object": "'Donald Trump wants to make daylight savings permanent' (reported); the Fox queue the same day: 'Americans forced to change clocks again as Senate stalls Trump-backed daylight saving time' bill",
+   "kind": "statement",
+   "holder": "the President (as reported)",
+   "analog": {
+    "type": null,
+    "ref": "none on any arc"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "permanence: low — a sighting kept for the 'broad impact, no analog' case; a bill exists per the Fox headline (not read)"
+   },
+   "scored": false,
+   "station": "LI",
+   "dia": null,
+   "z": 0.0,
+   "reduced": "daylight saving permanent",
+   "why": "no analog; low"
+  },
+  {
+   "id": "see-aj-1102-aaa-417-629",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶2",
+    "¶4"
+   ],
+   "object": "AAA, Monday 11-02: regular $4.17 (−12c w/w, −23c m/m); diesel $6.29 (−6c w/w)",
+   "kind": "price",
+   "holder": "AAA (as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "the H1c pump series (evt-press-nyt-aaa-diesel-1015; see-fox-1029-national-pump; see-msnow-1101-pump-record-diesel)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price row — verified: false (the AAA series is the primary); PG01 H1c — the pump turned down the day before the vote"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 8,
+   "z": -0.1,
+   "reduced": "$4.17, down 12 cents; diesel $6.29",
+   "why": "H1c; the direction, first on LI"
+  },
+  {
+   "id": "see-aj-1102-prewar-pump-298",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶3"
+   ],
+   "object": "$3.04 a year ago; $2.98 on 28 February — the day the US and Israel first struck Iran",
+   "kind": "price",
+   "holder": "AAA (as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "the year-ago comparisons (fox 10-29 $3.05; fox 10-27 Georgia $2.72)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "the pre-war pump named to the cent — first on the Press; verified: false"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 6,
+   "z": -0.5,
+   "reduced": "$2.98 on 28 February",
+   "why": "H1c baseline"
+  },
+  {
+   "id": "see-aj-1102-diesel-peak-653",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶4"
+   ],
+   "object": "diesel first topped $6 in September; peaked at $6.53",
+   "kind": "price",
+   "holder": "AAA (as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "the diesel series (6.28 → 6.32 → 6.31 → 6.30 → 6.29)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "the series' top named for the first time; verified: false"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 8,
+   "z": -0.2,
+   "reduced": "peak $6.53",
+   "why": "H1c"
+  },
+  {
+   "id": "see-aj-1102-ft-term-average",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶5"
+   ],
+   "object": "FT analysis of federal data: the second-term average petrol price set to pass $3.46 on Monday, above the record set under Biden",
+   "kind": "realization",
+   "holder": "the Financial Times (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the shadow (bring them down very, very rapidly) measured — msnow 11-01 did it with the index; this page with the mean"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate measured over the term; tracker row verified: false (the FT analysis is the primary)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": -0.5,
+   "reduced": "the term average past the predecessor's record",
+   "why": "H1c measured"
+  },
+  {
+   "id": "see-aj-1102-oil-down-6-qatar",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶6"
+   ],
+   "object": "oil fell 6% on Monday 11-02, continuing a slide after in-person talks in Qatar at the weekend",
+   "kind": "price",
+   "holder": "the market (as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "the oil price rows (Surveillance 10-30 WTI 104)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "verified: false; PG01 H6 context — the market prices the talks, not the deal"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": 0.1,
+   "reduced": "oil −6% on the talks",
+   "why": "the cause moving, by a market"
+  },
+  {
+   "id": "see-aj-1102-dehaan-under-4",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶7"
+   ],
+   "object": "De Haan (GasBuddy, on X): ≈16c off wholesale gasoline and diesel; the national average under $4 within a week unless the situation changes",
+   "kind": "statement",
+   "holder": "Patrick De Haan (GasBuddy)",
+   "analog": {
+    "type": "statement",
+    "ref": "readers' tests (OL R1, Close R2, Shepherd 10-29)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "reader's test R-dehaan-1102 — stays out of the tracker; the AAA series answers it by ≈11-09"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": 0.2,
+   "reduced": "under $4 within a week, on a condition",
+   "why": "a dated forecast"
+  },
+  {
+   "id": "see-aj-1102-apnorc-cost-of-living",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶8"
+   ],
+   "object": "AP-NORC: most Americans want Congress to prioritise the cost of living — 78% of Republicans, 89% of Democrats",
+   "kind": "realization",
+   "holder": "AP-NORC (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate (thirteen sightings; fox 10-27 by number from RI; aj 10-29 polled from the buyer's side)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate measured, fourteenth sighting, the first bipartisan number; slate context"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 18,
+   "z": -0.2,
+   "reduced": "78% R / 89% D on the cost of living",
+   "why": "the predicate, polled"
+  },
+  {
+   "id": "see-aj-1102-rogers-conflict-end",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶9"
+   ],
+   "object": "Rogers (White House spokesperson, to Al Jazeera): prices will drop sharply 'once this conflict comes to an end'; the Iran action a national-security necessity",
+   "kind": "statement",
+   "holder": "the holder's office (the White House)",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's clock: 'coming down, in record numbers, and fast' (10-11) → 'soon' (10-24) → 'really fast' (10-29) → 'they're not very high' (ds 11-01)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; hypothesis C-rogers-1102-conflict-end (falsifier: the war ends and the pump does not fall sharply within a month). The cure moved from a seller to the war's end"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 0.5,
+   "reduced": "once this conflict comes to an end",
+   "why": "the new clock"
+  },
+  {
+   "id": "see-aj-1102-rogers-flows-above-prewar",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶10"
+   ],
+   "object": "Rogers: thanks to the US military, oil flows out of the Persian Gulf exceed pre-conflict levels",
+   "kind": "statement",
+   "holder": "the holder's office (the White House)",
+   "analog": {
+    "type": "statement",
+    "ref": "H6 claims — 'continues to claim' the Strait reopened (msnow 10-15); 'near pre-war levels', hedged (fp 10-30)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — constitutive claim at its strongest (above pre-war); tracker detection row verified: false; the Fox page the same day has zero Iranian crude on the water"
+   },
+   "scored": false,
+   "station": "O",
+   "dia": null,
+   "z": 0.7,
+   "reduced": "flows exceed pre-conflict levels",
+   "why": "H6 claimed"
+  },
+  {
+   "id": "see-aj-1102-majors-equity",
+   "piece": "aj_2026-11-02_petrol_dip",
+   "program": "Al Jazeera English",
+   "date": "2026-11-02",
+   "t": [
+    "¶11"
+   ],
+   "object": "oil and gas stocks down at midday on cheaper oil: ConocoPhillips −3.7%, Chevron −2.3%, ExxonMobil −3.3%",
+   "kind": "price",
+   "holder": "the market (as reported)",
+   "analog": {
+    "type": "price",
+    "ref": "the refiner's margin (terms key refining-margin; the sellers' side of the price)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on refining-margin; permanence: low"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": 0.1,
+   "reduced": "the majors sold off on cheaper oil",
+   "why": "surface-bound; filed"
+  },
+  {
+   "id": "see-fox-1101-blockade-dated",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶15"
+   ],
+   "object": "the US maritime blockade of Iran's ports: begun 13 April 2026; lifted mid-June; reinstated 14 July after talks collapsed; Iran's crude exports largely stopped",
+   "kind": "activity",
+   "holder": "the US (the Navy; CENTCOM — asked, unanswered)",
+   "analog": {
+    "type": "agreement",
+    "ref": "'in place since July' (aj 10-27b); the June MOU (aj 10-27: collapsed in under two weeks) — the lifting is its window"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the record: the lock from Washington's end, dated for the first time; tracker detection row verified: false"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 8,
+   "z": -0.3,
+   "reduced": "13 April → mid-June → 14 July",
+   "why": "the lock, dated"
+  },
+  {
+   "id": "see-fox-1101-zero-crude-nine-tankers",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶2",
+    "¶7",
+    "¶17"
+   ],
+   "object": "UANI: at least nine small oil/LPG tankers through the blockade since July; no Iranian crude out since reinstatement",
+   "kind": "activity",
+   "holder": "UANI (an advocacy organisation; the source)",
+   "analog": {
+    "type": "price",
+    "ref": "Iran's exports halted (aj 10-27b); 'doing meaningful damage' (fp 10-30)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection rows — verified: false (UANI's report; the record owed). Read on the price's Z as the shortfall held — Claude's call"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 10,
+   "z": -0.4,
+   "reduced": "nine through; zero crude",
+   "why": "the lock's figure"
+  },
+  {
+   "id": "see-fox-1101-sogl-ofac-1008",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶3",
+    "¶5",
+    "¶12",
+    "¶29",
+    "¶43"
+   ],
+   "object": "the SOGL (IMO 9208227; Comoros/Zimbabwe flags; Gravion Maritime): ≈500,000 bbl LPG loaded at Assaluyeh late August; through the blockade 1 September; filmed bunkering at the Malaysian EOPL on/after 16 September; discharged at Xinzhou, China; added to the OFAC list 8 October",
+   "kind": "tariff/sanction",
+   "holder": "the US Treasury (OFAC)",
+   "analog": {
+    "type": "tariff/sanction",
+    "ref": "the shadow-fleet designations already on the register (Russia, Iran)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate cand-ofac-1008-sogl — first sighting; the Treasury designation of 8 October is the primary; tracker flow row verified: false"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 6,
+   "z": 0.0,
+   "reduced": "the SOGL, OFAC 8 October",
+   "why": "a sanction on the register's kinds"
+  },
+  {
+   "id": "see-fox-1101-eopl-malaysia",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶8",
+    "¶10",
+    "¶32",
+    "¶34"
+   ],
+   "object": "the Eastern Outer Port Limits anchorage, ≈70 km off Malaysia, 10–14 days from Iran: staging, ship-to-ship transfer, bunkering, floating storage for Iran's trade to China",
+   "kind": "activity",
+   "holder": "—",
+   "analog": {
+    "type": "statement",
+    "ref": "none on any arc (the water's other end)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "OSINT — verified: false"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": -0.2,
+   "reduced": "the EOPL anchorage",
+   "why": "the hub"
+  },
+  {
+   "id": "see-fox-1101-strait-transit",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶26"
+   ],
+   "object": "the route: load in the Persian Gulf → transit the Strait of Hormuz → ship-to-ship in the Gulf of Oman → the receiving tanker breaches the blockade",
+   "kind": "activity",
+   "holder": "Iran's ghost fleet (per UANI)",
+   "analog": {
+    "type": "statement",
+    "ref": "H6 — the Strait's state (aj 10-23 reopen; aj 10-27 terms; fp 10-30 transits)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — later sighting: the seller's own fleet transits the Strait; a corridor for the seller, a wall for the buyer"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 10,
+   "z": 0.0,
+   "reduced": "transit the Strait of Hormuz",
+   "why": "the Strait on the page"
+  },
+  {
+   "id": "see-fox-1101-floating-storage",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶35"
+   ],
+   "object": "Iranian floating storage down to between zero and seven million barrels since enforcement began",
+   "kind": "price",
+   "holder": "UANI (the source)",
+   "analog": {
+    "type": "price",
+    "ref": "Iran's oil on the water (none on the Press before)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "verified: false — the seller's oil on the water, drained"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 10,
+   "z": -0.4,
+   "reduced": "storage 0–7m bbl",
+   "why": "the pressure, sized"
+  },
+  {
+   "id": "see-fox-1101-china-one-buyer",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶40",
+    "¶41"
+   ],
+   "object": "China: 80% of Iran's liquid cargo exports before the war; now nearly all of its oil and LPG, at a discount",
+   "kind": "price",
+   "holder": "UANI (the source)",
+   "analog": {
+    "type": "statement",
+    "ref": "PG01 layer 2 — the toll's ledger (the buyer's end)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "flows — verified: false; PG01 layer 2 context: the water's one open door"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": -0.3,
+   "reduced": "China takes nearly all",
+   "why": "the one buyer"
+  },
+  {
+   "id": "see-fox-1101-g-summer-april",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶44",
+    "¶45"
+   ],
+   "object": "the G Summer (US-sanctioned LPG carrier, ≈7,000 m³) tracked in April beyond the US blockade line in the Arabian Sea (Bloomberg); 'all Chinese crew'; Galle, Sri Lanka as destination",
+   "kind": "activity",
+   "holder": "— (Bloomberg, as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the SOGL (above)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "verified: false — the leak predates the July reinstatement"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 10,
+   "z": -0.1,
+   "reduced": "the G Summer, April",
+   "why": "a second small cargo"
+  },
+  {
+   "id": "see-fox-1101-ghost-fleet-method",
+   "piece": "fox_2026-11-01_ghost_fleet",
+   "program": "Fox News",
+   "date": "2026-11-01",
+   "t": [
+    "¶24",
+    "¶31"
+   ],
+   "object": "AIS off, false flags, front companies — the ghost fleet's method ('completely stateless')",
+   "kind": "activity",
+   "holder": "Iran's ghost fleet (per UANI)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the register (the shadow fleet as a flow object)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "the shadow fleet without a terms key — proposed key ghost-fleet; permanence: medium"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 30,
+   "z": -0.1,
+   "reduced": "AIS off, false flags",
+   "why": "the method; a key proposed"
+  },
+  {
+   "id": "see-nyt-1102-two-day-offer",
+   "piece": "nyt_2026-11-02_two_days_lede",
+   "program": "The New York Times",
+   "date": "2026-11-02",
+   "t": [
+    "hed"
+   ],
+   "object": "Iran: the Strait of Hormuz reopened fully within two days as part of a deal with the US (conditions per the AP wire via PBS: lifting the US blockade of Iranian ports among several)",
+   "kind": "agreement",
+   "holder": "Iran (as reported)",
+   "analog": {
+    "type": "agreement",
+    "ref": "the seven-day proposal of 10-18 (see-fox-1020-seven-day); Rezaei's terms (see-aj-1027-reopening-terms); the June MOU"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — statement: the other party's terms with the shortest clock yet (seven days → two); register-intake later sighting on cand-iran-terms; verified: false (β — hed only)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 10,
+   "z": 0.3,
+   "reduced": "reopen in 2 days as part of a US deal",
+   "why": "the key, with its clock"
+  },
+  {
+   "id": "see-nyt-1102-all-out-war",
+   "piece": "nyt_2026-11-02_two_days_lede",
+   "program": "The New York Times",
+   "date": "2026-11-02",
+   "t": [
+    "dek"
+   ],
+   "object": "Iranian officials 'prepared for all-out war' while speaking of some progress",
+   "kind": "statement",
+   "holder": "Iran (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes (the force) — from the other side"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-post-election-strikes — later sighting, Tehran's side (β — dek only)"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 20,
+   "z": -0.1,
+   "reduced": "prepared for all-out war",
+   "why": "the force in the dek"
+  },
+  {
+   "id": "see-nyt-1102-qatar-in-tehran",
+   "piece": "nyt_2026-11-02_two_days_lede",
+   "program": "The New York Times",
+   "date": "2026-11-02",
+   "t": [
+    "dek"
+   ],
+   "object": "a Qatari delegation arrived in Tehran on Monday 11-02 to meet the foreign minister; the Iranian delegation had left Qatar on Sunday (AP)",
+   "kind": "activity",
+   "holder": "Qatar (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "Qatar as the broker (see-aj-1027-qatar-tehran-delegation; the June MOU's broker)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — context: the broker dated; verified: false"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": 0.0,
+   "reduced": "Qatar in Tehran, Monday",
+   "why": "the broker dated"
+  },
+  {
+   "id": "see-fox-1104-gasoline-short-term",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶6"
+   ],
+   "object": "the holder: 'largely true' that the war cost the election; the war 'drove the gasoline up a little bit short term'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the promise 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11); the office 'once this conflict comes to an end' (11-02)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-trump-1104-gasoline-short-term; the first concession on the pump from the holder"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.4,
+   "reduced": "drove the gasoline up, a little, short term",
+   "why": "the concession, with its vehicles"
+  },
+  {
+   "id": "see-fox-1104-long-term",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶7",
+    "¶8"
+   ],
+   "object": "the holder: would do it again; long term the war 'the only answer'; the tradeoff worth it",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's clock (five readings to 11-02)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-trump-1104-long-term; the sixth clock"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.4,
+   "reduced": "long term, the only answer",
+   "why": "the cure's horizon moved"
+  },
+  {
+   "id": "see-fox-1104-oil-forecast",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶9"
+   ],
+   "object": "the holder: 'you have no choice'; 'I thought oil would rise much more' and acted on that basis",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press — the holder's own forecast, first sighting"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; tracker context (the oil path 28 Feb → 4 Nov is the primary; verified: false)"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.2,
+   "reduced": "thought oil would rise much more",
+   "why": "the price sized against the holder's expectation, not the promise"
+  },
+  {
+   "id": "see-fox-1104-vance-end-the-war",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶12"
+   ],
+   "object": "the vice-president's post: the war cost Republicans Tuesday; end the war; cost of living and inflation; America First; change the relationship with Israel",
+   "kind": "statement",
+   "holder": "JD Vance (the office)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 10-30 (Vance at the town hall, @O); the Atlantic 11-01 'fall guy' (blocked)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive (the office); C-vance-1104-end-the-war; slate (2028)"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.5,
+   "reduced": "the reason we lost is the war",
+   "why": "the office's first open break"
+  },
+  {
+   "id": "see-fox-1104-day-after",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶1",
+    "¶4"
+   ],
+   "object": "the day after: Democrats hold the House and Senate; the holder's first public appearance at the ballroom's final-beam ceremony, Wednesday 11-04",
+   "kind": "activity",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 14,
+   "z": -0.1,
+   "reduced": "the final beam, the day after",
+   "why": "dated"
+  },
+  {
+   "id": "see-fox-1104-democrats-veto",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶16",
+    "¶17"
+   ],
+   "object": "the holder on the Democrats: 'get along probably' unless destructive; the veto; 'Democrats have already called'; impeachment would 'destroy the Democrat Party'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context; permanence: low"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "the veto; already called",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-fox-1104-reflecting-pool",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶10",
+    "¶11"
+   ],
+   "object": "the Monday reflecting-pool speech: 'great reviews'; 'about the construction site'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the 11-02 MS NOW tapes (owed) carried the speech"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "later sighting"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "great reviews",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-fox-1104-bomb-stopped",
+   "piece": "fox_2026-11-04_transfer_the_love",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶14"
+   ],
+   "object": "'we stopped Iran from getting a nuclear weapon' — the war's objective restated as achieved",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "aj 10-22 'regime change'; the AP wire 11-02 (the nuclear question in any new talks)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on the war's stated objective; permanence: low"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.1,
+   "reduced": "stopped the bomb",
+   "why": "the object answered with the war's objective"
+  },
+  {
+   "id": "see-aj-1104-khamenei-strait-myth",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶15"
+   ],
+   "object": "a statement attributed to Khamenei: the Persian Gulf, 'especially the Strait of Hormuz, has invalidated the myth of American invincibility' — his first words on the Press; unseen in public since March",
+   "kind": "statement",
+   "holder": "Mojtaba Khamenei",
+   "analog": {
+    "type": "statement",
+    "ref": "Rezaei's terms (aj 10-27, @O); the office's 'exceed pre-conflict levels' (aj 11-02, +0.7)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — constitutive claim from the Strait's other holder; C-khamenei-1104-strait-myth"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.9,
+   "reduced": "the Strait has invalidated the myth",
+   "why": "H6 declared from the other end"
+  },
+  {
+   "id": "see-aj-1104-khamenei-no-lever",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶16",
+    "¶17"
+   ],
+   "object": "Khamenei: hopes that US party changes or concessions end Iran's enmity are 'harshly mistaken'; strength the only route to 'absolute deterrence'",
+   "kind": "statement",
+   "holder": "Mojtaba Khamenei",
+   "analog": {
+    "type": "statement",
+    "ref": "the AP wire 11-02: no change to the nuclear doctrine"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-khamenei-1104-no-lever"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.6,
+   "reduced": "harshly mistaken",
+   "why": "the vote disclaimed as a lever"
+  },
+  {
+   "id": "see-aj-1104-seven-conditions",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶9"
+   ],
+   "object": "Azizi (Crisis Group): seven conditions for partially reopening the Strait of Hormuz and a US first step; Iran's leaders more uncompromising after the vote",
+   "kind": "statement",
+   "holder": "Iran (per Azizi)",
+   "analog": {
+    "type": "agreement",
+    "ref": "cand-iran-terms (the June MOU; 10-18 seven days; 10-27 Rezaei; 11-02 two days)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the terms counted for the first time (fourth sighting; 'partially' new); tracker detection row, verified: false — the seven itemised are the primary"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.5,
+   "reduced": "seven conditions, a US first step",
+   "why": "the terms numbered"
+  },
+  {
+   "id": "see-aj-1104-blockade-control",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶6",
+    "¶21"
+   ],
+   "object": "the US naval blockade, sanctions and trade disruption as the pressure; 'control in and around the Strait' still fought over; economic pressure on 90 million Iranians",
+   "kind": "activity",
+   "holder": "the US (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "blockade (proposed key, 11-03); fox 11-01 (the lock dated 14 July)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the lock from the LI corner; later sighting on blockade"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 15,
+   "z": -0.3,
+   "reduced": "the blockade and 90 million",
+   "why": "control contested"
+  },
+  {
+   "id": "see-aj-1104-interim-deal",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶23"
+   ],
+   "object": "Vakil (Chatham House): an interim agreement over the Strait and the lifting of the blockade more realistic than a comprehensive settlement",
+   "kind": "statement",
+   "holder": "— (a reader)",
+   "analog": {
+    "type": "agreement",
+    "ref": "the AP wire's conditions (11-02): lift the blockade among them"
+   },
+   "match": {
+    "dataset": "readings",
+    "ref": "reader's test R-vakil-1104 — stays out of the tracker"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.2,
+   "reduced": "an interim deal over the Strait and the blockade",
+   "why": "the Strait and the blockade as one hinge"
+  },
+  {
+   "id": "see-aj-1104-force-after-vote",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶6",
+    "¶7",
+    "¶22",
+    "¶24",
+    "¶25"
+   ],
+   "object": "the force after the vote: Trump has talked about attacking for weeks, 'has not decided'; further strikes not ruled out; limited strikes still possible; the lame-duck period feared; all-out war less likely by the size of the vote",
+   "kind": "statement",
+   "holder": "— (the article and three readers)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes (the force) — the 11-03 note's test"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "cand-post-election-strikes later sighting — the test's first return: no strike on the record after the vote on this page"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 19,
+   "z": -0.2,
+   "reduced": "may still attack; lame duck",
+   "why": "the force smaller, not off"
+  },
+  {
+   "id": "see-aj-1104-war-dated",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶5"
+   ],
+   "object": "the war started by the US and Israel on 28 February",
+   "kind": "activity",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "aj 11-02 ($2.98 on 28 February, the first strikes); the AP wire"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "the date's third sighting; verified: false"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 20,
+   "z": -0.3,
+   "reduced": "28 February",
+   "why": "dated"
+  },
+  {
+   "id": "see-aj-1104-tehran-reads-vote",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶2",
+    "¶3",
+    "¶4"
+   ],
+   "object": "Ghalibaf: 'Americans said NO TO WAR', Iran endorses it; the 'Nightmare' line; Mohseni-Ejei: 'defeated in both war and politics'",
+   "kind": "statement",
+   "holder": "Iran (Ghalibaf, Mohseni-Ejei — as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate from the other side"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — Tehran's reading of the vote; slate context"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 49,
+   "z": -0.37,
+   "reduced": "NO TO WAR; a Nightmare",
+   "why": "denominated, carried as reported"
+  },
+  {
+   "id": "see-aj-1104-nuclear-less-likely",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶10"
+   ],
+   "object": "nuclear concessions less likely than before (Azizi)",
+   "kind": "statement",
+   "holder": "— (a reader)",
+   "analog": {
+    "type": "statement",
+    "ref": "the AP wire 11-02 (Washington wants the nuclear question in any new talks)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on the nuclear question; permanence: low"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 16,
+   "z": -0.2,
+   "reduced": "nuclear concessions less likely",
+   "why": "surface-bound"
+  },
+  {
+   "id": "see-aj-1104-anniversary",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶11",
+    "¶12",
+    "¶13",
+    "¶18"
+   ],
+   "object": "4 November: the embassy-seizure anniversary; state-organised marches in Tehran, Bandar Abbas, Mashhad, Qom; the Enghelab Square billboard ('We will kill Trump')",
+   "kind": "activity",
+   "holder": "Iran",
+   "analog": {
+    "type": "statement",
+    "ref": "none"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "context; permanence: low"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 44,
+   "z": -0.2,
+   "reduced": "the anniversary; the billboard",
+   "why": "context"
+  },
+  {
+   "id": "see-aj-1104-sazandegi-elsayed",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶19",
+    "¶20"
+   ],
+   "object": "state-linked media cheered the losses of hawkish Republicans; Sazandegi's 'Trump's nightmare' front page on El-Sayed, who attacked AIPAC ('tens of millions' against him)",
+   "kind": "activity",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate (Michigan)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "later sighting — Michigan"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "Trump's nightmare",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-aj-1104-slavin-economic-crisis",
+   "piece": "aj_2026-11-04_still_attack",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶26"
+   ],
+   "object": "Slavin (Stimson): 'it is clear that the war and the resulting economic crisis defeated the Republicans'",
+   "kind": "statement",
+   "holder": "— (a reader)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate (fifteen sightings)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate, from a Washington reader on an LI non-US page"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 30,
+   "z": -0.3,
+   "reduced": "the war and the economic crisis defeated them",
+   "why": "the predicate, unnumbered"
+  },
+  {
+   "id": "see-bp-1103-pump-election-day",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "12:30",
+    "12:33"
+   ],
+   "object": "the national price of gas $4.15 on election day; $5.80 in California; a sign from mid-California at $7 gas / $9.89 diesel",
+   "kind": "price",
+   "holder": "— (the panel; a sign relayed)",
+   "analog": {
+    "type": "price",
+    "ref": "AAA 11-02 $4.17 (aj 11-02); $2.98 on 28 February"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price rows, verified: false (AAA the primary; the sign a relayed local extreme); PG01 H1c — the highest diesel figure on the Press"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 22,
+   "z": -0.4,
+   "reduced": "$4.15; $9.89 on a sign",
+   "why": "the pump on election day"
+  },
+  {
+   "id": "see-bp-1103-right-chart",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "12:40",
+    "13:09"
+   ],
+   "object": "'some elections are easy to predict when you have the right chart' — gasoline and diesel; 'the national highest price of diesel ever paid'; if you don't believe the polls, look at gas prices",
+   "kind": "statement",
+   "holder": "— (the panel)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate (sixteenth sighting); aj 11-02 (diesel's peak $6.53)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the predicate stated as method; later sighting on the diesel record"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 25,
+   "z": -0.3,
+   "reduced": "the right chart",
+   "why": "the pump as the poll"
+  },
+  {
+   "id": "see-bp-1103-post-toss-ups",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "55:25"
+   ],
+   "object": "the Washington Post: 19 of 21 toss-up districts have become less affordable, more of them Republican-defended; wages not keeping up with prices",
+   "kind": "realization",
+   "holder": "— (the Post, relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate measured by district; verified: false (the Post's analysis is the primary)"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 12,
+   "z": -0.3,
+   "reduced": "19 of 21 less affordable",
+   "why": "the districts measured"
+  },
+  {
+   "id": "see-bp-1103-nbc-exit-74",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "4:18:51"
+   ],
+   "object": "NBC exit poll: 74% of voters said the Iran war was a crucial or major factor in their vote; 7% not a factor; 70% of those who said crucial voted Dem",
+   "kind": "realization",
+   "holder": "— (NBC, relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate; AP-NORC 78/89 (aj 11-02)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame predicate measured at the exit; verified: false (NBC's exit poll is the primary); slate"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 10,
+   "z": -0.4,
+   "reduced": "74% the war crucial or major",
+   "why": "the predicate at the exit"
+  },
+  {
+   "id": "see-bp-1103-party-money",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "11:25",
+    "3:43:48"
+   ],
+   "object": "the party's money: $33m Kansas, $21m South Carolina, $2.4m Mississippi; the field moving money because '$4 gas is not a polling statistic'",
+   "kind": "activity",
+   "holder": "the Republican party (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context; PG01 H1c — the predicate measured by the spend"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 20,
+   "z": -0.3,
+   "reduced": "$4 gas is not a polling statistic",
+   "why": "the party's money as the measurement"
+  },
+  {
+   "id": "see-bp-1103-wh-quickly-solved",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "4:00:06"
+   ],
+   "object": "the White House, by statement read on air: buyer's remorse 'when gas prices come down quickly and the Iran war is solved'; Trump was not on the ballot; candidate quality matters; the president's resolve stronger",
+   "kind": "statement",
+   "holder": "the White House (the office)",
+   "analog": {
+    "type": "statement",
+    "ref": "the office's 'once this conflict comes to an end' (aj 11-02); the holder's clock"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-wh-1103-quickly-solved — the seventh clock"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.6,
+   "reduced": "come down quickly; the war solved",
+   "why": "the clock moved again"
+  },
+  {
+   "id": "see-bp-1103-trump-text-lower-than-biden",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "4:02:46"
+   ],
+   "object": "the holder, by text to Greg Gutfeld during The Five (via Brian Stelter, read on air): 'gas prices are lower than they were before Biden and Obama'; they 'allowed Iran to have the nuclear bomb'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the promise (10-11); 'they're not very high' (ds 11-01)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive, two relays; C-trump-1103-lower-than-biden — the shadow restated on election night"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 1.0,
+   "reduced": "lower than before Biden and Obama",
+   "why": "the shadow at +1.0 on a $4.15 tape"
+  },
+  {
+   "id": "see-bp-1103-funding-dec11",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "53:27",
+    "54:11"
+   ],
+   "object": "Van Hollen (to Sirota): government funding runs out 11 December; a CR in December and a fight over the war in January or February; Murphy: the plans 'completely insane', civilian infrastructure",
+   "kind": "statement",
+   "holder": "Chris Van Hollen, Chris Murphy (relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "the 2006 precedent (Grim)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "a dated row, verified: false (the Senate calendar and the interview are the primaries); register-intake cand-war-funding-dec11 — proposed"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 18,
+   "z": -0.3,
+   "reduced": "11 December; a fight in February",
+   "why": "the next clock"
+  },
+  {
+   "id": "see-bp-1103-radar-centers",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "2:33:12",
+    "2:33:35"
+   ],
+   "object": "radar centers hit 'yesterday' (11-02); the WSJ: the US secretly bombing Iran for the last three weeks",
+   "kind": "activity",
+   "holder": "the US (per the WSJ, relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "cand-post-election-strikes; the AP wire 11-02 (Khamenei's 'without geographic limits')"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "detection row, verified: false (the WSJ report is the primary, owed); cand-post-election-strikes later sighting"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 24,
+   "z": -0.5,
+   "reduced": "radar centers; three weeks of strikes",
+   "why": "the force, live"
+  },
+  {
+   "id": "see-bp-1103-grim-four-days",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "4:04:49"
+   ],
+   "object": "Grim: Iran's offer 60 days → seven → 'now they're down to four'; 'we're going to bury him in the midterms'",
+   "kind": "agreement",
+   "holder": "Iran (per Grim)",
+   "analog": {
+    "type": "agreement",
+    "ref": "cand-iran-terms; the NYT's two days (11-02); seven days (10-18)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the reopening clock's fourth reading, the first to disagree with another (two vs four)"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 14,
+   "z": -0.4,
+   "reduced": "down to four",
+   "why": "the clocks disagree"
+  },
+  {
+   "id": "see-bp-1103-grim-terms",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "4:05:50"
+   ],
+   "object": "the terms in their shortest form: release the frozen money, open up the Strait of Hormuz, Iran says no nuclear weapon — 'that's it'; Tehran presumes two more years of war and will wait him out",
+   "kind": "agreement",
+   "holder": "Iran (per Grim)",
+   "analog": {
+    "type": "agreement",
+    "ref": "cand-iran-terms (fifth sighting)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — later sighting on the terms"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 18,
+   "z": -0.5,
+   "reduced": "the money, the Strait, the bomb",
+   "why": "the terms from the LP corner"
+  },
+  {
+   "id": "see-bp-1103-desantis-drag",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "25:42",
+    "25:57"
+   ],
+   "object": "DeSantis (the Stephen A. Smith podcast, clipped): the war 'a big, big drag'; 'this was you', the reason gas prices are high; he ran saying no Middle East war",
+   "kind": "statement",
+   "holder": "Ron DeSantis (clipped)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 11-04 'extinction-level event' (uncut)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "Florida; PG01 H1c — the war↔price link from inside the party"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 36,
+   "z": -0.4,
+   "reduced": "a big, big drag",
+   "why": "relayed"
+  },
+  {
+   "id": "see-bp-1103-link-forbidden",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "28:32"
+   ],
+   "object": "the operatives (relayed): the war driving up costs is 'the elephant in the room'; no Republican ad touches it because Trump 'won't allow you to make the link between the war and high prices'",
+   "kind": "statement",
+   "holder": "— (operatives, relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "candidate cand-link-forbidden — the holder's messaging rule as read by operatives; permanence: low"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 28,
+   "z": -0.4,
+   "reduced": "the link forbidden",
+   "why": "a rule, relayed"
+  },
+  {
+   "id": "see-bp-1103-24-seats",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "13:25"
+   ],
+   "object": "'the incumbent party loses 24 more congressional seats on average in midterms with gas-price hikes' — unsourced on the tape",
+   "kind": "realization",
+   "holder": "— (the panel)",
+   "analog": {
+    "type": "statement",
+    "ref": "none"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "permanence: low"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 10,
+   "z": -0.2,
+   "reduced": "24 more seats",
+   "why": "a statistic, unsourced"
+  },
+  {
+   "id": "see-bp-1103-diesel-truck",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "4:20:47"
+   ],
+   "object": "the campaign trail: a contractor filling a diesel truck — 'I'm not doing it because you betrayed me'",
+   "kind": "statement",
+   "holder": "— (the panel, relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 10-21 'the trucker's revenue line'"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on the deal's constituency; permanence: low"
+   },
+   "scored": true,
+   "station": "LP",
+   "dia": 38,
+   "z": -0.5,
+   "reduced": "filling my diesel truck; betrayed",
+   "why": "the deal's register"
+  },
+  {
+   "id": "see-bp-1103-slate",
+   "piece": "bp_2026-11-03_right_chart",
+   "program": "Breaking Points",
+   "date": "2026-11-03",
+   "t": [
+    "the night"
+   ],
+   "object": "the slate assembled: Talarico projected +3.8 and Andrews +3.6 (NYT); the AP's $183m on trans-issue ads with one in ten calling it important; Michigan (El-Sayed), Ohio, Florida, the Rio Grande Valley, the betting markets",
+   "kind": "activity",
+   "holder": "— (the panel)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "assembled, not scored"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "the slate",
+   "why": "sorted"
+  },
+  {
+   "id": "see-fox-1104-vance-reason-is-the-war",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶2",
+    "¶3"
+   ],
+   "object": "the office on X: 'the reason we lost is the war'; 'the president himself said so last night'; losing the Senate for six years — 'argue it was worth it … that's at least honest'; 'everyone knows why we lost'",
+   "kind": "statement",
+   "holder": "JD Vance (the office)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 11-04 ¶12 (the four priorities, @O); the holder's 'the tradeoff was worth it' (fox 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive (the office); C-vance-1104-reason-is-the-war; the cost conceded, the argument declined"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.7,
+   "reduced": "the reason we lost is the war",
+   "why": "the office's verdict in full"
+  },
+  {
+   "id": "see-fox-1104-vance-defections",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶6",
+    "¶14",
+    "¶15"
+   ],
+   "object": "the office: 2024 Trump/Vance voters voted for Democrats in 2026 — defection, not turnout; turnout held up; the party's data analyst warned before the vote and was right; a pollster: the economic messaging not sharp enough late",
+   "kind": "statement",
+   "holder": "JD Vance (the office)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate (sixteen sightings); the holder's 'couldn't get enough people out to vote' (aj 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-vance-1104-defections; the predicate measured inside the party's data — the seventeenth sighting"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.5,
+   "reduced": "defections, not turnout",
+   "why": "the mechanism, the office's version"
+  },
+  {
+   "id": "see-fox-1104-vance-agenda",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶10"
+   ],
+   "object": "the office's agenda as this page lists it: the cost of living; America First; the relationship with Israel",
+   "kind": "statement",
+   "holder": "JD Vance (the office)",
+   "analog": {
+    "type": "statement",
+    "ref": "C-vance-1104-end-the-war (fox 11-04 — four priorities, 'end the war' first)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — later sighting of C-vance-1104-end-the-war; the price first here"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.4,
+   "reduced": "the cost of living; America First; Israel",
+   "why": "the agenda, re-ordered by the page"
+  },
+  {
+   "id": "see-fox-1104-vance-holder-relayed",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶9"
+   ],
+   "object": "the holder's ballroom lines as this page relays them: 'largely true'; the war 'drove the gasoline up a little bit short term'; would do it again; 'no choice'",
+   "kind": "statement",
+   "holder": "Donald Trump (relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox_2026-11-04_transfer_the_love ¶6–¶9 (the source page)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — later sighting of C-trump-1104-gasoline-short-term"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.3,
+   "reduced": "drove the gasoline up, relayed",
+   "why": "later sighting"
+  },
+  {
+   "id": "see-fox-1104-vance-break-dated",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶4",
+    "¶7",
+    "¶8"
+   ],
+   "object": "the break dated: the holder spoke first; Vance quiet until a lengthy post Wednesday morning; at least seven Senate seats and more than two dozen House districts flipped; a shift from his earlier defence of parts of the campaign",
+   "kind": "activity",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate; fox 10-30 (Vance at the town hall)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context; PG01 — the office's migration dated by the page"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 15,
+   "z": -0.23,
+   "reduced": "quiet until the post; seven seats; a shift",
+   "why": "dated"
+  },
+  {
+   "id": "see-fox-1104-vance-2028",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶5"
+   ],
+   "object": "Vance widely seen as a 2028 contender; has not decided; weighing after the midterms",
+   "kind": "activity",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate (2028)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context — 2028"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "2028",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-fox-1104-vance-amnesty",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶11"
+   ],
+   "object": "the office: 'anyone pushing amnesty is lying to you'; open to enforcement aimed at businesses hiring illegal labor",
+   "kind": "statement",
+   "holder": "JD Vance (the office)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "off the object; permanence: low"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "amnesty",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-fox-1104-vance-repost-no-answer",
+   "piece": "fox_2026-11-04_everyone_knows_why",
+   "program": "Fox News",
+   "date": "2026-11-04",
+   "t": [
+    "¶16",
+    "¶17"
+   ],
+   "object": "Donald Trump Jr. reposted the statement with three red '100' emojis; Fox's request for comment to the office and the White House unanswered",
+   "kind": "activity",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "none"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context; permanence: low"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 24,
+   "z": -0.1,
+   "reduced": "three '100' emojis; no response",
+   "why": "the family's answer; the office's silence"
+  },
+  {
+   "id": "see-aj-1104-noregrets-caused-by-iran",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶2",
+    "¶3"
+   ],
+   "object": "the holder by phone to Fox late Tuesday: 'we actually have the greatest economy'; 'the gasoline was caused by Iran'; people 'weren't willing to do the short-term consequence of paying more for gasoline' — 'I understand that. I don't agree with it'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the promise (10-11); the ballroom's 'drove the gasoline up a little bit short term' (fox 11-04, the next day)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-trump-1103-caused-by-iran; the vote read as the pump's verdict and rejected; the cause reassigned to Iran"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.0,
+   "reduced": "caused by Iran; I don't agree with it",
+   "why": "the verdict read and rejected"
+  },
+  {
+   "id": "see-aj-1104-noregrets-right-thing",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶4"
+   ],
+   "object": "the holder to the Wall Street Journal: 'I did the right thing. I would have done it again'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "C-trump-1104-long-term ('if I had to do it again I would', fox 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — later sighting of C-trump-1104-long-term (the WSJ register)"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.3,
+   "reduced": "would have done it again",
+   "why": "later sighting"
+  },
+  {
+   "id": "see-aj-1104-noregrets-turnout-mood",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶13",
+    "¶15",
+    "¶22"
+   ],
+   "object": "the holder: 'I wasn't on the ticket'; 'we couldn't get enough people out to vote' (NYT); the candidates he endorsed 'fought me', 'had a lot of flaws'; 'just a point in time'; 'a mood in the air' (Fox)",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the office's 'defections, not turnout' (fox 11-04, cut today)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-trump-1104-turnout-mood; four readings of one loss on one page; the mechanism disputed inside the ticket"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.27,
+   "reduced": "not on the ticket; a mood in the air",
+   "why": "the vote as turnout, candidates, weather"
+  },
+  {
+   "id": "see-aj-1104-noregrets-vance-post",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶6",
+    "¶7",
+    "¶8"
+   ],
+   "object": "the office's post as this page carries it: 'the reason we lost is the war'; the Senate for six years; 'everyone knows why we lost'",
+   "kind": "statement",
+   "holder": "JD Vance (the office)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox_2026-11-04_everyone_knows_why (the source page, cut today)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — later sighting of C-vance-1104-reason-is-the-war, on the LI corner's non-US horizon"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.7,
+   "reduced": "the reason we lost is the war",
+   "why": "later sighting"
+  },
+  {
+   "id": "see-aj-1104-noregrets-davis-diesel",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶9",
+    "¶10"
+   ],
+   "object": "Davis (Republican strategist, to Al Jazeera): the war 'definitely part of it' but the biggest issue the lack of a clear strategy; the economic fallout — higher energy and 'especially diesel costs' — affected all sectors and heightened affordability concerns",
+   "kind": "statement",
+   "holder": "— (a reader; the party's strategist)",
+   "analog": {
+    "type": "statement",
+    "ref": "the trucker's revenue line (fox 10-21); 'you betrayed me' at the diesel pump (bp 11-03); the small trucking companies (nyt 11-03, β)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the deal's object named by the party's reader; reader's test R-davis-1104 (stays out of the tracker); register-intake later sighting on the diesel register — the fourth this week"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 18,
+   "z": -0.4,
+   "reduced": "especially diesel costs",
+   "why": "the deal's object, from inside the party"
+  },
+  {
+   "id": "see-aj-1104-noregrets-pre-vote-line",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶20"
+   ],
+   "object": "before the losses the holder repeatedly said presidents tend to lose midterms and brushed off the idea that his policies had turned off voters",
+   "kind": "statement",
+   "holder": "— (the article, on the holder)",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's clock; 'if I were on the ballot' (fox 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "record — the pre-vote line dated against the post-vote ones"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 16,
+   "z": 0.1,
+   "reduced": "presidents tend to lose midterms",
+   "why": "dated"
+  },
+  {
+   "id": "see-aj-1104-noregrets-abbott-rino",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶15",
+    "¶16",
+    "¶17"
+   ],
+   "object": "Abbott's defeat in Texas: his ally had become 'a RINO in the last six months of his Political Life' (Truth Social)",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate (Texas)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "later sighting — Texas"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "a RINO",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-aj-1104-noregrets-veto-cap",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶18"
+   ],
+   "object": "the red 'veto' cap posted as the answer to the incoming Congress",
+   "kind": "activity",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 11-04 ¶16 (the veto line)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "later sighting — the veto"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "the veto cap",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-aj-1104-noregrets-cabinet-democrats",
+   "piece": "aj_2026-11-04_no_regrets",
+   "program": "Al Jazeera English",
+   "date": "2026-11-04",
+   "t": [
+    "¶21",
+    "¶22",
+    "¶23",
+    "¶24",
+    "¶25"
+   ],
+   "object": "no cabinet changes ('nothing to do with my cabinet'); work with the Democrats and be 'very tough on them'; not on 'transgender mutilization of children'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 11-04 ¶15–¶17 (the Democrats, the veto, impeachment)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context; permanence: low"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "the cabinet; the Democrats",
+   "why": "off the object, sorted"
+  },
+  {
+   "id": "see-fp-1104-pump-path",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "¶3"
+   ],
+   "object": "the pump's path: the national average $2.98 four days before the February resumption; $4.15 on Election Day; diesel $3.75 → $6.29",
+   "kind": "price",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "price",
+    "ref": "$2.98 on 28 February (aj 11-02); $4.15 on election day (bp 11-03); $4.17 AAA (aj 11-02); diesel's $6.53 peak (aj 11-02); the $9.89 sign (bp 11-03)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price rows, verified: false (AAA the primary; the dates to be fixed); PG01 H1c — the first RP sighting of the pump as a number; three corners now agree to the cent"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 8,
+   "z": -0.8,
+   "reduced": "$2.98 → $4.15; diesel $3.75 → $6.29",
+   "why": "the object, numbered, from the RP corner"
+  },
+  {
+   "id": "see-fp-1104-cost-per-family",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "¶3"
+   ],
+   "object": "the war's cost 'nearly $2,000 per family' (The Hill's estimate, linked)",
+   "kind": "realization",
+   "holder": "— (The Hill, as cited by the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press — the trucker's revenue line the nearest"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "a cost row, verified: false (The Hill's piece and its source are the primaries); register-intake candidate cand-war-cost-per-family — first per-household figure on the Press; permanence: low"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 16,
+   "z": -0.5,
+   "reduced": "$2,000 per family",
+   "why": "the price's verdict in household terms"
+  },
+  {
+   "id": "see-fp-1104-not-separate-issues",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "¶2"
+   ],
+   "object": "'they are not separate issues' — the cost of living and the war one object; the energy supply shock provoked inflation, the tariffs 'though not as much'",
+   "kind": "realization",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate (the Post's 19 of 21; NBC's 74%; AP-NORC 78/89)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the predicate as identity, the eighteenth sighting and the strongest form; the tariffs ranked below the war from the corner that ranks them"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 20,
+   "z": -0.5,
+   "reduced": "not separate issues",
+   "why": "the predicate as identity"
+  },
+  {
+   "id": "see-fp-1104-approval-38",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "¶2"
+   ],
+   "object": "approval 38 percent (exit polls), below Bush 2006; the slide from 'liberation day' and the ICE raids, 'really tanking with the war' — 33 percent by August; a majority call starting the war wrong; CBS: a quarter of Republicans agree",
+   "kind": "realization",
+   "holder": "— (the exit polls, CBS, as cited)",
+   "analog": {
+    "type": "statement",
+    "ref": "the Fox News Voter Poll in the queue (approval 38%); the predicate's measurements (bp 11-03)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the predicate measured, the nineteenth sighting; tracker verified: false (the exit poll and CBS are the primaries)"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 14,
+   "z": -0.5,
+   "reduced": "38 percent; 33 by August",
+   "why": "the approval slide dated to the war"
+  },
+  {
+   "id": "see-fp-1104-bragging-before-the-war",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "¶3"
+   ],
+   "object": "four days before he resumed hostilities with Iran in February the holder 'was bragging about falling gas prices'",
+   "kind": "statement",
+   "holder": "Donald Trump (as the author paraphrases him)",
+   "analog": {
+    "type": "statement",
+    "ref": "the promise (10-11) — this is its ancestor"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — later sighting; the shadow's ancestor; the holder's own late-February words are the primary, owed"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 8,
+   "z": -0.8,
+   "reduced": "bragging about falling gas prices",
+   "why": "the shadow's ancestor, dated"
+  },
+  {
+   "id": "see-fp-1104-never-voted",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "¶4"
+   ],
+   "object": "Congress never voted to authorize the war though Republicans held both chambers; the holder never made a case to the public; the resumption announced from Mar-a-Lago in the middle of the night on a Saturday ('bombs will be dropping everywhere'), aimed partly at Iranians; a letter to Congress the following Monday",
+   "kind": "activity",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "war-powers (fox 10-30; the Senate's war-powers votes); the 28 February date (aj 11-02)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on war-powers; the letter to Congress a record item (the primary owed)"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 25,
+   "z": -0.35,
+   "reduced": "never voted; a Saturday night; a letter Monday",
+   "why": "the war's authorization, from the RP corner"
+  },
+  {
+   "id": "see-fp-1104-stop-wars-caption",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "caption"
+   ],
+   "object": "the campaign line in the caption: 'I'm not going to start a war. I'm going to stop wars'",
+   "kind": "statement",
+   "holder": "Donald Trump (the campaign, as captioned)",
+   "analog": {
+    "type": "statement",
+    "ref": "forever-war / no-new-wars (fox 10-30 'win or come home')"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on the no-new-wars doctrine; the campaign tape is the primary"
+   },
+   "scored": false,
+   "station": null,
+   "dia": null,
+   "z": null,
+   "reduced": "stop wars",
+   "why": "the doctrine, captioned"
+  },
+  {
+   "id": "see-fp-1104-betrayed-verdict",
+   "piece": "fp_2026-11-04_betrayed_america_first_lede",
+   "program": "The Free Press",
+   "date": "2026-11-04",
+   "t": [
+    "hed",
+    "dek",
+    "¶1"
+   ],
+   "object": "the loss as betrayal of America First; the Iran war the biggest factor; the president made himself solely responsible and guaranteed his party would pay; 'these losses come down to the Iran war'",
+   "kind": "statement",
+   "holder": "— (the publication; the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate; the RP corner's force pages (10-28 → 10-30)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame; slate — the vote's cause from the RP corner; the corner's migration from the force as a menu to the cost as the verdict"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 36,
+   "z": -0.63,
+   "reduced": "betrayed America First; comes down to the war",
+   "why": "the verdict, from the corner's own doctrine"
+  },
+  {
+   "id": "see-aj-1105-irgc-illegal-passageway",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶3",
+    "¶4"
+   ],
+   "object": "the IRGC (to Fars): a large oil tanker passing through the 'illegal passageway' south of the strait struck a mine Wednesday night, caught fire and was halted; a supertanker halted by a massive fire leaving the eastern strait; the tug that approached caught fire",
+   "kind": "statement",
+   "holder": "Iran's forces (the IRGC)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 10-20 (two tankers on mines, 10-17, Iran's claim); H6's falsifier as drafted 10-15"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — constitutive; C-irgc-1105-illegal-passageway; the lock from Tehran's end in a customs post's words; tracker rows ×3, verified: false"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.7,
+   "reduced": "the illegal passageway; a mine; a supertanker on fire",
+   "why": "the lock from Tehran's end"
+  },
+  {
+   "id": "see-aj-1105-army-three-mines",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶5",
+    "¶6",
+    "¶7"
+   ],
+   "object": "the army (via IRNA): a 'violating' oil tanker in an unsafe area east of the strait struck a naval mine early Thursday; two more oil tankers struck naval mines and caught fire around noon",
+   "kind": "statement",
+   "holder": "Iran's forces (the army)",
+   "analog": {
+    "type": "statement",
+    "ref": "as above"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — constitutive; C-irgc-1105-illegal-passageway (the army's three); tracker rows ×3, verified: false — hull, flag, position owed"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.7,
+   "reduced": "three 'violating' tankers on naval mines",
+   "why": "the falsifier's terms, five in a day"
+  },
+  {
+   "id": "see-aj-1105-ukmto-two-projectiles",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶8",
+    "¶9",
+    "¶10"
+   ],
+   "object": "UKMTO (via the British military): a tanker struck by two projectiles at 23:20 GMT Wednesday about 50 nautical miles north of Qatar's Madinat ash-Shamal; tanker and flag not identified; no claim of responsibility",
+   "kind": "activity",
+   "holder": "— (the instrument)",
+   "analog": {
+    "type": "statement",
+    "ref": "the Qatari LNG hit of October 30 (aj 11-01); the record pace (¶14)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "a detection row, verified: false — the UKMTO advisory is the primary; in the Gulf, not the strait; reader's test R-ukmto-1105"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 9,
+   "z": -0.3,
+   "reduced": "two projectiles, 23:20 GMT, 50 nm north of Qatar; no hull, no claim",
+   "why": "the one hit with a clock and a bearing"
+  },
+  {
+   "id": "see-aj-1105-al-mayeda-later",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶11",
+    "¶12",
+    "¶13"
+   ],
+   "object": "Nakilat's LNG carrier Al Mayeda hit on October 30 by 'unidentified objects'; no crew injured; no environmental impact; safe and operational",
+   "kind": "activity",
+   "holder": "Nakilat (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "aj 11-01 (the Qatari LNG hit)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "later sighting — the one named hull on the page"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 14,
+   "z": -0.3,
+   "reduced": "Al Mayeda, October 30, operational",
+   "why": "later sighting"
+  },
+  {
+   "id": "see-aj-1105-record-pace-undercount",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶14",
+    "¶15"
+   ],
+   "object": "attacks on Gulf tankers running close to a record pace; UKMTO said last month it was 'struggling to accurately report' the true number because most ships now refuse to report them",
+   "kind": "realization",
+   "holder": "— (the article; UKMTO)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press — the tracker's verified: false convention the nearest"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — the instrument's blind spot; register-intake candidate cand-ukmto-undercount; every count from the Gulf a floor"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 20,
+   "z": -0.5,
+   "reduced": "a record pace; struggling to accurately report",
+   "why": "the count as a floor"
+  },
+  {
+   "id": "see-aj-1105-strait-sized",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶2"
+   ],
+   "object": "since the war began in late February Tehran has severely restricted traffic through the strait, which normally carries about one-fifth of global oil consumption",
+   "kind": "realization",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "the 28 February date (aj 11-02); the Strait's throughput on the Press"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H6 — record, the object sized and dated; later sighting of the 28 February date"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 12,
+   "z": -0.4,
+   "reduced": "one-fifth of global oil; restricted since late February",
+   "why": "the record line"
+  },
+  {
+   "id": "see-aj-1105-qatar-mediation",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶16",
+    "¶17"
+   ],
+   "object": "Qatar stepped up mediation to resume talks on ending the war; the foreign ministry spokesperson said Tuesday both sides were reviewing mediator proposals and talks were continuing",
+   "kind": "activity",
+   "holder": "Qatar's Ministry of Foreign Affairs (as reported)",
+   "analog": {
+    "type": "statement",
+    "ref": "the June memorandum; the seven conditions and a US first step (aj 11-04)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on the talks — no terms on this page"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 16,
+   "z": 0.1,
+   "reduced": "both sides reviewing proposals; talks continuing",
+   "why": "the reopening's door, undated"
+  },
+  {
+   "id": "see-aj-1105-nyt-poised",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶18"
+   ],
+   "object": "unnamed Pentagon officials and military commanders told the New York Times on Wednesday that thousands of US air and naval forces are poised to resume major combat operations against Iran on the president's orders",
+   "kind": "activity",
+   "holder": "— (the NYT's unnamed officials, relayed)",
+   "analog": {
+    "type": "statement",
+    "ref": "X-force-test-1104 ('limited strikes still possible', aj 11-04); fox 10-30 'win or come home'"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on the force after the vote; the NYT page is the primary, owed"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 24,
+   "z": -0.3,
+   "reduced": "poised to resume major combat",
+   "why": "the force, relayed"
+  },
+  {
+   "id": "see-aj-1105-khamenei-no-lever-later",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶20"
+   ],
+   "object": "Khamenei (Wednesday): there should not be 'even the slightest inclination towards submission' to the US, which will stay hostile no matter which party governs",
+   "kind": "statement",
+   "holder": "Mojtaba Khamenei",
+   "analog": {
+    "type": "statement",
+    "ref": "aj 11-04 (C-khamenei-1104-no-lever)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — later sighting of C-khamenei-1104-no-lever; the vote read from Tehran as changing nothing, two pages running"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.6,
+   "reduced": "no inclination towards submission; hostile whichever party",
+   "why": "later sighting"
+  },
+  {
+   "id": "see-aj-1105-karami-victories",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "¶21"
+   ],
+   "object": "Brig. Gen. Mohammad Karami (IRGC Ground Force): continued 'hostile and brutal actions' by Iran's enemies would bring 'further Iranian victories', accelerating the expulsion of foreign powers and the collapse of Israel",
+   "kind": "statement",
+   "holder": "Mohammad Karami (IRGC Ground Force commander)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the Press"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-karami-1105-further-victories; permanence: low (a mood statement, no delivery claim)"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.8,
+   "reduced": "further victories; the collapse of Israel",
+   "why": "the page's last word"
+  },
+  {
+   "id": "see-aj-1105-fears-hed",
+   "piece": "aj_2026-11-05_tankers_struck",
+   "program": "Al Jazeera English",
+   "date": "2026-11-05",
+   "t": [
+    "hed",
+    "¶19"
+   ],
+   "object": "'amid fears of new US attack' — the force as the hed's vehicle; Iranian leaders warned of repercussions if the US or Israel act again",
+   "kind": "statement",
+   "holder": "— (the article)",
+   "analog": {
+    "type": "statement",
+    "ref": "the force after the vote (aj 11-04)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context; permanence: low"
+   },
+   "scored": true,
+   "station": "LI",
+   "dia": 25,
+   "z": -0.4,
+   "reduced": "fears of new US attack; repercussions",
+   "why": "the vehicle"
+  },
+  {
+   "id": "see-fox-1105-three-dollars-after",
+   "piece": "fox_2026-11-05_their_own_record",
+   "program": "Fox News",
+   "date": "2026-11-05",
+   "t": [
+    "¶8"
+   ],
+   "object": "the holder, as the author relays him: gas will return to 'the $3 level seen just before the Iran war' once the war ends",
+   "kind": "statement",
+   "holder": "Donald Trump (relayed; outlet and date not given)",
+   "analog": {
+    "type": "statement",
+    "ref": "the promise (10-11: diesel 'COMING DOWN … FAST') and its seven clocks; 'drove the gasoline up a little bit short term' (fox 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-trump-1105-three-dollars-after; the cure made conditional on a war's end the column says no one can date"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.6,
+   "reduced": "$3 once the war ends",
+   "why": "the promise, post-vote form"
+  },
+  {
+   "id": "see-fox-1105-won-on-gas-prices",
+   "piece": "fox_2026-11-05_their_own_record",
+   "program": "Fox News",
+   "date": "2026-11-05",
+   "t": [
+    "¶1"
+   ],
+   "object": "'Democrats won largely on the issue of higher gas prices' — and the same Democrats raised gas prices when in power",
+   "kind": "realization",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate (nineteen sightings; the office's pollster, fox 11-04; 'not separate issues', fp 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the predicate, the twentieth sighting; the first in the RI? corner's own voice"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 30,
+   "z": -0.5,
+   "reduced": "won largely on higher gas prices",
+   "why": "the verdict conceded, then the pivot"
+  },
+  {
+   "id": "see-fox-1105-the-peaks",
+   "piece": "fox_2026-11-05_their_own_record",
+   "program": "Fox News",
+   "date": "2026-11-05",
+   "t": [
+    "¶7"
+   ],
+   "object": "the pump's peaks: Obama $4.55 a gallon 'in some areas' May 2011 ($6.78 adjusted); Biden $5.03 June 2022 ($5.79 adjusted); Trump's highest $4.55 in mid-May 2026 (unadjusted)",
+   "kind": "price",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "price",
+    "ref": "$2.98 (28 February; aj 11-02, fp 11-04); $4.15 election day (bp 11-03, fp 11-04); $4.17 AAA (aj 11-02)"
+   },
+   "match": {
+    "dataset": "tracker",
+    "ref": "price rows, verified: false (AAA/EIA the primary; 'in some areas' is not a national average); PG01 H1c — the pump as a number from the RI corner for the first time; X-ri-pump-priced-1105"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 22,
+   "z": -0.2,
+   "reduced": "$4.55 mid-May; $6.78 and $5.79 adjusted",
+   "why": "the pump priced from the RI corner"
+  },
+  {
+   "id": "see-fox-1105-failed-estimates",
+   "piece": "fox_2026-11-05_their_own_record",
+   "program": "Fox News",
+   "date": "2026-11-05",
+   "t": [
+    "¶8"
+   ],
+   "object": "voters 'became understandably frustrated with the president's failed estimates' of when the war would end; oil dropped sharply in April when a deal looked likely; 'no one knows when the war will end'",
+   "kind": "realization",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "the holder's clocks (10-11 → 11-04); msnow 10-30 'month eight'; fox 10-27 'give him time'"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the clocks conceded from the holder's corner, in its own voice, for the first time; X-clocks-conceded-ri-1105; tracker — the April dip as a price row, verified: false"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 16,
+   "z": -0.5,
+   "reduced": "failed estimates; no one knows when the war will end",
+   "why": "the clocks conceded"
+  },
+  {
+   "id": "see-fox-1105-keystone-diesel",
+   "piece": "fox_2026-11-05_their_own_record",
+   "program": "Fox News",
+   "date": "2026-11-05",
+   "t": [
+    "¶2"
+   ],
+   "object": "Keystone XL cancelled by executive order on Biden's first day — 1,200 miles, 830,000 barrels a day of Canadian heavy sour crude for Gulf Coast refineries that make diesel and jet fuel, 'exactly the kind of fuel we're in most need of right now'",
+   "kind": "realization",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "the diesel register: fox 10-21, bp 11-03, nyt 11-03 (β), aj 11-04, fox 11-04 (Donalds, uncut)"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "later sighting on the diesel register — the sixth this week — the shortage dated to now and routed to 2021; the 2021 order is the primary; X-diesel-register-sixth-1105"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 24,
+   "z": -0.3,
+   "reduced": "diesel and jet fuel, most in need of right now; Keystone",
+   "why": "the diesel line, mechanism displaced"
+  },
+  {
+   "id": "see-fox-1105-other-decades",
+   "piece": "fox_2026-11-05_their_own_record",
+   "program": "Fox News",
+   "date": "2026-11-05",
+   "t": [
+    "¶3",
+    "¶4",
+    "¶5",
+    "¶6"
+   ],
+   "object": "Obama's Keystone veto (24 Feb 2015; override failed 4 Mar 2015); Harris 4 Sept 2019 'there will be a carbon fee', Buttigieg's carbon tax; GM $11.2bn and Ford $19.5bn EV losses, the F-150 (Dearborn, May 2021), a Chicago winter; the IRA a 'boondoggle' and 'a major factor' in 21.5% cumulative inflation 'which Democrats blame on Trump'",
+   "kind": "realization",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "none on the object"
+   },
+   "match": {
+    "dataset": "register-intake",
+    "ref": "off the object — surface-bound (the right domain, other decades); figures unsourced; permanence: low; the 2019 lines are slate (2028) context"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 34,
+   "z": 0.0,
+   "reduced": "2015, 2019, 2021, the IRA",
+   "why": "surface-bound"
+  },
+  {
+   "id": "see-fox-1105-no-position",
+   "piece": "fox_2026-11-05_their_own_record",
+   "program": "Fox News",
+   "date": "2026-11-05",
+   "t": [
+    "hed",
+    "¶9"
+   ],
+   "object": "'exploit gas-price pain'; Democrats 'in no position to criticize current gas prices' given their record",
+   "kind": "statement",
+   "holder": "— (the publication; the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "the RI corner's frame pages (fox 10-27 'two electorates'; fox 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — frame; the verdict conceded by implication at both ends; X-verdict-conceded-then-pivoted-1105"
+   },
+   "scored": true,
+   "station": "RI",
+   "dia": 37,
+   "z": -0.3,
+   "reduced": "gas-price pain; in no position to criticize",
+   "why": "the door and the close"
+  },
+  {
+   "id": "see-fp-1105-a-piece-of-it",
+   "piece": "fp_2026-11-05_blame_game_lede",
+   "program": "The Free Press",
+   "date": "2026-11-05",
+   "t": [
+    "¶4"
+   ],
+   "object": "the holder to the Wall Street Journal on Tuesday as results came in: 'Iran was a piece of it'; he 'did the right thing' and 'would have done it again'",
+   "kind": "statement",
+   "holder": "Donald Trump",
+   "analog": {
+    "type": "statement",
+    "ref": "'largely true … drove the gasoline up a little bit short term' (fox 11-04); 'the gasoline was caused by Iran' (aj 11-04); the WSJ 'would have done it again' (aj 11-04)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — constitutive; C-trump-1104-a-piece-of-it; later sighting of C-trump-1104-long-term; the smallest concession on the record; X-a-piece-of-it-1105"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": 0.2,
+   "reduced": "a piece of it; would have done it again",
+   "why": "the smallest concession"
+  },
+  {
+   "id": "see-fp-1105-cohort-solely-the-war",
+   "piece": "fp_2026-11-05_blame_game_lede",
+   "program": "The Free Press",
+   "date": "2026-11-05",
+   "t": [
+    "¶4"
+   ],
+   "object": "an emerging cohort of Republicans believes the blue tsunami should be blamed solely on the Iran war, 'which led to steep increases in gasoline and diesel fuel prices' (the Pew short read of 10-30 linked)",
+   "kind": "realization",
+   "holder": "— (an unnamed cohort, as the author reports)",
+   "analog": {
+    "type": "statement",
+    "ref": "the gas↔votes predicate (twenty sightings); the office's post (fox 11-04); the diesel register (seven sightings this week)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "H1c — the mechanism in one breath from the holder's own party; the twenty-first sighting of the predicate; register-intake later sighting on diesel (the seventh this week; X-diesel-register-seventh-1105); the Pew page a primary, owed (cand-pew-1030-gas-prices)"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 18,
+   "z": -0.6,
+   "reduced": "solely the war; gasoline and diesel fuel prices",
+   "why": "the mechanism, once"
+  },
+  {
+   "id": "see-fp-1105-vance-paraphrase",
+   "piece": "fp_2026-11-05_blame_game_lede",
+   "program": "The Free Press",
+   "date": "2026-11-05",
+   "t": [
+    "¶5"
+   ],
+   "object": "the office, as the author paraphrases his view: the Iran war has been a political catastrophe for the GOP and it is past time to end it; the holder's concession read as 'permission' to say so",
+   "kind": "statement",
+   "holder": "JD Vance (paraphrased; no quotation)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox_2026-11-04_everyone_knows_why (the post); fox 11-04 'end the war' (C-vance-1104-end-the-war)"
+   },
+   "match": {
+    "dataset": "PG01",
+    "ref": "statements — later sighting of C-vance-1104-reason-is-the-war and C-vance-1104-end-the-war; frame — the third reading of the post (X-three-readings-one-post-1105)"
+   },
+   "scored": true,
+   "station": "O",
+   "dia": null,
+   "z": -0.7,
+   "reduced": "a political catastrophe; past time to end it",
+   "why": "later sighting, paraphrased"
+  },
+  {
+   "id": "see-fp-1105-the-count",
+   "piece": "fp_2026-11-05_blame_game_lede",
+   "program": "The Free Press",
+   "date": "2026-11-05",
+   "t": [
+    "¶2"
+   ],
+   "object": "the count: Talarico's double-digit Senate win in Texas; South Carolina's senator beaten by Annie Andrews, a first-time candidate; a Kansas Senate seat flipped for the first time since 1932; the White House 'expected to lose but not this badly' (a person familiar)",
+   "kind": "activity",
+   "holder": "— (the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "the slate (Texas, the Senate map)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "record — Texas, South Carolina, Kansas (NBC linked); the White House's expectation one anonymous source"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 20,
+   "z": -0.3,
+   "reduced": "Talarico by double digits; Kansas since 1932",
+   "why": "the count"
+  },
+  {
+   "id": "see-fp-1105-mood-frame",
+   "piece": "fp_2026-11-05_blame_game_lede",
+   "program": "The Free Press",
+   "date": "2026-11-05",
+   "t": [
+    "hed",
+    "¶1",
+    "¶3",
+    "caption"
+   ],
+   "object": "angry, divided, dejected; 'through with MAGA'; a 'circular GOP firing squad'; 'a GOP civil war is brewing' — the party's mood as the RP corner frames it; Vance 'widely seen as the early Republican presidential favorite' (¶5)",
+   "kind": "statement",
+   "holder": "— (the publication; the author)",
+   "analog": {
+    "type": "statement",
+    "ref": "fox 11-04 (the 2028 showdown); aj 11-04 (the heir diverging)"
+   },
+   "match": {
+    "dataset": "slate",
+    "ref": "context; the party's mood; 2028 later sighting; permanence: low"
+   },
+   "scored": true,
+   "station": "RP",
+   "dia": 40,
+   "z": -0.37,
+   "reduced": "angry, divided, dejected; a firing squad",
+   "why": "the vehicle"
   }
  ],
  "log": [
@@ -5994,6 +10042,41 @@
   {
    "date": "2026-10-30",
    "what": "daily cut over the 10-29 sweep's uncut rows (no 10-30 sweep on GitHub at 06:56 PT — the daily slop's commits have landed at ≈11:45 PT five days running, after this task fires; no transcripts on disk — the Mac's 06:30 pull still refused, sixth morning). Two cuts, no floor: fox_2026-10-29_little_surprise (H1c at the index — September PCE 3.6%, core 3.1%, savings 3.8%; the only cause a guest's 'oil prices spike'; the Fed's December clock in place of the holder's; read −0.21; Dia 22; Lumens 60; mode method-occluded, the first on the Press), fp_2026-10-28_go_from_here_lede (β — Gur's post-election essay to the wall; the result 53/48/19 read as 'well enough' for the regime's fall; the object once, in the dek; Dia 29, Lumens 43, depth 0.25; runs as data). 9 sightings added (→ 243); 2 filed sightings updated (see-fp-1028-netanyahu-regime now scored; see-pbs-1029-inflation-gas read in full — AP wire on PBS, filed to the tracker as the record's register, not scored, ruling owed); 1 new register candidate (cand-december-fomc-hike, low); cand-israel-election's event has happened (ruling owed). New terms key fed (proposed, prune). The floor: none in force — the-close 0 items (eleventh sweep running by the 10-29 file). Rulings owed at the foot of each cut.md",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-10-31",
+   "what": "daily cut over the 10-30 sweep (local copy with transcript paths; no 10-31 file at run time — the daily slop still lands ≈11:45 PT). Transcripts on disk for the first time since 10-21 (the Mac's pull worked: 8 files). surv_2026-10-30_the_linchpin (RI, Surveillance — H1c with the cause on the tape; WTI 104, refining $9.05bn/5×; 'diesel has been the linchpin'; read −0.53; Dia 16; Lumens 82), msnow_2026-10-30_a_spine (LI — the force dated to the vote; Osborn's 'diesel deal with Russia'; read −0.40; Dia 30; Lumens 54), fp_2026-10-30_five_options_lede (RP, β — the strike's clock as the vote's; the June MOU; Iran's terms; read −0.51; Dia 21; Lumens 61; depth 0.27). No the-close row: the floor carries over (none in force). 22 sightings added (5 filed from the Daily Show, Shapiro, the NC clip, the NYT dek — not cut).",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-11-01",
+   "what": "daily cut over the 10-30 sweep on its second day as the queue (no 10-31 or 11-01 sweep reached GitHub — the daily slop did not land for two days; the local copy used, with its transcript paths). The floor carries over (The Close 0 items; none in force). fox_2026-10-30_win_or_come_home (RI — the force from the majority's side: 'options if he resumes strikes' beside 'not a forever war'; 'mow the lawn'; 'involve Congress'; read −0.30; Dia 30; Lumens 46) and msnow_2026-10-30_month_eight (LI — the force as its own length, the holder's 'no new wars' on the tape twice; a veteran's clock to month eight; read −0.33; Dia 31; Lumens 47). No third cut: the remaining readable tapes are not on a live object (Daily Show's conditional delivery claim — a candidate; Shapiro — the slate) and the rest are blocked or owed. 11 sightings added (1 updated: the NC clip's sighting now carries its piece) → 276.",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-11-02",
+   "what": "daily cut over the 11-01 sweep (local copy with transcript paths; no 11-02 sweep on GitHub or on disk at 07:13 PT — the 11-01 file had landed since yesterday's run, as had the Mac's 06:30 pull: 11 transcripts). The floor carries over (The Close 0 items; none in force). msnow_2026-11-01_where_are_we_now (LI — H1c sized on an LI tape for the first time: 3.7% with the war as cause, gas $4.17, diesel a record $6.30; the holder's 2024 pledge and present-tense denial both constitutive; six voters; Wolfers' cause row; read −0.31; Dia 27; Lumens 55) and ds_2026-11-01_gas_gaslighting (LI, comic — 'they're not very high'; the 10-05 dyed-diesel order played back, new to the Press; read −0.39; Dia 48; Lumens 19; The Daily Show's first cut). No third cut: no RI, LP or RP material on the object with text on disk (Fox's 11-01 queue has no page on the price; Tucker ×2 and Shapiro owed transcripts; NYT ×3 on the object β and site-blocked, LI already fuller). 15 sightings added → 291; 1 new register candidate (cand-dyed-diesel-eo); new terms key dyed-diesel (proposed, prune).",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-11-03",
+   "what": "daily cut over the 11-02 sweep (local copy; no 11-03 sweep on GitHub or on disk at 06:56 PT — the 11-02 file had landed since yesterday's run with 102 rows; the Mac's pull brought 4 MS NOW transcripts, all slate). The floor carries over (The Close 0 items, thirteenth sweep; none in force). aj_2026-11-02_petrol_dip (LI — the pump turned down on the Qatar talks: $4.17 −12c, diesel $6.29 off a $6.53 peak, $2.98 on 28 Feb as the pre-war pump, the FT term average past Biden's record; the White House spokesperson constitutive — 'once this conflict comes to an end', flows 'exceed pre-conflict levels'; Dia 13; read −0.13; Lumens 65 — the first LI page at the floor), fox_2026-11-01_ghost_fleet (RI? — the blockade dated 13 Apr/mid-Jun/14 Jul and read as 'an overwhelming success'; zero crude, nine tankers, the SOGL to China via Malaysia; Dia 18; read −0.16; Lumens 65; no holder), nyt_2026-11-02_two_days_lede (LI β — hed+dek: reopen in two days as part of a US deal; Dia 14; runs as data). 22 sightings added → 313; 1 new register candidate (cand-ofac-1008-sogl); new terms keys ghost-fleet and blockade (proposed, prune). The AP wire via PBS (Iran left Qatar; the two-day offer with conditions; Khamenei's order; Rezaei on Vance's letter; October the busiest month for attacks on ships in the Strait since March) read as the record's register per the roster note — not scored, not filed; in the day's note.",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-11-04",
+   "what": "daily cut over the 11-04 sweep (GitHub copy; no local copy and no 11-04 transcripts on disk at 15:14 PT — the Mac's pull ran against the 11-03 sweep today and brought ten transcripts, one of them the Breaking Points election-night tape, which is in both queues). The floor carries over (The Close 0 items, fourteenth sweep; none in force). fox_2026-11-04_transfer_the_love (RI? — the holder live the day after: 'largely true', 'drove the gasoline up a little bit short term', 'I thought oil would rise much more', 'long term the only answer'; Vance's post @O; Dia 19; declared +0.09; read −0.22; Lumens 52). aj_2026-11-04_still_attack (LI, from Tehran — Khamenei's first words: the Strait 'has invalidated the myth of American invincibility'; seven conditions for a partial reopening; the blockade as the hinge; the force smaller, not off; Dia 26; declared −0.67; read −0.26; Lumens 50). bp_2026-11-03_right_chart (LP+RP — election night live: $4.15, the $7/$9.89 sign, 'the chart is just gasoline and diesel', the Post's 19 of 21, NBC's 74%; the office's 'come down quickly and the Iran war is solved' and the holder's text 'lower than before Biden and Obama' @O at one remove; Dia 24; declared +1.0; read −0.33; Lumens 63; speakers unnamed on the captions — stationed LP by default). 36 sightings appended",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-11-05",
+   "what": "daily cut over the 11-04 sweep (local copy, 129 rows unmarked at run time; no 11-05 sweep on GitHub at 07:00 PT — the daily slop has been landing around noon PT; no 11-04 or 11-05 transcripts on disk — the Mac's pull printed nothing for step 2 today). The floor carries over (The Close 0 items in the 11-04 sweep, the fourteenth; none in force). fox_2026-11-04_everyone_knows_why (RI? — the office's post in full: 'the reason we lost is the war'; defections, not turnout; the party's data analyst called it; Dia 22; declared −0.50; read −0.21; Lumens 58). aj_2026-11-04_no_regrets (LI — the holder by phone on election night: 'the gasoline was caused by Iran'; 'paying more for gasoline … I don't agree with it'; 'not on the ticket'; 'a mood in the air'; a Republican strategist names diesel; Dia 23; declared +0.18; read −0.20; Lumens 47). fp_2026-11-04_betrayed_america_first_lede (RP, β — $2.98 → $4.15, diesel $3.75 → $6.29, $2,000 per family; 'not separate issues'; Congress never voted; Dia 24; read −0.54; Lumens 55; depth 0.44; runs as data). 25 sightings appended",
+   "by": "Claude"
+  },
+  {
+   "date": "2026-11-06",
+   "what": "daily cut over the 11-05 sweep (local copy, 128 rows unmarked at run time, eight transcript paths; no 11-06 sweep on GitHub at 10:33 PT — 404 — so the newest date in the index was used, per the protocol). The floor carries over (The Close 0 items in the 11-05 sweep, the fifteenth; none in force). aj_2026-11-05_tankers_struck (LI — H6 from the water: six hulls in a day, five on Iran's claim, one on UKMTO's, none named; 'illegal passageway'; Dia 17; declared −0.70; read -0.33; Lumens 60). fox_2026-11-05_their_own_record (RI? — 'won largely on the issue of higher gas prices'; the pump as a number from the RI corner for the first time, $4.55 mid-May; the holder's 'failed estimates' and $3 'once the war ends'; Dia 30; declared +0.60; read -0.22; Lumens 39). fp_2026-11-05_blame_game_lede (RP, β — a cohort blames the war 'solely', through gasoline and diesel; the holder's 'a piece of it'; Dia 31; read -0.4; Lumens 27; depth 0.50; runs as data). 23 sightings appended",
    "by": "Claude"
   }
  ]

@@ -1,0 +1,149 @@
+{
+ "piece": "stevens_2026-11-01_country",
+ "model": "claude-haiku-5-5",
+ "at": "2026-11-05T12:28:47",
+ "tracker": "cct",
+ "facts": [
+  {
+   "id": "decl:legislative",
+   "fact": "an endorsement, no instrument; she remains a sitting House member",
+   "source": "the piece, declared",
+   "tracked": false
+  },
+  {
+   "id": "cct:none",
+   "fact": "No conflict casualty tracker yet — casualty figures for this object are not tracked.",
+   "source": "closed form",
+   "tracked": false
+  }
+ ],
+ "usage": {
+  "input_tokens": 12051,
+  "output_tokens": 4909,
+  "model": "claude-haiku-5-5"
+ },
+ "derived": {
+  "dia": 69,
+  "lumens": 0
+ },
+ "lines": [
+  {
+   "i": 0,
+   "who": "HS",
+   "hand": {
+    "dia": 40,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 0,
+    "substance": false,
+    "facts_touched": [
+     "decl:legislative"
+    ],
+    "contradicts": [],
+    "object": "signal",
+    "others": "open",
+    "capital": true,
+    "patterns": [],
+    "facing": "argument",
+    "place": "mid",
+    "why": "She states her own vote for the Republican, which is a signal about her choice and not the substance of the race, and the endorsement spends her standing with her own party.",
+    "_runs": [
+     63,
+     63,
+     63
+    ]
+   },
+   "derived": {
+    "dia": 63,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 1,
+   "who": "HS",
+   "hand": {
+    "dia": 62,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 1,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "argument",
+    "place": "low",
+    "why": "The slogan 'stand with country' is a rally-style appeal that names no costs, votes, or consequences of the race.",
+    "_runs": [
+     48,
+     48,
+     48
+    ]
+   },
+   "derived": {
+    "dia": 48,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 2,
+   "who": "HS",
+   "hand": {
+    "dia": 72,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 2,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "closed",
+    "capital": true,
+    "patterns": [
+     {
+      "n": 1,
+      "phrase": "we can't stand with Hasan Piker"
+     }
+    ],
+    "facing": "argument",
+    "place": "high",
+    "why": "It files El-Sayed under an association with Piker before weighing his positions, and the speaker spends her own party standing to do it.",
+    "_runs": [
+     97,
+     97,
+     97
+    ]
+   },
+   "derived": {
+    "dia": 97,
+    "band": [
+     67,
+     100
+    ],
+    "stage": null,
+    "tier": "denominated",
+    "flags": [
+     "patterns #1 say 40–65, the band says denominated 67–100",
+     "agrees with Sailor's ruling"
+    ]
+   }
+  }
+ ]
+}

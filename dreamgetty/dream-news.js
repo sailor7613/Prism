@@ -129,6 +129,7 @@
     body.dream-news.capture #dn-ctl { display: none; }
     /* chrome: 'bug' blocks (the cold open) show only the bug, the words and whatever the beat type adds */
     body.dream-news.chrome-bug #dn-clock, body.dream-news.chrome-bug #dn-chyron, body.dream-news.chrome-bug #dn-ticker { display: none !important; }
+    body.dream-news.credits #dn-clock, body.dream-news.credits #dn-chyron, body.dream-news.credits #dn-ticker, body.dream-news.credits #dn-bug, body.dream-news.credits #dn-sub { display: none !important; }
     /* overlay mode (the renderer's lower-third frame): nothing but the bug and the lower third, over nothing */
     body.dream-news.overlay #dn > :not(#dn-bug):not(#dn-lower) { display: none !important; }
     body.dream-news.overlay #scene-container { visibility: hidden !important; }
@@ -171,7 +172,10 @@
 
     const blocks = EP.blocks || [{ id: 'all', title: EP.segment || 'The Reduced', clip: true, beats: EP.beats }];
     const beats = []; blocks.forEach(blk => blk.beats.forEach(b => beats.push({ ...b, type: b.type || 'text', block: blk })));
-    if (TL && TL.beats) { const by = Object.fromEntries(TL.beats.map(b => [b.id, b])); beats.forEach(b => { const t = by[b.id]; if (t) { b.start = t.start; b.end = t.end; b.words = t.words || null; } }); }
+    if (TL && TL.beats) { const by = Object.fromEntries(TL.beats.map(b => [b.id, b])); beats.forEach(b => { const t = by[b.id]; if (t) { b.start = t.start; b.end = t.end; b.words = t.words || null; } });
+      // 11-03: a beat the mix doesn't have yet (written, not yet voiced and mixed) sits out until the next mix — the
+      // show plays the mix it has instead of going black
+      for (let i = beats.length - 1; i >= 0; i--) if (beats[i].start == null) { console.warn('[dream-news] not in the mix yet:', beats[i].id); beats.splice(i, 1); } }
     else { let t = 0.4; beats.forEach(b => { b.start = t; const d = b.type === 'clip' ? (b.out - b.in) : b.type === 'text' ? b.text.split(/\s+/).length / 2.6 : (b.dur || 1.5); t += d; b.end = t; if (b.type === 'text') t += 0.55; b.words = null; }); }
     const END_HOLD = EP.endHold != null ? EP.endHold : 3;
     const DURATION = (TL && TL.duration ? TL.duration : beats[beats.length - 1].end) + END_HOLD;
@@ -565,7 +569,8 @@
     //    through the villa in world units and lands exactly on the desk shot the show opens from. Keys: [t 0..1, from, at].
     // keys: [t 0..1, from, at]; a key may be in desk-local units with 'd' first ('d', x, y, z) — the elephant's hill, the desk
     const ELEPHANT_HILL = [-12, 0, -34];   // where the elephant stands during the fly-in, desk-local (on the slope behind the desk)
-    const FLY_KEYS = [
+    // ep 1.1 (11-02): an episode can bring its own flight — `EP.flyKeys` (same [t, from, at] form) — so ep01's stays as it was
+    const FLY_KEYS = Array.isArray(EP.flyKeys) ? EP.flyKeys.map(k => k.slice()) : [
       [0.00, [14, -3, 124], [4, -12, 104]],             // out over the water: the break and the kelp bed, the swimmers
       [0.06, [20, -6.5, 90], [8, -10.5, 78]],           // down on the beach: the animals at the river mouth
       [0.12, [4, -5, 86], [0, -9, 66]],                 // up the river
@@ -614,15 +619,54 @@
     const EPB = {}; (EP.blocks || []).forEach(bl => (bl.beats || []).forEach(x => { EPB[x.id] = x; }));
     const epv = (b, k) => (b && b[k] != null) ? b[k] : (b && EPB[b.id] ? EPB[b.id][k] : undefined);
     function flyFrame(t, b) {
-      const on = !!(b && b.layout === 'fly');
+      const fly = !!(b && b.layout === 'fly');
+      // ep 1.1 (11-01, Sailor: "the supply shock tracker globe spins like a wheel"): `globe: true` on a beat puts the
+      // tracker's globe on the pedestal in place of the map and spins it, fast at first, settling over the beat
+      const spin = !!epv(b, 'globe'); const on = fly || spin;
       stage.visible = !on;
       if (on && !flyGlobe) { flyGlobe = true; try { pedestalShow('tracker'); } catch (e) {} }
-      try { if (typeof trackerGlobe !== 'undefined') { trackerGlobe.visible = on; if (on) trackerGlobe.traverse(o => o.layers.enable(0)); } } catch (e) {}
+      try { if (typeof trackerGlobe !== 'undefined') { trackerGlobe.visible = on; if (on) trackerGlobe.traverse(o => o.layers.enable(0));
+        const gb = trackerGlobe.children.find(c => c.isGroup && c.name !== 'trackerCard') || trackerGlobe;   // the earth and its flows only — not the card
+        if (spin) { const u = Math.max(0, t - b.start); gb.rotation.z = (b.globeFrom || 0) - (b.globeTurn != null ? b.globeTurn : 9.0) * (1 - Math.exp(-u / 1.4)); } else if (on) gb.rotation.z = 0; } } catch (e) {}   // 11-02: turns like a clock face (Sailor) — round the axis that points at the camera, clockwise
+      // ex01 (11-05, the tracker explainer): `globeMonth: 'YYYY-MM'` holds the globe's routes on the month Ted is reading
+      // (the villa's own month clock stops); a globe beat without it lets the clock run again, as in ep 1.1
+      try { if (on && typeof trackerData !== 'undefined' && trackerData && trackerRig.built) { const gm = epv(b, 'globeMonth');
+        if (gm) { const i = trackerData.months.findIndex(m => m.period === gm); trackerRig.playing = false; if (i >= 0 && trackerRig.month !== i) trackerSetMonth(i); }
+        else trackerRig.playing = true; } } catch (e) {}
       const at = on ? (epv(b, 'titleAt') != null ? epv(b, 'titleAt') : 28.5) : 0, k = on ? Math.max(0, Math.min(1, (t - b.start - at) / 0.8)) * Math.max(0, Math.min(1, (b.end - t) / 0.5)) : 0;
       introTitle.style.display = k > 0 ? 'flex' : 'none'; introTitle.style.opacity = k.toFixed(3);
     }
+    // ── THE CREDITS (ep 1.1, 11-03, Sailor: "end the episode with credits that should include the avatars and Prism"):
+    //    a clip beat with `layout: 'credits'` carries only its sound (the theme again); the camera eases back and up off
+    //    the desk over the Plaza toward the villa, and `credits: [[role, names], …]` roll up the screen over it
+    const credEl = document.createElement('div'); credEl.id = 'dn-credits';
+    credEl.style.cssText = 'position:fixed;inset:0;display:none;pointer-events:none;z-index:41;overflow:hidden;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#fff;text-shadow:0 3px 18px rgba(0,0,0,.9);background:linear-gradient(90deg,rgba(0,0,0,.0) 20%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.0) 80%)';
+    const credRoll = document.createElement('div'); credRoll.style.cssText = 'position:absolute;left:0;right:0;top:0;text-align:center;will-change:transform';
+    credEl.appendChild(credRoll); (document.getElementById('dn') || document.body).appendChild(credEl);
+    let credFor = null;
+    function creditsFrame(t, b) {
+      const on = !!(b && b.layout === 'credits'); credEl.style.display = on ? 'block' : 'none'; document.body.classList.toggle('credits', on); if (!on) return;
+      const C = epv(b, 'credits') || [];
+      if (credFor !== b.id) { credFor = b.id;
+        credRoll.innerHTML = C.map(([role, names], i) => i === 0
+          ? `<div style="font-weight:800;letter-spacing:.12em;font-size:clamp(22px,3.4vw,62px);margin-bottom:.25em">${role}</div><div style="font-weight:300;letter-spacing:.26em;text-transform:uppercase;font-size:clamp(10px,1.05vw,19px);opacity:.85;margin-bottom:9vh">${names}</div>`
+          : `<div style="font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:clamp(9px,.95vw,17px);color:#d9ccff;margin-bottom:.7em">${role}</div><div style="font-weight:400;font-size:clamp(13px,1.45vw,27px);line-height:1.5;max-width:46vw;margin:0 auto 6.5vh">${names}</div>`).join(''); }
+      const H = window.innerHeight, h = credRoll.scrollHeight || H * 3, span = Math.max(1, b.end - b.start - 1.2);
+      const u = Math.max(0, Math.min(1, (t - b.start - 0.6) / span));
+      credRoll.style.transform = `translateY(${(H * 1.02 - u * (h + H * 0.35)).toFixed(1)}px)`;
+      credEl.style.opacity = Math.min(1, (t - b.start) / 0.8, Math.max(0, (b.end - t) / 0.6)).toFixed(3);
+    }
+    const _cf0 = new THREE.Vector3(), _ca0 = new THREE.Vector3(), _cf1 = new THREE.Vector3(), _ca1 = new THREE.Vector3();
+    function creditsCamera(t) {
+      const u = ease3(Math.max(0, Math.min(1, (t - cur.start) / Math.max(1, cur.end - cur.start))));
+      _cf0.set(0.12, 1.38, WIDE ? 5.0 : 5.8); _ca0.set(0, WIDE ? 1.7 : 1.95, -0.9);
+      _cf1.set(3.5, 9.5, 24); _ca1.set(-4, 2.5, -16);
+      DN.localToWorld(_cf0); DN.localToWorld(_ca0); DN.localToWorld(_cf1); DN.localToWorld(_ca1);
+      camFrom.lerpVectors(_cf0, _cf1, u); camAt.lerpVectors(_ca0, _ca1, u);
+    }
     function placeCamera(t) {
       if (cur && cur.layout === 'fly') { camera.layers.set(0); flyCamera(t); }
+      else if (cur && cur.layout === 'credits') { camera.layers.set(0); creditsCamera(t); }
       else if (cur && cur.type === 'land' && LAND_PED) {
         // THE LANDING ON THE PEDESTAL (2026-10-26, Sailor: "the graphmap that we see, be the actual one on the pedestal,
         // not just in a void"): the map stays home over its pedestal in the villa, and the camera goes to it — from the
@@ -666,6 +710,9 @@
         DN.localToWorld(camFrom); DN.localToWorld(camAt);
       }
       if (!CAPTURE) userCamera();
+      // ep 1.1: `quake: true` — the desk shakes, hard for the first second and dying out over two (deterministic in t)
+      if (cur && epv(cur, 'quake')) { const u = Math.max(0, t - cur.start), a = 0.05 * Math.exp(-u / 0.9) * (u < 2.6 ? 1 : 0);
+        camFrom.x += a * Math.sin(u * 47.0) + a * 0.6 * Math.sin(u * 83.0); camFrom.y += a * 0.8 * Math.sin(u * 61.0 + 1.3); camAt.x += a * 0.5 * Math.sin(u * 53.0 + 0.7); }
       camera.position.copy(camFrom); camera.lookAt(camAt);
       if (typeof camTarget !== 'undefined' && camTarget.copy) camTarget.copy(camAt);
     }
@@ -922,21 +969,29 @@
     });
     zPlanes.traverse(o => o.layers.enable(1));
     function zPlanesFrame(t, b) {   // time-based, so a paused seek shows the same thing as playback
-      const zp = x => !!(x && x.map && x.map.zPlanes); const on = zp(b); const prev = b && beats[beats.indexOf(b) - 1];
+      const zp = x => !!(x && ((x.map && x.map.zPlanes) || (x.type === 'land' && (x.zPlanes != null ? x.zPlanes : !!EP.landIsolate)))); const on = zp(b);   // ep 1.1: a landing brings the z planes up, as standard
+      const prev = b && beats[beats.indexOf(b) - 1];
       const k = !on ? 0 : zp(prev) ? 1 : Math.min(1, (t - b.start) / 0.9);
       zMats.forEach(([m, full]) => { m.opacity = full * k; }); zShaders.forEach(m => { m.uniforms.uOpacity.value = 0.34 * k; m.uniforms.uTime.value = t; }); zPlanes.visible = k > 0.002; }
     // ── THE PINS (10-27, Sailor: "the scattering of statements for each given media segment condense into a single pin…
     //    have the pins bounce down to the plane for a moment" while Ted explains x and y). One pin per piece: the mean of its
     //    lines' places, its read z, its colour the station most of its lines sit in. `map.pins`: 'gather' (the scatter
     //    flies in to the pin), true (pins only), and `map.flat: true` (the pins sit down on the plane for the x/y talk).
-    const PINS = PIECE_IDS.map((pid, k) => {
-      const ls = L.filter(p => p.pid === pid && p.station !== 'O'); if (!ls.length) return null; const P = byPiece[pid] || {}; const S = P.scoreboard || {};
+    // ep 1.1 (11-02, Sailor: "we collapse the pins… let's see each side and discuss the coordinates"): `EP.pinSplit: [pieceId]`
+    // gives a piece one pin per voice — a debate's two candidates stand apart. A split pin's id is `<piece>:<who>`.
+    const PIN_KEYS = PIECE_IDS.flatMap(pid => (EP.pinSplit || []).includes(pid)
+      ? [...new Set(L.filter(p => p.pid === pid && p.station !== 'O').map(p => p.who))].map(w => ({ key: pid + ':' + w, pid, who: w }))
+      : [{ key: pid, pid, who: null }]);
+    const PINS = PIN_KEYS.map(({ key, pid: pid0, who }, k) => {
+      const pid = key;
+      const ls = L.filter(p => p.pid === pid0 && p.station !== 'O' && (who == null || p.who === who)); if (!ls.length) return null; const P = byPiece[pid0] || {}; const S = P.scoreboard || {};
       const cnt = {}; ls.forEach(p => { cnt[p.station] = (cnt[p.station] || 0) + 1; }); const st = Object.keys(cnt).sort((a, c) => cnt[c] - cnt[a])[0];
-      const nx = ls.reduce((a, p) => a + p.normX, 0) / ls.length, ny = ls.reduce((a, p) => a + p.normY, 0) / ls.length, z = S.readZ != null ? S.readZ : 0;
+      const nx = ls.reduce((a, p) => a + p.normX, 0) / ls.length, ny = ls.reduce((a, p) => a + p.normY, 0) / ls.length;
+      const z = who != null ? ls.reduce((a, p) => a + (p.z || 0), 0) / ls.length : (S.readZ != null ? S.readZ : 0);
       const pos = new THREE.Vector3((nx - 0.5) * 2.8, (0.5 - ny) * 2.8, z * ZF);
       const mesh = new THREE.Mesh(new THREE.SphereGeometry(0.11, 20, 14), new THREE.MeshStandardMaterial({ color: COL[st], emissive: COL[st], emissiveIntensity: 0.55, roughness: 0.3, metalness: 0.2 }));
       mesh.position.copy(pos); mesh.visible = false; mesh.renderOrder = 60; bandGroup.parent.add(mesh);
-      const short = ((EP.pinLabels && EP.pinLabels[pid]) || P.pin || (P.names && Object.values(P.names).map(n => clean(n).split(' ').slice(-1)[0]).join(' × ')) || pid);
+      const short = ((EP.pinLabels && EP.pinLabels[pid]) || (who != null && P.names && P.names[who] ? clean(P.names[who]).replace(/\s*\(.*/, '') : null) || P.pin || (P.names && Object.values(P.names).map(n => clean(n).split(' ').slice(-1)[0]).join(' × ')) || pid);
       const lb = softLabel(short, STATION[st] ? STATION[st][2] : '#fff', 600); lb.material.opacity = 1; lb.scale.set(1.15, 0.12, 1); lb.visible = false; bandGroup.parent.add(lb);
       const stem = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3()]), new THREE.LineDashedMaterial({ color: COL[st], dashSize: 0.05, gapSize: 0.035, transparent: true, opacity: 0.8 }));
       stem.visible = false; bandGroup.parent.add(stem);
@@ -948,6 +1003,112 @@
       const perp = new THREE.Vector2(-d.y, d.x).multiplyScalar((k % 2 ? 1 : -1) * 0.2); P.lo = new THREE.Vector2(d.x * 0.6 + perp.x, d.y * 0.36 + perp.y); });
     const lineHome = {};
     const easeBack = u => { const c1 = 1.70158, c3 = c1 + 1; return 1 + c3 * Math.pow(u - 1, 3) + c1 * Math.pow(u - 1, 2); };
+    // ── THE LUMENS ARC (sp01, 10-31, ruled by Sailor: light depends on which way a line faces the object, not where it sits).
+    //    `map.arc: true`: the object glows at the centre of the plane; every line on the map that faces it (touch O, T, B, M, X)
+    //    gets a beam from the object, brighter the cooler the line (1 − diatribe/100 — the same sum as lumens); a line facing
+    //    the argument about the argument (touch F) gets no beam and a dark ring — in shadow, from any corner.
+    const ARC = (() => { const grp = new THREE.Group(); grp.visible = false; bandGroup.parent.add(grp);
+      const core = new THREE.Mesh(new THREE.SphereGeometry(0.09, 24, 16), new THREE.MeshBasicMaterial({ color: 0xfff1c9, transparent: true, opacity: 0, depthWrite: false }));
+      const glow = new THREE.Mesh(new THREE.SphereGeometry(0.28, 24, 16), new THREE.MeshBasicMaterial({ color: 0xffd27a, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }));
+      core.renderOrder = glow.renderOrder = 66; grp.add(core); grp.add(glow);
+      const lab = softLabel('THE OBJECT', '#ffe6a8', 600); lab.scale.set(0.95, 0.1, 1); lab.position.set(0, -0.26, 0.05); grp.add(lab);
+      grp.traverse(o => o.layers.enable(1));
+      return { grp, core, glow, lab, beams: {} }; })();
+    const REC_T = new Set(['O', 'T', 'B', 'M', 'X']);
+    function arcFrame(t, b) {
+      const on = !!(b && b.map && b.map.arc); const prev = b && beats[beats.indexOf(b) - 1]; const was = !!(prev && prev.map && prev.map.arc);
+      const k = !on ? 0 : was ? 1 : Math.min(1, (t - b.start) / 1.1);
+      ARC.grp.visible = k > 0.002; if (!ARC.grp.visible) return;
+      const pulse = 0.85 + 0.15 * Math.sin(t * 2.4);
+      ARC.core.material.opacity = 0.95 * k; ARC.glow.material.opacity = 0.35 * k * pulse; ARC.glow.scale.setScalar(1 + 0.08 * Math.sin(t * 2.4)); ARC.lab.material.opacity = 0.9 * k;
+      const wp = new THREE.Vector3();
+      L.forEach((p, i) => { const d = dotMesh[i]; let B = ARC.beams[i];
+        const vis = !!(d && d.visible && d.parent && d.parent.visible !== false && p.station !== 'O');
+        if (!B) { if (!vis) return;
+          const lit = REC_T.has(p.touch);
+          const geo = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3()]);
+          const line = new THREE.Line(geo, new THREE.LineBasicMaterial({ color: 0xffdf9a, transparent: true, opacity: 0, depthWrite: false, blending: THREE.AdditiveBlending }));
+          const ring = new THREE.Mesh(new THREE.RingGeometry(0.055, 0.085, 28), new THREE.MeshBasicMaterial({ color: lit ? 0xffe2a0 : 0x0b0d14, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false }));
+          line.renderOrder = 65; ring.renderOrder = 67; line.layers.enable(1); ring.layers.enable(1); ARC.grp.add(line); ARC.grp.add(ring);
+          B = ARC.beams[i] = { line, ring, lit, w: Math.max(0.12, 1 - (p.dia || 0) / 100) }; }
+        if (!vis) { B.line.material.opacity = 0; B.ring.material.opacity = 0; return; }
+        d.getWorldPosition(wp); ARC.grp.worldToLocal(wp);
+        const pos = B.line.geometry.attributes.position; pos.setXYZ(1, wp.x, wp.y, wp.z); pos.needsUpdate = true;
+        B.ring.position.copy(wp); B.ring.lookAt(camera.getWorldPosition(new THREE.Vector3()));   // lookAt takes a world point
+        B.line.material.opacity = B.lit ? 0.75 * B.w * k : 0;
+        B.ring.material.opacity = B.lit ? 0.55 * B.w * k : 0.85 * k; });
+    }
+    // ── THE SPLIT (sp01, 10-31, ruled by Sailor: read from the audience's own seat, the displaced cost drawn beside it).
+    //    `map.split: 'home'` — one pin up in realized: your seat. `'both'` — and a second pin down in frustrated, off to the
+    //    side: the cost, somewhere else. A dashed line ties them: the same event.
+    const SPLIT = (() => { const grp = new THREE.Group(); grp.visible = false; bandGroup.parent.add(grp);
+      const mk = (hex, at, word, css) => { const m = new THREE.Mesh(new THREE.SphereGeometry(0.12, 22, 16), new THREE.MeshStandardMaterial({ color: hex, emissive: hex, emissiveIntensity: 0.6, roughness: 0.3, metalness: 0.2, transparent: true, opacity: 0 }));
+        m.position.copy(at); m.renderOrder = 62; grp.add(m);
+        const lb = softLabel(word, css, 700); lb.scale.set(1.7, 0.177, 1); lb.position.copy(at).add(new THREE.Vector3(0, 0, at.z > 0 ? 0.24 : -0.24)); grp.add(lb);
+        const st = new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(at.x, at.y, 0), at.clone()]), new THREE.LineDashedMaterial({ color: hex, dashSize: 0.05, gapSize: 0.035, transparent: true, opacity: 0 }));
+        st.computeLineDistances(); grp.add(st); return { m, lb, st }; };
+      const home = mk(0x5fd38a, new THREE.Vector3(-0.55, 0.15, 0.62 * ZF), 'YOUR SEAT · REALIZED', '#9fe8b4');
+      const cost = mk(0xe06060, new THREE.Vector3(0.95, -0.2, -0.62 * ZF), 'COST · UKRAINE · GAZA', '#ff9d9d');
+      const tie = new THREE.Line(new THREE.BufferGeometry().setFromPoints([home.m.position.clone(), cost.m.position.clone()]), new THREE.LineDashedMaterial({ color: 0xffffff, dashSize: 0.06, gapSize: 0.05, transparent: true, opacity: 0 }));
+      tie.computeLineDistances(); grp.add(tie);
+      const same = softLabel('SAME EVENT', '#ffffff', 600); same.scale.set(0.8, 0.085, 1); same.position.copy(home.m.position).lerp(cost.m.position, 0.5).add(new THREE.Vector3(0.12, 0, 0)); grp.add(same);
+      grp.traverse(o => o.layers.enable(1));
+      return { grp, home, cost, tie, same }; })();
+    // ── THE DIAGNOSTIC BOUNDARY (ep 1.1, 11-02, Sailor: "a great opportunity to introduce the diagnostic boundary"):
+    //    `map.boundary: { a: pinId, b: pinId, words: [aSide, bSide] }` stands a translucent sheet on the map where two
+    //    readings of one statement meet — the good-faith reading on one side, the bad-faith reading on the other.
+    //    11-03 (Sailor: "the diagnostic shows where the good/bad faith interpretations meet"): its disturbance is the
+    //    piece's own Diatribe — J_dia_operator §2: Diatribe and the DiaGnostic boundary are one scalar read at two
+    //    altitudes — so it is no longer set by hand. `charge` (0–1) still overrides, for a boundary with no piece.
+    const BOUND = (() => { const grp = new THREE.Group(); grp.visible = false; bandGroup.parent.add(grp);
+      const geo = new THREE.PlaneGeometry(1.5, 0.95, 40, 26); const base = geo.attributes.position.array.slice();
+      const mat = iriMat(0xb9a6ff); mat.side = THREE.DoubleSide; const sheet = new THREE.Mesh(geo, mat); sheet.renderOrder = 45; grp.add(sheet);
+      const edge = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(1.5, 0.95)), new THREE.LineBasicMaterial({ color: 0xd9ccff, transparent: true, opacity: 0, depthWrite: false })); grp.add(edge);
+      const la = softLabel('·', '#ffe6a8', 700), lb = softLabel('·', '#ff9d9d', 700); [la, lb].forEach(l => { l.scale.set(1.25, 0.13, 1); grp.add(l); });
+      const title = softLabel('DIAGNOSTIC BOUNDARY', '#d9ccff', 600); title.scale.set(1.35, 0.14, 1); grp.add(title);
+      grp.traverse(o => o.layers.enable(1));
+      return { grp, sheet, geo, base, mat, edge, la, lb, title, words: '' }; })();
+    const _ba = new THREE.Vector3(), _bb = new THREE.Vector3(), _bn = new THREE.Vector3(), _br = new THREE.Vector3(), _bup = new THREE.Vector3(0, 0, 1), _bm = new THREE.Matrix4();
+    function boundaryFrame(t, b) {
+      const m = (b && b.map) || {}; const B = m.boundary; const prev = b && beats[beats.indexOf(b) - 1]; const was = !!(prev && prev.map && prev.map.boundary);
+      if (!B) { BOUND.grp.visible = false; return; }
+      const A = PINS.find(x => x.pid === B.a), C = PINS.find(x => x.pid === B.b); if (!A || !C) { BOUND.grp.visible = false; return; }
+      const k = was ? 1 : Math.min(1, (t - b.start) / 1.2); BOUND.grp.visible = true;
+      _ba.set(A.pos.x, A.pos.y, 0); _bb.set(C.pos.x, C.pos.y, 0);
+      _bn.subVectors(_bb, _ba); const len = Math.max(0.2, _bn.length()); _bn.normalize(); _br.crossVectors(_bup, _bn).normalize();
+      _bm.makeBasis(_br, _bup, _bn); BOUND.sheet.quaternion.setFromRotationMatrix(_bm); BOUND.edge.quaternion.copy(BOUND.sheet.quaternion);
+      const mid = _ba.clone().lerp(_bb, 0.5); mid.z = 0.48; BOUND.sheet.position.copy(mid); BOUND.edge.position.copy(mid);
+      const BP = byPiece[String(B.a).split(':')[0]] || byPiece[String(B.b).split(':')[0]]; const bDia = (BP && BP.scoreboard && BP.scoreboard.dia != null) ? BP.scoreboard.dia : null;
+      const ch = Math.max(0, Math.min(1, B.charge != null ? B.charge : bDia != null ? bDia / 100 : 0.5)); const amp = 0.04 + 0.2 * ch;
+      const P_ = BOUND.geo.attributes.position, a = P_.array, base = BOUND.base;
+      for (let i = 0; i < a.length; i += 3) { const x = base[i], y = base[i + 1]; const fx = 1 - Math.pow(Math.abs(x) / 0.75, 3), fy = 1 - Math.pow(Math.abs(y) / 0.475, 3);
+        a[i + 2] = amp * Math.max(0, fx) * Math.max(0, fy) * (Math.sin(x * 5.0 + t * 1.3) * Math.cos(y * 6.0 - t * 0.9) + 0.45 * Math.sin(x * 11.0 - y * 7.0 + t * 2.1) * ch); }
+      P_.needsUpdate = true; BOUND.geo.computeVertexNormals();
+      BOUND.mat.uniforms.uOpacity.value = 0.5 * k; BOUND.mat.uniforms.uTime.value = t; BOUND.edge.material.opacity = 0.55 * k;
+      const w = (B.words || []).join('|'); if (BOUND.words !== w) { BOUND.words = w;
+        const re = (sp, text, css) => { const c = document.createElement('canvas'); c.width = 1536; c.height = 160; const x = c.getContext('2d'); x.font = '700 92px "Helvetica Neue", Helvetica, Arial, sans-serif'; x.textAlign = 'center'; x.textBaseline = 'middle'; x.letterSpacing = '14px'; x.shadowColor = 'rgba(0,0,0,.75)'; x.shadowBlur = 16; x.fillStyle = css; x.fillText(text, 768, 80); sp.material.map.dispose(); sp.material.map = new THREE.CanvasTexture(c); sp.material.needsUpdate = true; };
+        re(BOUND.la, (B.words || [])[0] || '', '#ffe6a8'); re(BOUND.lb, (B.words || [])[1] || '', '#ff9d9d');
+        re(BOUND.title, 'DIAGNOSTIC BOUNDARY' + (bDia != null && B.charge == null ? ' · DIATRIBE ' + Math.round(bDia) : ''), '#d9ccff'); }
+      BOUND.la.position.copy(_ba).add(new THREE.Vector3(0, 0, 0.62)); BOUND.lb.position.copy(_bb).add(new THREE.Vector3(0, 0, 0.62));
+      BOUND.title.position.copy(mid).add(new THREE.Vector3(0, 0, 0.6));
+      [BOUND.la, BOUND.lb].forEach(l => { l.material.opacity = 0.95 * k; }); BOUND.title.material.opacity = 0.8 * k;
+    }
+    // ep 1.1 (11-02, Sailor: "when we're scoring a statement onto the graphmap, isolate the pin as much as possible…
+    // make that a standard treatment, with the z boundary planes"): on a landing, every other dot steps back — the line
+    // alone on the map, between the realized and frustrated sheets. On by `EP.landIsolate` (or `isolate` on the beat).
+    function landIsoFrame(t, b) {
+      if (!b || b.type !== 'land' || !(b.isolate != null ? b.isolate : EP.landIsolate)) return;
+      const keep = landIdx(b); L.forEach((_, i) => { if (i !== keep) g.setDotVisible(i, false); });
+    }
+    function splitFrame(t, b) {
+      const mode = b && b.map && b.map.split; const prev = b && beats[beats.indexOf(b) - 1]; const pm = prev && prev.map && prev.map.split;
+      SPLIT.grp.visible = !!mode; if (!mode) return;
+      L.forEach((_, i) => g.setDotVisible(i, false));   // the two pins alone on the map: the event, from two seats
+      const ramp = Math.min(1, (t - b.start) / 1.0);
+      const kh = pm ? 1 : ramp, kc = mode === 'both' ? (pm === 'both' ? 1 : ramp) : 0;
+      const setK = (o, k) => { o.m.material.opacity = k; o.lb.material.opacity = k; o.st.material.opacity = 0.8 * k; };
+      setK(SPLIT.home, kh); setK(SPLIT.cost, kc); SPLIT.tie.material.opacity = 0.7 * kc; SPLIT.same.material.opacity = 0.9 * kc;
+    }
     // THE MEASURE FRAME (10-28): on `map.measure: pieceId` the pin's x, y and z are drawn out in turn — along the plane
     // from the centre, up to the pin's y, up the stem — then a halo sized by its lumens; each with its name
     const MEAS = (() => { const grp = new THREE.Group(); grp.visible = false; bandGroup.parent.add(grp); grp.traverse(o => o.layers.enable(1));
@@ -964,7 +1125,7 @@
       const set = (ln, a, c, k) => { const q = ln.geometry.attributes.position; q.setXYZ(0, a.x, a.y, a.z); q.setXYZ(1, a.x + (c.x - a.x) * k, a.y + (c.y - a.y) * k, a.z + (c.z - a.z) * k); q.needsUpdate = true; ln.visible = k > 0.001; ln.material.color.setHex(col); };
       const o = new THREE.Vector3(0, 0, 0), px = new THREE.Vector3(S.x, 0, 0), py = new THREE.Vector3(S.x, S.y, 0), pz = new THREE.Vector3(S.x, S.y, S.z);
       set(MEAS.lx, o, px, kx); set(MEAS.ly, px, py, ky); set(MEAS.lz, py, pz, kz);
-      const L_ = (byPiece[P.pid] && byPiece[P.pid].scoreboard) ? byPiece[P.pid].scoreboard.lumens : 50; const r = 0.12 + 0.55 * (L_ / 100);
+      const PP = byPiece[P.pid] || byPiece[String(P.pid).split(':')[0]]; const L_ = (PP && PP.scoreboard) ? PP.scoreboard.lumens : 50; const r = 0.12 + 0.55 * (L_ / 100);
       MEAS.halo.position.set(S.x, S.y, S.z); MEAS.halo.scale.setScalar(r * kl); MEAS.halo.material.opacity = 0.9 * kl * (0.75 + 0.25 * Math.sin(t * 3)); MEAS.halo.material.color.setHex(col);
       MEAS.lab[0].position.set(S.x / 2, -0.17, 0.02); MEAS.lab[0].material.opacity = kx;
       MEAS.lab[1].position.set(S.x + 0.3 * Math.sign(S.x || 1), S.y / 2, 0.02); MEAS.lab[1].material.opacity = ky;
@@ -979,6 +1140,20 @@
     stillEl.querySelector('img').style.cssText = 'width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:3px;display:block;background:#000';
     stillEl.querySelector('.c').style.cssText = 'font-size:clamp(11px,.95vw,18px);letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin-top:.5vw;padding:0 .2vw';
     (document.getElementById('dn') || document.body).appendChild(stillEl);
+    // THE QUOTE CARD (sp01, 10-31, Sailor: "let's just read the podcast clips"): `quote: {text, who, src}` on a text beat
+    // shows the line being read, who said it and where, centred low — Ted reads it; the card says whose words they are
+    const quoteEl = document.createElement('div'); quoteEl.id = 'dn-quote';
+    quoteEl.innerHTML = '<div class="q"></div><div class="w"></div>';
+    quoteEl.style.cssText = 'position:fixed;left:50%;top:15vh;transform:translateX(-50%);width:min(58vw,1000px);display:none;background:rgba(8,10,16,.88);border:1px solid #2a2f42;border-left:4px solid #ffb13d;border-radius:6px;padding:1.6vh 1.6vw 1.3vh;z-index:35;pointer-events:none;box-shadow:0 12px 44px rgba(0,0,0,.6);font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;color:#fff;opacity:0;transition:opacity .35s';
+    quoteEl.querySelector('.q').style.cssText = 'font-size:clamp(16px,1.7vw,34px);line-height:1.32;font-weight:600;font-family:Georgia,"Times New Roman",serif';
+    quoteEl.querySelector('.w').style.cssText = 'font-size:clamp(10px,.85vw,16px);letter-spacing:.16em;text-transform:uppercase;opacity:.75;margin-top:1vh';
+    (document.getElementById('dn') || document.body).appendChild(quoteEl);
+    function quoteFrame(t, b) {
+      const q = epv(b, 'quote');
+      if (!q || !q.text) { quoteEl.style.opacity = '0'; setTimeout(() => { if (quoteEl.style.opacity === '0') quoteEl.style.display = 'none'; }, 380); return; }
+      if (quoteEl.dataset.b !== b.id) { quoteEl.dataset.b = b.id; quoteEl.querySelector('.q').textContent = '\u201c' + q.text + '\u201d'; quoteEl.querySelector('.w').textContent = [q.who, q.src].filter(Boolean).join(' \u00b7 '); }
+      quoteEl.style.display = 'block'; requestAnimationFrame(() => { quoteEl.style.opacity = '1'; });
+    }
     // THE SCOREBOARD (10-29, Sailor: "a table with all the scores… make it obvious which were + and − on the z axis"):
     // one row per piece, in the order given, each row arriving 1.4 s after the last; z green for +, red for −, with an arrow
     const tableEl = document.createElement('div'); tableEl.id = 'dn-table';
@@ -1010,6 +1185,13 @@
       if (img.dataset.src !== src) { img.dataset.src = src; img.src = src; stillEl.querySelector('.c').textContent = cap || ''; }
       stillEl.style.display = 'flex'; requestAnimationFrame(() => { stillEl.style.opacity = '1'; });
     }
+    // the cue times for `map.cue`: each [pinId, word] matched in order against the beat's spoken words
+    function cueTimes(b) {
+      const m = (b && b.map) || {}; if (!Array.isArray(m.cue) || !b.words) return null;
+      if (b._cueT) return b._cueT; const out = {}; const nw = x => String(x).toLowerCase().replace(/[^a-z0-9']/g, '');
+      let from = 0; m.cue.forEach(([pid, word]) => { const k = b.words.findIndex((w, i) => i >= from && nw(w.w).startsWith(nw(word))); if (k >= 0) { out[pid] = b.words[k].s - 0.05; from = k + 1; } });
+      return (b._cueT = out);
+    }
     function pinsFrame(t, b) {
       const m = (b && b.map) || {};
       // put any gathered line dots back home first, so the rest of the show never sees them moved
@@ -1026,7 +1208,8 @@
         P.lines.forEach(i => { const d = dotMesh[i]; if (!d) return;
           if (gathering) { lineHome[i] = d.position.clone(); d.position.lerpVectors(lineHome[i], new THREE.Vector3(P.pos.x, P.pos.y, zNow), g_); g.setDotVisible(i, true); }
           else g.setDotVisible(i, false); });
-        const show = !gathering || u > 0.85;
+        const only = Array.isArray(m.pins) ? m.pins : null;   // ep 1.1: `map.pins: [ids]` shows just those pins
+        const show = (!gathering || u > 0.85) && (!only || only.includes(P.pid));
         P.mesh.visible = show; P.lb.visible = show && (m.pinLabels === 'all' || (Array.isArray(m.pinLabels) && m.pinLabels.includes(P.pid))); P.stem.visible = show && Math.abs(zNow) > 0.02;
         P.mesh.position.set(P.pos.x, P.pos.y, zNow); P.mesh.scale.setScalar(m.pins === 'gather' ? 0.4 + 0.6 * ease3(Math.max(0, (u - 0.7) / 0.3)) : 1);
         // the glow (10-28): named pins (`map.glow: [pieceIds]`, or the labelled ones) pulse and swell; the rest sit quiet
@@ -1036,6 +1219,14 @@
         P.mesh.material.emissiveIntensity = named ? 0.9 + 0.9 * pulse : anyNamed ? 0.3 : 0.55;
         if (named) P.mesh.scale.multiplyScalar(1.25 + 0.2 * pulse);
         P.mesh.material.transparent = anyNamed && !named; P.mesh.material.opacity = (anyNamed && !named) ? 0.5 : 1;
+        // ep 1.1 (11-03, Sailor: "have them light up and pulse as he mentions each one"): `map.cue: [[pinId, word], …]` —
+        // each pin waits dim until Ted says its word (the beat's own word timings), then flashes and keeps a pulse
+        const cueT = cueTimes(b);
+        if (cueT) { const tc = cueT[P.pid], on = tc != null && t >= tc, fl = on ? Math.exp(-(t - tc) / 0.45) : 0;
+          P.mesh.material.emissiveIntensity = on ? 0.9 + 0.8 * pulse + 2.6 * fl : 0.22;
+          P.mesh.scale.setScalar(on ? 1.2 + 0.18 * pulse + 0.8 * fl : 0.8);
+          P.mesh.material.transparent = !on; P.mesh.material.opacity = on ? 1 : 0.4;
+          P.lb.visible = show && on; }
         P.lb.position.set(P.pos.x + P.lo.x, P.pos.y + P.lo.y, zNow + 0.14);
         const a = P.stem.geometry.attributes.position; a.setXYZ(0, P.pos.x, P.pos.y, zNow); a.setXYZ(1, P.pos.x, P.pos.y, 0); a.needsUpdate = true; P.stem.computeLineDistances();
       });
@@ -1241,7 +1432,7 @@
           if (prevType !== b.type) Object.assign(mapPose, mapWant);   // a hard cut: no easing into the new pose
         } else applyMap(t, b);
         if (b.type === 'clip' && ((b.layout || 'full') === 'full' || b.layout === 'reading')) showClip(b, t);
-        readingFrame(t); bandsFrame(b, t); zPlanesFrame(t, b); pinsFrame(t, b); measureFrame(t, b); stillFrame(t, b); tableFrame(t, b); flyFrame(t, b); landFrame(t, b); bigFrame(t, b); rippleFrame(rippleEvents(b), t);
+        readingFrame(t); bandsFrame(b, t); zPlanesFrame(t, b); pinsFrame(t, b); measureFrame(t, b); arcFrame(t, b); splitFrame(t, b); landIsoFrame(t, b); boundaryFrame(t, b); stillFrame(t, b); quoteFrame(t, b); tableFrame(t, b); flyFrame(t, b); creditsFrame(t, b); landFrame(t, b); bigFrame(t, b); rippleFrame(rippleEvents(b), t);
         if (b.card === 'score' && b.piece) { if ($('dn-score').dataset.p !== b.piece) { setScore(b); $('dn-score').dataset.p = b.piece; } $('dn-score').style.display = 'block'; }
         else { $('dn-score').style.display = 'none'; $('dn-score').dataset.p = ''; }
         const pb = beats[beats.indexOf(b) - 1], eb = (b.elephant && elephant) ? b : (pb && pb.elephant && elephant && t < pb.end + 12) ? pb : null;   // the walk carries past its beat

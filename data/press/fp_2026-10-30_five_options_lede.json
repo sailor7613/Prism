@@ -1,0 +1,420 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "fp_2026-10-30_five_options_lede",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "partial": "beta lede",
+ "partialNote": "a beta lede — headline + dek + the three paragraphs visible before the wall ('Continue Reading'). Runs as data: printed on the paper flagged, excluded from corner composites and indices until the member is subscribed and read in full (Sailor 10-16). The full cut replaces it when the text opens.",
+ "title": "Five Options",
+ "source": {
+  "program": "The Free Press",
+  "network": "The Free Press (Substack)",
+  "format": "print (beta lede: hed · dek · ¶1–¶3)",
+  "date": "2026-10-30",
+  "title": "How Trump Can Fight Iran After the Midterms",
+  "byline": "Aaron MacLean",
+  "url": "https://www.thefp.com/p/trum-iran-war-strategy-midterm-elections",
+  "length": 11,
+  "paragraphs": 3,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-10-30_FreePress_Five_Options/PARTIAL.md",
+  "note": "published 10-30 14:22 UTC; the 10-30 sweep (matched on 'hormuz', 'strait of', 'sanction', 'iran', 'midterm' — the fullest match of any row in the queue). The RP corner's third page on the force in three days (Gur 10-28, Doran 10-29, MacLean 10-30), the first whose visible text reaches the Strait and the deal's terms. Cut as β because nothing fuller exists in RP today (Shapiro's transcript is Alaska; TCN and Kirk 0 items). FP's lastCut was 10-30 (yesterday's cutting day); one FP cut today."
+ },
+ "positions": "blocks",
+ "horizon": "US",
+ "arc": "PG01",
+ "object": {
+  "label": "the next offensive against Iran — the force (slate01; PG01 §5): read from the RP corner's strategist as a menu — five options after the vote, from a deal to escalation, with the visible page covering the two least escalatory. The strike's clock is the vote's, and the reason is stated: 'a significant military escalation today would spook the financial markets and harm Republican candidates next Tuesday' (¶1). The Strait is on the page as the deal's first issue and as the thing a quick deal would 'surrender'; H6's throughput claim appears hedged — escorts 'appear to have restored oil transits to near pre-war levels' (¶3)",
+  "layer": 2,
+  "zAxis": {
+   "pos": "the force relents — the vote changes the course, and no new strike follows",
+   "neg": "it does not — the president is 'leaning in the direction of some form of renewed military action', the only thing holding it is Tuesday, and the two options on the visible page are the ones the author ranks least likely to end it"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's 'U.S. control' of the water and the deal as the cure; this page carries the control claim's own history against it — a June memorandum 'recognizing Iranian sovereignty in the strait' that 'collapsed in less than two weeks', and Iran's standing terms (lift the blockade, sanctions relief, recognize Iranian control). The page's own shadow is the hed: 'how', not 'whether' — the strike pre-credited to the calendar. The gas↔votes predicate is stated from the RP side as a planning constraint: escalation now would 'spook the financial markets and harm Republican candidates'",
+ "names": {
+  "FP": "the publication (hed, dek — The Free Press)",
+  "AM": "Aaron MacLean (The Free Press; the author)",
+  "ISW": "the Institute for the Study of War (quoted by the author) — reported, stationed with the publication"
+ },
+ "depth": {
+  "what": "distinct touches (O · T · B · M · X) across the opening ÷ scored lines — a measure of whether the lede says more than its headline",
+  "touches": [
+   "F",
+   "T",
+   "M"
+  ],
+  "lines": 11,
+  "value": 0.27,
+  "note": "three touches in eleven lines — the frame (how, not whether), the record (the report, the June MOU, Iran's terms, the transits) and the mechanism (the vote as the clock; the deal priced in the strait). No object line in the holder's words, no challenge. Above Gur (0.25) and Doran (0.2); below the 10-13 diesel lede (0.57). The most record of the three FP pages on the force"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.55
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0,
+   "note": "'U.S. control' of the strait and 'how' in the hed; the June MOU is the shadow's own record against it"
+  },
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "'recent news reports suggest that the president is leaning in the direction of some form of renewed military action' (¶1, as-of 10-30)",
+     "z": 0.9
+    },
+    {
+     "type": "T",
+     "label": "the June memorandum of understanding recognized Iranian sovereignty in the strait as a precondition for nuclear talks and collapsed in less than two weeks (¶2, as-of June)",
+     "z": 0.8
+    },
+    {
+     "type": "T",
+     "label": "Iran's terms via ISW: lift the naval blockade, provide sanctions relief, recognize Iranian control over the strait before any concessions (¶2)",
+     "z": 0.8
+    },
+    {
+     "type": "T",
+     "label": "the blockade of Iranian ports 'doing meaningful economic damage'; escort operations 'appear to have restored oil transits to near pre-war levels'; 'other commodities … less clear' (¶3) — H6's throughput claim, hedged",
+     "z": 0.6
+    },
+    {
+     "type": "M",
+     "label": "the strike's clock is the vote's: escalation today 'would spook the financial markets and harm Republican candidates next Tuesday' (¶1)",
+     "z": 0.8
+    },
+    {
+     "type": "M",
+     "label": "a quick deal 'would effectively have to surrender the strait to Iran' (¶2) — the deal priced in the strait",
+     "z": 0.7
+    }
+   ],
+   "stated": [
+    {
+     "type": "F",
+     "label": "'how Trump can fight Iran after the midterms' — the hed; 'more options than he does right now' — the dek",
+     "z": 0.6
+    },
+    {
+     "type": "F",
+     "label": "'I, too, prefer my enemy's surrender as a precondition for further discussion' (¶2) — the aside",
+     "z": 0.5
+    }
+   ],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "leaning in the direction of renewed military action · spook the financial markets · harm Republican candidates next Tuesday · the status of the Strait of Hormuz · lift the naval blockade · sanctions relief · recognize Iranian control · the June memorandum · collapsed in less than two weeks · near pre-war levels",
+    "denominated": "how · my enemy's surrender · surrender the strait · irreconcilable · risk collapse",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "leaning in the direction",
+     "renewed military action",
+     "spook the financial markets",
+     "harm Republican candidates",
+     "the status of the Strait of Hormuz",
+     "lift the naval blockade",
+     "sanctions relief",
+     "recognize Iranian control over the strait",
+     "memorandum of understanding in June",
+     "less than two weeks",
+     "near pre-war levels"
+    ],
+    "denomKeywords": [
+     "how",
+     "my enemy's surrender",
+     "surrender the strait",
+     "irreconcilable",
+     "risk collapse"
+    ],
+    "note": "β — runs as data; the corner's figure waits for the full text"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-31",
+   "what": "beta lede cut (hed · dek · ¶1–¶3 to the wall; ≈300 words). The RP corner's third page on the force in three days and the first whose visible text reaches the Strait, the June MOU and Iran's terms. Cut because nothing fuller existed in RP today. Depth 0.27. Runs as data; my call, flagged",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 21,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.51,
+  "readZRange": [
+   -0.3,
+   -0.7
+  ],
+  "stations": {
+   "LI": null,
+   "RI": null,
+   "LP": null,
+   "RP": {
+    "dia": 21,
+    "spread": [
+     10,
+     46
+    ],
+    "readZ": -0.51,
+    "voices": {
+     "AM": {
+      "dia": 19,
+      "readZ": -0.5,
+      "n": 9
+     },
+     "FP": {
+      "dia": 29,
+      "readZ": -0.55,
+      "n": 2
+     }
+    }
+   }
+  },
+  "split": {
+   "topology": "none",
+   "station": "RP",
+   "strength": 0.0,
+   "note": "one voice, eleven lines (the publication's hed and dek at 28–30; the author 10–46). The record lines sit at 10–14 — the report, Iran's terms, the June MOU, the transits; the two mechanisms at 16 and 28; the one climb is the aside (46). β: a reading of the visible page only; the three escalatory options are behind the wall"
+  },
+  "lumens": 61,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "FP",
+   "station": "RP",
+   "quote": "how Trump can fight Iran after the midterms",
+   "touch": "F",
+   "z": -0.6,
+   "dia": 30,
+   "mode": "open",
+   "note": "THE HEADLINE: 'how', not 'whether' — the strike pre-credited to the calendar",
+   "chapter": "The door",
+   "normX": 0.6417,
+   "normY": 0.592,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a headline that asks how presumes the fight follows the vote"
+  },
+  {
+   "t": 1,
+   "who": "FP",
+   "station": "RP",
+   "quote": "win or lose, once the midterms are over the president will have more options than he does right now — none a sure path to victory",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 28,
+   "mode": "open",
+   "note": "the dek: the vote as a release of options, not a check on them",
+   "chapter": "The door",
+   "normX": 0.5924,
+   "normY": 0.6323,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a vote that widens the menu is not one that closes it"
+  },
+  {
+   "t": 2,
+   "who": "AM",
+   "station": "RP",
+   "quote": "five options after the midterms, more than he has now — a significant escalation today would spook the financial markets and harm Republican candidates next Tuesday",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 16,
+   "mode": "open",
+   "note": "THE MECHANISM STATED PLAINLY: the strike's clock is the vote's, for the market's and the ballot's sake — the gas↔votes predicate from the RP side, as a planning constraint",
+   "chapter": "The count",
+   "normX": 0.5695,
+   "normY": 0.5926,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a strike held back only for Tuesday's sake is a strike held, not relented"
+  },
+  {
+   "t": 3,
+   "who": "AM",
+   "station": "RP",
+   "quote": "recent news reports suggest the president is leaning in the direction of some form of renewed military action",
+   "touch": "T",
+   "z": -0.7,
+   "dia": 10,
+   "mode": "open",
+   "note": "the object dated by report — the page's lowest line",
+   "chapter": "The count",
+   "normX": 0.5583,
+   "normY": 0.5724,
+   "normZ": -0.525,
+   "quadrant": "D"
+  },
+  {
+   "t": 4,
+   "who": "AM",
+   "station": "RP",
+   "quote": "make a deal — still a possibility; the key issues the status of the Strait of Hormuz and Iran's nuclear program; both sides' public positions irreconcilable at the moment",
+   "touch": "T",
+   "z": -0.4,
+   "dia": 14,
+   "mode": "open",
+   "note": "→H6 and the terms: the Strait's status as the deal's first issue; 'irreconcilable' the one vehicle",
+   "chapter": "Option one",
+   "normX": 0.5707,
+   "normY": 0.5819,
+   "normZ": -0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a deal 'still a possibility' with positions irreconcilable is a strike not yet off the table"
+  },
+  {
+   "t": 5,
+   "who": "AM",
+   "station": "RP",
+   "quote": "ISW's 'sequencing' problem — Iran: lift the naval blockade, provide sanctions relief, recognize Iranian control over the strait before any concessions",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 12,
+   "mode": "open",
+   "note": "Iran's terms, sourced — the toll's ledger from the other side (iran-terms: blockade, relief, control)",
+   "chapter": "Option one",
+   "normX": 0.5682,
+   "normY": 0.5739,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "terms that start with recognizing Iran's control are the counter-claim to the holder's; the gap is the war"
+  },
+  {
+   "t": 6,
+   "who": "AM",
+   "station": "RP",
+   "quote": "I, too, prefer my enemy's surrender as a precondition for further discussion",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 46,
+   "mode": "open",
+   "note": "the aside — irony as the vehicle; the page's highest line",
+   "chapter": "Option one",
+   "normX": 0.6615,
+   "normY": 0.6634,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a strategist mocking the terms does not expect the deal"
+  },
+  {
+   "t": 7,
+   "who": "AM",
+   "station": "RP",
+   "quote": "Trump tested a conciliatory approach with the June memorandum — recognizing Iranian sovereignty in the strait as a precondition for nuclear talks; the deal collapsed in less than two weeks",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE RECORD: a signed recognition of Iranian sovereignty in the strait, in June — the control claim's own history (H6's shadow against its record). As-of June",
+   "chapter": "Option one",
+   "normX": 0.5731,
+   "normY": 0.5691,
+   "normZ": -0.375,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a deal that lasted two weeks is the precedent for the next one failing"
+  },
+  {
+   "t": 8,
+   "who": "AM",
+   "station": "RP",
+   "quote": "for Trump to close a deal quickly he would effectively have to surrender the strait to Iran",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 28,
+   "mode": "open",
+   "note": "the deal priced in the strait; 'surrender' the vehicle",
+   "chapter": "Option one",
+   "normX": 0.621,
+   "normY": 0.6068,
+   "normZ": -0.45,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "if the quick deal costs the strait, the author expects no quick deal — and the force stays"
+  },
+  {
+   "t": 9,
+   "who": "AM",
+   "station": "RP",
+   "quote": "the blockade of Iranian ports is doing meaningful economic damage; escort operations in the Strait — essentially a counterblockade — appear to have restored oil transits to near pre-war levels; other commodities less clear",
+   "touch": "T",
+   "z": -0.3,
+   "dia": 14,
+   "mode": "open",
+   "note": "H6 FROM RP: the throughput claim restated as 'appear to have restored … near pre-war levels' — CENTCOM's number without the number, hedged twice",
+   "chapter": "Option two",
+   "normX": 0.5835,
+   "normY": 0.5688,
+   "normZ": -0.225,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "transits 'near pre-war' read toward relief; 'appear' and 'less clear' pull back; a hold is not a stop"
+  },
+  {
+   "t": 10,
+   "who": "AM",
+   "station": "RP",
+   "quote": "Trump could preserve this status quo and wait to see if economic pressure forces Iran's regime to surrender, or else risk collapse",
+   "touch": "M",
+   "z": -0.4,
+   "dia": 22,
+   "mode": "open",
+   "note": "option two: the war as a hold; 'surrender', 'collapse' the vehicles",
+   "chapter": "Option two",
+   "normX": 0.6099,
+   "normY": 0.5845,
+   "normZ": -0.3,
+   "quadrant": "D",
+   "zInferred": true,
+   "zWhy": "a status quo kept until surrender is the war continuing by other means"
+  }
+ ]
+}

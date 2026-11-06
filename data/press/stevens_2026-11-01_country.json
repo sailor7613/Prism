@@ -1,0 +1,339 @@
+{
+ "schema": "press/parallelogram/v0",
+ "kind": "parallelogram",
+ "positions": "seconds",
+ "horizon": null,
+ "arc": null,
+ "transform": "none",
+ "status": "claude-draft",
+ "show": "sp01",
+ "id": "stevens_2026-11-01_country",
+ "title": "Stand With Country",
+ "source": {
+  "program": "Haley Stevens remarks (Acyn clip)",
+  "network": "X",
+  "format": "tape",
+  "date": "2026-11-01",
+  "title": "Stevens: We have to stand with country. We can't stand with Hasan Piker.",
+  "url": "https://x.com/Acyn/status/2116956542872465432",
+  "length": 132,
+  "transcript": "(no captions; line found by keyword search on the audio — confirm by ear)",
+  "note": "same day as her car-video endorsement (@HaleyforMI 2116945962706862397). Ryan Grim posted that two registered foreign agents for Israel stood behind her (unnamed, unconfirmed)"
+ },
+ "object": {
+  "label": "The Michigan Senate seat, two days out — Rogers (R) vs El-Sayed (D) (ep 1.1's object, History restarting, at layer 1: the coalitions breaking)",
+  "layer": 1,
+  "legislative": {
+   "void": true,
+   "note": "an endorsement, no instrument; she remains a sitting House member"
+  },
+  "zAxis": {
+   "pos": "the party's nominee delivers for the audience — the coalition holds",
+   "neg": "it doesn't — the coalition breaks"
+  }
+ },
+ "transformNote": "the coalition breaking, in one person, two days out",
+ "names": {
+  "HS": "Haley Stevens (D, U.S. Rep.)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.5
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.4
+  },
+  "shadowNote": "loyalty — to the country, to a party, to a seat",
+  "predicates": {
+   "operative": [
+    "endorses Mike Rogers"
+   ],
+   "stated": [
+    "we have to stand with country"
+   ],
+   "challenge": [
+    "we can't stand with Hasan Piker"
+   ]
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "my vote · stand with country",
+    "denominated": "can't stand with Hasan Piker",
+    "distinguishability": "Medium",
+    "fluidKeywords": [
+     "vote",
+     "country"
+    ],
+    "denomKeywords": [
+     "Hasan Piker"
+    ],
+    "note": "speaker — station proposed LI (sitting Democrat); she crosses to the RI candidate"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-11-01",
+   "what": "cut for ep 1.1 block 3. Line times found by keyword search on the audio (no captions) — confirm by ear. Scores are Claude's proposals, unruled; blind to Sailor's hypothesis",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 58,
+  "tier": "oscillation zone",
+  "declaredZ": null,
+  "readZ": -0.47,
+  "readZRange": [
+   -0.4,
+   -0.5
+  ],
+  "stations": {
+   "LI": {
+    "dia": 58,
+    "spread": [
+     40,
+     72
+    ],
+    "readZ": -0.47,
+    "voices": {
+     "HS": {
+      "dia": 58,
+      "readZ": -0.47,
+      "n": 3
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "one voice",
+   "station": "LI",
+   "strength": 0.0,
+   "note": "single speaker"
+  },
+  "lumens": 33,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 15,
+   "who": "HS",
+   "station": "LI",
+   "quote": "I'm just one voter, like every Michigander — my vote is for Mike Rogers",
+   "touch": "O",
+   "z": -0.4,
+   "dia": 40,
+   "mode": "open",
+   "note": "the crossing, said plainly",
+   "chapter": "The seat",
+   "normX": 0.3721,
+   "normY": 0.3372,
+   "normZ": -0.3,
+   "quadrant": "A"
+  },
+  {
+   "t": 22,
+   "who": "HS",
+   "station": "LI",
+   "quote": "we have to stand with country",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 62,
+   "mode": "open",
+   "note": "the reason, in her words",
+   "chapter": "The seat",
+   "normX": 0.2717,
+   "normY": 0.3202,
+   "normZ": -0.375,
+   "quadrant": "A"
+  },
+  {
+   "t": 26,
+   "who": "HS",
+   "station": "LI",
+   "quote": "we can't stand with Hasan Piker",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 72,
+   "mode": "open",
+   "note": "about a streamer, not the seat — the bridge burned",
+   "chapter": "The streamer",
+   "normX": 0.309,
+   "normY": 0.2326,
+   "normZ": -0.375,
+   "quadrant": "A"
+  }
+ ],
+ "closedform": [
+  {
+   "at": "2026-11-05T10:50:03",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 58,
+    "lumens": 6
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 63,
+     "tier": "coalition",
+     "runs": [
+      48,
+      63,
+      63
+     ],
+     "object": "signal",
+     "others": "open",
+     "capital": true,
+     "patterns": [],
+     "facing": "object",
+     "why": "A Democrat announces her personal vote for the Republican nominee, a signal about her own choice rather than the race's costs, votes, or consequences.",
+     "flags": []
+    },
+    {
+     "i": 1,
+     "dia": 48,
+     "tier": "coalition",
+     "runs": [
+      48,
+      48,
+      48
+     ],
+     "object": "signal",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "argument",
+     "why": "A bare loyalty slogan that rallies without naming any cost, vote, or policy in the race.",
+     "flags": []
+    },
+    {
+     "i": 2,
+     "dia": 63,
+     "tier": "coalition",
+     "runs": [
+      58,
+      63,
+      63
+     ],
+     "object": "signal",
+     "others": "working",
+     "capital": true,
+     "patterns": [],
+     "facing": "argument",
+     "why": "The line judges the opposing side by its association with a streamer rather than by any votes, costs, or positions, and it is a Democrat attacking a fellow party's wing, spending her own standing.",
+     "flags": []
+    }
+   ]
+  },
+  {
+   "at": "2026-11-05T12:28:47",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 69,
+    "lumens": 0
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 63,
+     "tier": "coalition",
+     "runs": [
+      63,
+      63,
+      63
+     ],
+     "object": "signal",
+     "others": "open",
+     "capital": true,
+     "patterns": [],
+     "facing": "argument",
+     "why": "She states her own vote for the Republican, which is a signal about her choice and not the substance of the race, and the endorsement spends her standing with her own party.",
+     "flags": []
+    },
+    {
+     "i": 1,
+     "dia": 48,
+     "tier": "coalition",
+     "runs": [
+      48,
+      48,
+      48
+     ],
+     "object": "signal",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "argument",
+     "why": "The slogan 'stand with country' is a rally-style appeal that names no costs, votes, or consequences of the race.",
+     "flags": []
+    },
+    {
+     "i": 2,
+     "dia": 97,
+     "tier": "denominated",
+     "runs": [
+      97,
+      97,
+      97
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": true,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "It files El-Sayed under an association with Piker before weighing his positions, and the speaker spends her own party standing to do it.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100",
+      "agrees with Sailor's ruling"
+     ]
+    }
+   ]
+  }
+ ]
+}

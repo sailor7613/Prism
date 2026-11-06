@@ -1,0 +1,327 @@
+{
+ "piece": "trump_2026-10-24_perry_fortune",
+ "model": "claude-haiku-5-5",
+ "at": "2026-11-05T12:27:12",
+ "tracker": "sst",
+ "facts": [
+  {
+   "id": "sst:EMM_EPMR_PTE_NUS_DPG",
+   "fact": "US regular gasoline, retail: 2.937 on 2026-02-23 (before the war) → 4.284 on 2026-10-19 (+46%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-19",
+   "tracked": true
+  },
+  {
+   "id": "sst:RBRTE",
+   "fact": "Brent crude: 71.36 on 2026-02-27 (before the war) → 125.59 on 2026-10-16 (+76%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "sst:RWTC",
+   "fact": "WTI crude: 65.87 on 2026-02-27 (before the war) → 99.93 on 2026-10-16 (+52%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "decl:legislative",
+   "fact": "no war authorization; Collins's nine votes against (her count) are the Senate's record; gas $2.98 pre-war → $4.29 on 10-26, diesel record over $6 (AP via Fortune)",
+   "source": "the piece, declared",
+   "tracked": false
+  }
+ ],
+ "usage": {
+  "input_tokens": 13536,
+  "output_tokens": 8307,
+  "model": "claude-haiku-5-5"
+ },
+ "derived": {
+  "dia": 56,
+  "lumens": 43
+ },
+ "lines": [
+  {
+   "i": 0,
+   "who": "DT",
+   "hand": {
+    "dia": 28,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 0,
+    "substance": true,
+    "facts_touched": [
+     "sst:RBRTE",
+     "sst:RWTC"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It forecasts that prices will fall once the war ends, a claim the tracker cannot test yet, while Brent is up 76% so far.",
+    "_runs": [
+     50,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 1,
+   "who": "DT",
+   "hand": {
+    "dia": 36,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 1,
+    "substance": true,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "Makes a claim about industry profits from the price spike, a real cost-side flow, though the tracker does not measure profits and the line is a rally claim.",
+    "_runs": [
+     16,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (16–50)"
+    ]
+   }
+  },
+  {
+   "i": 2,
+   "who": "DT",
+   "hand": {
+    "dia": 30,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 2,
+    "substance": true,
+    "facts_touched": [
+     "decl:legislative",
+     "sst:EMM_EPMR_PTE_NUS_DPG"
+    ],
+    "contradicts": [
+     "sst:EMM_EPMR_PTE_NUS_DPG"
+    ],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It admits prices are up but calls a 46% gasoline rise a little higher, which the tracker contradicts.",
+    "_runs": [
+     50,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 3,
+   "who": "DT",
+   "hand": {
+    "dia": 46,
+    "touch": "X"
+   },
+   "answers": {
+    "i": 3,
+    "substance": true,
+    "facts_touched": [
+     "sst:EMM_EPMR_PTE_NUS_DPG"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It makes a comparative price claim against Biden and Obama-era prices, which the tracker does not cover, while current gasoline is up 46% from pre-war.",
+    "_runs": [
+     40,
+     50,
+     60
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (40–60)"
+    ]
+   }
+  },
+  {
+   "i": 4,
+   "who": "DT",
+   "hand": {
+    "dia": 58,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 4,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "patterns": [
+     {
+      "n": 1,
+      "phrase": "I could just see the fake headlines"
+     }
+    ],
+    "facing": "argument",
+    "place": "mid",
+    "why": "It files future press criticism of the price pain as fake before weighing it, so the critique is dismissed in advance.",
+    "_runs": [
+     92,
+     92,
+     92
+    ]
+   },
+   "derived": {
+    "dia": 92,
+    "band": [
+     67,
+     100
+    ],
+    "stage": null,
+    "tier": "denominated",
+    "flags": [
+     "patterns #1 say 40–65, the band says denominated 67–100"
+    ]
+   }
+  },
+  {
+   "i": 5,
+   "who": "DT",
+   "hand": {
+    "dia": 66,
+    "touch": "F"
+   },
+   "answers": {
+    "i": 5,
+    "substance": true,
+    "facts_touched": [
+     "sst:RBRTE",
+     "sst:EMM_EPMR_PTE_NUS_DPG"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It asserts the war is producing large profits for oil and gas, a claim about the war's economic flows aimed at rallying a crowd rather than engaging the critics.",
+    "_runs": [
+     50,
+     50,
+     93
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (50–93)"
+    ]
+   }
+  },
+  {
+   "i": 6,
+   "who": "DT",
+   "hand": {
+    "dia": 40,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 6,
+    "substance": true,
+    "facts_touched": [
+     "sst:EMM_EPMR_PTE_NUS_DPG",
+     "sst:RBRTE"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It promises pump prices will come down, a future claim the tracker cannot yet test, while gasoline is up 46% so far.",
+    "_runs": [
+     50,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  }
+ ]
+}

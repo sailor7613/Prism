@@ -1,0 +1,309 @@
+{
+ "piece": "obama_2026-10_georgia_no_relief",
+ "model": "claude-haiku-5-5",
+ "at": "2026-11-05T12:27:45",
+ "tracker": "sst",
+ "facts": [
+  {
+   "id": "sst:EMM_EPMR_PTE_NUS_DPG",
+   "fact": "US regular gasoline, retail: 2.937 on 2026-02-23 (before the war) → 4.284 on 2026-10-19 (+46%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-19",
+   "tracked": true
+  },
+  {
+   "id": "sst:RBRTE",
+   "fact": "Brent crude: 71.36 on 2026-02-27 (before the war) → 125.59 on 2026-10-16 (+76%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "sst:RWTC",
+   "fact": "WTI crude: 65.87 on 2026-02-27 (before the war) → 99.93 on 2026-10-16 (+52%)",
+   "source": "EIA, via the supply shock tracker (data/active/price.json)",
+   "asOf": "2026-10-16",
+   "tracked": true
+  },
+  {
+   "id": "decl:legislative",
+   "fact": "no war authorization; Collins's nine votes against (her count) are the Senate's record; gas $2.98 pre-war → $4.29 on 10-26, diesel record over $6 (AP via Fortune)",
+   "source": "the piece, declared",
+   "tracked": false
+  }
+ ],
+ "usage": {
+  "input_tokens": 13599,
+  "output_tokens": 7079,
+  "model": "claude-haiku-5-5"
+ },
+ "derived": {
+  "dia": 46,
+  "lumens": 43
+ },
+ "lines": [
+  {
+   "i": 0,
+   "who": "BO",
+   "hand": {
+    "dia": 30,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 0,
+    "substance": false,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "patterns": [],
+    "facing": "argument",
+    "place": "mid",
+    "why": "It disputes the war's stated rationale rather than any cost, flow, vote, or death, so it argues about the justification instead of the price at the pump.",
+    "_runs": [
+     15,
+     25,
+     48
+    ]
+   },
+   "derived": {
+    "dia": 25,
+    "band": [
+     0,
+     33
+    ],
+    "stage": null,
+    "tier": "fluid",
+    "flags": [
+     "runs disagree (15–48)"
+    ]
+   }
+  },
+  {
+   "i": 1,
+   "who": "BO",
+   "hand": {
+    "dia": 44,
+    "touch": "T"
+   },
+   "answers": {
+    "i": 1,
+    "substance": true,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It sets the war against a deal that worked without missiles, pressing the cost-benefit case to win the room.",
+    "_runs": [
+     15,
+     50,
+     58
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (15–58)"
+    ]
+   }
+  },
+  {
+   "i": 2,
+   "who": "BO",
+   "hand": {
+    "dia": 34,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 2,
+    "substance": true,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "Names deaths, wounded, and depleted missile stocks as costs of the war, a critique built to win voters over to its side.",
+    "_runs": [
+     50,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 3,
+   "who": "BO",
+   "hand": {
+    "dia": 28,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 3,
+    "substance": true,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It states a shipping-flow consequence of the war, a material fact about the conflict's effects, in a line aimed at persuading.",
+    "_runs": [
+     16,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": [
+     "runs disagree (16–50)"
+    ]
+   }
+  },
+  {
+   "i": 4,
+   "who": "BO",
+   "hand": {
+    "dia": 26,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 4,
+    "substance": true,
+    "facts_touched": [
+     "sst:RBRTE",
+     "sst:RWTC"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "It ties the war directly to rising oil, diesel and consumer prices, which is the object's core cost substance.",
+    "_runs": [
+     50,
+     50,
+     60
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 5,
+   "who": "BO",
+   "hand": {
+    "dia": 38,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 5,
+    "substance": true,
+    "facts_touched": [],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "Says the war is still going on despite promises it would end, a claim about the war's duration aimed at winning the audience against the administration.",
+    "_runs": [
+     50,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  },
+  {
+   "i": 6,
+   "who": "BO",
+   "hand": {
+    "dia": 30,
+    "touch": "O"
+   },
+   "answers": {
+    "i": 6,
+    "substance": true,
+    "facts_touched": [
+     "sst:EMM_EPMR_PTE_NUS_DPG"
+    ],
+    "contradicts": [],
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "patterns": [],
+    "facing": "object",
+    "place": "mid",
+    "why": "Forecasts no near-term relief at the pump, a cost claim about the object built to rally voters against the administration.",
+    "_runs": [
+     50,
+     50,
+     50
+    ]
+   },
+   "derived": {
+    "dia": 50,
+    "band": [
+     34,
+     66
+    ],
+    "stage": null,
+    "tier": "coalition",
+    "flags": []
+   }
+  }
+ ]
+}

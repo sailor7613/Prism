@@ -21,6 +21,15 @@ CLIPS = {
   'gray_01_applepie':     ('trn_2019-09-12_gray_applepie', 'clipsubs_sd6YlIe44o4.en-orig.vtt', 120),
   'msnow_01_morningjoe':  ('msnow_2026-06-29_scarborough_energy', 'clipsubs_rscKKtuWQZk.en.vtt', 92),
 }
+# sp01 — the Megalopolis special (10-31): its own clips and caption folder; ep01 is unchanged
+CLIPS_SP01 = {
+  'trump_01_fortune': ('trump_2026-10-24_perry_fortune', 'clipsubs_YxBhgK7GWrc.en-orig.vtt', 117),
+  'obama_01_iran':    ('obama_2026-10_georgia_no_relief', 'clipsubs_E1Z0Yhec73U.en-orig.vtt', 114),
+  'obama_01_iran_crop': ('obama_2026-10_georgia_no_relief', 'clipsubs_E1Z0Yhec73U.en-orig.vtt', 114),
+  'maine_01_iran':    ('maine_2026-10-13_collins_jackson_iran', 'clipsubs_V2YxIgJkrZY.en-orig.vtt', 96),
+}
+if EP == 'sp01': CLIPS = CLIPS_SP01
+CAP_DIR = 'sp01' if EP == 'sp01' else 'ep01'
 STOP = set('the a an and or but of to in on at for is it its it\'s that this they them their there what which who with as be are was were have has had not no so if then than just like you your i we our he she his her my me do does did very more most really also about from by'.split())
 def ts(s):
     h, m, r = s.split(':'); return int(h) * 3600 + int(m) * 60 + float(r)
@@ -66,7 +75,7 @@ def main():
         if clip not in cin: print('skip (no clip in episode):', clip); continue
         P = json.load(open(os.path.join(ROOT, 'data', 'press', pid + '.json')))
         names = P.get('names', {})
-        if cap not in cache: cache[cap] = vtt_words(os.path.join(WS, 'Transcripts', 'show', 'ep01', cap))
+        if cap not in cache: cache[cap] = vtt_words(os.path.join(WS, 'Transcripts', 'show', CAP_DIR, cap))
         W = [[w, round(a - cin[clip], 2), round(b - cin[clip], 2)] for (w, a, b) in cache[cap] if 0 <= a - cin[clip] <= length]
         lines = []
         for i, l in enumerate(P['lines']):

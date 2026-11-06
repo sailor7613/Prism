@@ -153,7 +153,15 @@ def register_objects(days=14):
         if len(toks) >= 2: out[o['oid']] = toks[:8]
     return out
 
-def pull_transcripts(date):
+def pull_transcripts(date, _fallback=True):
+    # 2026-10-30: the daily slop lands hours after the 06:30 timer, so if today's sweep isn't there yet,
+    # pull yesterday's (its YouTube hits are the ones the 06:55 cut task will actually read).
+    if _fallback:
+        r = pull_transcripts(date, _fallback=False)
+        if r != 1: return r
+        prev = (dt.date.fromisoformat(date) - dt.timedelta(days=1)).isoformat()
+        log(f'falling back to yesterday\'s sweep ({prev})')
+        return pull_transcripts(prev, _fallback=False)
     """The transcript step, run on the Mac itself (YouTube refuses caption pulls from GitHub's runners and the Cowork
     shells can't reach YouTube at all). Reads sweeps/sweep_<date>.json from disk, or from GitHub raw if the Mac
     hasn't pulled yet, fills `transcript` on every YouTube hit that lacks one, and writes the file back locally."""

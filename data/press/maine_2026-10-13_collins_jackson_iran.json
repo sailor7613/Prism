@@ -1,0 +1,504 @@
+{
+ "schema": "press/parallelogram/v0",
+ "kind": "parallelogram",
+ "positions": "seconds",
+ "horizon": null,
+ "arc": null,
+ "transform": "none",
+ "status": "claude-draft",
+ "show": "sp01",
+ "id": "maine_2026-10-13_collins_jackson_iran",
+ "title": "Meaningless Votes",
+ "source": {
+  "program": "Maine U.S. Senate debate #3 (Collins vs Jackson)",
+  "network": "NEWS CENTER Maine / YouTube",
+  "format": "tape",
+  "date": "2026-10-13",
+  "title": "Sen. Susan Collins and Troy Jackson face off one last time | Watch in full",
+  "url": "https://www.youtube.com/watch?v=V2YxIgJkrZY",
+  "length": 3420,
+  "transcript": "Transcripts/show/sp01/clipsubs_V2YxIgJkrZY.en-orig.vtt",
+  "note": "clip = maine_01_iran (source 1588–1684); moderator Steve Mistler's question opens it (not scored)"
+ },
+ "object": {
+  "label": "The Iran war's cost at the pump, the week before the midterm (sp01's object — History restarting — at layer 1)",
+  "layer": 1,
+  "legislative": {
+   "void": false,
+   "note": "no war authorization; Collins's nine votes against (her count) are the Senate's record; gas $2.98 pre-war → $4.29 on 10-26, diesel record over $6 (AP via Fortune)"
+  },
+  "zAxis": {
+   "pos": "the war delivers for the audience — worth what it costs, prices come down",
+   "neg": "it doesn't — prices stay up, the war goes on"
+  }
+ },
+ "transformNote": "one of three same-week voices on the war and the pump, read side by side",
+ "names": {
+  "TJ": "Troy Jackson (D)",
+  "SC": "Susan Collins (R, incumbent)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.45
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.5
+  },
+  "shadowNote": "relief — lower prices and the war over",
+  "predicates": {
+   "operative": [],
+   "stated": [],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "a good plan · energy independent",
+    "denominated": "Biden's leasing",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "incumbent"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "shut off funding · get out soon",
+    "denominated": "meaningless votes",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "challenger"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Medium",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-10-31",
+   "what": "cut for sp01 block 3 ('This week'). Scores are Claude's proposals, unruled; Sailor's election hypothesis is sealed and played no part",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 36,
+  "tier": "oscillation zone",
+  "declaredZ": null,
+  "readZ": -0.45,
+  "readZRange": [
+   -0.2,
+   -0.6
+  ],
+  "stations": {
+   "LI": null,
+   "RI": {
+    "dia": 29,
+    "spread": [
+     20,
+     38
+    ],
+    "readZ": -0.35,
+    "voices": {
+     "SC": {
+      "dia": 29,
+      "readZ": -0.35,
+      "n": 2
+     }
+    }
+   },
+   "LP": {
+    "dia": 40,
+    "spread": [
+     24,
+     56
+    ],
+    "readZ": -0.5,
+    "voices": {
+     "TJ": {
+      "dia": 40,
+      "readZ": -0.5,
+      "n": 4
+     }
+    }
+   },
+   "RP": null
+  },
+  "split": {
+   "topology": "2-corner (LP challenger, RI incumbent)",
+   "station": null,
+   "strength": 0.2,
+   "note": "they agree on the war; the split is over whose votes count"
+  },
+  "lumens": 46,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 1613,
+   "who": "TJ",
+   "station": "LP",
+   "quote": "I don't agree that we both feel the same about this",
+   "touch": "X",
+   "z": -0.5,
+   "dia": 48,
+   "mode": "open",
+   "note": "refuses the agreement the moderator saw",
+   "chapter": "The war",
+   "normX": 0.3217,
+   "normY": 0.6568,
+   "normZ": -0.375,
+   "quadrant": "C"
+  },
+  {
+   "t": 1620,
+   "who": "TJ",
+   "station": "LP",
+   "quote": "I know she's going to say she voted against it nine times, but those are meaningless",
+   "touch": "F",
+   "z": -0.4,
+   "dia": 56,
+   "mode": "open",
+   "note": "about her standing, not the war",
+   "chapter": "Her votes",
+   "normX": 0.3341,
+   "normY": 0.7102,
+   "normZ": -0.3,
+   "quadrant": "C"
+  },
+  {
+   "t": 1629,
+   "who": "TJ",
+   "station": "LP",
+   "quote": "the way to block it now would be to shut off funding",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 30,
+   "mode": "open",
+   "note": "names the instrument",
+   "chapter": "The war",
+   "normX": 0.3603,
+   "normY": 0.5951,
+   "normZ": -0.375,
+   "quadrant": "C"
+  },
+  {
+   "t": 1642,
+   "who": "TJ",
+   "station": "LP",
+   "quote": "something we never should have gotten into… we got to get out soon",
+   "touch": "O",
+   "z": -0.6,
+   "dia": 24,
+   "mode": "open",
+   "note": "the position, plainly",
+   "chapter": "The war",
+   "normX": 0.4203,
+   "normY": 0.6225,
+   "normZ": -0.45,
+   "quadrant": "C"
+  },
+  {
+   "t": 1653,
+   "who": "SC",
+   "station": "RI",
+   "quote": "the president should have had a good plan in advance for dealing with the Strait of Hormuz — 20% of the world's oil goes through that",
+   "touch": "O",
+   "z": -0.5,
+   "dia": 20,
+   "mode": "open",
+   "note": "the Republican incumbent faults her own party's president",
+   "chapter": "The pump",
+   "normX": 0.6066,
+   "normY": 0.4238,
+   "normZ": -0.375,
+   "quadrant": "B"
+  },
+  {
+   "t": 1666,
+   "who": "SC",
+   "station": "RI",
+   "quote": "we should be energy independent… I disagreed with the Biden administration… Keystone",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 38,
+   "mode": "open",
+   "note": "turns to the other party",
+   "chapter": "The pump",
+   "normX": 0.6647,
+   "normY": 0.3876,
+   "normZ": -0.15,
+   "quadrant": "B"
+  }
+ ],
+ "closedform": [
+  {
+   "at": "2026-11-05T10:49:40",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 45,
+    "lumens": 36
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 48,
+     "tier": "coalition",
+     "runs": [
+      48,
+      48,
+      48
+     ],
+     "object": "signal",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "argument",
+     "why": "It disputes Collins's claim of shared feeling about the war without engaging its costs, flows, or votes.",
+     "flags": []
+    },
+    {
+     "i": 1,
+     "dia": 92,
+     "tier": "denominated",
+     "runs": [
+      84,
+      92,
+      92
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      1
+     ],
+     "facing": "argument",
+     "why": "He pre-empts Collins's nine-vote record by declaring it meaningless before any evaluation, so the votes never get weighed as substance.",
+     "flags": [
+      "patterns #1 say 40–65, the band says denominated 67–100"
+     ]
+    },
+    {
+     "i": 2,
+     "dia": 7,
+     "tier": "fluid",
+     "runs": [
+      7,
+      7,
+      16
+     ],
+     "object": "substance",
+     "others": "open",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It names a concrete mechanism, cutting war funding, as the way to stop the war.",
+     "flags": []
+    },
+    {
+     "i": 3,
+     "dia": 16,
+     "tier": "fluid",
+     "runs": [
+      16,
+      16,
+      16
+     ],
+     "object": "substance",
+     "others": "open",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "It states a belief that the war should not have been entered and should end soon, without persuasion aimed at an opponent.",
+     "flags": []
+    },
+    {
+     "i": 4,
+     "dia": 58,
+     "tier": "coalition",
+     "runs": [
+      16,
+      58,
+      58
+     ],
+     "object": "substance",
+     "others": "open",
+     "capital": true,
+     "patterns": [],
+     "facing": "object",
+     "why": "She names the Strait of Hormuz flow (20 percent of world oil) and faults the president's planning, which is a critique of her own party's president.",
+     "flags": [
+      "runs disagree (16–58)"
+     ]
+    },
+    {
+     "i": 5,
+     "dia": 48,
+     "tier": "coalition",
+     "runs": [
+      15,
+      48,
+      48
+     ],
+     "object": "signal",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "argument",
+     "why": "It pivots from the war's pump costs to energy independence and Biden's Keystone decision, avoiding the war's record.",
+     "flags": [
+      "runs disagree (15–48)"
+     ]
+    }
+   ]
+  },
+  {
+   "at": "2026-11-05T12:28:21",
+   "model": "claude-haiku-5-5",
+   "protocol": "relational test, ruled 2026-11-05",
+   "status": "derived draft — beside the hand scores, never over them",
+   "scoreboard": {
+    "dia": 48,
+    "lumens": 31
+   },
+   "lines": [
+    {
+     "i": 0,
+     "dia": 48,
+     "tier": "coalition",
+     "runs": [
+      15,
+      48,
+      58
+     ],
+     "object": "signal",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "argument",
+     "why": "He disputes whether the two candidates share a feeling about the war, which is a claim about positions rather than the war's costs or flows.",
+     "flags": [
+      "runs disagree (15–58)"
+     ]
+    },
+    {
+     "i": 1,
+     "dia": 80,
+     "tier": "denominated",
+     "runs": [
+      80,
+      80,
+      83
+     ],
+     "object": "signal",
+     "others": "closed",
+     "capital": false,
+     "patterns": [
+      28
+     ],
+     "facing": "argument",
+     "why": "He classifies her vote record as meaningless before she replies and answers the anticipated reply instead of the vote record itself.",
+     "flags": []
+    },
+    {
+     "i": 2,
+     "dia": 50,
+     "tier": "coalition",
+     "runs": [
+      50,
+      50,
+      50
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "He takes up the war's funding mechanism as the way to stop it, engaging its operational substance without addressing costs or prices.",
+     "flags": []
+    },
+    {
+     "i": 3,
+     "dia": 7,
+     "tier": "fluid",
+     "runs": [
+      7,
+      7,
+      16
+     ],
+     "object": "substance",
+     "others": "open",
+     "capital": false,
+     "patterns": [],
+     "facing": "object",
+     "why": "He states a stance on the war itself, a should-not-have and get-out-soon judgment, without engaging costs, flows, votes, or deaths.",
+     "flags": []
+    },
+    {
+     "i": 4,
+     "dia": 58,
+     "tier": "coalition",
+     "runs": [
+      16,
+      58,
+      58
+     ],
+     "object": "substance",
+     "others": "working",
+     "capital": true,
+     "patterns": [],
+     "facing": "object",
+     "why": "She engages the object's flow substance (Hormuz oil transit) and criticizes the president's planning, a stance that costs her with the president.",
+     "flags": [
+      "runs disagree (16–58)"
+     ]
+    },
+    {
+     "i": 5,
+     "dia": 48,
+     "tier": "coalition",
+     "runs": [
+      15,
+      48,
+      58
+     ],
+     "object": "signal",
+     "others": "working",
+     "capital": false,
+     "patterns": [],
+     "facing": "argument",
+     "why": "Pivots from the war's pump costs to general energy independence and Biden-era Keystone, changing the object rather than answering it.",
+     "flags": [
+      "runs disagree (15–58)"
+     ]
+    }
+   ]
+  }
+ ]
+}

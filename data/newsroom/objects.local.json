@@ -1,6 +1,6 @@
 {
  "schema": "prism_object_overlay_v1",
- "updatedAt": "2026-10-26T14:12:42.605Z",
+ "updatedAt": "2026-11-03T21:57:27.920Z",
  "note": "Written ONLY by the drafting task (Sailor commits it). The scan owns objects.json and only reads this file. See scripts/newsroom/overlay.js.",
  "objects": {
   "obj_astate_bills-changes-elections-gavin": {
@@ -1324,6 +1324,81 @@
     "obj_thesupre_alaska-department-justice-lawsuit"
    ],
    "permanenceNote": "Third Alaska-suit follow-on queued as its own object in four days (10-23 \"Trump says he ordered it\" -> drafted; 10-25 Senate Dems' motion to dismiss -> dismissed; 10-26 Blanche defends -> dismissed). All trace to the 10-22 complaint. Reported, not ruled. Claude 2026-10-26"
+  },
+  "obj_afederal_ballots-california-court-doj": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_al8uju97ware"
+   },
+   "draftedOn": "2026-11-03",
+   "inversions": [
+    {
+     "station": "A",
+     "lean": "left-institutional trusts the Supreme Court as holder; dated prior 2026-08-24 (Weber: \"a green light to President Trump's attempts to take over our election system\")",
+     "ruled": false
+    },
+    {
+     "station": "B",
+     "lean": "right-institutional reads the denial of the suit as delivering after reading the suit as delivering; prior is a draft (rdg_9wjfhhpxcp0d B-fluid), may be fidelity to process",
+     "ruled": false
+    }
+   ],
+   "corrections": [
+    {
+     "field": "holder",
+     "from": "a federal court",
+     "to": "the Supreme Court",
+     "why": "the instrument is the Supreme Court's order; the district and circuit rulings are what it left standing",
+     "by": "Claude",
+     "on": "2026-11-03"
+    },
+    {
+     "field": "kind",
+     "from": "vote",
+     "to": "ruling (order denying an emergency application)",
+     "why": "no vote; an unsigned order with no noted dissents",
+     "by": "Claude",
+     "on": "2026-11-03"
+    },
+    {
+     "field": "formedOn",
+     "from": "2026-11-03",
+     "to": "2026-11-02",
+     "why": "order issued Monday evening 11-02 Pacific; 11-03 is the UTC scan time",
+     "by": "Claude",
+     "on": "2026-11-03"
+    }
+   ],
+   "permanenceNote": "continuation of obj_thejusti_alleged-california-doj-kills (the 10-15 suit, rdg_9wjfhhpxcp0d); eligibility deferred, not resolved — watch for a post-election return (challenge, certification, § 611 prosecutions) — Claude 2026-11-03",
+   "aliasCandidates": [
+    "obj_thejusti_alleged-california-doj-kills"
+   ]
+  },
+  "obj_afederal_admissions-dismisses-harvard-judge": {
+   "status": "drafted",
+   "drafts": {
+    "claude": "rdg_4qvf330n6mxw"
+   },
+   "draftedOn": "2026-11-03",
+   "inversions": [],
+   "corrections": [
+    {
+     "field": "formedOn",
+     "was": "2026-11-03",
+     "now": "2026-11-02",
+     "why": "Joun granted the motion to dismiss on Monday 11-02 (docket entries 44 and 45; UPI, Inquirer). 11-03 is the scan time of the coverage.",
+     "by": "Claude 2026-11-03"
+    },
+    {
+     "field": "holder",
+     "was": "a federal court",
+     "now": "a federal court: U.S. District Judge Myong J. Joun, D. Mass. (No. 1:26-cv-10844)",
+     "why": "Narrowed, not changed.",
+     "by": "Claude 2026-11-03"
+    }
+   ],
+   "permanenceNote": "First appearance. Dismissed without prejudice and DOJ says it will refile, so watch for a return under a new name (refiled complaint, new demand, appeal). Claude 2026-11-03. Publish attempt exit 5 (no token).",
+   "aliasCandidates": []
   }
  }
 }

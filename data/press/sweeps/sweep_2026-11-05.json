@@ -1,0 +1,2711 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-05",
+ "index": "roster",
+ "objects": [
+  "chips",
+  "diesel",
+  "dollar",
+  "housing",
+  "iran",
+  "me-sen",
+  "midterms",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela"
+ ],
+ "registerObjects": 22,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 8,
+   "hits": 3,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 7,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 11,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 34,
+   "hits": 17,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 25,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 11,
+   "hits": 7,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 7,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 6,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 9,
+   "hits": 6,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 88,
+   "hits": 31,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 63,
+   "hits": 44,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 5,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 6,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Israel’s Election Ended With No Clear Winner. These Parties Are Trying to Form a Coalition.",
+   "dek": "Israeli party leaders held discussions with President Isaac Herzog on Thursday about who should get the first chance to form a governing coalition.",
+   "opening": "",
+   "published": "2026-11-05T20:16:52+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/world/middleeast/israel-election-herzog-prime-minister-meetings.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "winner",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The blame game: How the US midterm shock is shaping Israel’s race for PM",
+   "dek": "The Republican midterm rout is helping shape who leads Israel next, as Netanyahu’s US ties turn toxic.",
+   "opening": "",
+   "published": "2026-11-05T20:07:04+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/5/the-blame-game-how-the-us-midterm-shock-is-shaping-israels-race-for-pm?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Did Flávio Bolsonaro Flee Brazil? ‘I’ll Take That to the Grave,’ He Says",
+   "dek": "From Miami, Flávio Bolsonaro is making unfounded claims of a stolen election and plotting to sway his nation’s politics from afar, even though his party is not challenging the results.",
+   "opening": "",
+   "published": "2026-11-05T19:56:52+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/world/americas/flavio-bolsonaro-florida-brazil.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "brazil",
+     "election",
+     "bolsonaro",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Top US civil rights official resigns",
+   "dek": "New Democratic Congress expected to probe Trump Justice Department office&#039;s handling of Epstein files and ICE killings.",
+   "opening": "",
+   "published": "2026-11-05T19:48:00+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/5/top-us-civil-rights-official-resigns?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Harmeet Dhillon, Leader of Justice Department’s Civil Rights Unit, Resigns",
+   "dek": "The move came after conflicts with Justice Department leaders, including disagreements over legal strategy in the midterm elections, people familiar with the matter said.",
+   "opening": "",
+   "published": "2026-11-05T19:38:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/us/politics/harmeet-dhillon-resigns-doj-civil-rights-unit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bolsonaro’s Escape From Brazil Was Aided by Milei Adviser at Argentine Airport",
+   "dek": "A top adviser to President Javier Milei of Argentina met Flávio Bolsonaro, the defeated Brazilian presidential candidate, at an Argentine airport, three people involved in the operation said.",
+   "opening": "",
+   "published": "2026-11-05T19:32:35+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/world/americas/bolsonaro-escape-brazil-milei-adviser-argentina.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "brazil",
+     "bolsonaro"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "LIVE: TX Gov.-elect Gina Hinojosa holds a press conference after victory in midterms",
+   "dek": "Watch as Texas Governor-Elect Gina Hinojosa holds a press conference after her victory in the midterm elections on Tuesday. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #GinaHinojosa #Texas #midterms",
+   "opening": "",
+   "published": "2026-11-05T19:23:40+00:00",
+   "link": "https://www.youtube.com/watch?v=vj-asDC9XoQ",
+   "videoId": "vj-asDC9XoQ",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "hinojosa"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:30:07.340559+00:00"
+  },
+  {
+   "title": "Elon Musk spent MILLIONS on the midterms. What did he get? ZERO.",
+   "dek": "Stephanie Ruhle looks at how Elon Musk's record-setting campaign spending fared against the power of the people in these midterm elections. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/",
+   "opening": "",
+   "published": "2026-11-05T19:05:52+00:00",
+   "link": "https://www.youtube.com/shorts/5Umixl6v_ks",
+   "videoId": "5Umixl6v_ks",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:30:14.822934+00:00"
+  },
+  {
+   "title": "'Make Musk's money toxic': Rep. Casar on message that helped win TX for Dems",
+   "dek": "Texas went blue in the midterm elections despite millions of dollars spent by Elon Musk to support republicans in the state. Rep. Greg Casar (D-TX) join Alicia Menendez to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Trump #Texas #ElonMusk",
+   "opening": "",
+   "published": "2026-11-05T19:04:12+00:00",
+   "link": "https://www.youtube.com/watch?v=HXqPxvNfGPM",
+   "videoId": "HXqPxvNfGPM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/ms-now_HXqPxvNfGPM.md"
+  },
+  {
+   "title": "'They FA’d and FO’d’: Capehart on Black voters pushing back on Trump admin.",
+   "dek": "Mississippi's Senate race remains too close to call in a state that doesn't have a recount law. MS NOW “The Weekend” Co-Host Jonathan Capehart, Co-Chair of the Black Voters Matter Fund Latosha Brown, and Democratic Strategist Dan Kanninen join Alicia Menendez to weigh in. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the ",
+   "opening": "",
+   "published": "2026-11-05T19:03:22+00:00",
+   "link": "https://www.youtube.com/watch?v=NhP4wUvrk8A",
+   "videoId": "NhP4wUvrk8A",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/ms-now_NhP4wUvrk8A.md"
+  },
+  {
+   "title": "BREAKING: DOJ Civil Rights Division Head resigns in first post-election shake-up",
+   "dek": "Attorney General Todd Blanche says he’s accepting the resignation of Harmeet Dhillon, the head of the Justice Department’s Civil Rights Division. Dhillon conveyed her frustrations and desire to leave her post before the election and didn’t tie her decision to the poor results of Republicans in the midterms. MS NOW Chief White House Reporter Paula Reid has the latest from Washington. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domesti",
+   "opening": "",
+   "published": "2026-11-05T19:02:01+00:00",
+   "link": "https://www.youtube.com/shorts/aAruTYbEg8E",
+   "videoId": "aAruTYbEg8E",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "blanche",
+     "results"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:30:37.608146+00:00"
+  },
+  {
+   "title": "IS GOD DEAD: Laura Loomer WEEPS After Midterms",
+   "dek": "Krystal and Saagar discuss Laura Loomer questioning god after the midterm results. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebook: h",
+   "opening": "",
+   "published": "2026-11-05T19:00:28+00:00",
+   "link": "https://www.youtube.com/watch?v=DBhv0fReVgM",
+   "videoId": "DBhv0fReVgM",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:30:46.087669+00:00"
+  },
+  {
+   "title": "Stocks Erase Post-Midterm Elections Rally, Dragged Down by Tech",
+   "dek": "The S&P 500 slumped to its worst daily decline in more than a year, dragged down by the technology sector as investors fretted about the durability of the A.I. build-out.",
+   "opening": "",
+   "published": "2026-11-05T18:57:11+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/business/stocks-midterms-artificial-intelligence.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran says tankers struck in Hormuz amid fears of new US attack",
+   "dek": "Iranian forces say five oil tankers and a tugboat have caught fire in several incidents in the Strait of Hormuz.",
+   "opening": "",
+   "published": "2026-11-05T18:47:10+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/5/iran-says-tankers-struck-in-hormuz-amid-fears-of-new-us-attack?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of",
+     "tanker"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "cut": "aj_2026-11-05_tankers_struck"
+  },
+  {
+   "title": "U.S. Finds Subdued Foreign Meddling Operations in Midterm Elections",
+   "dek": "Russia was linked to influence campaigns targeting Democrats that gained little traction, but the Kremlin may be more focused on France’s elections in the spring.",
+   "opening": "",
+   "published": "2026-11-05T18:43:01+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/us/politics/midterm-elections-foreign-meddling.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'LAWYER UP': DEMS Plan Historic Corruption Investigation",
+   "dek": "Krystal and Saagar discuss Dems planning a historic series of corruption investigations after winning the midterms. Isaac Saul: https://www.readtangle.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxN",
+   "opening": "",
+   "published": "2026-11-05T18:30:34+00:00",
+   "link": "https://www.youtube.com/watch?v=Oa8KSOpDLRQ",
+   "videoId": "Oa8KSOpDLRQ",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:31:34.725793+00:00"
+  },
+  {
+   "title": "Iran is Reviewing ‘Concrete Proposals’ on Nuclear Program, Officials Say",
+   "dek": "Iran’s willingness to re-engage on the issue suggests that Qatar-led diplomatic efforts to avert full-blown war between the U.S. and Iran have had some success.",
+   "opening": "",
+   "published": "2026-11-05T18:27:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/world/middleeast/peace-talks-iran-united-states-qatar-nuclear-program.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Democrats Won Across the South",
+   "dek": "They won Senate races in North Carolina, South Carolina and Georgia, with a Mississippi race still too close to call. Their wins lifted down-ballot candidates too.",
+   "opening": "",
+   "published": "2026-11-05T18:18:12+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/us/politics/midterms-southern-democrats.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "BREAKING: Democrats flip more House seats in North Carolina, Montana, Virginia, & Arizona",
+   "dek": "The Associated Press projects Democrats will flip more House seats in North Carolina, Montana, Virginia and Arizona. MS NOW estimates Democrats will win a minimum of 254 House seats. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Democrats #Midterms #El",
+   "opening": "",
+   "published": "2026-11-05T18:16:35+00:00",
+   "link": "https://www.youtube.com/watch?v=FtDBLhwogTM",
+   "videoId": "FtDBLhwogTM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/ms-now_FtDBLhwogTM.md"
+  },
+  {
+   "title": "BREAKING: DOJ Civil Rights Division Head resigns in first post-election shake-up",
+   "dek": "Attorney General Todd Blanche says he’s accepting the resignation of Harmeet Dhillon, the head of the Justice Department’s Civil Rights Division. Dhillon conveyed her frustrations and desire to leave her post before the election and didn’t tie her decision to the poor results of Republicans in the midterms. MS NOW Chief White House Reporter Paula Reid has the latest from Washington. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic ",
+   "opening": "",
+   "published": "2026-11-05T18:14:04+00:00",
+   "link": "https://www.youtube.com/watch?v=0PlIgRgEBwM",
+   "videoId": "0PlIgRgEBwM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "blanche",
+     "results"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/ms-now_0PlIgRgEBwM.md"
+  },
+  {
+   "title": "'The future is NOT Donald Trump': Mark McKinnon on the next chapter for Republicans",
+   "dek": "MS NOW’s Lawrence O’Donnell, chief political columnist at PUCK John Heilemann, POLITICO’s Jonathan Martin and political strategist Mark McKinnon discuss what the midterm results could mean for both parties going forward –and looking ahead to 2028. The Morning Joe panel weighs big-money spending, shifting Sun Belt states, and the prospect of bipartisan work in the Senate. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international b",
+   "opening": "",
+   "published": "2026-11-05T18:12:46+00:00",
+   "link": "https://www.youtube.com/watch?v=yFOWMDEMYuM",
+   "videoId": "yFOWMDEMYuM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/ms-now_yFOWMDEMYuM.md"
+  },
+  {
+   "title": "JD ABANDONS SHIP: IRAN WAR Was Political Disaster",
+   "dek": "Krystal and Saagar discuss JD abandoning ship after the midterms wipeout criticizing the Iran war. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoi",
+   "opening": "",
+   "published": "2026-11-05T18:00:24+00:00",
+   "link": "https://www.youtube.com/watch?v=w8961hwE3-4",
+   "videoId": "w8961hwE3-4",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:33:06.477977+00:00"
+  },
+  {
+   "title": "AI stocks plunge after US election, driving down markets",
+   "dek": "Tech stocks lead US market slide as investors weigh impact of midterm election results on AI industry.",
+   "opening": "",
+   "published": "2026-11-05T17:56:17+00:00",
+   "link": "https://www.aljazeera.com/economy/2026/11/5/ai-stocks-plunge-after-election-driving-down-us-markets?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Maddow: Yes, Counting Alaska is supposed to take this long",
+   "dek": "Rachel Maddow explains the vote counting process and deadlines in Alaska to understand why it can take a long time before the outcome of their elections is known, and to head off any suggestion by MAGA election deniers that the time it takes is somehow indicative of nefarious activities. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and new",
+   "opening": "",
+   "published": "2026-11-05T17:51:09+00:00",
+   "link": "https://www.youtube.com/shorts/6y7sGWhRKTM",
+   "videoId": "6y7sGWhRKTM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "alaska",
+     "election"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:33:33.755734+00:00"
+  },
+  {
+   "title": "Were the midterms an 'extinction-level event' for Republicans?",
+   "dek": "Florida Republican Governor Ron DeSantis says that midterm results were a rebuke of President Trump and could be an \"extinction-level event\" for the GOP. Former Romney Presidential Campaign Adviser Kevin Madden and MS NOW Political Analyst Juanita Tolliver join Peter Alexander with their analysis. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context",
+   "opening": "",
+   "published": "2026-11-05T17:08:58+00:00",
+   "link": "https://www.youtube.com/watch?v=NiiEnWRzrVo",
+   "videoId": "NiiEnWRzrVo",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/ms-now_NiiEnWRzrVo.md"
+  },
+  {
+   "title": "'We stayed laser-focused on our messaging': Indiana Dem shares how he defeated 3-term Republican",
+   "dek": "Democrats flipped many Republican seats in the midterm elections, resulting in the party having a strong majority in the next Congress. Rep.-elect J.D. Ford (D-IN) joins Peter Alexander to share more on his victory over three-term incumbent Republican Rep. Victoria Spartz. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the",
+   "opening": "",
+   "published": "2026-11-05T17:06:51+00:00",
+   "link": "https://www.youtube.com/watch?v=qhY0MWWruMc",
+   "videoId": "qhY0MWWruMc",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/ms-now_qhY0MWWruMc.md"
+  },
+  {
+   "title": "Tech Billionaires Face Tricky Political Waters After Democratic Midterm Sweep",
+   "dek": "Many donated money to President Trump’s favored causes and became his allies. Now that political alignment may be a liability.",
+   "opening": "",
+   "published": "2026-11-05T17:02:32+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/technology/tech-billionaires-democrats-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TRUMP BENDS KNEE TO DEMS AFTER HISTORIC DEFEAT",
+   "dek": "Krystal and Saagar discuss Trump obsessing over his ballroom after losing the midterms. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebo",
+   "opening": "",
+   "published": "2026-11-05T17:00:30+00:00",
+   "link": "https://www.youtube.com/watch?v=v5IL4ZxEqbw",
+   "videoId": "v5IL4ZxEqbw",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:34:37.814311+00:00"
+  },
+  {
+   "title": "What Shaped Anthropic CEO Dario Amodei’s Thinking on A.I.",
+   "dek": "Some call him a doomer. Others see him as a responsible technologist. Here’s how the Anthropic chief executive’s thinking on artificial intelligence was shaped.",
+   "opening": "",
+   "published": "2026-11-05T16:51:48+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/technology/dario-amodei-anthropic-ai.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "others"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "American Is Convicted of Murder in Case That Gripped Italy",
+   "dek": "A TV program helped to identify the victims, a Russian woman and her young daughter, who were found dead in a Rome park.",
+   "opening": "",
+   "published": "2026-11-05T16:33:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/world/europe/italy-american-murder-case.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_california-case-convicted-cosmetic": [
+     "convicted",
+     "case"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Machine, and the Messaging, That Won Texas for Democrats",
+   "dek": "Years of organizing met a moment of voter discontent, as James Talarico and Gina Hinojosa offered Texans a vision of economic relief and political change.",
+   "opening": "",
+   "published": "2026-11-05T16:18:16+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/us/texas-democrats-statewide-sweep.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "hinojosa"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Vance eyes 2028 reset, as Republicans mull pivot after US midterms drubbing",
+   "dek": "A Democratic &#039;blue tsunami&#039; in the US midterms shines a light on emerging distaste for Trump&#039;s brand among Republicans.",
+   "opening": "",
+   "published": "2026-11-05T16:12:35+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/5/vance-eyes-2028-reset-as-republicans-mull-pivot-after-us-midterms-drubbing?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "\"Democrats didn't just win the midterms yesterday; they made the midterms their bitch\" #dailyshow",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-05T16:03:35+00:00",
+   "link": "https://www.youtube.com/shorts/y2y9RPGXFkU",
+   "videoId": "y2y9RPGXFkU",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcript": "Transcripts/press/2026-11-05/daily-show_y2y9RPGXFkU.md"
+  },
+  {
+   "title": "They Made History as ‘Firsts.’ That’s Not What They Ran On.",
+   "dek": "Several midterm winners broke barriers, but with campaigns that focused on delivering material change to the lives of Americans.",
+   "opening": "",
+   "published": "2026-11-05T15:57:45+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/us/politics/midterms-identity-politics.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside Team Trump’s Historic Collapse in the 2026 Midterm Elections",
+   "dek": "How an unpopular president and an unpopular war provided an opening for Democrats to make sweeping gains in the midterms.",
+   "opening": "",
+   "published": "2026-11-05T15:20:18+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/us/politics/trump-midterms-losses-republicans.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tim Brando joins Dan Dakich on 'Don't @ Me' to discuss Indiana coach Curt Cignetti's CFP 'bias' comments",
+   "dek": "Tim Brando says ESPN broadcasters aren&apos;t consciously biased toward the SEC but admits living in a &quot;bubble&quot; can color how they view their league.",
+   "opening": "Tuesday night was a pretty important night in our country, and I'm not talking about the midterm elections. The first edition of the 2026 College Football Playoff rankings were released to the public, and, as usual, the placement of certain teams caused an absolute uproar throughout the college football community. Notre Dame took a tumble , head-to-head results seemingly got thrown in the trash, and, of course, the cries of \"SEC bias\" were loud and clear. Not one to miss out on the popular activity of bashing the SEC, Indiana coach Curt Cignetti took aim at the Playoff committee for their seeming favoritism toward teams from the southeast, saying they \"get a lot of love from ESPN.\" Longtime college football commentator Tim Brando wasn't buying it — at least not all of it — from Cignetti, though, and joined Dan Dakich on \"Don't @ Me\" to discuss. ESPN PERSONALITY BUSTED ON SOCIAL MEDIA FOR INACCURATELY TRYING TO PROMOTE THE SEC'S STRENGTH OF SCHEDULE The Shreveport, Louisiana, native knows a thing or two about the Southeastern Conference, as well as what it's like to work for a bevy of different networks, and he claims it's not a conscious bias from the broadcasters. \"In general terms, the broadcasters are not consciously doing something that's not right,\" Brando explains. SEC WANTS MORE PLAYOFF FAVORITISM AS GREG SANKEY COMPLAINS ABOUT 'UNSATISFACTORY' TALKS WITH CFB PLAYOFF As Brando puts it, the broadcasters are living in a vacuum, and sometimes that can color how they see t",
+   "published": "2026-11-05T15:10:45-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/tim-brando-joins-dan-dakich-dont-me-discuss-indiana-coach-curt-cignetti-cfp-bias-comments",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MATT CALKINS: Sophie Cunningham urges unity as Natasha Cloud taunts GOP after midterm losses",
+   "dek": "Two WNBA players sent opposite midterm messages as Sophie Cunningham urged personal growth while Natasha Cloud taunted Republicans on social media.",
+   "opening": "Two WNBA players. Two midterm messages. One attempted to unify an increasingly divided country. Another seemed to give her opponents a firm slap in the face. Or, more specifically — a swat on the rear end. The first statement came from impending Fever free agent Sophie Cunningham. We know that the shooting guard isn't afraid to take a stance on a political issue, as she became a lightning rod over comments supporting the separation of biological males and females in sports and locker rooms last summer. But she isn't a formulaic partisan. SOPHIE CUNNINGHAM SPARKS SOCIAL MEDIA MELTDOWN BY SPEAKING OUT TO PROTECT WOMEN'S SPORTS Sophie has been adamant about being in the political \"middle,\" saying she agrees with arguments from both sides of the aisle. And on Wednesday, one day after the Democratic-dominated midterm elections , she shared a post from entrepreneur Andy Frisella on her Instagram emphasizing personal growth over political identity. \"One of the strangest things about our culture is how much faith we’ve placed in elections to change our lives and how little faith we’ve placed in our own ability to do the same. People will spend months arguing about who should lead the country while spending zero time considering how they could better lead themselves … and THAT is a much bigger problem than most people realize,\" Frisella’s post read. \"Because the strength of a country is ultimately a reflection of the character, discipline and standards of the people who make it up. Th",
+   "published": "2026-11-05T15:05:06-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/sophie-cunningham-calls-unity-midterms-natasha-cloud-taunts-republicans-losses",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ launches criminal probe into Supreme Court leak that exposed ruling overturning Roe v Wade",
+   "dek": "Federal prosecutors are probing the Supreme Court leak after Chief Justice John Roberts&apos; internal investigation failed to identify the leaker.",
+   "opening": "The leak that exposed the Supreme Court’s draft opinion overturning Roe v. Wade is under criminal investigation by the Department of Justice, years after the court’s own hunt for the culprit came up empty. U.S. Attorney Jeanine Pirro’s Washington office is leading the probe, multiple sources briefed on the matter told Fox News. Politico published the draft before the 2022 ruling, prompting Chief Justice John Roberts to order an internal investigation that failed to identify the leaker. The Justice Department declined to comment on the investigation. This is a developing story, please check back for updates.",
+   "published": "2026-11-05T14:50:24-04:00",
+   "link": "https://www.foxnews.com/politics/doj-launches-criminal-probe-supreme-court-leak-exposed-ruling-overturning-roe-v-wade",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_attorney-before-execution-failed": [
+     "attorney",
+     "failed"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Travelers busted at airport with over 3,000 tarantulas hidden away in their socks",
+   "dek": "Over 3,000 tarantulas were found hidden inside pairs of socks in three suitcases at a Peru airport, leading to the detention of two Germans and one Polish citizen.",
+   "opening": "More than 3,000 tarantulas were discovered stuffed inside socks that were packed in the luggage of three different travelers as they prepared to board a flight. The spiders were found Nov. 3 in three suitcases at an airport in Callao, Peru, according to Reuters. The luggage belonged to two German citizens and one Polish citizen who were preparing to fly to Germany, according to SERFOR, Peru's National Forestry and Wildlife Service. MAN BUSTED AFTER CUSTOMS UNCOVERS BIZARRE CARGO HIDDEN INSIDE 22 PAIRS OF SOCKS Authorities launched an investigation after receiving an anonymous tip. When officials searched the suitcases , they found between 15 and 22 socks packed inside each one, concealing spiders of different species and in varying numbers, Reuters reported. The seizure included tarantulas at different stages of development, from eggs and young spiders to adults. Cora Suarez, a wildlife forestry control technician with SERFOR, said the creatures can be valuable to collectors. \"These species are attractive because of the colors, because of the size and, more than anything, because they can be intended for collectors,\" Suarez said in Spanish. CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER The three travelers were stopped while checking in for their flight. They were detained by Peru's environmental crimes police, according to Reuters. Authorities said the travelers now face criminal proceedings led by a specialized environmental prosecutor's office. Keith Jeffries, an Orlan",
+   "published": "2026-11-05T14:48:05-04:00",
+   "link": "https://www.foxnews.com/travel/travelers-busted-airport-over-3000-tarantulas-hidden-away-socks",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dez Bryant's attorney alleges the ex-NFL star targeted in wild parking altercation: 'It was set up'",
+   "dek": "Dez Bryant&apos;s attorney alleged the former Dallas Cowboys star was targeted and set up to create a viral moment during the parking lot altercation.",
+   "opening": "Former NFL star Dez Bryant’s attorney alleges that the three-time Pro Bowl player was targeted and set up to create a viral moment after his altercation with 19-year-old Noah Reyes in a parking lot last month. Bryant hired high-powered attorney Levi McCathern to represent him following his altercation with Reyes. The former Dallas Cowboys star was cited for assault by contact, a Class C misdemeanor in Texas. McCathern alleged that Bryant was targeted and that Reyes drove recklessly to provoke a reaction. \"Dez didn’t start this. He was targeted by someone who wanted a reaction, and they got one,\" McCathern told OutKick in a statement. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE \"Here’s what actually happened. Dez was driving to dinner when Mr. Reyes and his crew started driving recklessly around him. They cut Dez off. They slammed on their brakes in front of him. That isn’t just Dez’s account. Multiple people have come forward to say they saw Mr. Reyes and his crew driving recklessly and putting lives at risk on a public road.\" McCathern alleged that when Reyes failed to provoke a reaction from Bryant, he threatened to shoot him. \"What is a person supposed to do with that? Between what Mr. Reyes was saying and what Dez saw him doing, Dez believed he was in real danger. He had no way of knowing whether there was a gun. No one in that moment would,\" McCathern said. THE CRAIG CARTON SHOW–UNFILTERED, UNAPOLOGETIC AND UNMISSABLE. DOWNLOAD HIS DAILY PODCAST NOW! \"Dez has been consis",
+   "published": "2026-11-05T14:45:52-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/dez-bryant-attorney-alleges-ex-nfl-star-targeted-wild-parking-altercation-set-up",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_attorney-before-execution-failed": [
+     "attorney",
+     "failed"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Can Iran’s new supreme leader make peace from behind the scenes?",
+   "dek": "Mojtaba Khamenei’s consultations suggest a new system of decision-making is taking shape.",
+   "opening": "",
+   "published": "2026-11-05T14:45:46+00:00",
+   "link": "https://www.aljazeera.com/opinions/2026/11/5/can-irans-new-supreme-leader-make-peace-from-behind-the-scenes?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Crenshaw, Raskin shout each other down in heated post-midterm debate",
+   "dek": "Texas Republican Rep. Dan Crenshaw and Democratic Maryland Rep. Jamie Raskin clashed in a fiery CNN exchange on Wednesday after the midterm elections.",
+   "opening": "Rep. Dan Crenshaw, R-Texas, and Rep. Jamie Raskin, D-Md., engaged in a heated exchange on CNN Wednesday over the results of the midterm elections . The midterm elections dealt a major setback to President Donald Trump and the Republican Party as Democrats retook control of both the House of Representatives and the Senate, while also winning several key gubernatorial races, including Texas, where Democrat Gina Hinojosa defeated Republican Gov. Greg Abbott. Though Raskin celebrated the Democrats' victories as a way to help the American people, Crenshaw argued that Senate Democrats had refused to pass widely supported legislation ahead of the elections. He pointed to the Stop Insider Trading Act as an example and said Trump would likely sign it if the bill reached his desk, prompting Raskin to criticize the administration. NEW YORK TIMES GLEEFUL OVER DEMOCRATS' HUGE MIDTERM VICTORIES, SAYS IT'S TIME TO ‘FEEL PRIDE’ \"You think he would?\" Raskin remarked. \"Let’s mark that down. Because their whole administration is about insider trading.\" \"You’re missing the point,\" Crenshaw replied. \"No, you’re missing the point. And you guys lost the election because you missed the point,\" Raskin said. Crenshaw accused Democrats of refusing to pass legislation in an effort to make Republicans look bad ahead of the election. Although Raskin and CNN host Dana Bash noted during the segment that Republicans controlled both chambers of Congress and the White House, Crenshaw repeatedly reminded Raskin",
+   "published": "2026-11-05T14:45:22-04:00",
+   "link": "https://www.foxnews.com/media/crenshaw-raskin-shout-each-other-down-heated-post-midterm-debate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "abbott",
+     "hinojosa"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House GOP launches defense plan to shield Trump from looming Democrat investigations",
+   "dek": "House GOP leadership letter from Steve Scalise warns committee chairs to prepare defenses against expected Democrat-led probes of Trump allies.",
+   "opening": "FIRST ON FOX: House GOP leadership is giving Republican lawmakers a new playbook to go up against an expected barrage of Democrat-led investigations in the new Congress. Majority Leader Steve Scalise, R-La., wrote a letter to the current chairs of House committees on Thursday warning them to \"maximize our remaining days in power to prepare for what is coming\" with instructions on how to brace for those expected probes. A source sent a copy of that letter to Fox News Digital. \"House Democrats have signaled they intend to impeach President Trump , but they will not stop there. They will weaponize every single gavel to appease their radical base,\" Scalise said. \"They will use their oversight authorities to harass the President, his family, cabinet officials, and they will seek to destroy our allies. You all will be a key line of defense in this fight.\" The guidance includes three key points: \"taking inventory\" of current and likely future investigative efforts by Democrats while they are in the minority, identifying who is on Democrats' target list, and reviewing how recent Supreme Court rulings as well as a Department of Justice (DOJ) memo on executive privilege could factor into future investigations. ‘LAWYER UP’: DEMOCRATS, REPUBLICANS WASTE NO TIME IN SETTING SOCIAL MEDIA ABLAZE AFTER MIDTERM SWEEP Democrats' targets could include \"administration officials, programs and authorities, and external allies, including conservative partners and industry leaders,\" Scalise said. He ",
+   "published": "2026-11-05T14:45:01-04:00",
+   "link": "https://www.foxnews.com/politics/house-gop-launches-defense-plan-shield-trump-from-looming-democrat-investigations",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "JACKSON THOMPSON: Colorado Gov-elect Phil Weiser signals possible changes to girls' sports ballot measure",
+   "dek": "Colorado Democratic Gov.-elect Phil Weiser signaled possible legislative changes to Proposition 134, the girls sports measure leading in early returns.",
+   "opening": "Colorado Democratic Gov.-elect Phil Weiser opened the door Wednesday to changing a ballot measure that would keep biological males out of girls’ and women’s school sports, raising privacy concerns as the proposal led in unofficial election returns. \"We’re going to have to take a look at these anti-trans measures, and what adjustments are necessary and appropriate,\" Weiser said at a news conference. \"I don't believe it would be acceptable to Colorado to have every student athlete have to go through full body examinations.\" Proposition 134 , however, does not prescribe a particular method for verifying an athlete’s biological sex. Colorado’s official voter guide says individual schools and school districts would determine their own verification procedures. The proposal would require school athletic teams from elementary school through college to be designated male, female or coeducational. Male students would be barred from female teams, while female students could join male teams if an equivalent female team were unavailable. Coeducational teams would remain open to all students. COLORADO PARENTS REFUSE TO STAY SILENT AS SCHOOL ALLEGEDLY TARGETS GIRLS OVER TRANS ATHLETE IN LOCKER ROOM With counting continuing, Proposition 134 had 52.66% support to 47.34% opposition, according to results published by Ballotpedia and updated Thursday morning. Those results were unofficial, and Ballotpedia listed the measure as too close to call. Weiser’s comments raised the prospect of legislati",
+   "published": "2026-11-05T14:43:19-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/colorado-gov-elect-phil-weiser-signals-possible-changes-girls-sports-ballot-measure",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Texas oil industry becoming 'Californicated' could have 'dire consequences' for economy, energy boss warns",
+   "dek": "U.S. Oil and Gas Association President Tim Stewart warns of &apos;dire consequences&apos; for the economy and energy industry following Democrats&apos; midterm election victories.",
+   "opening": "U.S. Oil and Gas Association President Tim Stewart is sounding the alarm over the potential fallout if the Lone Star State were to adopt California-style energy policies. Stewart stressed that \"the absolute worst thing that could happen to the United States economy would be to have California-style energy policy implemented in Texas.\" During an appearance on \" Big Money in the Morning, \" Thursday, Stewart explained how Texas adopting energy policies similar to those in California or Colorado could deal an economic blow to the state and the U.S. economy overall. \"It would have dire consequences for the U.S. economy when you take a $27 billion industry like ours in Texas and you begin to heavily overregulate it,\" he said. Stewart's warning comes after Democrats made significant gains in Texas during Tuesday's midterm elections, including victories by Gina Hinojosa and James Talarico. DEMOCRAT GINA HINOJOSA STUNS ABBOTT, MAKES HISTORY AS FIRST LATINA TEXAS GOVERNOR \"When we saw that clean sweep of Democratic elections take place in Colorado, for example, in 2019, we've seen a 40% reduction, a 25 to 40% reduction in production in Colorado,\" he explained while discussing the effects of regulations. \"My big fear, and I've said this to my Texas friends, is what happens if Texas becomes Californicated. For example, it's, like, if you're a business in California, you don't like being regulated, you pick up and you move to Texas.\" \"We have to go where the actual resource is,\" Stewart s",
+   "published": "2026-11-05T14:37:03-04:00",
+   "link": "https://www.foxbusiness.com/media/texas-oil-industry-becoming-californicated-would-have-dire-consequences-economy-energy-boss-warns",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "abbott",
+     "hinojosa"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Everyone’s Talking About the ‘Blue Tsunami.’ In Japan, It’s Complicated.",
+   "dek": "The New York Post used a Hokusai work to depict Donald Trump being swept away by Democrats’ midterm election win. Some in Japan were bothered by the imagery.",
+   "opening": "",
+   "published": "2026-11-05T14:31:58+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/world/asia/japan-hokusai-great-wave-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrat drops out of race due to health concerns and still wins; opponent says, 'We deserve to know more'",
+   "dek": "Democratic Iowa state House candidate Eric Armstrong, who announced in September that he was dropping his campaign due to health struggles, still won the election contest.",
+   "opening": "A Democratic candidate who dropped his campaign for health reasons still defeated the Republican candidate in an Iowa state House race. Democrat Eric Armstrong explained in a Sept. 7 Facebook post that he was abandoning his campaign due to health issues. \"Running a successful campaign requires immense physical and mental energy. Recently, I have been facing some personal health issues that require my full attention and immediate care,\" Armstrong wrote, in part. \"Because I must prioritize my health and recovery at this time, I am stepping down from my campaign, effective immediately. This was a deeply difficult choice. However, I know it is the right one. 3 INJURED IN SHOOTING AT DES MOINES, IOWA, POST OFFICE; SUSPECT DETAINED: POLICE \"Our District deserves a representative who can give 100 percent of their energy to this race. Right now, I must focus on healing so that I can continue to serve our community in other ways in the future.\" Despite this announcement, Armstrong's name remained on the ballot, and voters still elected him . Unofficial results indicate that Armstrong received 4,602 votes, while Republican Keith Jones, who is a member of the Pottawattamie County Board of Supervisors, received 3,737 votes. DEMOCRATS SEIZE MAJORITY OF GOVERNORS' OFFICES IN ELECTION-NIGHT SHIFT \"I'm going to do my best to represent\" the district, Armstrong said during a phone interview Wednesday with The New York Times . \"But I still have health issues. That’s what I'm struggling with.\" A",
+   "published": "2026-11-05T14:19:50-04:00",
+   "link": "https://www.foxnews.com/politics/democrat-drops-out-race-health-concerns-still-wins-opponent-says-deserve-know-more",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "house race"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Could the US midterms further isolate Israel in Washington?",
+   "dek": "The midterms showed that challenging support for Israel can win votes. But changing US foreign policy may be harder.",
+   "opening": "",
+   "published": "2026-11-05T14:19:25+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/5/could-the-us-midterms-further-isolate-israel-in-washington?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Trump Is Reacting to the Midterm Results",
+   "dek": "In the days after Republicans suffered massive midterm election defeats, President Trump appeared unmoved. The New York Times’s White House correspondent Maggie Haberman explains how Trump’s public demeanor compares with what he has shared behind closed doors about voters’ frustration with some of his policies.",
+   "opening": "",
+   "published": "2026-11-05T14:06:13+00:00",
+   "link": "https://www.nytimes.com/video/us/politics/100000011262332/how-trump-is-reacting-to-the-midterm-results.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump administration held talks with Iran on deporting Iranians during the war, court documents show",
+   "dek": "The documents show that the administration maintained contacts with Iranian officials during the war over the removals, specifically for submitting travel documents and figuring out \"possible avenues for removal.\"",
+   "opening": "",
+   "published": "2026-11-05T14:04:43-05:00",
+   "link": "https://www.pbs.org/newshour/world/trump-administration-held-talks-with-iran-on-deporting-iranians-during-the-war-court-documents-show",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mexican judge arrested after U.S. charges him of accepting $2M bribe in case linked to former Olympian",
+   "dek": "Luis Benítez Alcántara allegedly took a $2 million bribe to release Ryan Wedding&apos;s second-in-command in a billion-dollar cocaine enterprise.",
+   "opening": "Luis Benítez Alcántara, a Mexican judge accused of accepting a bribe to release a transnational cocaine smuggler, was arrested in Colombia on Sunday after the U.S. charged him with nine counts of being an accessory after the fact. Benítez, according to a Thursday announcement from the U.S. Department of Justice , accepted a $2 million bribe from Canadian national Ryan Clark, who the DOJ alleges was second-in-command to former Olympic snowboarder Ryan J. Wedding in the latter's international drug dealing empire. \"Benítez Alcántara was a district judge in Mexico City who allegedly accepted $2 million in exchange for granting bond to and ordering the release of Wedding’s second in command, while Wedding was orchestrating a billion-dollar transnational criminal organization and the largest supplier of cocaine to Canada with connections in Colombia, Mexico, and the U.S.,\" FBI Director Kash Patel said in a statement. US CHARGES MEXICAN GOVERNOR, TOP OFFICIALS IN CARTEL CONSPIRACY AS MEXICO FIRES BACK OVER PROOF Clark was initially arrested in Guadalajara, Mexico on Oct. 8, 2024, according to a superseding indictment . He appeared in front of Benítez for extradition proceedings on Oct. 9 after the U.S. requested his extradition. Beginning in Nov. 2024, Clark sent approximately $2.75 million to intermediaries over the course of four months, according to the indictment. On Feb. 24, 2025, Benítez received $2 million in payments from those intermediaries and granted Clark bond and relea",
+   "published": "2026-11-05T14:01:23-04:00",
+   "link": "https://www.foxnews.com/politics/mexican-judge-arrested-us-charges-accepting-2m-bribe-free-canadian-drug-trafficker",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ],
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "charged"
+    ],
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "canada"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Schumer faces mutiny from newly elected Senate Dems as party prepares to seize power",
+   "dek": "Senate Democrats face a leadership battle as Chuck Schumer seeks to keep his role, but several newly elected senators are pushing for new blood.",
+   "opening": "Senate Democrats will soon decide who will lead them with their newly acquired grip on power in the upper chamber, and while Senate Minority Leader Chuck Schumer, D-N.Y., appears to be the favorite, some in the caucus aren’t eager to back him. Schumer has led Senate Democrats for nearly a decade, helming the caucus as both majority and minority leader since 2017. But many of the fresh crop of Democratic senators-elect, which spans the ideological gamut from moderate to progressive, are tepid, at best, in backing him for another term. And some said throughout their campaigns that they wouldn’t support him at all. DEM SENATE HOPEFUL REJECTS SCHUMER BUT BENEFITS FROM MILLIONS IN SPENDING BY HIS ALLIES \"I mean no disrespect for Chuck Schumer, but we need new leadership,\" Sen.-elect Adam Hamilton told CNN in September. \"We need new younger leadership, young blood.\" Hamilton is the moderate megachurch pastor who toppled Sen. Roger Marshall, R-Kan., on Election Night, flipping the Sunflower State for the first time in nearly a century. He, like others this cycle, argued that Democrats needed \"fresh ideas and fresh leadership.\" \"In Kansas, Chuck Schumer is a liability for Democrats, and we've got to have leaders that can unite us, bring us together, not just Democrats, but bring together Democrats and Republicans to solve real problems,\" he said. \"And I think people are frustrated with the gridlock in the sense that people are not working together to solve problems.\" Democrats are ex",
+   "published": "2026-11-05T13:49:51-04:00",
+   "link": "https://www.foxnews.com/politics/schumer-faces-mutiny-from-newly-elected-senate-dems-party-prepares-seize-power",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "others"
+    ],
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "dems",
+     "election"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "rejects"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "LIV Golf is officially over after announcing plans to 'wind-down' operations after failed rescue deal",
+   "dek": "LIV Golf plans to liquidate assets after BC Partners scrapped its $300 million rescue deal when key players failed to commit before the deadline.",
+   "opening": "LIV Golf is dead. The remaining powers that be were working to manufacture some form of a second edition of the circuit despite having no funding and an entirely unknown roster of players, but the white flag has officially been waved after five seasons. During a bankruptcy court hearing held on Thursday, LIV Golf's lawyers shared plans for the circuit to begin liquidating its assets, with the process expected to begin on Nov. 9. LIV Golf released a statement following the hearing, announcing that it \"intends to transition to an orderly wind-down of its operations.\" RORY MCILROY MAKES SERIOUS ACCUSATION ABOUT LIV GOLF WANTING TO 'DESTROY' THE EUROPEAN TOUR Nothing about LIV officially closing up shop is a surprise given recent developments. In April, the Saudi Arabia Public Investment Fund (PIF) announced that it would cease funding the circuit at the end of the 2026 season. The Saudi PIF was the sole funder of LIV, and following a reported $266 million injection into the league for 2026, was set to reach $6 billion invested dating back to 2021. With the never-ending spigot of cash shut off by the Saudis, LIV filed for Chapter 11 bankruptcy in September, but was quickly tossed a lifeline by BC Partners in the form of a $300 million pledged investment to navigate through the proceedings and, in theory, be suited to launch 'LIV 2.0' when all the dust had settled. On Wednesday, LIV's lifeline disappeared. BC Partners scrapped the planned rescue deal after the circuit failed to ge",
+   "published": "2026-11-05T13:36:54-04:00",
+   "link": "https://www.foxnews.com/outkick-sports/liv-golf-officially-over-announcing-plans-wind-down-operations-failed-rescue-deal",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Schumer, Jeffries sidestep questions on nuking filibuster, launching Elon Musk probe after blue wave",
+   "dek": "Chuck Schumer ignored questions twice about abolishing the filibuster as Democrats prepare to take the Senate majority after midterm victories.",
+   "opening": "Senate Minority Leader Chuck Schumer , D-N.Y., and House Minority Leader Hakeem Jeffries, D-N.Y., did not answer Fox News Digital’s questions about their potential first moves in Congress after the Democrats won back the majority in both chambers with sweeping victories in Tuesday’s elections. Schumer was pressed on whether he plans to abolish the filibuster as speculation grows that Democrats could eliminate the filibuster after President Donald Trump urged Senate Republicans to terminate it numerous times to pass the SAVE America Act. Trump previously warned that if Republicans didn’t act on it, the Democrats would if given the opportunity, which they now have. Schumer ignored the question after being asked twice by Fox News Digital if he plans to eliminate it. FETTERMAN STRONGLY SUPPORTS THE FILIBUSTER AS TRUMP URGES SENATE REPUBLICANS TO SCRAP IT Some Democrats have previously signaled openness to eliminating the filibuster if they regained the Senate. During a news conference Wednesday morning, Schumer also refused to answer questions about some of his plans for the Senate as Democrats take back the majority, including eliminating the filibuster . He also said he will be \"re-elected as majority leader\" by the Senate Democratic caucus despite opposition from newly elected Democrats. He quickly redirected the conversation to focus on the blue wave in the midterm elections and what the party plans to do with the \"generational remake of the Senate map.\" SCHUMER SAYS HE'S NOT",
+   "published": "2026-11-05T13:30:57-04:00",
+   "link": "https://www.foxnews.com/politics/schumer-jeffries-sidestep-questions-nuking-filibuster-launching-elon-musk-probe-blue-wave",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "sweeping"
+    ],
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DAVID ASMAN: Democrats exploit gas-price pain while ignoring their own record",
+   "dek": "From the Keystone XL pipeline cancellation to carbon tax proposals, Democrats have a long history of policies that have driven gas prices higher.",
+   "opening": "The incredible irony of this election is that Democrats won largely on the issue of higher gas prices…when those same Democrats have done everything they can to raise gas prices when they’ve been in power. The very first executive order that President Biden signed on his first day in office was cancelling the 1,200-mile-long Keystone XL pipeline, which would have brought 830,000 barrels of Canadian oil a day into U.S. refineries. The U.S. Gulf Coast refineries that the Keystone pipeline would have served are built and optimized to process Canada’s heavy, sour crude oils — like Alberta tar sands/bitumen — into high volumes of diesel and jet fuel. That is exactly the kind of fuel we’re in most need of right now. And it wasn’t just President Biden. On February 24, 2015, President Barack Obama vetoed the Keystone XL Pipeline Approval Act passed by Congress. An attempt in the Senate to override Obama’s veto failed on March 4, 2015. DUFFY UNLEASHES ON BUTTIGIEG WITH SWIPE OVER WHICH ADMIN HAS ACCOMPLISHED MORE: 'MOVED LIKE A SLOTH' Other Democrat presidential contenders are on record favoring a carbon tax, which would have an immediate effect on raising gas prices. On Sept 4, 2019, Kamala Harris said, \"Under my plan there will be a carbon fee.\" Likewise, Pete Buttigieg campaigned on the idea of an expensive carbon tax, saying, \"I propose that we assess a carbon tax. I know you’re not supposed to use the \"T\" word when you’re in politics, but you might as well call this what it is.\" ",
+   "published": "2026-11-05T13:15:19-04:00",
+   "link": "https://www.foxnews.com/opinion/david-asman-democrats-exploit-gas-price-pain-ignoring-their-own-record",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "refiner",
+     "crude"
+    ]
+   },
+   "baseline": false,
+   "cut": "fox_2026-11-05_their_own_record"
+  },
+  {
+   "title": "Head of Justice Department office on Civil Rights resigns",
+   "dek": "The head of the Justice Department's Civil Rights Division, Harmeet Dhillon, is out after 18 tumultuous months in charge.",
+   "opening": "The head of the Justice Department's Civil Rights Division, Harmeet Dhillon, is out after 18 tumultuous months in charge. (Image credit: Andrew Harnik)",
+   "published": "2026-11-05T13:01:57-05:00",
+   "link": "https://www.npr.org/2026/11/05/g-s1-152080/head-of-justice-department-office-on-civil-rights-resigns",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani distances himself from Hasan Piker's rhetoric, defends having 'conversations' with far-left streamer",
+   "dek": "Zohran Mamdani tells Shannon Bream he disagrees with Hasan Piker&apos;s remarks on Hamas, 9/11 and Iran, but defends engaging with the controversial streamer.",
+   "opening": "New York City Mayor Zohran Mamdani distanced himself from inflammatory remarks made by Hasan Piker while defending his willingness to associate with the far-left streamer during an exclusive interview with Fox News' Shannon Bream. When pressed about Piker's past remarks about Hamas , the 9/11 terrorist attacks and Iran's nuclear ambitions, Mamdani made clear he did not share such views. \"I would say those are all things that I disagree with, and I've made very clear about my own opinions,\" Mamdani said during the \"Fox News Sunday\" interview. HASAN PIKER CALLS HAMAS 'FAR MORE MODERATE,' DISMISSES TERROR GROUP’S BRUTAL RULE IN GAZA \"I think that it's important to both be able to be confident in your opinions and be able to have a conversation with those that you disagree with and those that you agree with, because if you just surround yourself with people who echo everything that you say and think, you're going to just end up at home looking at a mirror,\" he added. Piker has faced backlash for remarks suggesting that Hamas is better than Israel, the United States deserved the 9/11 terrorist attacks and the Middle East would be more stable if Iran possessed a nuclear weapon. As he stumped for Democratic candidates ahead of this year's midterms, Piker's rhetoric became a focal point for Republicans who sought to depict progressive and Democratic socialists as extremists. During an election livestream Tuesday, Piker ramped up his inflammatory rhetoric, fantasizing about jail time ",
+   "published": "2026-11-05T12:45:10-04:00",
+   "link": "https://www.foxnews.com/media/mamdani-distances-himself-hasan-pikers-rhetoric-defends-conversations-far-left-streamer",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani confident there's a path for a progressive candidate to the White House in 2028",
+   "dek": "New York City Mayor Zohran Mamdani says midterm wins in Georgia, Texas and South Carolina prove a progressive presidential path exists in 2028.",
+   "opening": "New York City Mayor Zohran Mamdani expressed confidence that a progressive presidential candidate could win in 2028 during an interview Wednesday. Mamdani told NBC's Kristen Welker that progressive policies helped candidates win races across the country Tuesday, specifically pointing to Texas Sen.-elect James Talarico, Georgia governor-elect Keisha Lance Bottoms and South Carolina Sen.-elect Annie Andrews. \"So, Mayor, given this argument that you're making, do you think there is a path for a progressive candidate in the presidential race in 2028?\" Welker asked during the interview. STATE OF PLAY: BLUE WAVE SWEEPS DEMOCRATS INTO POWER, WITH KEY RACES STILL HANGING IN BALANCE Mamdani replied, \"Absolutely.\" Asked what gave him confidence, Mamdani said the midterm election results showed that the struggles he has seen in New York City also exist elsewhere, and that Democrats have a \"mandate\" to address them. AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI \"We have heard time and again over the ten months that I've been in office here in New York City, that what we're doing here can't work elsewhere, that what people are concerned about here isn't what people are concerned about across the country,\" Mamdani said. \"And what we saw last night is that the struggles of Americans in Atlanta, of Americans in Allentown, are not all that different than the struggles of Americans in Astoria.\" The mayor argued that \"dignity\" had to be at the h",
+   "published": "2026-11-05T12:42:36-04:00",
+   "link": "https://www.foxnews.com/media/mamdani-confident-path-progressive-candidate-white-house-2028",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New Jersey mayor who charged at resident during council meeting concedes election loss",
+   "dek": "Pemberton Township Mayor Matthew Bianchini was decisively defeated in a mayoral race following the spectacle at a township council meeting last month.",
+   "opening": "The Republican New Jersey mayor who was physically restrained while charging toward a resident during a Pemberton Township council meeting last month has conceded the mayoral race to his Democratic opponent. Mayor Matthew Bianchini congratulated Belinda Fontanez in a Facebook post Wednesday. \"The voters of Pemberton Township have spoken, and the results are clear. I offer Belinda Fontanez my sincere congratulations on her victory. As she prepares to take on the responsibility of leading our community, she has my full support for a smooth transition,\" Bianchini wrote. \"I care deeply about the future of this township , and its success matters far more than any single election,\" he added. Bianchini was decisively defeated, earning just over 30% of the vote, according to unofficial results . 'I BASICALLY SNAPPED': NEW JERSEY MAYOR CHARGES AT RESIDENT DURING CHAOTIC COUNCIL MEETING Bianchini, who was tapped to serve as mayor following the resignation of his predecessor, will remain in the role until the end of this year. Video footage from an October Pemberton Township council meeting captured the mayor being restrained as he sought to advance toward resident Michael Sawka after Sawka appeared to give the middle-finger gesture at the mayor. \"I am f---in' gettin' you!\" Bianchini can be heard declaring as another individual intervening in the tense situation pushed the mayor back. \"I should not have said that,\" Bianchini told WPVI , adding that it \"was wrong\" and that he is \"not gon",
+   "published": "2026-11-05T12:37:57-04:00",
+   "link": "https://www.foxnews.com/politics/new-jersey-mayor-charged-resident-council-meeting-concedes-election-loss",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ohio's most popular midterm Republican says election results hold a warning for Dems",
+   "dek": "Frank LaRose says the Republican Party must refocus on human freedom and free market principles after GOP candidates struggled on Election Day.",
+   "opening": "Ohio's most popular midterm Republican says his party needs to refocus its message into a constructive appeal to voters if the GOP hopes to regain the ground it lost on Election Day. Ohio Secretary of State Frank LaRose won his race to become Ohio State Auditor on Tuesday night, securing over 2.3 million votes, a total that easily eclipsed any other statewide Republican candidate. Gubernatorial candidate Vivek Ramaswamy secured just over 2 million votes in his race, and Sen. Jon Husted secured just under 2.1 million votes in his bid for re-election. FLORIDA CONGRESSMAN DIAGNOSES GOP'S BLUE TSUNAMI LOSSES: 'WE FAILED TO MAKE THEM THINK WE CARED ABOUT THEM' \"There are, of course, cycles to American politics, but also I think we as a party need to focus on what we're for, not just what we're against,\" LaRose told Fox News Digital in an interview. \"I mean, we know what we're against. The other side has a bunch of crazy ideas that are dangerous for the future of our states and our nation, but we need to get back to talking about what we're for. We're the party that stands for human freedom, that idea that we're endowed by our Creator with rights, those don't come from government.\" \"Protecting human freedom, protecting free market principles that people can prosper by, you know, the sweat of their own brow and working hard to build a business, those are really kind of the bread and butter conservative issues that drove me to become a Republican when I first started thinking about p",
+   "published": "2026-11-05T12:35:06-04:00",
+   "link": "https://www.foxnews.com/politics/ohios-popular-midterm-republican-says-election-results-hold-warning-dems",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "dems",
+     "election"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth faces bipartisan impeachment threat after Iran war gets blame for GOP midterm slaughter",
+   "dek": "Secretary of War Pete Hegseth faces a bipartisan impeachment threat as House Republicans say a privileged resolution could pass when Congress returns.",
+   "opening": "Secretary of War Pete Hegseth is facing a bipartisan impeachment threat when Congress returns next week as Republicans seethe over their devastating losses in Tuesday's midterm elections. Bipartisan frustration over the war in Iran , quietly simmering for months, is now openly erupting after Democrats stunned the country with historic victories in the House and Senate. That anger could all now hit Hegseth, with several House Republicans telling Fox News Digital that they believe a resolution to impeach him could pass as early as next week. \"He's screwed,\" one House GOP lawmaker told Fox News Digital. Rep. Thomas Massie, R-Ky., a longtime critic of foreign intervention by the U.S., told Fox News Digital he intends to force a vote on impeaching Hegseth when Congress returns if the Pentagon chief does not resign first. GOP REP THOMAS MASSIE INTRODUCES 8 ARTICLES OF IMPEACHMENT AGAINST WAR SECRETARY PETE HEGSETH He'll do so by filing a privileged resolution, a mechanism aimed at getting a vote on legislation despite opposition from the majority party's leaders. Once a privileged resolution is filed, lawmakers have two legislative days to hold a vote. 7 REPUBLICANS REBEL AGAINST TRUMP, VOTE WITH DEMS TO REIN IN IRAN WAR POWERS But the procedure notably carries two steps. Before a vote on the measure itself, leaders can call up a vote to \"table\" the bill or refer it to the relevant committee, which in both instances effectively kills it. That procedural vote is normally where most ",
+   "published": "2026-11-05T12:21:39-04:00",
+   "link": "https://www.foxnews.com/politics/hegseth-faces-bipartisan-impeachment-threat-after-iran-war-gets-blame-gop-midterm-slaughter",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Reacts to Midterm Defeat by Focusing on the Ballroom | The Daily Show",
+   "dek": "The media and even some Republicans agree that the 2026 midterm bloodbath was a rejection of Donald Trump, but one political observer begs to differ: Donald Trump. Michael Kosta covers the president's insistence that he \"wasn't on the ballot,\" his cope-heavy celebration of a GOP victory in Guam, and his renewed commitment to helping everyday Americans by continuing to obsess over the White House ballroom. #DailyShow #Trump #Ballroom Subscribe to The Daily Show: https://www.youtube.com/channel/UCwWhs_6x42TyRM4Wstoq8HA/?sub_confirmation=1 Follow The Daily Show: Twitter: https://twitter.com/TheDa",
+   "opening": "",
+   "published": "2026-11-05T12:21:26+00:00",
+   "link": "https://www.youtube.com/watch?v=5XiKG7HC7_s",
+   "videoId": "5XiKG7HC7_s",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:35:12.836810+00:00"
+  },
+  {
+   "title": "Elon Musk’s Very Bad Night",
+   "dek": "The midterms vote was an epic rebuke of Silicon Valley.",
+   "opening": "",
+   "published": "2026-11-05T12:19:50+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/opinion/elon-musk-midterms-trump-results.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Alaskans are waiting for more votes in Senate and governor's races. Both could go to ranked tabulations",
+   "dek": "Alaskans settled in Wednesday to await more results from key races on the general election ballot, including a bitterly fought U.S. Senate campaign and an open seat for governor.",
+   "opening": "",
+   "published": "2026-11-05T12:11:08-05:00",
+   "link": "https://www.pbs.org/newshour/politics/alaskans-are-waiting-for-more-votes-in-senate-and-governors-races-both-could-go-to-ranked-tabulations",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ civil rights chief Harmeet Dhillon resigns, says White House asked her to wait until after midterms",
+   "dek": "Harmeet Dhillon resigned Thursday as the Department of Justice&apos;s assistant attorney general for civil rights, sources told Fox News.",
+   "opening": "Assistant Attorney General Harmeet Dhillon is resigning as head of the Justice Department's Civil Rights Division, telling Fox News Digital exclusively that she made the decision weeks before Republicans' midterm losses and was asked by White House chief of staff Susie Wiles to delay her departure until after the election. \"I wasn't asked to resign,\" Dhillon told Fox News Digital. \"I resigned three weeks ago, and Susie asked me to please wait until after the midterms.\" Dhillon formally submitted her resignation on November 5, according to a letter obtained by Fox News Digital. Dhillon said she informed Wiles three weeks before Election Day that she believed she had \"accomplished everything\" she came to Washington to do and wanted to return to private practice. BONTA SAYS HE'LL COUNTER DOJ ELECTION MONITORS WITH OBSERVERS OF HIS OWN Asked if she would testify before Congress if subpoenaed after leaving the administration, Dhillon said there would be limits on what she could discuss because of executive privilege but indicated she would seek legal advice and follow it. \"I would certainly take legal counsel and follow it in that regard,\" she said. Dhillon was also asked whether she expected Trump to pardon her or other administration officials if congressional Democrats sought to target them. \"I have no idea. I haven't ever discussed that with him, asked for it,\" Dhillon said. \"And I have done nothing, in my opinion, that would require that, but, you know, that's up to the presi",
+   "published": "2026-11-05T11:51:18-04:00",
+   "link": "https://www.foxnews.com/politics/doj-civil-rights-chief-harmeet-dhillon-resigns-says-white-house-asked-her-wait-until-after-midterms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "seek",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Democrats’ midterm gains could reshape the political landscape for AI",
+   "dek": "Democratic midterm wins could increase scrutiny of AI data centers and power demand, but President Donald Trump retains veto power over any federal legislation.",
+   "opening": "The midterm elections ushered in Democratic majorities in both the House and Senate for the next two years, along with state-level gains that could shake up oversight of artificial intelligence (AI) . The AI sector has faced political scrutiny in a variety of areas, including the amount of electricity consumed by data centers and its impact on consumers, as well as cybersecurity and labor force impacts. President Donald Trump has made the development of artificial intelligence – which he has rebranded in official White House policies as \"superintelligence\" – a priority in his administration and has the authority to veto legislation passed by the Democratic Congress, while he will also retain control of regulatory agencies in the executive branch. With the AI buildout advancing at a rapid pace, Democratic policymakers at the federal and state level could make moves that affect how companies approach those investments as they deal with oversight and political pressure. BUSINESS LEADERS, INVESTORS WEIGH IMPACT OF DEMOCRATS' MIDTERM SWEEP ON MARKETS, AI AND TRAVEL State Street Investment Management chief macro policy strategist Elliot Hentov and investment strategist Christine Norton wrote that \"Democratic gains could create additional headwinds for… and increase scrutiny of AI providers and data center development, particularly the impact of power demand on local communities.\" \"These concerns are heightened by some of the state gubernatorial results,\" Hentov and Norton added. \"Y",
+   "published": "2026-11-05T11:49:35-04:00",
+   "link": "https://www.foxbusiness.com/politics/new-political-landscape-facing-ai-after-democrats-midterm-gains",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Alito reiterates he's not retiring, is committed through end of current Supreme Court term",
+   "dek": "Samuel Alito confirmed he has no plans to retire from the Supreme Court, but analysts warn the GOP may not control the Senate for six years.",
+   "opening": "Supreme Court Justice Samuel Alito confirmed to Fox News that he has no plans to retire and is committed through at least the current term, which is set to end in late June. Alito made the statement Thursday amid speculation about the future of the Supreme Court after a disastrous GOP performance in the midterm elections . When the new congressional term begins in January, Democrats will be in firm control of the Senate, with predictions, including from Florida Gov. Ron DeSantis , that this will not change for at least six years. That would make it extremely difficult, if not impossible, for President Donald Trump to fill any potential vacancy with a conservative after this year. ALITO NOT EXPECTED TO RETIRE THIS TERM, COOLING SUPREME COURT VACANCY SPECULATION: SOURCES After Justice Clarence Thomas , 78, Alito is the oldest member of the Supreme Court at 76 years old. \"Chance of confirming a worthy successor to Justice Thomas and/or Alito during President Trump’s term: Zero. Chance of confirming a worthy successor during a hypothetical GOP admin 2029-2033: probably zero (GOP won’t be able to recapture enough seats in 28),\" DeSantis posted to X on Tuesday night. REPUBLICANS SOUND ALARM OVER HIDDEN MIDTERM STAKES THAT COULD RESHAPE SUPREME COURT FOR DECADES \"Assuming Republicans lose the seats where prediction markets have the Democrats at 90+% to win, that would produce 55 Democrat Senate seats,\" DeSantis added. JONATHAN TURLEY: SHERROD BROWN'S PLEDGE TURNS ADVICE AND CONSENT ",
+   "published": "2026-11-05T11:34:05-04:00",
+   "link": "https://www.foxnews.com/politics/alito-reiterates-not-retiring-committed-through-end-current-supreme-court-term",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House conservative emerges with 2028 presidential pick after GOP's midterm massacre: 'I am all in'",
+   "dek": "A House Freedom Caucus original member says he&apos;s backing Marco Rubio for 2028, urging the GOP to shift immigration messaging after midterm losses.",
+   "opening": "One of the original members of the House Freedom Caucus has made his decision on who to support in 2028 after Republicans' historic losses in Tuesday night's midterms. Rep. Marlin Stutzman, R-Ind., told Fox News Digital \"I am all in\" for Secretary of State Marco Rubio and called on fellow Republicans to begin thinking about how to rebuild in the wake of their election losses. \"He can be a unifier,\" Stutzman said. FLORIDA CONGRESSMAN DIAGNOSES GOP'S BLUE TSUNAMI LOSSES: 'WE FAILED TO MAKE THEM THINK WE CARED ABOUT THEM' He also told Fox News Digital that Republicans \"have to do better at communicating\" since they \"can't push policy\" after losing the House and Senate majorities. Among those communication changes, he suggested changing the way Republicans discuss immigration. STATE OF PLAY: BLUE WAVE SWEEPS DEMOCRATS INTO POWER, WITH KEY RACES STILL HANGING IN BALANCE \"We need to get off the deportation messages, take credit for closing the border, and now start finding a path forward for those here illegally obeying the laws,\" Stutzman said. \"No citizenship just work visas.\" A blue tsunami swept both federal and state races on Tuesday night. In the House, both battleground districts and seats considered safe GOP strongholds saw upset Democrat victories. Dozens of races have yet to be called, but Democrats are projected to hold at least 54 seats in the Senate . In the House so far, they're projected to win 240 seats, compared to 147 projected for Republicans. Democrats also scor",
+   "published": "2026-11-05T11:22:37-04:00",
+   "link": "https://www.foxnews.com/politics/house-conservative-emerges-2028-presidential-pick-after-gops-midterm-massacre-i-am-all-in",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_cornell-doe-experts-failed": [
+     "work",
+     "failed"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrat poised to flip deep-red House seat without airing a single TV ad",
+   "dek": "Victoria Broderick and Cyril Jefferson lead GOP incumbents in deep-red districts after running remarkably low-cost campaigns.",
+   "opening": "Two years after losing to Republican Rep. Scott DesJarlais by 43 points, Democrat Victoria Broderick is leading in his deep-red Tennessee district by just 280 votes in the state’s unofficial final results — despite spending under $100,000 and airing no paid TV ads. If her lead holds, the result would end DesJarlais’ 16-year congressional career. First elected in 2010, the Republican was seeking his ninth term in a district President Donald Trump carried by 24 points in 2024. The latest FEC figures available before Election Day show DesJarlais’ campaign spent $508,166 through Oct. 14, compared with just $90,062 for Broderick. His campaign also raised more than seven times as much as hers — $667,181 to $94,217 — yet the longtime incumbent is trailing in the deep-red seat. REDISTRICTING EFFORTS BLOW UP IN REPUBLICANS' FACES AMID HISTORIC HOUSE LOSSES Axios reported, citing AdImpact, that Broderick’s campaign had no record of airing paid television ads. Instead, she credited a grassroots operation that had been building for more than two years. Broderick was not the only Democrat threatening to pull off a low-dollar House upset. Axios also highlighted a similar race in North Carolina, where High Point Mayor Cyril Jefferson currently leads Republican Rep. Addison McDowell 51.1% to 48.9%. Axios reported, citing AdImpact, that Jefferson had no tracked advertising spending, although a separate tracker lists $2,000 in Google ads, including YouTube placements. LEE CARTER: THE 5 WORDS T",
+   "published": "2026-11-05T11:20:43-04:00",
+   "link": "https://www.foxnews.com/politics/democrat-poised-flip-deep-red-house-seat-without-airing-single-tv-ad",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Highway That Explains the Blue Wave. Red Faces on the Right. And Much More on the Midterms.",
+   "dek": "Joe Klein, Rod Dreher, Olivia Reingold, Audrey Fahlberg, Michael Brendan Dougherty, Jesse Arm, Yemisi Egbewole, and Liel Leibovitz serve up more reporting and analysis on a historic election.",
+   "opening": "It&#8217;s Thursday, November 5. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Joe Klein on whether the Democrats can capitalize on their midterm triumph. Audrey Fahlberg, Michael Brendan Dougherty, and Rod Dreher on the GOP blame games. Olivia Reingold on the meaning of Abdul El-Sayed&#8217;s victory in Michigan. Jesse Arm and Yemisi Egbewole on what a divided Washington will look like. And more. But first: The highway that explains the midterm results. There was good news for Democrats nationwide on Tuesday, but if you want to understand why they did so well&#8212;and what the party needs to do to capitalize on their victory&#8212;the legendary political journalist Joe Klein says you must focus not just on one part of the country but a single highway: the I-35 corridor that starts in Laredo, Texas, and winds its way up through Kansas, Iowa, and Minnesota. It is, Joe writes, &#8220;where the election of 2026 took place, spiritually and politically.&#8221; It is also &#8220;where the governing strategy for the Democratic Party should now reside.&#8221; If you want to understand not just what happened on Tuesday but what the next two years hold, read Joe on the I-35 Democrats and the lessons contained in their triumphs. &#8212;The Editors Red Faces on the Right It didn&#8217;t take long after the blue wave swept the country for one question to rise to the fore among Republicans: Who&#8217;s to blam",
+   "published": "2026-11-05T11:02:07+00:00",
+   "link": "https://www.thefp.com/p/the-highway-that-explains-the-blue",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Voters Who Flipped Congress",
+   "dek": "The midterm elections were an electoral tsunami for Democrats: a complete collapse of the Republican coalition and a landslide victory. Nate Cohn, the chief political analyst for The New York Times, examines the results to figure out which voters showed up, which stayed home and how much billions in campaign spending mattered. Guest: Nate Cohn , the chief political analyst for The New York Times. Background Reading There’s no modern precedent for this Democratic tsunami . Trump is confronting an identity he would rather not: a lame duck . Photo: Nicole Craine for The New York Times For more in",
+   "opening": "The midterm elections were an electoral tsunami for Democrats: a complete collapse of the Republican coalition and a landslide victory. Nate Cohn, the chief political analyst for The New York Times, examines the results to figure out which voters showed up, which stayed home and how much billions in campaign spending mattered. Guest: Nate Cohn , the chief political analyst for The New York Times. Background Reading There’s no modern precedent for this Democratic tsunami . Trump is confronting an identity he would rather not: a lame duck . Photo: Nicole Craine for The New York Times For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday.&nbsp; &nbsp; For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday. Subscribe today at nytimes.com/podcasts or on Apple Podcasts, Spotify and Amazon Music. You can also subscribe via your favorite podcast app here https://www.nytimes.com/activate-access/audio?source=podcatcher . For more podcasts and narrated articles, download The New York Times app at nytimes.com/app. Hosted by Simplecast, an AdsWizz company. See pcm.adswizz.com for information about our collection and use of personal data for advertising.",
+   "published": "2026-11-05T10:45:00+00:00",
+   "link": "https://www.nytimes.com/the-daily",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Protests erupt across France after left-wing groups call for mobilization",
+   "dek": "An estimated 270,000 people joined nationwide strikes and protests across France on Thursday, putting pressure on President Emmanuel Macron&apos;s government.",
+   "opening": "France deployed 70,000 police officers Thursday as tens of thousands of people took to the streets for nationwide strikes and protests after left-wing groups called for a mobilization. In Paris, the Eiffel Tower was closed; in Lyon, French riot police fired tear gas and charged a group of protesters; and near Toulouse, a high school was set on fire, according to Reuters. \"We need to turn up in big numbers on the streets today,\" the news agency quoted the head of the left-wing CGT union Sophie Binet as saying. The demonstrations come after France was rocked by violent protests in October, which outgoing French President Emmanuel Macron blamed on \"ultra-left groups whose aim is to bring down the Republic.\" FRANCE'S MACRON BLAMES PROTESTS ON 'ULTRA-LEFT GROUPS WHOSE AIM IS TO BRING DOWN THE REPUBLIC' An official close to Interior Minister Laurent Nuñez said that by early Thursday, around 270,000 people had joined the union action in 180 rallies outside the capital. About a third of France’s high schools were closed or unable to operate, some because of student blockades and others because teachers were on strike, The Associated Press reported. Toby Harris, an Australian tourist who was visiting Paris on Thursday, told Fox News Digital that \"I feel like it's probably a good thing that there's like political action in the city. \"So if things have to be closed, because people want to make a point, then I'm sort of all for it,\" she added. Ashley Bradshaw, a tourist from Utah, said o",
+   "published": "2026-11-05T10:36:30-04:00",
+   "link": "https://www.foxnews.com/world/protests-erupt-across-france-left-wing-groups-call-mobilization",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "others"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Alaska, Mississippi Senate races separated by razor-thin vote margins",
+   "dek": "&quot;Decoy Dan&quot; Sullivan garnered 3,600 votes in the Alaska Senate race, far dwarfing the 642-vote margin between Dan Sullivan and Mary Peltola.",
+   "opening": "Races between the candidates for U.S. Senate in Alaska and Mississippi are separated by razor-thin margins days after polls closed in the crucial midterm elections . In Mississippi, where 95.6% of the votes have been counted, according to the Associated Press, Democratic candidate Scott Colom leads incumbent Sen. Cindy Hyde-Smith, R-Miss., 464,926 votes to 463,788, as of Thursday morning. In Alaska , former Democratic Rep. Mary Peltola, leads incumbent Sen. Dan Sullivan, R-Alaska, by less than 700 votes. DOJ SET TO APPEAL RULING IN ALASKA SENATE RACE DISPUTE OVER ‘DECOY DAN’ While Alaska still has a quarter of its votes to count, according to the AP, if the gap between Peltola and Sullivan remains this slim, the introduction of a second candidate named Dan Sullivan will loom large in post-election analyses. In July, the U.S. Justice Department opened an investigation into Daniel J. Sullivan , a retired schoolteacher who entered the Senate race in May. TRUMP PROSECUTIONS UNDER BIDEN SET PRECEDENT FOR DOJ’S ALASKA ‘DECOY DAN’ PROBE, EX-FEC CHAIR SAYS An October report from The New York Times said Daniel J. Sullivan had met with Democratic operatives and members of Peltola's campaign staff to encourage him to run. Peltola has denied any involvement in the scheme. One voter interviewed after he cast his ballot Tuesday revealed that he believed he accidentally voted for the wrong Dan Sullivan. MARY PELTOLA'S CAMPAIGN, DEMS BACKED COVERT SCHEME TO FIELD SPOILER CANDIDATES IN ALASKA",
+   "published": "2026-11-05T10:19:20-04:00",
+   "link": "https://www.foxnews.com/politics/alaska-mississippi-senate-races-separate-razor-thin-vote-margins",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department",
+     "alaska",
+     "race"
+    ],
+    "obj_thejusti_about-biden-charged-fbi": [
+     "involvement",
+     "investigation"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "dems",
+     "alaska",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "In Victory, Democrats See Economic Mandate to Cut Costs and Curtail Trump",
+   "dek": "Some Democrats quickly signaled they could try to roll back the president’s tax and trade policies, ignoring his early veto threats.",
+   "opening": "",
+   "published": "2026-11-05T10:04:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/us/politics/midterms-democrats-trump-taxes-tariffs.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midterm Election Losses Complicate Trump’s Options on Iran War",
+   "dek": "The midterm results laid bare the deep unpopularity of the war of choice that President Trump started and is now struggling to end.",
+   "opening": "",
+   "published": "2026-11-05T10:04:44+00:00",
+   "link": "https://www.nytimes.com/2026/11/05/us/politics/trump-iran-war-midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Blue wave nearly swallowed some of America's reddest states as election data exposes GOP's close calls",
+   "dek": "Mississippi&apos;s Senate race remains undecided by dozens of votes as deep-red states nearly flipped in the GOP&apos;s stunning election night bloodbath.",
+   "opening": "Races in traditionally staunch Republican strongholds came incredibly close to flipping amid Tuesday night's landslide Democratic victory, even in states where GOP candidates enjoyed overwhelming financial advantages. Signs of something going horribly wrong for the GOP appeared late in the election cycle when Fox News rated the Senate races in South Carolina and Kansas, two states with decades-long loyalty streaks for the Republican Party, as competitive. As results poured in on election night, however, it became clear that even states that practically nobody thought would be competitive, such as Louisiana and Tennessee, were coming within a razor's edge of going blue. Mississippi, seen by most political forecasters as among the safest of GOP seats, remains undecided as of publication, with just dozens of votes separating incumbent Republican Sen. Cindy Hyde-Smith and her Democratic challenger, Scott Colom. AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI In Tennessee, for instance, Democratic gubernatorial nominee Jerri Green spent just over $2 million, dwarfed by the nearly $13 million Sen. Marsha Blackburn , the GOP nominee, poured into the race. Outside groups burned through millions more to boost Blackburn’s candidacy. The result of outspending a Democrat by nearly 6-to-1 in one of the reddest states in the country was Blackburn defeating Green by less than three points in a state that favored Republicans by almost 30 points",
+   "published": "2026-11-05T09:59:45-04:00",
+   "link": "https://www.foxnews.com/politics/blue-wave-nearly-swallowed-some-americas-reddest-states-election-data-exposes-gops-close-calls",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump admin names new economic Opportunity Zones to spur private investment in struggling communities",
+   "dek": "The Treasury Department and IRS announced 6,576 new Opportunity Zones nationwide, including thousands of rural communities, as the tax incentive program enters a new era.",
+   "opening": "EXCLUSIVE: The Treasury Department and Internal Revenue Service announced Thursday the designation of 6,576 Opportunity Zones nationwide – including in all 50 states, U.S. territories and Washington, D.C. – opening a new 10-year window for private investment in economically distressed communities. The designations will take effect Jan. 1, 2027, according to Treasury and IRS guidance , and will remain in place for a decade. Of the newly designated zones, 2,594 are in rural communities eligible for enhanced tax incentives under the law. BILLIONAIRE TAX PUTS CALIFORNIA'S ECONOMIC FUTURE BEFORE MIDTERM VOTERS Opportunity Zones are economically distressed census tracts where qualifying investments may receive preferential tax treatment. The program was created under the 2017 tax law and was made permanent under President Donald Trump’s Working Families Tax Cuts. Treasury said the program has helped generate more than $110 billion in private-sector investment since its creation. The new designations are intended to build on that investment by attracting additional private capital, supporting job creation and stimulating economic growth in communities that have historically struggled to attract investment. \"Under President Trump’s leadership, the Working Families Tax Cuts permanently renewed and strengthened Opportunity Zones, giving investors, entrepreneurs, and local leaders the long-term certainty they need to commit capital to communities that have been overlooked for too long,\"",
+   "published": "2026-11-05T09:41:59-04:00",
+   "link": "https://www.foxbusiness.com/economy/treasury-irs-opportunity-zones-investment-tax-incentives",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republican AGs stand ready as 'last line of defense' against leftist policies after dismal midterms for party",
+   "dek": "Republican Attorneys General Association memo reveals GOP AG candidates ran 4.62 points ahead of Senate hopefuls across key midterm election states.",
+   "opening": "Republican attorney general candidates outperformed other midterm GOP hopefuls in several key races, according to a post-election analysis from the Republican Attorneys General Association, which urged colleagues to view their role as the \"front line\" against leftist policies following results that were likened to a \"category-five political hurricane.\" \"America needs Republican Attorneys General now more than ever,\" RAGA Executive Director Adam Piper wrote in a late-night memo to colleagues shared with Fox News Digital. \"With an emboldened Democrat Congress, Republican AGs are both America’s front line and is the last line of defense when it comes to their left-wing wish list – such as court packing, the Green New Deal , Medicare for All, Second Amendment restrictions, and abolishing ICE.\" Piper, who has worked in Virginia and on the staff of South Carolina Gov.-elect Alan Wilson, noted midterm election results showed Republican attorneys general candidates holding up slightly better on ballots despite a difficult Tuesday night for the party. AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI \"Last night was the worst election night for the Republican Party in 50 years,\" Piper's memo began, acknowledging a difficult midterm \"environment\" that was ultimately made worse. \"Last night, voters, regardless of party, preferred Democrat candidates by a mean of D +13.8 compared to D +7.9 in 2006 and D +8.4 in 2018. \"Today, we are dealing wi",
+   "published": "2026-11-05T08:54:03-04:00",
+   "link": "https://www.foxnews.com/politics/gop-ags-hail-outperforming-party-cast-last-line-defense-dems-cat-5-hurricane-takeover",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth's leadership questioned by GOP military veteran as Democrats talk impeachment",
+   "dek": "Rep. Don Bacon alleges Pete Hegseth lacks a &quot;moral compass&quot; and says the secretary &quot;doesn&apos;t have a lot of friends on the Hill&quot; today.",
+   "opening": "FIRST ON FOX: Rep. Don Bacon, R-Neb., told Fox News Digital that the Department of War should not be led by Secretary of Defense Pete Hegseth, criticizing his leadership and questioning his judgment. Bacon, who questioned Hegseth's \"moral compass,\" made his remarks after Democrats reclaimed control of both chambers of Congress in Tuesday's midterm elections, raising the possibility of impeachment proceedings against members of President Donald Trump's Cabinet in the 120th Congress. \"I don't think he was a good choice to begin with,\" Bacon told Fox News Digital. \"I wouldn't have voted to confirm him.\" Bacon, a 30-year Air Force veteran, argued that Hegseth's personal conduct would have resulted in disciplinary action for other members of the military. GOP SEN THOM TILLIS URGES TRUMP TO REPLACE PETE HEGSETH, BLASTS PENTAGON LEADERSHIP \"Anybody that got caught having affairs would've gotten fired,\" Bacon said before pointing to the controversy surrounding the administration's use of the Signal messaging app to discuss sensitive military operations. HEGSETH FIRES TOP PENTAGON STRATEGIST ACCUSED OF LEAKING CLASSIFIED IRAN, UKRAINE WAR INFORMATION \"He didn't take any responsibility for it, though it was his fault. And things like that bother folks who've served a lifetime in the military, have a moral compass and take responsibility,\" Bacon continued. GOP REP THOMAS MASSIE INTRODUCES 8 ARTICLES OF IMPEACHMENT AGAINST WAR SECRETARY PETE HEGSETH Bacon also suggested that Hegseth lack",
+   "published": "2026-11-05T08:30:32-04:00",
+   "link": "https://www.foxnews.com/politics/gop-lawmaker-says-more-qualified-officials-should-lead-pentagon-questions-hegseths-moral-compass",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Data centers were on the ballot, and voters sent unmistakable message",
+   "dek": "Local ballot measures targeting data centers passed overwhelmingly as voters raised concerns about energy bills, land use and the economic impact of AI development.",
+   "opening": "Voters across at least 10 states delivered a sweeping rebuke to data center expansion in Tuesday's midterm elections , backing restrictions and rejecting development proposals amid growing concerns about electricity costs, land use and the rapid buildout of artificial intelligence infrastructure. Voters backed restrictions or rejected pro-development measures in all but one of 41 local ballot measures across 10 states, according to an analysis by Ballotpedia and results compiled by CNBC. The Washington Post separately reported that voters in at least 38 jurisdictions passed measures limiting or blocking data centers. Many passed by wide margins, underscoring the intensity of opposition in communities where the projects were directly on the ballot. The results pose a growing challenge for an industry pouring billions of dollars into AI infrastructure , as communities increasingly weigh the economic benefits of new development against concerns about higher utility bills, water consumption, noise and local control. MARVELL, LUMENTUM TOUT HISTORIC $115B DEAL TO CREATE ‘CATEGORY LEADER’ IN AI CONNECTIVITY Opposition has already disrupted projects beyond the ballot box. More than 145 data center projects were delayed or canceled nationwide through early August, according to S&amp;P Global figures cited by The Washington Post, which reported that public opposition accounted for the vast majority of those setbacks. Ohio, a major hub for data center development, delivered some of the ",
+   "published": "2026-11-05T07:48:48-04:00",
+   "link": "https://www.foxbusiness.com/politics/data-centers-ballot-voters-sent-unmistakable-message",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "sweeping"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "blocking",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Multiple flights in Europe diverted because of bomb threats",
+   "dek": "At least 11 planes from cities, including Dublin, Madrid, and Warsaw, were diverted or grounded over bomb threats that have been determined to be unfounded.",
+   "opening": "Multiple planes across Europe were diverted and forced to make emergency landings Thursday because of bomb threats that have turned out to be unfounded. At least 11 planes, originating from cities including Copenhagen, Dublin, Helsinki, Madrid, Milan and Warsaw, have been affected. The source of the threats was not immediately clear. These incidents came after several flights in Europe received similar warnings on Tuesday that the U.K. government described as \"malicious hoax threats.\" \"Upon receiving a threat regarding the placement of an improvised explosive device on board 4 aircraft heading to Prague, we are preparing with colleagues from Prague Airport for their landing. We assess the relevance of the threats as low,\" Czech Police wrote on X, before adding that inspections of the planes yielded \"negative results.\" The threats come at a time when European officials have been blaming Russia and Iran for \"hybrid attacks\" and acts of sabotage, which both Moscow and Tehran deny, Reuters reported. RUSSIA'S SHADOW WAR IS PUTTING EUROPE ON EDGE AS GERMANY CONFRONTS A GROWING THREAT Earlier, a flight from Dublin to Rome was diverted to a military air base in western France because of a bomb threat, according to French Prime Minister Sebastien Lecornu’s office. That flight landed safely at the base in Evreux in Normandy, with all 151 passengers and six crew members disembarking, the office said. A LOT Polish Airlines flight from Warsaw to Brussels landed at its destination, where i",
+   "published": "2026-11-05T07:33:26-04:00",
+   "link": "https://www.foxnews.com/world/multiple-flights-europe-diverted-bomb-threats",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What's next for Democrats after the midterms. And, a look at the outstanding races",
+   "dek": "Democrats have regained control of Congress. They have a long list of investigations into Trump planned. And, not all races have been called. Here's a look at how they could affect the Dems' majority.",
+   "opening": "Democrats have regained control of Congress. They have a long list of investigations into Trump planned. And, not all races have been called. Here's a look at how they could affect the Dems' majority. (Image credit: Kevin Dietsch)",
+   "published": "2026-11-05T07:02:24-05:00",
+   "link": "https://www.npr.org/2026/11/05/g-s1-152046/up-first-newsletter-democrats-congress-control-house-senate-trump-reaction",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "After sweeping midterm wins, here's what Democrats hope to get done in the majority",
+   "dek": "Democrats ran on lowering costs and stamping out corruption. Now that they've won, party leaders will have to unite a sometimes fractious caucus to fulfill those pledges.",
+   "opening": "Democrats ran on lowering costs and stamping out corruption. Now that they've won, party leaders will have to unite a sometimes fractious caucus to fulfill those pledges. (Image credit: Kevin Dietsch)",
+   "published": "2026-11-05T06:45:35-05:00",
+   "link": "https://www.npr.org/2026/11/05/nx-s1-6029331/democrats-have-a-long-to-do-list-when-they-take-over-congress-next-year",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_costs-executive-housing-lowering": [
+     "lowering",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sen. Gillibrand says Democrats must end Iran war, hold Trump accountable. But how?",
+   "dek": "Sen. Kirsten Gillibrand spoke with Morning Edition about Democrats' priorities, from lowering costs to ending the Iran war. But questions remain about how they'll deliver.",
+   "opening": "Sen. Kirsten Gillibrand spoke with Morning Edition about Democrats' priorities, from lowering costs to ending the Iran war. But questions remain about how they'll deliver. (Image credit: Graeme Sloan)",
+   "published": "2026-11-05T06:45:30-05:00",
+   "link": "https://www.npr.org/2026/11/05/nx-s1-6028837/kirsten-gillibrand-democrats-congress-priorities",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepresi_costs-executive-housing-lowering": [
+     "lowering",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Kamala Harris urges Dems to 'be ruthless' with power after midterms, demands Trump accountability",
+   "dek": "Former Vice President Kamala Harris, former Secretary of State Hillary Clinton and former President Bill Clinton offered their thoughts on the heels of the midterm elections.",
+   "opening": "After Democrats swept control of Congress in the 2026 midterm elections, former Vice President Kamala Harris , former Secretary of State Hillary Clinton and former President Bill Clinton offered their views about how the party should use its newfound power. Harris called for Democrats to ruthlessly leverage their powers to provide \"economic relief\" and to hold President Donald Trump's \"administration accountable for their deep-seated corruption.\" Hillary Clinton said that \"The post-Trump era begins now,\" while her husband offered a more conciliatory message, and even called for reining in America's national debt. \"On Election Day, the American people spoke loud and clear: they are done with the corruption, incompetence, and callousness coming from the White House and the capitulation of Republican leaders,\" Harris declared in part of a Wednesday post on X. KAMALA HARRIS BREAKS WITH LEFT FLANK, WARNS DEMS THAT IMPEACHING TRUMP IS 'NOT A GOOD IDEA' \"Now, the work begins to actually deliver results. The American people have elected Democrats across the country in federal, state, and local races who must be ruthless in using every lever of power to deliver economic relief for working families and hold this administration accountable for their deep-seated corruption,\" she asserted. Hillary Clinton declared in a Wednesday post on X, \"Last night, Americans made a clear call for accountability and affordability. A body politic cannot recover until its harms have been treated and its ",
+   "published": "2026-11-05T06:10:32-04:00",
+   "link": "https://www.foxnews.com/politics/kamala-harris-democrats-trump-accountability-midterms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "dems",
+     "election"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "declared",
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "CVS announces major breakup, pharmacy expert weighs impact on consumers",
+   "dek": "CVS Health breakup will create separate pharmacy and healthcare companies as industry expert weighs the impact on prescription drug prices, pharmacies and patients.",
+   "opening": "CVS Health on Wednesday announced plans to split its sprawling conglomerate into separate health insurance and pharmacy businesses, a move one industry expert welcomed as a potential way to drive down costs for millions of Americans. The separation is expected to be completed by the first half of 2028, creating two independent, publicly traded companies. The healthcare solutions company, which will temporarily retain the CVS Health name, will include its pharmacy benefit manager (PBM) insurance plans and subsidiaries, including Aetna, CVS Caremark, CVS Specialty, Oak Street Health and Signify Health. CVS Pharmacy, the company's retail division, will include roughly 9,000 stores, its mail-order pharmacy business, MinuteClinic and the Health100 technology services unit. CVS PHARMACY REACHES $315M SETTLEMENT WITH JUSTICE DEPARTMENT OVER CONTROLLED SUBSTANCE PRESCRIPTIONS Existing CVS Health investors will receive shares in both companies tax-free, according to the Woonsocket, Rhode Island-based company. The announcement rattled investors, sending CVS shares plunging nearly 13% Wednesday to levels not seen since spring. For independent pharmacies, however, the breakup could create a more level playing field against the retail pharmacy giant. An industry expert representing thousands of independent pharmacies told FOX Business that the move could restore market competition, improve patient access to medications and potentially lower prescription drug costs if \"CVS becomes a true p",
+   "published": "2026-11-05T06:00:41-04:00",
+   "link": "https://www.foxbusiness.com/retail/cvs-announces-major-breakup-pharmacy-expert-weighs-impact-consumers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Trump Reckoning",
+   "dek": "The results from the U.S. midterm elections could be the beginning of the end of the Trump era.",
+   "opening": "",
+   "published": "2026-11-05T05:14:54+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/world/us-midterms-trump-israel.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans turn on Trump after devastating midterm losses hand Democrats control of Congress",
+   "dek": "GOP insiders blame Trump after Election Night&apos;s blue tsunami flipped both chambers, with Democrats scoring seven Senate and 27 House pickups.",
+   "opening": "Seismic political change is coming to Washington, D.C., and as Republicans sift through the wreckage that was Election Night, fingers are pointing in several directions over who’s to blame. The blue tsunami Tuesday tore the GOP’s coalition asunder, flipping the balance of power in both chambers heading into the final two years of the Trump administration. And as Republicans search for where things went awry, GOP operatives and insiders told Fox News Digital that it starts at the top with President Donald Trump. \"Look, first and foremost, this is a Trump loss,\" Dan Eberhart, an oil drilling chief executive officer and prominent Republican donor, told Fox News Digital. \"He wanted to be — he wanted people to consider him on the ballot. And unfortunately, as a Republican, that's what we got.\" LIZ PEEK: THERE MAY BE A SILVER LINING IN TRUMP'S BRUTAL MIDTERM DEFEAT In the Senate, Democrats scored seven pickups on Election Night, with outstanding races in Alaska and Mississippi still waiting to be called. And in the House, Democrats roared back into power with 27 pickups and with several races still outstanding. The Iran war, ignoring the economic hurt squeezing voters, attacking sitting Republicans and more are on the list of grievances from Republicans reeling in the days after. The Senate map, in particular, was at one point favorable for Republicans and viewed as an uphill battle for Senate Minority Leader Chuck Schumer, D-N.Y., and Democrats to put a dent in the GOP’s thin, 53-",
+   "published": "2026-11-05T05:00:05-04:00",
+   "link": "https://www.foxnews.com/politics/republicans-turn-trump-after-devastating-midterm-losses-hand-democrats-control-congress",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-dems-dismissal-doj": [
+     "alaska",
+     "election"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "alaska",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The South flexes political power in midterms, sets regional influence in 2028 election",
+   "dek": "Tuesday's dramatic midterm results have transformed the electoral map, ensuring the path to future power for Democrats and Republicans must run through the South and its diverse voting population.",
+   "opening": "Tuesday's dramatic midterm results have transformed the electoral map, ensuring the path to future power for Democrats and Republicans must run through the South and its diverse voting population. (Image credit: Megan Varner)",
+   "published": "2026-11-05T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/05/nx-s1-6029818/blue-wave-south-carolina-georgia-mississippi-texas",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Morning news brief",
+   "dek": "Democrats are planning out how to tackle their agenda in the new year, ballots are still being counted in some undecided races, Trump avoids taking the blame after GOP midterm losses.",
+   "opening": "Democrats are planning out how to tackle their agenda in the new year, ballots are still being counted in some undecided races, Trump avoids taking the blame after GOP midterm losses.",
+   "published": "2026-11-05T04:47:05-05:00",
+   "link": "https://www.npr.org/2026/11/05/nx-s1-6023116/morning-news-brief",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats will take control of Congress next year. What does it mean for the economy?",
+   "dek": "The Democratic gains in this week's midterm elections will bring a different business climate to Washington. But the overall economy should be OK.",
+   "opening": "The Democratic gains in this week's midterm elections will bring a different business climate to Washington. But the overall economy should be OK.",
+   "published": "2026-11-05T04:46:54-05:00",
+   "link": "https://www.npr.org/2026/11/05/nx-s1-6029304/democrats-will-take-control-of-congress-next-year-what-does-it-mean-for-the-economy",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Candy and Smiles on MS NOW, and Some Regrets on Fox News",
+   "dek": "On TV, the outcome of the midterm elections became clear early on. Pundits celebrated and grieved by turns.",
+   "opening": "",
+   "published": "2026-11-05T03:06:30+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/business/media/midterm-elections-fox-ms-now.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midterm Blowout: Dems Batter GOP & Elon Musk Is Out $500 Million | The Daily Show",
+   "dek": "Michael Kosta recaps the 2026 midterm elections after Democrats’ historic sweep: Kansas’s last Democratic senator was born the year the light bulb was invented, Elon Musk is out $500 million after blowing it on failed campaigns, and the media cannot stop coming up with dumbass “blue” puns. Plus, Troy Iwata vents to Kosta about losing out on Trump’s $5K checks. #DailyShow #Midterms #ElonMusk #BlueWave 0:00 - Michael Kosta's TDS Welcome 0:20 - Democrats Win the Midterms and Take Control of House and Senate 2:54 - Elon Musk Spent $500 Million on Elections 4:53 - Trump Supporters Reflect on What W",
+   "opening": "",
+   "published": "2026-11-05T02:59:28+00:00",
+   "link": "https://www.youtube.com/watch?v=MaThY_vYxvw",
+   "videoId": "MaThY_vYxvw",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:35:41.098005+00:00"
+  },
+  {
+   "title": "Rod Dreher: To Win Again, Republicans Must Make Enemies on the Right",
+   "dek": "With MAGA in ruins, some Republicans will be tempted by white identity politics. That would be a catastrophic mistake not just for the GOP but for America, writes Rod Dreher.",
+   "opening": "MAGA may be dead but Donald Trump is very much still with us, which means the GOP must try to rebuild for 2028 in a crossfire hurricane. On one side will be the energized Democrats, who will spend the next two years dragging administration officials before Congress. But surviving Republicans will also face gale-force baiting for Donald Trump, who is taking no responsibility for leading the GOP off a cliff, and who will surely torment any Republican who dares to speak the truth about the cause of the party&#8217;s suicide. For example, only hours after three-term Texas GOP governor Greg Abbott lost to a liberal Democrat, Trump assailed him for botching his reelection because he&#8217;s a dirty RINO. It&#8217;s hard to tell who is the audience for this performative nonsense post-wipeout, but it&#8217;s easy to predict that it&#8217;s going to be endless for the rest of Trump&#8217;s term, complicating GOP efforts to regroup and rebuild. The GOP&#8217;s MAGAd&#228;mmerung opens the door for far-right accelerationists like Nick Fuentes to make a bid for power within the Republican Party apparatus. Back in April, Fuentes posted : Read more",
+   "published": "2026-11-05T02:40:21+00:00",
+   "link": "https://www.thefp.com/p/rod-dreher-to-win-again-republicans",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "tx-sen": [
+     "abbott"
+    ],
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Interstate Where the Midterms Were Won",
+   "dek": "Politicians suck at reading elections. They see mandates where there are only mirages. But if there was a mandate from the election, it was for the quiet competence of the candidates along I-35, writes Joe Klein.",
+   "opening": "I-35 is a great American highway. It starts at the southern border in Laredo, Texas, then moseys its way through Kansas, Iowa, and Minnesota, straight up through the gut of the country. It is where the election of 2026 took place, spiritually and politically. It is where the governing strategy for the Democratic Party should now reside. The midterm election really began in Minnesota during the winter ICE raids and the brutal deaths of Renee Good and Alex Pretti. The question nagged throughout the year: Is this who we are? Didn&#8217;t a guy like Pretti treat me at the hospital when I slashed my hand on the job? Didn&#8217;t we all know a wandering soul like Good, who had landed in Minneapolis with her three kids just eight months earlier? It was the subtext for all that followed. We wanted the border closed&#8212;good job, Mr. President&#8212;but did we really vote for brutal, masked gangster feds fighting our fellow citizens in the streets? Read more",
+   "published": "2026-11-05T02:36:52+00:00",
+   "link": "https://www.thefp.com/p/the-interstate-where-the-midterms-were-won",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Angry, Divided, and Dejected: The GOP Blame Game Has Begun",
+   "dek": "Tuesday&#8217;s humiliating defeat has quickly turned into distancing the Republican Party from some of Trump&#8217;s views&#8212;but no clear idea how to move on, either with the president or in spite of him, writes Audrey Fahlberg.",
+   "opening": "Just two years ago, Donald Trump romped to victory in a sweep of the popular vote and seven battleground states that left Republicans confident&#8212;even arrogant&#8212;that their grip on power was impregnable, at least through the president&#8217;s second term. That confidence has been shattered by voters who put Trump back in the White House but made clear in Tuesday&#8217;s midterm elections that they are through with MAGA. On Wednesday, the mood inside the White House was bleak. Aides and other officials had expected to lose, but not this badly. Many were caught extremely off guard by the Democratic sweep, a person familiar with the matter told The Free Press , and were stunned by the Democratic Party&#8217;s historic gains in the deepest red territory. The most jaw-dropping examples include James Talarico&#8217;s double-digit Senate win in Texas, the defeat of Senator Darline Graham in South Carolina by Annie Andrews , who has never held elected office, and a comfortable flip of a Senate seat in Kansas to the Democrats for the first time since 1932. Now comes the circular GOP firing squad about what went wrong&#8212;and the big question of how the party can rebuild. Already, there is an emerging cohort of Republicans who believe that the blue tsunami should be attributed solely to the war in Iran, which led to steep increases in gasoline and diesel fuel prices. &#8220;Iran was a piece of it,&#8221; President Trump admitted to The Wall Street Journal as election results ",
+   "published": "2026-11-05T02:23:18+00:00",
+   "link": "https://www.thefp.com/p/angry-divided-and-dejected-the-gop",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "diesel": [
+     "diesel",
+     "gasoline",
+     "fuel price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "tx-sen": [
+     "talarico"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_administration-back-canada-rolls": [
+     "back",
+     "some"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false,
+   "cut": "fp_2026-11-05_blame_game_lede"
+  },
+  {
+   "title": "‘It Is Never Enough’: Susan Collins Couldn’t Outrun Trump",
+   "dek": "The Maine Republican survived tough cycles in the past even as the political ground shifted beneath her. But the anti-Trump fever in her state doomed her this time.",
+   "opening": "",
+   "published": "2026-11-05T01:30:53+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/us/politics/susan-collins-defeat-donald-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "me-sen": [
+     "collins"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why the Midterms Could Birth a New, Better U.S.-Israel Alliance",
+   "dek": "For years, both parties have turned aid to Israel into a proxy fight for domestic political grievances. If these elections are an excuse to end that arrangement, we&#8217;ll all be better for it, writes Liel Leibovitz.",
+   "opening": "On Tuesday morning, just hours before the GOP suffered a historic shellacking in the midterm elections, Donald Trump came out with what he hoped would be a game-changing announcement: The U.S., he declared, would soon end its annual $4 billion military aid to Israel. The news should&#8217;ve made me happy&#8212;my Tablet colleague Jacob Siegel and I spent the last three years making the case for this exact policy. But there was little to celebrate about Trump&#8217;s declaration, because anyone listening closely to the president on Election Day, or to the vice president the following morning , would have realized that the administration is making very few right moves&#8212;and even then, always for the wrong reasons, and often with disastrous consequences. How so? To answer the question, and to understand why this week&#8217;s political upheaval may actually be very good news for anyone concerned with America&#8217;s strength and security, it helps to first understand precisely what U.S. aid to Israel is&#8212;or, more accurately, what it is not. Read more",
+   "published": "2026-11-05T00:41:32+00:00",
+   "link": "https://www.thefp.com/p/why-the-midterms-could-birth-a-new",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "declared",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US Marine dies in training incident at Japan military base, officials say",
+   "dek": "A U.S. Marine with the 3rd Marine Division died during a training exercise at Camp Schwab in Okinawa, and the incident remains under investigation.",
+   "opening": "A U.S. Marine died Tuesday after an incident during training at Camp Schwab in Okinawa, Japan, military officials said. The incident happened in Okinawa, on a Marine Corps base near the northeastern coast of Okinawa Prefecture. The Marine, who was identified as Lance Cpl. Devin J. Hernandez, 25, of Maryland, was with the 3rd Marine Division. ALLEGED KILLING BY MARINE PROMPTS US MILITARY TO RESTRICT OFF-BASE LIBERTY IN OKINAWA \"It is with heavy hearts that 3rd Marine Division announces the death of a Marine following a training incident at Camp Schwab, Okinawa, Japan, on Nov. 3, 2026,\" the 3rd Marine Division said in a statement to ABC News. \"We express our deepest condolences to the family and loved ones of our Marine.\" Hernandez was participating in fast-rope training at Camp Schwab when he sustained injuries during the training, the 3rd Marine Division said in a later statement to Fox News Digital. He was transported to a hospital and later succumbed to his injuries. The Marine's death remains under investigation, the 3rd Marine Division said. \"The Marines and Sailors of 3rd Marine Division mourn the loss of one of our own. We extend our deepest condolences to Lance Cpl. Hernandez’s family, friends, and fellow Marines. Our focus remains on supporting them while we fully investigate the circumstances of this tragic incident,\" Maj. Gen. Kyle Ellison, commanding general of the 3rd Marine Division, said in a statement. Lt. Tyler Thomas, a spokesperson for the III Marine Expedit",
+   "published": "2026-11-05T00:38:44-04:00",
+   "link": "https://www.foxnews.com/world/us-marine-dies-training-incident-japan-military-base",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_about-biden-charged-fbi": [
+     "officials",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Trump’s Energy Policies Helped Trigger Midterm Rout",
+   "dek": "The war in Iran, efforts to promote fossil fuels and attacks on renewable energy contributed to higher prices for gas and electricity that drove voter discontent.",
+   "opening": "",
+   "published": "2026-11-05T00:31:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/climate/trump-fossil-fuel-energy-policy-election.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ted Cruz says 'blue tsunami' took over Texas after Democrats swept statewide races",
+   "dek": "Sen. Ted Cruz called the 2026 midterms a &quot;blue tsunami&quot; after James Talarico defeated Ken Paxton and Gina Hinojosa unseated Greg Abbott in Texas.",
+   "opening": "Sen. Ted Cruz , R-Texas, delivered a scathing assessment on Wednesday of Republicans' sweeping midterm election losses, describing the results as a \"blue tsunami\" and warning that his party had lost touch with voters, particularly in the Lone Star State. In a lengthy post on X, Cruz acknowledged that Republicans had suffered historic defeats, losing control of both chambers of Congress while Democrats swept statewide races in Texas. \"2026 was not simply a blue wave; it was a blue tsunami. It was an a-- kicking,\" Cruz wrote. \"It was not simply a bad 2006 midterm election. It was a Watergate-level repudiation.\" His blunt assessment came after a landmark Democratic breakthrough in traditionally Republican strongholds across the country, including in his home state, where Democrats won every statewide race, ending decades of Republican dominance. FLORIDA'S DESANTIS DESCRIBES GOP MIDTERMS WIPEOUT AS 'CLOSE TO AN EXTINCTION-LEVEL EVENT' FOR REPUBLICANS \"Nowhere are the consequences of this election greater than Texas,\" Cruz wrote. \"In the Lone Star State, we lost every single statewide election.\" \"Texas is blue. That is a hard sentence to utter. But Texas, today at least, is blue,\" he continued. Democrats scored two major victories in Texas, with James Talarico defeating Republican Attorney General Ken Paxton in the U.S. Senate race — marking the first Democratic Senate victory in the Lone Star State in nearly four decades — and state Rep. Gina Hinojosa unseating longtime Republica",
+   "published": "2026-11-05T00:03:47-04:00",
+   "link": "https://www.foxnews.com/politics/ted-cruz-says-blue-tsunami-took-over-texas-after-democrats-swept-statewide-races",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton",
+     "abbott",
+     "hinojosa"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Trump’s Midterm Defeat Means for Iran and Oil Prices",
+   "dek": "Commentators abroad wondered what President Trump’s electoral losses might mean for oil prices, the war on Iran and the future of American politics.",
+   "opening": "",
+   "published": "2026-11-04T23:37:00+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/world/asia/midterms-trump-foreign-policy-world.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Medical Professionals Are Among the Winners of the Midterms",
+   "dek": "About a half-dozen Democratic doctors and nurses ran for Congress. Some made opposition to Health Secretary Robert F. Kennedy Jr. central to their campaigns.",
+   "opening": "",
+   "published": "2026-11-04T23:14:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/us/politics/midterm-elections-doctors-nurses.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tucker’s Blunt Message for Trump on the Midterms",
+   "dek": "Watch the full conversation here: https://www.youtube.com/watch?v=esl9YQVEa-k @Coffeeandamike Watch more here: https://watchtcn.co/49CDF2t #TuckerCarlson #Midterms #DonaldTrump #Republicans #Democrats #Meta #Instagram #SamAltman #SocialMedia #ai #news #podcast #politics #future #prediction",
+   "opening": "",
+   "published": "2026-11-04T23:00:24+00:00",
+   "link": "https://www.youtube.com/watch?v=eXohHb2P3Fk",
+   "videoId": "eXohHb2P3Fk",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:36:29.942501+00:00"
+  },
+  {
+   "title": "Google expands voluntary buyouts to 5 countries as AI spending fuels cost cuts",
+   "dek": "Google expanded voluntary exit packages to employees in Canada, France, Germany, Japan and Switzerland as heavy AI spending weighs on Alphabet stock.",
+   "opening": "Google is extending its buyout program to selected workers in five additional countries as the company looks for ways to control expenses while pouring money into artificial intelligence programs. The company told Reuters that select workers in Canada, France, Germany, Japan and Switzerland were offered buyouts beginning in June, although the number of employees who accepted was unclear. FOX Business has reached out to Google for comment. \"In 2025, some of our teams introduced a voluntary exit program with severance,\" a Google spokesperson said in a statement to Reuters. \"This past summer, in June, we expanded this program globally in a few countries to support our important work ahead.\" GOOGLE PARENT ALPHABET SUFFERS NEARLY $500B WALL STREET WIPEOUT AMID AI SPENDING FEARS The buyouts come as Google’s heavy AI spending has worried investors and weighed on parent company Alphabet’s stock price. Alphabet’s workforce has continued to grow in recent quarters, but it wants to reallocate resources toward areas it views as higher priorities. While the company has continued to prioritize hiring in AI and cloud computing, its voluntary buyout programs suggest an effort to move resources away from areas considered less vital to its future strategy. The latest round builds on similar incentives Google introduced last year for workers in select teams in the U.S. and Britain. Company leaders said the program gives employees who are uncomfortable with Google’s future direction an opportuni",
+   "published": "2026-11-04T22:54:25-04:00",
+   "link": "https://www.foxbusiness.com/technology/google-expands-voluntary-buyouts-5-countries-ai-spending-fuels-cost-cuts",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-back-canada-rolls": [
+     "some",
+     "canada"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Media’s Shares Fall to Record Low After Midterms",
+   "dek": "Trump Media & Technology Group’s stock plunged 24 percent a day after Democrats made huge gains in the midterm elections.",
+   "opening": "",
+   "published": "2026-11-04T22:37:45+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/business/trump-media-truth-social-midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: ‘Blue Tsunami’ Causes Meltdowns & The Next Big Talking Point For Democrats",
+   "dek": "The midterms were swept in what’s already being called a blue tsunami, Mike Johnson says he will not lead House Republicans in the next Congress, and Democrat messaging suggests a major push against big tech following the landslide shift of power. Get the facts first with Evening Wire. - - - Ep. 3179 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Quince - Give the gift of quality this holiday season. Quince.com and select Morning Wire in the post-checkout survey - - - Privacy Policy: ⁠https://www.dailywire.com/privacy⁠ morning wire,morning wire podcast",
+   "opening": "",
+   "published": "2026-11-04T22:30:20+00:00",
+   "link": "https://www.youtube.com/watch?v=YTGmgoyZuSY",
+   "videoId": "YTGmgoyZuSY",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:42:17.579380+00:00"
+  },
+  {
+   "title": "For Israelis, U.S. Midterms Show How Far Their Star Has Fallen in America",
+   "dek": "Israel once had bipartisan support in the United States, but a strong showing for Democrats, some of whom are deeply critical of the war in Gaza, has left the country with fewer friends in Congress.",
+   "opening": "",
+   "published": "2026-11-04T22:04:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/world/middleeast/israel-trump-midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Lawsuit Says the McRib Is Lacking Something You Might Expect It to Have",
+   "dek": "A judge in Chicago ruled that the class-action lawsuit could proceed.",
+   "opening": "",
+   "published": "2026-11-04T21:24:09+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/business/mcdonalds-mcrib-lawsuit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_against-bbc-defamation-deposition": [
+     "judge",
+     "lawsuit"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Erika Kirk channels Charlie with blunt message to conservatives after GOP midterm losses",
+   "dek": "Erika Kirk invoked her late husband Charlie Kirk&apos;s words, urging conservatives to stay positive and avoid infighting after election setbacks.",
+   "opening": "Erika Kirk had a message for conservatives reeling from Republican election setbacks, and she turned to her late husband Charlie’s words to deliver it. \"I miss Charlie so much every single day, but especially on a day like today,\" she wrote. \"He always said that when things are going well, we need to stay humble. And when things aren’t going the way we want, we need to stay positive, keep our faith, and get back to work.\" ERIKA KIRK URGES CONSERVATIVE STUDENTS NOT TO BACK DOWN IN FIRST SCHOOL YEAR SINCE CHARLIE'S ASSASSINATION The widow of Turning Point USA CEO and founder Charlie Kirk said her husband had built a political operation meant to endure both victories and defeats. \"Charlie’s vision for Turning Point Action was always bigger than one election,\" she wrote. \"He wanted a permanent, year-round operation with the people, relationships, and resources to compete in every cycle. INSIDE CHARLIE KIRK’S EFFORT TO DEVELOP THE NEXT GENERATION OF CONSERVATIVE VOICES \"He knew there would be victories and setbacks because he had experienced both and that’s why he built for both.\" Kirk also thanked the staff, students, volunteers and ballot chasers who worked during the election cycle. ERIKA KIRK SAYS PRESIDENTIAL LIBRARY-STYLE TRIBUTE TO CHARLIE KIRK IS 'IN THE WORKS' AS TPUSA EXPANDS \"I know Charlie would be unbelievably proud of each and every one of you, and I am, too,\" she wrote. In a lengthy post on X, Erika Kirk said Republicans saw once comfortable races tighten or flip as",
+   "published": "2026-11-04T19:00:14-04:00",
+   "link": "https://www.foxnews.com/politics/erika-kirk-channels-charlie-blunt-message-conservatives-after-gop-midterm-losses",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midterm voters rebuke Trump, handing Democrats both chambers of Congress",
+   "dek": "Voters delivered a sweeping rebuke of President Trump and his party in the midterms, handing Democrats major victories and dramatically reshaping the balance of power in Washington. Trump now enters a lame duck phase of his second term, promising both to use his veto power, and also to work across the aisle as he faces the largest Democratic majorities in decades. Liz Landers reports.",
+   "opening": "",
+   "published": "2026-11-04T18:55:07-05:00",
+   "link": "https://www.pbs.org/newshour/show/midterm-voters-rebuke-trump-handing-democrats-both-chambers-of-congress",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: Officials in Iran welcome midterm results as vote against war",
+   "dek": "In our news wrap Wednesday, top officials in Iran welcomed the results of the U.S. midterm elections, Israeli President Isaac Herzog says he's accepted the results of last week's election and will consult with party leaders on forming a new government and Ukraine's air force says Russia launched more than 300 drones overnight.",
+   "opening": "",
+   "published": "2026-11-04T18:50:44-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-officials-in-iran-welcome-midterm-results-as-vote-against-war",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Breaking down the Democrats' big majorities after the blue wave",
+   "dek": "The results of the midterms have set up a two-year power struggle between Trump's White House and the incoming Democratic Congress. Lisa Desjardins takes a look at the races and the potential size of the incoming Democratic majority.",
+   "opening": "",
+   "published": "2026-11-04T18:45:30-05:00",
+   "link": "https://www.pbs.org/newshour/show/breaking-down-the-democrats-big-majorities-after-the-blue-wave",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The issues that drove voters' decisions in the midterms",
+   "dek": "For a deeper dive into the election data and why people voted the way they did, Geoff Bennett and Amna Nawaz spoke with Amy Walter of The Cook Political Report.",
+   "opening": "",
+   "published": "2026-11-04T18:40:31-05:00",
+   "link": "https://www.pbs.org/newshour/show/the-issues-that-drove-voters-decisions-in-the-midterms",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'A mandate for change': Progressive Democrat William Lawrence flips House seat in Michigan",
+   "dek": "In Michigan's 7th Congressional District, progressive activist William Lawrence unseated Republican Tom Barrett in one of the year's most competitive House races. Lawrence joined Amna Nawaz to discuss the win and what comes next.",
+   "opening": "",
+   "published": "2026-11-04T18:35:28-05:00",
+   "link": "https://www.pbs.org/newshour/show/a-mandate-for-change-progressive-democrat-william-lawrence-flips-house-seat-in-michigan",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "house race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republican mayor says election wipeout is 'rejection of Trumpism'",
+   "dek": "President Trump has sought to deflect blame for the sweeping Republican losses. But within the party, some are beginning to ask whether they have been too deferential to the president — and whether the GOP needs to rethink its identity. Amna Nawaz discussed what comes next with David Holt, the Republican mayor of Oklahoma City.",
+   "opening": "",
+   "published": "2026-11-04T18:25:13-05:00",
+   "link": "https://www.pbs.org/newshour/show/okcs-republican-mayor-says-election-wipeout-is-rejection-of-trumpism",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "sweeping"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How the Latino shift to Democrats helped turn Texas blue",
+   "dek": "A major factor in the midterm elections was the number of Latino voters who headed to the polls and supported Democrats. For perspective on this massive swing, Amna Nawaz spoke with María Teresa Kumar, CEO of Voto Latino, an organization that helps register Hispanic and Latino voters.",
+   "opening": "",
+   "published": "2026-11-04T18:20:54-05:00",
+   "link": "https://www.pbs.org/newshour/show/how-the-latino-shift-to-democrats-helped-turn-texas-blue",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democratic and GOP strategists on how parties should respond to midterm results",
+   "dek": "For perspective on how both parties are responding to the historic election wins, Geoff Bennett spoke with two strategists from both sides of the political aisle. Mo Elleithee is the former spokesman for the Democratic National Committee, and Doug Heye is a former spokesman for the Republican National Committee.",
+   "opening": "",
+   "published": "2026-11-04T18:15:00-05:00",
+   "link": "https://www.pbs.org/newshour/show/democratic-and-gop-strategists-on-how-parties-should-respond-to-midterm-results",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iconic NYC bookstore owned by Dem senator’s wife to pay $1.5M over ineligible COVID loan",
+   "dek": "The Strand agreed to pay nearly $1.5 million to settle allegations tied to a pandemic-era PPP loan that federal law barred it from receiving.",
+   "opening": "An iconic New York City bookstore owned by a Democratic senator's wife has agreed to pay nearly $1.5 million to settle allegations that it improperly received a COVID-era loan it was barred from obtaining under federal law. The Strand will pay $1,482,560 to resolve allegations that it violated the False Claims Act by applying for and receiving a $932,350 second-draw Paycheck Protection Program (PPP) loan in 2021, the Department of Justice (DOJ) announced Tuesday. At the time, Nancy Bass Wyden, the wife of Democratic Oregon Sen. Ron Wyden, was the controlling owner of the Manhattan bookstore. Federal law barred businesses from receiving second-draw PPP loans if a member of Congress or their spouse \"directly or indirectly held a controlling interest in the PPP loan applicant,\" according to the DOJ. VANCE TASK FORCE REVEALS BIDEN ADMIN 'PROTECTED' 562K PANDEMIC LOANS IN $22.2B SUSPECTED FRAUD SCHEME The Strand applied for the $932,350 loan in February 2021. As part of the application, Nancy Bass Wyden certified that the spouse of a member of Congress did not directly or indirectly hold a controlling interest in the business, federal prosecutors said. The DOJ alleged that certification was \"knowingly and materially false\" because Wyden was The Strand's controlling owner, making the bookstore ineligible for the loan. \"The Paycheck Protection Program was created to save American jobs , not to enrich those who aren’t eligible for taxpayer-funded relief, especially the wife of a U.S.",
+   "published": "2026-11-04T17:29:18-04:00",
+   "link": "https://www.foxbusiness.com/retail/iconic-nyc-bookstore-owned-dem-senators-wife-pay-1-5m-over-ineligible-covid-loan",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesupre_alaska-department-justice-lawsuit": [
+     "justice",
+     "department"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump, MAGA SELF IMPLODE After MASSIVE LOSS",
+   "dek": "Krystal, Saagar, Ryan and Emily discuss Trump and allies melting down over their massive midterm loses. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breaki",
+   "opening": "",
+   "published": "2026-11-04T17:22:50+00:00",
+   "link": "https://www.youtube.com/watch?v=8OPxecFpTaU",
+   "videoId": "8OPxecFpTaU",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:48:44.073682+00:00"
+  },
+  {
+   "title": "Florida congressman diagnoses GOP's blue tsunami losses: 'We failed to make them think we cared about them'",
+   "dek": "Firebrand GOP Florida rep says party must prepare for difficult two years, says Republicans bear responsibility for loss as a team",
+   "opening": "As Republicans sift through the wreckage of a devastating election night that handed Democrats control of both chambers of Congress by large margins, one Florida Republican who bucked the national trend says the GOP fundamentally misread the electorate. In an exclusive interview with Fox News Digital, Congressman Randy Fine — who expanded his own winning margin by five points despite the national backlash — offered a candid assessment of his party's shortcomings and warned that Republicans must now prepare for an \"ugly two years\" battling Democrats over immigration and other contentious issues. While Republicans held their ground in Florida, winning the governor's mansion , the Senate race, and maintaining their 20-8 edge in the US House, nationally the GOP got crushed under the weight of a blue tsunami. ILHAN OMAR HIT WITH EXPULSION THREAT AS GOP LAWMAKER VOWS TO BOOT HER FROM CONGRESS OVER DOJ PROBE Congressman Fine presents no easy answer to the GOP's divergence in fortunes between Florida and the rest of the country: \"You know, I think that's a hard question to answer. What I would say, I can speak to my race, and I'm actually one of the few Republicans in the country whose margin increased from my last election. I won my special election after having $14 million spent against me. I won it by 14 points. I won last night by 19 points. And so what I can tell you is what worked for me. \"My constituents want a fighter, someone who says what they believe. They know it's not dr",
+   "published": "2026-11-04T17:06:57-04:00",
+   "link": "https://www.foxnews.com/politics/florida-congressman-diagnoses-gops-blue-tsunami-losses-we-failed-make-them-think-we-cared-about-them",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_x_attorney-before-execution-failed": [
+     "team",
+     "failed"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Lost Because He Betrayed America First",
+   "dek": "The Iran war was the biggest factor in this election. The president started the fight, made himself solely responsible for it, and guaranteed that his party would pay the cost for whatever happened, writes Michael Brendan Dougherty.",
+   "opening": "As the dust settles after an undeniable electoral disaster for Republicans, one thing is clear: These losses come down to the Iran war. The exit polls have Donald Trump&#8217;s approval at 38 percent, lower than George W. Bush&#8217;s in 2006. Yes, the climbdown started on &#8220;liberation day&#8221; and coincided with a popular reaction against Immigration and Customs Enforcement raids. But it began really tanking with the war, dropping to 33 percent by August of this year. Polls suggest that a healthy majority of voters say he made the wrong decision in starting the war. CBS found that a quarter of Republicans agree. And though election analysis will say that voters ranked the cost of living higher than foreign policy issues&#8212;which is certainly true&#8212;this year, they are not separate issues. Consider that just four days before he resumed hostilities with Iran in February, Trump was bragging about falling gas prices. At the time the national average was $2.98. By Election Day it was $4.15. Diesel jumped from $3.75 to $6.29. Estimates put the cost of the war at nearly $2,000 per family. The energy supply shock provoked inflation. So did Trump&#8217;s tariffs, though not as much. But in a price-sensitive environment, every dollar counts. Americans across the country have a lot of time to think about their credit card bill on their way to the gas station, grocery store, or bank. The war has shown up in nearly every American&#8217;s household budget. People have a reas",
+   "published": "2026-11-04T16:57:50+00:00",
+   "link": "https://www.thefp.com/p/trump-lost-because-he-betrayed-america-first",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "dollar": [
+     "dollar"
+    ],
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Breaking Points REACTS TO HISTORIC DEM VICTORIES",
+   "dek": "Krystal, Saagar, Ryan and Emily discuss their thoughts on the historic Democrat wins from last nights midterm elections. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.ins",
+   "opening": "",
+   "published": "2026-11-04T16:45:03+00:00",
+   "link": "https://www.youtube.com/watch?v=pAYoOSJobpw",
+   "videoId": "pAYoOSJobpw",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:50:11.995528+00:00"
+  },
+  {
+   "title": "More Iranians Call for Nuclear Weapons After War With U.S.",
+   "dek": "Some Iranian clerics and officials argue the country must rebuild deterrence by dropping its longstanding pledge not to build a nuclear bomb.",
+   "opening": "",
+   "published": "2026-11-04T16:26:33+00:00",
+   "link": "https://www.nytimes.com/2026/11/03/world/europe/iran-nuclear-weapons-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TOTAL WIPEOUT: Dems 56 SEATS?, MS BLUE?",
+   "dek": "Krystal, Saagar, Ryan and Emily discuss the wild results from the midterm elections. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebook:",
+   "opening": "",
+   "published": "2026-11-04T16:18:56+00:00",
+   "link": "https://www.youtube.com/watch?v=XPcDQtzq-hY",
+   "videoId": "XPcDQtzq-hY",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false,
+   "transcriptTried": "2026-11-06T14:56:31.321864+00:00"
+  },
+  {
+   "title": "Why Social Security reform could test Trump, Democrats on bipartisan compromise before 2028",
+   "dek": "Social Security&apos;s trust fund faces insolvency by 2032, and newly elected senators will confront automatic benefit cuts of 22% before their terms expire.",
+   "opening": "The results of the midterm elections will play a role in shaping the future of Social Security as the safety net program's projected insolvency looms in 2032 and would require entitlement reforms to prevent automatic benefit cuts. Social Security's main trust funds are on a path to depletion as increased enrollment due to the aging American population and growth in benefits paid outpaces incoming payroll tax revenue. Current law requires that once the trust funds are tapped out, benefits must be automatically cut to match incoming payroll tax receipts, which is estimated to amount to a 22% cut in late 2032 based on the most recent projections. Democrats won majorities in the House and Senate for the next two years that represent the end of President Donald Trump's second term, and for the senators who were elected to full terms, they will still be in office when that insolvency date draws near if action isn't taken during the remainder of Trump's term. Maya MacGuineas, president of the Committee for a Responsible Federal Budget (CRFB), told FOX Business that \"Social Security was squarely on the ballot last night, whether Americans realized it or not. The retirement trust fund will become insolvent in 2032, which means each senator elected to a new six-year term will need to confront this issue before their term expires.\" HOW CONGRESS COULD ADDRESS SOCIAL SECURITY INSOLVENCY – AND THE HIDDEN COST \"If they don't, beneficiaries across the board will face automatic benefit cuts u",
+   "published": "2026-11-04T15:35:00-04:00",
+   "link": "https://www.foxbusiness.com/politics/why-social-security-reform-could-test-trump-democrats-bipartisan-compromise-before-2028",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "America’s Trade Deficit Remained Elevated in September",
+   "dek": "The gap between U.S. exports and imports, which remained at a relatively high level in September, has defied efforts by President Trump to decrease it with tariffs.",
+   "opening": "",
+   "published": "2026-11-04T14:42:20+00:00",
+   "link": "https://www.nytimes.com/2026/11/04/business/us-trade-deficit-september.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "tariffs",
+     "imports"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Business leaders, investors weigh impact of Democrats’ midterm sweep on markets, AI and travel",
+   "dek": "Democrats&apos; midterm victories draw mixed reactions from Wall Street and business executives over AI infrastructure, regulatory risks, market stability and travel.",
+   "opening": "Democrats' takeover of both chambers of Congress in the midterm elections drew mixed reactions from investors and business leaders Wednesday, with some anticipating greater economic stability and others warning of increased scrutiny of artificial intelligence and data center development. U.S. stock futures initially declined overnight as investors assessed the potential for tighter regulation of AI, cryptocurrency and data centers. Futures later recovered after President Donald Trump said he would accept the election results, according to Reuters. \"This has helped ease some concerns about prolonged political confrontation and legislative gridlock,\" Daniela Hathorn, a senior market analyst at Capital.com, told Reuters. She added that significant policy disagreements would remain likely. US STOCK FUTURES MIXED AS DEMOCRATS SCORE KEY MIDTERM ELECTION WINS Some investors also saw potential benefits in a divided government, with Democrats controlling Congress and Republicans retaining the White House. Deborah Cunningham, chief investment officer for global liquidity markets at Federated Hermes, said the political split could create a \"blockade against new legislation.\" Financial markets have historically viewed divided government favorably because it can limit major policy changes and reduce uncertainty over new legislation. For technology companies, however, the election results raised concerns about potential restrictions on AI infrastructure investment, particularly the constru",
+   "published": "2026-11-04T10:59:12-04:00",
+   "link": "https://www.foxbusiness.com/politics/business-leaders-investors-weigh-impact-democrats-midterm-sweep-markets-ai-travel",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_adds-canadian-imports-lifts": [
+     "some",
+     "others"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": [
+  {
+   "date": "2026-11-06",
+   "what": "daily cut (Claude, the Press task) — no sweep_2026-11-06.json on GitHub at 10:33 PT (404; the daily slop had not committed one), so the newest date in sweeps/index.json (11-05, this file, the local copy with eight transcript paths) was used, per the protocol. 3 rows marked cut — al-jazeera 'Iran says tankers struck in Hormuz amid fears of new US attack' (aj_2026-11-05_tankers_struck), fox 'DAVID ASMAN: Democrats exploit gas-price pain while ignoring their own record' (fox_2026-11-05_their_own_record), free-press 'Angry, Divided, and Dejected: The GOP Blame Game Has Begun' (fp_2026-11-05_blame_game_lede, β). No the-close row: the floor carries over (none in force). Eight transcripts on disk (MS NOW ×7, Daily Show ×1), none cut today. 125 rows left.",
+   "by": "Claude"
+  }
+ ]
+}

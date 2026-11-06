@@ -12,7 +12,8 @@
 name: daily slop
 on:
   schedule:
-    - cron: '45 12 * * *'      # 05:45 Pacific (PDT)
+    - cron: '45 5 * * *'       # 22:45 Pacific the night before (PDT). Moved 2026-10-30: GitHub was starting the 05:45 run ~6 h late,
+                               # so it landed after the 06:30 transcript pull and the 06:55 cut. Same UTC date as the morning it serves.
   workflow_dispatch:
 permissions:
   contents: write

@@ -1,0 +1,434 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "aj_2026-11-02_petrol_dip",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "title": "Slight Relief",
+ "source": {
+  "program": "Al Jazeera English",
+  "network": "Al Jazeera (aljazeera.com, Economy)",
+  "format": "print",
+  "date": "2026-11-02",
+  "title": "US petrol prices dip ahead of midterms as voters eye costs",
+  "byline": "Andy Hirschfeld",
+  "url": "https://www.aljazeera.com/economy/2026/11/2/us-petrol-prices-dip-ahead-of-midterms-as-voters-eye-costs",
+  "length": 12,
+  "paragraphs": 12,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-11-02_AlJazeera_Petrol_Dip/source.md",
+  "note": "published 11-02 18:32 UTC (updated 19:08); the 11-02 sweep matched it on 'diesel', 'petrol', 'midterm' — the dek carries the diesel number, so the sweep saw this page's object. Read in full via the cloud fetch as paragraph reductions (no quotation over ten words). Twelve paragraphs: the article (AAA, the FT, an AP-NORC poll), one analyst (De Haan, GasBuddy, on X), the White House spokesperson (Taylor Rogers, to Al Jazeera — the holder's office, constitutive). Chosen as the newest page in the queue on a live object (H1c, the pump, the day before the vote); my call"
+ },
+ "positions": "paragraphs",
+ "horizon": "non-US",
+ "arc": "PG01",
+ "object": {
+  "label": "H1 — the Russian diesel deal (PG01 layer 1): the price leg (H1c) at the national pump the day before the vote, read from outside the US horizon — regular $4.17 (down 12 cents on the week, 23 on the month; $3.04 a year ago; $2.98 on 28 February, the day of the first strikes), diesel $6.29 (down 6 cents; first over $6 in September; peak $6.53), the second-term average passing $3.46 (FT), oil off 6% on the Qatar talks. The holder's office on the page in its own words: prices drop sharply 'once this conflict comes to an end', and the US military has Gulf oil flows above pre-conflict levels. The deal, Russia, the cargo and the dyed-diesel order are not on the page; the cure the holder's office names is the war's end",
+  "layer": 1,
+  "zAxis": {
+   "pos": "prices come down by the deal — the pump back toward its 28 February level before the vote",
+   "neg": "they do not — the pump dips on the talks, not the deal, and sits $1.19 over the war's first morning"
+  }
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the shadow is the holder's promise — diesel 'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11), 'soon' (10-24), 'really fast' (10-29), 'they're not very high' (undated, ds 11-01). On this page the pump has turned down for the first time on an LI page — twelve cents in a week — and the page gives the cause as the talks in Qatar, not the deal; the market's forecast (under $4 within a week) is conditioned on the talks holding. The holder's office answers with a new clock: 'once this conflict comes to an end' — the cure migrated from a seller (the deal) to the war's end — and with the H6 claim in its strongest form yet: Gulf flows above pre-conflict levels. The page sets the pre-war pump to the cent ($2.98 on 28 February) and the term's average against the predecessor's record: the promise measured over the whole term and found above it",
+ "names": {
+  "AJ": "the article (Al Jazeera narration, Andy Hirschfeld) — AAA, the Financial Times, AP-NORC as reported",
+  "PD": "Patrick De Haan (head of petroleum analysis, GasBuddy; a post on X) — reported, stationed with the publication",
+  "TR": "Taylor Rogers (White House spokesperson, to Al Jazeera) — the holder's office speaking on the object's delivery; constitutive, @O; the principal — never Dia-scored (my call: the office's words are the holder's)"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.15
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 1.0
+  },
+  "shadowNote": "'COMING DOWN, IN RECORD NUMBERS, AND FAST' (10-11); 'really fast' (10-29). On this page the pump is $4.17, twelve cents off a record, $1.19 over 28 February; the holder's office redates the fall to the war's end",
+  "predicates": {
+   "operative": [
+    {
+     "type": "T",
+     "label": "AAA, Monday 11-02: regular $4.17 (−12c w/w, −23c m/m); $3.04 a year ago; $2.98 on 28 February, the day the US and Israel first struck Iran (¶2–¶3)",
+     "z": -0.3
+    },
+    {
+     "type": "T",
+     "label": "diesel $6.29 (−6c w/w); first topped $6 in September; peaked at $6.53 (¶4)",
+     "z": -0.2
+    },
+    {
+     "type": "T",
+     "label": "FT analysis of federal data: the second-term average petrol price set to pass $3.46 on Monday, above the record set under Biden (¶5)",
+     "z": -0.5
+    },
+    {
+     "type": "T",
+     "label": "oil −6% on Monday after in-person talks in Qatar; De Haan: ≈16c off wholesale gasoline and diesel, the national average under $4 within a week 'unless the situation changes' (¶6–¶7)",
+     "z": 0.2
+    },
+    {
+     "type": "T",
+     "label": "AP-NORC: most Americans want Congress to prioritise the cost of living — 78% of Republicans, 89% of Democrats (¶8)",
+     "z": -0.2
+    }
+   ],
+   "stated": [
+    {
+     "type": "O",
+     "label": "the holder's office (Rogers): prices will drop sharply 'once this conflict comes to an end'; the Iran action a national-security necessity (¶9)",
+     "z": 0.5
+    },
+    {
+     "type": "O",
+     "label": "the holder's office (Rogers): thanks to the US military, oil flows out of the Persian Gulf exceed pre-conflict levels (¶10)",
+     "z": 0.7
+    }
+   ],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "$4.17 · 12 cents · 23 cents · $3.04 · $2.98 · 28 February · $6.29 · 6 cents · $6.53 · $3.46 · 6 percent · 16 cents · under $4 · within a week · 78% · 89% · −3.7% · −2.3% · −3.3%",
+    "denominated": "slight relief · a global fuel demand squeeze · remain high · a major concern · unless the situation changes",
+    "distinguishability": "High",
+    "fluidKeywords": [
+     "$4.17",
+     "$2.98",
+     "28 February",
+     "$6.29",
+     "$6.53",
+     "$3.46",
+     "6 percent",
+     "under $4",
+     "Qatar",
+     "AAA"
+    ],
+    "denomKeywords": [
+     "slight relief",
+     "squeeze",
+     "remain high",
+     "a major concern"
+    ],
+    "note": "Al Jazeera (LI, non-US horizon) reads the pump as a table: every number on the page is dated and sourced (AAA, the FT, AP-NORC), and the only vehicle is the dek's 'slight relief' and 'squeeze'. Read z −0.13: the first LI page with lines above zero — the market's (oil off 6%, under $4 within a week), conditioned on the talks. The holder's office is constitutive at +0.6 with the cure redated to the war's end"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Fox cut today on the water (fox_2026-11-01_ghost_fleet; one cut per source); The Close 0 items, the thirteenth sweep running"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Breaking Points ×2 on the slate, no transcript on disk; no LP hit on the price"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty — Tucker ×2 owed transcripts, on the slate; the Free Press's six hits on the slate and the economics profession, none on the price"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-11-03",
+   "what": "daily cut over the 11-02 sweep (local copy; no 11-03 sweep on GitHub or on disk at 06:56 PT). Twelve paragraphs read in full via the cloud fetch; eleven scored, two constitutive (the White House spokesperson, to the publication — the holder's office declared @O and principal; my call). Object declared on H1c at the national pump the day before the vote — the first LI page with the pump turned down, the pre-war pump named to the cent ($2.98, 28 February), and the holder's cure redated to the war's end. The two market-index paragraphs scored surface-bound (equity, not the pump); De Haan's forecast filed as a reader's test, not a tracker row",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 13,
+  "tier": "fluid",
+  "declaredZ": 0.6,
+  "readZ": -0.13,
+  "readZRange": [
+   0.2,
+   -0.5
+  ],
+  "stations": {
+   "LI": {
+    "dia": 13,
+    "spread": [
+     6,
+     24
+    ],
+    "readZ": -0.13,
+    "voices": {
+     "AJ": {
+      "dia": 13,
+      "readZ": -0.16,
+      "n": 10
+     },
+     "PD": {
+      "dia": 14,
+      "readZ": 0.2,
+      "n": 1
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "LI",
+   "strength": 0.0,
+   "note": "one station, one plane: the article's table (6–12 at the numbers), the analyst at 14, the predicate at 18, the door at 22–24. No voice climbs past 24; Rule 5 has nothing to show — the article's Dia moves 6→24 only between the pump and the headline. The holder's office sits at the object, unscored, with its own clock"
+  },
+  "lumens": 65,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open"
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "US petrol prices dip ahead of the midterms as voters eye costs; diesel eases to $6.29 — slight relief amid a global fuel demand squeeze",
+   "touch": "F",
+   "z": -0.1,
+   "dia": 24,
+   "mode": "open",
+   "note": "THE DOOR (hed + dek): the direction is down for the first time on an LI page; 'slight relief' and 'squeeze' are the page's only vehicle",
+   "chapter": "The door",
+   "normX": 0.3774,
+   "normY": 0.4204,
+   "normZ": -0.075,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a dip read as slight relief is a price still up"
+  },
+  {
+   "t": 1,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "prices fell as diplomacy to end the war resumed, but remain high before the midterms; the cost of living a major voter concern",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 22,
+   "mode": "open",
+   "note": "the cause named as the talks, not the deal; the gas↔votes predicate (fourteenth sighting) as the page's frame",
+   "chapter": "The door",
+   "normX": 0.4206,
+   "normY": 0.3864,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "still high before the vote is a price not come down"
+  },
+  {
+   "t": 2,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "AAA on Monday: regular $4.17 a gallon, down 12 cents on the week and 23 cents on the month",
+   "touch": "T",
+   "z": -0.1,
+   "dia": 8,
+   "mode": "open",
+   "note": "THE PUMP, NATIONAL, THE DAY BEFORE THE VOTE — the same $4.17 MS NOW read on 11-01, now with its direction",
+   "chapter": "The pump",
+   "normX": 0.4487,
+   "normY": 0.4317,
+   "normZ": -0.075,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "twelve cents off a record is a down week, not a price come down"
+  },
+  {
+   "t": 3,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "$3.04 a year ago; $2.98 on 28 February, the day the US and Israel first struck Iran",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 6,
+   "mode": "open",
+   "note": "THE PRE-WAR PUMP, TO THE CENT — the baseline the Press has lacked; the page dates the price to the war's first morning. The lowest line on the page",
+   "chapter": "The pump",
+   "normX": 0.4512,
+   "normY": 0.4394,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "$1.19 over the war's first morning is a price not come down"
+  },
+  {
+   "t": 4,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "diesel $6.29, down 6 cents on the week; first over $6 in September; peaked at $6.53",
+   "touch": "T",
+   "z": -0.2,
+   "dia": 8,
+   "mode": "open",
+   "note": "DIESEL WITH ITS PEAK — the deal's fuel, 24 cents off its top; the series' high named for the first time",
+   "chapter": "The pump",
+   "normX": 0.4442,
+   "normY": 0.4353,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "diesel 24 cents off a $6.53 peak is the deal's fuel still above six"
+  },
+  {
+   "t": 5,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "FT analysis of federal data: the second-term average petrol price set to pass $3.46 on Monday, above the record set under Biden",
+   "touch": "T",
+   "z": -0.5,
+   "dia": 12,
+   "mode": "open",
+   "note": "THE PROMISE MEASURED OVER THE TERM — the holder's own average against the predecessor's record; the shadow inverted by arithmetic",
+   "chapter": "The record",
+   "normX": 0.4318,
+   "normY": 0.4261,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a term average past the predecessor's record is a promise measured and missed"
+  },
+  {
+   "t": 6,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "oil fell 6 percent on Monday, continuing a slide after in-person talks in Qatar at the weekend",
+   "touch": "T",
+   "z": 0.1,
+   "dia": 10,
+   "mode": "open",
+   "note": "the first line above zero on an LI page on the price — the market prices the war's end (the talks), not the deal",
+   "chapter": "The market",
+   "normX": 0.4346,
+   "normY": 0.4339,
+   "normZ": 0.075,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "oil off six percent on talks is the cause moving, by a market"
+  },
+  {
+   "t": 7,
+   "who": "PD",
+   "station": "LI",
+   "quote": "De Haan (GasBuddy, on X): oil off about 5% points to a 16-cent drop in wholesale gasoline and diesel; the national average could fall below $4 within a week unless the situation changes",
+   "touch": "T",
+   "z": 0.2,
+   "dia": 14,
+   "mode": "open",
+   "note": "THE ANALYST'S FALSIFIER — under $4 by about 11-09, conditioned on the talks; a reader's test, not a tracker row",
+   "chapter": "The market",
+   "normX": 0.4214,
+   "normY": 0.4257,
+   "normZ": 0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a forecast under four within a week is a price coming down, on a condition"
+  },
+  {
+   "t": 8,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "cost of living a top concern; AP-NORC: most Americans want Congress to prioritise it — 78% of Republicans, 89% of Democrats",
+   "touch": "F",
+   "z": -0.2,
+   "dia": 18,
+   "mode": "open",
+   "note": "the predicate polled from both parties — the first bipartisan number on the Press",
+   "chapter": "The vote",
+   "normX": 0.4075,
+   "normY": 0.4183,
+   "normZ": -0.15,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a cost-of-living majority in both parties is a price not felt coming down"
+  },
+  {
+   "t": 9,
+   "who": "TR",
+   "station": "O",
+   "quote": "prices will drop sharply once this conflict comes to an end; the Iran action a national-security necessity",
+   "touch": "O",
+   "z": 0.5,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — THE HOLDER'S OFFICE, THE NEW CLOCK: the cure is the war's end, not the deal (the deal 10-11 → 'soon' 10-24 → 'really fast' 10-29 → 'once this conflict comes to an end' 11-02). Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.375,
+   "quadrant": "T"
+  },
+  {
+   "t": 10,
+   "who": "TR",
+   "station": "O",
+   "quote": "thanks to the exceptional work of the US military, oil flows out of the Persian Gulf exceed pre-conflict levels",
+   "touch": "O",
+   "z": 0.7,
+   "dia": null,
+   "mode": "open",
+   "note": "constitutive — H6 CLAIMED FROM THE HOLDER'S OFFICE in its strongest form yet: above pre-war (the FP 10-30 page had 'near pre-war levels', hedged). Not Dia-scored",
+   "chapter": "The holder",
+   "normX": 0.5,
+   "normY": 0.5,
+   "normZ": 0.525,
+   "quadrant": "T"
+  },
+  {
+   "t": 11,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "oil and gas stocks fell at midday: ConocoPhillips −3.7%, Chevron −2.3%, ExxonMobil −3.3%",
+   "touch": "T",
+   "z": 0.1,
+   "dia": 10,
+   "mode": "surface-bound",
+   "note": "the sellers' equity reads the oil drop — right domain, wrong plane (the refiner's margin, not the pump); surface-bound",
+   "chapter": "The market",
+   "normX": 0.4244,
+   "normY": 0.4458,
+   "normZ": 0.075,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "the majors sold off on cheaper oil is the price's direction, read in equity"
+  },
+  {
+   "t": 12,
+   "who": "AJ",
+   "station": "LI",
+   "quote": "the broader market rose: Nasdaq +0.7%, S&P 500 +0.6%, Dow +1%",
+   "touch": "T",
+   "z": 0.0,
+   "dia": 12,
+   "mode": "surface-bound",
+   "note": "not on the object; surface-bound at zero (kept, as the 11-01 MS NOW precedent; drop it and the page reads a point lower)",
+   "chapter": "The market",
+   "normX": 0.4163,
+   "normY": 0.4442,
+   "normZ": 0.0,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "an index up reads neither way on the pump"
+  }
+ ]
+}
