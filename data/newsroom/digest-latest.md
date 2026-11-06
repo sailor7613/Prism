@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-11-06
 
-Register: 148 objects · this scan: 2 new, 0 seen again, 0 returned.
+Register: 151 objects · this scan: 3 new, 2 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Judge blocks Trump 250 - foot triumphal arch hours after final planning approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 9 outlets (peak 9) · `obj_afederal_250-approval-arch-blocks`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,8 +12,9 @@ Register: 148 objects · this scan: 2 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Judge blocks Trump 250 - foot triumphal arch hours after final planning approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 9 outlets (peak 9) · `obj_afederal_250-approval-arch-blocks`
-- **Ukrainian President Zelenskyy presses Western allies for clear postwar security guarantees** — vote · voted · holder: the President · formed 2026-11-06 · 3 outlets (peak 3) · `obj_thepresi_allies-clear-guarantees-postwar`
+- **Iran War passes 8 - month mark . Here a timeline of major events** — vote · voted · holder: ? · formed 2026-11-06 · 4 outlets (peak 4) · `obj_x_events-here-iran-major`
+- **Philadelphia foster mother charged with murder in death of 10 - year - old girl whose body was found in a trunk** — indictment · charged · holder: ? · formed 2026-11-06 · 3 outlets (peak 3) · `obj_x_body-charged-death-foster`
+- **Washington arch approved for construction by federal panel** — vote · voted · holder: ? · formed 2026-11-06 · 4 outlets (peak 4) · `obj_x_approved-arch-construction-federal`
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
