@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-05T20:07:04.543Z · 15 legislative + 5 news (GDELT, 3d)
+// 2026-11-06T01:39:56.658Z · 15 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.708,
+      "salience": 0.707,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1793909210131,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.699,
+      "salience": 0.698,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -519,11 +519,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.663,
+      "salience": 0.662,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -776,11 +776,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.655,
+      "salience": 0.654,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1033,11 +1033,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.593,
+      "salience": 0.592,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -1946,11 +1946,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.552,
+      "salience": 0.551,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -2474,11 +2474,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.551,
+      "salience": 0.55,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3390,11 +3390,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.529,
+      "salience": 0.528,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4291,11 +4291,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.336,
+      "salience": 0.335,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5190,11 +5190,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148599,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.286,
+      "salience": 0.285,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6332,11 +6332,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.243,
+      "salience": 0.242,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7252,11 +7252,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.242,
+      "salience": 0.241,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8162,11 +8162,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.207,
+      "salience": 0.206,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9080,11 +9080,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.164,
+      "salience": 0.163,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -9960,11 +9960,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1793909210130,
+    "ts": 1793929148600,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.159,
+      "salience": 0.158,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -10834,14 +10834,285 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_collins-defeating-georgia",
+    "cid": "cand_news_chief-civil-dhillon",
     "source": "news",
-    "ts": 1793909224540,
+    "ts": 1793929196654,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.569,
+      "salience": 0.938,
+      "articles": [
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+          "url": "https://whyn.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "whyn.iheart.com",
+          "seendate": "2026-11-06T00:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+          "url": "https://1360kktx.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "1360kktx.iheart.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+          "url": "https://kste.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "kste.iheart.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+          "url": "https://wrno.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "wrno.iheart.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns | News Radio 920 AM & 104 . 7 FM",
+          "url": "https://newsradiori.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "newsradiori.iheart.com",
+          "seendate": "2026-11-05T22:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+          "url": "https://wrko.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "wrko.iheart.com",
+          "seendate": "2026-11-05T22:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns | PowerTalk 1460 AM & 101 . 1 FM",
+          "url": "https://powertalk1460.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "powertalk1460.iheart.com",
+          "seendate": "2026-11-05T22:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns | News Radio 1410 AM & 100 . 9 FM",
+          "url": "https://newsradio1410.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "newsradio1410.iheart.com",
+          "seendate": "2026-11-05T22:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+          "url": "https://wrak.iheart.com/content/2026-11-05-doj-civil-rights-division-chief-harmeet-dhillon-resigns/",
+          "domain": "wrak.iheart.com",
+          "seendate": "2026-11-05T22:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6aecd4fba079d731c060074b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+    "summary": "2026-11-06 whyn.iheart.com: DOJ Civil Rights Division Chief Harmeet Dhillon Resigns\n2026-11-05 1360kktx.iheart.com: DOJ Civil Rights Division Chief Harmeet Dhillon Resigns\n2026-11-05 kste.iheart.com: DOJ Civil Rights Division Chief Harmeet Dhillon Resigns\n2026-11-05 wrno.iheart.com: DOJ Civil Rights Division Chief Harmeet Dhillon Resigns\n2026-11-05 newsradiori.iheart.com: DOJ Civil Rights Division Chief Harmeet Dhillon Resigns | News Radio 920 AM & 104 . 7 FM\n2026-11-05 wrko.iheart.com: DOJ Civil Rights Division Chief Harmeet Dhillon Resigns",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_congress-democrats-lead",
+    "source": "news",
+    "ts": 1793929196653,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.718,
+      "articles": [
+        {
+          "title": "Trump threatens veto power as Democrats prepare to lead Congress",
+          "url": "https://www.wjcl.com/article/trump-threatens-veto-power-as-democrats-prepare-to-lead-congress/74349533",
+          "domain": "wjcl.com",
+          "seendate": "2026-11-06T00:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/c355bd45-cec5-4e5e-bcba-0d8809473ac2.jpg?crop=1xw%3A0.8433382137628112xh%3Bcenter%2Ctop"
+        },
+        {
+          "title": "Trump threatens veto power as Democrats prepare to lead Congress",
+          "url": "https://www.koat.com/article/trump-threatens-veto-power-as-democrats-prepare-to-lead-congress/74349533",
+          "domain": "koat.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/c355bd45-cec5-4e5e-bcba-0d8809473ac2.jpg?crop=1xw%3A0.8433382137628112xh%3Bcenter%2Ctop"
+        },
+        {
+          "title": "Trump threatens veto power as Democrats prepare to lead Congress",
+          "url": "https://www.wgal.com/article/trump-threatens-veto-power-as-democrats-prepare-to-lead-congress/74349533",
+          "domain": "wgal.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/c355bd45-cec5-4e5e-bcba-0d8809473ac2.jpg?crop=1xw%3A0.8433382137628112xh%3Bcenter%2Ctop"
+        },
+        {
+          "title": "Trump threatens veto power as Democrats prepare to lead Congress",
+          "url": "https://www.wmtw.com/article/trump-threatens-veto-power-as-democrats-prepare-to-lead-congress/74349533",
+          "domain": "wmtw.com",
+          "seendate": "2026-11-05T23:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/c355bd45-cec5-4e5e-bcba-0d8809473ac2.jpg?crop=1xw%3A0.8433382137628112xh%3Bcenter%2Ctop"
+        },
+        {
+          "title": "Trump threatens veto power as Democrats prepare to lead Congress",
+          "url": "https://www.kmbc.com/article/trump-threatens-veto-power-as-democrats-prepare-to-lead-congress/74349533",
+          "domain": "kmbc.com",
+          "seendate": "2026-11-05T22:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/c355bd45-cec5-4e5e-bcba-0d8809473ac2.jpg?crop=1xw%3A0.8433382137628112xh%3Bcenter%2Ctop"
+        }
+      ]
+    },
+    "title": "Trump threatens veto power as Democrats prepare to lead Congress",
+    "summary": "2026-11-06 wjcl.com: Trump threatens veto power as Democrats prepare to lead Congress\n2026-11-05 koat.com: Trump threatens veto power as Democrats prepare to lead Congress\n2026-11-05 wgal.com: Trump threatens veto power as Democrats prepare to lead Congress\n2026-11-05 wmtw.com: Trump threatens veto power as Democrats prepare to lead Congress\n2026-11-05 kmbc.com: Trump threatens veto power as Democrats prepare to lead Congress",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_consideration-hegseth-not",
+    "source": "news",
+    "ts": 1793929196654,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.611,
+      "articles": [
+        {
+          "title": "Hegseth not under consideration for Tennessee Senate seat : AP source",
+          "url": "https://www.bostonherald.com/2026/11/05/tennessee-senate-pete-hegseth/",
+          "domain": "bostonherald.com",
+          "seendate": "2026-11-06T01:00:00Z",
+          "image": "https://www.bostonherald.com/wp-content/uploads/2026/11/Alabama_Tennessee_Hegseth_Football_7267_.jpg"
+        },
+        {
+          "title": "Hegseth not under consideration for Tennessee Senate seat : AP source",
+          "url": "https://www.sandiegouniontribune.com/2026/11/05/tennessee-senate-pete-hegseth/",
+          "domain": "sandiegouniontribune.com",
+          "seendate": "2026-11-06T00:30:00Z",
+          "image": "https://www.sandiegouniontribune.com/wp-content/uploads/2026/11/Alabama_Tennessee_Hegseth_Football_7267_.jpg"
+        },
+        {
+          "title": "Hegseth is not under consideration as jockeying begins for Tennessee Senate seat , AP source says - Las Vegas Sun News",
+          "url": "https://lasvegassun.com/news/2026/nov/05/hegseth-is-not-under-consideration-as-jockeying-be/",
+          "domain": "lasvegassun.com",
+          "seendate": "2026-11-06T00:30:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "Hegseth not under consideration for Tennessee Senate seat : AP source",
+    "summary": "2026-11-06 bostonherald.com: Hegseth not under consideration for Tennessee Senate seat : AP source\n2026-11-06 sandiegouniontribune.com: Hegseth not under consideration for Tennessee Senate seat : AP source\n2026-11-06 lasvegassun.com: Hegseth is not under consideration as jockeying begins for Tennessee Senate seat , AP source says - Las Vegas Sun News",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_court-let-not",
+    "source": "news",
+    "ts": 1793929196653,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.608,
+      "articles": [
+        {
+          "title": "Senate Democrats will not let Trump put a  right - winger  on the Supreme Court , Schumer vows",
+          "url": "https://isp.netscape.com:443/news/story/0001/20261105/d8d5262fe3d820a3dc73193002f0f27e",
+          "domain": "isp.netscape.com",
+          "seendate": "2026-11-06T00:30:00Z",
+          "image": null
+        },
+        {
+          "title": "Schumer Vows Not to Let Trump Place  Right - Winger  on Supreme Court",
+          "url": "https://www.theepochtimes.com/us/schumer-vows-not-to-let-trump-place-right-winger-on-supreme-court-6118700",
+          "domain": "theepochtimes.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://img.theepochtimes.com/assets/uploads/2026/11/05/id6118772-GettyImages-2303025073-1080x720.jpg"
+        },
+        {
+          "title": "Senate Democrats will not let Trump put a  right - winger  on the Supreme Court , Schumer vows",
+          "url": "https://www.click2houston.com/news/politics/2026/11/05/senate-democrats-will-not-let-trump-put-a-right-winger-on-the-supreme-court-schumer-vows/",
+          "domain": "click2houston.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/KPKQYHSU4ZHLXCLWWWAQMSHXBE.jpg?api_key=click2houston_85fdeb57f8cd3635"
+        }
+      ]
+    },
+    "title": "Senate Democrats will not let Trump put a  right - winger  on the Supreme Court , Schumer vows",
+    "summary": "2026-11-06 isp.netscape.com: Senate Democrats will not let Trump put a  right - winger  on the Supreme Court , Schumer vows\n2026-11-05 theepochtimes.com: Schumer Vows Not to Let Trump Place  Right - Winger  on Supreme Court\n2026-11-05 click2houston.com: Senate Democrats will not let Trump put a  right - winger  on the Supreme Court , Schumer vows",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_congress-democratic-impeachment",
+    "source": "news",
+    "ts": 1793929196653,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.608,
+      "articles": [
+        {
+          "title": "What next for a Democratic Congress : Oversight . Maybe impeachment . ",
+          "url": "https://www.wjcl.com/article/whats-next-democratic-congress-oversight-impeachment/74350410",
+          "domain": "wjcl.com",
+          "seendate": "2026-11-06T00:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/9f72c198-d1c2-4eba-861f-5260f6b591ea.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0865xh"
+        },
+        {
+          "title": "What next for a Democratic Congress : Oversight . Maybe impeachment . ",
+          "url": "https://www.koat.com/article/whats-next-democratic-congress-oversight-impeachment/74350410",
+          "domain": "koat.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/9f72c198-d1c2-4eba-861f-5260f6b591ea.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0865xh"
+        },
+        {
+          "title": "What next for a Democratic Congress : Oversight . Maybe impeachment . ",
+          "url": "https://www.wgal.com/article/whats-next-democratic-congress-oversight-impeachment/74350410",
+          "domain": "wgal.com",
+          "seendate": "2026-11-05T23:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/9f72c198-d1c2-4eba-861f-5260f6b591ea.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0865xh"
+        }
+      ]
+    },
+    "title": "What next for a Democratic Congress : Oversight . Maybe impeachment . ",
+    "summary": "2026-11-06 wjcl.com: What next for a Democratic Congress : Oversight . Maybe impeachment . \n2026-11-05 koat.com: What next for a Democratic Congress : Oversight . Maybe impeachment . \n2026-11-05 wgal.com: What next for a Democratic Congress : Oversight . Maybe impeachment . ",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_collins-defeating-georgia",
+    "source": "news",
+    "ts": 1793929196653,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.314,
       "articles": [
         {
           "title": "Democratic Sen . Ossoff Wins Reelection in Georgia , Defeating Trump - Backed Collins",
@@ -10863,132 +11134,11 @@ window.PRISM_CANDIDATES = [
           "domain": "knpr.org",
           "seendate": "2026-11-04T01:30:00Z",
           "image": "http://npr-brightspot.s3.amazonaws.com/2a/9b/5f0048314f919a511997c05131ff/ap26304584937038.jpg"
-        },
-        {
-          "title": "Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins",
-          "url": "https://www.wxxinews.org/npr-news/2026-11-03/jon-ossoff-wins-reelection-in-georgia-easily-defeating-republican-mike-collins",
-          "domain": "wxxinews.org",
-          "seendate": "2026-11-04T01:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/2a/9b/5f0048314f919a511997c05131ff/ap26304584937038.jpg"
-        },
-        {
-          "title": "Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins",
-          "url": "https://www.ksut.org/2026-11-03/jon-ossoff-wins-reelection-in-georgia-easily-defeating-republican-mike-collins",
-          "domain": "ksut.org",
-          "seendate": "2026-11-04T01:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/2a/9b/5f0048314f919a511997c05131ff/ap26304584937038.jpg"
-        },
-        {
-          "title": "Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins",
-          "url": "https://www.southcarolinapublicradio.org/news/2026-11-03/jon-ossoff-wins-reelection-in-georgia-easily-defeating-republican-mike-collins",
-          "domain": "southcarolinapublicradio.org",
-          "seendate": "2026-11-04T01:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/2a/9b/5f0048314f919a511997c05131ff/ap26304584937038.jpg"
-        },
-        {
-          "title": "Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins",
-          "url": "https://www.ksmu.org/2026-11-03/jon-ossoff-wins-reelection-in-georgia-easily-defeating-republican-mike-collins",
-          "domain": "ksmu.org",
-          "seendate": "2026-11-04T01:30:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/2a/9b/5f0048314f919a511997c05131ff/ap26304584937038.jpg"
         }
       ]
     },
-    "title": "Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins",
-    "summary": "2026-11-04 theepochtimes.com: Democratic Sen . Ossoff Wins Reelection in Georgia , Defeating Trump - Backed Collins\n2026-11-04 idahopress.com: Georgia Sen . Jon Ossoff wins reelection , defeating Rep . Mike Collins to hold a key Democratic seat\n2026-11-04 knpr.org: Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins\n2026-11-04 wxxinews.org: Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins\n2026-11-04 ksut.org: Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins\n2026-11-04 southcarolinapublicradio.org: Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_can-children-couples",
-    "source": "news",
-    "ts": 1793909224540,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.349,
-      "articles": [
-        {
-          "title": "SCOTUS prepared to rule publicly funded religious schools can reject children of same - sex couples",
-          "url": "https://www.wyff4.com/article/supreme-court-publicly-funded-religious-schools-children-same-sex-couples/74325090",
-          "domain": "wyff4.com",
-          "seendate": "2026-11-04T01:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/54b3451f-e40e-409d-8763-1c7d19bc4133.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0577xh"
-        },
-        {
-          "title": "SCOTUS prepared to rule publicly funded religious schools can reject children of same - sex couples",
-          "url": "https://www.ksbw.com/article/supreme-court-publicly-funded-religious-schools-children-same-sex-couples/74325090",
-          "domain": "ksbw.com",
-          "seendate": "2026-11-04T01:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/54b3451f-e40e-409d-8763-1c7d19bc4133.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0577xh"
-        },
-        {
-          "title": "SCOTUS prepared to rule publicly funded religious schools can reject children of same - sex couples",
-          "url": "https://www.ketv.com/article/supreme-court-publicly-funded-religious-schools-children-same-sex-couples/74325090",
-          "domain": "ketv.com",
-          "seendate": "2026-11-04T01:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/54b3451f-e40e-409d-8763-1c7d19bc4133.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0577xh"
-        }
-      ]
-    },
-    "title": "SCOTUS prepared to rule publicly funded religious schools can reject children of same - sex couples",
-    "summary": "2026-11-04 wyff4.com: SCOTUS prepared to rule publicly funded religious schools can reject children of same - sex couples\n2026-11-04 ksbw.com: SCOTUS prepared to rule publicly funded religious schools can reject children of same - sex couples\n2026-11-04 ketv.com: SCOTUS prepared to rule publicly funded religious schools can reject children of same - sex couples",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_admissions-dismisses-harvard",
-    "source": "news",
-    "ts": 1793909224540,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.315,
-      "articles": [
-        {
-          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
-          "url": "https://1190kex.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
-          "domain": "1190kex.iheart.com",
-          "seendate": "2026-11-03T11:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
-          "url": "https://wflaorlando.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
-          "domain": "wflaorlando.iheart.com",
-          "seendate": "2026-11-03T11:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
-          "url": "https://wflanews.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
-          "domain": "wflanews.iheart.com",
-          "seendate": "2026-11-03T11:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records | News Radio 101 . 9 Big WAAX",
-          "url": "https://1019bigwaax.iheart.com/content/2026-11-03-judge-dismisses-trump-suit-over-harvard-admissions-records/",
-          "domain": "1019bigwaax.iheart.com",
-          "seendate": "2026-11-03T11:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ae97cb8a079d731c06006dd?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        }
-      ]
-    },
-    "title": "Judge Dismisses Trump Suit Over Harvard Admissions Records",
-    "summary": "2026-11-03 1190kex.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records\n2026-11-03 wflaorlando.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records\n2026-11-03 wflanews.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records\n2026-11-03 1019bigwaax.iheart.com: Judge Dismisses Trump Suit Over Harvard Admissions Records | News Radio 101 . 9 Big WAAX",
+    "title": "Georgia Sen . Jon Ossoff wins reelection , defeating Rep . Mike Collins to hold a key Democratic seat",
+    "summary": "2026-11-04 theepochtimes.com: Democratic Sen . Ossoff Wins Reelection in Georgia , Defeating Trump - Backed Collins\n2026-11-04 idahopress.com: Georgia Sen . Jon Ossoff wins reelection , defeating Rep . Mike Collins to hold a key Democratic seat\n2026-11-04 knpr.org: Jon Ossoff wins reelection in Georgia , easily defeating Republican Mike Collins",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11000,13 +11150,20 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeal-ballot-court",
     "source": "news",
-    "ts": 1793909224540,
+    "ts": 1793929196654,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.258,
+      "salience": 0.224,
       "articles": [
+        {
+          "title": "Supreme Court Denies Trump Mail - In Ballot Appeal",
+          "url": "https://wmanfm.iheart.com/content/2026-11-02-supreme-court-denies-trumps-mail-in-ballot-appeal/",
+          "domain": "wmanfm.iheart.com",
+          "seendate": "2026-11-03T02:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6ae91ca0c14554b5ec1563d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
         {
           "title": "Supreme Court Denies Trump Mail - In Ballot Appeal",
           "url": "https://790waeb.iheart.com/content/2026-11-02-supreme-court-denies-trumps-mail-in-ballot-appeal/",
@@ -11027,61 +11184,11 @@ window.PRISM_CANDIDATES = [
           "domain": "wtag.iheart.com",
           "seendate": "2026-11-03T02:15:00Z",
           "image": "https://i.iheart.com/v3/re/assets.getty/6ae91ca0c14554b5ec1563d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Supreme Court Denies Trump Mail - In Ballot Appeal",
-          "url": "https://wmanfm.iheart.com/content/2026-11-02-supreme-court-denies-trumps-mail-in-ballot-appeal/",
-          "domain": "wmanfm.iheart.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6ae91ca0c14554b5ec1563d3?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
     "title": "Supreme Court Denies Trump Mail - In Ballot Appeal",
-    "summary": "2026-11-03 790waeb.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal\n2026-11-03 newstalk1230.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal\n2026-11-03 wtag.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal\n2026-11-03 wmanfm.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_congress-control-fight",
-    "source": "news",
-    "ts": 1793909224540,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.203,
-      "articles": [
-        {
-          "title": "Trump makes final midterm pitch as Republican fight to keep control of Congress",
-          "url": "https://wjla.com/news/nation-world/trump-makes-final-midterm-pitch-as-republican-fight-to-keep-control-of-congress-republicans-president-americans-washington",
-          "domain": "wjla.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://wjla.com/resources/media2/16x9/7404/1320/0x386/90/3b9ec889-fdf0-4ec8-b787-f0e623d0b4a4-GettyImages2303178734.jpg"
-        },
-        {
-          "title": "Trump makes final midterm pitch as Republican fight to keep control of Congress",
-          "url": "https://wwmt.com/news/nation-world/trump-makes-final-midterm-pitch-as-republican-fight-to-keep-control-of-congress-republicans-president-americans-washington",
-          "domain": "wwmt.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://wwmt.com/resources/media2/16x9/7404/1320/0x386/90/3b9ec889-fdf0-4ec8-b787-f0e623d0b4a4-GettyImages2303178734.jpg"
-        },
-        {
-          "title": "Trump makes final midterm pitch as Republican fight to keep control of Congress",
-          "url": "https://upnorthlive.com/news/nation-world/trump-makes-final-midterm-pitch-as-republican-fight-to-keep-control-of-congress-republicans-president-americans-washington",
-          "domain": "upnorthlive.com",
-          "seendate": "2026-11-03T02:15:00Z",
-          "image": "https://upnorthlive.com/resources/media2/16x9/7404/1320/0x386/90/3b9ec889-fdf0-4ec8-b787-f0e623d0b4a4-GettyImages2303178734.jpg"
-        }
-      ]
-    },
-    "title": "Trump makes final midterm pitch as Republican fight to keep control of Congress",
-    "summary": "2026-11-03 wjla.com: Trump makes final midterm pitch as Republican fight to keep control of Congress\n2026-11-03 wwmt.com: Trump makes final midterm pitch as Republican fight to keep control of Congress\n2026-11-03 upnorthlive.com: Trump makes final midterm pitch as Republican fight to keep control of Congress",
+    "summary": "2026-11-03 wmanfm.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal\n2026-11-03 790waeb.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal\n2026-11-03 newstalk1230.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal\n2026-11-03 wtag.iheart.com: Supreme Court Denies Trump Mail - In Ballot Appeal",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
