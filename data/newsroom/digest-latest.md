@@ -1,9 +1,10 @@
 # Newsroom digest — 2026-11-06
 
-Register: 143 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 146 objects · this scan: 3 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 25 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction`
+- **DOJ Seeks To Overturn Steve Bannon Conviction** — ruling · ruled · holder: the Justice Department · formed 2026-11-06 · 17 outlets (peak 17) · `obj_thejusti_bannon-conviction-doj-overturn`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +13,9 @@ Register: 143 objects · this scan: 0 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 25 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction`
+- **Trump Declares Oval Office A National Monument** — law · signed · holder: ? · formed 2026-11-06 · 21 outlets (peak 21) · `obj_x_declares-monument-national-office`
+- **DOJ Seeks To Overturn Steve Bannon Conviction** — ruling · ruled · holder: the Justice Department · formed 2026-11-06 · 17 outlets (peak 17) · `obj_thejusti_bannon-conviction-doj-overturn`
 
 ## Watching (45)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
