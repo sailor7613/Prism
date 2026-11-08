@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-11-08
 
-Register: 154 objects · this scan: 2 new, 0 seen again, 0 returned.
+Register: 154 objects · this scan: 0 new, 0 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Paraguay President Pena impeached , placed under house arrest in bank collapse scandal** — appointment · personnel · holder: the President · formed 2026-11-07 · 4 outlets (peak 4) · `obj_thepresi_arrest-bank-collapse-house`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **The Supreme Court rejects a DOJ push to separate California ballots** — vote · voted · holder: a federal court · formed 2026-11-03 · 6 outlets (peak 6) · `obj_afederal_ballots-california-court-doj` · silent 5d after 4 scans
@@ -14,8 +14,7 @@ Register: 154 objects · this scan: 2 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Paraguay President Pena impeached , placed under house arrest in bank collapse scandal** — appointment · personnel · holder: the President · formed 2026-11-07 · 4 outlets (peak 4) · `obj_thepresi_arrest-bank-collapse-house`
-- **44 - 1 : Voters reject data centers in communities on Election Day** — vote · voted · holder: ? · formed 2026-11-07 · 3 outlets (peak 3) · `obj_x_centers-communities-data-day`
+- none
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
