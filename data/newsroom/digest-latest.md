@@ -1,4 +1,4 @@
-# Newsroom digest — 2026-11-08
+# Newsroom digest — 2026-11-09
 
 Register: 154 objects · this scan: 0 new, 0 seen again, 0 returned.
 
@@ -6,9 +6,7 @@ Register: 154 objects · this scan: 0 new, 0 seen again, 0 returned.
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **The Supreme Court rejects a DOJ push to separate California ballots** — vote · voted · holder: a federal court · formed 2026-11-03 · 6 outlets (peak 6) · `obj_afederal_ballots-california-court-doj` · silent 5d after 4 scans
-- **Judge Dismisses Trump Suit Over Harvard Admissions Records** — ruling · ruled · holder: a federal court · formed 2026-11-03 · 4 outlets (peak 4) · `obj_afederal_admissions-dismisses-harvard-judge` · silent 5d after 2 scans
-- **California cosmetic dermatologist convicted in stunning case of Medicare fraud** — indictment · charged · holder: ? · formed 2026-11-03 · 6 outlets (peak 6) · `obj_x_california-case-convicted-cosmetic` · silent 5d after 6 scans
+- none today
 
 ## Returned after a break
 - none today
