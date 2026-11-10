@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-09T22:32:29.057Z · 15 legislative + 10 news (GDELT, 3d)
+// 2026-11-10T07:31:19.260Z · 16 legislative + 11 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1794263494679,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.69,
+      "salience": 0.689,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -262,11 +262,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1794263494679,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.681,
+      "salience": 0.679,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -517,13 +517,269 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
+    "cid": "cand_leg_hr-119-2347",
+    "source": "legislative",
+    "ts": 1794295856726,
+    "raw": {
+      "method": "legislative_rollcall_v1",
+      "billId": "hr-119-2347",
+      "salience": 0.664,
+      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2347",
+      "votes": [
+        {
+          "voteId": "s-119-2-257",
+          "chamber": "senate",
+          "date": "November 9, 2026,  05:31 PM",
+          "question": "On Cloture on the Motion to Proceed",
+          "result": "Cloture on the Motion to Proceed Agreed to",
+          "margin": 0.49,
+          "totals": {
+            "yea": 73,
+            "nay": 25,
+            "present": 0,
+            "notVoting": 2
+          },
+          "party": {
+            "D": {
+              "yea": 21,
+              "nay": 23
+            },
+            "R": {
+              "yea": 51,
+              "nay": 1
+            },
+            "I": {
+              "yea": 1,
+              "nay": 1
+            }
+          },
+          "positions": {
+            "yea": [
+              "B001299",
+              "B001261",
+              "B001243",
+              "B001277",
+              "B001236",
+              "B001319",
+              "B001305",
+              "C001047",
+              "C001075",
+              "C001035",
+              "C001088",
+              "C001056",
+              "C001113",
+              "C001095",
+              "C001096",
+              "C000880",
+              "C001098",
+              "C001114",
+              "D000618",
+              "E000295",
+              "F000479",
+              "F000463",
+              "G000574",
+              "G000555",
+              "G000359",
+              "G000386",
+              "H000601",
+              "H001089",
+              "H001046",
+              "H000273",
+              "H001061",
+              "H001104",
+              "H001079",
+              "J000293",
+              "J000312",
+              "K000393",
+              "K000394",
+              "K000383",
+              "K000367",
+              "L000575",
+              "L000577",
+              "L000571",
+              "M001198",
+              "M000355",
+              "M001243",
+              "M001244",
+              "M000934",
+              "M001242",
+              "M001153",
+              "O000174",
+              "P000603",
+              "P000595",
+              "R000122",
+              "R000618",
+              "R000584",
+              "R000608",
+              "S001194",
+              "S001227",
+              "S000148",
+              "S001217",
+              "S001184",
+              "S001181",
+              "S001208",
+              "S001198",
+              "T000250",
+              "T000476",
+              "T000278",
+              "W000805",
+              "W000790",
+              "W000802",
+              "W000437",
+              "Y000064"
+            ],
+            "nay": [
+              "A000382",
+              "B001230",
+              "B001267",
+              "B001303",
+              "B001288",
+              "C000127",
+              "D000622",
+              "D000563",
+              "H001076",
+              "H001042",
+              "K000384",
+              "K000377",
+              "M000133",
+              "M001176",
+              "M001111",
+              "P000145",
+              "R000605",
+              "S000033",
+              "S001150",
+              "S001203",
+              "V000128",
+              "W000817",
+              "W000800",
+              "W000779"
+            ],
+            "present": [],
+            "notVoting": [
+              "M001169",
+              "S001232"
+            ]
+          }
+        }
+      ]
+    },
+    "title": "Survivor Justice Tax Prevention Act",
+    "summary": "2026-11-09 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Agreed to (73-25; D 21-23 · R 51-1 · I 1-1)",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [
+      "B001299",
+      "B001261",
+      "B001243",
+      "B001277",
+      "B001236",
+      "B001319",
+      "B001305",
+      "C001047",
+      "C001075",
+      "C001035",
+      "C001088",
+      "C001056",
+      "C001113",
+      "C001095",
+      "C001096",
+      "C000880",
+      "C001098",
+      "C001114",
+      "D000618",
+      "E000295",
+      "F000479",
+      "F000463",
+      "G000574",
+      "G000555",
+      "G000359",
+      "G000386",
+      "H000601",
+      "H001089",
+      "H001046",
+      "H000273",
+      "H001061",
+      "H001104",
+      "H001079",
+      "J000293",
+      "J000312",
+      "K000393",
+      "K000394",
+      "K000383",
+      "K000367",
+      "L000575",
+      "L000577",
+      "L000571",
+      "M001198",
+      "M000355",
+      "M001243",
+      "M001244",
+      "M000934",
+      "M001242",
+      "M001153",
+      "O000174",
+      "P000603",
+      "P000595",
+      "R000122",
+      "R000618",
+      "R000584",
+      "R000608",
+      "S001194",
+      "S001227",
+      "S000148",
+      "S001217",
+      "S001184",
+      "S001181",
+      "S001208",
+      "S001198",
+      "T000250",
+      "T000476",
+      "T000278",
+      "W000805",
+      "W000790",
+      "W000802",
+      "W000437",
+      "Y000064",
+      "A000382",
+      "B001230",
+      "B001267",
+      "B001303",
+      "B001288",
+      "C000127",
+      "D000622",
+      "D000563",
+      "H001076",
+      "H001042",
+      "K000384",
+      "K000377",
+      "M000133",
+      "M001176",
+      "M001111",
+      "P000145",
+      "R000605",
+      "S000033",
+      "S001150",
+      "S001203",
+      "V000128",
+      "W000817",
+      "W000800",
+      "W000779"
+    ],
+    "bills": [
+      "hr-119-2347"
+    ],
+    "fitness": null,
+    "status": "new"
+  },
+  {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1794263494679,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.645,
+      "salience": 0.643,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -776,11 +1032,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856725,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.637,
+      "salience": 0.635,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1033,11 +1289,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856725,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.575,
+      "salience": 0.573,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -1946,11 +2202,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.533,
+      "salience": 0.532,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -2474,11 +2730,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1794263494679,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.533,
+      "salience": 0.531,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3390,11 +3646,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856725,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.51,
+      "salience": 0.509,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4291,11 +4547,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856725,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.318,
+      "salience": 0.316,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5190,11 +5446,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856725,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.23,
+      "salience": 0.228,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6102,11 +6358,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.225,
+      "salience": 0.223,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7022,11 +7278,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1794263494679,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.223,
+      "salience": 0.222,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -7932,11 +8188,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856726,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.189,
+      "salience": 0.187,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -8850,11 +9106,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856725,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.146,
+      "salience": 0.144,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -9730,11 +9986,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1794263494678,
+    "ts": 1794295856725,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.141,
+      "salience": 0.139,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -10604,82 +10860,280 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_dana-press-secretary",
+    "cid": "cand_news_dana-offer-press",
     "source": "news",
-    "ts": 1794263549052,
+    "ts": 1794295879255,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.838,
+      "salience": 0.99,
       "articles": [
         {
-          "title": "Trump : Dana White press secretary offer was a joke",
-          "url": "https://www.wesh.com/article/trump-dana-white-press-secretary-offer-joke/74370211",
-          "domain": "wesh.com",
-          "seendate": "2026-11-09T05:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/75c46ce4-61f7-4f02-b20a-89c36b6bd8bf.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "Dana White Declines Trump Press Secretary Offer | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX",
+          "url": "https://newstalk1400online.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "newstalk1400online.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump : Dana White press secretary offer was a joke",
-          "url": "https://www.wxii12.com/article/trump-dana-white-press-secretary-offer-joke/74370211",
-          "domain": "wxii12.com",
-          "seendate": "2026-11-09T02:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/75c46ce4-61f7-4f02-b20a-89c36b6bd8bf.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://1190kex.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "1190kex.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump : Dana White press secretary offer was a joke",
-          "url": "https://www.wmur.com/article/trump-dana-white-press-secretary-offer-joke/74370211",
-          "domain": "wmur.com",
-          "seendate": "2026-11-09T02:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/75c46ce4-61f7-4f02-b20a-89c36b6bd8bf.jpg?crop=1.00xw%3A1.00xh%3B0%2C0"
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://whnz.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "whnz.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "UFC Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-          "url": "https://www.krgv.com/news/ufc-s-dana-white-says-he-will-meet-with-trump-monday-over-offer-to-be-white-house-press-secretary/",
-          "domain": "krgv.com",
-          "seendate": "2026-11-09T02:00:00Z",
-          "image": "https://dcer237tfveol.cloudfront.net/v2/ZfoBSKxl4sy9WapEquVCdAEukd_Zq1C6NmmHXqF4ej9Thy6N6PMPE_n62z8xTxUQbcnYKOf60MqNrMgUImjQAIz74YeebeZL0gDQU4jqxRC8vkeDrQv8gA_2DXjWFziBw"
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://wflafm.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "wflafm.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "UFC Dana White says he will meet with Trump Monday over offer to be White House press secretary",
-          "url": "https://www.ky3.com/2026/11/08/ufcs-dana-white-says-he-will-meet-with-trump-monday-over-offer-be-white-house-press-secretary/",
-          "domain": "ky3.com",
-          "seendate": "2026-11-08T19:00:00Z",
-          "image": "https://gray-ky3-prod.gtv-cdn.com/resizer/v2/6GSXC5P35FEJXP5SL5ZTX4W4YE.jpg?auth=c3ea2bb581d717aa131f136bb518bca28e72b2bfa904634df342887fc508c3e0&smart=true"
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://570wkbn.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "570wkbn.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump says he asked UFC Dana White to be his press secretary",
-          "url": "https://www.mercurynews.com/2026/11/07/trump-says-hes-asked-ufcs-dana-white-to-be-his-press-secretary-no-one-will-say-if-hes-joking/",
-          "domain": "mercurynews.com",
-          "seendate": "2026-11-08T00:00:00Z",
-          "image": "https://www.mercurynews.com/wp-content/uploads/2026/11/Trump_423_7-1.jpg"
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://wtkg.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "wtkg.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump says he asked UFC Dana White to be his press secretary . No one will say if he joking",
-          "url": "https://www.wral.com/news/ap/3fdad-trump-says-hes-asked-ufcs-dana-white-to-be-his-press-secretary-no-one-will-say-if-hes-joking/",
-          "domain": "wral.com",
-          "seendate": "2026-11-07T22:00:00Z",
-          "image": "https://images.wral.com/fe32c1f5-2983-5244-96d8-6a74c1308282"
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://710wor.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "710wor.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump says he asked UFC Dana White to be his press secretary . No one will say if he joking",
-          "url": "https://www.clickondetroit.com/news/politics/2026/11/07/trump-says-hes-asked-ufcs-dana-white-to-be-his-press-secretary-no-one-will-say-if-hes-joking/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-11-07T22:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QKUPTZTE7RCTLHCECBOX2C2NXA.jpg?api_key=clickondetroit_06f87fefb2123598"
+          "title": "Dana White Declines Trump Press Secretary Offer | News Radio 920 AM & 104 . 7 FM",
+          "url": "https://newsradiori.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "newsradiori.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         },
         {
-          "title": "Trump says he asked UFC Dana White to be his press secretary . No one will say if he joking",
-          "url": "https://www.wsls.com/news/politics/2026/11/07/trump-says-hes-asked-ufcs-dana-white-to-be-his-press-secretary-no-one-will-say-if-hes-joking/",
-          "domain": "wsls.com",
-          "seendate": "2026-11-07T22:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/QKUPTZTE7RCTLHCECBOX2C2NXA.jpg?api_key=wsls_8c3a4bc35af7684e"
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://1190talkradio.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "1190talkradio.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://newsradio910wltp.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "newsradio910wltp.iheart.com",
+          "seendate": "2026-11-10T06:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://790waeb.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "790waeb.iheart.com",
+          "seendate": "2026-11-10T05:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Dana White Declines Trump Press Secretary Offer",
+          "url": "https://wtag.iheart.com/content/2026-11-10-dana-white-declines-trumps-press-secretary-offer/",
+          "domain": "wtag.iheart.com",
+          "seendate": "2026-11-10T05:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af28aee2dfa2ee989b7b60b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
         }
       ]
     },
-    "title": "Trump : Dana White press secretary offer was a joke",
-    "summary": "2026-11-09 wesh.com: Trump : Dana White press secretary offer was a joke\n2026-11-09 wxii12.com: Trump : Dana White press secretary offer was a joke\n2026-11-09 wmur.com: Trump : Dana White press secretary offer was a joke\n2026-11-09 krgv.com: UFC Dana White says he will meet with Trump Monday over offer to be White House press secretary\n2026-11-08 ky3.com: UFC Dana White says he will meet with Trump Monday over offer to be White House press secretary\n2026-11-08 mercurynews.com: Trump says he asked UFC Dana White to be his press secretary",
+    "title": "Dana White Declines Trump Press Secretary Offer",
+    "summary": "2026-11-10 newstalk1400online.iheart.com: Dana White Declines Trump Press Secretary Offer | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX\n2026-11-10 1190kex.iheart.com: Dana White Declines Trump Press Secretary Offer\n2026-11-10 whnz.iheart.com: Dana White Declines Trump Press Secretary Offer\n2026-11-10 wflafm.iheart.com: Dana White Declines Trump Press Secretary Offer\n2026-11-10 570wkbn.iheart.com: Dana White Declines Trump Press Secretary Offer\n2026-11-10 wtkg.iheart.com: Dana White Declines Trump Press Secretary Offer",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_border-construction-scotus",
+    "source": "news",
+    "ts": 1794295879254,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.962,
+      "articles": [
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas | NewsTalk WMEQ",
+          "url": "https://wmeq.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "wmeq.iheart.com",
+          "seendate": "2026-11-10T01:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://wsyr.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "wsyr.iheart.com",
+          "seendate": "2026-11-10T01:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Nukes Blockade On Trump Border Wall Construction",
+          "url": "https://thefederalist.com/2026/11/09/scotus-nukes-blockade-on-trumps-border-wall-construction/",
+          "domain": "thefederalist.com",
+          "seendate": "2026-11-10T01:30:00Z",
+          "image": "https://thefederalist.com/wp-content/uploads/2026/10/Border-Wall.jpg"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX",
+          "url": "https://newstalk1400online.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "newstalk1400online.iheart.com",
+          "seendate": "2026-11-10T01:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://kprcradio.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "kprcradio.iheart.com",
+          "seendate": "2026-11-10T01:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://710wor.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "710wor.iheart.com",
+          "seendate": "2026-11-10T01:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://ktsmradio.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "ktsmradio.iheart.com",
+          "seendate": "2026-11-10T01:00:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://wmanfm.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "wmanfm.iheart.com",
+          "seendate": "2026-11-10T00:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://wtag.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "wtag.iheart.com",
+          "seendate": "2026-11-10T00:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://ktok.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "ktok.iheart.com",
+          "seendate": "2026-11-10T00:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+          "url": "https://970kfbx.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "970kfbx.iheart.com",
+          "seendate": "2026-11-10T00:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "SCOTUS Allows Trump Border Wall Construction In Texas | News Talk 1090 WKBZ - AM",
+          "url": "https://newstalk1090.iheart.com/content/2026-11-09-scotus-allows-trump-border-wall-construction-in-texas/",
+          "domain": "newstalk1090.iheart.com",
+          "seendate": "2026-11-10T00:30:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6af22e63bc8f90db5c7f27b4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "SCOTUS Allows Trump Border Wall Construction In Texas",
+    "summary": "2026-11-10 wmeq.iheart.com: SCOTUS Allows Trump Border Wall Construction In Texas | NewsTalk WMEQ\n2026-11-10 wsyr.iheart.com: SCOTUS Allows Trump Border Wall Construction In Texas\n2026-11-10 thefederalist.com: SCOTUS Nukes Blockade On Trump Border Wall Construction\n2026-11-10 newstalk1400online.iheart.com: SCOTUS Allows Trump Border Wall Construction In Texas | Newstalk 1400 , 104 . 5 , and 105 . 9 WJMX\n2026-11-10 kprcradio.iheart.com: SCOTUS Allows Trump Border Wall Construction In Texas\n2026-11-10 710wor.iheart.com: SCOTUS Allows Trump Border Wall Construction In Texas",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_appears-briefing-dana",
+    "source": "news",
+    "ts": 1794295879255,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.816,
+      "articles": [
+        {
+          "title": "UFC Dana White appears with Trump at a White House briefing",
+          "url": "https://www.wmur.com/article/dana-white-trump-white-house-briefing/74381719",
+          "domain": "wmur.com",
+          "seendate": "2026-11-10T04:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d4f69a1b-1374-4923-b46b-eaa291c77224.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "UFC Dana White appears with Trump at a White House briefing",
+          "url": "https://www.wlwt.com/article/dana-white-trump-white-house-briefing/74381719",
+          "domain": "wlwt.com",
+          "seendate": "2026-11-10T04:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d4f69a1b-1374-4923-b46b-eaa291c77224.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "UFC Dana White appears with Trump at a White House briefing",
+          "url": "https://www.kcra.com/article/dana-white-trump-white-house-briefing/74381719",
+          "domain": "kcra.com",
+          "seendate": "2026-11-10T03:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d4f69a1b-1374-4923-b46b-eaa291c77224.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "UFC Dana White appears with Trump at a White House briefing",
+          "url": "https://www.wgal.com/article/dana-white-trump-white-house-briefing/74381719",
+          "domain": "wgal.com",
+          "seendate": "2026-11-10T03:00:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d4f69a1b-1374-4923-b46b-eaa291c77224.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "UFC Dana White appears with Trump at a White House briefing but wont be his press secretary",
+          "url": "https://www.clickorlando.com/news/politics/2026/11/10/ufcs-dana-white-appears-with-trump-at-a-white-house-briefing-but-wont-be-his-press-secretary/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-11-10T02:30:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/TTZK6V7PE5CXPABDDSR6JJRK5E.jpg?api_key=clickorlando_488cff2bcc157b2e"
+        },
+        {
+          "title": "UFC Dana White appears with Trump at a White House briefing",
+          "url": "https://www.wdsu.com/article/dana-white-trump-white-house-briefing/74381719",
+          "domain": "wdsu.com",
+          "seendate": "2026-11-10T02:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d4f69a1b-1374-4923-b46b-eaa291c77224.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        },
+        {
+          "title": "UFC Dana White appears with Trump at a White House briefing",
+          "url": "https://www.koco.com/article/dana-white-trump-white-house-briefing/74381719",
+          "domain": "koco.com",
+          "seendate": "2026-11-10T02:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/d4f69a1b-1374-4923-b46b-eaa291c77224.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
+        }
+      ]
+    },
+    "title": "UFC Dana White appears with Trump at a White House briefing",
+    "summary": "2026-11-10 wmur.com: UFC Dana White appears with Trump at a White House briefing\n2026-11-10 wlwt.com: UFC Dana White appears with Trump at a White House briefing\n2026-11-10 kcra.com: UFC Dana White appears with Trump at a White House briefing\n2026-11-10 wgal.com: UFC Dana White appears with Trump at a White House briefing\n2026-11-10 clickorlando.com: UFC Dana White appears with Trump at a White House briefing but wont be his press secretary\n2026-11-10 wdsu.com: UFC Dana White appears with Trump at a White House briefing",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -10691,12 +11145,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_choices-deliver-demanded",
     "source": "news",
-    "ts": 1794263549052,
+    "ts": 1794295879255,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.776,
+      "salience": 0.72,
       "articles": [
         {
           "title": "Voters demanded economic relief . Trump and Democrats face tough choices on how to deliver",
@@ -10781,14 +11235,107 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_dana-him-house",
+    "cid": "cand_news_agenda-democrats-education",
     "source": "news",
-    "ts": 1794263549052,
+    "ts": 1794295879254,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.62,
+      "salience": 0.645,
+      "articles": [
+        {
+          "title": "Democrats plan to use new power to rein in Trump education agenda , but their tools are limited",
+          "url": "https://www.mysuncoast.com/2026/11/10/democrats-plan-use-new-power-rein-trumps-education-agenda-their-tools-are-limited/",
+          "domain": "mysuncoast.com",
+          "seendate": "2026-11-10T03:30:00Z",
+          "image": "https://gray-wwsb-prod.gtv-cdn.com/resizer/v2/RGEZUU77VNAMZHKKBUXOQ3N2DY.jpg?auth=e8a8889836574f60f4003af38301ca3849503aba5d64e6e2439d5eeb837383df&smart=true"
+        },
+        {
+          "title": "Democrats plan to use new power to rein in Trump education agenda , but their tools are limited",
+          "url": "https://www.dailypress.com/2026/11/09/election-2026-democrats-education/",
+          "domain": "dailypress.com",
+          "seendate": "2026-11-10T00:30:00Z",
+          "image": "https://www.dailypress.com/wp-content/uploads/2026/11/Election_2_26_Education_33835.jpg"
+        },
+        {
+          "title": "Democrats plan to use new power to rein in Trump education agenda , but their tools are limited",
+          "url": "https://www.pressdemocrat.com/2026/11/09/election-2026-democrats-education/",
+          "domain": "pressdemocrat.com",
+          "seendate": "2026-11-10T00:00:00Z",
+          "image": "https://www.pressdemocrat.com/wp-content/uploads/2026/11/Election_2_26_Education_33835.jpg"
+        },
+        {
+          "title": "Democrats plan to use new power to rein in Trump education agenda , but their tools are limited",
+          "url": "https://www.capitalgazette.com/2026/11/09/election-2026-democrats-education/",
+          "domain": "capitalgazette.com",
+          "seendate": "2026-11-10T00:00:00Z",
+          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/11/Election_2_26_Education_33835.jpg"
+        }
+      ]
+    },
+    "title": "Democrats plan to use new power to rein in Trump education agenda , but their tools are limited",
+    "summary": "2026-11-10 mysuncoast.com: Democrats plan to use new power to rein in Trump education agenda , but their tools are limited\n2026-11-10 dailypress.com: Democrats plan to use new power to rein in Trump education agenda , but their tools are limited\n2026-11-10 pressdemocrat.com: Democrats plan to use new power to rein in Trump education agenda , but their tools are limited\n2026-11-10 capitalgazette.com: Democrats plan to use new power to rein in Trump education agenda , but their tools are limited",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_bend-big-border",
+    "source": "news",
+    "ts": 1794295879254,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.587,
+      "articles": [
+        {
+          "title": "Trump Big Bend border wall construction can resume after U . S . Supreme Court ruling | State",
+          "url": "https://dentonrc.com/news/state/trump-s-big-bend-border-wall-construction-can-resume-after-u-s-supreme-court-ruling/article_3d096d2e-1d0e-49e2-9418-4bddf2a2ca52.html",
+          "domain": "dentonrc.com",
+          "seendate": "2026-11-10T03:00:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dentonrc.com/content/tncms/assets/v3/editorial/d/0c/d0ca9bc6-338e-4a2d-b585-c1bb9c838fd9/6af25a651d3a2.image.jpg?crop=1763%2C926%2C0%2C125"
+        },
+        {
+          "title": "Supreme Court allows Big Bend border wall project to resume",
+          "url": "https://www.texastribune.org/2026/11/09/big-bend-border-wall-construction-supreme-court/",
+          "domain": "texastribune.org",
+          "seendate": "2026-11-10T01:00:00Z",
+          "image": "https://i0.wp.com/www.texastribune.org/wp-content/uploads/2026/11/20260813-Big-Bend-Clearing-KG-03.jpg?fit=2560%2C1707&ssl=1&quality=100"
+        },
+        {
+          "title": "Supreme Court Approves Trump Big Bend Border Wall",
+          "url": "https://www.outsideonline.com/outdoor-adventure/environment/supreme-court-big-bend/",
+          "domain": "outsideonline.com",
+          "seendate": "2026-11-10T01:00:00Z",
+          "image": "https://cdn.outsideonline.com/wp-content/uploads/2026/11/BigBend2.jpg"
+        }
+      ]
+    },
+    "title": "Supreme Court Approves Trump Big Bend Border Wall",
+    "summary": "2026-11-10 dentonrc.com: Trump Big Bend border wall construction can resume after U . S . Supreme Court ruling | State\n2026-11-10 texastribune.org: Supreme Court allows Big Bend border wall project to resume\n2026-11-10 outsideonline.com: Supreme Court Approves Trump Big Bend Border Wall",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_dana-him-house",
+    "source": "news",
+    "ts": 1794295879254,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.564,
       "articles": [
         {
           "title": "Dana White to visit White House after Trump offers him press secretary role",
@@ -10845,71 +11392,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_clean-democrats-energy",
-    "source": "news",
-    "ts": 1794263549053,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.597,
-      "articles": [
-        {
-          "title": "Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda :: WRAL . com",
-          "url": "https://www.wral.com/news/ap/b193e-democrats-plan-to-push-clean-energy-to-lower-bills-and-challenge-trump-s-fossil-fuel-agenda/",
-          "domain": "wral.com",
-          "seendate": "2026-11-09T02:00:00Z",
-          "image": "https://images.wral.com/78e0065e-c8f8-51ec-a944-00a0570b6f49"
-        },
-        {
-          "title": "Democrats to push clean energy , challenging Trump fossil fuel plans",
-          "url": "https://gazette.com/2026/11/08/democrats-to-push-clean-energy-challenging-trumps-fossil-fuel-plans/",
-          "domain": "gazette.com",
-          "seendate": "2026-11-09T00:30:00Z",
-          "image": "https://gazette.com/wp-content/uploads/2026/11/AP-Election_2_26_Climate_Policies_88253.jpg"
-        },
-        {
-          "title": "Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda",
-          "url": "https://www.clickorlando.com/business/2026/11/08/democrats-plan-to-push-clean-energy-to-lower-bills-and-challenge-trumps-fossil-fuel-agenda/",
-          "domain": "clickorlando.com",
-          "seendate": "2026-11-08T18:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/3UIJY6G2R5FO5GIXLTJLH6JHAA.jpg?api_key=clickorlando_488cff2bcc157b2e"
-        },
-        {
-          "title": "Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda",
-          "url": "https://www.clickondetroit.com/business/2026/11/08/democrats-plan-to-push-clean-energy-to-lower-bills-and-challenge-trumps-fossil-fuel-agenda/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-11-08T17:00:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/3UIJY6G2R5FO5GIXLTJLH6JHAA.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda",
-          "url": "https://www.whec.com/ap-top-news/democrats-plan-to-push-clean-energy-to-lower-bills-and-challenge-trumps-fossil-fuel-agenda/",
-          "domain": "whec.com",
-          "seendate": "2026-11-08T15:30:00Z",
-          "image": "https://www.whec.com/wp-content/uploads/apimg/2026/11/Election_2_26_Climate_Policies_88253.jpg"
-        }
-      ]
-    },
-    "title": "Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda",
-    "summary": "2026-11-09 wral.com: Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda :: WRAL . com\n2026-11-09 gazette.com: Democrats to push clean energy , challenging Trump fossil fuel plans\n2026-11-08 clickorlando.com: Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda\n2026-11-08 clickondetroit.com: Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda\n2026-11-08 whec.com: Democrats plan to push clean energy to lower bills and challenge Trump fossil fuel agenda",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_deportation-his-might",
     "source": "news",
-    "ts": 1794263549052,
+    "ts": 1794295879254,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.573,
+      "salience": 0.517,
       "articles": [
         {
           "title": "Trump says his deportation policy  might have been too tough  for voters in the election",
@@ -10952,142 +11442,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_chief-miller-staff",
-    "source": "news",
-    "ts": 1794263549053,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.51,
-      "articles": [
-        {
-          "title": "Stephen Miller replaces Susie Wiles as Trump White House chief of staff after GOP midterm defeat",
-          "url": "https://article.wn.com/view/2026/11/07/stephen_miller_replaces_susie_wiles_as_trump_8217s_white_hou/",
-          "domain": "article.wn.com",
-          "seendate": "2026-11-07T01:00:00Z",
-          "image": null
-        },
-        {
-          "title": "Susie Wiles , Chief of Staff to leave White House , replaced by Stephen Miller",
-          "url": "https://www.kiro7.com/news/trending/susie-wiles-chief-staff-leave-white-house-replaced-by-stephen-miller/6CQLN5CPIJD3LBU6VNI44GA6AM/",
-          "domain": "kiro7.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://cmg-cmg-tv-10090-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FB2JXLI67AVAJRFAMZAXCJOUDLA.jpg?auth=022af4018170875ae15429fcc1490da780c790f43ea41bc830ace910c2091813&smart=true"
-        },
-        {
-          "title": "Stephen Miller to replace Susie Wiles as White House chief of staff",
-          "url": "https://www.ksl.com:443/article/51644260/stephen-miller-to-replace-susie-wiles-as-white-house-chief-of-staff",
-          "domain": "ksl.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://img.ksl.com/slc/3208/320802/32080284.jpg?filter=kslv2/responsive_story_lg"
-        },
-        {
-          "title": "Trump promotes Stephen Miller to chief of staff",
-          "url": "https://www.news8000.com/news/politics/national-politics/trump-promotes-stephen-miller-to-chief-of-staff/article_6a2fcb29-050f-515a-a248-0619118df865.html",
-          "domain": "news8000.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/news8000.com/content/tncms/assets/v3/editorial/8/d6/8d6ae18f-dc8d-56f9-8b1e-c926732d4ec2/6aee2e57d1602.image.jpg?crop=1762%2C925%2C0%2C0"
-        },
-        {
-          "title": "Who is Stephen Miller ? Trump newest chief of staff",
-          "url": "http://www.washingtonexaminer.com/news/white-house/4795711/who-is-stephen-miller-white-house-chief-of-staff-trump-administration/",
-          "domain": "washingtonexaminer.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "http://www.washingtonexaminer.com/wp-content/uploads/2026/07/AP26205765263955-e1785248722822.jpg"
-        },
-        {
-          "title": "Trump names Stephen Miller chief of staff , replacing Susie Wiles",
-          "url": "https://www.wtvr.com/politics/the-president/trump-names-stephen-miller-chief-of-staff-replacing-susie-wiles-after-midterm-losses",
-          "domain": "wtvr.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/98/1d/cd99d2a042bca7f694346b186474/ap26217550191632.jpg"
-        },
-        {
-          "title": "Trump replaces Susie Wiles with Stephen Miller as chief of staff after GOP midterm defeat",
-          "url": "https://www.wgbh.org/news/politics/2026-11-06/trump-replaces-susie-wiles-with-stephen-miller-as-chief-of-staff-after-gops-midterm-defeat",
-          "domain": "wgbh.org",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://k1-prod-gbh.s3.us-east-2.amazonaws.com/brightspot/3c/7a/8886d86a47d8929a233a20b7cb11/stephen-miller.jpg"
-        },
-        {
-          "title": "Trump Replaces Susie Wiles With Stephen Miller as White House Chief of Staff",
-          "url": "https://www.thewrap.com/media-platforms/politics/trump-replaces-susie-wiles-stephen-miller-chief-of-staff/",
-          "domain": "thewrap.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://www.thewrap.com/wp-content/uploads/2026/11/Stephen-Miller-Donald-Trump.jpg"
-        },
-        {
-          "title": "Who is Stephen Miller , Trump incoming White House chief of staff ? ",
-          "url": "https://www.fox32chicago.com/news/who-is-stephen-miller-trump-chief-of-staff",
-          "domain": "fox32chicago.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/11/1280/720/gettyimages-2289903267.jpg?ve=1&tl=1"
-        }
-      ]
-    },
-    "title": "Trump Replaces Susie Wiles With Stephen Miller as White House Chief of Staff",
-    "summary": "2026-11-07 article.wn.com: Stephen Miller replaces Susie Wiles as Trump White House chief of staff after GOP midterm defeat\n2026-11-07 kiro7.com: Susie Wiles , Chief of Staff to leave White House , replaced by Stephen Miller\n2026-11-07 ksl.com: Stephen Miller to replace Susie Wiles as White House chief of staff\n2026-11-07 news8000.com: Trump promotes Stephen Miller to chief of staff\n2026-11-07 washingtonexaminer.com: Who is Stephen Miller ? Trump newest chief of staff\n2026-11-07 wtvr.com: Trump names Stephen Miller chief of staff , replacing Susie Wiles",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_monument-national-office",
-    "source": "news",
-    "ts": 1794263549053,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.48,
-      "articles": [
-        {
-          "title": "Trump Wants Oval Office To Be A National Monument , But Why ? ",
-          "url": "https://blackamericaweb.com/2026/11/08/trump-oval-office-national-monument/",
-          "domain": "blackamericaweb.com",
-          "seendate": "2026-11-09T01:00:00Z",
-          "image": "https://newsone.com/wp-content/uploads/sites/22/2026/11/17940027917266.jpg?quality=80&strip=all&crop=0,0,100,683px"
-        },
-        {
-          "title": "Trump Wants Oval Office To Be A National Monument , But Why ? ",
-          "url": "https://newsone.com/6875689/trump-oval-office-national-monument/",
-          "domain": "newsone.com",
-          "seendate": "2026-11-07T18:00:00Z",
-          "image": "https://newsone.com/wp-content/uploads/sites/22/2026/11/17940027917266.jpg?quality=80&strip=all&crop=0,0,100,683px"
-        },
-        {
-          "title": "Is the Oval Office a national monument now ? ",
-          "url": "https://www.themarysue.com/trump-says-the-oval-office-will-not-be-allowed-to-be-touched-by-anybody-as-a-national-monument-but-his-proclamation-still-allows-redecorating/",
-          "domain": "themarysue.com",
-          "seendate": "2026-11-07T00:00:00Z",
-          "image": "https://www.themarysue.com/wp-content/uploads/2026/11/Donald-Trump-smiling-with-a-blue-background-and-an-image-of-the-oval-office.jpg?fit=1280%2C720"
-        }
-      ]
-    },
-    "title": "Trump Wants Oval Office To Be A National Monument , But Why ? ",
-    "summary": "2026-11-09 blackamericaweb.com: Trump Wants Oval Office To Be A National Monument , But Why ? \n2026-11-07 newsone.com: Trump Wants Oval Office To Be A National Monument , But Why ? \n2026-11-07 themarysue.com: Is the Oval Office a national monument now ? ",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_announce-lsu-melania",
     "source": "news",
-    "ts": 1794263549052,
+    "ts": 1794295879255,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.477,
+      "salience": 0.42,
       "articles": [
         {
           "title": "Melania Trump and LSU announce scholarship program for students who experienced foster care",
@@ -11146,12 +11508,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_erupts-gop-his",
     "source": "news",
-    "ts": 1794263549052,
+    "ts": 1794295879254,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.403,
+      "salience": 0.347,
       "articles": [
         {
           "title": "House GOP erupts at Stephen Miller after his promotion :  Megalomaniac  ",
@@ -11203,12 +11565,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_announce-foster-fund",
     "source": "news",
-    "ts": 1794263549052,
+    "ts": 1794295879255,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.293,
+      "salience": 0.237,
       "articles": [
         {
           "title": "Melania Trump , LSU announce $5M scholarship fund for foster kids",
