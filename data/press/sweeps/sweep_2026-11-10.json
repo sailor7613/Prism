@@ -1,0 +1,2121 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-10",
+ "index": "roster",
+ "objects": [
+  "chips",
+  "diesel",
+  "dollar",
+  "housing",
+  "iran",
+  "me-sen",
+  "midterms",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela"
+ ],
+ "registerObjects": 15,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 7,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 6,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 39,
+   "hits": 18,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 23,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 12,
+   "hits": 6,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 9,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 5,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 8,
+   "hits": 5,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 91,
+   "hits": 23,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 60,
+   "hits": 36,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 4,
+   "hits": 4,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "'This is our hemisphere' Hegseth DEFENDS actions against cartels, Maduro",
+   "dek": "Defense Secretary Pete Hegseth, who has been accused of ordering unlawful military actions in Venezuela in impeachment articles filed against him, defended the Trump administration's military operations in the Western Hemisphere, including the capture of Venezuelan president Nicolás Maduro. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and ",
+   "opening": "",
+   "published": "2026-11-10T19:58:09+00:00",
+   "link": "https://www.youtube.com/shorts/NoqzhrtqlEg",
+   "videoId": "NoqzhrtqlEg",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela",
+     "maduro"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth COMPARES HIMSELF TO TRUMP amid impeachment effort",
+   "dek": "BREAKING: Defense Secretary Hegseth invoked President Trump while addressing the impeachment articles Republican Rep. Thomas Massie brought against him on Monday. Hegseth said Trump “came back stronger” after his two impeachments and pointed to Trump’s 2019 phone call with Ukrainian President Volodymyr Zelenskyy, during which Trump asked Zelenskyy to investigate his then-Democratic presidential opponent, Joe Biden, and his son, Hunter Biden. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://m",
+   "opening": "",
+   "published": "2026-11-10T19:52:27+00:00",
+   "link": "https://www.youtube.com/shorts/vc1TujbjJqw",
+   "videoId": "vc1TujbjJqw",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "ukrainian",
+     "zelenskyy"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Who Is Alice Huang, the Woman in the Middle of Nvidia’s Spy Scandal?",
+   "dek": "Alice Huang, who U.S. intelligence determined is a Chinese asset, emerged from the high-flying world of Shanghai finance to work with tech titans and obtain essential A.I. chips.",
+   "opening": "",
+   "published": "2026-11-10T19:39:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/technology/alice-huang-megaspeed-nvidia-jensen-huang.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Watch how LITTLE Trump has pivoted since midterm BLOWOUT",
+   "dek": "President Trump has doubled down on some of his most unpopular policies in the days since Republicans lost the midterm elections. MS NOW’s JM Rieger rolls the tape. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #trump #midterms #politics",
+   "opening": "",
+   "published": "2026-11-10T19:35:43+00:00",
+   "link": "https://www.youtube.com/shorts/kX0qJpnAMPY",
+   "videoId": "kX0qJpnAMPY",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rubio says no need for major combat operations against Iran",
+   "dek": "US Secretary of State Marco Rubio says there is “no need” for further major combat operations against Iran",
+   "opening": "",
+   "published": "2026-11-10T19:34:13+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/10/rubio-says-no-need-for-major-combat-operations-against-iran?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rubio Says ‘Major Combat Operations’ in Iran War Are No Longer Needed",
+   "dek": "The U.S. secretary of state said that American economic pressure is doing sufficient damage to the leadership in Tehran.",
+   "opening": "",
+   "published": "2026-11-10T19:33:48+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/rubio-iran-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Hires Wachtell Lipton to Investigate CEO Jensen Huang’s Affair With Chinese Executive",
+   "dek": "Wachtell partner Joon H. Kim, a former acting U.S. attorney, is leading the inquiry into the chip maker’s chief executive.",
+   "opening": "",
+   "published": "2026-11-10T19:33:36+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/business/nvidia-wachtell-lipton-jensen-huang.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Despite Denial, Trump Was Told on Trip to China About Spying on Nvidia Leader",
+   "dek": "Before Jensen Huang boarded Air Force One en route to Beijing, the president was reminded of intelligence showing that he was in a relationship with a woman believed to be a Chinese spy.",
+   "opening": "",
+   "published": "2026-11-10T19:27:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/trump-china-trip-nvidia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rachel Maddow lays out what she'd like to see from Democrats after the midterms #dailyshow",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T19:18:06+00:00",
+   "link": "https://www.youtube.com/shorts/rFhgFX2BgT4",
+   "videoId": "rFhgFX2BgT4",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Johnson swipes at voters for \"wrong choice\" in midterms",
+   "dek": "Outgoing House Speaker Mike Johnson criticized voters for making the \"wrong choice\" after the GOP suffered the biggest midterm rebuke since Watergate. Congressional Republicans are meeting today to decide on new leadership. MS NOW Congressional Reporter Mychael Schnell has the latest from Capitol Hill. Democratic strategist Dan Kanninen joins Alicia Menendez to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international br",
+   "opening": "",
+   "published": "2026-11-10T18:41:55+00:00",
+   "link": "https://www.youtube.com/watch?v=MF8E2MjxAQM",
+   "videoId": "MF8E2MjxAQM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang Spy Sex Scandal THREATENS GLOBAL ECONOMY",
+   "dek": "Krystal and Saagar discuss the massive scandal unfolding with Nvidia's Jensen Huang. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebook:",
+   "opening": "",
+   "published": "2026-11-10T18:30:12+00:00",
+   "link": "https://www.youtube.com/watch?v=CEZ4ygUrWhM",
+   "videoId": "CEZ4ygUrWhM",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "In Midterm Elections, Voters Backed Democrats but Broke Right on Many Ballot Measures",
+   "dek": "Many Republican and moderate voters who chose Democratic candidates did not do the same on transgender and other social issues.",
+   "opening": "",
+   "published": "2026-11-10T18:28:54+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/ballot-measures-democrats-republicans.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US petrol prices are down, but elevated inflation continues",
+   "dek": "Inflation has remained high, despite some easing in fuel prices caused by the US war on Iran.",
+   "opening": "",
+   "published": "2026-11-10T17:40:35+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/10/us-petrol-prices-are-down-but-elevated-inflation-continues?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "fuel price",
+     "petrol"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran backs nuclear treaty even as hardliners raise prospect of bomb",
+   "dek": "Iran says it is committed to non-proliferation treaty, but hardliners may be pushing for a change in nuclear policy.",
+   "opening": "",
+   "published": "2026-11-10T17:35:07+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/10/iran-backs-nuclear-treaty-even-as-hardliners-raise-prospect-of-bomb?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'JUST FOLLOWING ORDERS': Hegseth Impeachment MELTDOWN",
+   "dek": "Krystal and Saagar discuss Hegseth melting down as Massie brings an impeachment push over the Iran war. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breaki",
+   "opening": "",
+   "published": "2026-11-10T17:30:28+00:00",
+   "link": "https://www.youtube.com/watch?v=KSdSq3L1k5w",
+   "videoId": "KSdSq3L1k5w",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'Character was on the ballot': Dem who flipped scandal-plagued Max Miller's seat",
+   "dek": "New member orientation is underway this week on Capitol Hill following the midterm elections. Democrat Rep.-elect Brian Poindexter, who flipped the Ohio GOP seat of scandal-plagued Max Miller, joins Peter Alexander to lay out his day-one priorities. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our ",
+   "opening": "",
+   "published": "2026-11-10T17:27:22+00:00",
+   "link": "https://www.youtube.com/watch?v=VObhn94GUmE",
+   "videoId": "VObhn94GUmE",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Did a Chinese Spy Seduce NVIDIA's CEO Jensen Huang",
+   "dek": "AI and computing giant NVIDIA faces scrutiny over international security concerns after revelations that its CEO Jensen Huang may have had a romantic relationship with a Chinese spy. Investigations into chip distribution and intelligence risks could reshape the AI future. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 5:00 AM CT 🚨 Tired of the ads? Join DailyWire+ today and watch Morning Wire, along with all of our live news coverage, ad-free: https://bit.ly/3RzxiDM #MorningWire #DailyWire ",
+   "opening": "",
+   "published": "2026-11-10T17:04:03+00:00",
+   "link": "https://www.youtube.com/shorts/nK_jicNj6ic",
+   "videoId": "nK_jicNj6ic",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Syria Weighs Sending Troops to Aid Saudi War With Houthis",
+   "dek": "Syrian reconnaissance teams have visited Saudi Arabia and Yemen ahead of a potential deployment, but a final decision has not been made, officials said.",
+   "opening": "",
+   "published": "2026-11-10T16:43:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/middleeast/syria-weighs-sending-troops-to-aid-saudi-war-with-houthis.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Qatari PM’s Washington visit comes amid renewed US–Iran diplomacy",
+   "dek": "Nayef Al-Nabet discusses the Qatari prime minister’s visit to Washington.",
+   "opening": "",
+   "published": "2026-11-10T16:39:25+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/10/qatari-pms-washington-visit-comes-amid-renewed-us-iran?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "U.S. Received $12 Billion From Venezuela’s Oil, Report Shows",
+   "dek": "The workings of a U.S.-controlled bank account shed light on how Washington manages Venezuelan revenue after capturing the country’s president.",
+   "opening": "",
+   "published": "2026-11-10T16:23:18+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/americas/us-venezuela-oil-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Did Trump’s unmanliness cost Republicans the midterms? Tucker Carlson thinks so #dailyshow",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T16:12:19+00:00",
+   "link": "https://www.youtube.com/shorts/72jBAmMwLzk",
+   "videoId": "72jBAmMwLzk",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Oil Prices Have Tumbled in November. Here’s Why.",
+   "dek": "The global benchmark price is down more than $20 a barrel since late October, when it traded for around $113.",
+   "opening": "",
+   "published": "2026-11-10T15:59:29+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/business/energy-environment/oil-price-iran-trump-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia CEO Jensen Huang Told Trump He Did Not Know Chinese Woman Was Suspected Spy",
+   "dek": "President Trump told reporters Monday that he believed Jensen Huang’s account and said he did not recall receiving a briefing warning him about Mr. Huang’s liaison.",
+   "opening": "",
+   "published": "2026-11-10T15:45:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/us/politics/trump-jensen-huang-spy.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Positive momentum’: Is the US war on Iran about to end?",
+   "dek": "Domestic pressures are injecting new life into stalled diplomatic talks, but analysts say peace still hangs by a thread.",
+   "opening": "",
+   "published": "2026-11-10T15:18:32+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/10/positive-momentum-is-the-us-war-on-iran-about-to-end?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Impeachment Charges Against Defense Secretary Pete Hegseth, Explained",
+   "dek": "The charges accuse the defense secretary of illegally starting the war with Iran, directing extrajudicial killings and ignoring laws meant to minimize civilian casualties.",
+   "opening": "",
+   "published": "2026-11-10T15:09:50+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/hegseth-impeachment-explainer-massie.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TV anchor found dead with gunshot wound to head, officials arrest husband",
+   "dek": "The broadcaster’s husband claimed he was playing with a firearm when it discharged inside their home, according to a provincial official",
+   "opening": "The husband of a TV anchor was arrested in Pakistan Sunday after his wife was found dead with a gunshot wound to the head, according to officials. Rabiya Ahsan, 41, was allegedly killed inside her home in Rawalpindi, according to Punjab Information Minister Azma Zahid Bokhari. Ahsan worked as a program host for 92 News, where she established herself as a dedicated journalist alongside senior colleagues. She also frequently posted videos about national affairs on social media. Officials identified her husband as Ahsan Tahir Khan, who claimed he was playing with a firearm in the home when it accidentally discharged, Bokhari said. POPULAR TV HOST, MEDIA STAR FACES HANGING AFTER CONVICTION IN MAJOR SYNTHETIC DRUG TRAFFICKING CASE Khan reportedly works as a civil service officer at the Overseas Pakistanis Foundation, a government agency that supports citizens living abroad, according to local outlet The Express Tribune, citing police sources. Police are preparing to pursue a murder case against the suspect , according to the report. Rawalpindi police also confirmed in a post on X that a woman was killed in a Sunday shooting but did not immediately identify her. Authorities said officers seized the suspected weapon in connection with the husband's arrest. Ahsan's body was also transferred to a hospital for a postmortem examination. HUSBAND CHARGED WITH MURDER AFTER REALTOR WIFE FOUND SHOT DEAD INSIDE HOME IN WEALTHY VIRGINIA COUNTY The news of her death sparked an outpouring of gri",
+   "published": "2026-11-10T14:59:04-05:00",
+   "link": "https://www.foxnews.com/world/tv-anchor-found-dead-gunshot-wound-head-officials-arrest-husband",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "charged",
+     "murder",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Kim Kardashian faces furious backlash as shoppers demand refunds over $148 advent calendar",
+   "dek": "Kim Kardashian&apos;s Skims is offering full refunds after shoppers slammed its $148 advent calendar filled with hair ties, bobby pins and keychains.",
+   "opening": "Kim Kardashian ’s Skims is offering refunds after shoppers slammed its $148 advent calendar over an assortment of \"cheap\" hair accessories and keychains. The 12-day calendar — which included hair ties, scrunchies, clips, bobby pins, key chains and a compact mirror, according to the product description — drew massive criticism from content creators and social media users as unboxing videos began to go viral. \"People buying the skims advent calendar for $150 just to get this has me rolling on the floor,\" one user wrote on X, alongside a photo of the contents of the calendar. HAILEY BIEBER STRIPS DOWN FOR KIM KARDASHIAN'S SKIMS IN RED-HOT NEW CAMPAIGN \"A $148 for a bunch of cheap plastic and hair ties. So she makes a $147 profit? Just another scam,\" another wrote. \"For SKIMS to be a CLOTHING brand and not include a single piece of clothing in the SKIMS advent Christmas calendar is crazy and ridiculous actually,\" another social media user wrote. \"150$ for Bobby pins, scrunchies and tree ornaments WOW.\" Others dubbed the company simply as, \"Skams.\" One person pointed out that the advent calendar was labeled specifically as a box of accessories, writing, \"Paying for ‘Accessories’ and getting mad when its just accessories is hilarious as f--- lmaooo.\" Another wrote, \"On the website they listed all the things that will be in the box, I don’t understand the clout people are trying to chase.\" LIKE WHAT YOU'RE READING? CLICK HERE FOR MORE ENTERTAINMENT NEWS In a statement, Skims acknowl",
+   "published": "2026-11-10T14:57:18-05:00",
+   "link": "https://www.foxnews.com/entertainment/kim-kardashian-faces-furious-backlash-shoppers-demand-refunds-over-148-advent-calendar",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "refund"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Peltola widens narrow Alaska Senate lead over Sullivan as counting continues",
+   "dek": "Mary Peltola&apos;s lead over Dan Sullivan grew to 2,517 votes after Monday&apos;s ballot drop, but tens of thousands of absentee ballots remain uncounted.",
+   "opening": "Alaska 's still too-close-to-call Senate race is expected to deliver another batch of ballot results Tuesday night after Monday's latest ballot drop expanded Democratic nominee Mary Peltola's lead over incumbent Republican Sen. Dan Sullivan to 2,517 first-choice votes. Still current as of Tuesday midday ET, Peltola stands at 48.6% (106,321 votes) to Sullivan’s 47.5% (103,804) in the ranked-choice voting system that will kick in if neither candidate gets across the 50% threshold. The controversial race, punctuated by the \"Decoy Dan\" scheme exposed by The New York Times, has Republican Gerald Heikes at 2.2% (4,865) and independent Daniel J. Sullivan Jr. at 1.7% (3,651 votes). Roughly 75–76% of the expected vote is in, with tens of thousands of early, absentee and questioned ballots still to be counted. ALASKA SENATE FIGHT HEATS UP AS SULLIVAN MOVES TO BLOCK PELTOLA LAWSUIT OVER REJECTED ABSENTEE BALLOT RECORDS \"After every vote is counted, it is clear that Mary Peltola will be elected Alaska’s next United States Senator,\" Peltola campaign manager Cheryl Bruce wrote in a statement Tuesday morning after that past tranche of votes. \"Mary won today’s votes by a margin of 68-30, reflecting major support in key areas from Anchorage and Chevak. This overwhelming margin further strengthens Mary’s path to victory, and Mary is looking forward to continuing her relentless fight to lower costs and put Alaska first in the United States Senate after all votes are counted.\" The Monday drop ad",
+   "published": "2026-11-10T14:46:24-05:00",
+   "link": "https://www.foxnews.com/politics/peltola-widens-narrow-alaska-senate-lead-sullivan-counting-continues",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth impeachment: What is he accused of, and could he be removed?",
+   "dek": "Eight articles brought by a Republican lawmaker accuse US Pentagon chief of waging unlawful wars on Iran and Venezuela.",
+   "opening": "",
+   "published": "2026-11-10T14:45:22+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/10/hegseth-impeachment-what-is-he-accused-of-and-could-he-be-removed?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Housing expert blasts 'absurd' California red tape keeping affordable homes out of reach",
+   "dek": "Mitch Roschelle says California bureaucracy is hindering affordable housing development in Los Angeles despite laws allowing additional housing units, calling the ‘blue tape’ ‘absurd.’",
+   "opening": "California’s push to make housing more affordable is facing a familiar obstacle: getting new homes built, even as state laws seek to encourage development. Macro Trends Advisors founding partner Mitch Roschelle told FOX Business’ Stuart Varney on \" Varney &amp; Co. \" about the bureaucratic hurdles facing California builders and how the state’s approach compares with Florida's. Roschelle said he had invested in a company working to build affordable housing in Los Angeles. The project sought to use legislation signed by Gov. Gavin Newsom that allowed additional housing units on certain properties without rezoning, but Roschelle said regulatory obstacles made the effort difficult. CALIFORNIA FACES ONE-TWO PUNCH AS VOTERS REJECT WEALTH TAX AND BILLIONAIRES EYE EXITS \"The reason why that company had a really, really hard time is the amount of red tape, which we should probably call blue tape because there’s nothing red about it, right? The amount of blue tape that takes place in California, especially in Los Angeles, especially post the fires is absurd,\" Roschelle said. While allowing more units on a property can create opportunities for development, it does not guarantee new homes will be built. Builders still face regulatory hurdles before construction can begin. CALIFORNIA WEALTH TAX ON BILLIONAIRES FAILS DESPITE BLUE WAVE, IN BLOW TO PROGRESSIVES Roschelle argued that bureaucracy, including decisions made by unelected officials, has made construction especially challenging in ",
+   "published": "2026-11-10T14:44:27-05:00",
+   "link": "https://www.foxbusiness.com/media/housing-expert-blasts-absurd-california-red-tape-keeping-affordable-homes-out-reach",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_ballots-california-court-doj": [
+     "push",
+     "california"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Thomas Markle, Meghan Markle’s estranged father, summoned to court for emergency hearing",
+   "dek": "Meghan Markle’s estranged father faces a 2:30 p.m. emergency court hearing Tuesday after being released on bond and placed under house arrest.",
+   "opening": "An emergency hearing is being held related to Thomas Markle, the estranged father of Meghan Markle, just days after he was arrested on suspicion of possessing child sexual abuse images. Markle, 82, was released from federal custody on bond and placed under house arrest this week. A \"show cause\" hearing is scheduled for 2:30 p.m. Tuesday in a Tampa, Florida courtroom. This story is breaking. Please check back for updates.",
+   "published": "2026-11-10T14:33:55-05:00",
+   "link": "https://www.foxnews.com/entertainment/thomas-markle-meghan-markles-estranged-father-summoned-court-emergency-hearing",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_arrest-bank-collapse-house": [
+     "placed",
+     "arrest"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ex-Massachusetts police officer convicted of murdering pregnant woman in staged suicide",
+   "dek": "Matthew Farwell faced charges of killing Sandra Birchmore after she allegedly threatened to expose a relationship that began when she was 15.",
+   "opening": "A former Massachusetts police detective has been found guilty of murdering a young pregnant woman prosecutors say he had been grooming since she was a teenager. Matthew Farwell, a former Stoughton Police Department detective, was convicted of killing Sandra Birchmore inside her Canton apartment in February 2021. Investigators say he staged the scene to make her death appear to be a suicide. The U.S. Attorney for Massachusetts confirmed Farwell was found guilty on Tuesday of murdering Birchmore and causing the death of her unborn child. Jurors began deliberating Friday after hearing more than three weeks of testimony in the federal murder trial. On Monday the jurors sent a note to the judge saying that they were deadlocked, but the judge sent them home for the day and instructed them to return Tuesday to continue deliberating. FORMER MASSACHUSETTS POLICE OFFICER FACES MURDER TRIAL OVER PREGNANT WOMAN'S STAGED SUICIDE Farwell had been charged with killing a witness or victim and causing the death of an unborn child. SEND US A TIP Prosecutors said Farwell killed Birchmore after she became pregnant and threatened to expose their years-long relationship, which they say started when he began grooming her when she was just 15 years old and he was 27. FORMER MASSACHUSETTS POLICE OFFICER FACES MURDER TRIAL OVER PREGNANT WOMAN'S STAGED SUICIDE FOLLOW THE FOX TRUE CRIME TEAM ON X Birchmore was found dead with a strap around her neck inside her apartment. Her death was initially ruled a ",
+   "published": "2026-11-10T14:28:26-05:00",
+   "link": "https://www.foxnews.com/us/ex-massachusetts-police-officer-convicted-murdering-pregnant-woman-staged-suicide",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "charged",
+     "murder",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Najib Razak, Ex-Prime Minister of Malaysia, Is Released to House Arrest",
+   "dek": "Najib Razak, who was brought down in the multibillion-dollar 1MDB scandal, was released from prison to serve the rest of his sentence in his mansion.",
+   "opening": "",
+   "published": "2026-11-10T14:22:53+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/asia/malaysia-najib-razak-1mdb-house-arrest.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_thepresi_arrest-bank-collapse-house": [
+     "arrest",
+     "scandal"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jim Jordan becomes new House GOP leader after closed-door vote, defeating Steve Scalise",
+   "dek": "Jim Jordan defeated Steve Scalise in a narrow secret ballot to become House GOP minority leader and President Trump&apos;s top defender in Congress.",
+   "opening": "House Judiciary Committee Chairman Jim Jordan , R-Ohio, will be President Donald Trump's top defender in Congress next year after winning a closed-door election for minority leader on Tuesday, sources told Fox News Digital. Jordan defeated Majority Leader Steve Scalise , R-La., currently the House of Representatives' No. 2 leader, in what's believed to be a narrow race. Jordan received 106 votes to Scalise’s 73, sources in the room told Fox News Digital. Fox News Digital heard loud, sustained applause from outside in the hallway when Jordan’s win became official. Republicans huddled for a candidate forum on Tuesday morning where all GOP lawmakers running for leadership positions were peppered with questions by their colleagues. JORDAN EMERGES AS POTENTIAL NEXT GOP LEADER IF DEMS SEIZE HOUSE Sources inside the room for their Tuesday morning leadership forum said Scalise and Jordan both pitched themselves as the best person to unify the conference, but also signaled they would give a wide berth for lawmakers to \"vote their districts,\" as one person put it. The question-and-answer session for House Republicans before electing their leader was largely cordial, Fox News Digital was told. Several people inquired about how both prospective leaders would unify the conference after their midterm losses and how they would handle leaks to journalists, Fox News Digital was told. Jordan himself told Fox News Digital he believed the forum went well but declined to go further, stating he do",
+   "published": "2026-11-10T14:20:38-05:00",
+   "link": "https://www.foxnews.com/politics/jim-jordan-becomes-new-house-gop-leader-after-closed-door-vote-defeating-steve-scalise",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Celtics visit 76ers in Jaylen Brown's first game against his former team since the offseason trade",
+   "dek": "Jaylen Brown faces his former Celtics squad for the first time as the 76ers host Boston, with LeBron James orchestrating Philadelphia&apos;s offense.",
+   "opening": "I fell just a bit short last night. I had the Mavs to cover against the Pacers, but unfortunately, it was a closer game than I expected. I was correct that Cooper Flagg would go off, considering the hard foul from the first time the two teams met. The Mavs were up by three to five points for most of the final two minutes. PJ Washington got a big rebound with the team up by three, and he missed the first free throw. Not a big deal; he had a second. He missed that, too. The Pacers couldn't get a good three-point shot to try to tie the game and send it to overtime, and didn't foul before the final whistle. Let's hope that I can avenge yesterday's loss tonight as the Celtics play the 76ers. The Boston Celtics are 8-2 for the season and actually look better than I expected. We knew the Celtics would at least be good - there is too much talent on the roster for them to be a complete disaster. However, they've come out of the gate looking much more competent than I expected. Paul George looks like he has turned back the clock a bit, and his defense has been a welcome addition to the team. Derrick White and Payton Pritchard provide a strong backcourt for the team. If there is any spot on the team where the Celtics are weak, it is likely the center position. Sure, Mitchell Robinson and Neemias Queta are solid players, but neither will really strike fear into the opposition. Their roster construction has worked out, and Jayson Tatum has played well. If you want to poke a hole in the Ce",
+   "published": "2026-11-10T14:18:09-05:00",
+   "link": "https://www.foxnews.com/outkick/celtics-visit-76ers-jaylen-brown-first-game-former-team-offseason-trade",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_approved-arch-construction-federal": [
+     "washington",
+     "construction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Oil shock from Iran war led to drop in carbon pollution, scientists say",
+   "dek": "Emissions of heat-trapping carbon dioxide from the burning of fossil fuels decreased slightly this year due to the Iran war. I",
+   "opening": "",
+   "published": "2026-11-10T14:05:11-05:00",
+   "link": "https://www.pbs.org/newshour/science/oil-shock-from-iran-war-led-to-drop-in-carbon-pollution-scientists-say",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "JACKSON THOMPSON: Seattle school board authorizes legal challenge to ballot measure protecting girls' sports",
+   "dek": "Seattle&apos;s school board voted 7-0 to authorize legal action against Initiative 638, the voter-approved ban on transgender athletes in girls&apos; sports.",
+   "opening": "Seattle’s school board unanimously authorized potential legal action Monday against a voter-approved measure barring biological males from girls' school sports, opening another front in Washington’s fight over transgender athlete eligibility. The 7-0 vote authorized Superintendent Ben Shuldiner to take legal action regarding Initiative 638, which bars biological males from competing in designated girls’ school sports. Two student representatives also recommended approval in separate advisory votes, according to the meeting transcript. Board member Joe Mizrahi acknowledged his opposition to the measure before arguing that the decision before the board concerned its legal responsibilities, rather than members' personal votes. \"As a father of three daughters who play sports, I was opposed to 638,\" Mizrahi said. He said the district had received messages from people urging it to protect students and others asking it to support the initiative and respect the election result. JACKSON THOMPSON: DEMOCRAT-APPOINTED JUDGES HAND LETITIA JAMES WIN OVER COUNTY TRYING TO PROTECT GIRLS SPORTS \"I believe that what we’re doing tonight is actually both protecting students and respecting the will of voters because yes, voters supported the initiative 638 and we do take that seriously,\" Mizrahi said. \"But our democracy also produced all those other laws.\" \"We can’t say we’re respecting democracy if we treat the most recent vote as a reason to ignore all the other laws that are on the books.\" Ini",
+   "published": "2026-11-10T13:51:44-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/seattle-school-board-authorizes-legal-challenge-ballot-measure-protecting-girls-sports",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_approved-arch-construction-federal": [
+     "washington",
+     "approved"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California voters reject tax on net worth of billionaires",
+   "dek": "The measure would have imposed a one-time 5% tax on the wealth of Californians whose net worth exceeds $1 billion.",
+   "opening": "",
+   "published": "2026-11-10T13:48:07-05:00",
+   "link": "https://www.pbs.org/newshour/politics/california-voters-reject-tax-on-net-worth-of-billionaires",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Chiefs kicker Harrison Butker's Upright PAC seems abandoned, website redirects to Thai gambling site",
+   "dek": "Harrison Butker&apos;s Upright PAC raised just thousands since 2024, spent nothing on candidates, and its website now redirects to a gambling site.",
+   "opening": "Harrison Butker’s 2026 NFL season hasn’t been going to plan, and it appears his political action committee isn’t off the field. Upright PAC, a conservative political action committee founded in September 2024 by the Kansas City Chiefs kicker, has not donated to political campaigns since its formation, while raising small sums leading up to the 2026 midterm election. The Federal Elections Commission sees Upright PAC as still active, but Open Secrets, a nonprofit which tracks campaign finance data, noted it was not supporting any political campaigns in August 2025. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE \"The few thousand dollars it has raised are not enough to support candidates,\" David Meyers, a spokesman for Open Secrets, told The Kansas City Star. Even more interesting: UprightPac.org now redirects to a Thai gambling website, which can be seen in an X post that’s on Butker’s account . It’s unclear if you could still donate to Upright PAC. The PAC was founded on Butker’s Christian values, which the website said were \"under attack every day.\" THE CRAIG CARTON SHOW–UNFILTERED, UNAPOLOGETIC AND UNMISSABLE. DOWNLOAD HIS DAILY PODCAST NOW! \"In our schools, in the media, and even from our own government. But we have a chance to fight back and reclaim the traditional values that have made this country great,\" the website read. \"We are working to mobilize Christians across this country to make sure we protect these values at the ballot box.\" The launch coincided with Butker’s ca",
+   "published": "2026-11-10T13:46:25-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/chiefs-kicker-harrison-butker-upright-pac-abandoned-website-redirects-thai-gambling-site",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's first Iran war escalation post-midterm losses seeks to choke off Tehran’s trade",
+   "dek": "President Donald Trump launches Task Force Iron Gate to choke off Iran&apos;s land borders, but experts warn squeezing Tehran could trigger escalation.",
+   "opening": "President Donald Trump isn't backing off his pressure campaign against Iran despite claims the conflict contributed to sweeping Republican losses in last week's midterm elections. In fact, Trump is doubling down by expanding U.S. efforts to choke off the trade routes Tehran increasingly relies on as it tries to rebuild its military in the midst of war. The new effort, dubbed Task Force Iron Gate, takes aim at a vulnerability that has persisted despite the U.S. naval blockade: the land and Caspian Sea routes Iran can use to bring in goods, dual-use technology and military supplies beyond the reach of American warships. That approach, one expert claims, fits into a broader administration strategy of tightening the squeeze on Tehran while stopping short of restarting full-scale military operations. Meanwhile, others caution that it could produce escalation rather than an immediate diplomatic breakthrough. IRAN VOWS ‘ASTONISHING’ STRIKES AND LIFTS MISSILE-RANGE LIMIT AS US TARGETS LAND ROUTES \"We have Operation Iron Gate that just went into effect. That means nothing comes in by land,\" Trump said Sunday. But the roughly 20-person task force established at U.S. Central Command headquarters in Tampa is taking a quieter approach than Trump’s sweeping description might suggest. \"This is not a deployable special operation task force,\" Farzin Nadimi, a senior fellow at the Washington Institute for Near East Policy, told Fox News Digital, describing Iron Gate instead as a \"fusion cell\" ",
+   "published": "2026-11-10T13:43:25-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-first-iran-war-escalation-post-midterm-losses-seeks-choke-off-tehrans-trade",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani Has Been a Fierce Opponent of ICE. A Judge Handed Him a Setback.",
+   "dek": "A federal judge ordered Mayor Zohran Mamdani to comply with a federal subpoena for information about some migrants with serious criminal records.",
+   "opening": "",
+   "published": "2026-11-10T13:40:19+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/nyregion/ice-mamdani-migrants-court-ruling.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_admissions-dismisses-harvard-judge": [
+     "judge",
+     "records"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats rally behind GOP lawmaker's Hegseth impeachment push, signal more to come in January",
+   "dek": "Democrats rallied behind Rep. Thomas Massie&apos;s eight-count impeachment resolution against Pete Hegseth, citing the Iran war and Nicolás Maduro&apos;s capture.",
+   "opening": "Top Democrats are lining up behind Republican Rep. Thomas Massie's effort to impeach War Secretary Pete Hegseth , signaling that the fight could continue when Democrats take control of Congress in January. \"Hard yes on the Hegseth impeachment resolution,\" House Minority Leader Hakeem Jeffries, D-N.Y., said ahead of its introduction. The Democratic reactions online telegraph an appetite to scrutinize Trump’s administration through congressional power once their majorities are formally sworn in in January, at the start of the 120th Congress. HAKEEM JEFFRIES DECLARES BID FOR HOUSE SPEAKER AFTER GOP'S MIDTERM MASSACRE Massie himself framed the effort as likely to be repeated in the new year. \"My Hegseth impeachment resolution is a much gentler version of what’s coming when Dems control Congress,\" Massie said. Already, Rep. Al Green, D-Texas — who has repeatedly introduced impeachment resolutions against President Donald Trump — urged his colleagues to expand their horizons for impeachment moments after Massie introduced his resolution. \"If the Constitution is to be honored and Congress respected, a president whom many members of Congress have declared impeachable must be impeached. Failure to do so would be another step toward making the Constitution meaningless and Congress powerless,\" Green wrote online. Massie is filing eight articles of impeachment against Hegseth, accusing him of violating the War Powers Resolution in Iran and Yemen, failing to prevent civilian casualties, u",
+   "published": "2026-11-10T13:35:26-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-rally-behind-gop-lawmaker-hegseth-impeachment-push-signal-more-january",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "venezuela": [
+     "maduro"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia and Huang face lawsuit alleging investors were misled about spy affair",
+   "dek": "A shareholder has sued Nvidia and CEO Jensen Huang, accusing them of deceiving investors about Huang's affair with a purported Chinese spy.",
+   "opening": "",
+   "published": "2026-11-10T13:32:31-05:00",
+   "link": "https://www.pbs.org/newshour/world/nvidia-and-huang-face-lawsuit-alleging-investors-were-misled-about-spy-affair",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia’s Game of Thrones",
+   "dek": "Analysts and investors are asking whether the chipmaker needs to consider a successor to Jensen Huang, its C.E.O., as the company is engulfed in a spy scandal.",
+   "opening": "",
+   "published": "2026-11-10T13:21:38+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/business/dealbook/nvidia-huang-succession.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Russia and Ukraine hold nearly 4 hours of U.S.-mediated talks in Abu Dhabi",
+   "dek": "Russia and Ukraine on Tuesday held their first U.S.-mediated talks in nine months on ending their war, with U.S. Secretary of State Marco Rubio calling the meeting \"very productive\" and Ukrainian President Volodymyr Zelenskyy saying the session was \"constructive and quite substantive.\"",
+   "opening": "",
+   "published": "2026-11-10T13:09:38-05:00",
+   "link": "https://www.pbs.org/newshour/world/russia-and-ukraine-hold-nearly-4-hours-of-u-s-mediated-talks-in-abu-dhabi",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "ukrainian",
+     "zelenskyy"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inflation runs hotter than expected as higher prices extend beyond the gas station",
+   "dek": "U.S. inflation was higher than expected last month as the rising prices that powered sweeping Democratic victories in last week's midterm elections appear likely to pose ongoing challenges for the White House and the Federal Reserve.",
+   "opening": "",
+   "published": "2026-11-10T12:59:58-05:00",
+   "link": "https://www.pbs.org/newshour/economy/inflation-runs-hotter-than-expected-as-higher-prices-extend-beyond-the-gas-station",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sotomayor lets loose on conservative Supreme Court with revealing wish: 'Crazy things'",
+   "dek": "Supreme Court Justice Sonia Sotomayor called the presidential immunity ruling in Trump v. United States one she hopes gets overturned in her lifetime.",
+   "opening": "As Republicans reel from their bruising midterm election losses, Supreme Court Justice Sonia Sotomayor is hoping some of the court's biggest conservative rulings will eventually be overturned. The liberal justice singled out the court's landmark 2024 presidential immunity ruling, which shields presidents from criminal prosecution for actions taken within their core constitutional powers and provides presumptive protection for other official acts. Her colleagues, Justices Samuel Alito and Clarence Thomas, are both in their late 70s, raising questions about their potential retirements and whether a Democratic-controlled Senate could complicate Trump's efforts to replace them with fellow conservatives. \"We saw the outpouring of voters on Tuesday … I tell people all the time, there’s no excuse for not voting. There just isn’t. Apathy is not acceptable,\" Sotomayor said. TRUMP'S SUPREME COURT MAJORITY FACES LOOMING THREAT AFTER DEM SENATE TAKEOVER: 'STUCK' \"I dissent a lot. I’m hoping that the court will take back some of the crazy things that it’s done. I’m only joking — maybe not,\" she said at the same event. \"No, seriously. You know, I’ve spoken openly about this, there’s some opinions that I hope in my lifetime will get overturned. The immunity case is one of them.\" The justice spent most of the hourlong event discussing the importance of civics education , stopping at times to discuss the state of American democracy. At one point, Sotomayor remarked that it would take \"some ha",
+   "published": "2026-11-10T12:32:21-05:00",
+   "link": "https://www.foxnews.com/politics/sotomayor-lets-loose-conservative-supreme-court-revealing-wish-crazy-things",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani makes behind-the-scenes moves to shape 2028 Democratic presidential race",
+   "dek": "New York City Mayor Zohran Mamdani is meeting with labor leaders to rally progressives around a 2028 presidential candidate if AOC stays out.",
+   "opening": "New York City Mayor Zohran Mamdani is quietly working towards a new goal: to become a progressive kingmaker in the burgeoning battle for the 2028 Democratic presidential nomination. The socialist mayor of the nation's most populous city, who can't run for president himself because he's not a natural-born U.S. citizen, has been meeting behind closed doors with labor leaders to highlight the need for a union-aligned or left-wing candidate to seek the presidency. The mayor's moves come as he's reportedly said he's uncertain whether progressive champion Rep. Alexandria Ocasio-Cortez of New York, his close political ally, will run for the White House. According to Axios, which was first to report the news, Mamdani is concerned that if Ocasio-Cortez stays out of the 2028 race, it could leave progressives without a standard-bearer to face off against a more centrist presidential frontrunner in the primary battle. WILL TRUMP SIT OUT MAKING A 2028 ENDORSEMENT IN THE RACE TO SUCCEED HIM? Mamdani, who is seen as a major powerbroker for the left wing of the Democratic Party after his historic 2025 mayoral election victory, argues that the progressive movement can't waste its momentum coming out of last week's trouncing of Republicans in the midterm elections, as Democrats won a massive House majority and control of the Senate. A source familiar with Mamdani's 2028 conversations told Axios the mayor \"wants the progressive ecosystem to mobilize quickly, strategically and efficiently if a m",
+   "published": "2026-11-10T12:18:46-05:00",
+   "link": "https://www.foxnews.com/politics/mamdani-makes-behind-scenes-moves-shape-2028-democratic-presidential-race",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Cornyn meets with Sen-elect Talarico, describes him as 'basically ... a good person'",
+   "dek": "Sen. John Cornyn meets with Sen.-elect James Talarico in Texas and D.C. after the Democrat&apos;s massive win against Texas Attorney General Ken Paxton in a U.S. Senate contest.",
+   "opening": "Outgoing Sen. John Cornyn, R-Texas, has said that he met with Democratic Sen.-elect James Talarico in Washington, D.C., on Monday after previously meeting with him on Friday in Texas. \"Good meeting with Senator-elect @jamestalarico today as he prepares to serve Texans in the U.S. Senate next Congress,\" Cornyn said in a post on X which features a photo of the two men shaking hands. Talarico also shared the photo in a post on X and commented on their meeting. TRUMP'S GAMBLE ON KEN PAXTON BACKFIRES AS DEMOCRAT PULLS OFF HISTORIC TEXAS SENATE UPSET \"I just met with Senator John Cornyn. He has served our state honorably, and I’m grateful for his advice and guidance. Now is the time for us to come together — Democrats and Republicans — to deliver for Texas,\" Talarico wrote. Cornyn said that he thinks Talarico is \"basically ... a good person,\" telling reporter Nicholas Ballasy on Monday that he \"enjoyed meeting with\" Talarico \"last Friday in Austin and again this morning here in D.C.\" JAMES TALARICO BLAMES RISE IN GOP 'EXTREMISM' FOR PROMPTING HIS 'GOD IS NON-BINARY,' SIX SEXES REMARKS Talarico defeated Texas Attorney General Ken Paxton in the Lone Star State's 2026 U.S. Senate contest, becoming the first Democrat to win a Lone Star State U.S. Senate race in more than three decades. And the race was not even close — Talarico earned about 55% of the vote, while Paxton earned only about 43%, according to unofficial results. AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIM",
+   "published": "2026-11-10T11:37:49-05:00",
+   "link": "https://www.foxnews.com/politics/cornyn-meets-sen-elect-talarico-describes-him-basically-good-person",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton",
+     "texas senate"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH LIVE: Senate considers bills on permitting, survivor justice as GOP mulls future leadership",
+   "dek": "Senate Republicans were meeting Tuesday for a \"robust conversation\" on their future and to decide whether to keep South Dakota Sen. John Thune as their leader, just a week after steep losses in the midterm elections that cost them their majority.",
+   "opening": "",
+   "published": "2026-11-10T11:32:01-05:00",
+   "link": "https://www.pbs.org/newshour/politics/watch-live-senate-considers-bills-on-permitting-survivor-justice-as-gop-mulls-future-leadership",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_bill_hr-119-2347": [
+     "survivor",
+     "justice"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia spy case exposes how foreign agents target America’s corporate elite: 'He is compromised'",
+   "dek": "Nvidia&apos;s CEO apologized to employees for infidelity as the board launched an independent probe into his alleged ties to a suspected Chinese spy.",
+   "opening": "Nvidia’s reported spy scandal is shaking markets and rattling the tech world, raising urgent questions about how close foreign agents can get to America’s most powerful corporate leaders. Dr. Michael Wallace, a professor at Tulane University and retired military intelligence officer with 20 years of experience, said foreign intelligence services study targets’ personal lives and interests to find ways to build trust and gain access. And it's become increasingly clear that business leaders worldwide could potentially provide access or information about the U.S. government if placed correctly. Nvidia CEO Jensen Huang was on Air Force One with President Donald Trump in May as part of the delegation during a summit with Chinese leader Xi Jinping in Beijing. He has also visited the White House a handful of times to discuss the administration's artificial intelligence (AI) agenda and Nvidia's powerful chips and selling them to approved Chinese customers. HOW US CEOS QUIETLY TEAMED UP WITH TRUMP TO GAIN LEVERAGE OVER CHINA There are now active investigations into whether U.S. national security or company secrets were compromised by Huang’s reported extramarital affair with a businesswoman allegedly recruited by China's Ministry of State Security to target the Nvidia CEO. \"The goal of human intelligence is to get somebody close to a source that can either elicit information or obtain information from a person,\" Wallace told Fox News Digital. That access could reveal more than technic",
+   "published": "2026-11-10T11:24:51-05:00",
+   "link": "https://www.foxnews.com/politics/nvidia-spy-case-exposes-foreign-agents-target-americas-corporate-elite-compromised",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "clear",
+     "security"
+    ],
+    "obj_afederal_alleged-aside-ballots-cant": [
+     "force",
+     "alleged"
+    ],
+    "obj_thepresi_arrest-bank-collapse-house": [
+     "placed",
+     "scandal"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Riot-torn France struggles with chaos at home as Macron eyes military mission thousands of miles away",
+   "dek": "French President Emmanuel Macron&apos;s Lebanon military force plan hits resistance from Italy as Marco Rubio floats a civilian alternative to UNIFIL.",
+   "opening": "French President Emmanuel Macron is pushing ahead with plans for a new European military presence in Lebanon while struggling with mounting political and economic turmoil at home, even as the initiative encounters resistance from a key European partner and Washington considers an alternative that may not require troops. Secretary of State Marco Rubio confirmed that he had discussed the future of the United Nations Interim Force in Lebanon (UNIFIL) with Macron, suggesting that a replacement monitoring mechanism could be civilian rather than military. \"It doesn't have to be a military mission. It could be a civilian mission,\" Rubio said in remarks published Tuesday. Rubio explained that the administration is seeking a credible mechanism to verify arrangements under which Israeli forces withdraw from designated areas, the Lebanese Armed Forces (LAF) assume control and the Iran-backed terrorist group Hezbollah is prevented from returning. RUBIO ANNOUNCES FRAMEWORK DEAL BETWEEN ISRAEL AND LEBANON AS EXPERTS WARN IRAN WILL FIGHT TO SABOTAGE IT He suggested France could play a constructive role but emphasized that any arrangement would require agreement from both Lebanon and Israel. U.S. Ambassador to the United Nations Mike Waltz also made clear that Washington has no intention of preserving the existing peacekeeping mission. \"UNIFIL in its current form will not continue, and it must not continue — we are working with our international partners to draw down the mission and ensure t",
+   "published": "2026-11-10T11:22:36-05:00",
+   "link": "https://www.foxnews.com/world/riot-torn-france-struggles-chaos-home-macron-eyes-military-mission-thousands-miles-away",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang and the Honeypot. Plus. . .",
+   "dek": "In today&#8217;s Front Page, Tyler Cowen and Patrick McGee on Jensen Huang. Joe Nocera on the Democrats telling Trump to &#8220;lawyer up.&#8221; River Page on NYC&#8217;s e-bike wars. And more.",
+   "opening": "It&#8217;s Tuesday, November 10. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Joe Nocera asks if the Democrats can hold Donald Trump accountable without overreaching. River Page reports on the e-bikes terrorizing New York pedestrians. And much more. But first: Jensen Huang and the honeypot. The &#8220;honeypot&#8221; has long been a staple of spy fiction. How many times did a beautiful spy try to seduce James Bond? In the classic TV series The Americans , the Russian spy Philip Jennings has a long-running affair with an FBI secretary to glean secrets about the goings-on in her office. Tom Clancy and Frederick Forsyth are among the many authors who have used honeypots as a plot device. The goal was always to root out information that resides deep inside a government agency. With the recent disclosure that Nvidia CEO Jensen Huang may have been &#8220;honeypotted&#8221;&#8212;via his affair with Alice Huang, an alleged Chinese spy&#8212;it would appear that spying is no longer something governments do to each other. Rather, the really important secrets reside in corporations&#8212;and in the heads of the people who run them. Huang is one of the most powerful men in the world, and the fallout from his indiscretion could have immense ripple effects on the economy, not to mention the global order. But if you ask Free Press contributor Patrick McGee , &#8220;there&#8217;s a silver lining to all this dra",
+   "published": "2026-11-10T11:19:44+00:00",
+   "link": "https://www.thefp.com/p/jensen-huang-and-the-honeypot-plus-democrats-telling-trump-lawyer-up",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Secrets, Chips and Spycraft: The Nvidia C.E.O. Scandal",
+   "dek": "Over the weekend, Jensen Huang, the chief executive and co-founder of Nvidia — which makes the chips that power artificial intelligence — admitted to having an affair with a woman who has been determined by U.S. officials to be a spy. That revelation came after The New York Times broke the story of how U.S. intelligence officers uncovered what they say was a plot by Alice Huang to use their relationship to funnel information to Beijing. Tripp Mickle, a White House correspondent for The Times, explains how Beijing tried to compromise one of the tech executives closest to President Trump, and wh",
+   "opening": "Over the weekend, Jensen Huang, the chief executive and co-founder of Nvidia — which makes the chips that power artificial intelligence — admitted to having an affair with a woman who has been determined by U.S. officials to be a spy. That revelation came after The New York Times broke the story of how U.S. intelligence officers uncovered what they say was a plot by Alice Huang to use their relationship to funnel information to Beijing. Tripp Mickle, a White House correspondent for The Times, explains how Beijing tried to compromise one of the tech executives closest to President Trump, and what the scandal could mean for a company with enormous influence over the future of A.I. — and the entire American economy. Guest: Tripp Mickle , a tech reporter for The New York Times. Background reading:&nbsp; Jensen Huang’s tight grip on Nvidia presents a challenge for the company’s board , which is investigating his affair with a woman believed to be a Chinese spy. Mr. Huang acknowledged having had a relationship with a business executive who U.S. officials determined was working for Chinese intelligence. Photo: Manuel Orbegozo/Reuters For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday.&nbsp; For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workday. Subscribe today at nytimes.com/podcasts or on Apple Podcasts, Spo",
+   "published": "2026-11-10T10:55:19+00:00",
+   "link": "https://www.nytimes.com/the-daily",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Here’s why last year’s government shutdown will haunt October’s inflation data.",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T10:48:00+00:00",
+   "link": "https://www.nytimes.com/live/2026/11/10/business/inflation-cpi-report-october/heres-why-last-years-government-shutdown-will-haunt-octobers-inflation-data",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump signals surprising approach to choosing his successor as GOP's 2028 field grows",
+   "dek": "Trump says he may not endorse in the 2028 Republican Party presidential primary",
+   "opening": "President Donald Trump says he may not put his thumb on the scale when it comes to picking the Republican Party's 2028 presidential nominee. \"Probably, not necessarily,\" Trump said in a post-midterm election interview on CBS' \"60 Minutes\" when asked whether he will endorse in the primary to pick the next Republican nominee. \"So I may or may not get involved... Maybe I'm better off not getting involved.\" Trump for months has touted the GOP's \"great bench\" when asked about the likely Republican field of contenders aiming to succeed him in the White House. The president reiterated that opinion after the GOP's drubbing in last week's midterm elections, as the party lost control of both the House and the Senate. VANCE, CRUZ, DESANTIS DIAGNOSE GOP'S MIDTERM DISASTER AS 2028 BATTLE BEGINS \"I think we have an unbelievable bench of talent,\" Trump told Fox News' Bret Baier and Martha MacCallum in an election night interview on Fox News.. \"We have a great group of talented people that I think would do a very good job.\" Early jockeying by the potential contenders began the morning after Election Day, with midterm post-mortems by Vice President JD Vance , Sen. Ted Cruz of Texas, and Florida Gov. Ron DeSantis grabbing plenty of headlines. SIGN UP TO GET THE POLITICS NEWSLETTER \"There's going to be a robust field of candidates that test the waters in Iowa, New Hampshire and South Carolina and that's exactly as it should be,\" Nicole Schlinger, a veteran Iowa-based Republican strategist, told",
+   "published": "2026-11-10T10:21:19-05:00",
+   "link": "https://www.foxnews.com/politics/trump-signals-surprising-approach-choosing-his-successor-gops-2028-field-grows",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Is AI Destroying the Next Generation of Leaders?",
+   "dek": "Yuval Levin, senior editor at &#8216;The New Atlantis,&#8217; reflects on a recent visit to Anthropic and what the AI revolution means for American institutions, the military, and the next generation of experts.",
+   "opening": "Yuval Levin ranks AI among the most important political questions facing the country, one with &#8220;no left and right.&#8221; Just last week, the midterms saw voters push back against artificial intelligence in a series of referenda&#8212;but the question of its place in American life is far from settled. Today, Levin joins School of War to discuss what he learned duri&#8230; Read more",
+   "published": "2026-11-10T10:19:18+00:00",
+   "link": "https://www.thefp.com/p/is-ai-destroying-the-next-generation",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "France Blames Iran for Cyberattack on Refrigeration Systems",
+   "dek": "The French foreign minister said he had summoned the Iranian ambassador to France after a cyberattack on hundreds of supermarkets last month. Iran did not immediately respond.",
+   "opening": "",
+   "published": "2026-11-10T10:08:25+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/world/europe/france-iran-refrigerators-cyberattack.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump admin pouring $480M loan into Gulf of America oil and gas project",
+   "dek": "The U.S. Energy Department touted the financial close of a $480 million loan targeted at helping to boost oil and natural gas production in the Gulf of America.",
+   "opening": "The Energy Department is touting a $480 million loan meant to help boost oil and natural gas production in the Gulf of America. \"The U.S. Department of Energy’s (DOE) Office of Energy Dominance Financing (EDF) today announced the financial close of a $480 million loan for Arena Energy’s Project Elkhorn to increase oil and natural gas production across the Gulf of America shelf,\" the department noted in a press release obtained by Fox News. \"The project will modernize 22 offshore platforms off the coast of Louisiana and, at peak production, is expected to add up to 38,600 barrels of oil per day and up to 77 million cubic feet of natural gas per day to U.S. energy production,\" the release adds. TRUMP MEETS KEY IRAN WAR MEDIATOR AS UAE REVEALS MAJOR OIL EXPORT SURGE DESPITE CONFLICT The company is now producing about 30,000 barrels of oil in the gulf per day, according to the Energy Department . \"The United States is the world’s largest producer and exporter of oil and natural gas, and thanks to President Trump , American energy production will continue to grow,\" Energy Secretary Chris Wright said, according to the department. \"Project Elkhorn will increase oil production by up to 38,600 barrels per day and create thousands of jobs. By providing financing for projects like Project Elkhorn, the Energy Department is expanding domestic production and strengthening our energy security to power American prosperity for decades to come.\" TRUMP ANNOUNCES END OF BIDEN-ERA METHANE RULE, C",
+   "published": "2026-11-10T10:00:23-05:00",
+   "link": "https://www.foxbusiness.com/politics/trump-admin-pouring-480m-loan-gulf-america-oil-gas-project",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "GOP wipeout goes from bad to worse as Dems quietly score another major win with big ramifications",
+   "dek": "Democrats flipped legislative chambers in Wisconsin, Michigan, Arizona and other battleground states, creating trifectas that could reshape redistricting.",
+   "opening": "In addition to taking control of the House of Representatives, the Senate, and the majority of governorships on Tuesday, Democrats have also assumed control of the majority of state legislatures across the country for the first time in over a decade. Heading into the election, Republicans controlled 28 of the nation’s 49 bicameral state legislatures, compared with 18 controlled by Democrats, while three states had divided control. Democrats now control both chambers in 24 states, compared with 22 for Republicans. North Carolina and Texas have split legislatures, while races in Alaska and Georgia remain pending. Even if Republicans win the uncalled chambers in the pending states, Democrats will still control more state legislatures than Republicans. Nebraska is included in the Republican count because its officially nonpartisan, unicameral legislature is led by a Republican majority. Democrats scored major victories in several pivotal battleground states during the 2026 midterms , flipping legislative chambers and securing full control of state governments in places that will shape redistricting and election rules ahead of 2028. In Wisconsin, Democrats captured both the Assembly and Senate for the first time in years, pairing the wins with the governorship to create a trifecta. DEMOCRATS SEIZE MAJORITY OF GOVERNORS’ OFFICES IN ELECTION-NIGHT SHIFT Similar gains unfolded in Michigan , where the party flipped the House and expanded its Senate majority alongside a Democratic gove",
+   "published": "2026-11-10T09:45:47-05:00",
+   "link": "https://www.foxnews.com/politics/gop-wipeout-goes-bad-worse-dems-quietly-score-another-major-win-big-ramifications",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Gas prices dip below $4 but inflation remains stubbornly high",
+   "dek": "Gasoline prices fell below $4 a gallon Tuesday for the first time in three months — but the overall cost of living remains stubbornly high.",
+   "opening": "Gasoline prices fell below $4 a gallon Tuesday for the first time in three months — but the overall cost of living remains stubbornly high. (Image credit: Ronaldo Schemidt)",
+   "published": "2026-11-10T09:35:50-05:00",
+   "link": "https://www.npr.org/2026/11/10/nx-s1-6034518/inflation-consumer-prices-economy-gas-prices",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "gasoline"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Says Deportation Policy Was “Too Tough”",
+   "dek": "President Trump provides a midterm autopsy – and his version of a mea culpa, a Chinese spy scandal shakes the world’s leading AI and computing company, and a new investigation from City Journal found California has been using taxpayer money for advertisements encouraging Californians to vote - but the advertisements might have been more targeted than meets the eye. Reporting from Ben Domenech & Megan Basham. Plus, we speak with Investigative Reporter Kenneth Schrupp. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to",
+   "opening": "",
+   "published": "2026-11-10T09:30:01+00:00",
+   "link": "https://www.youtube.com/watch?v=d4qEZK-AM-w",
+   "videoId": "d4qEZK-AM-w",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic targets valuation around $1T in blockbuster AI IPO, below initial expectation",
+   "dek": "Anthropic&apos;s IPO targets up to $1.02 trillion, falling well short of the $1.5 trillion valuation previously discussed as Wall Street reassesses AI costs.",
+   "opening": "Anthropic, the artificial intelligence company behind the Claude chatbot, is seeking a valuation of up to $1.02 trillion in a blockbuster initial public offering, falling short of earlier expectations as Wall Street grows increasingly cautious about the enormous costs fueling the AI boom. The San Francisco-based company plans to raise as much as $64.4 billion through the sale of 825 million shares priced between $70 and $78 apiece, according to an amended Securities and Exchange Commission filing released Tuesday. Anthropic will also raise $26 billion through a separate private placement involving major technology companies, including Google, Nvidia, Microsoft and AMD, bringing the combined fundraising target to as much as $90.4 billion. JOE MANCHIN CALLS ON TRUMP TO FREEZE AI IPOS, CLAIMS PRESIDENT HAS 'POWER TO SAVE HUMANITY' The proposed valuation is significantly below the $1.5 trillion figure previously discussed by prospective investors. At one point this year, investors had anticipated a valuation as high as $2 trillion, Reuters reported. The reduced target comes amid growing concerns about whether AI companies can generate sufficient returns to justify their massive spending on chips, data centers and computing infrastructure. \"What we are seeing is essentially a reassessment of Anthropic's value in a more challenging AI environment,\" Ipek Ozkardeskaya, senior analyst at Swissquote Bank, told Reuters. \"The company continues to post impressive growth, but investors are",
+   "published": "2026-11-10T09:24:14-05:00",
+   "link": "https://www.foxbusiness.com/markets/anthropic-targets-valuation-around-1t-blockbuster-ai-ipo-below-initial-expectation",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Consumer inflation rises faster than expected in October, CPI report shows",
+   "dek": "The Labor Department released the latest consumer price index data for October, which showed CPI inflation rose 0.4% on a monthly basis.",
+   "opening": "Inflation accelerated in October as the pace of consumer price growth trended higher. The Bureau of Labor Statistics (BLS) said on Wednesday that the consumer price index (CPI) – a broad measure of how much everyday goods like gasoline, groceries and rent cost – increased 0.4% on a monthly basis. It did not release an annual figure due to last year's government shutdown that prevented collection of October 2025 data. The monthly figure was slightly higher than the estimates of economists polled by LSEG, who expected inflation to rise 0.3% from the prior month. So-called core prices, which exclude volatile measurements of gasoline and groceries to better assess price growth trends, were up 0.3% in October. That figure is slightly higher than the 0.2% estimate of economists polled by LSEG. Like with headline CPI, the BLS was unable to release a year-over-year figure for core CPI due to last year's government shutdown disrupting data collection. High inflation has created severe financial pressures in recent years for most U.S. households, which are forced to pay more for everyday necessities like food and rent. Price hikes are particularly difficult for lower-income Americans because they tend to spend more of their already-stretched paychecks on necessities and have less flexibility to save. Energy prices rose 0.7% on a monthly basis in October, which is much cooler than the 5.2% reading in September and the 2.1% rise recorded in August. The energy index had experienced monthl",
+   "published": "2026-11-10T08:36:12-05:00",
+   "link": "https://www.foxbusiness.com/economy/cpi-inflation-october-2026",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "gasoline"
+    ],
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California wealth tax on billionaires fails despite blue wave, in blow to progressives",
+   "dek": "Governor Gavin Newsom urged voters to reject Proposition 40, citing its narrow spending focus, as California&apos;s billionaire wealth tax fell 52.8% to 47.2%.",
+   "opening": "California voters rejected Proposition 40, a proposed wealth tax on the net worth of billionaires, spurning a ballot proposition that would have imposed a one-time 5% tax on any Californian whose net worth exceeded $1 billion. With 100% of precincts reporting results as of Monday evening, 52.8% of Californians who voted for the measure, or 5,909,899 people, voted against it, according to California's secretary of state. Despite a sweeping blue wave that saw numerous prominent progressive Democrats such as Los Angeles Mayor-elect Nithya Raman win their races, the far-left pet policy wealth tax did not make it past the state's voters thanks in part to Gov. Gavin Newsom taking a stand against the measure. Newsom, a rumored 2028 presidential hopeful, wrote a lengthy Substack post in June explaining why he'd be voting against the measure while imploring Californians to do the same. CALIFORNIA FACES ONE-TWO PUNCH AS VOTERS REJECT WEALTH TAX AND BILLIONAIRES EYE EXITS Rather than come out generally against a wealth tax, Newsom objected particularly to the fact that, under the measure's text , revenue taken from the state's billionaires would go exclusively to funding healthcare. \"I’m voting no because this measure dedicates almost all of the revenue it raises to a single category of state spending,\" he wrote in the post. \"There is nothing for housing, nothing for childcare, nothing for public safety workers who must answer 911 calls, and nothing for our public universities that have",
+   "published": "2026-11-10T08:29:16-05:00",
+   "link": "https://www.foxbusiness.com/politics/california-wealth-tax-billionaires-fails-despite-blue-wave-blow-progressives",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "GOP lawmaker ousts fellow Republican in gerrymandered California district",
+   "dek": "Republican Rep. Ken Calvert defeated Rep. Young Kim in a rare GOP vs. GOP battle forced by California Gov. Gavin Newsom&apos;s redistricting in the midterms.",
+   "opening": "Gov. Gavin Newsom -signed California redistricting has scored at least a 2-for-1 consolidation of House Republicans. Rep. Ken Calvert, R-Calif., is projected to defeat fellow Rep. Young Kim, R-Calif., in the 40th Congressional District race called Monday night, ostensibly forcing two incumbents to battle for one seat in the gerrymandered district. \"I want to congratulate Congressman Ken Calvert on his victory,\" Kim wrote in a statement posted to X, sharply criticizing the map that effectively drew one of them out. \"I wish him the very best as he continues representing our communities. It is unfortunate that Gavin Newsom’s political redistricting scheme forced two Republican members of Congress into this race.\" AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI All told, Democrats' redistricting and the so-called blue wave have more than cut the Republican California delegation in half, from nine seats (eight Republicans and one independent that caucuses with them) to just three or four (one race remains too close to call a week after the election). Calvert, the longest-serving Republican in California’s House delegation, had declared victory days earlier while ballots were still being counted. The district covers suburban communities in eastern Orange County and stretches into the Inland Empire in western Riverside County — southeast of Los Angeles. California voters approved the Democratic-backed redistricting plan that combined p",
+   "published": "2026-11-10T08:25:41-05:00",
+   "link": "https://www.foxnews.com/politics/gop-lawmaker-ousts-fellow-republican-gerrymandered-california-district",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "california",
+     "ballots"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "communities",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth rips impeachment push from outgoing Republican as 'farce,' 'stunt'",
+   "dek": "War Secretary Pete Hegseth, facing a House impeachment effort, delivers remarks at the first Pengton news conference since May, having focused on the Iran conflict and CENTCOM Strait of Hormuz blockade.",
+   "opening": "War Secretary Pete Hegseth , facing eight articles of impeachment in a privileged House resolution, remains defiant amid kinetic war and political warfare. Hegseth said he stood behind military operations in Iran, Venezuela and Yemen, describing them as lawful. \"What one disgruntled and defeated congressman is attempting is not oversight, it's not accountability. It's a political spectacle, a personal manifesto driven by ego and resentment,\" Hegseth said in a Tuesday morning conference. \"Time for one man's final days in Congress to try to do damage to this president, this country and most irresponsibly, the warriors who defend it.\" \"It's a farce, and it's a stunt, and everybody knows it.\" TRUMP DEFENDS PENTAGON CHIEF AS MASSIE TARGETS HIM: 'HEGSETH SHOULD BE PRAISED, NOT IMPEACHED' President Donald Trump gave a real-time review of Hegseth's remarks in a post Tuesday morning on Truth Social. \"Pete Hegseth gets an ‘A’ PLUS, PLUS, PLUS for his defense against a disgruntled, angry, defeated, former Congressman, Thomas Massie, a TOTAL LOSER!\" Trump wrote. \"We destroyed terror regimes' capabilities. We sank the boats carrying poison into our communities. We put a narco dictator in handcuffs. These are not high crimes. This is the job, and it's the job well done.\" \"I was proud to execute them, and I would do it again tomorrow,\" he added. TRUMP GIVES HEGSETH AN ‘A PLUS, PLUS, PLUS’ FOR REJECTION OF WEAPONIZED IMPEACHMENT Hegseth said the impeachment effort hands U.S. enemies a \"propa",
+   "published": "2026-11-10T08:09:19-05:00",
+   "link": "https://www.foxnews.com/politics/war-secretary-pete-hegseth-addresses-house-impeachment-effort",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Hegseth says House impeachment push is about 'policy disagreements' not high crimes",
+   "dek": "The embattled Pentagon chief spoke at his first press briefing from the five-sided building in six months, launching a counteroffensive against outgoing Rep. Thomas Massie's effort to impeach him over his handling of the unpopular war against Iran and other actions.",
+   "opening": "",
+   "published": "2026-11-10T08:00:25-05:00",
+   "link": "https://www.pbs.org/newshour/politics/watch-live-hegseth-holds-news-conference-as-house-impeachment-vote-looms",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House set to vote to impeach Hegseth. And, SCOTUS allows border wall work to proceed",
+   "dek": "The House could vote to impeach Hegseth, but removing him from office will be tough. And, SCOTUS ruled that a federal judge did not have the authority to halt border wall construction.",
+   "opening": "The House could vote to impeach Hegseth, but removing him from office will be tough. And, SCOTUS ruled that a federal judge did not have the authority to halt border wall construction. (Image credit: Andrew Harnik)",
+   "published": "2026-11-10T07:01:04-05:00",
+   "link": "https://www.npr.org/2026/11/10/g-s1-152777/up-first-newsletter-pete-hegseth-impeachment-trump-iran-nvidia-border-wall-texas",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "construction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Jeffries faces uncertainty from incoming Democrats as House speaker vote approaches",
+   "dek": "New House Democrats say they haven&apos;t landed on a House speaker, possibly revealing internal party division over who gets to lead the conference.",
+   "opening": "Several incoming House Democrats are declining to commit to supporting House Minority Leader Hakeem Jeffries, D-N.Y., for speaker, exposing potential divisions within the party as it prepares to take control of the lower chamber in January. The uncertainty comes amid criticism from progressive Democratic voters and lawmakers over Jeffries' leadership and political positions, raising questions about whether the New York Democrat will face resistance from members of his own party during the upcoming speaker election. Rep.-elect Adam Hamawy, a progressive New Jersey Democrat who recently appeared on controversial left-wing streamer Hasan Piker's show, told Fox News Digital that he \"hasn't decided yet\" whether he will support Jeffries. Rep.-elect Patty Garcia, D-Ill., echoed the same uncertainty, saying she would \"be united with the progressive caucus\" when deciding how to vote. Claire Valdez, a member of the Democratic Socialists of America who was elected to represent New York's 7th Congressional District, declined to comment when asked by Fox News Digital whether she would support Jeffries. Rep.-elect Jamie Ager, D-N.C., also declined to comment, while incoming Texas Democrat Katie Padilla Stout said, \"I don't know, we'll see,\" when asked about her vote. Rep.-elect Fred Wellman, D-Mo., similarly told Fox News Digital that he had not made up his mind, suggesting that other incoming Democrats shared his uncertainty. PROGRESSIVES FUME AT HAKEEM JEFFRIES FOR SAYING DEMOCRATS WON'T",
+   "published": "2026-11-10T07:00:50-05:00",
+   "link": "https://www.foxnews.com/politics/watch-jeffries-faces-uncertainty-from-incoming-democrats-house-speaker-vote-approaches",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Kushner enters Ukraine peace talks as Trump eyes securing safeguards against another Russian invasion",
+   "dek": "Jared Kushner and Steve Witkoff push a NATO-like security guarantee for Ukraine as first trilateral Abu Dhabi talks tackle territory disputes.",
+   "opening": "Russia and Ukraine will finally return to the negotiating table Tuesday for their first trilateral peace talks with the U.S. in nine months. Ahead of the talks, officials said both Moscow and Kyiv have shown \"a little bit of flexibility privately\" on territorial disputes that have long stood in the way of reaching an agreement. U.S. envoys Jared Kushner and Steve Witkoff will sit down with Ukrainian intelligence chief Rustem Umerov and Putin aide and veteran negotiator Vladimir Medinsky in Abu Dhabi on Tuesday and Wednesday. The Trump administration has asked Russia to accept an \"Article Four and an Article Five-like security guarantee\" for Ukraine that would be \"effectively very similar to NATO,\" a U.S. official said Monday on a background call previewing the negotiations. President Donald Trump has not yet decided what security guarantee the U.S. itself would provide, the official said, describing an American guarantee as a \"really, really big deal\" that would ultimately have to be worked out between Trump and Ukrainian President Volodymyr Zelenskyy . RUSSIA'S NEIGHBOR REVEALS PERSONAL APPEALS TO TRUMP AS US WEIGHS NATO TROOP PULLBACK IN EUROPE A lot has happened on the geopolitical stage since the latest trilateral talks happened in Geneva, Switzerland, in February. The first being the inception of a new conflict between the U.S. and Iran — and the second being the 2026 midterm elections, which saw a sweeping rebuke of Republicans with a blue wave taking the country by sto",
+   "published": "2026-11-10T06:24:53-05:00",
+   "link": "https://www.foxnews.com/politics/kushner-enters-ukraine-peace-talks-trump-eyes-securing-safeguards-against-another-russian-invasion",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "ukrainian",
+     "zelenskyy",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump defends Pentagon chief as Massie targets him: 'Hegseth should be praised, not impeached'",
+   "dek": "President Donald Trump is defending War Secretary Pete Hegseth as GOP Rep. Thomas Massie of Kentucky targets the Pentagon chief for impeachment.",
+   "opening": "President Donald Trump is defending War Secretary Pete Hegseth as outgoing Rep. Thomas Massie, R-Ky., targets the Pentagon chief for impeachment. The president issued a Truth Social post on Monday slamming the congressman as \"a total loser\" while asserting that the war secretary \"should be praised, not impeached.\" \"Defeated Republican Congressman Thomas Massie, a total loser, is trying to Impeach perhaps the most popular and successful military official in the Country, Secretary of War, Pete Hegseth,\" Trump declared Monday on Truth Social. HEGSETH IMPEACHMENT VOTE LOOMS AS HOUSE REPUBLICANS PRIVATELY WARN IT COULD PASS \"With recruitment at an ALL-TIME HIGH, from an all-time low under Sleepy Joe Biden, and TWO VICTORIES, Venezuela and Iran, Pete Hegseth should be praised, not Impeached. Congress, stand up for Pete!!!\" he added . Massie did not immediately respond to Fox News Digital's comment request on Tuesday. Hegseth shared a screenshot of the president's post and thanked him. REPORTER'S NOTEBOOK: HOW MIDTERMS MAY CHANGE THE HOUSE IMPEACHMENT EQUATION FOR HEGSETH \"Thank you Mr. President. Like you, we will never back down,\" Hegseth wrote . Massie, who has served in the House of Representatives since late 2012, lost the GOP primary earlier this year in Kentucky's 4th Congressional District to Trump-backed challenger Ed Gallrein, a former Navy SEAL who went on to win the seat during the general election. \"My effort to impeach Secretary Hegseth is a much gentler version of wha",
+   "published": "2026-11-10T06:11:51-05:00",
+   "link": "https://www.foxnews.com/politics/trump-defends-pentagon-chief-massie-targets-him-hegseth-praised-not-impeached",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Nvidia Affair",
+   "dek": "An illicit relationship between the C.E.O. and an alleged Chinese spy is putting the spotlight on a murky ecosystem of companies smuggling A.I. chips into China.",
+   "opening": "",
+   "published": "2026-11-10T05:43:35+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/world/nvidia-affair-jensen-huang-russell-brand.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House Republicans to elect a new leader as they look to rebuild from midterm defeat",
+   "dek": "After sweeping losses in the midterm elections, the House GOP will vote on Tuesday to elect a successor to Mike Johnson, who says he's stepping down as the chamber's top Republican.",
+   "opening": "After sweeping losses in the midterm elections, the House GOP will vote on Tuesday to elect a successor to Mike Johnson, who says he's stepping down as the chamber's top Republican. (Image credit: J. Scott Applewhite)",
+   "published": "2026-11-10T05:01:00-05:00",
+   "link": "https://www.npr.org/2026/11/10/nx-s1-6030988/gop-leadership-election-steve-scalise-jim-jordan",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "GOP senator withholds support for Thune as leadership showdown looms",
+   "dek": "Rick Scott says he won&apos;t back John Thune for Senate GOP leader without a specific plan for the lame duck session before Democrats take control.",
+   "opening": "FIRST ON FOX: A Senate Republican isn’t ready to support Senate Majority Leader John Thune, R-S.D., to stay as the top Republican as the GOP’s leadership elections fast approach. Sen. Rick Scott, R-Fla., in an interview with Fox News Digital, argued that whoever would be the next to lead the Senate GOP and earn his vote in the process needed to lay out a plan on how Republicans would pass key agenda items heading into the lame-duck session of Congress before Senate Democrats take control in January. Thune plans to run again for another term as the GOP leader, but Scott and a cohort of others want to delay Tuesday morning’s leadership elections to debrief after stunning losses across the board on Election Night. Whether he’ll support Thune for another term depends on his pitch. SENATE GOP REBELS MOVE TO DELAY LEADERSHIP VOTE, DEMAND RECKONING AFTER MIDTERM DISASTER \"I don't want to put the cart before the horse,\" Scott said. \"I mean, I think the first step is what do we want to accomplish? And then anybody, including John Thune, if they want to be that, the first thing I have to say is, ‘Do they want to do that?’\" \"If that's not what they want to accomplish, then why would we elect them? But if that's what they want to accomplish, then tell us why they're the best at it,\" he continued. Senate Democrats flipped the upper chamber with wins in red states across the country, clinching a 54-seat majority that could grow even more depending on the outcomes of outstanding races in Mi",
+   "published": "2026-11-10T05:00:52-05:00",
+   "link": "https://www.foxnews.com/politics/gop-senator-withholds-support-thune-leadership-showdown-looms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's Supreme Court majority faces looming threat after Dem Senate takeover: 'Stuck'",
+   "dek": "Justice Samuel Alito confirmed he has no plans to retire, but Democrats&apos; Senate takeover raises stakes for the Supreme Court&apos;s conservative majority.",
+   "opening": "Republicans' loss of the U.S. Senate in the midterm elections could have far-reaching consequences for President Donald Trump's judicial agenda, threatening his ability to reshape the federal courts and raising new questions about the future of the Supreme Court's 6-3 conservative majority. With Democrats set to take control of the Senate in January, Republicans face a shrinking window to confirm Trump's judicial nominees, while any future Supreme Court vacancy could leave the president dependent on Democratic support to install a replacement. \"Lawless Lawfare\" author Alex Swoyer told Fox News Digital the election results could leave the court's oldest conservative justices with a difficult decision over when to retire. \"It's likely the justices — mainly Justices Thomas and Alito — are stuck on the high court for at least six more years with Democrats taking control,\" Swoyer said. \"Both in their late 70s, I could see why they may want to retire now, midterm.\" UNDER-THE-RADAR IMPLICATION OF DEM BLUE WAVE MEANS 'ZERO' CHANCE GOP ACCOMPLISHES CRITICAL GOAL, EXPERTS WARN Justice Clarence Thomas, 78, and Justice Samuel Alito, 76, are the court's two oldest conservatives, making their retirement decisions particularly consequential as Republicans prepare to lose control of the Senate. Alito, however, confirmed to Fox News on Thursday that he has no plans to retire and is committed to serving through at least the current Supreme Court term , with the justices expected to wrap up the",
+   "published": "2026-11-10T05:00:39-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-supreme-court-majority-faces-looming-threat-after-dem-senate-takeover-stuck",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Democratic Party gained power across the country in the midterms. Now what?",
+   "dek": "Voters handed Democrats the keys to power across the country and expect them to drive in a different direction. Party leaders are now trying to figure out which way to go.",
+   "opening": "Voters handed Democrats the keys to power across the country and expect them to drive in a different direction. Party leaders are now trying to figure out which way to go. (Image credit: Win McNamee)",
+   "published": "2026-11-10T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/10/nx-s1-6035008/democratic-party-blue-wave-midterm-congress",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rachel Maddow on the Midterms & Examining the DOJ in “Department of Fate” | The Daily Show",
+   "dek": "“The core function of the Justice Department is to make sure that the Constitution is in effect in this country. And if you want the Constitution to not be in effect in this country, you do not need that building full of lawyers telling you otherwise.” Award-winning MS NOW host Rachel Maddow joins Jon Stewart to discuss her new book about the DOJ called “Department of Fate: The Promise, the Power, and the Collapse of America’s Most Consequential Institution.” Maddow opens up about MS NOW’s 2026 election night coverage, her perspective on more people gaining access to healthcare as a result of ",
+   "opening": "",
+   "published": "2026-11-10T04:30:10+00:00",
+   "link": "https://www.youtube.com/watch?v=0Tglmmk6epY",
+   "videoId": "0Tglmmk6epY",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Good News About Jensen Huang’s Affair",
+   "dek": "The Nvidia CEO has been influential in arguing that China should be able to buy the company&#8217;s most advanced chips, writes Patrick McGee. Now that he&#8217;s been caught sleeping with an alleged spy, is his influence gone?",
+   "opening": "The biggest question in the world of tech right now is whether Jensen Huang will remain the CEO of Nvidia, perhaps the world&#8217;s most important company. Let&#8217;s hope he does. But the more interesting question is whether he can maintain his influence. Let&#8217;s hope he doesn&#8217;t. The 63-year-old&#8217;s profile has taken a major hit over the last few days due to revelations that he had an affair with Alice Huang, a data center executive who U.S. officials believe is a Chinese spy. On Sunday, Jensen Huang acknowledged the affair and apologized, while Nvidia&#8212;saying it had no reason to believe national security had been compromised&#8212;pledged to launch an independent investigation. &#8220;I was unfaithful to my wife,&#8221; Huang said in a statement that made no mention of the possibility that his mistress may have been a Chinese spy. &#8220;My actions hurt her and our children. There is no excuse for what I did. I am deeply sorry.&#8221; Nvidia&#8212;whose stock fell 4.3 percent, or $192 billion, on Monday&#8212;has already said that Huang will remain CEO while the investigation is ongoing. That&#8217;s good. If Jensen Huang were to be ousted, the stakes could be enormous&#8212;not just for the company, but for the entire AI industry, not to mention the ongoing race between the U.S. and China for AI supremacy. Huang is the closest thing there is to Too Big to Fail, Personified. Read more",
+   "published": "2026-11-10T04:17:05+00:00",
+   "link": "https://www.thefp.com/p/the-good-news-about-jensen-huangs-affair",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Hopes for Heaven on \"60 Minutes\" & Stephen Miller Becomes Chief of Staff | The Daily Show",
+   "dek": "Jon Stewart shares his take on the chaotic aftermath of the midterm blue wave and the fractured GOP left in its wake. MAGA pundits blame Trump for the electoral carnage, Ross Douthat plays hardball with the president on “60 Minutes,” and Stephen Miller gets an unforeseen promotion to chief of staff (thanks to his calm, level-headed demeanor). Plus, Jordan Klepper chats with Jon live from the White House, freshly updated with Miller’s totally-not-creepy personal effects. #DailyShow #Trump #Midterms #StephenMiller 0:00 - Jon Stewart's TDS Welcome 1:01 - Jon Stewart Recaps the Aftermath of the Bl",
+   "opening": "",
+   "published": "2026-11-10T04:00:17+00:00",
+   "link": "https://www.youtube.com/watch?v=wrAuG5d2pvI",
+   "videoId": "wrAuG5d2pvI",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Lawyer Up’: Can Democrats Deliver Accountability Without Overreaching?",
+   "dek": "Hakeem Jeffries and his party want to use power in Congress to &#8216;visit accountability on wrongdoers.&#8217; Getting that right will be easier said than done, writes Joe Nocera.",
+   "opening": "Jennifer Welch is a progressive Democrat who co-hosts a popular podcast called I&#8217;ve Had It . As you might imagine given that title, her show, which has 1.81 million YouTube subscribers, is primarily devoted to railing about all the awful things Donald Trump has done in his second term. Recent episodes have had headlines like : &#8220;He&#8217;s Totally Lost It,&#8221; &#8220;Massive Betrayal,&#8221; and &#8220;This Is What He&#8217;ll Do Next.&#8221; Shortly after the results were in from Tuesday&#8217;s midterms, Welch took to YouTube and went off. &#8220;You&#8217;re right,&#8221; she said, &#8220;lawyer up, read it again, motherfuckers. . . . All gas on this thing until MAGA is crushed completely and thoroughly and a museum is erected with every single fascist&#8217;s name and every single person who gave money to these piece of shit bigots with their names chiseled in marble.&#8221; On the one hand, Welch&#8217;s comments are, undeniably, an extreme example of Trump Derangement Syndrome. But if you&#8217;re tempted to write her off as an unhinged Trump hater, consider this: The phrase lawyer up , at least in this context, was first uttered by someone who is about to have a significant amount of power to investigate Trump, his family, and his associates both inside and outside of government. I&#8217;m speaking, of course, of California congressman Robert Garcia, who is in line to become the chairman of the House Oversight Committee once the Democrats take power in Ja",
+   "published": "2026-11-10T02:57:16+00:00",
+   "link": "https://www.thefp.com/p/lawyer-up-can-democrats-deliver-accountability-without-overreach",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Precap: The Midterms Have Desi Lydic Feeling the \"Opposite of Despair\" | The Daily Show",
+   "dek": "In this Precap, Desi Lydic and Daily Show writer Devin Delliquanti bask in the afterglow of the Democrats' midterm \"blue tsunami,\" which signaled a resounding rejection of MAGA's politics of division and ushered in several historic American firsts, including the first Black female governor. The pair digs into JD Vance and Ted Cruz's post-election pivot on affordability and the Iran War, Megyn Kelly's newfound outrage over Trump's grift, and the president responding to the rout by remaining laser-focused on his ballroom. Plus, Desi and Devin wonder if Democrats will seize this opportunity to de",
+   "opening": "",
+   "published": "2026-11-10T02:44:08+00:00",
+   "link": "https://www.youtube.com/watch?v=otNdvBqWKeU",
+   "videoId": "otNdvBqWKeU",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tyler Cowen: Jensen Huang’s Secret Is Out. Who’s Next?",
+   "dek": "The alleged &#8216;honeypot&#8217; attack on Nvidia&#8217;s CEO may herald a new age of private-sector spying. After all, hidden information is more valuable than ever, writes Tyler Cowen.",
+   "opening": "The big story in the tech world this week concerns allegations that Nvidia CEO Jensen Huang was &#8220;honeypotted&#8221; by Alice Huang (no relation), allegedly a Chinese spy. Alice Huang also worked for the Singaporean company Megaspeed, a major customer of Nvidia, creating the potential for conflict issues. It may look like merely the latest story of a wealthy, powerful man making an irresponsible decision. But below the surface, it is also a harbinger of the erosion of privacy today, as well as the acceleration of espionage and the increasing value of secrets. More time and resources are going to be devoted to uncovering secrets, with honeypotting only one part of a larger picture: more spying, more attempted honeypotting, more private surveillance, more attempts to record (and search, using AI) conversations, more hacks of phones and computers, and more attempts to use AI to figure out the details of people&#8217;s lives and plans. Life is going to feel much more cloak-and-dagger, especially for the wealthy and influential. Read more",
+   "published": "2026-11-10T00:59:28+00:00",
+   "link": "https://www.thefp.com/p/tyler-cowen-jensen-huangs-secret-is-out",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Exxon Strikes Preliminary Deal to Return to Venezuela",
+   "dek": "The agreement brings the biggest U.S. oil company a step closer to pumping oil again in Venezuela, nearly two decades after it left the country.",
+   "opening": "",
+   "published": "2026-11-10T00:51:53+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/business/energy-environment/exxon-mobil-venezuela-oil-deal.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "U.S. Commerce Dept. Inquiry Into Megaspeed Was Halted After Nvidia Intervention",
+   "dek": "An investigation into Megaspeed, a Singapore company that was buying advanced Nvidia A.I. chips, was transferred to the Justice Department after a top Nvidia executive reached out to Commerce Department officials.",
+   "opening": "",
+   "published": "2026-11-09T23:27:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/business/economy/nvidia-megaspeed-investigation-huang.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: Russell Brand Sentenced & Trump Takes On 60 Minutes",
+   "dek": "France pins a country-wide cyberattack on their refrigerators on Iran, Russell Brand is sentenced to prison in a UK court, and President Trump appears on 60 Minutes. Get the facts first with Evening Wire. - - - Ep. 3187 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Cardiff - Check out https://Cardiff.co/dailywire for up to $500,000 in same day funding. Real growth. Fast funding. Cardiff – Borrow better. - - - Privacy Policy: ⁠https://www.dailywire.com/privacy⁠ morning wire,morning wire podcast,the morning wire podcast,Georgia Howe,John Bickley,daily w",
+   "opening": "",
+   "published": "2026-11-09T22:30:16+00:00",
+   "link": "https://www.youtube.com/watch?v=kcg9Zcn0Be8",
+   "videoId": "kcg9Zcn0Be8",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Country’s President Led to a Bank’s Stunning Rise, and Its Fall",
+   "dek": "Prosecutors accused President Santiago Peña of Paraguay of funneling nearly a billion dollars of government funds to the Ueno bank as its executives made reckless insider loans.",
+   "opening": "",
+   "published": "2026-11-09T21:26:15+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/world/americas/paraguay-bank-president-ueno.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_thepresi_arrest-bank-collapse-house": [
+     "paraguay",
+     "bank"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia’s Stock Price Drops After Investigation Into CEO Jensen Huang",
+   "dek": "The chip maker’s shares fell sharply after its C.E.O., Jensen Huang, admitted to a relationship with a businesswoman suspected of spying for China.",
+   "opening": "",
+   "published": "2026-11-09T21:23:34+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/business/nvidia-stock-price-jensen-huang-ceo.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "China Rejects Espionage Claims Involving Nvidia C.E.O. Jensen Huang",
+   "dek": "The controversy has intensified scrutiny of Mr. Huang’s ties to Beijing and sparked mixed reactions across Asia, where he is widely popular.",
+   "opening": "",
+   "published": "2026-11-09T20:18:47+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/business/jensen-huang-china-spying.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Targeted by U.S., Armed Group Strikes Back in Colombia",
+   "dek": "American forces are helping Colombia and Venezuela hunt the ELN. This weekend, the group attacked a Colombian military base with drones, officials said.",
+   "opening": "",
+   "published": "2026-11-09T20:14:08+00:00",
+   "link": "https://www.nytimes.com/2026/11/08/world/americas/colombia-drone-attack-eln.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's New Chief of Staff Could Change the Administration's Direction",
+   "dek": "A key staffing-shakeup at the White House could signal a more aggressive strategy from the President. Prominent voices on the left are facing rare backlash from advertisers as violent rhetoric picks up post-election. And, Poland declares two national days of mourning after a terror attack in Krakow. Reporting from Tim Rice and Megan Basham. Plus, we speak with Victoria Coates, National Security Expert at The Heritage Foundation. Get the facts first with Morning Wire. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to",
+   "opening": "",
+   "published": "2026-11-09T19:35:14+00:00",
+   "link": "https://www.youtube.com/watch?v=cZrKzM9raNw",
+   "videoId": "cZrKzM9raNw",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "obj_x_declares-monument-national-office": [
+     "declares",
+     "national"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rep Summer Lee PUSHED On Jeffries: Will He DESTROY Dem Mandate?",
+   "dek": "Krystal interviews Summer Lee on the future of Dems and leadership under strain after major midterm victories. Summer Lee: https://summerlee.house.gov/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3P",
+   "opening": "",
+   "published": "2026-11-09T19:00:23+00:00",
+   "link": "https://www.youtube.com/watch?v=TIuMC6ifbxI",
+   "videoId": "TIuMC6ifbxI",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia's Jensen Huang faces scrutiny over alleged affair with Chinese spy",
+   "dek": "Lawmakers, investors and tech leaders are assessing bombshell revelations about Nvidia founder and CEO Jensen Huang. Huang admitted to an affair with a woman accused of being a Chinese spy. Nvidia designs chips and processors that power artificial intelligence and underpin much of the enormous investment in the industry. William Brangham reports.",
+   "opening": "",
+   "published": "2026-11-09T18:55:35-05:00",
+   "link": "https://www.pbs.org/newshour/show/nvidias-jensen-huang-faces-scrutiny-over-alleged-affair-with-chinese-spy",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What China stands to gain from Nvidia's CEO's alleged affair with spy",
+   "dek": "To discuss the national security risks of Nvidia's CEO having an affair with a possible foreign intelligence agent, Amna Nawaz spoke with Christopher Johnson. He spent 20 years in the U.S. intelligence community focusing on China. He now runs his own consulting firm, China Strategies Group.",
+   "opening": "",
+   "published": "2026-11-09T18:50:09-05:00",
+   "link": "https://www.pbs.org/newshour/show/what-china-stands-to-gain-from-nvidias-ceos-alleged-affair-with-spy",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How the Nvidia revelations could ripple through the AI industry and global economy",
+   "dek": "Jensen Huang, the CEO of chipmaker Nvidia, admitted to an affair with a woman accused of being a Chinese spy. The economic stakes extend well beyond Nvidia itself. With a market value still exceeding $4 trillion, the company has become a major driver of the stock market and a central force in the AI boom. To discuss the financial impact, Geoff Bennett spoke with Mohamed El-Erian.",
+   "opening": "",
+   "published": "2026-11-09T18:45:32-05:00",
+   "link": "https://www.pbs.org/newshour/show/what-china-stands-to-gain-from-nvidias-ceos-alleged-affair-with-spy-2",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: Supreme Court allows border wall construction in Big Bend",
+   "dek": "In our news wrap Monday, the Supreme Court is allowing the Trump administration to continue building a section of border wall in a remote part of Texas that includes Big Bend National Park, Russia and Ukraine exchanged long-range strikes ahead of U.S. brokered talks and French officials are blaming Iran for a massive cyberattack on supermarket refrigerators.",
+   "opening": "",
+   "published": "2026-11-09T18:40:07-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-supreme-court-allows-border-wall-construction-in-big-bend",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What we know &mdash; and what we don't &mdash; as Nvidia investigates an alleged spy plot involving its CEO",
+   "dek": "Many questions remain unanswered. But the scandal is already bringing turmoil to California-based Nvidia, whose high-end chips have emerged as the leading building blocks for artificial intelligence.",
+   "opening": "",
+   "published": "2026-11-09T18:35:18-05:00",
+   "link": "https://www.pbs.org/newshour/world/what-we-know-and-what-we-dont-as-nvidia-investigates-an-alleged-spy-plot-involving-its-ceo",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "AIPAC In Freefall AFTER DEVASTATING Midterm Election",
+   "dek": "Krystal and Saagar discuss AIPAC taking major losses in the midterms. Aipac Tracker: https://www.trackaipac.com/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.c",
+   "opening": "",
+   "published": "2026-11-09T18:30:33+00:00",
+   "link": "https://www.youtube.com/watch?v=EiAbs1lsy_I",
+   "videoId": "EiAbs1lsy_I",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth IMPEACHMENT LOOMS As Trump Doubles Down On Iran",
+   "dek": "Krystal and Saagar discuss Hegseth facing a potential impeachment over the Iran war in the House. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoin",
+   "opening": "",
+   "published": "2026-11-09T18:00:03+00:00",
+   "link": "https://www.youtube.com/watch?v=hgGBn2EQ2RM",
+   "videoId": "hgGBn2EQ2RM",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California amusement park to close after more than 50 years",
+   "dek": "Six Flags&apos; California&apos;s Great America in Santa Clara will close after its 2027 farewell season, ending more than 50 years of amusement park history.",
+   "opening": "A California amusement park will close its gates for the final time next year after more than 50 seasons in business. California’s Great America, owned by Six Flags, in Santa Clara said it will cease operations after it opted not to extend its land lease that expires in June 2028. The park’s final season will begin in March 2027 and end on Labor Day. SIX FLAGS GIVES FAN-FAVORITE ARIEFORCE ONE COASTER A SECOND LIFE \"The Farewell Season is an opportunity for generations of Bay Area guests to return, spend time with family and friends, and revisit the attractions and traditions that have made the park in Santa Clara, California such a meaningful part of the community,\" said Dave Vosejpka , park manager of California's Great America. The closure marks the end of an era that began in 1976, when the park opened as Marriott’s Great America. It operated for decades on public land until former owner Cedar Fair Entertainment Co. purchased the 112 acres underneath the park in 2019 for around $150 million. SIX FLAGS TO SELL 7 AMUSEMENT PARKS IN DEAL WORTH MORE THAN $330M Cedar Fair sold the land three years later to real estate company Prologis for around $310 million with a lease agreement. Cedar Fair merged with Six Flags in 2024. Signs of a shutdown had surfaced over the past few years. Great America canceled most live entertainment and its Halloween and Christmas events last year, according to the Los Angeles Times. The closure of Great America comes after parent company Six Flags so",
+   "published": "2026-11-09T17:39:59-05:00",
+   "link": "https://www.foxbusiness.com/lifestyle/california-amusement-park-close-after-more-than-50-years",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran denies it was behind cyber fridge attacks targeting France",
+   "dek": "The denial comes a day after the French government blamed Iranian military hackers for last month's attack on refrigeration systems at around 700 retail sites, which spoiled millions of dollars' worth of food.",
+   "opening": "The denial comes a day after the French government blamed Iranian military hackers for last month's attack on refrigeration systems at around 700 retail sites, which spoiled millions of dollars' worth of food. (Image credit: FRED TANNEAU)",
+   "published": "2026-11-09T17:30:49-05:00",
+   "link": "https://www.npr.org/2026/11/09/g-s1-152724/france-iran-cyber-sabotage-fridge-attacks",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Medicaid affected one California House race",
+   "dek": "A Republican in California's Central Valley fended off challengers for years. But his district had a lot of people on Medicaid, and he lost by a large margin this time.",
+   "opening": "A Republican in California's Central Valley fended off challengers for years. But his district had a lot of people on Medicaid, and he lost by a large margin this time.",
+   "published": "2026-11-09T17:25:19-05:00",
+   "link": "https://www.npr.org/2026/11/09/nx-s1-6030983/how-medicaid-affected-one-california-house-race",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "house race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump KNIFES JD Vance On Iran War",
+   "dek": "Krystal and Saagar discuss Trump confronted on 60 minutes on the GOP's midterm losses. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Faceboo",
+   "opening": "",
+   "published": "2026-11-09T17:00:02+00:00",
+   "link": "https://www.youtube.com/watch?v=dDqeEIKvatw",
+   "videoId": "dDqeEIKvatw",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia case highlights risks of alleged 'honeypot' schemes targeting executives",
+   "dek": "Security experts warn &quot;honeypot&quot; schemes targeting executives like Nvidia&apos;s Jensen Huang can expose trade secrets, strategic plans and national security.",
+   "opening": "Corporate secrets can be at risk when executives are targeted in so-called honeypot schemes, which can be aimed at divulging trade secrets or strategic plans and, in certain industries, national security information that could be of use to foreign adversaries. Nvidia CEO Jensen Huang on Sunday admitted to being unfaithful to his wife, which prompted the company's board of directors to open an internal investigation into the matter because of reports he was targeted by an alleged Chinese spying operation. The board said the investigation will consider all available information, though it has \"no reason to believe that either national security or Nvidia secrets were compromised.\" Ken Senser, chief strategy officer at Corporate Security Advisors, told FOX Business that \"all kinds of sensitive information is at risk when relationships exist whose basis is really to compromise the executive.\" Senser said that while he doesn't have specific insight into the Nvidia situation, the sort of information that could be at risk includes things like strategic plans, customer identities, product lines and designs, allocation and pricing of products, along with corporate discussions with the government. NVIDIA SHARES FALL AFTER INVESTIGATION INTO CEO'S RELATIONSHIP WITH ALLEGED CHINESE SPY He added that in extreme situations, such schemes can lead to coercion or blackmail with the threat of releasing compromising information if an executive doesn't want to cooperate with those who targeted th",
+   "published": "2026-11-09T16:18:58-05:00",
+   "link": "https://www.foxbusiness.com/economy/nvidia-case-highlights-risks-alleged-honeypot-schemes-targeting-executives",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump meets key Iran war mediator as UAE reveals major oil export surge despite conflict",
+   "dek": "Trump met Qatar&apos;s prime minister at the White House as Marco Rubio warns Iran negotiations are far from a breakthrough amid Strait of Hormuz chaos.",
+   "opening": "ABU DHABI, United Arab Emirates — President Donald Trump met Qatar's prime minister, Sheikh Mohammed bin Abdulrahman Al-Thani, on Monday at the White House as diplomatic efforts to end the war with Iran continue, even as Secretary of State Marco Rubio warns that negotiations remain far from a breakthrough and Tehran signals a willingness to negotiate without yielding to pressure. The competing messages come as the Strait of Hormuz remains a major source of global economic disruption and regional governments push for a diplomatic solution to a conflict that has subjected Gulf countries to thousands of Iranian missile and drone attacks . Speaking to reporters Sunday before departing for a G7 foreign ministers meeting in Paris, Rubio said there had been little progress in negotiations and rejected the terms put forward by Tehran. \"I wouldn't say we're on the verge of a breakthrough,\" Rubio said. RUBIO DEFENDS TRUMP'S IRAN WAR AS NOT 'NECESSARILY POPULAR, BUT NECESSARY' He emphasized that Trump prefers a diplomatic settlement but described Iran's demands as unrealistic. Iranian President Masoud Pezeshkian said Monday that Tehran was prepared to negotiate an end to what he described as a prolonged state of neither war nor peace. \"We can negotiate with dignity and resolve the issue with dignity. We favor dialogue and negotiations,\" Pezeshkian said, according to Anadolu Agency on November 9 , citing an Iranian presidential statement. He said Supreme Leader Mojtaba Khamenei had instr",
+   "published": "2026-11-09T13:27:23-05:00",
+   "link": "https://www.foxnews.com/world/trump-meets-key-iran-war-mediator-uae-reveals-major-oil-export-surge-despite-conflict",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ],
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "supreme",
+     "push"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "China denies spy plot targeting Nvidia CEO Jensen Huang, calls allegations ‘smear’",
+   "dek": "China calls the alleged spy operation targeting Nvidia CEO Jensen Huang a &quot;groundless&quot; smear as Beijing pushes back against U.S. intelligence claims.",
+   "opening": "China on Monday rejected allegations of a spying operation targeting Nvidia CEO Jensen Huang , dismissing reports of a suspected Chinese intelligence plot as a smear campaign against Beijing. \"The so-called Chinese spy narrative is purely a groundless accusation, slander, and a smear,\" Chinese Foreign Ministry spokesperson Guo Jiakun told reporters during a regular news briefing in Beijing on Monday. The denial comes after Nvidia announced an independent investigation into reports that Huang had been the \"target of a foreign intelligence effort.\" NVIDIA SHARES FALL AFTER INVESTIGATION INTO CEO'S RELATIONSHIP WITH ALLEGED CHINESE SPY The New York Times previously reported that U.S. intelligence officials determined Huang had developed a close relationship with Alice Huang, an unrelated Chinese business executive at Singapore-based company Megaspeed whom U.S. authorities suspect of gathering information for Beijing . Huang acknowledged an extramarital affair in a letter to Nvidia employees Sunday but did not identify the woman involved. He pledged to cooperate with the company's investigation and emphasized his commitment to U.S. national security . HOUSE REPUBLICANS DEMAND ANSWERS FROM NVIDIA CEO OVER REPORTED CHINESE SPY TIES Beijing has also pushed back against the broader reporting, with some Chinese state media suggesting the allegations were intended to undermine U.S.-China relations . \"Whenever China-US relations begin to improve, there are often those firing shots from ",
+   "published": "2026-11-09T12:15:07-05:00",
+   "link": "https://www.foxbusiness.com/technology/china-denies-spy-plot-targeting-nvidia-ceo-jensen-huang-calls-allegations-smear",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia shares fall after investigation into CEO's relationship with alleged Chinese spy",
+   "dek": "Nvidia&apos;s board launched an internal probe into CEO Jensen Huang&apos;s relationship with an alleged Chinese spy who reportedly passed info to Beijing.",
+   "opening": "Nvidia shares are lower on Monday after the company announced an internal investigation into CEO Jensen Huang's relationship with an alleged Chinese spy. Shares of the chipmaker fell more than 5% in Monday trade, and were down nearly 6% around noon. The internal probe, which will be overseen by outside independent counsel and a committee of independent directors, followed a media report that Huang had a close relationship with a Chinese businesswoman who allegedly passed information to Beijing. NVIDIA CEO JENSEN HUANG APOLOGIZES AS FIRM PROBES AFFAIR WITH ALLEGED SPY \"While the Board has no reason to believe that either national security or NVIDIA secrets were compromised, the Board's inquiry will examine all available information,\" Nvidia's board said in a statement on Sunday. The board added that \"Jensen fully supports the review and has committed to cooperating with it,\" adding that the directors have \"confidence in Jensen and his leadership team.\" HOUSE REPUBLICANS DEMAND ANSWERS FROM NVIDIA CEO OVER REPORTED CHINESE SPY TIES Huang, in a separate statement on Sunday, apologized for being unfaithful to his wife. He did not elaborate on the relationship. \"My actions hurt her and our children,\" he said. \"There is no excuse for what I did. I am deeply sorry.\" Huang said he will support and cooperate fully with the independent investigation into the national security concerns, adding that \"I love our country and our company. I am committed to protecting Nvidia and supporting A",
+   "published": "2026-11-09T10:20:45-05:00",
+   "link": "https://www.foxbusiness.com/markets/nvidia-shares-fall-after-investigation-ceos-relationship-alleged-chinese-spy",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fanatics, American Express debut credit card featuring sports stars",
+   "dek": "Fanatics unveiled a new American Express credit card inspired by Topps trading cards, allowing sports fans to select their favorite athlete from more than 500 stars.",
+   "opening": "Sports brand powerhouse Fanatics and American Express on Monday unveiled the Fanatics American Express Card , designed to reward sports fans with more of what they love and connect them across the entire Fanatics experience. Inspired by Topps trading cards, the first-of-its-kind credit card design lets fans select their favorite player from a roster of more than 500 NBA, NFL, UFC and WWE athletes. Fanatics and American Express announced the partnership in May. CLICK HERE FOR MORE SPORTS COVERAGE ON FOXBUSINESS.COM The credit card earns FanCash – Fanatics’ loyalty currency – on fandom purchases and everyday spending, which can be redeemed across the Fanatics platform for authentic apparel, trading cards, collectibles, tickets, access to events like Fanatics Fest and more. Cardmembers also receive exclusive benefits, such as early access to select Topps drops, and will have the opportunity to enter the Championship Challenge for a chance to have their bill paid by correctly predicting all NBA, NFL, NHL and MLB championship winners. \"This card unleashes the power of the Fanatics platform – from the gear fans wear to the tickets they buy or the collectibles they seek out – and creates yet another touchpoint to reward our fans through a robust payments solution that has not been seen in this space,\" said Greg Lisiewski, president of Fanatics Financial Services. MLB CATCHER WHO WAS BEHIND PLATE FOR ALLEGED RIGGED PITCHES TESTIFIES IN GUARDIANS PITCHERS' GAMBLING CASE Other benefits",
+   "published": "2026-11-09T09:52:36-05:00",
+   "link": "https://www.foxbusiness.com/sports/fanatics-american-express-debut-credit-card-featuring-sports-stars",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "events"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
