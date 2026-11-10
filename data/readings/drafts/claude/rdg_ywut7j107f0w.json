@@ -1,0 +1,544 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "wdwa-oneamerica-votes-v-trump-tro-2026-11-05",
+  "name": "Judge Jamal Whitehead's temporary restraining order of 2026-11-05 (W.D. Wash., OneAmerica Votes v. Trump, No. 2:26-cv-04223-JNW), barring DOJ and DHS for 14 days from directing Washington election officials to remove, withhold or set aside the ballots of specific voters in the 2026-11-03 election, or threatening them with prosecution for refusing",
+  "place": {
+   "quadrants": [
+    "B",
+    "D"
+   ],
+   "band": "coalition",
+   "z": 0.5,
+   "why": "The order stops DOJ from compelling Washington to set ballots aside through the November 24 county certification, but it lasts 14 days, the injunction hearing is November 18, and investigations can go ahead, so it delivers on the count without settling the citizenship question."
+  }
+ },
+ "tethers": [
+  {
+   "statute": "Voting by aliens",
+   "cite": "18 U.S.C. § 611 (added by Pub. L. 104-208)",
+   "title": "Federal crime for a noncitizen to vote in a federal election",
+   "enacted": "1996-09-30",
+   "relation": "invokes",
+   "why": "The only authority DOJ's October 26 letter cited (order at 6). Whitehead, following the Ninth Circuit's October 30 ruling in United States v. California, held it does not let DOJ take charge of a state's running election; prosecutions under it remain open. Enactment date carried from the California draft (rdg_al8uju97ware), not re-verified.",
+   "place": {
+    "quadrants": [
+     "C",
+     "D"
+    ],
+    "band": "coalition",
+    "z": -0.3,
+    "why": "As DOJ's lever on the count it failed here; it stands only as the route to case-by-case prosecution after the fact."
+   }
+  },
+  {
+   "statute": "Elections Clause",
+   "cite": "U.S. Const. art. I, § 4, cl. 1",
+   "title": "States prescribe the times, places and manner of congressional elections; Congress may alter those regulations",
+   "enacted": "1788-06-21",
+   "relation": "invokes",
+   "why": "The ground of the likely-success finding: DOJ exceeded the authority Congress has delegated under the Clause, with Printz's anti-commandeering line (order at 16-19). Ratification date from background.",
+   "place": {
+    "quadrants": [
+     "B",
+     "D"
+    ],
+    "band": "fluid",
+    "z": 0.5,
+    "why": "Leaves the count to the procedures Washington's legislature enacted unless Congress itself says otherwise."
+   }
+  },
+  {
+   "statute": "National Voter Registration Act of 1993",
+   "cite": "52 U.S.C. § 20507(c)(2)(A) (Pub. L. 103-31)",
+   "title": "NVRA 90-day bar on systematic removals before a federal election",
+   "enacted": "1993-05-20",
+   "relation": "adjacent",
+   "why": "Cited through the Ninth Circuit's California ruling (order at 17): the demand likely conflicts with the 90-day bar. Not the ground Whitehead rested on. Section and date from the California draft.",
+   "place": {
+    "quadrants": [
+     "B",
+     "D"
+    ],
+    "band": "fluid",
+    "z": 0.2,
+    "why": "Standing law that runs against list-based pulls this close to an election; in the background here."
+   }
+  },
+  {
+   "billId": "hr-119-22",
+   "bill": "H.R. 22",
+   "title": "SAVE Act",
+   "relation": "adjacent",
+   "statusAsOf": "Passed House 2025-04-10; received in the Senate, no vote (catalog)",
+   "why": "Documentary proof of citizenship at registration: the front-end check B-fluid and D-coalition name as the right fix instead of pulling ballots after the vote.",
+   "inDb": true,
+   "place": {
+    "quadrants": [
+     "A",
+     "C"
+    ],
+    "band": "coalition",
+    "z": -0.2,
+    "why": "Stalled in the Senate, so it delivers nothing to this count; it is the answer the right names for next time."
+   }
+  }
+ ],
+ "linkedBills": [
+  "hr-119-22"
+ ],
+ "title": "Did Not Ask",
+ "category": "Courts · Elections · Federalism",
+ "date": "2026-11-05",
+ "prompt": "A judge told federal prosecutors they can't make Washington set aside ballots from a list of suspected noncitizens. Is that the states running their own count, or a court shielding illegal votes?",
+ "framing": "On Thursday, November 5, 2026, U.S. District Judge Jamal Whitehead in Seattle issued a 14-day temporary restraining order barring the Justice Department and Homeland Security from directing Washington election officials to drop specific voters from the rolls, withhold their ballots, or set aside their votes in the November 3 election, and from threatening officials with prosecution for refusing. On October 26, federal prosecutors had sent Secretary of State Steve Hobbs a list of roughly 400 registered voters they suspected were noncitizens, citing only 18 U.S.C. § 611 and giving no individual evidence, and asked that those ballots not be counted until citizenship was settled. Hobbs refused on October 28, saying the list included citizens. Whitehead found the challengers likely to win on the claim that DOJ exceeded its authority under the Elections Clause. Investigations and prosecutions can continue.",
+ "framingKeywords": [
+  "noncitizen ballots",
+  "restraining order",
+  "Elections Clause",
+  "400 voters",
+  "Steve Hobbs"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.5,
+  "seam": "At the center it is a 3-vs-1 peel: A (+0.75), C (+0.6) and B (+0.3) read the order as delivering on fluid, D alone negative (−0.6). At the rim it closes into an x split: B (−0.7) and C (−0.5) cross negative, only A's rim (+0.8) stays positive.",
+  "rationale": "At the center Printz and the Elections Clause do the sorting, and a right-institutional speaker who reads them as federalism accepts the order. At the rim the holder takes over: a Biden judge and the Elias lawyers for the right, a court that leaves the list in DOJ's hands for C.",
+  "zPattern": {
+   "centers": {
+    "A": 0.75,
+    "B": 0.3,
+    "C": 0.6,
+    "D": -0.6
+   },
+   "rims": {
+    "A": 0.8,
+    "B": -0.7,
+    "C": -0.5,
+    "D": -0.9
+   },
+   "note": "Centers are fluid z; coalition z: A +0.5, B −0.1, C +0.3, D −0.35. B and C change sign between fluid and denominated; B already crosses at coalition. Object z +0.5."
+  },
+  "ruledBy": null,
+  "date": "2026-11-07"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "The coalition band is where each station turns on its own side: A tells the people celebrating that a TRO isn't a verdict, B defends the judge's Printz reasoning against people calling him a Biden judge, C won't cheer a D.C. law firm while the list stays in DOJ's hands, and D tells the people yelling rigged that the list was sloppy and DOJ handed the judge the case.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the order delivers: a state's count runs on its own rules, and a federal list with no evidence can't pull ballots out of it",
+   "neg": "it doesn't: a judge shields suspect votes from the one check that might have caught them, two days after the election"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": 0.75,
+    "zReason": "Under Printz the federal government can ask a state but can't order it, and the Elections Clause leaves the count to Washington's own procedures, so a list with nothing behind it but §611 can't pull ballots out.",
+    "instrument": {
+     "holder": "Judge Whitehead",
+     "trusted": true
+    },
+    "text": "Read the letter. It cites §611, gives no method and no evidence for any single person, and gives the state 24 hours. Whitehead's line, 'On this record, Defendants did not ask,' is the whole case: you can request cooperation, you can't threaten an official into setting votes aside.",
+    "xWord": "voters",
+    "yWord": "Printz",
+    "words": [
+     "no individual evidence",
+     "request, not compel",
+     "state's own rules"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.5,
+    "zReason": "The order holds the count steady through certification, but a 14-day TRO with an injunction hearing on Nov 18 isn't a final ruling, and the people celebrating it as one are setting themselves up.",
+    "instrument": {
+     "holder": "Judge Whitehead",
+     "trusted": true
+    },
+    "text": "I think the order is right, and the 62 people who never even got ballots tell you how sloppy that list was. But the people I vote with are treating a temporary restraining order like a final verdict and holding up the Elias lawyers as heroes. It's a TRO, the real fight is Nov 18, and DOJ can still investigate. I'd hold the applause.",
+    "xWord": "restraint",
+    "yWord": "injunction",
+    "words": [
+     "only fourteen days",
+     "November 18 hearing",
+     "hold the applause"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "The courts are the last thing standing between an authoritarian Justice Department and the ballots of eligible citizens, and this time they held.",
+    "instrument": {
+     "holder": "the courts",
+     "trusted": true
+    },
+    "text": "An authoritarian DOJ tried to scare a state into throwing out citizens' votes, and a judge said no. That's the job.",
+    "xWord": "democracy",
+    "yWord": "courts",
+    "words": [
+     "authoritarian DOJ",
+     "judge said no",
+     "votes protected"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "The holding rests on Printz and the Elections Clause, both sound federalism, so it delivers the narrow point that DOJ can't commandeer Washington's count, even from a judge this station doesn't trust on much else.",
+    "instrument": {
+     "holder": "Judge Whitehead",
+     "trusted": false
+    },
+    "text": "Printz is a conservative precedent, and it fits here: Washington doesn't have to do DOJ's job because a U.S. Attorney held a press conference. The real failure was the letter, with no evidence, no method, and citizens on the list by the prosecutors' own admission. If Congress wants citizenship checked at the front door, that's what the SAVE Act is for, and it's sitting in the Senate.",
+    "xWord": "federalism",
+    "yWord": "Printz",
+    "words": [
+     "anti-commandeering holds",
+     "sloppy letter",
+     "pass SAVE Act"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.1,
+    "zReason": "The doctrine is fine, but the order leaves no working way to resolve suspect registrations before counties certify on Nov 24, so the check falls on prosecutions after the fact.",
+    "instrument": {
+     "holder": "the federal courts",
+     "trusted": false
+    },
+    "text": "I hear people I vote with calling Whitehead 'a Biden judge,' and I get the frustration, but he's citing Printz, which is their doctrine too. What bothers me is that between this, California on Nov 2, and the Ninth Circuit, nobody in the system has a timely way to check a suspect registration before certification. Prosecuting someone in March doesn't take a vote back out of the count.",
+    "xWord": "certification",
+    "yWord": "process",
+    "words": [
+     "their doctrine too",
+     "no timely check",
+     "SAVE Act stalled"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.7,
+    "zReason": "A Biden judge running an Elias Law Group lawsuit won't deliver an honest count; asking about citizenship has been turned into the offense.",
+    "instrument": {
+     "holder": "a Biden judge",
+     "trusted": false
+    },
+    "text": "A Biden judge, an Elias lawsuit, and now asking whether voters are citizens counts as intimidation. That's lawfare in a robe.",
+    "xWord": "lawfare",
+    "yWord": "judge",
+    "words": [
+     "Biden judge",
+     "Elias lawsuit",
+     "lawfare"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": 0.6,
+    "zReason": "The order cuts off the aiding-and-abetting threats aimed at election workers and county auditors, and that's the pressure that could actually have gotten citizens' ballots pulled.",
+    "instrument": {
+     "holder": "the UFCW members who sued",
+     "trusted": true
+    },
+    "text": "This was about working people. Naturalized grocery and meat workers in UFCW are exactly who a list of 'suspected noncitizens' sweeps up, and a federal prosecutor went on the radio talking about going to all 39 county auditors. Whitehead put it plainly: 'A threat of prosecution made for that purpose is not legal advice.' The county clerk doesn't have to choose between her job and somebody's vote anymore.",
+    "xWord": "workers",
+    "yWord": "auditors",
+    "words": [
+     "naturalized union members",
+     "threats stopped",
+     "39 county auditors"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.3,
+    "zReason": "The order protects the count, but it leaves the list, the investigations and the prosecutions in place, so the people named on it are still exposed.",
+    "instrument": {
+     "holder": "Judge Whitehead",
+     "trusted": false
+    },
+    "text": "Sure, I'll take the win. But the people I organize with are cheering a federal judge and a big D.C. law firm like that settles it, and it doesn't. Those 400 names are still in DOJ's hands, they promised a second list, and the order says outright they can keep investigating. If you're a naturalized citizen on that list, a TRO doesn't make the knock on your door any less scary.",
+    "xWord": "exposure",
+    "yWord": "lawyers",
+    "words": [
+     "list still exists",
+     "second list promised",
+     "still investigating"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.5,
+    "zReason": "Courts and lawyers protect a process, not the people; DOJ keeps the list and the power to prosecute, so the targeting goes on.",
+    "instrument": {
+     "holder": "the courts",
+     "trusted": false
+    },
+    "text": "A 14-day piece of paper doesn't take anybody's name off a government list. They'll come for immigrant voters some other way, and the courts will call it an investigation.",
+    "xWord": "targeting",
+    "yWord": "paper",
+    "words": [
+     "fourteen-day paper",
+     "immigrant voters",
+     "they'll return"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": -0.6,
+    "zReason": "Setting those ballots aside until citizenship was settled was the only check that worked before certification, and the order removes it two days after the election, so suspect votes get counted first and questions come later.",
+    "instrument": {
+     "holder": "Judge Whitehead",
+     "trusted": false
+    },
+    "text": "Prosecutors flagged about 400 registered voters as possible noncitizens and asked for one thing: don't count those ballots until it's settled. Two days after the election, a judge says no, and counties certify on the 24th. You can prosecute somebody next year, but you can't pull their vote back out once it's certified. Where's the check?",
+    "xWord": "citizenship",
+    "yWord": "certification",
+    "words": [
+     "400 suspected noncitizens",
+     "two days after",
+     "no check left"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.35,
+    "zReason": "The order still lets suspect ballots through before certification, but the list DOJ sent was weak enough that it handed the judge the case, so part of the failure sits with DOJ.",
+    "instrument": {
+     "holder": "Judge Whitehead",
+     "trusted": false
+    },
+    "text": "I want noncitizen voting stopped as much as anyone. But people I vote with are yelling 'rigged' about a list where 62 people never even got ballots and some had already shown citizenship papers at Licensing. If Serrano and Floyd had brought real evidence instead of §611 and a 24-hour deadline, this goes differently. Pass the SAVE Act and do it right.",
+    "xWord": "evidence",
+    "yWord": "DOJ",
+    "words": [
+     "sloppy list",
+     "show the evidence",
+     "do it right"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "A Biden judge working with the Elias machine won't let anyone check citizenship, so the count can't be trusted.",
+    "instrument": {
+     "holder": "a Biden judge",
+     "trusted": false
+    },
+    "text": "Rigged. A Biden judge and the Elias machine just made sure 400 suspect names stay in the count, no questions asked.",
+    "xWord": "rigged",
+    "yWord": "machine",
+    "words": [
+     "rigged",
+     "Elias machine",
+     "no questions asked"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "Whitehead's order says it plainly: you can request cooperation, you can't threaten an official into setting votes aside. The letter cited §611 and gave no evidence for any single person.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "Whitehead's order",
+    "request cooperation",
+    "threaten an official"
+   ]
+  },
+  "LC": {
+   "text": "Sure, I'll take the win, but the people I organize with are cheering a federal judge and a big D.C. law firm like that settles it. Those 400 names are still in DOJ's hands.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "the people I organize with",
+    "settles it",
+    "400 names"
+   ]
+  },
+  "LD": {
+   "text": "An authoritarian DOJ tried to scare a state into throwing out citizens' votes, and a judge said no.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "authoritarian DOJ",
+    "citizens' votes",
+    "a judge said no"
+   ]
+  },
+  "RF": {
+   "text": "Washington doesn't have to do DOJ's job because a U.S. Attorney held a press conference. If Congress wants citizenship checked at the front door, that's what the SAVE Act is for.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "DOJ's job",
+    "citizenship checked",
+    "SAVE Act"
+   ]
+  },
+  "RC": {
+   "text": "I want noncitizen voting stopped as much as anyone, but people I vote with are yelling 'rigged' about a list where 62 people never even got ballots. Pass the SAVE Act and do it right.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "people I vote with",
+    "rigged",
+    "do it right"
+   ]
+  },
+  "RD": {
+   "text": "Rigged. A Biden judge and the Elias machine just made sure 400 suspect names stay in the count, no questions asked.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "Elias machine",
+    "Biden judge",
+    "400 suspect names"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "A judge stopping the Trump Justice Department from making Washington set aside ballots of suspected noncitizens.",
+  "operative": "A 14-day restraining order that bars coercive demands and prosecution threats aimed at Washington's election officials over a roughly 400-name list, with a likely-success finding under the Elections Clause; the list, investigations and prosecutions under §611 stay open, and the injunction question is set for November 18.",
+  "inversion": "Lean only: B and C rims sign opposite to their rims on the California set-aside order three days earlier (draft rdg_al8uju97ware). See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-11-05",
+  "why": "Trigger day = the day the object finished forming: the order is dated 'this 5th day of November, 2026, at 4:21 p.m.' (Dkt. 21, filed 11/05/26). The register's formedOn (11-07) is the UTC scan time of coverage dated 11-06. The register's holder 'a federal court' is right; on the card I narrowed it to Judge Jamal Whitehead, W.D. Wash. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_afederal_alleged-aside-ballots-cant",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-11-07T02:07:46.980Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (formedOn 11-07 → 11-05; holder narrowed to Judge Whitehead; kind ruling → TRO) -> window -> frame (order PDF primary) -> central object (the 11-05 TRO) + tethers (18 U.S.C. § 611, invokes; Elections Clause, invokes; NVRA 90-day bar, adjacent; SAVE Act hr-119-22, adjacent) + place -> sweep -> axes -> twelve and object z (blind subagent; four wording edits) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-11-05",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "a judge stopping DOJ from making Washington set aside suspected-noncitizen ballots",
+    "operative": "a 14-day TRO against coercive demands and threats, with a likely-success finding under the Elections Clause; the list, investigations and the injunction question still open",
+    "inversion": "lean only (B and C rims against the California draft)"
+   },
+   "titleLean": "'Did Not Ask' — Claude's (from the order's line 'On this record, Defendants did not ask'); Sailor names Readings",
+   "sourcesInWindow": [
+    "Order Granting Temporary Restraining Order in Part, OneAmerica Votes v. Trump, No. 2:26-cv-04223-JNW (W.D. Wash., Dkt. 21, signed 2026-11-05 4:21 p.m.), via Democracy Docket's PDF: scope, carve-outs, 14 days, no bond, stay denied; Oct 26 letter cites only 18 U.S.C. § 611, roughly 400 voters, 24 hours, noon Oct 28 deadline, no individualized evidence or methodology; Hobbs's Oct 28 reply; at least 62 never sent ballots; Elections Clause, Printz, Ninth Circuit United States v. California (10-30), NVRA 90-day bar, Purcell; UFCW associational standing; PI hearing Nov 18; county certification Nov 24",
+    "Democracy Docket (2026-11-05): ruling Thursday, two days after Election Day; plaintiffs and Elias Law Group counsel (Democracy Docket's founder is Marc Elias)",
+    "Law360 (2026-11-05, lede only): DOJ argued the plaintiffs weren't harmed because the state had already declined",
+    "Washington State Standard via Yakima Herald and Daily Chronicle (2026-11-06, reporting Thursday): Whitehead a Biden appointee; Hobbs's Nov 5 evening statement; state certification Dec 3"
+   ],
+   "background_preWindow": [
+    "2025-04-10: SAVE Act passes House (catalog)",
+    "2026-07-07: Assistant AG Harmeet Dhillon letter to Hobbs; 07-16 Hobbs reply (order at 5)",
+    "2026-10-16: ballots mailed (order at 4)",
+    "2026-10-26: the DOJ letter and press conference",
+    "2026-10-29: Serrano on radio about county auditors",
+    "2026-10-30: suit filed; Ninth Circuit rules in United States v. California",
+    "2026-11-02: TRO motion; Supreme Court declines DOJ's California application",
+    "2026-11-03: Election Day"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-11-05",
+   "by": "Claude — frame-first authoring under §4c. Not a ruling.",
+   "window": "2026-11-05 (declared, see window.why)",
+   "verifiedInWindow": [
+    "TRO signed 2026-11-05, 14 days (order)",
+    "Scope: remove, refuse ballots, segregate or not count; no threats of prosecution (order)",
+    "Oct 26 letter: roughly 400 voters, cites only § 611, no individualized evidence (order)",
+    "Hobbs refused Oct 28; list includes citizens (order)",
+    "Likely success under the Elections Clause (order)",
+    "Carve-out for investigation and prosecution (order)"
+   ],
+   "keptUnverifiedDate": [
+    "Whitehead's appointment by Biden is from the Washington State Standard (11-06), not the order; used only in the twelve's background.",
+    "The Standard's figure of 405 voters and 1,500 votes is the paper's characterization of the list and is left out; the frame keeps the order's 'roughly 400'.",
+    "Washington State Standard original, Courthouse News and Election Law Blog pages would not load; their content is not used."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "County certification on 2026-11-24 (order at 4): a scheduled date after the window, cut from the frame on the first sweep; it stays in the twelve's background and the object's place.why as the calendar known on 11-05",
+    "DOJ spokesperson Kiersten Pels's 2026-11-06 statement that DOJ is reviewing the order and that a TRO is not a final ruling",
+    "Any appeal, filing or reaction on or after 2026-11-06"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-11-07",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/band brief, a short dated background (the plaintiffs and filing dates, the Oct 26 letter and press conference, Serrano's radio remarks, Hobbs's reply and the 62, quotes from the order, its legal grounds and carve-outs, DOJ's harm argument, the California Supreme Court order, the SAVE Act, the certification dates, Whitehead's appointment), R-0921-1 with the exception form, and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place (z +0.5, quadrants [B, D], band coalition) authored by the same subagent, with the twelve, before the words. Why lightly shortened; numbers unchanged.",
+   "rulings": "NONE — every station awaits Sailor's ruling. Wording edits after hand-back, no z or instrument changed: B-coalition words 'our doctrine too' → 'their doctrine too' (voice rule 1, flagged by the subagent itself); B-coalition 'people on my side' and D-coalition 'my side is yelling' → 'people I vote with' (rule 1 supersedes 'my side'); C-fluid said UFCW workers 'found their names on' the list, which no source says, now 'are exactly who a list … sweeps up'; B-fluid dropped 'honestly' and its zReason's first person.",
+   "authorNote": "The subagent trusts C-denominated's −0.5 least: a left-populist could as easily read any block on DOJ as mildly positive. B-fluid (+0.3 with the holder not trusted) is next weakest: a federalism conservative could go either way on Printz used against DOJ. The object's +0.5 rests on the order running past county certification."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [
+    {
+     "station": "B.denominated",
+     "now": -0.7,
+     "prior": 0.5,
+     "priorRef": "rdg_al8uju97ware (draft, 'The Unsigned Order', 2026-11-02, the Supreme Court declining DOJ's California set-aside)",
+     "note": "Same demand, same relief for the voters; the rim flips because the holder changed from the Supreme Court (trusted) to a Biden judge (not). R-0921-1 predicts it; reported as a lean, not ruled."
+    },
+    {
+     "station": "C.denominated",
+     "now": -0.5,
+     "prior": 0.4,
+     "priorRef": "rdg_al8uju97ware",
+     "note": "Prior had C-rim believing delivery from a Court that 'sides with power until it can't'; here the list staying in DOJ's hands carries it negative. The prior is an unpublished draft, not a live Reading."
+    }
+   ],
+   "inversionNote": "Both priors are another Claude draft, not a live Reading, and the two drafts were authored blind separately, so the flip may be the authors and not the stations. Reported, not ruled.",
+   "permanence": "Not a return, but a sibling: the third object in a week where DOJ asked a state to set aside ballots on a citizenship list (California's Supreme Court order 11-02, rdg_al8uju97ware; the California Supreme Court/Riverside seized-ballots object from September is a different instrument). The TRO runs 14 days and the PI hearing is 11-18, so expect a return as a preliminary-injunction ruling or an appeal. Alias candidate for Sailor: none in the register as of the 11-07 01:04 scan.",
+   "legislativeNote": "No bill is the instrument. The tethers carry the law the order runs on: § 611 (invoked by DOJ, held not to reach this), the Elections Clause (the likely-success ground), the NVRA 90-day bar (through the Ninth Circuit), and the SAVE Act (catalog hr-119-22, the stalled front-end fix the right names)."
+  }
+ },
+ "rid": "rdg_ywut7j107f0w",
+ "ridLineage": "minted 2026-11-07 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-11-07T02:07:46.980Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_afederal_alleged-aside-ballots-cant",
+  "queuedOn": "2026-11-07",
+  "draftedOn": "2026-11-07"
+ },
+ "images": []
+}

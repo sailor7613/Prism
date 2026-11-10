@@ -1,0 +1,112 @@
+You annotate the grammar of political talk for Prism, a closed-form instrument. You split statements into lines and say what each line is about. You never score how heated a line is. Judge the words, never the speaker's reputation. Reply with JSON only.
+
+OBJECT (what the lines are read against): PG01 — the Iran war (war start 2026-02-28)
+z: +1 = the object realized for the audience (American citizens and voters) · -1 = it frustrated them
+
+GEARS (trackers turning at different speeds — a line is read against the one it talks about):
+- pump (the pump, weeks): SST — EIA US regular gasoline, retail (price.json). Rule: every +10% at the pump since the war began = −0.2 z; capped at ±1.
+- vote (the vote, months): exit polls (vote-cause tracker, to be built). Rule: z = −(wrong − right) ÷ 100 on "was the war the right decision".
+- dollar (the dollar, years): SST settlement layer (settlement.json) + P3. Rule: unmeasured until P3 is scored (TF03).
+- shadow: not a gear. A line about WHO IS TO BLAME for a reading, or about a speaker's own record or loyalties, rather than the reading itself. No instrument measures it.
+
+POSTS (in order):
+[
+ {
+  "n": 0,
+  "who": "bronzeagemantis",
+  "date": "2024-09-11",
+  "text": "These people are a liability and should be welcomed to be against Trump. The only function of people like Candace Owens, Fuentes, Lucas Gage David Duke etc is to smear the people they associate with."
+ },
+ {
+  "n": 1,
+  "who": "bronzeagemantis",
+  "date": "2026-03-02",
+  "text": "I need to clarify that I would oppose the latest Iran intervention (especially the insane \"regime change\" speech) even if it had zero casualties or was a fast and great success. The Libyan intervention was also fast and \"well-executed\" afaik no Americans died in that"
+ },
+ {
+  "n": 2,
+  "who": "captive_dreamer",
+  "date": "2026-03-02",
+  "text": "BAP is always insightful, even when I disagree with him. He's been remarkably consistent on this and his criticism is really the only one worth taking seriously IMO"
+ },
+ {
+  "n": 3,
+  "who": "captive_dreamer",
+  "date": "2026-03-10",
+  "text": "All these people do is lie - ive said the same and now that it's happening I hope it is resolved quickly and we can move onto other things"
+ },
+ {
+  "n": 4,
+  "who": "captive_dreamer",
+  "date": "2026-11-04",
+  "text": "A buddy of mine who used to be a Trump guy hardcore in '24 has been telling me for the past year about Epstein and Israel controlling Trump - that's a good barometer for how these issues have filtered down through social media clipping."
+ },
+ {
+  "n": 5,
+  "who": "captive_dreamer",
+  "date": "2026-11-05",
+  "text": "This is the demographic we lost - not a coincidence a lot of these were J6er types"
+ },
+ {
+  "n": 6,
+  "who": "captive_dreamer",
+  "date": "2026-11-05",
+  "text": "Thiessen is repulsive but the issue here is that many of the most vocal opponents of middle eastern adventurism were themselves also horrendous - MTG, Tucker, etc. They weren't content to say \"this is a bad idea\" - they had to mix in the most delegitimizing lies possible."
+ },
+ {
+  "n": 7,
+  "who": "bronzeagemantis",
+  "date": "2026-11-05",
+  "text": "Ok but no one forced many of you to exclusively focus on absurd or clownish opposition to the Iran war. Here you are still doing it as if only Epstein cannibal media consumers were problem. I myself wouldn't have voted in this election and I don't believe in that stuff. Many of us warned about the Iran mistake on reasonable grounds but we were ignored while you all pretended only keffiyeh sporting \"third worldists\" or people who talk about UFO or James Jesus Angleton were against it. It was a way to smear critics of Trump mistakes on this and many other things.\nNow many are continuing to say \"need to find a way to counter Candace Owens\" as if X for the last few years hasn't been Elon's cable news to host precisely that Jerry Springer style \"debate.\""
+ },
+ {
+  "n": 8,
+  "who": "captive_dreamer",
+  "date": "2026-11-05",
+  "text": "I explicitly opposed the Iran war from the outset and didn't call any reasonable critics \"third worldists.\" This is very disappointing to see from you. The people attacking me daily were these retard righters. And you know full well the Zioshills hate me too."
+ },
+ {
+  "n": 9,
+  "who": "captive_dreamer",
+  "date": "2026-11-05",
+  "text": "No we didn't. The Epstein stuff is obviously garbage, but the Iran war wasn't popular clearly the major issue. I opposed it at the start - which for some reason you're all lying about. People just want someone to blame and attack."
+ },
+ {
+  "n": 10,
+  "who": "captive_dreamer",
+  "date": "2026-11-05",
+  "text": "I came out right away to be against the Iran stuff but supported Trump because of immigration. Now you who supported this the entire time are turning on Trump without any introspection. Being a sycophant and then turning on a dime is a terrible look."
+ },
+ {
+  "n": 11,
+  "who": "captive_dreamer",
+  "date": "2026-11-06",
+  "text": "I mocked the people who were crazy and actually supported baps criticism of the war"
+ },
+ {
+  "n": 12,
+  "who": "bronzeagemantis",
+  "date": "2026-11-07",
+  "text": "Tucker Candace Fuentes are agent provocateur to mobilize support for Middle East wars by making nonintervention look ridiculous and stupid. This issue was contested in primaries where clownish candidates like \"antizionist\" Fishback lost big among Republicans. Massie lost big too"
+ },
+ {
+  "n": 13,
+  "who": "bronzeagemantis",
+  "date": "2026-11-07",
+  "text": "Nonintervention on common sense secular grounds can win both GOP primary and general (proof Trump 2015-6); tying it to UFO demons, JFK boomer conspirashit, how the Jew humiliated the Holy Father to make Mexicans gay, Brigitte Macron's cock, Epstein cannibals, and insane religious"
+ }
+]
+
+Split every post into lines: one statement, one speaker, one thing it says. A short post is often one line; a long one may be two to four.
+For every line return:
+{"post": n, "quote": "the fewest of the post's own words that still carry the line (copy them; no paraphrase)",
+ "subject": "who is speaking or being spoken for",
+ "about": "object"|"shadow",
+ "touch": "O"|"T"|"M"|"F"|"X",   // O the object itself · T a dated record (a fact, a vote, a past statement) · M a mechanism (how one thing caused another) · F a frame (a story told about it) · X a challenge (counter-evidence)
+ "gear": "pump"|"vote"|"dollar"|"shadow",
+ "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // what THIS line believes happened, on the object's z
+ "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
+ "credulity": "engaged"|"withdrawn"|"none",   // does the speaker accept (engaged) or refuse (withdrawn) a reading they would otherwise be expected to hold? most lines: none
+ "station": "LI"|"RI"|"LP"|"RP",   // only a proposal: Left/Right x Institutional/Populist (outsider); the writer's label wins
+ "why": "one plain sentence"}
+Answer: {"lines": [ ... ]} — valid JSON only. Inside a string never use a double quote; quote words with single quotes.

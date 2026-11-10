@@ -1,0 +1,1389 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-08",
+ "index": "roster",
+ "objects": [
+  "chips",
+  "diesel",
+  "dollar",
+  "housing",
+  "iran",
+  "me-sen",
+  "midterms",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela"
+ ],
+ "registerObjects": 16,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 5,
+   "hits": 3,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 1,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 8,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 33,
+   "hits": 10,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 12,
+   "hits": 1,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 5,
+   "hits": 3,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 55,
+   "hits": 13,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 47,
+   "hits": 23,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 2,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 5,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "REACTION INCOMING ‘We can walk and chew gum at the same time’: Rep.-Elect on voter concerns",
+   "dek": "Rep.-Elect Denise Powell, who flipped a Republican House seat in deep-red Nebraska, joins “The Weekend” and responds to AG Todd Blanche's remarks about the incoming Freshmen and says the new House's responsibility is to address voters' affordability concerns but also to hold officials accountable for decisions that are hurting people. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-cl",
+   "opening": "",
+   "published": "2026-11-08T17:52:21+00:00",
+   "link": "https://www.youtube.com/shorts/Ur4AhiDZznI",
+   "videoId": "Ur4AhiDZznI",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "blanche",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trains Collide Near Cairo, Killing 4",
+   "dek": "The crash between two passenger trains was the latest in a long history of deadly rail accidents in Egypt, despite billions of dollars spent modernizing the network.",
+   "opening": "",
+   "published": "2026-11-08T17:17:25+00:00",
+   "link": "https://www.nytimes.com/2026/11/08/world/middleeast/egypt-train-collision-al-ayyat-district.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Saudi Aramco Tower Damaged as Yemen’s Houthis Attack Riyadh",
+   "dek": "The Saudi authorities said no one was hurt after “falling shrapnel” hit the building in Riyadh’s financial district — one of the highest-profile areas targeted by the Houthis.",
+   "opening": "",
+   "published": "2026-11-08T16:52:42+00:00",
+   "link": "https://www.nytimes.com/2026/11/08/world/middleeast/saudi-aramco-tower-riyadh-hit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "This moment is ‘poetic justice’: MS Dem on Scott Colom’s Senate race lead",
+   "dek": "“Karma is what it is.” Ballots are still being counted in Mississippi, and a critical deadline is fast approaching as the Senate race remains neck-and-neck. Democratic nominee Scott Colom is leading the Republican incumbent Senator Cindy Hyde-Smith by just over 2,500 votes. Mississippi Congressman Bennie Thompson calls this tight race “poetic justice” and explained why on “The Weekend.” MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domes",
+   "opening": "",
+   "published": "2026-11-08T16:12:04+00:00",
+   "link": "https://www.youtube.com/watch?v=4hVMQzTfHR4",
+   "videoId": "4hVMQzTfHR4",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans Point Fingers, but Trump Does Not Appear to Be Listening",
+   "dek": "After last week’s midterm losses, the Republican Party entered its most uncertain moment in years. Some Republicans called for moderation and cleaning house, but that will be difficult with President Trump still in the White House.",
+   "opening": "",
+   "published": "2026-11-08T16:04:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/08/us/politics/republican-blame-trump-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "This Isn’t a Conspiracy, It’s Clearly True…",
+   "dek": "Watch the full conversation here: https://youtu.be/lkRnKBODrN0 Watch more here: https://watchtcn.co/49CDF2t Paid partnership: Wisewell: Turn your tap into a plentiful source of safe, great-tasting water. Always fresh, always plastic free. Special TCN listener deals and promos at https://wisewell.com/tucker #TuckerCarlson #Trump #midterms #election #USA #Republican #Democrats #MarkLevin #ChuckSchumer #BenShapiro #ThomasMassie #senate #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-08T16:00:35+00:00",
+   "link": "https://www.youtube.com/watch?v=Mq-UcNDOUhQ",
+   "videoId": "Mq-UcNDOUhQ",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why the Iran War Has Spurred Both Clean Energy and Fossil Fuels",
+   "dek": "The shock to global oil prices has caused a surge in demand for electric vehicles while propelling a race for immediate, secure power supplies.",
+   "opening": "",
+   "published": "2026-11-08T15:39:12+00:00",
+   "link": "https://www.nytimes.com/2026/11/08/business/cop-31-iran-war-oil.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "cut": "nyt_2026-11-08_oil_shock_lede"
+  },
+  {
+   "title": "GOP pushed ‘politics of fear,’ and voters ‘rejected’ it: Where do they go from here?",
+   "dek": "“[Republicans] didn't just campaign by smearing the trans community; they spent $350 million on those ads, and they didn’t work. I’m not sure where they go now.” After massive losses in the midterms, many are wondering: what’s next for the Republican Party? MS NOW political Kimberly Atkins-Stohr and Scott MacFarlane, Chief Washington correspondent for MeidasTouch, join “The Weekend” to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination f",
+   "opening": "",
+   "published": "2026-11-08T14:09:04+00:00",
+   "link": "https://www.youtube.com/watch?v=L3Hhn6Of7d0",
+   "videoId": "L3Hhn6Of7d0",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US task force to cut off Iran’s transport of advanced weapons: What we know",
+   "dek": "As fears of an escalation grow, Washington announces &#039;Task Force Iron Gate&#039;.",
+   "opening": "",
+   "published": "2026-11-08T14:06:19+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/8/us-task-force-to-cut-off-irans-transport-of-advanced-weapons-what-we-know?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "cut": "aj_2026-11-08_iron_gate"
+  },
+  {
+   "title": "Democratic Lutheran minister FLIPS Iowa House seat: 'Faith is about serving my neighbors'",
+   "dek": "Sarah Trone Garriott, a Democrat and Lutheran minister who flipped an Iowa House seat in the midterm elections, shares how her faith guides her politics. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/",
+   "opening": "",
+   "published": "2026-11-08T13:44:51+00:00",
+   "link": "https://www.youtube.com/shorts/bKi4MDHWcAg",
+   "videoId": "bKi4MDHWcAg",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Philip Rivers finalizing agreement to return to NC State as Wolfpack’s new head coach in remarkable move",
+   "dek": "Philip Rivers had already begun assembling a coaching staff before formally accepting the NC State job, sources say. His son Gunner enrolls in January.",
+   "opening": "After N.C. State officials made the trek to Fairhope, Alabama earlier this week to formally meet with Philip Rivers , the former Wolfpack and NFL quarterback appears to be set to take the head coaching position at his alma mater. The two sides are finalizing an agreement that is expected to be hammered out over the next 24 hours, sources told OutKick. The board of trustees at N.C. State have a meeting this coming week to approve the contract. Conversations about Rivers taking the job in Raleigh had picked up after the school announced that Dave Doeren had been fired nearly two weeks ago. Following a series of informal discussions with major donors about what it would take to make N.C. State competitive in the current era of college athletics, several Wolfpack boosters put a plan in motion to provide Rivers with the resources needed to hit the ground running. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE By the end of the week, all that was needed was pen to paper for the NC State alum. But first, Rivers was going to finish his job as head coach of St. Michael Catholic in the Alabama high school football playoffs. His season came to an end on Friday night in Fairhope, as they lost in the opening round. According to multiple sources, Rivers had already begun putting together a coaching and front office staff for when he formally accepted the job offer and signed a contract. On Friday night, Rivers was coaching St. Michael Catholic in their Alabama high school playoff game, where ",
+   "published": "2026-11-08T13:02:49-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/philip-rivers-finalizing-agreement-return-nc-state-wolfpack-head-coach-remarkable-move",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California faces one-two punch as voters reject wealth tax and billionaires eye exits",
+   "dek": "California voters rejected a proposed 5% tax on billionaire wealth as supporters vowed to keep pushing and critics warned the state’s tax climate could drive more residents and investment elsewhere.",
+   "opening": "California voters rejected a proposed one-time 5% tax on billionaire wealth , turning back a measure supporters said could raise tens of billions of dollars for healthcare. The tax would have applied to people who were California residents on Jan. 1, 2026, with payments spread over five years. The defeat came as some of the state’s wealthiest residents warned they could leave California over the proposal. The state has one of the nation’s largest billionaire populations and relies heavily on high earners to fund its budget, making the potential loss of additional wealthy residents a concern for state finances. Supporters, including Sen. Bernie Sanders, I-Vt., and the Service Employees International Union–United Healthcare Workers West, said the tax could help offset Trump administration cuts to healthcare and food assistance. California Gov. Gavin Newsom opposed the tax, arguing that California should address wealth inequality without driving billionaires out of the state. CALIFORNIA WEALTH TAX PROPOSAL HEMORRHAGES $1T AS BILLIONAIRES FLEE Voters were also weighing Proposition 42, a separate measure backed by tech billionaires to block new taxes on personal property. It was leading, and approval could make future efforts to tax billionaire wealth harder, though supporters have vowed to keep pushing. Wayne Winegarden, a senior fellow in business and economics at the Pacific Research Institute, said concerns that the tax could expand beyond billionaires and drive wealthy reside",
+   "published": "2026-11-08T12:15:57-05:00",
+   "link": "https://www.foxbusiness.com/politics/california-faces-one-two-punch-voters-reject-wealth-tax-billionaires-eye-exits",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "separate",
+     "california"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Leavitt reveals what Republicans must do to survive politically after Trump leaves White House",
+   "dek": "Karoline Leavitt says the GOP must find a new leader who can connect with working Americans and rebuild Trump&apos;s America First political coalition.",
+   "opening": "Former White House press secretary Karoline Leavitt said Saturday that Republicans must find a new leader capable of connecting with working-class Americans and rebuilding President Donald Trump 's political coalition once he leaves the White House. \"President Trump wasn't on the ballot in these midterms. He'll never be at the top of the ticket again, and I think we need somebody who is America first, who can really tap into the forgotten men and women that President Trump drew to the Republican Party in historic way from 2016 all the way through 2024,\" Leavitt said on \" My View with Lara Trump \" \"You need someone who can really get out, speak to people about their struggles, their challenges, relate to them and offer promise and hope,\" she added, acknowledging that Democrats successfully motivated voters during the midterm elections. Democrats won control of both chambers of Congress in Tuesday's midterm elections , capturing battleground Senate seats in Michigan, Texas, South Carolina, North Carolina, Maine and Minnesota while flipping key House seats in Virginia, Iowa and Nebraska. MAGA VOTERS REVEAL WHO THEY WANT TO SEE LEAD GOP IN 2028 Leavitt urged Republicans to study their election losses and analyze individual races to determine how to correct course. \"I think that's something Democrats did well in this election, in the midterms, was they obviously inspired people to turn out to vote because they made the people feel like we're going to make your lives better,\" she s",
+   "published": "2026-11-08T12:07:21-05:00",
+   "link": "https://www.foxnews.com/media/leavitt-reveals-what-republicans-must-do-survive-politically-after-trump-leaves-white-house",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Michael Vick suggests play-call in waning moments of Norfolk State's dramatic defeat was ignored",
+   "dek": "Michael Vick says he called &quot;victory formation,&quot; but Norfolk State ran a different play that led to a devastating fumble in the final seconds.",
+   "opening": "November is the time of year when the college football season zeroes in on how the major teams from the top conferences perform with weeks to go before the final playoff rankings are announced. On this Sunday, it’s worth checking in on what happened to Michael Vick’s Norfolk State Spartans over the weekend. The North Carolina Central Eagles pulled off a miraculous victory over Norfolk State in a Football Championship Subdivision (FCS) matchup. THE CRAIG CARTON SHOW–UNFILTERED, UNAPOLOGETIC AND UNMISSABLE. DOWNLOAD HIS DAILY PODCAST NOW! The Eagles won in the final seconds of the game but Vick told reporters it likely could have all been avoided if someone was listening to him. The former Atlanta Falcons quarterback was getting ready to celebrate when everything went south. North Carolina Central had no timeouts and Norfolk State had the ball with 1:34 to play on Saturday. All the Spartans had to do was run the clock out. Vick said he called for the victory formation, which would have been at least two kneel downs or a running play to take as much time off the clock as possible. Instead, Norfolk State quarterback Deljay Bailey took a snap from the shotgun formation, ran to his left and fumbled the ball . North Carolina Central recovered the fumble and the offense marched down the field and scored to take a 29-28 lead after missing the two-point conversion. Vick said he told his offense to do the very opposite. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE \"I don’t know what happ",
+   "published": "2026-11-08T11:59:50-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/michael-vick-suggests-play-call-waning-moments-norfolk-state-dramatic-defeat-ignored",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "No clear winner in New Zealand election, as leaders prepare for weeks of talks",
+   "dek": "Prime Minister Christopher Luxon, who will lead a caretaker government while negotiations take place, said: \"I think everyone's over politics so let's all have a bit of a break for the next three weeks\".",
+   "opening": "Prime Minister Christopher Luxon, who will lead a caretaker government while negotiations take place, said: \"I think everyone's over politics so let's all have a bit of a break for the next three weeks\". (Image credit: Alex Robertson)",
+   "published": "2026-11-08T11:46:15-05:00",
+   "link": "https://www.npr.org/2026/11/08/nx-s1-6033999/no-clear-winner-in-new-zealand-election-as-leaders-prepare-for-weeks-of-talks",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "winner",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "11th-hour power play targets incoming Dem governor after historic GOP defeat",
+   "dek": "Republican Texas Rep. Brian Harrison urged Greg Abbott to convene a special session restricting emergency powers before Gina Hinojosa is sworn in.",
+   "opening": "A GOP lawmaker in Texas is seeking to limit some of the incoming governor's powers after Democrats flipped the state blue in Tuesday's election. Republican Texas state Rep. Brian Harrison on Wednesday publicly urged outgoing Gov. Greg Abbott to convene a special session to \"rein in\" the governor's executive emergency powers before Democratic Gov.-elect Gina Hinojosa takes office. \" Republicans lost last night, but Democrats were not sworn in,\" Harrison wrote in a lengthy statement posted on X. \"We still have total power in Texas, and we must act like it by using the remaining ten weeks to restore separation of powers and limit the emergency powers that Governor-Elect Hinojosa is set to inherit, that would allow her to destroy liberty in Texas by executive fiat.\" Harrison also emphasized in the post that he believes Texas governors should not have \"unchecked\" emergency powers, regardless of their party affiliation. TED CRUZ SAYS 'BLUE TSUNAMI' TOOK OVER TEXAS AFTER DEMOCRATS SWEPT STATEWIDE RACES \"Texas should have reined in executive emergency powers when I first demanded it in 2022,\" Harrison told Fox News Digital on Thursday. \"If these are not revoked, Gina Hinojosa will assume not just the powers our state constitution bestows upon a Governor, but will, in effect, inherit nearly all the powers of a dictator. Most people are shocked to learn Texas governors can write, edit, or change any statute on a whim if they just declare an ‘emergency,’ and this is unconstitutional.\" U",
+   "published": "2026-11-08T11:00:15-05:00",
+   "link": "https://www.foxnews.com/politics/11th-hour-power-play-targets-incoming-dem-governor-historic-gop-defeat",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "abbott",
+     "hinojosa"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "An Iranian refugee's warning to American universities embracing foreign funding and radicalism",
+   "dek": "An Iranian refugee argues American universities must reject Qatar&apos;s billions and the campus radicalism that followed Hamas&apos; Oct. 7 attack.",
+   "opening": "Imagine a university that fully embodied \"America First.\" What would things have looked like if, the day following Hamas’ Oct. 7, 2023, attack, the Harvard Palestine Solidarity Committee was not actively blaming the victims of Hamas’ terror attack? Or Students for Justice in Palestine at George Washington University projecting \"Glory to our martyrs,\" on the side of the campus library was instead replaced with Israeli flags waving in solidarity after the attacks? If protesters at UNC Chapel Hill had never torn down the American flag to run up a Palestinian one, and mobs outside Washington, D.C.’s Union Station had never burned American flags and sprayed \"Hamas is coming\" across a national monument? The movement that excused the massacre of Israelis did not stop there. It came for America’s flag next. EXILED MUSLIM SCHOLAR WARNS FAR-LEFT–ISLAMIST ALLIANCE BEHIND ANTI-ISRAEL PROTESTS ECHOES IRAN’S RISE Maybe it's just a university that keeps refusing to cash a check from Doha and refuses Qatari involvement in hiring faculty or shaping the curriculum. This campus does not exist today, but that doesn’t mean it couldn’t. I fled a country that abandoned education in favor of radicalization. The Islamic Revolution did not start in mosques, but on campuses. Students marched for a revolution they believed they could control and influence, not one that the clerics would weaponize and use to plunge Iran into darkness. CAMPUS ANTISEMITISM IS AN AMERICA FIRST ISSUE. ALUMNI MUST STAY IN THE",
+   "published": "2026-11-08T10:47:42-05:00",
+   "link": "https://www.foxnews.com/opinion/iranian-refugee-warning-american-universities-embracing-foreign-funding-radicalism",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_declares-monument-national-office": [
+     "national",
+     "monument"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "All-you-can-eat dining makes a comeback as Americans look for more bang for their buck",
+   "dek": "From Southern comfort food to Uzbek hot bars and Korean BBQ, these five all-you-can-eat buffet spots are fueling a massive U.S. dining trend.",
+   "opening": "With grocery and restaurant prices climbing, Americans have a hearty appetite for all-you-can-eat and buffet-style dining. Yelp searches for all-you-can-eat buffets jumped 252% from 2025, The Wall Street Journal recently reported. While major chains like Golden Corral often dominate the buffet landscape, the outlet highlighted five other spots offering everything from Southern comfort food and Uzbek specialties to Korean barbecue and Brazilian steakhouse fare . AMERICA'S BIGGEST BUFFET CHAIN CRACKED THE CODE TO ALL-YOU-CAN-EAT PROFITS Here they are below: Since opening in September, Good Time has brought Southern-style comfort food to Manhattan, with dishes such as Salisbury steak, collard greens, dinner rolls and peach cobbler. Unlimited servings cost $26.99, according to the Journal. Co-founder David Yun said the goal was to offer \"something affordable\" and evoke \"the humble buffet that really brings you back to that memory.\" DOLLY PARTON'S FAVORITE SOUTHERN DISHES, FROM CHICKEN AND DUMPLINGS TO BANANA PUDDING Tashkent's Uzbek hot bar, also in New York City, features dozens of prepared dishes, including plov, stuffed cabbage, manti dumplings and pastries. Customers pay by weight, unlike the all-you-can-eat buffets. The Journal reported that takeout containers typically cost $10.99 to $11.99 per pound. GROCERY STORE SWITCH COULD SAVE AMERICANS MONEY WHILE SHAKING UP DINNER ROUTINES Since opening last year, Tashkent's West Village location has put a spotlight on Central Asian",
+   "published": "2026-11-08T10:38:39-05:00",
+   "link": "https://www.foxnews.com/food-drink/all-you-can-eat-dining-makes-comeback-americans-look-more-bang-buck",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats Now Have a Path to Sidestep the Electoral College. Would It Work?",
+   "dek": "Midterm victories have given states the opportunity to elevate the national popular vote, but obstacles like legal challenges would loom.",
+   "opening": "",
+   "published": "2026-11-08T10:14:43+00:00",
+   "link": "https://www.nytimes.com/2026/11/08/upshot/democrats-electoral-college.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump ‘holds all the cards’ in war against Iran’s regime, White House says",
+   "dek": "Supreme Leader Ayatollah Mojtaba Khamenei taunts America after midterms, but the White House says Trump holds all the cards on the Strait of Hormuz.",
+   "opening": "JERUSALEM — With Iran’s missing-in-action Supreme Leader Ayatollah Mojtaba Khamenei taunting Americans about the \"collapse\" of the U.S. after the midterm elections, the White House and Middle East experts argue President Donald Trump is positioned to defeat the remnants of the rogue regime. The remaining two years of Trump’s Iran policy have profound implications for his legacy and could lay the foundation for a new Middle East devoid of the region’s worst state sponsor of terrorism, the Islamic Republic of Iran, should Trump pursue new military actions to dislodge Khamenei’s regime, according to experts. Khamenei, who has not been seen in public since a joint U.S.-Israel airstrike killed his father, former Supreme Leader Ali Khamenei , and members of his family, boasted on X following the Republican defeat in the midterms: \"The process of the US's collapse has accelerated.\" IRAN TAKES A VICTORY LAP OVER STUNNING US ELECTION RESULTS, CLAIMS 'COLLAPSE HAS ACCELERATED' The radical Islamist clerical ruler’s braggadocio was met with tough statements from the White House and leading Middle East experts on Iran’s theocratic state. A White House spokesperson told Fox News Digital, \"The United States is in a very strong position with control of the Strait of Hormuz and the Iranian economy collapsing. Iran has been decimated, and things will go one of two ways; the easy way or the hard way. President Trump holds all the cards and will do whatever is best for the United States.\" TRUMP ",
+   "published": "2026-11-08T10:13:07-05:00",
+   "link": "https://www.foxnews.com/politics/trump-holds-all-cards-war-against-irans-regime-white-house-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "ROBERT L MAGINNIS: Iran War cost Republicans Congress. What will it cost America?",
+   "dek": "JD Vance blamed the Middle East conflict for Republican losses as Democrats flipped both houses of Congress after eight months of fighting Iran.",
+   "opening": "Twenty years ago, American voters punished Republicans over an unpopular war in the Middle East. On Nov. 3, they did it again. In 2006, it was Iraq. This time, it was Iran. Democrats captured both houses of Congress, flipping at least seven Senate seats, including Texas, Ohio, Kansas and Iowa. Vice President JD Vance put the blame squarely where President Donald Trump would rather not have it: on the war his administration launched eight months ago. I remember the earlier debacle. As a Pentagon strategist during the run-up to the 2003 Iraq invasion , I attended meetings with Defense Secretary Donald Rumsfeld and senior military leaders. I questioned whether the administration had adequately considered what would follow Iraqi dictator Saddam Hussein’s overthrow. HUGH HEWITT: THE GHOSTS OF 2006 ARE STIRRING — BUT WILL THEY CATCH THE GOP? Now Trump faces a reckoning of his own. American forces have inflicted tremendous damage on Iran’s military. But military success does not guarantee strategic success, especially when the American people lose confidence in the mission. Vance was blunt in his Nov. 4 assessment: \"The reason we lost is the war .\" He dared anyone to argue that \"losing the Senate for the next 6 years was worth it.\" VANCE'S SCATHING IRAN WAR POSTMORTEM PUTS POTENTIAL 2028 GOP SHOWDOWN IN FOCUS: 'EVERYONE KNOWS WHY' Trump acknowledged that the war contributed to Republican losses but defended his decision: \"I would have done nothing differently.\" He added, \"You can’t ",
+   "published": "2026-11-08T10:00:54-05:00",
+   "link": "https://www.foxnews.com/opinion/robert-l-maginnis-iran-war-cost-republicans-congress-what-will-it-cost-america",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false,
+   "cut": "fox_2026-11-08_what_will_it_cost"
+  },
+  {
+   "title": "Phil Collins Knew He Was ‘Lucky,’ if Not Cool",
+   "dek": "When the Rock & Roll Hall of Fame inducts Collins as a solo artist this month, it will recognize a hitmaker whose popularity often overshadowed his intensity.",
+   "opening": "",
+   "published": "2026-11-08T10:00:37+00:00",
+   "link": "https://www.nytimes.com/2026/11/08/arts/music/phil-collins-knew-he-was-lucky-if-not-cool.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "me-sen": [
+     "collins"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Cowboys star Brandon Aubrey details journey from soccer player to software engineer to Pro Bowl kicker",
+   "dek": "Brandon Aubrey went from MLS and USL soccer to software engineering before his wife pushed him to pursue NFL kicking with the Dallas Cowboys.",
+   "opening": "Brandon Aubrey has become one of the best kickers in the NFL with the Dallas Cowboys , but his road to stardom has been far from linear. Aubrey, 31, first played professional soccer in Major League Soccer (MLS) and then the United Soccer League (USL) before hanging up the spikes. \"I wasn't ready to retire from soccer, but when I looked around at the environment, I didn't perform as well as I needed to stick on a roster and I got cut a couple of times. And at that point, there wasn't a whole lot of money in soccer at the second tier. So, I slipped from the MLS into the USL,\" Aubrey told OutKick in a recent interview. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE \"I had to really take a long, hard look at it, see if it was worth pursuing, and I could make triple the money I was making in that league as a software engineer, which my degree was in.\" Aubrey said he had just gotten married to his wife, Jenn, and didn’t want to set his family back , so into software engineering he went. However, working as a software engineer wasn’t very fun for Aubrey. Aubrey said that Jenn had a good, stable job and pushed him to pursue a career as an NFL kicker. \"With that support and a lot of hard work and commitment we were able to shift over towards being a kicker, and got a job in the USFL and eventually got noticed at the NFL level and was able to get a job here,\" Aubrey said. Aubrey is in his fourth season with the Cowboys and has made the Pro Bowl in each of his first three seasons. He has m",
+   "published": "2026-11-08T09:00:41-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/cowboys-star-brandon-aubrey-details-journey-soccer-player-software-engineer-pro-bowl-kicker",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "ELAINE PARKER: Democrat win is a wake-up call for Republicans, not a vote for socialism",
+   "dek": "Midterm elections sent a clear message on affordability, but Democrats would be wrong to interpret their victories as a mandate for socialism.",
+   "opening": "The American people sent a clear message in Tuesday's midterm elections. But Democrats would be making a serious mistake if they interpreted their victories as an endorsement of socialism. Voters weren't demanding bigger government. They wanted relief from the affordability crisis. Republicans shouldn't dismiss the results as a typical midterm setback either. The coalition that delivered President Donald Trump the White House and Republican control of Congress in 2024 expected results. MEHEK COOKE: REPUBLICANS FAILED THE AFFORDABILITY TEST. THIS IS HOW TO WIN VOTERS BACK The voters who hired Republicans to fix the affordability crisis are now holding them accountable for failing to deliver. Americans were tired of inflation , unaffordable housing and watching their paychecks buy less. They believed Republicans would make their lives better. FOX NEWS POLL: SQUEEZED BY COSTS, FRUSTRATED VOTERS TURN TO THE DEMOCRATS But somewhere between winning and governing, Republicans lost control of that message. Trump had a legitimate argument for tariffs : rebuilding American manufacturing and bringing back jobs lost under decades of trade policies, including NAFTA, signed by President Bill Clinton. But Republicans never adequately explained the long-term benefits. Voters heard about tariffs while worrying about higher prices. The same communications failure plagued the One Big Beautiful Bill Act. Republicans made lower individual tax rates permanent, restored immediate expensing for qual",
+   "published": "2026-11-08T09:00:17-05:00",
+   "link": "https://www.foxnews.com/opinion/elaine-parker-democrat-win-wake-up-call-republicans-not-vote-socialism",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House Republicans demand answers from Nvidia CEO over reported Chinese spy ties",
+   "dek": "House Republicans invited Nvidia CEO Jensen Huang to a joint briefing over his reported relationship with an alleged Chinese intelligence asset.",
+   "opening": "House Republicans are demanding answers from Nvidia CEO Jensen Huang about his reported relationship with a Chinese intelligence asset, escalating scrutiny of whether Beijing gained access to sensitive U.S. technology through the chip giant’s business ties. The request follows a New York Times report that Alice Huang, a Chinese citizen and Megaspeed executive, had been gathering information for Beijing and developed a close relationship with Jensen Huang. The Times reported that President Donald Trump was briefed on the intelligence findings about a year ago but chose not to act. SUSPECTED CHINESE INTELLIGENCE ASSET GAINED ACCESS TO NVIDIA CEO JENSEN HUANG: REPORT The letter, dated Wednesday and released Thursday , says recent reports raise national security concerns about China’s access to sensitive U.S. technology and information. The lawmakers are seeking details about Jensen Huang’s interactions with Alice Huang and Nvidia’s security protocols against foreign espionage. The letter was signed by House Foreign Affairs Committee Chairman Brian Mast, R-Fla.; Select Committee on China Chairman John Moolenaar, R-Mich.; and House Intelligence Committee Chairman Rick Crawford, R-Ark. They invited Huang to an in-person joint briefing on Nov. 18, one day after Nvidia is scheduled to report its third-quarter earnings. \"China’s access to that sensitive U.S. tech is core to the investigative work of our three committees this Congress,\" the lawmakers wrote, adding that Congress must de",
+   "published": "2026-11-08T08:47:56-05:00",
+   "link": "https://www.foxbusiness.com/politics/house-republicans-demand-answers-from-nvidia-ceo-over-reported-chinese-spy-ties",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "NPR's Moscow and Beijing correspondents discuss the reaction to U.S. elections abroad",
+   "dek": "The results of the U.S. midterms were closely followed overseas. NPR correspondents in Moscow and Beijing discuss how the elections are seen in the countries they cover.",
+   "opening": "The results of the U.S. midterms were closely followed overseas. NPR correspondents in Moscow and Beijing discuss how the elections are seen in the countries they cover.",
+   "published": "2026-11-08T08:34:32-05:00",
+   "link": "https://www.npr.org/2026/11/08/nx-s1-6030815/nprs-moscow-and-beijing-correspondents-discuss-the-reaction-to-u-s-elections-abroad",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republican consultant discusses what went wrong and what's next for the GOP",
+   "dek": "NPR's Ayesha Rascoe speaks to Hogan Gidley, a Republican consultant and former White House Deputy Press Secretary during the first Trump administration, about the GOP's post-midterm strategy.",
+   "opening": "NPR's Ayesha Rascoe speaks to Hogan Gidley, a Republican consultant and former White House Deputy Press Secretary during the first Trump administration, about the GOP's post-midterm strategy.",
+   "published": "2026-11-08T08:22:23-05:00",
+   "link": "https://www.npr.org/2026/11/08/nx-s1-6033375/republican-consultant-discusses-what-went-wrong-and-whats-next-for-the-gop",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats’ midterm sweep opens path to bypassing Electoral College by 2028",
+   "dek": "Democrat trifectas in key swing states could push the National Popular Vote Interstate Compact past 270 electoral votes needed to activate it and thus change the way Americans select the presidency.",
+   "opening": "Democrats’ midterm gains have opened a new front in the fight over how America chooses its president — one that could reshape the 2028 race for the White House. Democrats now control the governor’s office and both chambers of the state legislature in Michigan, Pennsylvania, Wisconsin and Nevada. The National Popular Vote Interstate Compact, already enacted by 18 states and Washington, D.C., has 222 electoral votes pledged to it — 48 short of the 270 needed to take effect. If the four states join, their combined 50 electoral votes would push the compact to 272 and activate it. Arizona could push the total to 283 if Democrats ultimately gain control of both chambers there. National Popular Vote (NPV), the nonprofit organization that authored the compact and is campaigning to enact it state by state, says it has identified multiple legislative sponsors in each of the five states whose combined electoral votes could push the compact over the 270-vote threshold. It expects bills to be pre-filed before, or introduced early, in the 2027 legislative sessions. \"I am confident we have multiple paths to secure the 48 electoral votes required to deliver what 63% of Americans want,\" Patrick Rosenstiel, a senior consultant for NPV, told Fox News Digital. VANCE, CRUZ AND DESANTIS DIAGNOSE GOP'S MIDTERM DISASTER AS BATTLE OVER PARTY'S FUTURE BEGINS Under the current electoral system, every state except Maine and Nebraska awards its electoral votes to the candidate who wins the statewide vote",
+   "published": "2026-11-08T08:00:09-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-midterm-sweep-opens-path-bypassing-electoral-college-2028",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_declares-monument-national-office": [
+     "office",
+     "national"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MAGA voters reveal who they want to see lead GOP in 2028",
+   "dek": "MAGA voters at a Trump rally name JD Vance and Marco Rubio as early 2028 presidential election favorites after Democrats swept the midterms.",
+   "opening": "With Democrats taking control of Congress in the midterm elections, MAGA voters are already sizing up potential successors to President Donald Trump in 2028 — with Vice President JD Vance and Secretary of State Marco Rubio repeatedly emerging as favorites among those interviewed by Fox News Digital. \"I like [Rubio],\" one American told Fox News Digital. \"I like that he's no-nonsense, similar to Trump.\" \"Well, I like JD Vance obviously,\" another said. \"I like Marco Rubio. There's some other ones, too, that are maybe not so much mainstream that are coming up that I like too.\" TRUMP TOLD DONORS 'WE NEED TO ELECT JD,' SOURCE CONFIRMS, AS HE WEIGHS VANCE OR RUBIO IN 2028 \"JD is great too, but Rubio has a little more experience,\" one said. \"He's articulate, he’s well-spoken. He's got good ideas. I just really like him.\" Fox News Digital spoke with Americans attending a Trump rally in Bangor, Maine, as one of Trump’s final stops before Tuesday’s midterms that ended in a stunning blue wave. Fueled by anger over high costs and the war with Iran , Americans voted to oust Trump and his agenda, boosting Democrats to large majorities in the House and Senate. With Democrats looking to rebuke Trump and his allies, Republicans that Fox News Digital spoke with are looking for a presidential candidate to fill in Trump’s \"footsteps.\" \"I'm really open to see who can fill Trump's footsteps, not just the next person in line,\" one told Fox News Digital. FOX NEWS/NORC STUDY: VOTERS LOOK TO 2028 FOCUS",
+   "published": "2026-11-08T07:00:35-05:00",
+   "link": "https://www.foxnews.com/politics/maga-voters-reveal-who-they-want-see-lead-gop-2028",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside a rancher family's clash with gov't that could have ripple effect right to SCOTUS: ‘Existential threat’",
+   "dek": "Wade and Teresa King say Washington&apos;s Department of Ecology fined them $267,540 over stockwater ponds the state claims are regulated wetlands.",
+   "opening": "The owners of a multigenerational cattle ranch say they are facing an \"existential threat\" after the Washington state Department of Ecology fined them hundreds of thousands of dollars over their stockwater ponds, and they are warning the case could have substantial implications nationwide. The department fined Wade and Teresa King, owners of King Ranch in Grant and Douglas counties, $267,540 in 2023 for allegedly damaging regulated wetlands by digging ponds to provide water for their ranching operations. The Kings argue the areas, which they were ordered to restore, are long-standing stockwater ponds for their livestock, not regulated wetlands. The Kings, who have been trying to get their case in front of a jury, told Fox News Digital that, not only is their financial stability at stake, so are the rights of other ranchers. \"Losing this fight would be an existential threat,\" Wade said. \"I don't know how we would recover from that, to be honest with you.\" HOW A LOBSTERMAN'S PRIVACY FIGHT REACHED SCOTUS — AND COULD RIPPLE FAR BEYOND THE WATER: 'AIN'T OVER YET' When the Kings were first hit with the fines and restoration orders, they immediately set out to challenge them. However, the department's required process directed them to bring their case before the Pollution Control Hearings Board (PCHB), an administrative panel that does not provide jury trials. In March, the Kings filed a separate lawsuit in Grant County Superior Court , arguing the case should not be decided by the ",
+   "published": "2026-11-08T05:00:32-05:00",
+   "link": "https://www.foxnews.com/politics/rancher-family-clash-govt-ripple-effect-scotus-existential-threat",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_approved-arch-construction-federal": [
+     "washington",
+     "panel"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Gen Z voters helped fuel a blue wave for Democrats",
+   "dek": "Republicans made gains with young voters in 2024, but in this year's midterms Americans under 30 issued a strong rebuke of President Trump and his party, voting decisively for Democrats instead.",
+   "opening": "'/> Republicans made gains with young voters in 2024, but in this year's midterms Americans under 30 issued a strong rebuke of President Trump and his party, voting decisively for Democrats instead. (Image credit: Chip Somodevilla)",
+   "published": "2026-11-08T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/08/nx-s1-6032829/gen-z-voters-midterm-elections",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "BLUE WAVE sends a doctor to the Senate | All In with Chris Hayes Weekly Highlights",
+   "dek": "Watch some of the best segments this week from 'All In with Chris Hayes' and watch weeknights at 8pm EST on MS NOW. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Democrats #Midterms #Politics",
+   "opening": "",
+   "published": "2026-11-08T03:00:31+00:00",
+   "link": "https://www.youtube.com/watch?v=SW4YIyngjDU",
+   "videoId": "SW4YIyngjDU",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New Jersey town reveals staggering $26M theft days after election, sparking backlash",
+   "dek": "Cranbury Township residents demand answers after a $26 million fraudulent wire transfer was kept secret until days after Election Day in New Jersey.",
+   "opening": "A New Jersey township is facing backlash after officials revealed that $26 million was stolen in a fraudulent wire transfer, with residents questioning why the massive theft wasn't disclosed until more than five weeks later — just days after Election Day. Cranbury Township Mayor Lisa Knierim announced Friday that the municipality had been the victim of a \"sophisticated financial theft\" involving approximately $26 million. Knierim, a Democrat, said the fraudulent wire transfer took place on Sept. 28, with the funds originally designated for purchasing property to meet the township's affordable housing obligations. A task force involving local, county, state and federal law enforcement agencies, led by the township's police department and the Middlesex County Prosecutor's Office, is working to recover the funds, according to the mayor's statement. CYBERCRIME LOSSES NEAR $21B: 5 WAYS TO PROTECT YOUR MONEY So far, investigators have frozen nearly $17.3 million in assets, leaving approximately $8.7 million outside the reported freeze. The township said the investigation remains active, adding that additional details cannot be released. Knierim's announcement came Nov. 6, three days after the midterm elections and more than five weeks after the theft. Several residents responded to the announcement on the township's Facebook page, questioning the timing of the disclosure and demanding greater transparency from local officials. NEW JERSEY MAYOR WHO CHARGED AT RESIDENT DURING COUNCIL",
+   "published": "2026-11-08T02:34:26-05:00",
+   "link": "https://www.foxnews.com/politics/new-jersey-town-reveals-staggering-26m-theft-days-after-election-sparking-backlash",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump wants ALL Alaska Senate votes given to GOP incumbent | Deadline: White House Weekly Highlights",
+   "dek": "See some of the best segments this week from 'Deadline: White House' and watch weekdays from 4pm-6pm ET on MS NOW. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Trump #Politics #Midterms",
+   "opening": "",
+   "published": "2026-11-08T01:00:11+00:00",
+   "link": "https://www.youtube.com/watch?v=QfEEJYkxGCI",
+   "videoId": "QfEEJYkxGCI",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Post-midterms rapid fire Q&A with The Bulwark's Sarah Longwell",
+   "dek": "Lucky us! To close out a historic midterms week, we got to talk to one of our favorite friends Sarah Longwell live in studio! Hear her answers to some of our burning questions… MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/",
+   "opening": "",
+   "published": "2026-11-08T00:39:14+00:00",
+   "link": "https://www.youtube.com/shorts/2G15OCIP1Mc",
+   "videoId": "2G15OCIP1Mc",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'EARTHQUAKE' Joe on Democrats winning in 'BLUE TSUNAMI' | Morning Joe Weekly Highlights",
+   "dek": "Watch some of the best segments this week from 'Morning Joe' and watch weekday mornings from 6AM-9AM EST on MS NOW. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Democrats #Midterms #Politics",
+   "opening": "",
+   "published": "2026-11-08T00:00:37+00:00",
+   "link": "https://www.youtube.com/watch?v=7oLbV1Q3Fco",
+   "videoId": "7oLbV1Q3Fco",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Donald Is Done…",
+   "dek": "Watch the full conversation here: https://youtu.be/lkRnKBODrN0 Watch more here: https://watchtcn.co/49CDF2t Paid partnership: Wisewell: Turn your tap into a plentiful source of safe, great-tasting water. Always fresh, always plastic free. Special TCN listener deals and promos at https://wisewell.com/tucker #TuckerCarlson #Trump #midterms #election #USA #Republican #Democrats #MarkLevin #ChuckSchumer #BenShapiro #ThomasMassie #senate #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-08T00:00:24+00:00",
+   "link": "https://www.youtube.com/watch?v=wyj3GqsltT0",
+   "videoId": "wyj3GqsltT0",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Good, the Bad and the Cringe: 10 Ads That Defined the Midterms",
+   "dek": "In a Democratic landslide election, here are the ads that stood out. Some were effective, while others backfired.",
+   "opening": "",
+   "published": "2026-11-07T21:00:41+00:00",
+   "link": "https://www.nytimes.com/2026/11/07/us/politics/midterm-ads-republicans-democrats.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Prosecutors Charge Paraguay’s Former President With Corruption",
+   "dek": "Santiago Peña was impeached, removed from office, placed under house arrest and charged with using his office to enrich himself after a bank with close ties to his administration went under.",
+   "opening": "",
+   "published": "2026-11-07T20:17:15+00:00",
+   "link": "https://www.nytimes.com/2026/11/06/world/americas/paraguay-president-removed-ueno.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_arrest-bank-collapse-house": [
+     "paraguay",
+     "impeached",
+     "placed",
+     "arrest",
+     "bank"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats, Newly Ascendant, Begin a Fight to Shape the Party’s Future",
+   "dek": "At a moment of opportunity for the party, its long-feuding factions are seizing on the midterm results to make their case for tacking to the center or to the left.",
+   "opening": "",
+   "published": "2026-11-07T20:02:15+00:00",
+   "link": "https://www.nytimes.com/2026/11/07/us/politics/democrats-midterms-2028-presidential-race.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "\"Civil Resistance\" author Erica Chenoweth on how the 3.5% rule helped Democrats win the midterms",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-07T19:00:00+00:00",
+   "link": "https://www.youtube.com/shorts/uu99jWrH0ak",
+   "videoId": "uu99jWrH0ak",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "For Stephen Miller, Election Defeat Is No Reason to Back Down on Immigration Crackdown",
+   "dek": "The president’s new chief of staff has already demonstrated his intention to forge ahead with an agenda that many voters rejected.",
+   "opening": "",
+   "published": "2026-11-07T18:29:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/07/us/politics/stephen-miller-midterm-elections.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why White Working-Class Voters Shifted Left in the Midterms",
+   "dek": "White voters without a college degree, a cornerstone of the Republican base in the Trump era, moved left this year. Some cited high prices, the war with Iran and more in their decisions.",
+   "opening": "",
+   "published": "2026-11-07T18:22:09+00:00",
+   "link": "https://www.nytimes.com/2026/11/07/us/politics/white-working-class-voters-midterms-democrats-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Israeli president taps Netanyahu rival to form government as coalition battle looms",
+   "dek": "Gadi Eisenkot secured 67 Knesset endorsements over Benjamin Netanyahu, but deep coalition divisions over Arab parties and conscription cloud his path.",
+   "opening": "Israeli President Isaac Herzog announced Saturday that he has chosen opposition leader Gadi Eisenkot to form the country's next government, handing Prime Minister Benjamin Netanyahu's chief rival the first opportunity to build a coalition following an inconclusive national election. Herzog announced his decision on Nov. 7, but the formal presentation of the mandate is scheduled for Sunday, Nov. 8, at 5 p.m. Israeli time. Eisenkot will then have 28 days to assemble a government, with a possible 14-day extension. The decision could mark a significant step toward ending Netanyahu’s tenure, but it would also launch a difficult round of coalition negotiations, with deep disagreements among parties seeking to replace him. NETANYAHU DEFIES EXIT POLLS AS VOTE SHIFTS IN HIS FAVOR, BUT MAJORITY REMAINS ELUSIVE Following two days of consultations with Israel’s newly elected parliament, Herzog announced Thursday that factions representing 67 of the Knesset’s 120 members had recommended Eisenkot, chairman of the Yashar party, to form the next government. Netanyahu received the backing of 46 lawmakers, while seven members of the ultra-Orthodox United Torah Judaism party declined to endorse either candidate. \"The results of the consultations may appear clear,\" Herzog said in his Nov. 5 statement, but cautioned that competing political demands and vetoes have left the prospects for forming a government uncertain. The challenge facing Eisenkot is that the 67 endorsements do not translate into",
+   "published": "2026-11-07T17:17:37-05:00",
+   "link": "https://www.foxnews.com/world/israeli-president-picks-netanyahu-rival-form-government-coalition-battle-looms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Texas's 'Blue Tsunami' has former Texas congressman Beto O'Rourke 'over the moon'",
+   "dek": "NPR's Rob Schmitz speaks with former Texas congressman Beto O'Rourke about how past efforts by him and other Democrats helped the party win big in Texas in the midterms.",
+   "opening": "NPR's Rob Schmitz speaks with former Texas congressman Beto O'Rourke about how past efforts by him and other Democrats helped the party win big in Texas in the midterms.",
+   "published": "2026-11-07T17:12:08-05:00",
+   "link": "https://www.npr.org/2026/11/07/nx-s1-6030966/texass-blue-tsunami-has-former-texas-congressman-beto-orourke-over-the-moon",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans Got Wiped Out. Now What?",
+   "dek": "Republicans suffered a historic midterm defeat, putting the final two years of Donald Trump’s presidency and the future of the GOP in question. Daily Wire Managing Editor Dylan Houseman joins Tim Rice to examine what drove the Republican wipeout, from the Iran war and Trump's political baggage to candidate quality and voter frustration. They examine whether the results mark the beginning of the end of MAGA, why Democrats could face their own internal battles despite sweeping victories, and whether Republicans have an opportunity to rebuild before 2028.",
+   "opening": "",
+   "published": "2026-11-07T17:00:39+00:00",
+   "link": "https://www.youtube.com/watch?v=sexi0Cclz4o",
+   "videoId": "sexi0Cclz4o",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "results",
+     "republican"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "mark"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "More Than 50 Killed in Yemen in One of the Deadliest 24 Hours of the War",
+   "dek": "Strikes show the heavy toll since fighting between the Houthis and the Saudi-backed government reignited in August, with civilians paying a heavy price.",
+   "opening": "",
+   "published": "2026-11-07T16:39:31+00:00",
+   "link": "https://www.nytimes.com/2026/11/07/world/middleeast/more-than-50-killed-in-yemen.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sure, the Republicans got stomped in the midterms... but have you heard the news about Guam?",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-07T16:00:06+00:00",
+   "link": "https://www.youtube.com/shorts/O-vHfzt1tp8",
+   "videoId": "O-vHfzt1tp8",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Well, Well, Well….",
+   "dek": "Watch the full conversation here: https://youtu.be/lkRnKBODrN0 Watch more here: https://watchtcn.co/49CDF2t #TuckerCarlson #Trump #midterms #election #USA #Republican #Democrats #MarkLevin #ChuckSchumer #BenShapiro #ThomasMassie #senate #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-07T16:00:02+00:00",
+   "link": "https://www.youtube.com/watch?v=RkptQyGCpsY",
+   "videoId": "RkptQyGCpsY",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump says he's asked UFC's Dana White to be his press secretary",
+   "dek": "Trump's social media post about the offer came as his White House is in a period of major transition and struggling with his party's deep losses in Tuesday's midterm elections.",
+   "opening": "",
+   "published": "2026-11-07T15:55:40-05:00",
+   "link": "https://www.pbs.org/newshour/politics/trump-says-hes-asked-ufcs-dana-white-to-be-his-press-secretary",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jon Stewart and The Best F**king News Team Cover the 2026 Midterm Elections | The Daily Show",
+   "dek": "Jon Stewart covers pre-Election Day news, including Haley Stevens's endorsement of Mike Rogers (who she previously called a \"nightmare\"), the media's poll addiction, and a warning against overconfidence in a 2026 blue wave. Ronny Chieng handles the extremes voters are willing to go through to head to the polls, including going into labor in line. Michael Kosta celebrates the big wins across the board for Democrats and Elon Musk blowing $500 million on the midterms. Plus, Jordan Klepper comments on MAGA's quick criticism of Trump following the midterm results, and the election of NY Rep. Anthon",
+   "opening": "",
+   "published": "2026-11-07T14:00:23+00:00",
+   "link": "https://www.youtube.com/watch?v=7BcWRwyYaYw",
+   "videoId": "7BcWRwyYaYw",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "election",
+     "results"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge wants former U.S. attorney to investigate whether the government misled her in Trump golf case",
+   "dek": "The administration plans to close the East Potomac Golf Course and park on Nov. 15 with the intention of constructing a \"World Class, championship-level golf course that is capable of hosting major events.\"",
+   "opening": "",
+   "published": "2026-11-07T13:34:30-05:00",
+   "link": "https://www.pbs.org/newshour/politics/judge-wants-former-u-s-attorney-to-investigate-whether-the-government-misled-her-in-trump-golf-case",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "major",
+     "events"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump orders DOJ probe into Democrats over alleged threats against administration officials",
+   "dek": "President Donald Trump accused Democrats of threatening administration officials and Republican donors and ordered the DOJ to investigate alleged &quot;criminal&quot; conduct.",
+   "opening": "President Donald Trump said he has ordered the Department of Justice (DOJ) to open an investigation into instances of Democratic lawmakers \"threatening\" to impeach Attorney General Todd Blanche, among others. The announcement, which was made via a Truth Social post Saturday afternoon, came after the Democrats regained control of the House and Senate in the midterm elections, winning strong majorities in both chambers of Congress. \"The Democrats are going around threatening a lot of people, including the Attorney General of the United States, and others, with Impeachment and many other forms of punishment, even though they admit they have no reason to do so,\" Trump wrote. Since Election Day, two House Democrats — Reps. Hank Johnson, D-Ga., and Deborah Ross, D-N.C. — have publicly said they would support impeaching Blanche. HOUSE GOP ERUPTS AT STEPHEN MILLER AS TRUMP ELEVATES HIM AFTER MIDTERM MASSACRE: 'MEGALOMANIAC' \"I personally believe that the offenses of Todd Blanche demand that he be impeached and convicted and removed from office,\" Johnson said Thursday in an interview on SiriusXM’s \"The Dan Abrams Show.\" Ross went on host Dan Abrams' radio show shortly after Johnson and said she supported impeaching Blanche as well, but she said Democrats \"should start with Hegseth.\" In his post, Trump denied that any \"impeachable acts\" had been committed by Blanche or any other administration officials. He didn't mention Johnson or Ross by name, nor did he mention the fact that Thomas",
+   "published": "2026-11-07T13:34:14-05:00",
+   "link": "https://www.foxnews.com/politics/trump-orders-doj-probe-democrats-over-alleged-threats-against-admin-officials",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thejusti_alaska-blanche-blocking-defends": [
+     "blanche",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Biden-appointed judge probes whether ICE skirted judge's release orders in Colorado cases",
+   "dek": "Denver ICE Field Office Director Nathan Rasper must appear in court after 14 detainees were arrested again after court-ordered releases in Colorado.",
+   "opening": "A Biden-appointed federal judge ordered ICE's Denver field office director to appear in court Monday amid concerns that immigration authorities violated judicial release orders by immediately rearresting detainees, including at least one instance outside a detention center. Nathan Rasper has been summoned as part of an inquiry involving 14 people who were arrested after being released from immigration detention . The Department of Homeland Security (DHS) maintains that ICE complied with lawful court orders and that a judicial release order does not permanently shield individuals from immigration enforcement. \"When an illegal alien is ordered released by a judge, that does not immunize the alien from immigration enforcement for all time,\" DHS said in a statement to Fox News Digital. \"ICE may seek to rearrest the alien in a way that complies with the judicial decision. To suggest that ICE cannot do this is nothing short of sabotage.\" OBAMA, BIDEN JUDGES DRAW FRESH FIRE AS TRUMP’S IMMIGRATION COURT CLASHES HEAT UP: ‘ALMOST IMPOSSIBLE’ The Nov. 5 order issued by U.S. District Judge Charlotte Sweeney followed an earlier ruling requiring the government to identify every case in Colorado since Oct. 27 in which ICE detained someone within 12 hours of a court-ordered release. Federal officials subsequently identified 14 petitioners who had been arrested again after being released, but the filing did not provide the precise timing of when the rearrests occurred. She directed officials ",
+   "published": "2026-11-07T13:25:53-05:00",
+   "link": "https://www.foxnews.com/politics/biden-appointed-judge-probes-whether-ice-circumvented-judicial-release-orders-colorado-cases",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_250-approval-arch-blocks": [
+     "judge",
+     "hours"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New Zealand’s Election ‘Too Close to Call’ as Voters Turn to Minor Parties",
+   "dek": "Preliminary results showed the right-wing bloc slightly ahead but no clear winner after an election that was dominated by economic concerns.",
+   "opening": "",
+   "published": "2026-11-07T13:13:40+00:00",
+   "link": "https://www.nytimes.com/2026/11/06/world/asia/new-zealand-election-vote.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_bolsonaro-brazil-declared-election": [
+     "winner",
+     "election",
+     "results"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ousted Paraguayan president appears before prosecutors",
+   "dek": "Paraguayan President Santiago Peña was removed from office and placed under house arrest Friday. The Senate voted on his impeachment after the collapse of a state-affiliated bank.",
+   "opening": "Paraguayan President Santiago Peña was removed from office and placed under house arrest Friday. The Senate voted on his impeachment after the collapse of a state-affiliated bank. (Image credit: Federico Parra)",
+   "published": "2026-11-07T12:14:36-05:00",
+   "link": "https://www.npr.org/2026/11/07/nx-s1-6033373/paraguay-president-ousted-bank-collapse",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_arrest-bank-collapse-house": [
+     "placed",
+     "arrest",
+     "bank",
+     "collapse"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "IRS announces 2027 tax changes: What taxpayers need to know",
+   "dek": "The IRS released its 2027 tax brackets with a boost to the standard deduction and a $100 increase to the child tax credit for families.",
+   "opening": "The IRS recently released updated tax brackets and deduction thresholds for the 2027 tax year, which will affect taxpayers next year. Each year, the IRS adjusts the thresholds used for tax brackets and the various deductions available to taxpayers to account for inflation. The changes will apply to what taxpayers owe on income earned during the 2027 tax year, which Americans will file returns for in 2028. \"American individuals and businesses will see increased tax benefits next tax year ranging from an increase in the standard deduction and the Child Tax Credit for families, and a boost to the amount that can be expensed by businesses,\" said IRS CEO Frank Bisignano. The standard deduction , claimed by the majority of taxpayers who don't itemize their returns, is set to increase to $16,600 for single taxpayers in 2027; $33,200 for married couples filing jointly and $24,925 for heads of households. TRUMP ADMIN NAMES NEW ECONOMIC OPPORTUNITY ZONES TO SPUR PRIVATE INVESTMENT IN STRUGGLING COMMUNITIES Adjustments were also made to the IRS tax brackets in terms of the income thresholds that apply to a given tax rate. Here's a look at the tax brackets and rates that will apply in 2027: IRS STEPS UP FRAUD FIGHT WITH NEW APP; CEO PROMISES '100% SECURE' PLATFORM The IRS also increased the maximum amount of the child tax credit to $2,300 in 2027, an increase of $100 from a year ago. The amount of the credit that is refundable also increased by $100 to $1,800. The annual exclusion for ta",
+   "published": "2026-11-07T12:10:38-05:00",
+   "link": "https://www.foxbusiness.com/economy/irs-announces-2027-tax-changes-what-taxpayers-need-know",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "refund"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Paraguay's ousted president charged with crimes linked to collapse of major bank",
+   "dek": "Paraguayan prosecutors on Friday ordered the arrest of Peña and former Central Bank chief Carlos Carvallo as part of a criminal investigation into alleged breach of trust and other offenses tied to the collapse of Ueno Bank.",
+   "opening": "",
+   "published": "2026-11-07T12:10:20-05:00",
+   "link": "https://www.pbs.org/newshour/world/paraguays-ousted-president-faces-prosecutors-after-his-removal-over-bank-collapse",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_arrest-bank-collapse-house": [
+     "paraguay",
+     "arrest",
+     "bank",
+     "collapse"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Justice Department drops bid to force California to set aside disputed ballots",
+   "dek": "The move comes days after Republicans' significant losses in the midterm elections and about a week before a scheduled hearing where a special master was slated to evaluate the accuracy of the list of alleged noncitizens.",
+   "opening": "",
+   "published": "2026-11-07T11:50:42-05:00",
+   "link": "https://www.pbs.org/newshour/politics/justice-department-drops-bid-to-force-california-to-set-aside-disputed-ballots",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "california",
+     "ballots"
+    ],
+    "obj_afederal_alleged-aside-ballots-cant": [
+     "force",
+     "aside",
+     "alleged",
+     "ballots"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Comes After the Midterms",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-07T11:01:19-05:00",
+   "link": "https://www.theatlantic.com/national/2026/11/what-comes-after-midterms-washington-week/689342/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Newsom’s death row commutations spark DA revolt; prosecutors warn of legal fight",
+   "dek": "California district attorneys accused Gavin Newsom of overriding juries and ignoring victims&apos; families with his plan to commute all 548 death sentences in the state.",
+   "opening": "At least a dozen California district attorneys are publicly condemning Gov. Gavin Newsom’s plan to commute all 548 death sentences in the state, arguing the sweeping move overrides juries, disregards victims’ families and defies the will of state voters. Newsom announced the plan Thursday, saying state-sanctioned killing is incompatible with California’s values. The move would convert the sentences to life without parole, though 382 cases still require approval from at least four California Supreme Court justices, according to The Associated Press. In response, prosecuting attorneys across California have raised concerns about victims’ rights, the governor’s constitutional authority and the role of the California Supreme Court in reviewing hundreds of the commutations. \"Justice requires case-by-case consideration, not one-size-fits-all decisions,\" Sacramento County District Attorney Thien Ho said in response to Newsom's action. THREE STATES CARRY OUT EXECUTIONS ON SAME DAY AMID RENEWED DEATH PENALTY DEBATE Orange County District Attorney Todd Spitzer described the move as \"mercy for the wolves\" that inflicts \"the ultimate act of cruelty on the sheep.\" Spitzer noted that regulations implemented by California’s Board of Parole Hearings on Oct. 1 allow thousands of prisoners serving life without parole to become eligible for parole, arguing that Newsom's latest death row commutations could put these inmates \"one step closer\" to release. Newsom’s office says, however, that the af",
+   "published": "2026-11-07T09:00:34-05:00",
+   "link": "https://www.foxnews.com/politics/newsoms-death-row-commutations-spark-da-revolt-prosecutors-warn-legal-fight",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "supreme",
+     "california"
+    ],
+    "obj_x_california-case-convicted-cosmetic": [
+     "california",
+     "case"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California prosecutors slam Newsom's death row commutations, accuse governor of putting 'politics over people'",
+   "dek": "District attorneys and law enforcement unions blasted Gov. Gavin Newsom&apos;s mass commutation of 548 death row sentences as a betrayal of victims&apos; families.",
+   "opening": "District attorneys and law enforcement unions across California have publicly condemned Gov. Gavin Newsom following his announcement to commute the sentences of 548 death row inmates, a decision one prosecutor called a slap in the face to victims' families. Newsom’s sweeping order to commute the condemned inmates to life in prison without the possibility of parole has drawn intense criticism alongside praise from anti-death penalty advocates. \"I think it's all about politics, sadly. Politics is over people in this case, and that's a real sad state of affairs,\" San Luis Obispo County District Attorney Dan Dow told Fox News Digital. ALABAMA GOVERNOR COMMUTES DEATH SENTENCE AS DOUBTS EMERGE ABOUT EVIDENCE IN MURDER CONVICTION In an open letter detailing his decision, Newsom said California's capital punishment system is fundamentally at odds with the state's principles. \"After nearly 30 years in public office, I have come to understand the limits of what government can justly accomplish,\" Newsom wrote. \"I take this action because I firmly believe that state-sanctioned killing is incompatible with California’s values, undermines the foundations of our legal system, and diminishes each of us.\" POPE LEO DENOUNCES DEATH PENALTY AS 'INADMISSIBLE' AHEAD OF PENTAGON'S PLANNED LIVESTREAMED EXECUTION Upon taking office in 2019, Newsom issued an executive moratorium on capital punishment . California has not carried out an execution since 2006. The backlash to the governor's announcement ",
+   "published": "2026-11-07T07:33:13-05:00",
+   "link": "https://www.foxnews.com/politics/california-prosecutors-slam-newsoms-death-row-commutations-accuse-governor-putting-politics-over-people",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_x_california-case-convicted-cosmetic": [
+     "california",
+     "case"
+    ],
+    "obj_x_body-charged-death-foster": [
+     "murder",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House GOP critics erupt at Stephen Miller as Trump elevates him after midterm massacre",
+   "dek": "House Republicans expressed shock and anger after Trump promoted Stephen Miller to chief of staff following the GOP&apos;s historic midterm losses.",
+   "opening": "Several Republican lawmakers are fuming over President Donald Trump’s elevation of Stephen Miller to be his chief of staff. The fiercely loyal Miller, who has been with Trump since his first administration, took over for Susie Wiles, who was ousted from the critical role on Thursday. While he has plenty of admirers, his take-no-prisoners style has made him an enemy of Democrats and even some Republicans. \"Horrible decision,\" Rep. Marlin Stutzman, R-Ind., told Fox News Digital Friday after Trump announced his decision. A Republican lawmaker who was granted anonymity to speak candidly described being in \"utter disbelief.\" Tensions were rising against Miller in the wake of Republicans’ terrible performance in Tuesday’s midterm elections . Multiple House Republicans who spoke with Fox News Digital just moments before his promotion said Miller, who spearheads Trump’s immigration policy, should be fired. TRUMP NAMES STEPHEN MILLER NEW WHITE HOUSE CHIEF OF STAFF, REPLACING SUSIE WILES When later asked about his promotion, one House Republican who said Miller should be fired replied simply with a facepalm emoji. Republicans suffered historic losses that saw both the House and Senate fall into Democrats’ hands in the new Congress. Democrats are on pace to win more than 250 seats in the House and at least 54 in the Senate. AMERICA SAW THE BLUE WAVE COMING, BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI And while voter analyses have shown that Trump’s war in Iran and tarif",
+   "published": "2026-11-07T07:30:07-05:00",
+   "link": "https://www.foxnews.com/politics/house-gop-erupts-stephen-miller-trump-elevates-him-after-midterm-massacre-megalomaniac",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": [
+  {
+   "date": "2026-11-09",
+   "what": "daily cut (Claude, the Press task), first pass over this file — fetched from GitHub raw at 06:58 PT (no sweep_2026-11-09.json: 404; this is the newest date in sweeps/index.json) and written to disk here with the cut marks; no local copy existed and no transcripts for 11-08 are on disk (Transcripts/press/ ends at 11-06). 3 rows marked cut — fox 'ROBERT L MAGINNIS: Iran War cost Republicans Congress. What will it cost America?' (fox_2026-11-08_what_will_it_cost), al-jazeera 'US task force to cut off Iran's transport of advanced weapons: What we know' (aj_2026-11-08_iron_gate), nyt 'Why the Iran War Has Spurred Both Clean Energy and Fossil Fuels' (nyt_2026-11-08_oil_shock_lede, β). No the-close row: the floor carries over (none in force). 60 rows left.",
+   "by": "Claude"
+  }
+ ]
+}

@@ -1,0 +1,305 @@
+{
+ "what": "The clockwork: one object, gears at different speeds, each with its own tracker. Lines are read against their own gear as of their own date. DRAFT — every rule here is a proposal for Sailor.",
+ "object": "PG01 — the Iran war (war start 2026-02-28)",
+ "built": "2026-11-02",
+ "gears": [
+  {
+   "id": "pump",
+   "label": "the pump",
+   "speed": "weeks",
+   "tracker": "SST — EIA US regular gasoline, retail (price.json)",
+   "rule": "every +10% at the pump since the war began = −0.2 z; capped at ±1",
+   "base": [
+    "2026-02-23",
+    2.937
+   ],
+   "readings": [
+    [
+     "2026-03-02",
+     -0.053,
+     0.1,
+     2.7
+    ],
+    [
+     "2026-03-09",
+     -0.385,
+     0.1,
+     19.2
+    ],
+    [
+     "2026-03-16",
+     -0.533,
+     0.1,
+     26.7
+    ],
+    [
+     "2026-03-23",
+     -0.697,
+     0.1,
+     34.9
+    ],
+    [
+     "2026-03-30",
+     -0.717,
+     0.1,
+     35.9
+    ],
+    [
+     "2026-04-06",
+     -0.806,
+     0.1,
+     40.3
+    ],
+    [
+     "2026-04-13",
+     -0.808,
+     0.1,
+     40.4
+    ],
+    [
+     "2026-04-20",
+     -0.754,
+     0.1,
+     37.7
+    ],
+    [
+     "2026-04-27",
+     -0.808,
+     0.1,
+     40.4
+    ],
+    [
+     "2026-05-04",
+     -1,
+     0.1,
+     51.6
+    ],
+    [
+     "2026-05-11",
+     -1,
+     0.1,
+     53.2
+    ],
+    [
+     "2026-05-18",
+     -1,
+     0.1,
+     52.9
+    ],
+    [
+     "2026-05-25",
+     -1,
+     0.1,
+     52.4
+    ],
+    [
+     "2026-06-01",
+     -0.932,
+     0.1,
+     46.6
+    ],
+    [
+     "2026-06-08",
+     -0.823,
+     0.1,
+     41.2
+    ],
+    [
+     "2026-06-15",
+     -0.759,
+     0.1,
+     38.0
+    ],
+    [
+     "2026-06-22",
+     -0.665,
+     0.1,
+     33.3
+    ],
+    [
+     "2026-06-29",
+     -0.609,
+     0.1,
+     30.4
+    ],
+    [
+     "2026-07-06",
+     -0.572,
+     0.1,
+     28.6
+    ],
+    [
+     "2026-07-13",
+     -0.625,
+     0.1,
+     31.3
+    ],
+    [
+     "2026-07-20",
+     -0.725,
+     0.1,
+     36.2
+    ],
+    [
+     "2026-07-27",
+     -0.789,
+     0.1,
+     39.5
+    ],
+    [
+     "2026-08-03",
+     -0.778,
+     0.1,
+     38.9
+    ],
+    [
+     "2026-08-10",
+     -0.728,
+     0.1,
+     36.4
+    ],
+    [
+     "2026-08-17",
+     -0.757,
+     0.1,
+     37.9
+    ],
+    [
+     "2026-08-24",
+     -0.782,
+     0.1,
+     39.1
+    ],
+    [
+     "2026-08-31",
+     -0.772,
+     0.1,
+     38.6
+    ],
+    [
+     "2026-09-07",
+     -0.831,
+     0.1,
+     41.5
+    ],
+    [
+     "2026-09-14",
+     -0.941,
+     0.1,
+     47.1
+    ],
+    [
+     "2026-09-21",
+     -1,
+     0.1,
+     52.5
+    ],
+    [
+     "2026-09-28",
+     -1,
+     0.1,
+     52.0
+    ],
+    [
+     "2026-10-05",
+     -0.965,
+     0.1,
+     48.2
+    ],
+    [
+     "2026-10-12",
+     -0.949,
+     0.1,
+     47.5
+    ],
+    [
+     "2026-10-19",
+     -0.917,
+     0.1,
+     45.9
+    ],
+    [
+     "2026-10-26",
+     -0.907,
+     0.1,
+     45.4
+    ],
+    [
+     "2026-11-02",
+     -0.828,
+     0.1,
+     41.4
+    ]
+   ],
+   "readingShape": "[date, z, sigma, pct change since war start]"
+  },
+  {
+   "id": "vote",
+   "label": "the vote",
+   "speed": "months",
+   "tracker": "exit polls (vote-cause tracker, to be built)",
+   "rule": "z = −(wrong − right) ÷ 100 on \"was the war the right decision\"",
+   "readings": [
+    [
+     "2026-11-03",
+     -0.26,
+     0.25,
+     {
+      "wrong": 63,
+      "right": 37,
+      "crucialOrMajor": 74,
+      "source": "NBC News exit poll, 2026-11-03, as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/)"
+     }
+    ]
+   ],
+   "readingShape": "[date, z, sigma, figures]",
+   "note": "only the election-day reading exists; a line dated before it is read against it as the nearest measurement and flagged"
+  },
+  {
+   "id": "war",
+   "label": "the war itself",
+   "speed": "days",
+   "tracker": "the object's own state by date (a step line, not a measurement)",
+   "rule": "what the object had done to the no-war promise on that day: no war +0.5 · Israel strikes Iran without the US 0 · US strikes Iran (Fordow, Natanz, Isfahan) −0.5 · the war −1; sigma 0 (a fact, not a reading)",
+   "readings": [
+    [
+     "2024-11-05",
+     0.5,
+     0.0,
+     "no war — the promise, holding"
+    ],
+    [
+     "2025-06-13",
+     0.0,
+     0.0,
+     "Israel strikes Iran; no US boots"
+    ],
+    [
+     "2025-06-22",
+     -0.5,
+     0.0,
+     "US strikes Fordow, Natanz, Isfahan"
+    ],
+    [
+     "2026-02-28",
+     -1.0,
+     0.0,
+     "the war begins"
+    ]
+   ],
+   "readingShape": "[date, z, sigma, state]",
+   "note": "added 11-07 for the crystal: lines dated before the war need a gear to be read against, and the war itself is the one every prediction was about. DRAFT for Sailor."
+  },
+  {
+   "id": "dollar",
+   "label": "the dollar",
+   "speed": "years",
+   "tracker": "SST settlement layer (settlement.json) + P3",
+   "rule": "unmeasured until P3 is scored (TF03)",
+   "readings": []
+  }
+ ],
+ "notAGear": {
+  "shadow": "a line about who is to blame for a reading, not the reading — no instrument sees it; its light is \"unmeasured\""
+ }
+}

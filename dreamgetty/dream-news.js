@@ -502,10 +502,110 @@
     // points at the map, and now and then while he talks about it
     const _eg = new THREE.Vector3();
     function gazeTarget(t) {
+      { const W = walkState(showT);
+        if (W.mode === 'walk' && walkPath) { walkPoint(W.d + (W.toPed ? 2.0 : -2.0), _eg); _eg.y = pbGround(_eg) + 1.4; return _eg; }
+        if (W.mode === 'there' && cur && cur.type === 'text' && cur.ted === 'map' && typeof trackerGlobe !== 'undefined') { const into = showT - cur.start; if (into < 2.4 || (into % 9) > 7.0) { trackerGlobe.getWorldPosition(_eg); return _eg; } } }
       if (elephantAt && elephantAt.wave > 0 && elephantAt.wave < 0.92 && elephant) { elephant.getWorldPosition(_eg); _eg.y += 2.4; return _eg; }   // 10-29: he looks over at the elephant for the wave ("Hey there, buddy")
       if (READ.on && READ.focus >= 0 && READ.landAge < 2.2) return stage.position;
       if (cur && cur.type === 'text' && cur.ted === 'map') { const into = t - cur.start; if (into < 2.4 || (into % 9) > 7.0) return stage.position; }
       return camera.position;
+    }
+    // ── THE WALK TO THE GLOBE (ex01, 2026-11-06, Sailor: "I want the explainer to be of Ted walking away from his desk, to
+    //    the SST as it sits on the pedestal"). `tedWalk: 'pedestal'` on a beat: from the top of that beat Ted stands (0.7 s),
+    //    walks out round his right-hand end of the desk and across to a mark beside the pedestal, and turns to the lens. He
+    //    stays there for every later beat until one says `tedWalk: 'desk'` (the same path, back, and he sits). The camera
+    //    travels with him into a two-shot — Ted and the globe — and when he arrives the picture resolves (trackerResolveShow
+    //    in index.html). All of it a pure function of show time. Rig path only (the four-legged fallback stays at the desk).
+    const WALK = { speed: 1.35, standUp: 0.7, turn: 0.7 };
+    const TED_DESK_LOCAL = rig ? tedHolder.position.clone() : null;
+    const walkBeats = beats.filter(b => b.tedWalk === 'pedestal' || b.tedWalk === 'desk');
+    const walkPath = (() => {
+      if (!rig) return null;
+      DN.updateMatrixWorld(true);
+      const p0 = DN.localToWorld(TED_DESK_LOCAL.clone());
+      const p1 = DN.localToWorld(new THREE.Vector3(-(DESK_W / 2 + 0.75), 0, -DESK_D / 2 - 0.55));   // his right is −x local
+      const out = new THREE.Vector3(DN.position.x, 0, DN.position.z).normalize();                     // from the pedestal toward the desk
+      // the mark: out from the pedestal toward the desk a little, and off to the side that reads as frame right from the
+      // two-shot camera (which sits out along the same line), so Ted stands BESIDE the globe, not under it
+      const sideR = new THREE.Vector3().crossVectors(out, new THREE.Vector3(0, 1, 0)).normalize().negate();
+      const mark = out.clone().multiplyScalar(EP.walkMarkOut != null ? EP.walkMarkOut : (WIDE ? 1.4 : 2.6)).addScaledVector(sideR, EP.walkMarkSide != null ? EP.walkMarkSide : (WIDE ? 2.3 : 0.75));   // 9:16: stacked — the globe above, Ted under it, a little right
+      const pts = [p0, p1, mark].map(p => new THREE.Vector3(p.x, 0, p.z));
+      const seg = [0]; for (let i = 1; i < pts.length; i++) seg.push(seg[i - 1] + pts[i].distanceTo(pts[i - 1]));
+      return { pts, seg, len: seg[seg.length - 1], out };
+    })();
+    function walkPoint(d, out) {
+      const P = walkPath; d = Math.max(0, Math.min(P.len, d));
+      let i = 1; while (i < P.seg.length - 1 && d > P.seg[i]) i++;
+      const k = (d - P.seg[i - 1]) / Math.max(1e-6, P.seg[i] - P.seg[i - 1]);
+      return out.lerpVectors(P.pts[i - 1], P.pts[i], k);
+    }
+    function walkState(t) {
+      if (!walkPath || !walkBeats.length) return { mode: 'desk' };
+      let wb = null; for (const b of walkBeats) if (b.start != null && t >= b.start) wb = b;
+      if (!wb) return { mode: 'desk' };
+      const toPed = wb.tedWalk === 'pedestal', dur = walkPath.len / WALK.speed, u0 = t - wb.start;
+      const arriveT = wb.start + WALK.standUp + dur;
+      if (u0 < WALK.standUp) return { mode: toPed ? 'rise' : 'stand', d: toPed ? 0 : walkPath.len, toPed, arriveT, k: u0 / WALK.standUp };
+      const u = (u0 - WALK.standUp) / dur;
+      if (u < 1) return { mode: 'walk', d: (toPed ? u : 1 - u) * walkPath.len, u, toPed, arriveT };
+      return toPed ? { mode: 'there', d: walkPath.len, since: t - arriveT, toPed, arriveT } : { mode: 'desk' };
+    }
+    const _wp = new THREE.Vector3(), _wq = new THREE.Vector3(), _wl = new THREE.Vector3(), _wc = new THREE.Vector3();
+    let walkYaw = 0;
+    window.__walk = { state: t => walkState(t), path: walkPath };   // debug handle
+    // ── TED'S FRAMINGS once he's by the globe (ex01, 11-06, Sailor: "maybe Ted is reduced in screen space at points… an
+    //    Alice in Wonderland Cheshire Cat floating head motif… Ted in the far background behind the SST globe and pierce
+    //    through, so we can see his whole body, but he's way off in the distance and we can focus in on whatever aspect of
+    //    the globe we are talking about"). Beat fields, carried forward:
+    //      globeFocus: [lat, lon, dist?] — the camera goes in on that place on the globe (null = back to the two-shot)
+    //      tedFrame: 'two' (beside the globe) | 'far' (way off behind it, whole body, drawn through it) | 'head' (the floating head)
+    //    Default: 'far' while the camera is on the globe, 'two' otherwise.
+    const tedFrameOf = b => { const f = carry('tedFrame', b, null); return f || (carry('globeFocus', b, null) ? 'far' : 'two'); };
+    const _fb = { f: new THREE.Vector3(), r: new THREE.Vector3(), u: new THREE.Vector3() };
+    function camBasis() { camera.getWorldDirection(_fb.f); _fb.r.crossVectors(_fb.f, UP).normalize(); _fb.u.crossVectors(_fb.r, _fb.f).normalize(); return _fb; }
+    const headMeshes = [];
+    if (rig) { const H = rig.joints.head; rig.root.traverse(o => { if (!o.isMesh) return; let p = o, under = false; while (p) { if (p === H) { under = true; break; } p = p.parent; } headMeshes.push([o, under, o.visible]); }); }
+    let headOnly = false;
+    function setHeadOnly(on) { if (on === headOnly) return; headOnly = on; headMeshes.forEach(([o, under, vis]) => { o.visible = on ? (under && vis) : vis; }); }
+    const _hp = new THREE.Vector3(), _hw = new THREE.Vector3();
+    function placeWalkingTed(W) {
+      if (W.mode === 'desk') { tedHolder.position.copy(TED_DESK_LOCAL); tedHolder.rotation.y = 0; walkYaw = 0; return; }
+      walkPoint(W.d, _wp);
+      const gyW = pbGround(_wp);
+      _wl.set(_wp.x, gyW, _wp.z); DN.worldToLocal(_wl);
+      if (W.mode === 'rise') _wl.copy(TED_DESK_LOCAL);
+      tedHolder.position.copy(_wl);
+      const frame = W.mode === 'there' ? tedFrameOf(cur) : 'two';
+      setHeadOnly(frame === 'head');
+      if (frame === 'far' || frame === 'head') {
+        const B = camBasis(), vh = Math.tan((camera.fov || 36) / 2 * Math.PI / 180), asp = window.innerWidth / Math.max(1, window.innerHeight);
+        if (frame === 'far') {   // way off behind the globe, on his own feet: where a line through a spot in the upper frame meets the ground
+          const sx = WIDE ? 0.3 : 0.28, sy = WIDE ? -0.05 : 0.18;   // the spot, in half-frame units (x right, y up) — his feet
+          _hp.copy(B.f).addScaledVector(B.r, sx * vh * asp).addScaledVector(B.u, sy * vh).normalize();
+                    const d = EP.farDist || 28;                                             // far off: about a tenth of the frame tall
+          _hw.copy(camera.position).addScaledVector(_hp, d); const gyF = pbGround(_hw);
+          _hw.y = Math.max(gyF, _hw.y);                                           // on the ground if the spot is below it; else he stands in the air (it's a dream)
+          _wl.copy(_hw); DN.worldToLocal(_wl); tedHolder.position.copy(_wl);
+        } else {                  // the floating head, upper left, close
+          const d = WIDE ? 4.2 : 5.6; _hp.copy(camera.position).addScaledVector(B.f, d).addScaledVector(B.r, -d * vh * asp * 0.45).addScaledVector(B.u, d * vh * (WIDE ? 0.4 : 0.5));
+          _wc.copy(camera.position); DN.worldToLocal(_wc); tedHolder.rotation.y = Math.atan2(_wc.x - tedHolder.position.x, _wc.z - tedHolder.position.z);
+          tedHolder.updateMatrixWorld(true); rig.joints.head.getWorldPosition(_hw);
+          _hw.sub(_hp); const lp = tedHolder.position.clone(); DN.localToWorld(lp); lp.sub(_hw); DN.worldToLocal(lp); tedHolder.position.copy(lp);
+        }
+        if (frame === 'far') { _wc.copy(camera.position); DN.worldToLocal(_wc); tedHolder.rotation.y = Math.atan2(_wc.x - tedHolder.position.x, _wc.z - tedHolder.position.z); }
+        walkYaw = tedHolder.rotation.y;
+        return;
+      }
+      // heading, in the desk's frame (the rig faces +z): along the path while walking, to the lens once there
+      let yaw;
+      if (W.mode === 'walk') {
+        walkPoint(W.d + (W.toPed ? 0.25 : -0.25), _wq); _wq.y = gyW; DN.worldToLocal(_wq); yaw = Math.atan2(_wq.x - _wl.x, _wq.z - _wl.z);
+      } else if (W.mode === 'rise') yaw = 0;
+      else { _wc.copy(camera.position); DN.worldToLocal(_wc); const toCam = Math.atan2(_wc.x - _wl.x, _wc.z - _wl.z);
+        walkPoint(walkPath.len - 0.25, _wq); _wq.y = gyW; DN.worldToLocal(_wq); const along = Math.atan2(_wl.x - _wq.x, _wl.z - _wq.z);
+        const k = W.mode === 'there' ? Math.min(1, (W.since || 0) / WALK.turn) : 1; let dy = toCam - along; dy = Math.atan2(Math.sin(dy), Math.cos(dy));
+        yaw = along + dy * (k * k * (3 - 2 * k)); }
+      tedHolder.rotation.y = yaw; walkYaw = yaw;
     }
     function poseTed(t) {
       if (rig) {
@@ -515,18 +615,20 @@
         // chosen per 4-second window so no two stretches repeat the same way
         tPose += dt * (0.42 + 0.16 * Math.sin(t * 0.31) + 0.1 * Math.sin(t * 0.83 + 1.7));
         const talking = level > 0.08;
-        const want = 'deskListen';   // paws on the desk as the base; the gestures are added on top, below (10-26: the hover is gone)
+        const W = walkState(showT); placeWalkingTed(W);
+        const want = W.mode === 'desk' ? 'deskListen' : W.mode === 'walk' ? 'walkStraight' : 'stand'
+        const want2 = (cur && cur.tedPose && W.mode === 'desk') ? cur.tedPose : want;   // sp02: a beat may name a desk pose (deskWristTap)   // ex01: up from the desk, walking, standing by the globe
         // the gaze eases toward its target (no snapping), in the rig's own frame
         const tgt = gazeTarget(t); if (!gazeInit) { gazeNow.copy(tgt); gazeInit = true; }
         gazeNow.lerp(tgt, 1 - Math.pow(0.04, dt));
         _gv.copy(gazeNow); tedHolder.updateMatrixWorld(true); tedHolder.worldToLocal(_gv); tedGuest[0] = _gv.x; tedGuest[1] = _gv.y; tedGuest[2] = _gv.z;
         tedHolder.remove(rig.root);   // pose him at the origin (the rig's IK and look-at are in world space), then put him back
         rig.root.updateMatrixWorld(true);
-        if (want !== tedWant) { tedWant = want; rig.setPose(want, { guest: tedGuest }); }
-        rig.setTalk(false); rig.update(dt, tPose);
+        if (want2 !== tedWant) { tedWant = want2; rig.setPose(want2, { guest: tedGuest, cam: tedGuest }); }
+        rig.setTalk(false); rig.update(dt, W.mode === 'walk' ? showT : tPose);
         // GESTURES (Sailor, 10-26: "his hand still does a funny hover"): while he talks, now and then the right paw lifts off
         // the desk in a soft arc and settles again — one lift per phrase window, some windows still, no loop to read
-        if (talking || gestE > 0.01) {
+        if ((talking || gestE > 0.01) && W.mode === 'desk') {
           const W = 3.8, w = Math.floor(t / W), u = (t % W) / W, on = talking && hash(w) < 0.5;
           const target = on ? Math.pow(Math.sin(Math.PI * Math.min(1, u * 1.15)), 2) : 0;
           gestE += (target - gestE) * Math.min(1, dt * 4);
@@ -664,7 +766,63 @@
       DN.localToWorld(_cf0); DN.localToWorld(_ca0); DN.localToWorld(_cf1); DN.localToWorld(_ca1);
       camFrom.lerpVectors(_cf0, _cf1, u); camAt.lerpVectors(_ca0, _ca1, u);
     }
+    // the walk's camera (ex01): the desk shot → travelling with Ted → a two-shot of Ted and the globe, from out past his mark
+    const _df = new THREE.Vector3(), _da = new THREE.Vector3(), _tf = new THREE.Vector3(), _ta = new THREE.Vector3(), _th = new THREE.Vector3();
+    function twoShot(outF, outA, drift) {
+      const mark = walkPath.pts[walkPath.pts.length - 1], out = walkPath.out, g0 = pbGround(mark);
+      if (WIDE) {
+        outA.set(mark.x * 0.5, (g0 + 1.3) * 0.5 + PED_Y * 0.5, mark.z * 0.5);              // between Ted's head and the globe
+        outF.copy(outA).addScaledVector(out, 7.4 - drift * 0.8);
+        outF.y = Math.max(g0 + 1.6, outA.y - 0.1);
+      } else {
+        // 9:16 (Twitter): Ted's feet to the top of the globe fill the frame above the glass when it's docked, the whole
+        // frame when it isn't — the aim drops so the stack sits in the upper part
+        const docked = carry('m3p', cur, 'off') === 'dock', d = 11.5 - drift * 0.8, H = 2 * d * Math.tan((camera.fov || 36) / 2 * Math.PI / 180);
+        const top = PED_Y + 1.3, mid = (g0 + top) / 2;
+        outA.set(mark.x * 0.45, docked ? mid - 0.2 * H : mid, mark.z * 0.45);
+        outF.copy(outA).addScaledVector(out, d); outF.y += 0.6;
+      }
+    }
+    const _fP = new THREE.Vector3(), _fC = new THREE.Vector3(), _fN = new THREE.Vector3();
+    function focusShot(outF, outA, f) {
+      const R = (typeof TRACKER_R !== 'undefined') ? TRACKER_R : 1.15, d = (f[2] || 2.0) * (WIDE ? 1.15 : 1.9);
+      trackerGlobe.updateMatrixWorld(true);
+      _fP.copy(trackerLatLon(f[0], f[1], R)); trackerSpin.localToWorld(_fP); trackerGlobe.getWorldPosition(_fC);
+      _fN.copy(_fP).sub(_fC).normalize();
+      outF.copy(_fP).addScaledVector(_fN, d); outF.y += 0.18 * d; outA.copy(_fP);
+      if (!WIDE && carry('m3p', cur, 'off') === 'dock') outA.y -= d * 0.3;   // the glass covers the lower 40%: the place sits in the upper frame
+    }
+    function shotFor(b, t, W, outF, outA) {
+      const f = carry('globeFocus', b, null);
+      if (f && typeof trackerLatLon === 'function') focusShot(outF, outA, f);
+      else twoShot(outF, outA, Math.min(1, (W.since || 0) / 30));
+    }
+    let globePierceOff = false;
+    function tedFrameLayers(t, b) {
+      if (typeof trackerGlobe === 'undefined') return;
+      const W = walkState(t), off = W.mode === 'there' && tedFrameOf(b) === 'far';
+      if (off) trackerGlobe.traverse(o => o.layers.disable(1));
+      else if (globePierceOff) trackerGlobe.traverse(o => o.layers.enable(1));
+      globePierceOff = off;
+    }
+    function walkCamera(t, W) {
+      deskShot(_df, _da);
+      if (W.mode === 'rise') { camFrom.copy(_df); camAt.copy(_da); camAt.y += 0.25 * Math.min(1, W.k || 0); return; }
+      if (W.mode === 'there') {
+        shotFor(cur, t, W, camFrom, camAt);
+        const p = prevBeat(cur), fk = b => JSON.stringify(carry('globeFocus', b, null));
+        if (p && fk(p) !== fk(cur)) { const u = Math.max(0, Math.min(1, (t - cur.start) / 1.8)); if (u < 1) { shotFor(p, t, W, _tf, _ta); const e = ease3(u); camFrom.lerpVectors(_tf, camFrom, e); camAt.lerpVectors(_ta, camAt, e); } }
+        return;
+      }
+      if (W.mode === 'stand') { twoShot(camFrom, camAt, 1); return; }
+      twoShot(_tf, _ta, 0);
+      const u = W.toPed ? W.u : 1 - W.u, e = ease3(Math.max(0, Math.min(1, u)));
+      tedHolder.getWorldPosition(_th); _th.y += 1.45;
+      camFrom.lerpVectors(_df, _tf, e);
+      camAt.lerpVectors(_da, _th, Math.min(1, u * 2.5)).lerp(_ta, e * e);
+    }
     function placeCamera(t) {
+      if (ART.on) { camera.layers.set(0); articleCamera(t); camera.position.copy(camFrom); camera.lookAt(camAt); if (typeof camTarget !== 'undefined' && camTarget.copy) camTarget.copy(camAt); return; }
       if (cur && cur.layout === 'fly') { camera.layers.set(0); flyCamera(t); }
       else if (cur && cur.layout === 'credits') { camera.layers.set(0); creditsCamera(t); }
       else if (cur && cur.type === 'land' && LAND_PED) {
@@ -709,6 +867,8 @@
         camFrom.set(0.12, 1.38, dist); camAt.set(0, WIDE ? 1.7 : 1.95, -0.9);
         DN.localToWorld(camFrom); DN.localToWorld(camAt);
       }
+      { const W = walkState(t);
+        if (W.mode !== 'desk' && !(cur && (cur.type === 'land' || cur.layout === 'fly' || cur.layout === 'credits')) && !READ.on) walkCamera(t, W); }
       if (!CAPTURE) userCamera();
       // ep 1.1: `quake: true` — the desk shakes, hard for the first second and dying out over two (deterministic in t)
       if (cur && epv(cur, 'quake')) { const u = Math.max(0, t - cur.start), a = 0.05 * Math.exp(-u / 0.9) * (u < 2.6 ? 1 : 0);
@@ -1178,6 +1338,338 @@
       tableEl.style.display = 'block';
       tableEl.querySelectorAll('tr.row').forEach((tr, k) => tr.classList.toggle('in', t - b.start >= 0.6 + k * 1.4));
     }
+    // ── THE M3P (ex01, 2026-11-06, Sailor: "the g4 should take up the lower 40% of the mobile screen… keep the m3p as free
+    //    floating as possible… some kind of light angled / iridescent effect as the m3p lags and floats and slides into place…
+    //    it should move around and resize as it makes sense to present the information"). The Mark III Prism, the terminal
+    //    station that runs Prism (Pacifica Dialectics). On the show it is glass: real page content, drawn at the screen's own
+    //    resolution so every word reads on a phone, floating over the villa. Where it sits is a beat field, carried forward:
+    //      m3p: 'off' | 'dock' (the lower 40%) | 'low' (slid down and out of the way, a strip for words) | 'full' (the glass)
+    //      m3pScreen: 'intro' | 'signals' | 'needle' | 'america' | 'russia' | 'strikes' | 'shadow' | 'diesel' | 'bet'
+    //      m3pText: words projected on the strip (the 'low' screen); m3pHi: which row of a list is lit
+    //    It moves between places over ~1.3 s with an overshoot, tilting with its own speed (the lag), and idles with a slow
+    //    float. The rim and the sheen are thin-film light that brightens while it moves. All a pure function of show time.
+    const M3P_ON = beats.some(b => b.m3p);
+    const m3pEl = document.createElement('div'); m3pEl.id = 'dn-m3p';
+    // 11-07 (Sailor: "make the m3p screen look a little more like an actual display panel"): a device — graphite body, a thin
+    // bezel round an inset screen (glass reflection, faint scanlines), and a chin with the wordmark, a power light and, on a
+    // live page, the controls as hardware keys
+    m3pEl.innerHTML = '<div class="glass"><div class="screen"><div class="bar"><span class="ttl"></span><span class="sw"></span></div><div class="scr"></div><div class="refl"></div></div>'
+      + '<div class="chin"><span class="mk">M3P</span><span class="led"></span>' + (CAPTURE ? '' :
+      '<span class="ctl"><button data-c="back" title="back 10 seconds">⟲10</button><button data-c="play" title="play / pause">▶</button><button data-c="fwd" title="forward 10 seconds">10⟳</button><button data-c="read" class="rd" title="read it as an article">READ</button></span>') + '</div></div>';
+    // the controls live in the M3P's bar (11-06, Sailor: "the player controls should be folded into the m3p… play/pause, forward/back 10s")
+    m3pEl.addEventListener('click', e => { const c = e.target && e.target.dataset && e.target.dataset.c; if (!c || !window.__ctl) return; e.stopPropagation();
+      if (c === 'play') window.__ctl.toggle(); else if (c === 'back') window.__ctl.skip(-10); else if (c === 'fwd') window.__ctl.skip(10); else if (c === 'read') artOpen(); });
+    const m3pCSS = document.createElement('style');
+    m3pCSS.textContent = `
+      #dn-m3p { position: absolute; left: 0; top: 0; display: none; z-index: 30; pointer-events: none; perspective: 1400px; }
+      #dn-m3p .glass { position: absolute; inset: 0; border-radius: 1.6vmin; overflow: hidden; transform-style: preserve-3d;
+        background: linear-gradient(160deg, rgba(14,20,40,.80), rgba(6,9,20,.86)); backdrop-filter: blur(6px) saturate(1.2); -webkit-backdrop-filter: blur(6px) saturate(1.2);
+        box-shadow: 0 2vmin 6vmin rgba(0,0,0,.55), inset 0 0 0 1px rgba(255,255,255,.10); color: #f3efe6; font-family: Georgia, 'Times New Roman', serif; }
+      #dn-m3p .glass::before { content: ''; position: absolute; inset: 0; border-radius: inherit; padding: .32vmin; pointer-events: none; opacity: var(--rim, .45);
+        background: conic-gradient(from var(--a, 0deg), #ffd6a0, #ffb0e0, #b8c8ff, #a8f0e0, #fff2b0, #ffd6a0);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+      #dn-m3p .glass::after { content: ''; position: absolute; inset: -40%; pointer-events: none; opacity: var(--sheen, .12); mix-blend-mode: screen;
+        background: linear-gradient(var(--sa, 115deg), transparent 40%, rgba(255,214,170,.55) 46%, rgba(255,170,230,.5) 49%, rgba(170,200,255,.5) 52%, rgba(170,255,225,.45) 55%, transparent 61%);
+        transform: translateX(var(--sx, -30%)); }
+      #dn-m3p .bar { display: flex; align-items: center; gap: 1.6vmin; padding: 1.4vmin 2.4vmin; border-bottom: 1px solid rgba(255,255,255,.08); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      #dn-m3p .mk { font-weight: 800; letter-spacing: .14em; font-size: 2.2vmin; background: linear-gradient(90deg, #ffd6a0, #ffb0e0, #b8c8ff, #a8f0e0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      #dn-m3p .ttl { font-size: 1.9vmin; letter-spacing: .16em; text-transform: uppercase; opacity: .7; }
+      #dn-m3p .sw { margin-left: auto; width: 1.2vmin; height: 1.2vmin; border-radius: 50%; background: #d4aa52; box-shadow: 0 0 1.2vmin #d4aa52; }
+      #dn-m3p .scr { position: absolute; left: 0; right: 0; top: 5.4vmin; bottom: 0; padding: 2.2vmin 3vmin; }
+      #dn-m3p .k { font: 600 1.9vmin/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: .18em; text-transform: uppercase; opacity: .62; }
+      #dn-m3p .big { font-weight: 700; font-size: 9vmin; line-height: 1; margin: 1vmin 0 .6vmin; }
+      #dn-m3p .mid { font-size: 3.4vmin; line-height: 1.25; }
+      #dn-m3p .sm { font-size: 2.2vmin; line-height: 1.35; opacity: .72; }
+      #dn-m3p .gold { color: #d4aa52; } #dn-m3p .blue { color: #8aa2ff; } #dn-m3p .grey { color: #aab0bd; } #dn-m3p .fire { color: #ff8a4a; }
+      #dn-m3p .row { display: grid; grid-template-columns: 5vmin 1fr; gap: 1.6vmin; align-items: start; padding: 1.1vmin 0; border-top: 1px solid rgba(255,255,255,.06); opacity: .5; }
+      #dn-m3p .row.on { opacity: 1; } #dn-m3p .row .g { font-size: 3.6vmin; line-height: 1; text-align: center; }
+      #dn-m3p .row .h { font-size: 3vmin; } #dn-m3p .row .d { font-size: 2.1vmin; opacity: .75; margin-top: .3vmin; }
+      #dn-m3p svg { display: block; width: 100%; }
+      #dn-m3p .proj { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 4vmin; font-size: 3.6vmin; line-height: 1.25; }
+      #dn-m3p.low .bar { display: none; } #dn-m3p.low .scr { top: 0; }
+      #dn-m3p .ctl { margin-left: auto; display: flex; gap: 1vmin; pointer-events: auto; }
+      #dn-m3p .ctl button { pointer-events: auto; cursor: pointer; font: 600 2vmin 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #ece6da; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); border-radius: 1.6vmin; padding: .7vmin 1.5vmin; letter-spacing: .04em; }
+      #dn-m3p .ctl button[data-c="play"] { min-width: 6vmin; background: rgba(212,170,82,.9); color: #0a0e1c; border: 0; }
+      #dn-m3p .ctl .rd { letter-spacing: .14em; }
+      #dn-m3p.pill .scr { display: none; } #dn-m3p.pill .ttl { display: none; } #dn-m3p.pill .bar { border-bottom: 0; height: 100%; }
+      #dn-m3p.low .ctl { display: none; }
+      body.dream-news.m3p-ep #dn-ctl { display: none !important; }
+      /* the device (11-07) */
+      #dn-m3p .glass { background: linear-gradient(180deg, #2b2f3a 0%, #171a22 55%, #0e1016 100%); border-radius: 2.4vmin; backdrop-filter: none; -webkit-backdrop-filter: none;
+        box-shadow: 0 2.6vmin 7vmin rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.2), inset 0 -1px 0 rgba(0,0,0,.7); }
+      #dn-m3p .screen { position: absolute; left: 1.3vmin; right: 1.3vmin; top: 1.3vmin; bottom: 6.4vmin; border-radius: 1.3vmin; overflow: hidden;
+        background: radial-gradient(120% 95% at 50% 38%, #142042 0%, #0b1124 58%, #060914 100%); box-shadow: inset 0 0 0 1px rgba(0,0,0,.85), inset 0 0 3.2vmin rgba(0,0,0,.6); }
+      #dn-m3p .screen::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(255,255,255,.028) 0 1px, transparent 1px 3px); }
+      #dn-m3p .refl { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(155deg, rgba(255,255,255,.11) 0%, rgba(255,255,255,.035) 26%, transparent 40%); }
+      #dn-m3p .bar { padding: 1.1vmin 2.2vmin; gap: 1.2vmin; border-bottom: 1px solid rgba(255,255,255,.07); }
+      #dn-m3p .ttl { font-size: 1.9vmin; }
+      #dn-m3p .scr { top: 4.6vmin; display: flex; flex-direction: column; justify-content: center; padding: 1.4vmin 3.2vmin 2vmin; }
+      #dn-m3p .chin { position: absolute; left: 0; right: 0; bottom: 0; height: 6.4vmin; display: flex; align-items: center; gap: 1.2vmin; padding: 0 2.6vmin; }
+      #dn-m3p .chin .mk { font-size: 2.5vmin; }
+      #dn-m3p .led { width: 1vmin; height: 1vmin; border-radius: 50%; background: #8dffc0; box-shadow: 0 0 1.4vmin #5dff9e; opacity: .85; }
+      #dn-m3p .ctl button { background: linear-gradient(180deg, #3d4250, #23262f); border: 1px solid #090a0e; box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 .3vmin .6vmin rgba(0,0,0,.5); border-radius: 1vmin; font-size: 1.9vmin; color: #ebe6dc; padding: .8vmin 1.6vmin; }
+      #dn-m3p .ctl button[data-c="play"] { background: linear-gradient(180deg, #e6c06a, #b8913f); color: #0a0e1c; border: 1px solid #5e4a1e; }
+      #dn-m3p.pill .screen { display: none; } #dn-m3p.pill .chin { height: 100%; }
+      #dn-m3p.low .chin { display: none; } #dn-m3p.low .screen { inset: .9vmin; } #dn-m3p.low .scr { top: 0; padding: 0; }
+      /* bigger type, so the screen is filled and reads on a phone */
+      #dn-m3p .k { font-size: 2.05vmin; } #dn-m3p .mid { font-size: 3.7vmin; } #dn-m3p .sm { font-size: 2.35vmin; } #dn-m3p .big { font-size: 10.5vmin; }
+      #dn-m3p .row { padding: 1.5vmin 0; grid-template-columns: 5.6vmin 1fr; } #dn-m3p .row .g { font-size: 4.2vmin; } #dn-m3p .row .h { font-size: 3.6vmin; } #dn-m3p .row .d { font-size: 2.35vmin; }
+      /* the chyron, in an M3P episode: a slim label riding the top edge of the device; the show's long name stays on the bug */
+      body.dream-news.m3p-ep #dn-chyron { right: auto; grid-template-columns: auto 1fr; border-radius: 1.2vmin 1.2vmin 0 0; overflow: hidden; box-shadow: 0 1vmin 3vmin rgba(0,0,0,.45); }
+      body.dream-news.m3p-ep #dn-chyron .tag { font-size: 1.75vmin; padding: 0 1.8vmin; letter-spacing: .2em; }
+      body.dream-news.m3p-ep #dn-chyron .text { border-top: 0; padding: 1.1vmin 2vmin 1.2vmin; background: rgba(10,13,22,.88); }
+      body.dream-news.m3p-ep #dn-chyron .h { font-size: 3.5vmin; }
+      body.dream-news.m3p-ep #dn-chyron .s { display: none; }
+      body.dream-news.m3p-ep #dn-clock { display: none; }
+      body.dream-news.m3p-ep #dn-bug { top: 2.6vh; gap: 1.4vmin; }
+      body.dream-news.m3p-ep #dn-bug .mark { width: 3vmin; height: 3vmin; min-width: 0; min-height: 0; }
+      body.dream-news.m3p-ep #dn-bug .name { font-size: 2.3vmin; }
+      body.dream-news.m3p-ep #dn-bug .live { font-size: 1.6vmin; }
+    `;
+    // 11-07: the M3P's type is sized off the device's own docked size (--u), not the window, so it fits the screen in a
+    // desktop preview window as well as on a phone
+    m3pCSS.textContent = m3pCSS.textContent.replace(/(#dn-m3p[^{]*\{[^}]*\})/g, rule => rule.replace(/([\d.]+)vmin/g, 'calc(var(--u, 1vmin) * $1)'));
+    document.head.appendChild(m3pCSS); (document.getElementById('dn') || document.body).appendChild(m3pEl);
+    if (M3P_ON) { m3pCSS.textContent += ' body.dream-news.m3p-ep #dn-ticker { display: none !important; }'; document.body.classList.add('m3p-ep'); }   // the glass carries what the tape did
+    const m3pGlass = m3pEl.querySelector('.glass'), m3pScr = m3pEl.querySelector('.scr'), m3pTtl = m3pEl.querySelector('.ttl');
+    // where it sits, as fractions of the frame (x, y, w, h)
+    const M3P_AT = WIDE
+      ? { dock: [0.555, 0.13, 0.41, 0.66], low: [0.58, 0.72, 0.37, 0.13], full: [0.08, 0.10, 0.84, 0.72], off: [0.555, 1.12, 0.41, 0.66], pill: [0.36, 0.885, 0.28, 0.07] }
+      : { dock: [0.04, 0.575, 0.92, 0.355], low: [0.07, 0.80, 0.86, 0.10], full: [0.04, 0.14, 0.92, 0.76], off: [0.04, 1.10, 0.92, 0.355], pill: [0.1, 0.905, 0.8, 0.06] };
+    // a beat's value for a field, carried forward from the last beat that set it
+    const carry = (key, b, dflt) => { let v = dflt; for (const x of beats) { if (x.start != null && b && x.start > b.start) break; if (x[key] !== undefined) v = x[key]; if (x === b) break; } return v; };
+    const prevBeat = b => { const i = beats.indexOf(b); return i > 0 ? beats[i - 1] : null; };
+    const _gs = new THREE.Vector3();
+    function globeOnScreen() {
+      if (typeof trackerGlobe === 'undefined') return [0.5, 0.3];
+      trackerGlobe.getWorldPosition(_gs); _gs.project(camera); return [(_gs.x + 1) / 2, (1 - _gs.y) / 2];
+    }
+    // ── the screens, drawn from the tracker's own computation (index.html: trackerData), so they are never a month stale
+    const m3pPct = x => Math.round(x * 100) + '%';
+    const m3pMon = p => (typeof trackerMonthName === 'function') ? trackerMonthName(p, true).replace(' 20', " '") : p;
+    function spark(vals, color, lo, hi, marks) {
+      const W = 600, H = 150, n = vals.length, pts = vals.map((v, i) => [12 + (W - 24) * i / Math.max(1, n - 1), H - 14 - (H - 28) * (v - lo) / (hi - lo)]);
+      const d = pts.map((p, i) => (i ? 'L' : 'M') + p[0].toFixed(1) + ' ' + p[1].toFixed(1)).join(' ');
+      const dots = (marks || []).map(([i, lab, below]) => `<circle cx="${pts[i][0]}" cy="${pts[i][1]}" r="7" fill="${color}"/><text x="${pts[i][0]}" y="${pts[i][1] + (below ? 34 : -14)}" fill="${color}" font-size="26" font-family="Georgia" text-anchor="${i === 0 ? 'start' : i === n - 1 ? 'end' : 'middle'}">${lab}</text>`).join('');
+      return `<svg viewBox="0 0 ${W} ${H}"><path d="${d}" fill="none" stroke="${color}" stroke-width="5" stroke-linejoin="round"/>${dots}</svg>`;
+    }
+    function m3pScreen(name, b) {
+      const T = (typeof trackerData !== 'undefined') ? trackerData : null, D = (typeof g4ActiveData !== 'undefined' && g4ActiveData) || {};
+      const hi = carry('m3pHi', b, -1);
+      const rows = (list) => list.map((r, i) => `<div class="row ${hi < 0 || hi === i ? 'on' : ''}"><div class="g ${r[3] || ''}">${r[0]}</div><div><div class="h">${r[1]}</div><div class="d">${r[2]}</div></div></div>`).join('');
+      if (name === 'intro') return ['Terminal station', `<div class="k">Mark III Prism</div><div class="big" style="font-size:12vmin;letter-spacing:.06em">M3P</div><div class="mid">runs <b>Prism</b></div><div class="sm">Pacifica Dialectics</div>
+        <svg viewBox="0 0 600 120" style="margin-top:2vmin"><polygon points="250,105 300,15 350,105" fill="none" stroke="#f3efe6" stroke-width="3"/><line x1="40" y1="70" x2="285" y2="62" stroke="#f3efe6" stroke-width="3"/>
+        ${['#ff6a5a', '#ffb13d', '#ffe46a', '#6fe08a', '#6fa8ff', '#a77bff'].map((c, i) => `<line x1="318" y1="62" x2="590" y2="${30 + i * 13}" stroke="${c}" stroke-width="4"/>`).join('')}</svg>`];
+      if (name === 'signals') return ['What it takes in', rows([
+        ['⟶', 'Where the oil went', 'official customs, every border, month by month', 'gold'],
+        ['✦', 'What got hit', 'strikes, seizures, sanctions — the day it happened, the day we heard', 'fire'],
+        ['$', 'What it cost', 'the price — the shadow, kept last', 'grey'],
+        ['❝', 'What people said', 'statements, filed as claims the world can check', 'blue']])];
+      if (name === 'needle' && T) {
+        const full = T.months.filter(m => m.dollarShare != null && m.panelPresent.length === 5), v = trackerVerdict(T);
+        const vals = full.map(m => m.dollarShare), lowI = vals.indexOf(Math.min(...vals));
+        return ['Sold in dollars', `<div class="k">the needle · five big buyers</div><div class="big gold">${v.word}</div>
+          <div class="mid">${m3pPct(T.ago.dollarShare)} in ${m3pMon(T.ago.period)} → ${m3pPct(T.now.dollarShare)} in ${m3pMon(T.now.period)}</div>
+          ${spark(vals, '#d4aa52', 0.6, 1.0, [[0, m3pPct(vals[0])], [lowI, m3pPct(vals[lowI]), true], [vals.length - 1, m3pPct(vals[vals.length - 1])]])}
+          <div class="sm">${m3pPct(T.now.namedShare)} of what moved can be named · about half of that is dollars by industry default</div>`];
+      }
+      if (name === 'america' && T) {
+        const full = T.months.filter(m => m.panelPresent.length === 5), g = full.map(m => m.us.gulfShare), h = full.map(m => m.us.hemiShare);
+        const z = g.indexOf(Math.min(...g)), last = g.length - 1;
+        return ["America's barrel", `<div class="k">where US imports came from</div><div class="big gold" style="font-size:7vmin">The Gulf: ${m3pPct(g[0])} → ${m3pPct(g[z])} → ${m3pPct(g[last])}</div>
+          ${spark(h, '#d4aa52', 0.0, 1.0, [[0, m3pPct(h[0])], [z, m3pPct(h[z])], [last, m3pPct(h[last])]])}
+          ${spark(g, '#b07a2e', 0.0, 1.0, [[z, '0'], [last, m3pPct(g[last])]])}
+          <div class="sm">solid: this hemisphere · dashed gold: the Persian Gulf · every barrel paid in dollars</div>`];
+      }
+      if (name === 'russia' && T) {
+        const full = T.months.filter(m => m.panelPresent.length === 5);
+        const ri = full.map(m => m.edges.filter(e => e.from === 'Russia' && e.to === 'India' && !e.uncounted).reduce((a, e) => a + e.kt, 0) / 4.08 / 1000);
+        const top = ri.indexOf(Math.max(...ri)), last = ri.length - 1;
+        return ['The biggest blue line', `<div class="k">Russia → India · rupees, dirhams, yuan</div><div class="big blue">${ri[top].toFixed(1)}M</div><div class="mid">barrels a day at the peak, ${m3pMon(full[top].period)}</div>
+          ${spark(ri, '#8aa2ff', 0, Math.max(...ri) * 1.15, [[0, ri[0].toFixed(1) + 'M'], [top, ri[top].toFixed(1) + 'M'], [last, ri[last].toFixed(1) + 'M', true]])}
+          <div class="sm">India's own customs count · crude and products</div>`];
+      }
+      if (name === 'strikes') {
+        const L = ((D.strikes && D.strikes.rows) || []).slice().sort((a, b2) => b2.asOf.localeCompare(a.asOf)).slice(0, 5);
+        return ['What got hit', rows(L.map(r => ['✦', `${r.short} · ${m3pMon(r.asOf.slice(0, 7)).split(' ')[0]} ${+r.asOf.slice(8, 10)}`,
+          `${r.status}${r.firms ? (/flag/.test(r.firms) ? ' · seen from orbit' : / not seen/.test(' ' + r.firms) ? ' · not seen from orbit' : '') : ''} · ${r.source.split(/[;,(]/)[0]}`, 'fire']))];
+      }
+      if (name === 'shadow') {
+        const s = D.price && D.price.series && D.price.series.RBRTE ? D.price.series.RBRTE.points.filter(p => p[0] >= '2025-10') : [];
+        if (!s.length) return ['The shadow', ''];
+        const v = s.map(p => p[1]);
+        return ['The shadow', `<div class="k">Brent, a barrel</div><div class="big grey">$${Math.round(v[v.length - 1])}</div><div class="mid">what everyone shouts about — kept last</div>${spark(v, '#aab0bd', 40, 140, [[0, '$' + Math.round(v[0])], [v.length - 1, '$' + Math.round(v[v.length - 1])]])}`];
+      }
+      if (name === 'diesel') {
+        const R = D.recent || {}, dr = R.dieselRetail && R.dieselRetail.series && R.dieselRetail.series.EMD_EPD2D_PTE_NUS_DPG ? R.dieselRetail.series.EMD_EPD2D_PTE_NUS_DPG.points : [];
+        const at = d => { let x = null; dr.forEach(p => { if (p[0] <= d) x = p; }); return x; };
+        const was = at('2026-10-12'), now = dr[dr.length - 1];
+        return ['A claim, filed', `<div class="k">Oct 11 · the president</div><div class="mid">“Russia will immediately supply 300,000 tons…”</div>
+          <div class="row on"><div class="g gold">⟶</div><div><div class="h">Diesel imports</div><div class="d">flat since August — no jump</div></div></div>
+          <div class="row on"><div class="g grey">$</div><div><div class="h">${was ? '$' + was[1].toFixed(2) : '—'} → ${now ? '$' + now[1].toFixed(2) : '—'}</div><div class="d">diesel at the pump, the week he said it → the latest</div></div></div>
+          <div class="sm">the test runs to the end of November</div>`];
+      }
+      if (name === 'bet') return ['On the record', `<div class="k">Oct 2 · Sailor's bet</div><div class="mid">The shock doesn't loosen the dollar's grip on America's oil. It re-routes the oil toward it.</div>
+        <div class="row on"><div class="g fire">?</div><div><div class="h">How it could be wrong</div><div class="d">the Gulf barrel comes back before this hemisphere locks in</div></div></div><div class="sm">August: the Gulf came back. The ruling is owed.</div>`];
+      return ['', ''];
+    }
+    const ease3m = u => u * u * (3 - 2 * u);
+    const backOut = u => { const c = 1.35; return 1 + (c + 1) * Math.pow(u - 1, 3) + c * Math.pow(u - 1, 2); };
+    let m3pKey = '';
+    function m3pFrame(t, b) {
+      if (!M3P_ON) { m3pEl.style.display = 'none'; return; }
+      if (!b) { if (CAPTURE) { m3pEl.style.display = 'none'; return; } b = beats[0]; }   // before the first beat a live page still shows its controls
+      const live = (p) => (!CAPTURE && p === 'off') ? 'pill' : p;   // on a live page the M3P never leaves: it folds to its controls
+      const place = live(carry('m3p', b, 'off')), was = live((() => { const p = prevBeat(b); return p ? carry('m3p', p, 'off') : 'off'; })());
+      const W_ = window.innerWidth, H_ = window.innerHeight;
+      let A = (M3P_AT[was] || M3P_AT.off).slice(), B = (M3P_AT[place] || M3P_AT.off).slice();
+      if (was === 'off' && place !== 'off') { const [gx, gy] = globeOnScreen(); A = [gx - 0.06, gy - 0.03, 0.12, 0.07]; }   // it comes out of the globe
+      const D = 1.3, u = Math.max(0, Math.min(1, (t - b.start) / D)), e = place === was ? 1 : backOut(u), v = place === was ? 0 : Math.max(0, 1 - Math.abs(2 * u - 1)) * (1 - u * 0.3);
+      const r = A.map((a, i) => a + (B[i] - a) * e);
+      if (place === 'off' && u >= 1) { m3pEl.style.display = 'none'; document.body.classList.remove('m3p-dock'); return; }
+      m3pEl.style.display = 'block';
+      { const DK = M3P_AT.dock; m3pEl.style.setProperty('--u', Math.min(DK[3] * H_ / 63, DK[2] * W_ / 92).toFixed(2) + 'px'); }
+      m3pEl.style.left = (r[0] * W_) + 'px'; m3pEl.style.top = (r[1] * H_) + 'px'; m3pEl.style.width = (r[2] * W_) + 'px'; m3pEl.style.height = (r[3] * H_) + 'px';
+      // the lag: it tilts into its own motion, and idles with a slow float
+      const dy = B[1] - A[1], dx = B[0] - A[0], sgn = Math.sign(dy || 1);
+      const rx = -sgn * 16 * v + Math.sin(t * 0.37) * 1.6, ry = Math.sign(dx || 0.0001) * 12 * v + Math.sin(t * 0.29 + 1) * 2.2 + (was === 'off' && place !== 'off' ? 55 * (1 - ease3m(u)) : 0), rz = Math.sin(t * 0.43) * 0.5;
+      m3pGlass.style.transform = `translateY(${(Math.sin(t * 0.7) * 0.5).toFixed(2)}vh) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) rotateZ(${rz.toFixed(2)}deg)`;
+      m3pGlass.style.opacity = (was === 'off' && place !== 'off') ? Math.min(1, u * 2.2).toFixed(3) : (place === 'off' ? (1 - u).toFixed(3) : '1');
+      // the light: the rim's colours turn, faster and brighter while it moves; a sheen crosses with the motion
+      m3pGlass.style.setProperty('--a', ((t * 22 + v * 140) % 360).toFixed(1) + 'deg');
+      m3pGlass.style.setProperty('--rim', (0.38 + 0.55 * v).toFixed(3));
+      m3pGlass.style.setProperty('--sheen', (0.08 + 0.55 * v).toFixed(3));
+      m3pGlass.style.setProperty('--sx', (-45 + 90 * (place === was ? (0.5 + 0.5 * Math.sin(t * 0.21)) : u)).toFixed(1) + '%');
+      m3pGlass.style.setProperty('--sa', (105 + rx * 1.5).toFixed(1) + 'deg');
+      // what it shows
+      m3pEl.classList.toggle('low', place === 'low'); m3pEl.classList.toggle('pill', place === 'pill');
+      if (!CAPTURE && window.__ctl) { const pb = m3pEl.querySelector('[data-c="play"]'); const s = window.__ctl.playing() ? '❚❚' : '▶'; if (pb && pb.textContent !== s) pb.textContent = s; }
+      const scr = carry('m3pScreen', b, 'intro'), text = b.m3pText || (place === 'low' ? carry('m3pText', b, '') : '');
+      const key = place + '|' + scr + '|' + text + '|' + carry('m3pHi', b, -1);
+      if (key !== m3pKey) { m3pKey = key;
+        if (place === 'low') { m3pTtl.textContent = ''; m3pScr.innerHTML = `<div class="proj"><span>${text || ''}</span></div>`; }
+        else { const [ttl, html] = m3pScreen(scr, b); m3pTtl.textContent = ttl; m3pScr.innerHTML = html; } }
+      // the show's words make room: the chyron and the subtitles sit above the glass while it is docked
+      document.body.classList.toggle('m3p-dock', place === 'dock' || place === 'full');
+      const topV = r[1] * 100;
+      const ch = $('dn-chyron'), sub = $('dn-sub');
+      if (!WIDE) {   // 9:16: the label sits on the device's top edge, the same width; the words above it
+        const A = (place === 'off') ? [0.04, 0.95, 0.92] : r;
+        ch.style.left = (A[0] * 100) + 'vw'; ch.style.width = (A[2] * 100) + 'vw'; ch.style.bottom = (100 - A[1] * 100 - 0.2) + 'vh';
+        sub.style.bottom = (100 - A[1] * 100 + 8.5) + 'vh';
+      } else { ch.style.left = ''; ch.style.width = ''; ch.style.bottom = ''; sub.style.bottom = ''; }
+      try { if (typeof trackerCard !== 'undefined' && trackerCard.visible) trackerCard.visible = false; } catch (e) {}   // the M3P carries the tracker's readout
+    }
+    // ── THE TWO READINGS (2026-11-06, Sailor: "if the user wanted to click into glass mode, the entire content we are
+    //    presenting would reconfigure into an article of the show… this should apply to anything we put on Parallelogram").
+    //    One file, two readings. The show: Ted speaks it, the camera moves, the M3P floats. The article: the same beats as
+    //    copy, block titles as section heads, the M3P's screens as figures, and the globe held in the top of the frame,
+    //    going where each section points as you scroll (a scrubber under it). Scroll position is show time, both ways.
+    //    The article reads only the CONTENT fields of a beat — text (or `read`, a written override), caption, the block's
+    //    title, m3pScreen / m3pText / m3pHi, globeFocus, globeMonth — and ignores the STAGING fields (tedWalk, tedFrame,
+    //    ted, m3p placement, globeTurn). Format spec: Specs/Parallelogram_Report_Format_and_Style_v1.md §5.
+    const ART = { on: false, built: false, active: -1, lock: 0 };
+    const artCSS = document.createElement('style');
+    artCSS.textContent = `
+      #dn-art, #dn-artbar { display: none; pointer-events: auto; }
+      body.dn-article { cursor: auto; }
+      body.dn-article #dn > :not(#dn-art):not(#dn-artbar) { display: none !important; }
+      body.dn-article #dn-ctl { display: none !important; }
+      body.dn-article #dn-art { display: block; position: fixed; left: 0; right: 0; top: calc(44vh + 64px); bottom: 0; overflow-y: auto; -webkit-overflow-scrolling: touch;
+        background: #0a0e1c; color: #ece6da; font-family: Georgia, 'Times New Roman', serif; scroll-behavior: auto; }
+      body.dn-article #dn-artbar { display: flex; position: fixed; left: 0; right: 0; top: 44vh; height: 64px; align-items: center; gap: 10px; padding: 0 14px;
+        background: linear-gradient(180deg, rgba(10,14,28,.92), #0a0e1c); border-top: 1px solid rgba(255,255,255,.12); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #ece6da; }
+      #dn-artbar::before { content: ''; position: absolute; left: 0; right: 0; top: -1px; height: 2px; background: linear-gradient(90deg, #ffd6a0, #ffb0e0, #b8c8ff, #a8f0e0, #fff2b0); opacity: .7; }
+      #dn-artbar .mk { font-weight: 800; letter-spacing: .14em; font-size: 13px; background: linear-gradient(90deg, #ffd6a0, #ffb0e0, #b8c8ff, #a8f0e0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      #dn-artbar input { flex: 1; -webkit-appearance: none; appearance: none; height: 2px; background: #3a3f55; outline: none; }
+      #dn-artbar input::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 16px; border-radius: 50%; background: #d4aa52; border: 1px solid #6b5a2e; }
+      #dn-artbar input::-moz-range-thumb { width: 16px; height: 16px; border-radius: 50%; background: #d4aa52; border: 1px solid #6b5a2e; }
+      #dn-artbar button { font: 600 12px 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: .08em; color: #0a0e1c; background: #d4aa52; border: 0; border-radius: 14px; padding: 7px 12px; cursor: pointer; white-space: nowrap; }
+      #dn-artbar .when { font-size: 11px; letter-spacing: .1em; opacity: .6; font-variant-numeric: tabular-nums; min-width: 34px; }
+      #dn-art article { max-width: 680px; margin: 0 auto; padding: 22px 20px 40vh; }
+      #dn-art .kick { font: 600 11px 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: .2em; text-transform: uppercase; color: #d4aa52; }
+      #dn-art h1 { font-weight: normal; font-size: clamp(28px, 7vw, 44px); line-height: 1.08; margin: 8px 0 6px; }
+      #dn-art .dek { font-style: italic; opacity: .7; font-size: 16px; line-height: 1.45; }
+      #dn-art .by { font: 11px 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: .08em; opacity: .5; margin-top: 10px; }
+      #dn-art h2 { font: 600 12px 'Helvetica Neue', Helvetica, Arial, sans-serif; letter-spacing: .22em; text-transform: uppercase; color: #d4aa52; margin: 40px 0 6px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.08); }
+      #dn-art p.b { font-size: 19px; line-height: 1.6; margin: 0 0 14px; opacity: .5; transition: opacity .3s; }
+      #dn-art p.b.on { opacity: 1; }
+      #dn-art .strip { margin: 6px 0 18px; padding: 12px 14px; border-left: 2px solid #d4aa52; font-size: 17px; line-height: 1.45; background: rgba(255,255,255,.03); }
+      #dn-art .m3pfig { position: relative; margin: 8px 0 22px; border-radius: 10px; overflow: hidden; background: linear-gradient(160deg, rgba(14,20,40,.9), rgba(6,9,20,.95)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.1); font-size: 0; }
+      #dn-art .m3pfig::before { content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 2px; pointer-events: none; opacity: .5;
+        background: conic-gradient(from 210deg, #ffd6a0, #ffb0e0, #b8c8ff, #a8f0e0, #fff2b0, #ffd6a0); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+      #dn-art .m3pfig .scr { position: relative; padding: 14px 16px 16px; }
+      #dn-art .m3pfig { --u: 6.8px; }
+    `;
+    // the M3P's own screen styles, re-scoped to the figures (the screens are the same functions in both readings), at
+    // article sizes: vmin on the show (it scales with the frame), fixed on the page (it scales with the column)
+    artCSS.textContent += m3pCSS.textContent.split('}').filter(r => /#dn-m3p \.(k|big|mid|sm|gold|blue|grey|fire|row|svg|bar|mk|ttl|sw)\b|#dn-m3p svg/.test(r))
+      .map(r => r.replace(/#dn-m3p/g, '#dn-art .m3pfig').replace(/([\d.]+)vmin/g, (m, n) => Math.round(parseFloat(n) * 6.8) + 'px') + '}').join('\n')
+      + '\n#dn-art .m3pfig .bar { display: flex; position: relative; } ';
+    document.head.appendChild(artCSS);
+    const artEl = document.createElement('div'); artEl.id = 'dn-art';
+    const artBar = document.createElement('div'); artBar.id = 'dn-artbar';
+    artBar.innerHTML = '<span class="mk">M3P</span><span class="when">0:00</span><input type="range" min="0" max="1000" value="0"><button title="back to the show">▶ WATCH</button>';
+    (document.getElementById('dn') || document.body).appendChild(artEl); (document.getElementById('dn') || document.body).appendChild(artBar);
+    const fmtA = x => { x = Math.max(0, x); return Math.floor(x / 60) + ':' + String(Math.floor(x % 60)).padStart(2, '0'); };
+    const artBeats = beats.filter(b => b.type === 'text');
+    function artBuild() {
+      if (ART.built) return; ART.built = true;
+      let html = `<article><div class="kick">The Parallelogram Report${EP.kicker ? ' · ' + EP.kicker : ''}</div><h1>${(EP.headline || EP.title || '').replace(/^Explainer · /, '')}</h1>`
+        + (EP.dek ? `<div class="dek">${EP.dek}</div>` : '') + `<div class="by">Ted Turner · a sonnetbot of Sailor's · read with the M3P</div>`;
+      let lastBlock = null, lastFig = '', lastStrip = '';
+      artBeats.forEach((b, i) => {
+        if (b.block !== lastBlock) { lastBlock = b.block; html += `<h2>${b.block.title || ''}</h2>`; }
+        html += `<p class="b" data-i="${i}">${b.read || b.text}</p>`;
+        const place = carry('m3p', b, 'off'), scr = carry('m3pScreen', b, null);
+        if (place === 'low' && b.m3pText && b.m3pText !== lastStrip) { lastStrip = b.m3pText; html += `<div class="strip">${b.m3pText}</div>`; }
+        const fk = scr ? scr + '|' + carry('m3pHi', b, -1) : '';
+        if (place !== 'off' && place !== 'low' && scr && fk !== lastFig) { lastFig = fk;
+          const [ttl, body] = m3pScreen(scr, b); html += `<div class="m3pfig"><div class="bar"><span class="mk">M3P</span><span class="ttl">${ttl}</span><span class="sw"></span></div><div class="scr">${body}</div></div>`; }
+      });
+      artEl.innerHTML = html + '</article>';
+      // the reading line: whichever paragraph crosses a third of the way down the copy is "now"
+      artEl.addEventListener('scroll', () => { if (performance.now() < ART.lock) return; artSync(); }, { passive: true });
+      const sl = artBar.querySelector('input');
+      sl.addEventListener('input', () => { const t = DURATION * sl.value / 1000; let k = 0; artBeats.forEach((b, i) => { if (t >= b.start) k = i; });
+        ART.lock = performance.now() + 400; const p = artEl.querySelector(`p.b[data-i="${k}"]`); if (p) artEl.scrollTop = p.offsetTop - artEl.clientHeight * 0.3; artSet(k, t); });
+      artBar.querySelector('button').onclick = () => artClose();
+    }
+    function artSet(k, t) {
+      ART.active = k;
+      artEl.querySelectorAll('p.b').forEach(p => p.classList.toggle('on', +p.dataset.i === k));
+      const tt = t != null ? t : artBeats[k].start + 0.05;
+      artBar.querySelector('.when').textContent = fmtA(tt);
+      artBar.querySelector('input').value = Math.round(1000 * tt / DURATION);
+      if (window.__ctl) window.__ctl.go(tt); else seek(tt);
+    }
+    function artSync() {
+      const line = artEl.scrollTop + artEl.clientHeight * 0.33; let k = 0;
+      artEl.querySelectorAll('p.b').forEach(p => { if (p.offsetTop <= line) k = +p.dataset.i; });
+      if (k !== ART.active) artSet(k);
+    }
+    function artOpen() {
+      if (window.__ctl) window.__ctl.pause();
+      artBuild(); ART.on = true; document.body.classList.add('dn-article');
+      if (rig) tedHolder.visible = false;
+      const t = window.__ctl ? window.__ctl.now() : showT; let k = 0; artBeats.forEach((b, i) => { if (t >= b.start) k = i; });
+      requestAnimationFrame(() => { ART.lock = performance.now() + 400; const p = artEl.querySelector(`p.b[data-i="${k}"]`); if (p) artEl.scrollTop = p.offsetTop - artEl.clientHeight * 0.3; artSet(k); });
+    }
+    function artClose() { ART.on = false; document.body.classList.remove('dn-article'); if (rig) tedHolder.visible = true; if (window.__ctl) window.__ctl.go(artBeats[Math.max(0, ART.active)].start + 0.001); }
+    // the article's camera: the globe alone, in the top of the frame — on the place a section points at, or whole
+    const _ao = new THREE.Vector3();
+    function articleCamera(t) {
+      const H = (d) => 2 * d * Math.tan((camera.fov || 36) / 2 * Math.PI / 180);
+      const f = carry('globeFocus', cur, null);
+      if (f && typeof trackerLatLon === 'function') {
+        const R = (typeof TRACKER_R !== 'undefined') ? TRACKER_R : 1.15, d = (f[2] || 2.0) * (WIDE ? 1.2 : 1.7);
+        trackerGlobe.updateMatrixWorld(true); _fP.copy(trackerLatLon(f[0], f[1], R)); trackerSpin.localToWorld(_fP); trackerGlobe.getWorldPosition(_fC);
+        _fN.copy(_fP).sub(_fC).normalize(); camFrom.copy(_fP).addScaledVector(_fN, d); camFrom.y += 0.15 * d; camAt.copy(_fP); camAt.y -= 0.28 * H(d);
+      } else {
+        trackerGlobe.getWorldPosition(_fC); _ao.copy(walkPath ? walkPath.out : toDesk);
+        const d = WIDE ? 6.5 : 9.0; camFrom.copy(_fC).addScaledVector(_ao, d); camFrom.y += 0.6; camAt.copy(_fC); camAt.y -= 0.28 * H(d);
+      }
+    }
     function stillFrame(t, b) {
       const st = epv(b, 'still'); const cap = epv(b, 'stillCaption');
       if (!st) { stillEl.style.opacity = '0'; setTimeout(() => { if (stillEl.style.opacity === '0') stillEl.style.display = 'none'; }, 380); return; }
@@ -1409,7 +1901,8 @@
       const b = beatAt(t);
       const over = TL && TL.duration ? t >= TL.duration : (b && b === beats[beats.length - 1] && t >= b.end);
       $('dn-end').style.display = (over && EP.endcard) ? 'flex' : 'none';
-      $('dn-black').style.display = (!b && beats.length) ? 'block' : 'none';   // the lead: black until the first beat
+      $('dn-black').style.display = (!b && beats.length && CAPTURE) ? 'block' : 'none';   // the lead: black until the first beat (in a render only — 11-07: a live page paused at 0 sat black with nothing to press)
+      if (!b && !CAPTURE) { try { m3pFrame(t, null); } catch (e) {} }   // before the first beat: the M3P's controls still show
       if (b) {
         if (b !== cur) {
           const prevType = cur && cur.type; cur = b;
@@ -1432,7 +1925,7 @@
           if (prevType !== b.type) Object.assign(mapPose, mapWant);   // a hard cut: no easing into the new pose
         } else applyMap(t, b);
         if (b.type === 'clip' && ((b.layout || 'full') === 'full' || b.layout === 'reading')) showClip(b, t);
-        readingFrame(t); bandsFrame(b, t); zPlanesFrame(t, b); pinsFrame(t, b); measureFrame(t, b); arcFrame(t, b); splitFrame(t, b); landIsoFrame(t, b); boundaryFrame(t, b); stillFrame(t, b); quoteFrame(t, b); tableFrame(t, b); flyFrame(t, b); creditsFrame(t, b); landFrame(t, b); bigFrame(t, b); rippleFrame(rippleEvents(b), t);
+        readingFrame(t); bandsFrame(b, t); zPlanesFrame(t, b); pinsFrame(t, b); measureFrame(t, b); arcFrame(t, b); splitFrame(t, b); landIsoFrame(t, b); boundaryFrame(t, b); stillFrame(t, b); quoteFrame(t, b); tableFrame(t, b); flyFrame(t, b); m3pFrame(t, b); tedFrameLayers(t, b); creditsFrame(t, b); landFrame(t, b); bigFrame(t, b); rippleFrame(rippleEvents(b), t);
         if (b.card === 'score' && b.piece) { if ($('dn-score').dataset.p !== b.piece) { setScore(b); $('dn-score').dataset.p = b.piece; } $('dn-score').style.display = 'block'; }
         else { $('dn-score').style.display = 'none'; $('dn-score').dataset.p = ''; }
         const pb = beats[beats.indexOf(b) - 1], eb = (b.elephant && elephant) ? b : (pb && pb.elephant && elephant && t < pb.end + 12) ? pb : null;   // the walk carries past its beat
@@ -1488,6 +1981,7 @@
       const pass2 = villaMask === 2;
       if (!pass2) { tickStage(t); try { g.update && g.update(t); } catch (e) {} }
       placeCamera(showT);                                   // first: Ted's gaze reads the show's camera, not the villa's
+      if (!pass2) { try { if (typeof trackerResolveShow === 'function') { const W = walkState(showT); trackerResolveShow(W.mode === 'there' ? W.since : null, 'globe'); } } catch (e) {} }   // ex01: the picture resolves as Ted arrives at the globe
       if (!pass2) { landWordsFrame(showT, beatAt(showT));   // the words fly from in front of the lens, so after the camera
         poseTed(t); driftDesk(t); poseElephant(t); posePassersby(showT, beatAt(showT)); }
       if (pass2) {
@@ -1539,6 +2033,7 @@
       function play() { if (LIVE.playing) return; if (base >= DURATION - 0.05) base = 0; LIVE.playing = true; t0 = performance.now(); if (audio) { try { audio.currentTime = base; } catch (e) {} audio.play().catch(() => {}); } cancelAnimationFrame(raf); loop(); }
       function pause() { if (!LIVE.playing) return; base = now(); LIVE.playing = false; cancelAnimationFrame(raf); if (audio) audio.pause(); const v = $('dn-clip'); if (v && !v.paused) v.pause(); seek(base); paint(base); }
       const toggle = () => LIVE.playing ? pause() : play();
+      window.__ctl = { toggle, play, pause, go: x => go(x), now: () => now(), playing: () => LIVE.playing, skip: d => { const wasP = LIVE.playing; const x = now() + d; pause(); go(x); if (wasP) play(); } };   // the M3P's buttons (11-06)
       const jumpBeat = d => { const wasP = LIVE.playing; const t = now(); let i = beatAt2(t); if (d < 0 && t - BT[i].start > 1.0) d = 0; i = Math.max(0, Math.min(BT.length - 1, i + d)); pause(); go(BT[i].start + 0.001); if (wasP) play(); };
       const jumpBlock = d => { const wasP = LIVE.playing; const t = now(); let i = blockAt(t); if (d < 0 && t - BL[i].start > 1.5) d = 0; i = Math.max(0, Math.min(BL.length - 1, i + d)); pause(); go(BL[i].start + 0.001); if (wasP) play(); };
       $('dn-play').onclick = toggle; $('dn-prev').onclick = () => jumpBeat(-1); $('dn-next').onclick = () => jumpBeat(1); $('dn-prevb').onclick = () => jumpBlock(-1); $('dn-nextb').onclick = () => jumpBlock(1);
@@ -1554,7 +2049,7 @@
         else used = false;
         if (used) { e.preventDefault(); e.stopImmediatePropagation(); wake(); }
       }, true);
-      const q = new URLSearchParams(location.search); if (q.get('at')) { const a = q.get('at'); const b = BL.find(x => x.id === a); go(b ? b.start + 0.001 : parseFloat(a) || 0); } else go(0);
+      const q = new URLSearchParams(location.search); if (q.get('at')) { const a = q.get('at'); const b = BL.find(x => x.id === a); go(b ? b.start + 0.001 : parseFloat(a) || 0); } else go(M3P_ON && BT[0] ? BT[0].start + 0.001 : 0);   // 11-07: an M3P episode opens on its first beat, controls showing
       // inside the g4 shell: say ready, start on g4:go (the glass has crossfaded away), pause on g4:hide, Esc / ⟵ glass goes back
       if (window.parent !== window) {
         const back = () => { pause(); try { window.parent.postMessage({ type: 'dg:glass' }, '*'); } catch (e) {} };

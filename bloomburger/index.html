@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>BloomBurger · g4</title>
+<title>Parallelogram · g4</title>
 <!-- ======================================================================
      BLOOMBURGER — the terminal (2026-10-14 · Claude draft, overnight, for
      Sailor's eye). Spec: Specs/G4_OS_and_the_Two_Modes_v2.md.
@@ -462,7 +462,7 @@
     <span class="hint l">◀ back</span><span class="hint r">forward ▶</span>
     <img src="../src/img/prism3d.png" alt="" draggable="false" style="object-fit:contain">
   </div>
-  <div class="right"><span class="crumb opt" id="crumb"></span><b id="barName">BloomBurger</b><span class="opt" id="barFn">PG</span><span id="clock"></span></div>
+  <div class="right"><span class="crumb opt" id="crumb"></span><b id="barName">Parallelogram</b><span class="opt" id="barFn">PG</span><span id="clock"></span></div>
 </div>
 
 <!-- the key strip: published | collected -->
@@ -473,7 +473,7 @@
   <div class="g4-desk">
     <div class="tiles">
       <a class="g4-tile" href="../v2/"><div class="ic">◭</div><div class="n">Prism</div><div class="s">the workstation</div></a>
-      <a class="g4-tile" href="#pg"><div class="ic">🍔</div><div class="n">BloomBurger</div><div class="s">the terminal</div></a>
+      <a class="g4-tile" href="#pg"><div class="ic">🍔</div><div class="n">Parallelogram</div><div class="s">the terminal</div></a>
       <a class="g4-tile" href="#codex"><div class="ic">📖</div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
     </div>
     <div class="g4-key" style="text-align:center">g4 · three programs · hold the bar to come back here</div>
@@ -564,7 +564,7 @@
 <!-- ── SST ── -->
 <section class="view wrap g4-under-bar" id="v-sst">
   <div class="mast">
-    <h1><small>BloomBurger · the paper</small>Supply Shock Tracker</h1>
+    <h1><small>Parallelogram · the paper</small>Supply Shock Tracker</h1>
   </div>
   <div class="dek">PG01's instrument: the share of traded energy sold in dollars, always with its denominator. One determination. The globe stands on the pedestal in the DreamGetty; this is the reading on the glass.</div>
   <div id="sst"></div>
@@ -573,7 +573,7 @@
 <!-- ── WIRE ── -->
 <section class="view wrap g4-under-bar wire" id="v-wire">
   <div class="mast">
-    <h1><small>BloomBurger · the wire</small>The record</h1>
+    <h1><small>Parallelogram · the wire</small>The record</h1>
   </div>
   <div class="dek">Everything Prism collects, before reduction — registers and series with their as-of dates. The paper is made from this.</div>
   <div id="wire"></div>
@@ -582,7 +582,7 @@
 <!-- ── ROSTER ── -->
 <section class="view wrap g4-under-bar" id="v-roster">
   <div class="mast">
-    <h1><small>BloomBurger · the paper</small>The roster</h1>
+    <h1><small>Parallelogram · the paper</small>The roster</h1>
   </div>
   <div class="dek">The media Parallelogram tracks — scanned every time it publishes. A corner is an interval: three or more voices per quadrant, so a station's spread can be seen. Shows are readers, never the detector.</div>
   <div class="roster" id="roster"></div>
@@ -591,7 +591,7 @@
 <!-- ── SLOP (the daily slop: the register · the roster · the clips · the catch) ── -->
 <section class="view wrap g4-under-bar" id="v-sweep">
   <div class="mast">
-    <h1><small>BloomBurger · the wire</small>The daily slop</h1>
+    <h1><small>Parallelogram · the wire</small>The daily slop</h1>
   </div>
   <div class="dek">One scan of the day's news, every morning. First what actually formed — laws, orders, rulings, votes — read off the world's press. Then what the shows and papers we follow said about it. Then what got passed around.</div>
   <div class="sweep-days" id="sweep-days"></div>
@@ -699,9 +699,9 @@
     const codexOpen = head === 'codex';
     if (codexOpen) { openCodex(rest[0] || 'object'); return; } else closeCodex();
     if (head === 'desk') { if (EMBEDDED) { try { window.parent.postMessage({ type: 'g4:desk' }, '*'); } catch (e) {} location.hash = '#pg'; return; } state.layer = 'desk'; show('desk'); crumb('g4 · desktop'); bar('g4', ''); return; }
-    if (head === 'pub' && rest[0]) { state.layer = 'object'; state.program = 'sweep'; state.piece = rest[0]; show('pub'); bar('BloomBurger', 'SLOP'); loadPub(rest[0]); return; }
-    if (head === 'pg' && rest[0]) { state.layer = 'object'; state.program = 'pg'; state.piece = rest[0]; show('piece'); bar('BloomBurger', 'PG'); loadPiece(rest[0]); return; }
-    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('BloomBurger', head === 'sweep' ? 'SLOP' : head.toUpperCase()); crumb('BloomBurger · ' + (head === 'sweep' ? 'the daily slop' : head.toUpperCase())); if (head === 'pg') { loadMarquee(); filmMark($('#pgmark'), '../src/img/Parallelogram_logo_1.png', 2935 / 505, 'Parallelogram'); } if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); if (head === 'roster') loadRoster(); if (head === 'runs') loadRuns(rest[0]); if (head === 'report') loadReport(); if (head === 'sweep') { loadRegister(rest[0]); loadMedia(); loadClips(rest[0]); loadSweep(rest[0]); } return; }
+    if (head === 'pub' && rest[0]) { state.layer = 'object'; state.program = 'sweep'; state.piece = rest[0]; show('pub'); bar('Parallelogram', 'SLOP'); loadPub(rest[0]); return; }
+    if (head === 'pg' && rest[0]) { state.layer = 'object'; state.program = 'pg'; state.piece = rest[0]; show('piece'); bar('Parallelogram', 'PG'); loadPiece(rest[0]); return; }
+    if (PROGRAMS.includes(head)) { state.layer = 'program'; state.program = head; state.piece = null; show(head); bar('Parallelogram', head === 'sweep' ? 'SLOP' : head.toUpperCase()); crumb('Parallelogram · ' + (head === 'sweep' ? 'the daily slop' : head.toUpperCase())); if (head === 'pg') { loadMarquee(); filmMark($('#pgmark'), '../src/img/Parallelogram_logo_1.png', 2935 / 505, 'Parallelogram'); } if (head === 'sst') loadSST(); if (head === 'wire') loadWire(); if (head === 'roster') loadRoster(); if (head === 'runs') loadRuns(rest[0]); if (head === 'report') loadReport(); if (head === 'sweep') { loadRegister(rest[0]); loadMedia(); loadClips(rest[0]); loadSweep(rest[0]); } return; }
     location.hash = '#pg';
   }
   // ── REPORT: The Parallelogram Report (2026-10-26). The episode is data/show/<ep>.json + its timeline; the show plays
@@ -769,7 +769,7 @@
       const url = `../runs/${pick.id}/?y=${pick.year}`;
       if (fr.dataset.src !== url) { fr.src = url; fr.dataset.src = url; }
       $('#thOpen').href = url; $('#thTitle').textContent = `Fukuyama · ${pick.year}`;
-      th.hidden = false; list.hidden = true; crumb('BloomBurger · RUNS · Fukuyama ' + pick.year);
+      th.hidden = false; list.hidden = true; crumb('Parallelogram · RUNS · Fukuyama ' + pick.year);
     } else { th.hidden = true; list.hidden = false; if (fr.dataset.src) { fr.src = 'about:blank'; fr.dataset.src = ''; } }
   }
   function bar(n, f) { $('#barName').textContent = n; $('#barFn').textContent = f; tell(); document.querySelectorAll('.g4-keys .k').forEach(k => k.classList.toggle('on', k.dataset.k === state.program && state.layer !== 'desk')); document.documentElement.classList.toggle('desk', state.layer === 'desk'); }
@@ -1151,8 +1151,32 @@
     const H = A && A.hypotheses ? A.hypotheses.rows || [] : []; const pend = H.filter(h => /pending/.test(h.outcome || '')).length;
     frame('the bets', H.length ? `${pend}<small>/ ${H.length} open</small>` : null, H.length - pend ? (H.length - pend) + ' scored' : 'none scored yet', 'PG01', '#sst', false);
     const g = { lit: '○', flared: '✶', dark: '◌' };
+    const paint = () => {
     const html = F.map(f => `<a class="fr ${f.st}" href="${f.href}"><div class="k"><span>${f.k}</span><i>${g[f.st]}</i></div><div class="v">${f.v == null ? '—' : f.v}</div><div class="d">${f.d || ''}${f.when ? ' · ' + f.when : ''}</div></a>`).join('');
     reel.innerHTML = html + html;   // twice, so the strip loops without a seam
+    };
+    paint();
+    // (11-10) the Burns also carry the object: its body beyond energy, the ledger's latest entry, the room. Read from object.json.
+    fetch('../data/active/object.json?' + Date.now()).then(r => r.ok ? r.json() : null).then(O => {
+      if (!O) return;
+      const u = (m, v) => m.unit === '% a year' ? v.toFixed(1) + '<small>%</small>' : m.unit === '%' ? v.toFixed(2) + '<small>%</small>' : m.unit === 'pct' ? (Math.round(v * 10) / 10) + '<small>%</small>' : m.unit === 'index' ? (v >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1)) : m.unit === 'killed' ? Math.round(v) + '<small> killed</small>' : String(Math.round(v));
+      const skip = { pump: 1, barrel: 1, dollar: 1 };   // already on the strip from the SST
+      const href = '../press/object.html';
+      for (const m of O.measures || []) {
+        if (skip[m.id] || !m.series || !m.series.length) continue;
+        if (m.id === 'law') { const z = m.sinceZero || {}; frame('the law', (z.value ?? '—') + '<small> votes</small>', (z.also ?? '—') + ' laws since ' + O.topic.label + ' began', 'to ' + (m.asOf || '').slice(5), href, false); continue; }
+        const a = m.series[m.series.length - 1], b = m.series.length > 1 ? m.series[m.series.length - 2] : null;
+        const dp = m.unit === 'index' && a[1] >= 1000 ? 0 : m.unit === '%' ? 2 : 1;
+        const c = chg(a[1], b && b[1], m.unit === 'index' || m.unit === 'killed' ? '' : ' pts', dp, b ? Math.max(Math.abs(b[1]) * .03, .0001) : null);
+        frame(m.label, u(m, a[1]), c.t, a[0].slice(5), href, c.flare);
+      }
+      const L = (O.topic && O.topic.ledger) || []; const e = L[L.length - 1];
+      if (e) frame('the ledger', e[0].slice(5), e[2].length > 44 ? e[2].slice(0, 42) + '…' : e[2], O.topic.label, href, true);
+      const R = O.room && O.room.readings || []; const r = R[R.length - 1], r0 = R.length > 1 ? R[R.length - 2] : null;
+      if (r) { const c = chg(r[1], r0 && r0[1], '', 2, .1); frame('the room', (r[1] > 0 ? '+' : '−') + Math.abs(r[1]).toFixed(2), c.t + ' · Dia ' + r[3].dia, r[0].slice(5), href, c.flare); }
+      const P = O.prevalence; if (P && P.order && P.order.length) { const all = P.order.reduce((x, k) => x + P.total[k], 0); frame('the light', Math.round(100 * P.total[P.order[0]] / all) + '<small>%</small>', 'on ' + (P.labels[P.order[0]] || P.order[0]) + ' · ' + P.days.length + ' days', '', href, false); }
+      paint();
+    }).catch(() => {});
   }
 
   // ── the Parallelogram wordmark: the painted mark on a lit plane, the same way as Prism's ──
@@ -1313,7 +1337,7 @@
     const src = (MEDIA.roster.sources || []).find(s => s.id === id); if (!src) { $('#pubTitle').textContent = 'No such publication.'; return; }
     const m = pubModel(src); const esc = x => String(x == null ? '' : x).replace(/</g, '&lt;'); const st = (src.station || '').split('+')[0];
     $('#pubTitleBar').textContent = src.name; $('#pubKicker').innerHTML = `<span class="${st}c">${esc(src.station)}</span> · ${esc(src.status)}${src.role === 'baseline' ? ' · the floor' : ''} · ${esc(src.cadence || '')} · ${esc(src.route || '')}`;
-    $('#pubTitle').textContent = src.name; crumb('BloomBurger · SWEEP · ' + src.name);
+    $('#pubTitle').textContent = src.name; crumb('Parallelogram · SWEEP · ' + src.name);
     $('#pubDek').textContent = src.notes || '';
     const tileN = (l, v, s) => `<div class="tile"><div class="l">${l}</div><div class="v">${v == null ? '—' : v}</div>${s ? `<div class="s">${s}</div>` : ''}</div>`;
     $('#pubBoard').innerHTML = tileN('lumens', m.lum, m.betaOnly ? 'beta ledes only' : `${m.full.length} full read${m.full.length === 1 ? '' : 's'}`) + tileN('dia', m.dia, m.dia == null ? '' : tier(m.dia)) + tileN('z · the lead object', m.z == null ? null : zs(m.z), m.z == null ? 'has not spoken' : m.z < 0 ? 'does not deliver' : 'delivers') + tileN('cuts', m.pieces.length, m.ledes.length ? `${m.ledes.length} beta` : '') + tileN('last read', m.lastCut ? m.lastCut.slice(5) : '—', m.lastCut ? m.lastCut.slice(0, 4) : 'not yet cut') + tileN('last swept', m.lastSweep ? m.lastSweep.date.slice(5) : (src.lastScanned ? src.lastScanned.slice(5) : '—'), m.lastSweep ? `${m.lastSweep.p.items} swept · ${m.lastSweep.p.hits} hits` : (src.lastScanned ? 'scanned by hand' : ''));
@@ -1404,11 +1428,11 @@
     const h = location.hash.replace(/^#/, '') || 'pg', [head, id] = h.split('/');
     if (head === 'pg' && id) {
       const p = paperIndex.find(x => x.id === id) || {}, D = paperFull[id] || {}, sb = D.scoreboard || {};
-      Codex.setContext({ page: 'BloomBurger · a segment', terms: ['parallelogram', 'heat', 'says', 'clarity', 'sides'], context: () => `Segment: ${p.program || ''}, ${p.date || ''} — "${(D.source || {}).title || p.title || ''}". What it said: ${(PLAIN.pieces[id] || {}).said || ''}. Heat ${sb.dia}, Says ${saysWord(id, sb.readZ)}, Clarity ${sb.lumens}. Side: ${Object.keys(sb.stations || {}).filter(k => sb.stations[k]).map(stName).join(' + ')}.` });
+      Codex.setContext({ page: 'Parallelogram · a segment', terms: ['parallelogram', 'heat', 'says', 'clarity', 'sides'], context: () => `Segment: ${p.program || ''}, ${p.date || ''} — "${(D.source || {}).title || p.title || ''}". What it said: ${(PLAIN.pieces[id] || {}).said || ''}. Heat ${sb.dia}, Says ${saysWord(id, sb.readZ)}, Clarity ${sb.lumens}. Side: ${Object.keys(sb.stations || {}).filter(k => sb.stations[k]).map(stName).join(' + ')}.` });
     } else if (head === 'pg') {
-      Codex.setContext({ page: 'BloomBurger · front page', terms: ['sst', 'parallelogram', 'heat', 'says', 'clarity', 'sides'], context: () => { const T = sstData && sstData.T; return (T ? `Supply Shock Tracker: ${(T.now.dollarShare * 100).toFixed(1)}% of traded energy settled in dollars (${T.now.period}), ${T.delta < 0 ? 'down' : 'up'} ${Math.abs(T.delta * 100).toFixed(1)} points since ${T.ago.period}.` : '') + ' Latest segments: ' + paperIndex.slice(0, 5).map(p => `${p.program} (${p.date}): ${(PLAIN.pieces[p.id] || {}).said || p.title}`).join(' | '); } });
-    } else if (head === 'sst') Codex.setContext({ page: 'BloomBurger · Supply Shock Tracker', terms: ['sst'], context: () => { const T = sstData && sstData.T; return T ? `${(T.now.dollarShare * 100).toFixed(1)}% in dollars (${T.now.period}); ${(T.ago.dollarShare * 100).toFixed(1)}% in ${T.ago.period}.` : ''; } });
-    else Codex.setContext({ page: 'BloomBurger · ' + head, terms: ['parallelogram', 'clarity', 'heat', 'bloomburger'], context: '' });
+      Codex.setContext({ page: 'Parallelogram · front page', terms: ['sst', 'parallelogram', 'heat', 'says', 'clarity', 'sides'], context: () => { const T = sstData && sstData.T; return (T ? `Supply Shock Tracker: ${(T.now.dollarShare * 100).toFixed(1)}% of traded energy settled in dollars (${T.now.period}), ${T.delta < 0 ? 'down' : 'up'} ${Math.abs(T.delta * 100).toFixed(1)} points since ${T.ago.period}.` : '') + ' Latest segments: ' + paperIndex.slice(0, 5).map(p => `${p.program} (${p.date}): ${(PLAIN.pieces[p.id] || {}).said || p.title}`).join(' | '); } });
+    } else if (head === 'sst') Codex.setContext({ page: 'Parallelogram · Supply Shock Tracker', terms: ['sst'], context: () => { const T = sstData && sstData.T; return T ? `${(T.now.dollarShare * 100).toFixed(1)}% in dollars (${T.now.period}); ${(T.ago.dollarShare * 100).toFixed(1)}% in ${T.ago.period}.` : ''; } });
+    else Codex.setContext({ page: 'Parallelogram · ' + head, terms: ['parallelogram', 'clarity', 'heat', 'bloomburger'], context: '' });
   }
   addEventListener('hashchange', () => setTimeout(codexFor, 0));
 

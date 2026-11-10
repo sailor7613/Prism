@@ -95,6 +95,10 @@ def prompt(P, F, PAT):
     pat = '\n'.join(f"#{p['n']} {p['name']} [{p['mode']}; stage {p['stage']}] — {p['desc'][:220]}" for p in PAT)
     stg = '\n'.join(f"{k}: {v[2]}" for k, v in STAGES.items())
     rul = '\n'.join(f"- {r['who']}: '{r['quote']}' → object: {r['object']} · others: {r['others']} · capital: {str(r['capital']).lower()} · {r['tier']} — {r['why']}" for r in ruled(None)) or '(none yet)'
+    # 11-07: Sailor's principles (rulings that are rules, not single lines) ride along with the ruled cases
+    _pp = os.path.join(OUT, 'rulings.json')
+    _pr = json.load(open(_pp)).get('principles', []) if os.path.exists(_pp) else []
+    if _pr: rul += '\n' + '\n'.join(f"- PRINCIPLE · {x['name']}: {x['rule']} (case: {x['case']})" for x in _pr)
     fac = '\n'.join(f"[{f['id']}] {f['fact']}  ({f['source']}{'' if f['tracked'] else '; not tracked'})" for f in F) or '(no tracker facts for this object)'
     user = f"""OBJECT: {obj.get('label', P.get('title'))}
 z: +1 = {za.get('pos', 'realized for the audience')}  ·  −1 = {za.get('neg', 'frustrated for the audience')}
@@ -126,12 +130,55 @@ For every line return:
 Answer: {{"lines": [ … ]}} — valid JSON only. Inside a string never use a double quote; quote words with single quotes."""
     return sys_, user
 
-def call(sys_, user, k):
+
+def _fix_quotes(obj):
+    # 11-07: a quote inside a string ("War with Iran") breaks the JSON — escape any " that doesn't close the string
+    out = []; ins = False; n = len(obj)
+    for j, c in enumerate(obj):
+        if c == '"' and (j == 0 or obj[j-1] != '\\'):
+            if not ins: ins = True; out.append(c); continue
+            k = j + 1
+            while k < n and obj[k] in ' \t\r\n': k += 1
+            if k >= n or obj[k] in ',:}]': ins = False; out.append(c)
+            else: out.append('\\"')
+        else: out.append(c)
+    return ''.join(out)
+
+def salvage(t):
+    # 11-07: keep the objects that parse (each carries its own "i"); fix inner quotes; a cut-off answer gives a partial list
+    key = 'lines' if '"lines"' in t[:200] else ('moments' if '"moments"' in t[:200] else None)
+    if not key: return None
+    objs = []   # balanced-brace scan (objects nest: "patterns": [{...}])
+    for m0 in re.finditer(r'\{\s*"(?:i|post)"\s*:', t):   # 11-09: grammar lines start with "post", not "i"
+        j = m0.start(); depth = 0; ins = False
+        for k in range(j, len(t)):
+            c = t[k]
+            if c == '"' and t[k-1] != '\\': ins = not ins
+            elif not ins and c == '{': depth += 1
+            elif not ins and c == '}':
+                depth -= 1
+                if depth == 0: objs.append(t[j:k+1]); break
+        else: objs.append(t[j:])
+    got = []
+    for o in objs:
+        for cand in (o, _fix_quotes(o)):
+            try: got.append(json.loads(cand)); break
+            except ValueError: pass
+    return {key: got} if got else None
+
+def call(sys_, user, k, model=None):
+    # 11-07: offline mode — CF_ANSWERS names a JSON list of answers (one per call, in order); used when Claude answers in chat instead of the API
+    if os.environ.get('CF_ANSWERS'):
+        A = json.load(open(os.environ['CF_ANSWERS'])); n = int(os.environ.get('CF_ANSWERS_I', '0'))
+        if n >= len(A): raise SystemExit(f'CF_ANSWERS: no answer #{n} (have {len(A)})')
+        os.environ['CF_ANSWERS_I'] = str(n + 1); print(f'  offline answer #{n} ({os.environ["CF_ANSWERS"]})')
+        return A[n], {'model': 'claude-in-chat (offline)', 'input_tokens': 0, 'output_tokens': 0}
     # 11-04: Anthropic's reason is printed on any refusal; a setting the model won't take is dropped and the call retried,
     # and if the model name is refused the next one in CF_MODELS is tried
     import urllib.error
     ctx = ssl.create_default_context(cafile=os.environ.get('SSL_CERT_FILE')) if os.environ.get('SSL_CERT_FILE') else None
-    models = [MODEL] + [m for m in os.environ.get('CF_MODELS', 'claude-haiku-5-5,claude-sonnet-5-5').split(',') if m != MODEL]
+    M0 = model or MODEL   # 11-08: a pass can name its own model (grammar and the second pass read across lines → Sonnet; the relational test answers fixed questions → Haiku)
+    models = [M0] + [m for m in os.environ.get('CF_MODELS', 'claude-haiku-5-5,claude-sonnet-5-5').split(',') if m != M0]
     body = {'max_tokens': 8000, 'system': sys_, 'messages': [{'role': 'user', 'content': user}]}
     last = ''
     for model in models:
@@ -154,8 +201,13 @@ def call(sys_, user, k):
             try:
                 if not m: raise ValueError('no JSON')
                 return json.loads(m.group(0)), u
-            except ValueError as e:   # 11-05: a stray quote or a cut-off answer — keep the raw text, ask again
-                open(os.path.join(OUT, '_last_bad_answer.txt'), 'w').write(t); print(f'  {model}: the answer was not clean JSON ({e}) — asking again'); continue
+            except ValueError as e:   # 11-05: a stray quote or a cut-off answer — keep the raw text; 11-07: salvage what parses before asking again
+                open(os.path.join(OUT, '_last_bad_answer.txt'), 'w').write(t)
+                sv = salvage(t)
+                if sv:
+                    kk = list(sv)[0]; cut = d.get('stop_reason') == 'max_tokens' or not t.rstrip().endswith('}')
+                    print(f"  {model}: the answer was not clean JSON ({e}) — salvaged {len(sv[kk])} {kk}{' (answer cut off; stop_reason=' + str(d.get('stop_reason')) + ', output_tokens=' + str(u.get('output_tokens')) + ')' if cut else ''}"); return sv, u
+                print(f"  {model}: the answer was not clean JSON ({e}; stop_reason={d.get('stop_reason')}, output_tokens={u.get('output_tokens')}, {len(t)} chars) — asking again"); continue
     raise SystemExit(f'no model took the request: {last}')
 
 TIERS = {'fluid': (0, 33), 'coalition': (34, 66), 'denominated': (67, 100)}

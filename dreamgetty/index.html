@@ -22085,7 +22085,23 @@ const g4Screen = {
     // the room's light. Unlit and un-tonemapped, so the canvas's contrast
     // arrives at the eye exactly as drawn, and the reading-lamp dim darkens
     // the villa around a screen that holds its brightness.
-    new THREE.MeshBasicMaterial({ map: g4ScreenTex, toneMapped: false })
+    (function () {
+      const m = new THREE.MeshBasicMaterial({ map: g4ScreenTex, toneMapped: false });
+      // the resolve's sheen on the glass (2026-11-06): a soft thin-film band crosses the screen as the picture comes up
+      m.onBeforeCompile = function (shader) {
+        shader.uniforms.uIri = G4_IRI;
+        shader.fragmentShader = 'uniform float uIri;\n' + shader.fragmentShader.replace('#include <map_fragment>',
+          '#include <map_fragment>\n' +
+          'if (uIri > 0.0 && uIri < 1.0) {\n' +
+          '  float front = mix(-0.35, 1.35, uIri);\n' +
+          '  float b = exp(-pow((vUv.x * 0.85 + vUv.y * 0.3 - front) * 4.2, 2.0));\n' +
+          '  vec3 film = 0.5 + 0.5 * cos(6.28318 * (vec3(0.0, 0.33, 0.67) + vUv.y * 1.2 + vUv.x * 0.5 + uIri * 1.6));\n' +
+          '  film = mix(film, vec3(1.0), 0.4);\n' +
+          '  diffuseColor.rgb += film * b * 0.32 * (1.0 - uIri * uIri);\n' +
+          '}');
+      };
+      return m;
+    })()
   );
   screenFace.position.set(0, chinH/2, 0.002);
   screenFace.userData.isG4Screen = true;
@@ -25600,6 +25616,20 @@ function trackerBuildGlobe() {
   if (trackerRig.sphere) return;
   const geo = new THREE.SphereGeometry(TRACKER_R, 64, 48);
   const mat = new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.85, metalness: 0.05, emissive: 0x22283a, emissiveIntensity: 0.35 });
+  // the resolve's sheen (2026-11-06): a thin-film band — the Venus's palette — sweeps the face of the globe as the
+  // picture comes up to full resolution. Drawn on the globe's own surface, so whatever stands in front still covers it.
+  mat.onBeforeCompile = function (shader) {
+    shader.uniforms.uIri = TRACKER_IRI;
+    shader.fragmentShader = 'uniform float uIri;\n' + shader.fragmentShader.replace('#include <emissivemap_fragment>',
+      '#include <emissivemap_fragment>\n' +
+      'if (uIri > 0.0 && uIri < 1.0) {\n' +
+      '  float front = mix(-1.4, 1.4, uIri);\n' +
+      '  float b = exp(-pow((normal.x + normal.y * 0.35 - front) * 2.1, 2.0));\n' +
+      '  vec3 film = 0.5 + 0.5 * cos(6.28318 * (vec3(0.0, 0.33, 0.67) + normal.y * 1.3 + normal.x * 0.6 + uIri * 1.6));\n' +
+      '  film = mix(film, vec3(1.0), 0.4);\n' +
+      '  totalEmissiveRadiance += film * b * 0.55 * (1.0 - uIri * uIri);\n' +
+      '}');
+  };
   const sphere = new THREE.Mesh(geo, mat);
   sphere.userData.isTrackerGlobe = true;
   trackerSpin.add(sphere); trackerRig.sphere = sphere;
@@ -25664,8 +25694,162 @@ function trackerBuildRoutes() {
     line.computeLineDistances(); line.renderOrder = 203; line.userData.isTrackerAccrual = a.id;
     trackerSpin.add(line); R.accrualLines.push({ line: line, row: a });
   });
+  try { trackerBuildFires(); } catch (e) { console.warn('[tracker] fires', e); }
   trackerSetMonth(T.nowIndex);
 }
+// ── THE FIRES (2026-11-06, Sailor: "work this onto the actual SST globe… with animated fires for these strikes")
+// The strike ledger (data/active/strikes.json, hand-dated) and the satellites (firms.json, NASA FIRMS) drawn where they
+// happened. A reported, claimed or confirmed strike in the last three weeks BURNS — bigger when the satellites saw a
+// fire well above that plant's normal; older strikes leave a SCORCH. A satellite flag nobody has reported is an EMBER:
+// a detection, never a strike on its own (accruals stay accruals). No mark says who did it or why (PG01 §6.3.2).
+const TRACKER_FIRE_DAYS = 35, TRACKER_EMBER_DAYS = 35;
+const trackerFlameTex = (function () {
+  const c = document.createElement('canvas'); c.width = 64; c.height = 128; const x = c.getContext('2d');
+  const g = x.createRadialGradient(32, 96, 2, 32, 84, 60);
+  g.addColorStop(0, 'rgba(255,240,200,1)'); g.addColorStop(0.15, 'rgba(255,190,80,1)'); g.addColorStop(0.45, 'rgba(255,100,30,0.95)');
+  g.addColorStop(0.75, 'rgba(220,60,20,0.55)'); g.addColorStop(1, 'rgba(160,20,10,0)');
+  x.fillStyle = g; x.beginPath(); x.moveTo(32, 4);
+  x.bezierCurveTo(44, 40, 60, 62, 56, 92); x.bezierCurveTo(52, 118, 12, 118, 8, 92); x.bezierCurveTo(4, 62, 20, 40, 32, 4); x.fill();
+  return new THREE.CanvasTexture(c);
+})();
+const trackerGlowTex = (function () {
+  const c = document.createElement('canvas'); c.width = 64; c.height = 64; const x = c.getContext('2d');
+  const g = x.createRadialGradient(32, 32, 0, 32, 32, 32);
+  g.addColorStop(0, 'rgba(255,120,40,0.95)'); g.addColorStop(0.35, 'rgba(235,60,20,0.45)'); g.addColorStop(1, 'rgba(200,30,10,0)');
+  x.fillStyle = g; x.fillRect(0, 0, 64, 64); return new THREE.CanvasTexture(c);
+})();
+function trackerFireSprite(tex, color, opacity, blend) {
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, color: color || 0xffffff, transparent: true, opacity: opacity, depthTest: true, depthWrite: false,
+    blending: blend === false ? THREE.NormalBlending : THREE.AdditiveBlending }));
+  s.renderOrder = 230; return s;
+}
+function trackerBuildFires() {
+  const R = trackerRig; if (R.fires) return; R.fires = [];
+  const d = g4ActiveData || {}, F = d.firms || {}, L = (d.strikes && d.strikes.rows) || [];
+  const sites = F.sites || {}, flags = F.flags || [];
+  const seen = []; Object.values(sites).forEach(function (s) { Object.keys(s.days || {}).forEach(function (k) { seen.push(k); }); });
+  const now = seen.length ? seen.sort()[seen.length - 1] : new Date().toISOString().slice(0, 10);
+  const age = function (day) { return (Date.parse(now) - Date.parse(day)) / 864e5; };
+  const near = function (a, b) { return Math.abs(Date.parse(a) - Date.parse(b)) <= 3 * 864e5; };
+  const md = function (day) { return TRACKER_MONTHS[Number(day.slice(5, 7)) - 1].slice(0, 3) + ' ' + Number(day.slice(8, 10)); };
+  // one mark per place: strikes at the same plant share a fire and a label
+  const groups = {};
+  L.forEach(function (r) { if (r.lat == null || r.lon == null) return; const k = r.site || (r.lat.toFixed(1) + ',' + r.lon.toFixed(1)); (groups[k] = groups[k] || []).push(r); });
+  Object.values(groups).forEach(function (rows) {
+    rows.sort(function (a, b) { return a.asOf.localeCompare(b.asOf); });
+    const last = rows[rows.length - 1], a = age(last.asOf);
+    let k = 0.3;   // a strike the satellites didn't see still burns, small
+    rows.forEach(function (r) { const f = r.site && flags.find(function (x) { return x.site === r.site && near(x.date, r.asOf); });
+      if (f) k = Math.max(k, Math.min(1, Math.log10(Math.max(2, f.frp / Math.max(1, f.baseline))) / 2.4)); });
+    const surf = trackerLatLon(last.lat, last.lon, TRACKER_R * 1.003), n = surf.clone().normalize();
+    const grp = new THREE.Group(); trackerSpin.add(grp);
+    if (a <= TRACKER_FIRE_DAYS) {
+      const fade = 1 - 0.5 * Math.max(0, a) / TRACKER_FIRE_DAYS, h = (0.16 + 0.2 * k) * fade;
+      const glow = trackerFireSprite(trackerGlowTex, 0xffffff, 0.8); glow.position.copy(surf); glow.scale.set(h * 2.2, h * 2.2, 1); grp.add(glow);
+      const flame = trackerFireSprite(trackerFlameTex, 0xffffff, 0.95); flame.position.copy(surf).addScaledVector(n, h * 0.42); flame.scale.set(h * 0.55, h, 1); grp.add(flame);
+      const sparks = [];
+      for (let i = 0; i < 4; i++) { const sp = trackerFireSprite(trackerDotTex, 0xffb060, 0.9); sp.scale.set(0.022, 0.022, 1); sp.userData.t = i / 4; grp.add(sp); sparks.push(sp); }
+      const claimedOnly = rows.every(function (r) { return r.status === 'claimed'; });
+      const lab = trackerLabel(last.short + ' · ' + rows.map(function (r) { return md(r.asOf); }).join(', ') + (claimedOnly ? ' (claimed)' : ''),
+        { size: 20, color: 'rgba(255,196,130,0.95)' });
+      lab.position.copy(surf).addScaledVector(n, h * 1.35); lab.scale.multiplyScalar(0.5); grp.add(lab);
+      R.fires.push({ kind: 'flame', grp: grp, flame: flame, glow: glow, sparks: sparks, surf: surf, n: n, h: h, ph: Math.random() * 6.28, rows: rows });
+    } else {
+      const sc = trackerFireSprite(trackerGlowTex, 0x7a1e10, 0.75, false); sc.position.copy(surf); sc.scale.set(0.09, 0.09, 1); grp.add(sc);
+      R.fires.push({ kind: 'scorch', grp: grp, glow: sc, rows: rows });
+    }
+  });
+  // embers: what the satellites flagged that no row has matched yet
+  flags.forEach(function (f) {
+    if (age(f.date) > TRACKER_EMBER_DAYS) return;
+    if (L.some(function (r) { return r.site === f.site && near(f.date, r.asOf); })) return;
+    if (R.fires.some(function (x) { return (x.kind === 'ember' && x.site === f.site) || (x.kind === 'flame' && x.rows.some(function (r) { return r.site === f.site; })); })) return;
+    const s = sites[f.site]; if (!s) return;
+    const surf = trackerLatLon(s.lat, s.lon, TRACKER_R * 1.003);
+    const em = trackerFireSprite(trackerGlowTex, 0xff9a50, 0.5); em.position.copy(surf); em.scale.set(0.09, 0.09, 1); trackerSpin.add(em);
+    R.fires.push({ kind: 'ember', glow: em, site: f.site, flag: f, ph: Math.random() * 6.28 });
+  });
+}
+// ── THE RESOLVE (2026-11-06, Sailor: "have things first render in this low res, and then up res within a few moments
+// with an effect, possibly iridescent"). Come close to the tracker globe and the villa drops to the era's coarse grid,
+// then steps up in three jumps over about a second to the screen's full native resolution while the sheen sweeps the
+// globe. Step away and it settles back to the tier's own grid. Native costs frames (measured on the M1 Air: 60 → ~36
+// fps), which is why it only holds while you're close. The show sets its own resolution, so it stands down there.
+const TRACKER_IRI = { value: 0 };
+const G4_IRI = { value: 0 };   // 11-06 (Sailor: "I want to have the g4 to similarly up res"): the same sheen, on the G4's screen
+const TRACKER_RESOLVE = { on: false, since: null, t0: 0, step: -1, frac: null, who: null, show: false, showBase: null };
+const TRACKER_RESOLVE_SWEEP = 1.6;
+const TRACKER_RESOLVE_STEPS = [[0.0, 0.28], [0.35, 0.45], [0.7, 0.7], [1.05, 1.0]];   // [seconds in, fraction of native]
+// what resolves, and how close you have to be (in, out): the globe on the pedestal, and the villa's G4
+const RESOLVE_TARGETS = [
+  { who: 'globe', iri: TRACKER_IRI, near: 9.0, far: 11.0, at: function (v) { if (!trackerGlobe.visible) return null; return trackerGlobe.getWorldPosition(v); } },
+  { who: 'g4', iri: G4_IRI, near: 3.6, far: 4.6, at: function (v) { if (typeof imacPivot === 'undefined' || !imacPivot.visible) return null; return imacPivot.getWorldPosition(v); } },
+];
+const _trkResolveV = new THREE.Vector3();
+function trackerResolveRatio(frac, base) {
+  const full = base != null ? base : Math.min(window.devicePixelRatio || 1, 2);
+  const w = container.clientWidth, h = container.clientHeight;
+  renderer.setPixelRatio(full * frac); renderer.setSize(w, h, true);
+  const st = renderer.domElement.style; st.width = w + 'px'; st.height = h + 'px';
+  if (frac < 0.999) { st.setProperty('image-rendering', 'crisp-edges'); st.setProperty('image-rendering', 'pixelated'); }
+  else st.removeProperty('image-rendering');
+  TRACKER_RESOLVE.frac = frac;
+}
+function resolveStepAt(u) { let k = -1; TRACKER_RESOLVE_STEPS.forEach(function (s, i) { if (u >= s[0]) k = i; }); return k; }
+function trackerResolveTick(now) {
+  const S = TRACKER_RESOLVE;
+  if (/[?&]show=/.test(location.search)) return;   // the show drives its own (trackerResolveShow)
+  // the nearest target you're close enough to
+  let hit = null;
+  RESOLVE_TARGETS.forEach(function (T) { const p = T.at(_trkResolveV); if (!p) return; const d = camera.position.distanceTo(p);
+    if (d < ((S.on && S.who === T.who) ? T.far : T.near) && (!hit || d < hit.d)) hit = { T: T, d: d }; });
+  if (hit && (!S.on || S.who !== hit.T.who)) {
+    if (S.on && S.who !== hit.T.who) { RESOLVE_TARGETS.forEach(function (T) { T.iri.value = 0; }); }   // straight from one to the other: the sheen moves, the picture stays sharp
+    if (!S.on) { if (S.since == null) S.since = now; if (now - S.since <= 0.35) return; }   // a glance on a fly-past doesn't trigger it
+    const wasOn = S.on; S.on = true; S.who = hit.T.who; S.t0 = wasOn ? now - TRACKER_RESOLVE_STEPS[TRACKER_RESOLVE_STEPS.length - 1][0] : now; if (!wasOn) S.step = -1;
+  } else if (!hit) {
+    S.since = null;
+    if (S.on) { S.on = false; S.step = -1; S.frac = null; S.who = null; RESOLVE_TARGETS.forEach(function (T) { T.iri.value = 0; }); applyPixelGrid(); }
+  }
+  if (!S.on) return;
+  const u = now - S.t0, k = resolveStepAt(u);
+  if (k !== S.step) { S.step = k; trackerResolveRatio(TRACKER_RESOLVE_STEPS[k][1]); }
+  else if (k === TRACKER_RESOLVE_STEPS.length - 1 && Math.abs(renderer.getPixelRatio() - Math.min(window.devicePixelRatio || 1, 2)) > 0.01) trackerResolveRatio(1.0);   // a resize put the tier back
+  const T = RESOLVE_TARGETS.find(function (x) { return x.who === S.who; }); if (T) T.iri.value = Math.min(1, u / TRACKER_RESOLVE_SWEEP);
+}
+// THE SHOW'S RESOLVE (ex01): driven by show time, so seeking and the capture land on the same frame. `u` = seconds since
+// the moment it starts (Ted arriving at the globe), or null for "not resolving". The steps are fractions of the show's
+// own render resolution, which is restored at the end.
+function trackerResolveShow(u, who) {
+  const S = TRACKER_RESOLVE, T = RESOLVE_TARGETS.find(function (x) { return x.who === (who || 'globe'); });
+  if (u == null || u < 0 || u > Math.max(TRACKER_RESOLVE_SWEEP, TRACKER_RESOLVE_STEPS[TRACKER_RESOLVE_STEPS.length - 1][0]) + 0.05) {
+    if (S.show) { S.show = false; RESOLVE_TARGETS.forEach(function (x) { x.iri.value = 0; }); trackerResolveRatio(1.0, S.showBase); S.step = -1; }
+    return;
+  }
+  if (!S.show) { S.show = true; S.showBase = S.showBase || renderer.getPixelRatio(); S.step = -1; }
+  const k = resolveStepAt(u);
+  if (k !== S.step) { S.step = k; trackerResolveRatio(TRACKER_RESOLVE_STEPS[k][1], S.showBase); }
+  if (T) T.iri.value = Math.min(1, u / TRACKER_RESOLVE_SWEEP);
+}
+function trackerFiresTick(dt) {
+  const R = trackerRig; if (!R.fires) return;
+  R.fireClock = (R.fireClock || 0) + dt; const t = R.fireClock;
+  R.fires.forEach(function (f) {
+    if (f.kind === 'flame') {
+      const fl = 0.86 + 0.1 * Math.sin(t * 11 + f.ph) + 0.06 * Math.sin(t * 23.7 + f.ph * 2);
+      f.flame.scale.set(f.h * 0.55 * (0.92 + 0.1 * Math.sin(t * 9 + f.ph)), f.h * fl, 1);
+      f.flame.position.copy(f.surf).addScaledVector(f.n, f.h * fl * 0.42);
+      f.glow.material.opacity = 0.6 + 0.25 * Math.sin(t * 5.3 + f.ph);
+      f.sparks.forEach(function (sp, i) { const u = (sp.userData.t + t * 0.55 + i * 0.13) % 1;
+        sp.position.copy(f.surf).addScaledVector(f.n, f.h * (0.3 + 1.6 * u));
+        sp.position.x += 0.02 * Math.sin(t * 3 + i * 2 + f.ph);
+        sp.material.opacity = 0.9 * (1 - u); });
+    } else if (f.kind === 'ember') {
+      f.glow.material.opacity = 0.25 + 0.3 * (0.5 + 0.5 * Math.sin(t * 1.6 + f.ph));
+    }
+  });
+}
+
 function trackerSetMonth(i) {
   const T = trackerData, R = trackerRig; if (!T || !R.built) return;
   i = Math.max(0, Math.min(T.months.length - 1, i));
@@ -25725,6 +25909,7 @@ function trackerTick(dt) {
     }
   }
   trackerCardTick(dt);
+  try { trackerFiresTick(dt); } catch (e) {}
   const tmp = new THREE.Vector3();
   R.routes.forEach(function (r) {
     if (!r.dots.length) return;
@@ -29381,6 +29566,7 @@ function animate() {
   // while standing in front of all geography. Shadow maps are computed once,
   // in pass 1 — without pinning autoUpdate the second render would rebuild
   // every depth map and cost more than the effect.
+  try { if (typeof trackerResolveTick === 'function') trackerResolveTick(performance.now() / 1000); } catch (e) {}
   updateLivingPierce();
   if (livingPierce.on) {
     renderer.autoClear = false;

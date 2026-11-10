@@ -6,13 +6,6 @@ z: +1 = the culture moves — new work finds its audience outside the two camps 
 TRACKER FACTS (what the object measurably is):
 [decl:legislative] a cultural object — no bill; the episode's legislative layer is the midterm  (the piece, declared; not tracked)
 
-STAGES:
-0: Liquid — meets the object with no frame
-1: Vehicle emergence — an orientation, still falsifiable
-2: Frame consolidation — the frame filters the object, contrary evidence still reachable
-3: Substance replacement — answers its story about the object, not the object
-4: Totalization — the vehicle is the whole framework; new objects absorbed on arrival
-
 DENOMINATION PATTERNS (library):
 #1 Preemptive Denomination Foreclosure [Defensive; stage 2→3] — Classifying a position as denominated before evaluating its substance, making evaluation unnecessary.
 #2 Performative Institutional Denomination [Performative; stage 3] — Participating in institutional sabotage then voting the opposite way. The institutional actor's public position and institutional behavior directly contradict each other.
@@ -38,6 +31,16 @@ DENOMINATION PATTERNS (library):
 #22 Retroactive Democratic Nullification [Performative; stage 3→4] — Using democratic form (ballot measure) to negate democratic substance (prior ballot result). The form/substance split is the diagnostic: democratic form as vehicle for anti-democratic substance. When a ballot measure is 
 #23 Performed Insurgency Serving Institutional Interests [Performative; stage 2→3] — +Y institutional actors manufacturing populist opposition to serve institutional interests. Heritage Foundation performing grassroots resistance to comprehensive immigration reform while serving institutional enforcement
 #27 Performative Y-Crossing [Performative; stage 2] — Stated position crosses the Y-axis under identifiable political pressure, producing a formal ledger entry (vote, statement, co-sponsorship) without producing a wake in the informal ledger. Actor returns to prior Y-positi
+#28 Foreclosure Over the Reply [Defensive (denominated variant of #1); stage 3] — A position is classified as denominated before its substance is weighed, and the speaker then talks over the other side's actual reply — answering the classification instead of what was said, the answer fixed before the 
+
+RULED CASES (Sailor's own rulings — follow their reasoning):
+- Abdul El-Sayed: 'it shouldn't be this hard to pay taxes and know that that money's gonna be spent on you and your kids, instead of dropping bombs on somebody else and their kids' → object: substance · others: working · capital: false · coalition — faces the object — the tradeoff between spending here and bombs abroad — but it's a campaign line built to win the room; the line is scored, not the man's reputation
+- Olivia Reingold: 'literally just repeated the gist of the claim that got him in hot water this week' → object: signal · others: closed · capital: false · denominated — files his line under the ad before meeting it, and talks over what he actually said
+- Haley Stevens: 'we can't stand with Hasan Piker' → object: signal · others: closed · capital: true · denominated — dismisses her party's nominee by association instead of answering him, and spends her capital doing it — the bridge to her own party burned
+- Troy Jackson (hypothetical — not said): 'she had the opportunity and the power to introduce a war powers resolution herself, and she didn't — and that's why those nine votes didn't matter' → object: substance · others: working · capital: false · coalition — Sailor's grounding proof: the same conclusion as 'those votes are meaningless', grounded in a checkable mechanism of her record — she can answer it, the audience can check it — so it cools from #28 to coalition. Grounding a pre-emption in a mechanism moves it back toward #1 or out of the patterns.
+- captive dreamer: 'they had to mix in the most delegitimizing lies possible' → object: signal · others: closed · capital: false · denominated — calls the war's critics liars wholesale and talks over them; the closed form's 92 is right (Sailor)
+- captive dreamer: 'I mocked the people who were crazy and actually supported baps criticism of the war' → object: signal · others: working · capital: false · coalition — describes his own record to win the room back; it isn't an attack on anyone (Sailor: 45)
+- PRINCIPLE · reported speech: When a speaker passes on someone else's view, it depends on how he presents it. If he affirms its logic, score it as his own. If he presents it as a specimen (a barometer, an example of what others believe), score his framing of it, not the view. (case: captive dreamer 2026-11-04: his 2024 Trump friend's year of Epstein and 'Israel controlling Trump', offered as 'a good barometer')
 
 LINES:
 [
@@ -147,15 +150,14 @@ LINES:
 
 For every line return:
 {"i": n,
- "substance": true|false,            // does it engage the object's actual substance (costs, flows, votes, deaths, money spent)?
+ "substance": true|false,            // does it engage the object's actual substance? Substance is whatever THIS object is made of: for a war, costs, flows, votes, deaths; for a cultural object, the works themselves and how people take them
  "facts_touched": ["fact id", …],
  "contradicts": ["fact id", …],
- "object": "substance"|"signal",     // does it take up the object's substance, or a signal about it?
- "others": "open"|"working"|"closed",// toward the other side: states it, no need to convince | works to win them or the room over, still answering them | talks over them, its answer fixed before they speak
- "capital": true|false,              // is the speaker spending political capital to make the point — willing to burn a bridge rather than gather support?
- "stage": 0-4,
+ "object": "substance"|"signal",     // does it take up the object's substance (as defined above), or a signal about it (who said it, which side, the controversy)?
+ "others": "open"|"working"|"closed",// toward the other side and the audience. open: states a belief, no instinct to convince or qualify. working: built to persuade or rally — a campaign or rally line, an applause line, an argument aimed at winning a room or an opponent over, still answering them. closed: talks over them, its answer fixed before they speak (pre-empts or dismisses their response). Most political speech to a crowd is working.
+ "capital": true|false,              // is THE SPEAKER spending their own political capital in this statement — burning a bridge of their own rather than gathering support? (describing someone else's defiance is not the speaker's capital)
  "patterns": [{"n": number, "phrase": "the words that show it"}],   // only patterns plainly present; [] is a fine answer
  "facing": "object"|"argument",      // toward the thing, or toward the argument about the thing
- "place": "low"|"mid"|"high",        // where in its stage
+ "place": "low"|"mid"|"high",        // where in its band
  "why": "one plain sentence"}
-Answer: {"lines": [ … ]}
+Answer: {"lines": [ … ]} — valid JSON only. Inside a string never use a double quote; quote words with single quotes.

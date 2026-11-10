@@ -250,7 +250,9 @@ function bundle() {
   const hypotheses = readJSON(path.join(OUT, 'hypotheses.json'), { rows: [] });
   const statements = readJSON(path.join(OUT, 'statements.json'), { rows: [] });
   const bilateral = readJSON(path.join(OUT, 'bilateral.json'), { edges: [] });
-  const recent = readJSON(path.join(OUT, 'recent.json'), null);   // scripts/active-recent.js (2026-11-06): the weekly + Census edge
+  const recent = readJSON(path.join(OUT, 'recent.json'), null);
+  const firms = readJSON(path.join(OUT, 'firms.json'), null);
+  const strikes = readJSON(path.join(OUT, 'strikes.json'), { rows: [] });   // the strike ledger (hand-dated, 2026-11-06)   // scripts/active-firms.js (2026-11-06): refineries seen from orbit   // scripts/active-recent.js (2026-11-06): the weekly + Census edge
   const out = {
     arc: 'PG01', section: '§6 the active layer (ruled 2026-10-02)',
     frame: { x: ['left', 'right'], y: ['grassroots', 'institutional'], z: ['frustrated', 'realized'],
@@ -259,7 +261,7 @@ function bundle() {
     builtAt: new Date().toISOString(),
     errors,
     realization, bilateral, accruals, events, hypotheses, statements, detection, price,
-    recent,
+    recent, firms, strikes,
   };
   writeJSON(path.join(OUT, 'active.json'), out);
 }

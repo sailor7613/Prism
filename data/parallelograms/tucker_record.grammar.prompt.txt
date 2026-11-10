@@ -1,0 +1,66 @@
+You annotate the grammar of political talk for Prism, a closed-form instrument. You split statements into lines and say what each line is about. You never score how heated a line is. Judge the words, never the speaker's reputation. Reply with JSON only.
+
+OBJECT (what the lines are read against): PG01 — the Iran war (war start 2026-02-28). Object state by date: no war → Israel strikes Iran 2025-06-13 → US strikes Fordow/Natanz/Isfahan 2025-06-22 → the war 2026-02-28 → the midterms 2026-11-03
+z: +1 = the object realized for the audience (American citizens and voters) · -1 = it frustrated them
+
+TRACKERS (each a dated series of readings of the object — a line is read against the one it talks about, as of its own date):
+- war (the war itself): the object's own state by date — a step line of facts, not a measurement. Rule: what the object had done to the no-war promise on that day: no war +0.5 · Israel strikes Iran without the US 0 · US strikes Iran -0.5 · the war -1; sigma 0.
+- pump (the pump): SST — EIA US regular gasoline, retail, weekly (price.json). Rule: every +10% at the pump since the war began = -0.2 z; capped at ±1.
+- vote (the vote): exit polls on "was the war the right decision". Rule: z = -(wrong - right) ÷ 100.
+- dollar (the dollar): SST — the needle: the dollar's share of the five-station panel's named barrel, monthly (tracker-core.js on active.json + settlement.json). Rule: every -3 points of dollar share since the war began = -0.2 z; capped at ±1; a month is dated to its last day.
+- shadow: not a tracker. A line about WHO IS TO BLAME for a reading, or about a speaker's own record or loyalties, rather than the reading itself. No instrument measures it.
+
+POSTS (in order):
+[
+ {
+  "n": 0,
+  "who": "TuckerCarlson",
+  "date": "2024-11-20",
+  "text": "The prayers of good people got Donald Trump elected two weeks ago. Wars with Russia and Iran are the counterattack."
+ },
+ {
+  "n": 1,
+  "who": "TuckerCarlson",
+  "date": "2025-06-05",
+  "text": "Mark Levin was at the White House today, lobbying for war with Iran. To be clear, Levin has no plans to fight in this or any other war. He's demanding that American troops do it. We need to stop Iran from building nuclear weapons, he and likeminded ideologues in Washington are now arguing. They're just weeks away.\n\nIf this sounds familiar, it's because the same people have been making the same claim since at least the 1990s. It's a lie. In fact, there is zero credible intelligence that suggests Iran is anywhere near building a bomb, or has plans to. None. Anyone who claims otherwise is ignorant or dishonest. If the US government knew Iran was weeks from possessing a nuclear weapon, we'd be at war already.\n\nIran knows this, which is why they aren't building one. Iran also knows it's unwise to give up its weapons program entirely. Muammar Gaddafi tried that and wound up sodomized with a bayonet. As soon as Gaddafi disarmed, NATO killed him. Iran's leaders saw that happen. They learned the obvious lesson.\n\nSo why is Mark Levin once again hyperventilating about weapons of mass destruction? To distract you from the real goal, which is regime change — young Americans heading back to the Middle East to topple yet another government. Virtually no one will say this out loud. America's record of overthrowing foreign leaders is so embarrassingly counterproductive that regime change has become a synonym for disaster. Officially, no one supports it. So instead of telling the truth about their motives, they manufacture hysteria: \"A country like Iran can never have the bomb! They'll nuke Los Angeles! We have to act now!\"\n\nThey don't really mean this, and you can tell they don't by what they omit. At least two of Iran's neighbors — both Islamic nations — already have nuclear weapons. That fact should scare the hell out of Mark Levin. Yet for some reason he never mentions it. How come? Because it's not the weapons he hates. It's the ideology of the Iranian government, which is why he's lobbying to overthrow it.\n\nIt goes without saying that there are very few Trump voters who'd support a regime change war in Iran. Donald Trump has argued loudly against reckless lunacy like this. Trump ran for president as a peace candidate. That's what made him different from conventional Republicans. It's why he won. A war with Iran would amount to a profound betrayal of his supporters. It would end his presidency. That may explain why so many of Trump's enemies are advocating for it.\n\nAnd then there's the question of the war itself. Iran may not have nukes, but it has a fearsome arsenal of ballistic missiles, many of which are aimed at US military installations in the Gulf, as well as at our allies and at critical energy infrastructure. The first week of a war with Iran could easily kill thousands of Americans. It could also collapse our economy, as surging oil prices trigger unmanageable inflation. Consider the effects of $30 gasoline.\n\nBut the second week of the war could be even worse. Iran isn't Iraq or Libya, or even North Korea. While it's often described as a rogue state, Iran has powerful allies. It's now part of a global bloc called BRICS, which represents the majority of the world's landmass, population, economy and military power. Iran has extensive military ties with Russia. It sells the overwhelming majority of its oil exports to China. Iran isn't alone. An attack on Iran could very easily become a world war. We'd lose.\n\nNone of these are far fetched predictions. Most of them comport with the Pentagon's own estimates: many Americans would die during a war with Iran. People like Mark Levin don't seem to care about this. It's not relevant to them. Instead they insist that Iran give up all uranium enrichment, regardless of its purpose. They know perfectly well that Iran will never accept that demand. They'll fight first. And of course that's the whole point of pushing for it: to box the Trump administration into a regime change war in Iran.\n\nThe one thing that people like Mark Levin don't want is a peaceful solution to the problem of Iran, despite the obvious benefits to the United States. They denounce anyone who advocates for a deal as a traitor and a bigot. They tell us with a straight face that Long Island native Steve Witkoff is a secret tool of Islamic monarchies. They'll say or do whatever it takes. They have no limits. These are scary people. Pray that Donald Trump ignores them."
+ },
+ {
+  "n": 2,
+  "who": "TuckerCarlson",
+  "date": "2025-06-13",
+  "text": "The real divide isn't between people who support Israel and people who support Iran or the Palestinians. The real divide is between those who casually encourage violence, and those who seek to prevent it — between warmongers and peacemakers. Who are the warmongers? They would include anyone who's calling Donald Trump today to demand air strikes and other direct US military involvement in a war with Iran. On that list: Sean Hannity, Mark Levin, Rupert Murdoch, Ike Perlmutter and Miriam Adelson. At some point they will all have to answer for this, but you should know their names now."
+ },
+ {
+  "n": 3,
+  "who": "TuckerCarlson",
+  "date": "2025-06-16",
+  "text": "Former Trump chief strategist Steve Bannon on how the president's enemies are working to destroy MAGA with the war on Iran."
+ },
+ {
+  "n": 4,
+  "who": "TuckerCarlson",
+  "date": "2025-06-18",
+  "text": "Senator Ted Cruz demands regime change in Iran. He's not interested in the details."
+ },
+ {
+  "n": 5,
+  "who": "TuckerCarlson",
+  "date": "2025-06-24",
+  "text": "Thank God."
+ }
+]
+
+Split every post into lines: one statement, one speaker, one thing it says. A short post is often one line; a long one may be two to four.
+For every line return:
+{"post": n, "quote": "the fewest of the post's own words that still carry the line (copy them; no paraphrase)",
+ "subject": "who is speaking or being spoken for",
+ "about": "object"|"shadow",
+ "touch": "O"|"T"|"M"|"F"|"X",   // O the object itself · T a dated record (a fact, a vote, a past statement) · M a mechanism (how one thing caused another) · F a frame (a story told about it) · X a challenge (counter-evidence)
+ "tracker": "war"|"pump"|"vote"|"dollar"|"shadow",   // war = the fact of the war itself (will it happen, is it happening, boots or no boots)
+ "due": "YYYY-MM-DD" or null,   // ONLY if the line forecasts: the date by which it says the object will have moved — a date it names, or the plain reading of its own words from the post's date ("within a week", "by the midterms", "this summer"). A line about the present or the past: null
+ "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // what THIS line believes happened, on the object's z
+ "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
+ "credulity": "engaged"|"withdrawn"|"none",   // does the speaker accept (engaged) or refuse (withdrawn) a reading they would otherwise be expected to hold? most lines: none
+ "station": "LI"|"RI"|"LP"|"RP",   // only a proposal: Left/Right x Institutional/Populist (outsider); the writer's label wins
+ "why": "one plain sentence"}
+Answer: {"lines": [ ... ]} — valid JSON only. Inside a string never use a double quote; quote words with single quotes.

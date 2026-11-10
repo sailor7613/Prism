@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prism · The Object</title>
+<!-- The Object (11-09, late): the political economy as Prism holds it — more than the war.
+     1 THE BODY, standing: each measure in its own units over its whole history; no topic in it.
+     2 THE LIGHT, where it falls: each day's sweep counted by topic.
+     3 THE TOPIC NOW: the war laid over the body — its ledger, the body read as change since its zero, what the law did
+       about it, its question to the voters, its room (the daily average of the light on it).
+     Reads data/active/object.json; nothing is computed here but pixels.
+     In the M3P: route #object (g4/index.html). Standalone: open this file from Serve the Workspace. -->
+<style>
+  :root { --paper:#0c0b09; --paper-2:#14120e; --ink:#e8e2d6; --dim:#8a8375; --ghost:#55503f; --gold:#d4a94e; --ember:#c9664a; --LP:#8fcf9f; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { height:100%; }
+  body { background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; line-height:1.45; overflow:auto; }
+  header { padding:18px 22px 10px; border-bottom:1px solid #1e1b15; }
+  .kicker { font-size:11px; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+  h1 { font-size:clamp(20px,2.6vw,30px); font-weight:normal; margin:4px 0 6px; }
+  .lede { font-size:13px; color:var(--dim); max-width:76ch; } .lede b { color:var(--ink); font-weight:normal; }
+  main { padding:12px 22px 40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(380px, 1fr)); gap:16px 22px; }
+  .sect { grid-column:1/-1; margin-top:10px; display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; border-bottom:1px solid #1e1b15; padding-bottom:4px; }
+  .sect b { font-weight:normal; font-size:15px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); } .sect span { font-size:12.5px; color:var(--dim); }
+  .card { background:var(--paper-2); border:1px solid #1e1b15; border-radius:8px; padding:12px 14px 10px; min-width:0; }
+  .card.wide { grid-column:1/-1; }
+  .head { display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .name { font-size:17px; } .name small { color:var(--dim); font-size:12px; margin-left:8px; letter-spacing:.06em; text-transform:uppercase; }
+  .now { font-size:22px; } .now.pos { color:var(--LP); } .now.neg { color:var(--ember); } .now.none { color:var(--ghost); font-size:14px; } .now small { font-size:11px; color:var(--dim); }
+  .rule { font-size:11.5px; color:var(--dim); margin:4px 0 8px; } .rule i { color:var(--ghost); }
+  svg { width:100%; height:170px; display:block; }
+  .axis { stroke:#2a261d; stroke-width:1; } .zero { stroke:#3a3528; stroke-dasharray:3 3; }
+  .tick { fill:var(--ghost); font-size:9.5px; font-family:Georgia,serif; }
+  .series { fill:none; stroke-width:1.6; stroke-linejoin:round; stroke-linecap:round; }
+  .band { fill:var(--gold); opacity:.08; } .step { fill:none; stroke:var(--ink); stroke-width:1.6; }
+  .ledger { fill:var(--ink); font-size:9.5px; font-family:Georgia,serif; } .warline { stroke:var(--ghost); stroke-dasharray:2 3; }
+  .legend { display:flex; gap:6px 14px; font-size:11.5px; color:var(--dim); margin-top:6px; flex-wrap:wrap; }
+  .legend i { display:inline-block; width:10px; height:10px; vertical-align:-1px; margin-right:5px; border-radius:2px; } .legend i.ln { height:2px; vertical-align:middle; border-radius:0; }
+  .legend b { color:var(--ink); font-weight:normal; }
+  .note { font-size:11.5px; color:var(--ghost); margin-top:6px; }
+  .missing { grid-column:1/-1; font-size:12px; color:var(--dim); } .missing b { color:var(--ink); font-weight:normal; }
+  footer { padding:6px 22px 24px; font-size:11px; color:var(--ghost); letter-spacing:.06em; text-transform:uppercase; }
+  @media (max-width:520px) { main { grid-template-columns:1fr; padding:10px 14px 30px; } header { padding:14px 14px 8px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Prism · the object</div>
+  <h1 id="title">The Object</h1>
+  <div class="lede">One object. Its <b>body</b> is what is measured; its <b>light</b> is what is said. A <b>topic</b> is where the object is being felt now — a zero date, a ledger of what happened, and a slice of the light, laid over the body. Only the light goes through the prism. The body reaches the graphmap as height, and judges the light — never the reverse.</div>
+</header>
+<main id="main"></main>
+<footer id="foot"></footer>
+<script>
+(async () => {
+  const T = await fetch('../data/active/object.json?' + Date.now()).then(r => r.json());
+  const main = document.getElementById('main'), add = h => main.insertAdjacentHTML('beforeend', h);
+  const day = s => new Date(s + 'T00:00:00Z').getTime(), fmt = s => s.slice(5).replace('-', '·');
+  const zs = z => z == null ? '—' : (z > 0 ? '+' : '') + z.toFixed(2);
+  const COL = { war:'#e8e2d6', barrel:'#c9a06a', pump:'#d4a94e', dollar:'#7fa3c0', vote:'#b9a7d8', law:'#9fc7a8', room:'#8a8375', prices:'#d98f6a', groceries:'#d9a86a', wages:'#9fc7a8', jobs:'#a9a9d6', mortgage:'#c98fb0', market:'#8fb0e0', tenyear:'#7fa3c0', mood:'#d6c98a', lives:'#c9664a', approval:'#b9a7d8', direction:'#c7b8e6' };
+  const ST = { LI:'#e48a8a', RI:'#8fb0e0', LP:'#8fcf9f', RP:'#e8b56c' };
+  const W = 600, H = 170, L = 40, R = 10, TOP = 12, BOT = 22;
+  const ZERO = T.topic.zero, TL = T.topic.label;
+  document.getElementById('title').textContent = 'The Object — ' + T.object;
+  document.getElementById('foot').textContent = 'built ' + T.built + ' · every rule is a draft for Sailor';
+  const svg = inner => `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">${inner}</svg>`;
+
+  // ── 1 · THE BODY, standing: own units, whole history, no topic in it ──
+  add(`<div class="sect"><b>The body</b><span>what is measured — each in its own units, over its whole history. No topic in it.</span></div>`);
+  const unit = (m, v) => m.unit === '$/gal' ? '$' + v.toFixed(2) : m.unit === '$/bbl' ? '$' + Math.round(v) : m.unit === 'a month' || m.unit === 'killed' ? String(Math.round(v)) : m.unit === '% a year' ? v.toFixed(1) + '%' : m.unit === '%' ? v.toFixed(2) + '%' : m.unit === 'pct' ? (Math.round(v * 10) / 10) + '%' : m.unit === 'index' ? (v >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1)) : (v * 100).toFixed(1) + '%';
+  for (const m of T.measures) {
+    const s = m.series; if (!s.length) continue;
+    const x0 = day(s[0][0]), x1 = day(s[s.length - 1][0]); const s2 = m.also ? m.also.series : []; let lo = Math.min(...s.concat(s2).map(p => p[1])), hi = Math.max(...s.concat(s2).map(p => p[1])); const pad = (hi - lo) * 0.12 || 1; lo = m.unit === 'a month' || m.unit === 'killed' ? 0 : lo - pad; hi += pad;
+    const X = d => L + (day(d) - x0) / Math.max(1, x1 - x0) * (W - L - R), Y = v => TOP + (hi - v) / (hi - lo) * (H - TOP - BOT);
+    let g = '';
+    for (let i = 0; i <= 3; i++) { const v = lo + (hi - lo) * i / 3; g += `<line class="axis" x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}"/><text class="tick" x="${L - 4}" y="${Y(v) + 3}" text-anchor="end">${unit(m, v)}</text>`; }
+    if (day(ZERO) >= x0 && day(ZERO) <= x1) g += `<line class="axis warline" x1="${X(ZERO)}" x2="${X(ZERO)}" y1="${TOP}" y2="${H - BOT}"/><text class="tick" x="${X(ZERO) + 3}" y="${TOP + 8}">${TL} ${fmt(ZERO)}</text>`;
+    g += `<text class="tick" x="${L}" y="${H - 4}">${s[0][0]}</text><text class="tick" x="${W - R}" y="${H - 4}" text-anchor="end">${s[s.length - 1][0]}</text>`;
+    if (s2.length) g += `<polyline class="series" points="${s2.map(p => `${X(p[0])},${Y(p[1])}`).join(' ')}" stroke="var(--ink)" stroke-width="1.1" opacity=".6"/>`;
+    const pts = m.steps ? s.map((p, i) => (i ? `${X(p[0])},${Y(s[i - 1][1])} ` : '') + `${X(p[0])},${Y(p[1])}`) : s.map(p => `${X(p[0])},${Y(p[1])}`);   // a count holds until the next death: steps
+    g += `<polyline class="series" points="${pts.join(' ')}" stroke="${COL[m.id] || 'var(--gold)'}"/>`;
+    s.forEach(p => g += `<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="${s.length > 30 ? 1.3 : 2.4}" fill="${COL[m.id] || 'var(--gold)'}"><title>${p[0]} · ${unit(m, p[1])}</title></circle>`);
+    const last = s[s.length - 1], sz = m.sinceZero || {};
+    add(`<section class="card"><div class="head"><div class="name">${m.label}<small>${m.unit === 'share' ? 'share of the barrel' : m.unit === '% a year' ? 'change on a year before' : m.unit === 'pct' ? (m.id === 'approval' ? '% who approve' : '% satisfied') : m.unit} · ${m.pace}</small></div>
+      <div class="now">${sz.also != null ? `${sz.value} <small>${sz.unit} · </small>${sz.also} <small>${sz.alsoUnit} since ${TL} began</small>` : `${unit(m, last[1])} <small>${last[0]}${sz.value != null ? ' · ' + (sz.value > 0 ? '+' : '') + sz.value + (sz.unit === '%' ? '%' : ' points') + ' since ' + TL + ' began' : ''}</small>`}</div></div>
+      <div class="rule">${m.source}</div>${svg(g)}
+      ${m.also ? `<div class="legend"><span><i class="ln" style="background:${COL[m.id]}"></i>${m.seriesLabel || m.label}, a month</span><span><i class="ln" style="background:var(--ink);opacity:.6"></i>${m.also.label}, a month</span></div>` : ''}
+      ${m.events ? `<div class="note">${m.events.map(e => `${e.date.slice(5)} — ${e.what}`).join(' · ')}</div>` : ''}
+      ${m.notOnFile ? `<div class="note">${m.status || ''}. Not on file: ${m.notOnFile.join(' · ')}.</div>` : ''}</section>`);
+    if (m.fell && m.fell.rows.length) {   // where the law fell: recorded votes and laws by policy area, as horizontal bars
+      const F = m.fell, rows = F.rows.slice(0, 10), mx = Math.max(...rows.map(r => r[1] + r[2])), RH = 19, LW = 210, HH = rows.length * RH + 8; let b = '';
+      rows.forEach((r, i) => { const y = 4 + i * RH, w1 = (W - LW - 60) * r[1] / mx, w2 = (W - LW - 60) * r[2] / mx;
+        b += `<text class="tick" x="${LW - 6}" y="${y + 11}" text-anchor="end" style="font-size:10.5px;fill:var(--dim)">${r[0]}</text>` +
+             `<rect x="${LW}" y="${y + 2}" width="${Math.max(0, w1 - 1)}" height="${RH - 7}" fill="${COL.law}"><title>${r[0]} · ${r[1]} recorded votes</title></rect>` +
+             `<rect x="${LW + w1 + 1}" y="${y + 2}" width="${Math.max(0, w2 - 1)}" height="${RH - 7}" fill="var(--ink)" opacity=".7"><title>${r[0]} · ${r[2]} laws enacted</title></rect>` +
+             `<text class="tick" x="${LW + w1 + w2 + 6}" y="${y + 11}" style="font-size:10.5px;fill:var(--ink)">${r[1]} · ${r[2]}</text>`; });
+      add(`<section class="card"><div class="head"><div class="name">where the law fell<small>${F.from} → ${F.to}</small></div>
+        <div class="now"><small>most of it on</small> ${rows[0][0]}</div></div>
+        <div class="rule">${F.votes} recorded votes and ${F.laws} laws, by the policy area of the bill</div>
+        <svg viewBox="0 0 ${W} ${HH}" preserveAspectRatio="xMinYMin meet" style="height:${HH * 1.05}px">${b}</svg>
+        <div class="legend"><span><i style="background:${COL.law}"></i>recorded votes</span><span><i style="background:var(--ink);opacity:.7"></i>laws enacted</span></div></section>`);
+    }
+  }
+  if (T.notYetMeasured && T.notYetMeasured.length) add(`<div class="missing">Not yet measured: <b>${T.notYetMeasured.join('</b> · <b>')}</b>.</div>`);
+
+  // ── 2 · THE LIGHT, where it falls: each day's sweep counted by topic ──
+  const P = T.prevalence;
+  if (P && P.days.length) {
+    add(`<div class="sect"><b>The light</b><span>what is said — where it fell, day by day. Each bar is one day's sweep, split by the topic its items matched.</span></div>`);
+    const TC = ['#b9a7d8', '#c9664a', '#c9a06a', '#8fcf9f', '#7fa3c0', '#e48a8a'], top = P.order.slice(0, 6), rest = P.order.slice(6);
+    const n = P.days.length, bw = (W - L - R) / n, Hh = 190; let g = '';
+    const tot = i => P.order.reduce((a, k) => a + (P.counts[k][i] || 0), 0); const max = Math.max(...P.days.map((_, i) => tot(i)));
+    const Yc = v => TOP + (1 - v / max) * (Hh - TOP - BOT);
+    for (let i = 0; i <= 2; i++) { const v = Math.round(max * i / 2); g += `<line class="axis" x1="${L}" x2="${W - R}" y1="${Yc(v)}" y2="${Yc(v)}"/><text class="tick" x="${L - 4}" y="${Yc(v) + 3}" text-anchor="end">${v}</text>`; }
+    P.days.forEach((d, i) => {
+      let acc = 0; const x = L + i * bw + 1.5;
+      [...top, 'other'].forEach((k, j) => { const c = k === 'other' ? rest.reduce((a, r) => a + (P.counts[r][i] || 0), 0) : (P.counts[k][i] || 0); if (!c) return;
+        const y1 = Yc(acc + c), y0 = Yc(acc); acc += c;
+        g += `<rect x="${x}" y="${y1}" width="${bw - 3}" height="${Math.max(0, y0 - y1 - 1)}" fill="${k === 'other' ? '#55503f' : TC[j]}"><title>${d} · ${k === 'other' ? 'other topics' : (P.labels[k] || k)} · ${c} items</title></rect>`; });
+      if (i === 0 || i === n - 1 || d.slice(8) === '03' || d.slice(8) === '01') g += `<text class="tick" x="${x + (bw - 3) / 2}" y="${Hh - 4}" text-anchor="middle">${fmt(d)}</text>`;
+    });
+    const all = P.order.reduce((a, k) => a + P.total[k], 0);
+    add(`<section class="card wide"><div class="head"><div class="name">where the light fell<small>${P.days.length} days · ${P.days[0]} → ${P.days[n - 1]}</small></div>
+      <div class="now"><small>most of it on</small> ${P.labels[P.order[0]] || P.order[0]} <small>${Math.round(100 * P.total[P.order[0]] / all)}% of the tagged light · ${P.labels.iran || 'iran'} ${Math.round(100 * (P.total.iran || 0) / all)}%</small></div></div>
+      <div class="rule">items a day, by topic</div><svg viewBox="0 0 ${W} ${Hh}" preserveAspectRatio="none" style="height:200px">${g}</svg>
+      <div class="legend">${top.map((k, j) => `<span><i style="background:${TC[j]}"></i>${P.labels[k] || k} <b>${P.total[k]}</b></span>`).join('')}${rest.length ? `<span><i style="background:#55503f"></i>other topics <b>${rest.reduce((a, r) => a + P.total[r], 0)}</b></span>` : ''}</div>
+      <div class="note">${P.what}. Only the war's slice has been read through the prism so far (the room, below).</div></section>`);
+  }
+
+  // ── 3 · THE TOPIC NOW: the war laid over the body ──
+  add(`<div class="sect"><b>The topic now — ${T.topic.id}, ${TL}</b><span>zero ${ZERO}. Its ledger, the body read as change since its zero (+1 delivered · −1 frustrated), what the law did about it, its question to the voters, and its room — the daily average of what was said.</span></div>`);
+  const VIEW = T.body.concat(T.room ? [T.room] : []);
+  const all = T.body.flatMap(t => t.readings.map(r => r[0])).sort(); const t0 = day(all[0]), t1 = day(all[all.length - 1]);
+  for (const t of VIEW) {
+    const rs = t.readings || [], last = rs[rs.length - 1]; let xa = all[0], xb = all[all.length - 1], x0 = t0, x1 = t1;
+    if (t.kind === 'discourse' && rs.length > 1) { xa = rs[0][0]; xb = rs[rs.length - 1][0]; x0 = day(xa); x1 = day(xb); }
+    const X = d => L + (day(d) - x0) / Math.max(1, x1 - x0) * (W - L - R), Y = z => TOP + (1 - z) / 2 * (H - TOP - BOT);
+    let g = '';
+    for (const z of [1, 0.5, 0, -0.5, -1]) g += `<line class="axis ${z === 0 ? 'zero' : ''}" x1="${L}" x2="${W - R}" y1="${Y(z)}" y2="${Y(z)}"/><text class="tick" x="${L - 4}" y="${Y(z) + 3}" text-anchor="end">${z > 0 ? '+' : ''}${z}</text>`;
+    if (day(ZERO) >= x0 && day(ZERO) <= x1) g += `<line class="axis warline" x1="${X(ZERO)}" x2="${X(ZERO)}" y1="${TOP}" y2="${H - BOT}"/><text class="tick" x="${X(ZERO) + 3}" y="${H - BOT + 12}">zero ${fmt(ZERO)}</text>`;
+    g += `<text class="tick" x="${L}" y="${H - 4}">${xa}</text><text class="tick" x="${W - R}" y="${H - 4}" text-anchor="end">${xb}</text>`;
+    if (rs.length) {
+      if (t.kind === 'state') {
+        let d = ''; rs.forEach((r, i) => { const x = X(r[0]), y = Y(r[1]); d += (i ? ` H${x} V${y}` : `M${x} ${y}`); g += `<circle cx="${x}" cy="${y}" r="2.6" fill="var(--ink)"/><text class="ledger" x="${x + 4}" y="${y - 5}">${r[3]}</text>`; });
+        g += `<path class="step" d="${d} H${W - R}"/>`;
+        if (t.id === 'war') (T.topic.ledger || []).forEach(e => { if (!rs.some(r => r[0] === e[0])) g += `<line class="axis" x1="${X(e[0])}" x2="${X(e[0])}" y1="${TOP}" y2="${H - BOT}"/><text class="ledger" x="${X(e[0]) + 3}" y="${TOP + 10}" fill="var(--dim)">${e[2]}</text>`; });
+      } else {
+        g += `<polygon class="band" points="${rs.map(r => `${X(r[0])},${Y(r[1] + r[2])}`).concat(rs.slice().reverse().map(r => `${X(r[0])},${Y(r[1] - r[2])}`)).join(' ')}"/>`;
+        if (t.kind === 'discourse') for (const st of ['LI', 'RI', 'LP', 'RP']) { const pts = rs.filter(r => r[3] && r[3].perStation && r[3].perStation[st] != null).map(r => `${X(r[0])},${Y(r[3].perStation[st])}`); if (pts.length > 1) g += `<polyline class="series" points="${pts.join(' ')}" stroke="${ST[st]}" stroke-width="1" opacity=".55"/>`; }
+        const c = t.kind === 'discourse' ? 'var(--ink)' : (COL[t.id] || 'var(--gold)');
+        g += `<polyline class="series" points="${rs.map(r => `${X(r[0])},${Y(r[1])}`).join(' ')}" stroke="${c}"/>`;
+        rs.forEach(r => g += `<circle cx="${X(r[0])}" cy="${Y(r[1])}" r="${rs.length > 20 ? 1.4 : 2.4}" fill="${c}"><title>${r[0]} · z ${zs(r[1])} ± ${r[2]}</title></circle>`);
+      }
+    }
+    const cls = !last ? 'none' : last[1] > 0.02 ? 'pos' : last[1] < -0.02 ? 'neg' : '';
+    const kind = t.id === 'law' ? 'what Congress did about it' : t.kind === 'state' ? 'the ledger' : t.kind === 'discourse' ? 'what is said about it' : t.id === 'vote' ? 'its question to the voters' : 'the body, since its zero';
+    add(`<section class="card"><div class="head"><div class="name">${t.label}<small>${kind} · ${t.pace || ''}</small></div>
+      <div class="now ${cls}">${last ? zs(last[1]) : 'no reading yet'}${last ? ` <small>${last[0]} ± ${last[2]}</small>` : ''}</div></div>
+      <div class="rule">${t.source}<br><i>rule: ${t.rule}</i></div>${svg(g)}
+      ${t.kind === 'discourse' ? `<div class="legend"><span><i class="ln" style="background:var(--ink)"></i>the room</span>${Object.entries(ST).map(([k, c]) => `<span><i class="ln" style="background:${c}"></i>${k}</span>`).join('')}</div>` : ''}
+      ${t.note ? `<div class="note">${t.note}</div>` : ''}</section>`);
+  }
+  const LE = (T.topics[T.prevalent] || {}).law || [];
+  if (LE.length) add(`<section class="card wide"><div class="head"><div class="name">the law on ${TL}<small>${LE.length} recorded votes and enactments on bills that name it</small></div></div>
+    <div class="rule" style="margin-bottom:2px">${LE.map(e => `<div style="display:flex;gap:10px;padding:3px 0;border-top:1px solid #1e1b15"><span style="color:var(--ink);white-space:nowrap">${e.date}</span><span style="white-space:nowrap;min-width:52px">${e.chamber}</span><span style="flex:1">${e.title}${e.warPowers ? ' <i>(war powers)</i>' : ''} — ${e.what.toLowerCase()}</span><span style="color:var(--ink);white-space:nowrap">${e.result}${e.yea != null ? ' · ' + e.yea + '–' + e.nay : ''}</span></div>`).join('')}</div></section>`);
+  // the M3P: a program in the glass — crumb + nav, same as the drop and the cloud
+  if (window.parent !== window) {
+    const tell = m => { try { window.parent.postMessage(m, '*'); } catch (e) {} };
+    tell({ type: 'g4:crumb', name: 'Prism', fn: 'OBJECT', crumb: 'Prism · the Object · ' + T.object });
+    tell({ type: 'g4:navpos', t: 0.5 });
+    addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:nav') return; if (m.dir === 'back' && history.length > 1) history.back(); else if (m.dir === 'up' || m.dir === 'back') location.href = 'prism.html'; });   // (11-10) inside Prism: back goes to Prism's landing
+  }
+})();
+</script>
+</body>
+</html>

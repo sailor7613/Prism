@@ -1,0 +1,493 @@
+{
+ "centralObject": {
+  "kind": "object",
+  "ref": "ddc-lemmon-v-trump-tro-2026-11-05",
+  "name": "Judge Tanya Chutkan's temporary restraining order of 2026-11-05 (D.D.C., Lemmon v. Trump, consolidated with the District of Columbia and Virginia's suit), barring construction of the triumphal arch at Memorial Circle for 14 days after the National Capital Planning Commission's final approval",
+  "place": {
+   "quadrants": [
+    "B",
+    "D"
+   ],
+   "band": "coalition",
+   "z": 0.4,
+   "why": "The order keeps anyone from breaking ground while the Commemorative Works Act claim is decided, with a finding that the challengers are likely to win, but it lasts 14 days and settles nothing on the APA or the merits."
+  }
+ },
+ "tethers": [
+  {
+   "statute": "Commemorative Works Act",
+   "cite": "40 U.S.C. §§ 8901–8909 (Pub. L. 99-652)",
+   "title": "Commemorative works on federal land in the District of Columbia and its environs require authorization by Congress, then site and design approval by NCPC and the Commission of Fine Arts",
+   "enacted": "1986-11-14",
+   "relation": "invokes",
+   "why": "Both suits rest on it, and Chutkan found the challengers likely to succeed on the claim that the arch is a commemorative work Congress never authorized. Cite and enactment date from background; no source that loaded printed the U.S. Code sections.",
+   "place": {
+    "quadrants": [
+     "B",
+     "D"
+    ],
+    "band": "coalition",
+    "z": 0.5,
+    "why": "The standing rule the order applies: a monument on this ground waits for an act of Congress, which presses on the administration's route around it."
+   }
+  },
+  {
+   "statute": "Arlington Memorial Bridge act of 1925",
+   "cite": "43 Stat. 974 (1925)",
+   "title": "Authorized the Arlington Memorial Bridge and its approaches, including two 166-foot columns at what is now Memorial Circle, which were never built",
+   "enacted": "1925",
+   "relation": "adjacent",
+   "why": "The administration's claimed authority: it argues the 1925 law already covers a monument at the circle, so no new act of Congress is needed. Chutkan has not accepted it so far. Cite from RedState's link to govinfo; exact enactment day not verified.",
+   "place": {
+    "quadrants": [
+     "A",
+     "C"
+    ],
+    "band": "coalition",
+    "z": -0.3,
+    "why": "If it held, it would let the arch go up without a vote; the judge's likely-success finding runs against it for now."
+   }
+  }
+ ],
+ "linkedBills": [],
+ "title": "The Hour After",
+ "category": "Courts · Monuments · Separation of Powers",
+ "date": "2026-11-05",
+ "prompt": "A federal panel approved Trump's 250-foot arch and a judge froze it within the hour. Is that the law making Congress sign off on a national monument, or a judge stalling a president's project?",
+ "framing": "On Thursday, November 5, 2026, the National Capital Planning Commission voted 8-4 to give final approval to President Trump's triumphal arch at Memorial Circle, at the Virginia end of Arlington Memorial Bridge: a 166-foot arch topped by gilded figures, 250 feet in all. Less than an hour later, U.S. District Judge Tanya Chutkan issued a 14-day temporary restraining order barring construction. The District of Columbia and Virginia sued on October 31, 2026, joining an earlier suit by three Vietnam veterans and an architectural historian; both argue the Commemorative Works Act requires Congress to authorize a memorial there. The administration points to a 1925 law authorizing the bridge, and filed national-security declarations. Chutkan found the challengers likely to win on the statutory claim. What the arch costs, and who pays, is unclear.",
+ "framingKeywords": [
+  "triumphal arch",
+  "Commemorative Works Act",
+  "restraining order",
+  "Congress",
+  "Memorial Circle"
+ ],
+ "prevalentAxis": "x",
+ "split": {
+  "topology": "peel",
+  "strength": 0.5,
+  "seam": "At the center it is a 3-vs-1 peel: A (+0.7), B (+0.4) and C (+0.3) read the order as delivering on fluid, D alone negative (−0.5). At the rim it closes into an x split, with B (−0.6) and C (−0.4) crossing negative and only A's rim (+0.8) positive.",
+  "rationale": "The statute does the sorting at the center: a speaker who reads the Commemorative Works Act as plain, including right-institutional ones, accepts a pause that routes the arch to Congress. At the rim the holder takes over: the judge, the president, or a club of insiders.",
+  "zPattern": {
+   "centers": {
+    "A": 0.7,
+    "B": 0.4,
+    "C": 0.3,
+    "D": -0.5
+   },
+   "rims": {
+    "A": 0.8,
+    "B": -0.6,
+    "C": -0.4,
+    "D": -0.9
+   },
+   "note": "Centers are fluid z; coalition z: A +0.5, B +0.1, C +0.2, D −0.3. B and C change sign between fluid and denominated. Object z +0.4."
+  },
+  "ruledBy": null,
+  "date": "2026-11-06"
+ },
+ "antiValentBand": "coalition",
+ "antiValentRationale": "The coalition band is where each station turns on its own side: A warns the people cheering that the statute has to outlive one president, B is bothered by the late security declarations and would rather the White House go to Congress, C refuses to make Chutkan a hero over a 14-day freeze, and D tells the people making it about Jan. 6 that the case should win on the 1925 act or not at all.",
+ "axes": {
+  "x": {
+   "pos": "Right",
+   "neg": "Left"
+  },
+  "y": {
+   "pos": "Institutional",
+   "neg": "Populist"
+  },
+  "z": {
+   "pos": "the order delivers: a monument on federal parkland waits until Congress authorizes it, as the Commemorative Works Act requires",
+   "neg": "it doesn't: a two-week freeze from a hostile judge that settles nothing and only delays a project the planning panel already approved"
+  }
+ },
+ "responses": {
+  "A": {
+   "fluid": {
+    "z": 0.7,
+    "zReason": "The order holds the site as it is while the court decides whether the Commemorative Works Act requires an act of Congress, and the court has already found the challengers likely to win on that question.",
+    "instrument": {
+     "holder": "Judge Chutkan",
+     "trusted": true
+    },
+    "text": "The Commemorative Works Act says a memorial on that ground needs Congress. A commission voting 8-4 isn't an act of Congress, and the judge found the challengers are likely to win on exactly that point. Fourteen days to keep anyone from breaking ground before it's settled is just the statute doing its job.",
+    "xWord": "parkland",
+    "yWord": "statute",
+    "words": [
+     "Congress decides",
+     "likely to win",
+     "nothing broken yet"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.5,
+    "zReason": "The order enforces the statutory question on the merits, but its value depends on whether the Commemorative Works Act stays a rule about the land and doesn't become a weapon against one president.",
+    "instrument": {
+     "holder": "Judge Chutkan",
+     "trusted": true
+    },
+    "text": "I think the order's right on the law. The 1925 act authorized two columns that never got built, not a 250-foot arch. But people I vote with are celebrating like it's a scoreboard, and if the Commemorative Works Act only matters to them because Trump's name is on this, they'll have nothing to say when a president they like tries the same thing.",
+    "xWord": "sightline",
+    "yWord": "precedent",
+    "words": [
+     "two columns only",
+     "not a scoreboard",
+     "same rule later"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": 0.8,
+    "zReason": "Here the court is the guardrail, and stopping the arch counts as delivery in itself.",
+    "instrument": {
+     "holder": "the courts",
+     "trusted": true
+    },
+    "text": "Finally someone stood between that man and the Mall. The rule of law just stopped a gilded monument to his own vanity.",
+    "xWord": "vanity",
+    "yWord": "guardrail",
+    "words": [
+     "rule of law",
+     "gilded vanity",
+     "finally stopped"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "B": {
+   "fluid": {
+    "z": 0.4,
+    "zReason": "A short pause on a three-year build costs the project almost nothing, and it sends the arch back to the authorization route the statute names, which is Congress.",
+    "instrument": {
+     "holder": "Congress",
+     "trusted": true
+    },
+    "text": "I don't have to like the judge to read the statute: commemorative works on that land go through Congress. A 1925 law for two columns isn't authority for a 250-foot arch with gilded figures on top. If the arch is worth building for the 250th, it's worth a vote in Congress. Two weeks on a three-year project doesn't change that.",
+    "xWord": "authorization",
+    "yWord": "procedure",
+    "words": [
+     "get a bill",
+     "1925 isn't enough",
+     "two weeks, three years"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.1,
+    "zReason": "The order is legally defensible, but the standing question from the ballroom case could still undo it, so it barely delivers until Congress acts.",
+    "instrument": {
+     "holder": "Congress",
+     "trusted": true
+    },
+    "text": "The Hegseth and Mullin declarations bother me. They aren't in the planning documents, and the judge was right to ask why a brief delay hurts national security on a two-to-three-year build. People I vote with are already calling it an Obama judge's ambush, and the standing ruling in the ballroom case gives them a real point, but I'd still rather the White House just went to Congress.",
+    "xWord": "standing",
+    "yWord": "declarations",
+    "words": [
+     "late security filings",
+     "ballroom standing",
+     "just ask Congress"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.6,
+    "zReason": "Here the order looks like a judge putting herself above a finished federal approval, so it delivers nothing legitimate.",
+    "instrument": {
+     "holder": "an Obama judge",
+     "trusted": false
+    },
+    "text": "An Obama-appointed district judge just put herself above a completed federal approval, after the Supreme Court already spoke on standing in the ballroom case. This is judicial overreach, plain and simple.",
+    "xWord": "overreach",
+    "yWord": "judiciary",
+    "words": [
+     "judicial overreach",
+     "ignored the Court",
+     "approval overridden"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  },
+  "C": {
+   "fluid": {
+    "z": 0.3,
+    "zReason": "Requiring Congress to authorize the arch drags the unknown cost and the question of who pays into a public, on-the-record vote, which the stacked commission never had to face.",
+    "instrument": {
+     "holder": "Judge Chutkan",
+     "trusted": true
+    },
+    "text": "Nobody can tell me what this thing costs or who's paying, and 1,300 people wrote in, most of them saying no. The commission has three White House officials on it, and its director is OMB's top lawyer. So yeah, I'll take a judge saying Congress has to sign off first, because at least then somebody people actually elected has to put their name on it.",
+    "xWord": "cost",
+    "yWord": "comments",
+    "words": [
+     "who pays",
+     "stacked commission",
+     "1,300 said no"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": 0.2,
+    "zReason": "The order buys time for the veterans' claim, but a 14-day freeze isn't a decision, and the energy around it goes to the judge, not to the people who sued.",
+    "instrument": {
+     "holder": "the veterans who sued",
+     "trusted": true
+    },
+    "text": "The order's fine. Congress should have to vote, and the price should be on the record. But people I vote with are treating Chutkan like a hero over a 14-day freeze, and that isn't a win. The veterans who say the arch blocks the view from Arlington House to the Lincoln Memorial matter more to me than another round of cheering for a judge.",
+    "xWord": "veterans",
+    "yWord": "freeze",
+    "words": [
+     "Arlington House view",
+     "not a hero",
+     "fourteen days"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.4,
+    "zReason": "Here courts and commissions belong to the same insider system, so a temporary order is theater that won't stop the arch.",
+    "instrument": {
+     "holder": "the courts",
+     "trusted": false
+    },
+    "text": "Judges and commissions are the same club, and this is two weeks of theater. The gilded arch goes up anyway.",
+    "xWord": "gilded",
+    "yWord": "theater",
+    "words": [
+     "same club",
+     "two weeks theater",
+     "goes up anyway"
+    ],
+    "source": ""
+   },
+   "xSide": "left",
+   "source": ""
+  },
+  "D": {
+   "fluid": {
+    "z": -0.5,
+    "zReason": "The order freezes a project that already got through the full approval process, without deciding anything, and the court can extend it again and again.",
+    "instrument": {
+     "holder": "Judge Chutkan",
+     "trusted": false
+    },
+    "text": "The commission sat through a nine-hour meeting and voted 8-4, and less than an hour later it's frozen. She had the government on a one-hour leash before the vote even happened. It's the 250th, the 1925 law already planned a monument at that circle, and the president wants to honor the veterans, so what, two more weeks and then another two?",
+    "xWord": "anniversary",
+    "yWord": "vote",
+    "words": [
+     "8-4 and frozen",
+     "one-hour leash",
+     "the 250th"
+    ],
+    "source": ""
+   },
+   "coalition": {
+    "z": -0.3,
+    "zReason": "The freeze still stalls an approved project, but the administration's late security story makes it easier to justify, which weakens the case that the order delivers nothing.",
+    "instrument": {
+     "holder": "Judge Chutkan",
+     "trusted": false
+    },
+    "text": "I think she's stalling, but the drones-and-sniper-ammunition talk didn't help. The planning documents don't say a word about a military complex, and the security filings showed up late. People I vote with are making it all about Chutkan and Jan. 6, and I get why, but if the case is good it'll win on the 1925 act, not on her.",
+    "xWord": "drones",
+    "yWord": "filings",
+    "words": [
+     "late security story",
+     "win on 1925",
+     "not about her"
+    ],
+    "source": ""
+   },
+   "denominated": {
+    "z": -0.9,
+    "zReason": "Here the order is one more move in a judge's personal campaign against Trump, so it delivers nothing except obstruction.",
+    "instrument": {
+     "holder": "an Obama judge",
+     "trusted": false
+    },
+    "text": "The same judge who ran his Jan. 6 case froze his arch within the hour. It's lawfare, and it'll never stop.",
+    "xWord": "lawfare",
+    "yWord": "Chutkan",
+    "words": [
+     "same judge",
+     "within the hour",
+     "never stops"
+    ],
+    "source": ""
+   },
+   "xSide": "right",
+   "source": ""
+  }
+ },
+ "diatribe": {
+  "LF": {
+   "text": "The Commemorative Works Act says a memorial on that ground needs Congress, and a commission voting 8-4 isn't an act of Congress.",
+   "side": "left",
+   "band": "fluid",
+   "keywords": [
+    "Commemorative Works Act",
+    "needs Congress",
+    "isn't an act of Congress"
+   ]
+  },
+  "LC": {
+   "text": "The order's right on the law, but people I vote with are celebrating like it's a scoreboard, and they'll have nothing to say when a president they like tries the same thing.",
+   "side": "left",
+   "band": "coalition",
+   "keywords": [
+    "people I vote with",
+    "like it's a scoreboard",
+    "the same thing"
+   ]
+  },
+  "LD": {
+   "text": "Finally someone stood between that man and the Mall. The rule of law just stopped a gilded monument to his own vanity.",
+   "side": "left",
+   "band": "denominated",
+   "keywords": [
+    "that man",
+    "rule of law",
+    "his own vanity"
+   ]
+  },
+  "RF": {
+   "text": "A 1925 law for two columns isn't authority for a 250-foot arch. If it's worth building for the 250th, it's worth a vote in Congress.",
+   "side": "right",
+   "band": "fluid",
+   "keywords": [
+    "1925 law",
+    "a vote in Congress",
+    "isn't authority"
+   ]
+  },
+  "RC": {
+   "text": "People I vote with are making it all about Chutkan and Jan. 6, and I get why, but if the case is good it'll win on the 1925 act, not on her.",
+   "side": "right",
+   "band": "coalition",
+   "keywords": [
+    "People I vote with",
+    "all about Chutkan",
+    "win on the 1925 act"
+   ]
+  },
+  "RD": {
+   "text": "The same judge who ran his Jan. 6 case froze his arch within the hour. It's lawfare, and it'll never stop.",
+   "side": "right",
+   "band": "denominated",
+   "keywords": [
+    "same judge",
+    "lawfare",
+    "froze his arch"
+   ]
+  }
+ },
+ "diatribeLayer": "stated",
+ "objectLayer": {
+  "declared": "stated",
+  "stated": "A judge blocking construction of Trump's triumphal arch hours after a federal panel approved it.",
+  "operative": "A 14-day restraining order that holds the site while the court decides whether the Commemorative Works Act requires an act of Congress; the instrument is a pause with a likely-success finding attached, and no ruling yet on Interior's approval under the APA.",
+  "inversion": "None found. See meta.newsroomFindings."
+ },
+ "window": {
+  "close": "2026-11-05",
+  "why": "Trigger day = the day the object finished forming: the NCPC voted and Chutkan issued the TRO on Thursday 2026-11-05 (WJLA: less than an hour after the vote; NPR stories dated 11-05). The register's formedOn (11-06) is the UTC scan time of coverage. The register's holder \"a federal court\" is right; on the card I narrowed it to Judge Chutkan, D.D.C. Declared at authoring, before any z.",
+  "ruledBy": null,
+  "ruledOn": null
+ },
+ "meta": {
+  "dialecticsRef": "obj_afederal_approval-arch-blocks-construction",
+  "status": "draft",
+  "source": "Claude draft — newsroom drafting (scheduled), authored z-first against Trace Formula v1 per scripts/newsroom/AUTHORING_PROTOCOL.md v1.5. Filed to drafts/claude; no aiDeltas lineage. Rulings: none.",
+  "editHistory": [
+   {
+    "at": "2026-11-06T22:47:44.436Z",
+    "by": "Claude (scheduled drafting)",
+    "what": "authored: object (formedOn 11-06 → 11-05; holder narrowed to Judge Chutkan; duplicate register object merged) -> window -> frame -> central object (the 11-05 TRO) + tethers (Commemorative Works Act, invokes; 1925 bridge act, adjacent) + place -> sweep -> axes -> twelve and object z (blind subagent; one factual text edit) -> split/diatribe/layers -> sweep"
+   }
+  ],
+  "aiDeltas": [],
+  "frameFirst": {
+   "date": "2026-11-05",
+   "by": "Claude, under §4c (window declared at authoring; sweep before z). Object NOT ruled — Claude's read, correctable by Sailor.",
+   "status": "Frame authored before any z; the twelve and the object's own z authored blind z-first by a subagent (meta.blindAuthoring). Stations unruled.",
+   "objectLean": {
+    "stated": "a judge freezing Trump's arch right after its approval",
+    "operative": "a 14-day TRO with a likely-success finding on the Commemorative Works Act claim; the merits, the APA question and the 1925-act defense still open",
+    "inversion": "none found"
+   },
+   "titleLean": "'The Hour After' — Claude's (from the less-than-an-hour timing); Sailor names Readings",
+   "sourcesInWindow": [
+    "WJLA (2026-11-06, reporting Thursday 11-05): NCPC voted 8-4 after a meeting of nearly 10 hours; Chutkan's TRO came less than an hour later, 14 days, blocks the start of construction; D.C. and Virginia sued 10-31 for lack of congressional authorization",
+    "CBS News (updated 2026-11-05): NCPC staff report, 166-foot arch plus three gilded figures, 250 feet overall; 1,300+ comments, most opposed; Paoletta recommended approval and is OMB's top lawyer; cost and payer unclear; Chutkan's 11-03 notice order; DOJ said construction could start as soon as Thursday, called the motions \"breathless\", cited the ballroom standing decision; Huffman at the hearing; observation deck, FAA no-hazard finding",
+    "RedState (2026-11-06, opinion-leaning, secondhand on the order): likely success on the statutory claim, irreparable harm; Commemorative Works Act; administration relies on the 1925 Arlington Memorial Bridge act (43 Stat. 974); Hegseth and Mullin declarations, surfaced recently and absent from the planning documents; APA question not yet decided; cases consolidated",
+    "Yahoo (undated extract): veterans' suit (Lemmon, Byrnes, Gundersen, Public Citizen) and the Arlington House–Lincoln Memorial sightline; three White House officials on NCPC; White House statement",
+    "NPR via member stations (register articles, dated 2026-11-05): headline report of the block after approval"
+   ],
+   "background_preWindow": [
+    "1925: Arlington Memorial Bridge act authorizes two 166-foot columns at the circle; never built",
+    "1986: Commemorative Works Act (background, not printed in any loaded source)",
+    "September 2026: Trump calls the arch a \"top grade Military Complex\" housing drones and sniper ammunition (CBS)",
+    "October 2026: hearing where Chutkan calls the veterans' standing the key issue (CBS)",
+    "2026-10-31: D.C. and Virginia sue (WJLA)",
+    "2026-11-03: Chutkan's notice order (CBS)",
+    "The Supreme Court's White House ballroom standing decision (cited by DOJ per CBS; date not in sources)",
+    "Chutkan: Obama appointee; presided over the 2023 federal Jan. 6 prosecution of Trump (background knowledge; supports B- and D-denominated holders)"
+   ]
+  },
+  "framingAudit": {
+   "date": "2026-11-05",
+   "by": "Claude — frame-first authoring under §4c. Not a ruling.",
+   "window": "2026-11-05 (declared, see window.why)",
+   "verifiedInWindow": [
+    "NCPC vote 8-4 on Thursday 2026-11-05 (WJLA, CBS)",
+    "TRO less than an hour later, 14 days (WJLA)",
+    "166 feet, gilded figures, 250 feet overall (CBS, NCPC staff report)",
+    "D.C. and Virginia suit filed 2026-10-31 (WJLA, RedState)",
+    "Likely success on the statutory claim (RedState)",
+    "Cost and payer unclear as of 11-05 (CBS)"
+   ],
+   "keptUnverifiedDate": [
+    "The veterans' suit has no filing date in any loaded source; the frame says only \"earlier\".",
+    "The security declarations' filing date is not given; RedState says they surfaced recently, before the order.",
+    "The 1925 act's day of enactment is not verified; the frame gives the year only.",
+    "The Washington Times and NBC pages would not load; the TRO's expiry date and next hearing are not in any loaded source (14 days from 11-05 would be about 11-19, an inference left out of the frame)."
+   ],
+   "deliberatelyExcluded_afterWindow": [
+    "Anything said or filed on or after 2026-11-06, including reactions in that day's coverage and any hearing schedule",
+    "RedState's 11-06 aside about the next Congress authorizing the arch (opinion, after window)"
+   ]
+  },
+  "blindAuthoring": {
+   "date": "2026-11-06",
+   "author": "Claude (general-purpose subagent) — blind: given the frame, prompt, keywords, axes, a station/band brief, a short dated background (the NCPC meeting and comments, Paoletta, the 11-03 notice order, DOJ's filing language and the ballroom standing case, the Hegseth/Mullin declarations and Chutkan's question about them, Trump's September military-complex remark, the sightline, Huffman, the White House line, the 1925 columns, Chutkan's appointment and the 2023 case), R-0921-1 with the exception form, and the voice rules only; no other Reading, no register, no web",
+   "zFirst": true,
+   "instrumentOnAll12": true,
+   "objectZ": "The object's own place (z +0.4, quadrants [B, D], band coalition) authored by the same subagent, with the twelve, before the words. I shortened its why (dropped a clause about the judge's 2023 case); the numbers are unchanged.",
+   "rulings": "NONE — every station awaits Sailor's ruling. One factual edit after hand-back: D-fluid said the 1925 law \"already put a monument at that circle\"; the columns were never built, so it now says \"already planned a monument\". No z or instrument changed.",
+   "authorNote": "The subagent trusts C denominated's negative sign least: a left-populist who distrusts courts could just as easily cheer any obstacle to Trump and land positive. B fluid's positive z assumes a right-institutional speaker who puts the statute above the president; the ballroom standing argument could pull real B voices toward zero. The object's +0.4 depends on how much weight the likely-success finding gets against the TRO's 14-day life."
+  },
+  "newsroomFindings": {
+   "inversionLeans": [],
+   "inversionNote": "None found. B and C change sign between fluid and denominated, but that is the bands doing their work. No station flips against a dated prior on this object: no live Reading or draft covers the arch, Chutkan or the ballroom case as an object.",
+   "permanence": "Not a return. First appearance in the register, but under three oids: obj_afederal_approval-arch-blocks-construction (drafted here), obj_afederal_250-approval-arch-blocks (the same TRO, queued a scan later; merged, dismissed as a duplicate) and obj_x_approved-arch-construction-federal (the NCPC vote, status new; folded into this frame). The TRO expires in 14 days, so expect a return as a preliminary-injunction ruling, an appeal, or a bill to authorize the arch.",
+   "legislativeNote": "The finding at the center of the case is a void: no act of Congress authorizes the arch. The tethers carry it as the Commemorative Works Act (which requires one) and the 1925 act (which the administration says is one). No bill in the 118th–119th catalog fits, so linkedBills is empty."
+  }
+ },
+ "rid": "rdg_uhv4l7tnkfkd",
+ "ridLineage": "minted 2026-11-06 (UTC) by the scheduled newsroom drafting task; filed directly to drafts/claude",
+ "schema": "reading/v1",
+ "formulaVersion": "1",
+ "updatedAt": "2026-11-06T22:47:44.436Z",
+ "authorTier": "claude",
+ "newsroom": {
+  "oid": "obj_afederal_approval-arch-blocks-construction",
+  "queuedOn": "2026-11-06",
+  "draftedOn": "2026-11-06"
+ },
+ "images": []
+}

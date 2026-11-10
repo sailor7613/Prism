@@ -1,0 +1,270 @@
+{
+ "schema": "press/parallelogram/v0",
+ "id": "nyt_2026-11-08_oil_shock_lede",
+ "status": "claude-draft",
+ "kind": "parallelogram",
+ "partial": "beta lede",
+ "partialNote": "a beta lede — headline and dek only (the feed's opening is empty; nytimes.com is behind the wall and site-blocked from the fetch since 11-01). Runs as data: printed on the paper flagged, excluded from corner composites and indices until the member is subscribed and read in full (Sailor 10-16). The full cut replaces it when the text opens.",
+ "title": "Oil Shock",
+ "source": {
+  "program": "The New York Times",
+  "network": "The New York Times (nytimes.com, Business)",
+  "format": "print (beta lede: hed · dek)",
+  "date": "2026-11-08",
+  "title": "Why the Iran War Has Spurred Both Clean Energy and Fossil Fuels",
+  "byline": "not carried by the feed",
+  "url": "https://www.nytimes.com/2026/11/08/business/cop-31-iran-war-oil.html",
+  "length": 3,
+  "paragraphs": 0,
+  "transcript": "Parameters/09_Parallelograms/Press/2026-11-08_NYT_Oil_Shock/PARTIAL.md",
+  "note": "published 11-08 15:39 UTC; the 11-08 sweep matched it on 'oil price' (diesel) and 'iran' — the newest row in the file on the pump. Hed and dek only. Cut 11-09 as a β because it is the one row in the 11-08 queue that names the price shock itself, and the LI corner's fuller rows were either cut today (Al Jazeera), refused the fetch (NPR, robots; The Atlantic, site-blocked) or are owed transcripts (MS NOW ×8, the Daily Show ×3); the protocol's β rule is bent here — LI has a fuller read today — and that is my call, flagged. The occasion is COP31 (the slug); the war is the cause in the hed, the shock the given in the dek, the number nowhere on the visible page"
+ },
+ "positions": "blocks",
+ "horizon": "US",
+ "arc": "PG01",
+ "object": {
+  "label": "the pump (PG01 layer 1), read from the LI corner as a demand signal rather than a price, on the eve of COP31: 'the shock to global oil prices' as the given — the war its named cause — and the response in two directions at once, a surge in demand for electric vehicles and 'a race for immediate, secure power supplies'. The price itself, the vote, the Strait and the holder are not on the visible page; the shock is treated as a standing fact whose downstream is the story",
+  "layer": 1,
+  "zAxis": {
+   "pos": "the shock has passed — prices down, the holder's promise delivered",
+   "neg": "the shock stands — a global price shock still large enough to move demand in two directions"
+  },
+  "gear": "slow — the pump read through its downstream (fleets, power supply) on a horizon of years; the fast gear (the vote) absent"
+ },
+ "transform": "Z-assertion",
+ "transformNote": "the holder's promise is not on the visible page. What the hed does to the object is settle its cause in five words — 'the Iran war has spurred' — and what the dek does is settle its size without a number: a shock large enough to turn fleets electric and governments toward whatever power is 'immediate' and 'secure'. A page that treats the shock as a given has read the promise as unkept without saying so",
+ "names": {
+  "NYT": "the publication (hed + dek) — the LI corner's voice, Dia-scored; the author unknown to the feed",
+  "DT": "Donald Trump — the holder; the principal; not on the visible page"
+ },
+ "depth": {
+  "what": "distinct touches (O · T · B · M · X) across the opening ÷ scored lines — a measure of whether the lede says more than its headline",
+  "touches": [
+   "F",
+   "M"
+  ],
+  "lines": 3,
+  "value": 0.67,
+  "note": "two touches in three lines — the frame (the hed: the war as the cause of two opposite things) and the mechanism, twice (the shock → EV demand; the shock → the race for secure supply). No record on the visible page: no price, no date, no instrument. A high ratio on three lines says only that the dek does not repeat the hed; the 11-02 β on the Strait (0.67 by the same rule) had a date and a party on it, this one has neither"
+ },
+ "trace": {
+  "object": {
+   "x": 0,
+   "y": 0,
+   "z": -0.6
+  },
+  "shadow": {
+   "x": 0,
+   "y": 0,
+   "z": 0.0
+  },
+  "shadowNote": "no shadow on the visible page — no one on it says the price is coming down; the shock is a given. The holder's 10-11 promise is the absent term",
+  "predicates": {
+   "operative": [],
+   "stated": [
+    {
+     "type": "M",
+     "label": "the shock to global oil prices → a surge in demand for electric vehicles (dek)",
+     "z": -0.6
+    },
+    {
+     "type": "M",
+     "label": "the shock → a race for immediate, secure power supplies (dek)",
+     "z": -0.6
+    }
+   ],
+   "challenge": []
+  },
+  "positions": [
+   {
+    "quadrant": "A",
+    "station": "LI",
+    "fluid": "the shock to global oil prices · a surge in demand · immediate, secure power supplies",
+    "denominated": "spurred both · a race for",
+    "distinguishability": "Low",
+    "fluidKeywords": [
+     "the shock to global oil prices",
+     "a surge in demand"
+    ],
+    "denomKeywords": [
+     "a race for"
+    ],
+    "note": "three lines; the hed at 24, the dek's two clauses at 14 and 18 — a fluid door with no record behind it that the feed can see"
+   },
+   {
+    "quadrant": "B",
+    "station": "RI",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "C",
+    "station": "LP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   },
+   {
+    "quadrant": "D",
+    "station": "RP",
+    "fluid": "—",
+    "denominated": "—",
+    "distinguishability": "Low",
+    "fluidKeywords": [],
+    "denomKeywords": [],
+    "note": "declared empty"
+   }
+  ]
+ },
+ "log": [
+  {
+   "date": "2026-11-09",
+   "what": "daily cut over the 11-08 sweep (no 11-09 sweep on GitHub at 07:00 PT; the newest date in the index used, said so). Hed and dek from the sweep row; three lines scored, none constitutive; β (runs as data). Chosen as the third cut because it is the queue's one row on the price shock itself and the LI corner's remaining full-text rows could not be read today (NPR refused the fetch by robots.txt; The Atlantic site-blocked) or are owed transcripts — the β rule bent for LI; my call, flagged. lineMeta on the 'pump' tracker (two lines) and 'war' (the hed)",
+   "by": "Claude"
+  }
+ ],
+ "scoreboard": {
+  "dia": 19,
+  "tier": "fluid",
+  "declaredZ": null,
+  "readZ": -0.57,
+  "readZRange": [
+   -0.5,
+   -0.6
+  ],
+  "stations": {
+   "LI": {
+    "dia": 19,
+    "spread": [
+     14,
+     24
+    ],
+    "readZ": -0.57,
+    "voices": {
+     "NYT": {
+      "dia": 19,
+      "readZ": -0.57,
+      "n": 3
+     }
+    }
+   },
+   "RI": null,
+   "LP": null,
+   "RP": null
+  },
+  "split": {
+   "topology": "none",
+   "station": "LI",
+   "strength": 0.0,
+   "note": "one voice, three lines: 24 → 14 → 18. No migration to read on a door; the dek is more fluid than the hed because it names the shock and the hed names only the war"
+  },
+  "lumens": 56,
+  "zRule": "every line carries a z, inferred where implied (Sailor 2026-10-13); inferred lines are marked zInferred with a zWhy",
+  "mode": "open",
+  "lumensTracked": {
+   "value": 61,
+   "measured": 3,
+   "unmeasured": 0,
+   "of": 3,
+   "perTracker": {
+    "war": 38,
+    "pump": 73
+   },
+   "rule": "calm (1 − Dia/100) × proximity to the tracker the line talks about, read as of the line's date; shadow lines unmeasured",
+   "trackers": "data/active/trackers.json (built 2026-11-02)"
+  }
+ },
+ "lines": [
+  {
+   "t": 0,
+   "who": "NYT",
+   "station": "LI",
+   "quote": "'the Iran War has spurred both clean energy and fossil fuels'",
+   "touch": "F",
+   "z": -0.5,
+   "dia": 24,
+   "mode": "open",
+   "note": "THE DOOR (hed) — the war as the cause of two opposite things; the price not in the door",
+   "chapter": "The door",
+   "normX": 0.3774,
+   "normY": 0.4204,
+   "normZ": -0.375,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a war that spurs both fleets and fuels has moved the price enough to move both",
+   "tracker": "war",
+   "date": "2026-11-08",
+   "trackerReading": {
+    "date": "2026-02-28",
+    "z": -1.0,
+    "sigma": 0.0,
+    "nearest": false
+   },
+   "proximity": 0.5,
+   "lightTracked": 0.38
+  },
+  {
+   "t": 1,
+   "who": "NYT",
+   "station": "LI",
+   "quote": "'the shock to global oil prices' → a surge in demand for electric vehicles",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 14,
+   "mode": "open",
+   "note": "THE MECHANISM, first half — the shock as the given; its size read off the fleet, not the pump",
+   "chapter": "The shock",
+   "normX": 0.438,
+   "normY": 0.4113,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a shock that turns fleets electric is a shock still standing",
+   "tracker": "pump",
+   "date": "2026-11-08",
+   "trackerReading": {
+    "date": "2026-11-02",
+    "z": -0.828,
+    "sigma": 0.1,
+    "nearest": false
+   },
+   "proximity": 0.872,
+   "lightTracked": 0.75
+  },
+  {
+   "t": 2,
+   "who": "NYT",
+   "station": "LI",
+   "quote": "→ 'a race for immediate, secure power supplies'",
+   "touch": "M",
+   "z": -0.6,
+   "dia": 18,
+   "mode": "open",
+   "note": "THE MECHANISM, second half — the same shock read the other way; 'immediate' and 'secure' the two words that size it",
+   "chapter": "The race",
+   "normX": 0.4259,
+   "normY": 0.4013,
+   "normZ": -0.45,
+   "quadrant": "A",
+   "zInferred": true,
+   "zWhy": "a race for immediate supply is a price still high enough to run from",
+   "tracker": "pump",
+   "date": "2026-11-08",
+   "trackerReading": {
+    "date": "2026-11-02",
+    "z": -0.828,
+    "sigma": 0.1,
+    "nearest": false
+   },
+   "proximity": 0.872,
+   "lightTracked": 0.715
+  }
+ ]
+}

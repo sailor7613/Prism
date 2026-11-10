@@ -5,7 +5,7 @@ import json, os, sys, time
 sys.path.insert(0, os.path.dirname(__file__)); import tts
 sid = sys.argv[1]; cap = int(sys.argv[2]) if len(sys.argv) > 2 else 99
 ep = json.load(open(os.path.join(tts.ROOT, 'data', 'show', sid + '.json'))); voice = ep['voice']; api = tts.key()
-bdir = os.path.join(tts.ROOT, 'data', 'show', sid, 'beats'); n = 0; t0 = time.time()
+bdir = os.path.join(tts.ROOT, 'data', 'show', sid, 'beats'); os.makedirs(bdir, exist_ok=True); n = 0; t0 = time.time()   # 11-08: a new episode has no beats folder yet
 for blk in ep['blocks']:
     for b in blk['beats']:
         if b.get('type', 'text') != 'text': continue

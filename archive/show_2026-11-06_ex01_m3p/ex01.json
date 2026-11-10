@@ -1,0 +1,330 @@
+{
+ "schema": "show/episode/v2",
+ "show": "The Parallelogram Report",
+ "aspect": "16:9",
+ "fps": 30,
+ "endHold": 1.0,
+ "voice": {
+  "provider": "elevenlabs",
+  "voice_id": "2w1RxrmT0SAHYrUVv0HU",
+  "model_id": "eleven_multilingual_v2",
+  "stability": 0.45,
+  "similarity": 0.8,
+  "style": 0.2
+ },
+ "id": "ex01",
+ "title": "Explainer · Watch the Barrel (the Supply Shock Tracker)",
+ "notes": "11-05. The supply shock tracker explainer, 3–5 min (handoff 2026-11-04 §3A). Script: data/show/ex01_script_v2.md. No tape. The globe stands still on the pedestal the whole way (globe: true, globeTurn: 0); globeMonth (new, dream-news.js) holds it on the month Ted reads. Stills in ex01/stills, drawn from data/active as fetched 11-06 (August in). 11-06: tedWalk (dream-news.js) — Ted walks from the desk to the globe on q_who and stays; the picture resolves as he arrives (trackerResolveShow).",
+ "pieces": [],
+ "clips": {},
+ "blocks": [
+  {
+   "id": "question",
+   "title": "The question",
+   "clip": true,
+   "beats": [
+    {
+     "id": "q_ask",
+     "type": "text",
+     "text": "Is more of the world's oil being sold in dollars this year, or less? That's the one thing this globe reads.",
+     "caption": "More dollars, or fewer?",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "q_noise",
+     "type": "text",
+     "text": "I scroll Twitter like everybody else. A hurricane of vibes about oil, almost no signal. So we built something that only watches the barrel. Where it goes, and what money it's paid in.",
+     "caption": "Watch the barrel",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "q_who",
+     "type": "text",
+     "text": "I'm Ted Turner. I'm a sonnetbot — I say what the guy who built this thinks. This is the Parallelogram Report.",
+     "caption": "The Parallelogram Report",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "tedWalk": "pedestal",
+     "note": "Ted gets up and walks from the desk to the globe on the pedestal (11-06, Sailor); he stays there for the rest"
+    }
+   ]
+  },
+  {
+   "id": "globe",
+   "title": "The globe",
+   "clip": true,
+   "beats": [
+    {
+     "id": "g_this",
+     "type": "text",
+     "text": "This is the Supply Shock Tracker, on the pedestal here at the Getty Villa.",
+     "caption": "The Supply Shock Tracker",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "g_colors",
+     "type": "text",
+     "text": "Every line on it is oil crossing a border. Gold means it was paid for in dollars. Blue means it wasn't. Dashed means nobody can say. We draw the not-knowing instead of guessing.",
+     "caption": "Gold · blue · dashed",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "g_money",
+     "type": "text",
+     "text": "Why the money? When the world's oil is sold in dollars, the world needs dollars. That keeps the dollar on top. The writer Richard Medhurst calls it the petrogas-dollar.",
+     "caption": "The petrogas-dollar",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "g_flows",
+     "type": "text",
+     "text": "The tracker has three layers. First, the flows. Where the barrels actually went, month by month. What really happened.",
+     "caption": "One · the flows",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "note": "no globeMonth: the month clock runs while Ted says month by month"
+    },
+    {
+     "id": "g_events",
+     "type": "text",
+     "text": "Second, the events. Strikes, seizures, sanctions, licenses. Each gets two dates: the day it happened, and the day we heard about it.",
+     "caption": "Two · the events",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "g_price",
+     "type": "text",
+     "text": "Third, the price. Everyone's shouting about it, so we keep it. But last. The price is the shadow. The barrel is the thing.",
+     "caption": "Three · the price is the shadow",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "still": "ex01_shadow",
+     "stillCaption": "Brent and gas, EIA weekly"
+    }
+   ]
+  },
+  {
+   "id": "reading",
+   "title": "The reading",
+   "clip": true,
+   "beats": [
+    {
+     "id": "r_now",
+     "type": "text",
+     "text": "The official numbers run behind. The latest full month is August.",
+     "caption": "The latest full month: August",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "r_panel",
+     "type": "text",
+     "text": "We read five big buyers. Last October, ninety-one percent of the oil they bought was sold in dollars. In August, ninety.",
+     "caption": "91% → 90% sold in dollars",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2025-10",
+     "still": "ex01_needle",
+     "stillCaption": "Five buyers · Oct 2025 → Aug 2026"
+    },
+    {
+     "id": "r_needle",
+     "type": "text",
+     "text": "One point. The needle says holding. But in July it hit eighty-seven, the low of the year. Then it came back.",
+     "caption": "Holding — after a July low",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-07",
+     "still": "ex01_needle",
+     "stillCaption": "Five buyers · Oct 2025 → Aug 2026"
+    },
+    {
+     "id": "r_gulf",
+     "type": "text",
+     "text": "Now look at it from America's side. Last fall, about eight percent of the oil America imported came from the Persian Gulf. In July, zero. Not one barrel.",
+     "caption": "America's barrel: the Gulf at zero",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-07",
+     "still": "ex01_america",
+     "stillCaption": "US crude imports by origin · EIA"
+    },
+    {
+     "id": "r_ven",
+     "type": "text",
+     "text": "Our own hemisphere filled the gap, up to ninety-eight percent. Venezuela went from about a hundred and thirty thousand barrels a day to seven hundred thousand. Five times as much.",
+     "caption": "Venezuela, five times",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-07",
+     "still": "ex01_america",
+     "stillCaption": "US crude imports by origin · EIA"
+    },
+    {
+     "id": "r_money",
+     "type": "text",
+     "text": "And every one of those barrels gets paid in dollars. That's how the American market works. So the shock re-routed America's barrel without touching its money.",
+     "caption": "Re-routed, same money",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-07"
+    },
+    {
+     "id": "r_russia",
+     "type": "text",
+     "text": "Then where did the dollar lose ground? Mostly here. Russia to India, the biggest blue line, paid in rupees, dirhams and yuan. Last fall, about two million barrels a day. By July, almost three million.",
+     "caption": "Russia → India",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-07",
+     "still": "ex01_russia_india",
+     "stillCaption": "India's customs count · Comtrade"
+    },
+    {
+     "id": "r_august",
+     "type": "text",
+     "text": "Then August. Russia to India fell back to about two point two million. And the Gulf came back to America. About half a million barrels a day. The weekly numbers say it's still coming.",
+     "caption": "August: both come back",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "still": "ex01_russia_india",
+     "stillCaption": "India's customs count · Comtrade"
+    },
+    {
+     "id": "r_both",
+     "type": "text",
+     "text": "So the summer pulled the world's barrel away from the dollar. August pulled it back. That's why we watch it month by month.",
+     "caption": "Month by month",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    }
+   ]
+  },
+  {
+   "id": "check",
+   "title": "Where the claims get checked",
+   "clip": true,
+   "beats": [
+    {
+     "id": "c_thing",
+     "type": "text",
+     "text": "When we score what somebody says, we check it against the thing they're talking about. If it's the war, the oil or the money, this is the thing.",
+     "caption": "Checked against the thing",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "c_diesel",
+     "type": "text",
+     "text": "Take October eleventh. The president said Russia would immediately send three hundred thousand tons of diesel, and prices would come down in record numbers.",
+     "caption": "The diesel claim · Oct 11",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "quote": {
+      "text": "Russia will immediately supply 300,000 tons… 500,000 in November.",
+      "who": "Donald Trump",
+      "src": "Oct 11, 2026"
+     }
+    },
+    {
+     "id": "c_file",
+     "type": "text",
+     "text": "So we filed it as a claim the world can check. So far, diesel imports haven't jumped. And diesel at the pump is six twenty-nine, a dime higher than the week he said it.",
+     "caption": "Diesel: imports flat, pump up a dime",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "c_scored",
+     "type": "text",
+     "text": "The test runs to the end of November. Then the claim gets scored by what the barrels did. Not by how it sounded.",
+     "caption": "Scored at the end of November",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    }
+   ]
+  },
+  {
+   "id": "out",
+   "title": "Watch the barrel",
+   "clip": false,
+   "beats": [
+    {
+     "id": "o_bet",
+     "type": "text",
+     "text": "I have a bet on the record, from October second. The shock doesn't loosen the dollar's grip on America's oil. It re-routes the oil toward it. And I wrote down how I'd be wrong: if the Gulf barrel came back before our own hemisphere locked in.",
+     "caption": "The bet · October 2",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    },
+    {
+     "id": "o_call",
+     "type": "text",
+     "text": "In August, the Gulf barrel came back, and it's still coming. Did the hemisphere lock in first? That's my call to make, and I'll make it on the record.",
+     "caption": "The Gulf came back",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "still": "ex01_america",
+     "stillCaption": "US crude imports by origin · EIA"
+    },
+    {
+     "id": "o_out",
+     "type": "text",
+     "text": "The discourse is noise. The barrel isn't. Watch the barrel. I'm Ted Turner. Goodnight from the Getty Villa.",
+     "caption": "Watch the barrel",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08"
+    }
+   ]
+  }
+ ]
+}

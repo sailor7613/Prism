@@ -115,6 +115,13 @@
   #desk { position: absolute; inset: 0; top: var(--bar-h); display: none; place-content: center; gap: 28px; padding: 40px 16px; text-align: center; }
   #desk.on { display: grid; }
   #desk .tiles { display: flex; gap: 28px; flex-wrap: wrap; justify-content: center; }
+  /* (11-10) the desk is the prism: its place on the glass (the navtool docks here, large), its name under it */
+  #deskPrism { height: 190px; width: min(92vw, 720px); }
+  .g4-enter { display: block; margin-top: -22px; text-align: center; text-decoration: none; font-family: var(--g4-os); }
+  .g4-enter .n { font-size: 19px; font-weight: 600; color: rgba(245,240,232,.86); letter-spacing: .02em; }
+  .g4-enter .s { font-size: 11.5px; font-style: italic; color: rgba(245,240,232,.42); margin-top: 3px; }
+  #navtool.atdesk { z-index: 43; } #strip.atdesk { cursor: pointer; }
+  @media (max-width: 480px) { #deskPrism { height: 150px; } #desk { gap: 20px; } }
 
   #villa { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; z-index: 5; opacity: 0; pointer-events: none; background: #000; display: none; }
   #villa.on { display: block; } #villa.lit { opacity: 1; pointer-events: auto; transition: opacity .9s; }
@@ -154,12 +161,13 @@
   <div id="glass">
     <iframe id="prog" title="program"></iframe>
     <div id="desk">
+      <div id="deskPrism" aria-hidden="true"></div>
+      <a class="g4-enter" href="#prism"><div class="n">Prism</div><div class="s">the instrument · tap the prism to enter</div></a>
       <div class="tiles">
-        <a class="g4-tile" href="#prism"><div class="ic lit"><img src="../src/img/prism3d.png" alt="" style="width:58px;height:58px;object-fit:contain"></div><div class="n">Prism</div><div class="s">the workstation</div></a>
-        <a class="g4-tile" href="#bloomburger"><div class="ic lit"><svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true"><defs><linearGradient id="icArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient><filter id="icSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.4"/></filter><radialGradient id="icLit"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#f6f1e6" stop-opacity="0"/></radialGradient></defs><path d="M10 44 A22 22 0 0 1 54 44" fill="none" stroke="url(#icArc)" stroke-width="7" opacity=".45" filter="url(#icSoft)"/><path d="M10 44 A22 22 0 0 1 54 44" fill="none" stroke="url(#icArc)" stroke-width="1.2" opacity=".8"/><path d="M32 44 L47 28" stroke="#f6f1e6" stroke-width="4" opacity=".35" filter="url(#icSoft)"/><path d="M32 44 L47 28" stroke="#f6f1e6" stroke-width="1.6" stroke-linecap="round"/><circle cx="47.5" cy="27.5" r="6" fill="url(#icLit)" opacity=".8"/><circle cx="32" cy="44" r="2.2" fill="#f6f1e6"/></svg></div><div class="n">BloomBurger</div><div class="s">the terminal</div></a>
+        <a class="g4-tile" href="#parallelogram"><div class="ic lit"><svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true"><defs><filter id="icPgSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.2"/></filter><linearGradient id="icPgArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient></defs><path d="M20 16 H56 L44 48 H8 Z" fill="none" stroke="url(#icPgArc)" stroke-width="6" opacity=".4" filter="url(#icPgSoft)"/><path d="M20 16 H56 L44 48 H8 Z" fill="none" stroke="#f6f1e6" stroke-width="1.4" stroke-linejoin="round"/><path d="M23 26 H46 M20 33 H43 M17 40 H34" stroke="#f6f1e6" stroke-width="1.2" opacity=".55" stroke-linecap="round"/></svg></div><div class="n">Parallelogram</div><div class="s">the publication</div></a>
         <a class="g4-tile" href="#codex"><div class="ic lit"><span class="film loop" style="font-family:Georgia,serif;font-size:40px;line-height:1;text-shadow:0 0 14px rgba(246,241,230,.35)">¶</span></div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
       </div>
-      <div class="g4-key">g4 · three programs · tap the glyph to come back here · hold it to see the room</div>
+      <div class="g4-key">M3P · the prism is the way in · tap it from anywhere to come back here · hold the glyph to see the room</div>
       <div class="g4-key" style="opacity:.5"><a href="#classic" style="text-decoration:none;color:inherit">prism · classic ↗</a></div>
     </div>
     <div id="glare"></div>
@@ -186,7 +194,7 @@
   const VILLA_URL = '../dreamgetty/' + '?arrive=glass';
   const SMALL = 0.55;
   let mode = 'boot', villaBuilt = false, program = null, progFn = '';
-  const showing = () => !program ? 'desk' : program === 'bloomburger' ? ('bloomburger:' + ((progFn || 'PG').toLowerCase())) : program;
+  const showing = () => !program ? 'desk' : (program === 'bloomburger' || program === 'parallelogram') ? ('bloomburger:' + ((progFn || 'PG').toLowerCase())) : program;   // the villa still knows the publication by its old name
 
   // ── the sky ──
   (function sky() {
@@ -205,7 +213,7 @@
   // on the chrome. Nothing clips it: it overflows the bar on both sides.
   const nav = (function () {
     const cv = $('#navtool');
-    let renderer; try { renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true }); } catch (e) { cv.style.display = 'none'; return { setDrag: () => {} }; }
+    let renderer; try { renderer = new THREE.WebGLRenderer({ canvas: cv, alpha: true, antialias: true }); } catch (e) { cv.style.display = 'none'; return { setDrag: () => {}, setPos: () => {}, setHeight: () => {}, x: () => innerWidth / 2 }; }   // (11-08) no WebGL: route() still calls setPos
     renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
     const scene = new THREE.Scene();
     const cam = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 50); cam.position.set(0, 0, 10);
@@ -234,7 +242,8 @@
     }
     const shadow = new THREE.Mesh(new THREE.CircleGeometry(0.7, 24), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.16, depthWrite: false })); shadow.position.set(0.14, -0.36, -0.5); shadow.scale.set(1.25, 0.3, 1); scene.add(shadow);
     let aspect = 1, tiltX = 0, tiltY = 0, dx = 0, pos = 0.5; const t0 = performance.now();
-    function size() { const w = innerWidth, h = 84; renderer.setSize(w, h, false); aspect = w / h; cam.left = -aspect * 1.1; cam.right = aspect * 1.1; cam.top = 1.1; cam.bottom = -1.1; cam.updateProjectionMatrix(); }
+    let navH = 84;
+    function size() { const w = innerWidth, h = navH; renderer.setSize(w, h, false); aspect = w / h; cam.left = -aspect * 1.1; cam.right = aspect * 1.1; cam.top = 1.1; cam.bottom = -1.1; cam.updateProjectionMatrix(); }
     addEventListener('resize', size); size();
     addEventListener('pointermove', e => { tiltX = (e.clientX / innerWidth - 0.5) * 0.9; tiltY = (e.clientY / innerHeight - 0.5) * 0.5; }, { passive: true });
     addEventListener('deviceorientation', e => { if (e.gamma == null) return; tiltX = Math.max(-0.6, Math.min(0.6, e.gamma / 45)); tiltY = Math.max(-0.4, Math.min(0.4, (e.beta - 40) / 60)); }, { passive: true });
@@ -253,7 +262,9 @@
       layRays();
       renderer.render(scene, cam);
     })();
-    return { setDrag: v => { dx = v; }, setPos: t => { pos = Math.max(0, Math.min(1, +t || 0)); } };
+    return { setDrag: v => { dx = v; }, setPos: t => { pos = Math.max(0, Math.min(1, +t || 0)); },
+             setHeight: h => { navH = h; cv.style.height = h + 'px'; size(); },                                   // (11-10) large on the desk, 84 on its line
+             x: () => innerWidth / 2 + group.position.x / (2 * aspect * 1.1) * innerWidth };                    // where the prism is, in screen pixels
   })();
 
   // ── routing: the desk, and programs in the one iframe ──
@@ -262,18 +273,34 @@
   const STAMP = /^(localhost|127\.|\[::1\])/.test(location.hostname) ? String(Date.now()) : '';
   const withStamp = src => { if (!STAMP) return src; const i = src.indexOf('#'); const base = i >= 0 ? src.slice(0, i) : src, hash = i >= 0 ? src.slice(i) : ''; return base + (base.includes('?') ? '&' : '?') + 'v=' + STAMP + hash; };
   const PROGRAMS = {
-    prism:       { name: 'Prism',       fn: 'BEAM', src: '../app/' },
-    classic:     { name: 'Prism',       fn: 'classic', src: '../v2/' },
-    bloomburger: { name: 'BloomBurger', fn: 'PG', src: '../bloomburger/#pg' },
-    codex:       { name: 'Codex',       fn: '',   src: '../bloomburger/#codex/object' },
+    prism:         { name: 'Prism',         fn: '',     src: '../press/prism.html' },     // (11-10) the instrument: the Object, the prism (the drop), what it has thrown onto the graphmap
+    workstation:   { name: 'Prism',         fn: 'respond', src: '../app/' },              // the earlier Prism: Readings and pins — reached from inside Prism
+    classic:       { name: 'Prism',         fn: 'classic', src: '../v2/' },
+    parallelogram: { name: 'Parallelogram', fn: 'PG',   src: '../bloomburger/#pg' },      // (11-10) BloomBurger renamed: the publication — the SST's story, the Burns, the cuts, the Report
+    bloomburger:   { name: 'Parallelogram', fn: 'PG',   src: '../bloomburger/#pg' },      // the old address still opens it
+    codex:         { name: 'Codex',         fn: '',     src: '../bloomburger/#codex/object' },
+    drop:          { name: 'Prism',         fn: 'IN',   src: '../press/drop.html' },      // inside Prism now; the address still works
+    object:        { name: 'Prism',         fn: 'READ', src: '../press/object.html' },    // inside Prism now; the address still works
   };
+  const isPG = h => h === 'parallelogram' || h === 'bloomburger';
+  // (11-10) the prism on the desk: docked large at the desk's centre; back on its line inside a program
+  function deskDock(on) {
+    const nt = $('#navtool'), sp = $('#strip'), dp = $('#deskPrism');
+    if (on && dp && dp.offsetHeight) {
+      const top = desk.offsetTop + dp.offsetTop, h = dp.offsetHeight;
+      nt.style.top = top + 'px'; nav.setHeight(h); nt.classList.add('atdesk'); sp.style.top = top + 'px'; sp.style.height = h + 'px'; sp.classList.add('atdesk');
+    } else if (nt.classList.contains('atdesk')) {
+      nt.style.top = ''; nav.setHeight(84); nt.classList.remove('atdesk'); sp.style.top = ''; sp.style.height = ''; sp.classList.remove('atdesk');
+    }
+  }
+  addEventListener('resize', () => { if (!program) deskDock(true); });
   function route() {
     const h = location.hash.replace(/^#/, '') || 'desk';
     const head = h.split('/')[0];
-    if (head === 'desk' || !PROGRAMS[head]) { program = null; desk.classList.add('on'); prog.classList.add('off'); setBar('g4', '', 'desktop'); nav.setPos(0.5); return; }
+    if (head === 'desk' || !PROGRAMS[head]) { program = null; desk.classList.add('on'); prog.classList.add('off'); setBar('M3P', '', 'desktop'); nav.setPos(0.5); deskDock(true); return; }
     const P = PROGRAMS[head];
-    desk.classList.remove('on'); prog.classList.remove('off');
-    if (program !== head) { program = head; prog.src = withStamp(P.src); nav.setPos(head === 'bloomburger' ? 0.5 : 0.12); }
+    desk.classList.remove('on'); prog.classList.remove('off'); deskDock(false);
+    if (program !== head) { program = head; prog.src = withStamp(P.src); nav.setPos(isPG(head) ? 0.5 : 0.12); }
     setBar(P.name, P.fn, P.name.toUpperCase());
   }
   function setBar(name, fn, crumb) { $('#barName').textContent = name; $('#barFn').textContent = fn || ''; $('#crumb').textContent = crumb || ''; }
@@ -298,7 +325,7 @@
     function up() { if (program) toProg('up'); }
     st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; y0 = e.clientY; dx = dy = 0; held = dragging = false; st.setPointerCapture(e.pointerId); nt.classList.add('holding'); holdT = setTimeout(() => { held = true; nt.classList.remove('holding'); if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
     st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; dy = e.clientY - y0; if (!dragging && Math.hypot(dx, dy) > 3) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); nt.classList.add('dragging'); } if (dragging) { nav.setDrag(clampD(dx)); nt.style.transform = `translateY(${dy}px)`; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: clampD(dx), dy: clampD(dy) }, '*'); } catch (e2) {} } });
-    function end() { if (x0 == null) return; clearTimeout(holdT); nt.classList.remove('holding'); st.classList.remove('dragging'); nt.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
+    function end() { if (x0 == null) return; clearTimeout(holdT); nt.classList.remove('holding'); st.classList.remove('dragging'); nt.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && !dragging && Math.abs(x0 - nav.x()) < (program ? 46 : 110)) { location.hash = program ? '#desk' : '#prism'; } else if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
     st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
     addEventListener('keydown', e => {
       if (e.target.tagName === 'INPUT') return;
@@ -324,7 +351,7 @@
       rig.style.transition = 'opacity .45s'; rig.style.opacity = '1';
       setTimeout(() => glare.classList.add('go'), 250);
       setTimeout(() => { setScale(1, 950); glare.classList.remove('go'); }, 1250);
-      setTimeout(() => { rig.classList.add('flat'); barAway(false); mode = 'glass'; }, 2250);
+      setTimeout(() => { rig.classList.add('flat'); barAway(false); mode = 'glass'; if (!program) deskDock(true); }, 2250);
     }));
   }
 

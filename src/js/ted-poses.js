@@ -54,6 +54,23 @@
         T.look([gl[0], DESK + .1, gl[2]], 1, 0);
       }
     },
+    deskWristTap: {
+      // sp02 (Sailor, 11-07): Ted taps his bare wrist — the inversion of "I got your years rent on my wrist right now".
+      // Left forearm raised across the chest like checking a watch (palm down, the bare top of the wrist up); the right
+      // forefinger taps it twice a second; he looks down at the wrist.
+      label: 'Desk, tapping his bare wrist', desk: true, talk: false, live: true,
+      fn(T, t, o) {
+        seated(T, 5, -4, o);
+        const lw = [.07, .93, .40];
+        T.armIK('L', lw, [.29, .86, .27], [-.85, .05, .5], [0, -1, 0]);
+        T.shapes.curlL = .55; T.shapes.thumbL = .3;
+        const tap = Math.max(0, Math.sin(t * 12.5)) * .028;
+        T.armIK('R', [lw[0] + .02, lw[1] + .055 + tap, lw[2] + .03], [-.22, .87, .30], [.45, -.55, .7], [0, -.4, 1]);
+        T.shapes.curlR = .7; T.shapes.thumbR = .5;
+        T.look([lw[0], lw[1], lw[2]], 1, -6);
+        T.addRot('earL', -4, 0, 0); T.addRot('earR', -4, 0, 0);
+      }
+    },
     deskThink: {
       label: 'Desk, chin on paw', desk: true, talk: false,
       fn(T, t, o) {
@@ -101,6 +118,26 @@
           T.rot('shoulder' + k, 22 * ss, 0, sg * 6); T.rot('elbow' + k, -18 - 10 * Math.max(0, -ss), 0, 0); T.rot('wrist' + k, 0, -sg * 80, 0);
         });
         T.shapes.curlL = .45; T.shapes.curlR = .45;
+      }
+    },
+    // ADDED 2026-11-06 (the tracker explainer, from the show session — additive only): the same stride as `walk`, but in
+    // place, facing +z, so the caller moves and turns the holder along its own path (Ted walking from the desk to the globe)
+    walkStraight: {
+      label: 'Walking (in place)', desk: false, talk: false, live: true,
+      fn(T, t, o) {
+        const ph = t * Math.PI * 2 * .85, s = Math.sin(ph), c = Math.cos(ph);
+        T.root(0, 0, 0, 0);
+        T.hips(0, .575 + .018 * Math.cos(2 * ph), 0);
+        T.rot('hips', 0, 7 * s, 2 * s);
+        T.rot('spine', 2, -4 * s, 0); T.rot('chest', -5, -5 * s, -1.5 * s); T.rot('neck', -6, 0, 0);
+        [['L', 1], ['R', -1]].forEach(([k, sg]) => {
+          const ss = s * sg, cc = c * sg;
+          const th = -24 * ss, kn = 6 + 42 * Math.max(0, cc);
+          T.rot('hip' + k, th, 0, sg * 2); T.rot('knee' + k, kn, 0, 0); T.rot('ankle' + k, -(th + kn) * .8, 0, 0);
+          T.rot('shoulder' + k, 22 * ss, 0, sg * 6); T.rot('elbow' + k, -18 - 10 * Math.max(0, -ss), 0, 0); T.rot('wrist' + k, 0, -sg * 80, 0);
+        });
+        T.shapes.curlL = .45; T.shapes.curlR = .45;
+        if (o && o.cam) T.look(o.cam, .5, 0);
       }
     },
   };

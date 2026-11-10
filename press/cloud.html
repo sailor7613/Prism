@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallelogram · Word Cloud</title>
+<!-- ======================================================================
+     A PARALLELOGRAM'S WORD CLOUD on the GRAPHMAP — 2026-11-07 · Claude draft.
+     Reads ../data/parallelograms/<id>.json (written by
+     scripts/closedform/parallelogram.py; spec Parameters/00_Architecture/
+     Parallelogram_Unit_v0.md). Every line is a dot (station → corner, Dia →
+     distance from centre, z → height); its lit words float beside it. The
+     date slider walks the cloud forward in time. Words stay tied to their line:
+     tap one and the sentence comes back. Shadow words (no instrument) are
+     dimmed and marked "unmeasured". Serve from the Prism root:
+     /press/cloud.html?p=blaming_the_messengers
+     ====================================================================== -->
+<style>
+  :root { --paper:#0c0b09; --paper-2:#14120e; --ink:#e8e2d6; --dim:#8a8375; --ghost:#55503f; --gold:#d4a94e; --warm:#c9a06a;
+          --realized:#7fae8b; --frustrated:#b07070; --LI:rgb(184,58,58); --RI:rgb(56,104,168); --LP:rgb(58,138,82); --RP:rgb(184,120,40); }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html, body { height:100%; }
+  body { background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; line-height:1.45; overflow:hidden; }
+  .wrap { height:100%; display:grid; grid-template-rows:auto 1fr; }
+  header { padding:16px 22px 10px; display:flex; flex-wrap:wrap; gap:6px 22px; align-items:baseline; border-bottom:1px solid #221f19; }
+  .kicker { font-size:11px; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+  h1 { font-size:clamp(20px,2.6vw,30px); font-weight:normal; }
+  .board { display:flex; flex-wrap:wrap; gap:6px 18px; font-size:12px; color:var(--dim); }
+  .board b { color:var(--ink); font-weight:normal; font-size:15px; }
+  .status { font-size:10.5px; letter-spacing:.08em; color:var(--ghost); text-transform:uppercase; width:100%; }
+  .body { min-height:0; display:grid; grid-template-columns:1fr minmax(300px,380px); }
+  .stage { position:relative; min-height:0; display:grid; grid-template-rows:1fr auto; }
+  #map { position:relative; overflow:hidden; background:radial-gradient(ellipse at center,#15130e 0%,var(--paper) 72%); }
+  #map canvas { display:block; width:100% !important; height:100% !important; }
+  #words { position:absolute; inset:0; pointer-events:none; }
+  .w { position:absolute; max-width:44%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:13px; padding:1px 6px; border-radius:9px;
+       background:rgba(12,11,9,.72); border:1px solid rgba(255,255,255,.08); pointer-events:auto; cursor:pointer;
+       transition:opacity .35s, color .25s, border-color .25s; }
+  .w.LI{color:#e48a8a} .w.RI{color:#8fb0e0} .w.LP{color:#8fcf9f} .w.RP{color:#e8b56c}
+  .w.shadow { opacity:.42; font-style:italic; border-style:dashed; }
+  .w.denominated { font-weight:bold; }
+  .w.gnostic { box-shadow:0 0 0 1px var(--gold), 0 0 10px rgba(212,169,78,.45); }
+  .w.focus { opacity:1 !important; border-color:var(--gold); color:#fff; }
+  .w.hidden { opacity:0 !important; pointer-events:none; }
+  .controls { padding:10px 16px 12px; border-top:1px solid #221f19; background:var(--paper-2); }
+  .controls .t { text-align:center; font-size:12px; letter-spacing:.08em; margin-bottom:6px; } .controls .t span { color:var(--gold); }
+  .controls input[type=range] { width:100%; accent-color:#d4a94e; }
+  .row { display:flex; gap:14px; flex-wrap:wrap; justify-content:space-between; font-size:11px; color:var(--dim); margin-top:6px; }
+  .row label { cursor:pointer; } .row input { vertical-align:-1px; margin-right:4px; accent-color:#d4a94e; }
+  .side { min-height:0; overflow-y:auto; border-left:1px solid #221f19; padding:14px 16px 60px; }
+  .side h2 { font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:normal; margin:4px 0 10px; }
+  .side p.help { font-size:12px; color:var(--dim); margin-bottom:12px; }
+  .line { padding:9px 11px; margin:7px 0; border:1px solid #1d1a15; background:#100e0b; cursor:pointer; font-size:13.5px; }
+  .line.active { border-color:#4a4232; background:#171410; }
+  .line .meta { font-size:10.5px; color:var(--dim); letter-spacing:.05em; display:flex; gap:8px; flex-wrap:wrap; }
+  .chip { display:inline-block; padding:0 6px; border-radius:9px; font-size:10px; color:#fff; }
+  .chip.LI{background:var(--LI)} .chip.RI{background:var(--RI)} .chip.LP{background:var(--LP)} .chip.RP{background:var(--RP)}
+  .line q { display:block; margin:5px 0 4px; quotes:"“" "”"; }
+  .line .s { font-size:11px; color:var(--dim); } .line .s b { color:var(--ink); font-weight:normal; }
+  .z.pos{color:var(--realized)} .z.neg{color:var(--frustrated)}
+  @media (max-width:860px){ body{overflow:auto} .body{grid-template-columns:1fr} #map{height:62vh} .side{border-left:0;border-top:1px solid #221f19} }
+
+  .pin{display:inline-block;margin-top:.2rem;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;letter-spacing:.02em;border:1px solid transparent}
+  .pin.right{color:#e9c87a;border-color:rgba(212,170,82,.5)} .pin.wrong{color:#e8927a;border-color:rgba(176,82,58,.55)} .pin.open,.pin.unmeasured{color:#b5ae9f;border-color:rgba(138,131,120,.5)}
+  .w.pinned::after{content:' ▼';opacity:.7}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <div class="kicker" id="kicker">Parallelogram · word cloud</div>
+      <h1 id="title">—</h1>
+    </div>
+    <div class="board" id="board"></div>
+    <div class="status" id="status"></div>
+  </header>
+  <div class="body">
+    <div class="stage">
+      <div id="map"><svg id="leaders" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></svg><div id="words"></div></div>
+      <div class="controls">
+        <div class="t">UP TO <span id="dnow">—</span></div>
+        <input type="range" id="step" min="0" max="0" value="0" step="1">
+        <div class="row">
+          <label><input type="checkbox" id="showShadow" checked>shadow words (unmeasured)</label>
+          <label><input type="checkbox" id="onlyStep">only this date</label>
+          <a href="#" id="resetView" style="color:#d4a94e">reset view</a>
+          <span>colour = station · bold = denominated · dashed = no instrument · gold ring = credulity switch · squares = the body: where the object stood on this date</span>
+        </div>
+      </div>
+    </div>
+    <aside class="side">
+      <h2>The lines</h2>
+      <p class="help">Each word sits where its line sits: the speaker's corner, further out the more heated, higher the more it says the war delivered. Tap a word or a line.</p>
+      <div id="list"></div>
+    </aside>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../src/js/prism-graphmap.js?v=11"></script>
+<script>
+(async function(){
+  const id = new URLSearchParams(location.search).get('p') || 'blaming_the_messengers';
+  let D;
+  try { D = await fetch('../data/parallelograms/' + id + '.json').then(r => { if (!r.ok) throw 0; return r.json(); }); }
+  catch (e) { D = await fetch('../data/parallelograms/_preview_handcut.json').then(r => r.json()); }
+  const qs = new URLSearchParams(location.search); const ORBIT = (qs.get('orbit') || '-62,14').split(',').map(Number), ZOOM = +(qs.get('zoom') || 6.2);
+  const COL = { LI:0xb83a3a, RI:0x3868a8, LP:0x3a8a52, RP:0xb87828 };
+  const zs = z => z==null ? '—' : (z>0?'+':'') + z.toFixed(1);
+  const S = D.scoreboard, L = D.lines.filter(l => l.dia != null), steps = D.steps || [...new Set(L.map(l => l.date))].sort();
+
+  document.getElementById('title').textContent = D.title;
+  // ── the M3P (11-08): opened from the drop inside the glass, the cloud is the drop's OUT; back returns to the drop, the hold goes to the desktop ──
+  if (window.parent !== window) {
+    const tell = m => { try { window.parent.postMessage(m, '*'); } catch (e) {} };
+    tell({ type: 'g4:crumb', name: 'The Drop', fn: 'OUT', crumb: 'The Drop · the cloud · ' + D.title });
+    tell({ type: 'g4:navpos', t: 0.88 });
+    addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:nav') return; if (m.dir === 'up') tell({ type: 'g4:desk' }); else if (m.dir === 'back') history.back(); });
+  }
+  document.getElementById('board').innerHTML =
+    `<span>lines <b>${S.lines}</b></span><span>Dia <b>${S.dia}</b></span><span>read z <b>${zs(S.readZ)}</b></span>` +
+    `<span>Lumens <b>${S.lumensTracked ?? '—'}</b> (${S.measured} measured · ${S.unmeasured} unmeasured)</span>` +
+    (S.forecasts && S.forecasts.lines && S.forecasts.lines.length ? `<span>forecasts <b>${S.forecasts.lines.length}</b> (${S.forecasts.right ?? 0} right · ${S.forecasts.wrong ?? 0} wrong)</span>` : '');
+  document.getElementById('status').textContent = (D.status || '') + (D.object ? ' · object: ' + D.object : '') + (D.context ? ' · added context (labeled, never scored): ' + D.context : '');
+
+  const g = PrismGraphmap.create({ container: document.getElementById('map'), mode: 'analytical',
+    capabilities: { orbit:true, zInput:true, zRender:true, diatribeSlider:false, clustering:'individual' } });
+  g.mount(document.getElementById('map'));
+  g.setCornerLabels && g.setCornerLabels({ A:'LI', B:'RI', C:'LP', D:'RP' });
+  g.setBoundaryVisible && g.setBoundaryVisible(false);
+  g.setOrbit(ORBIT[0], ORBIT[1]); g.setZoom && g.setZoom(ZOOM);
+
+  // one dot per line; the words hang off the dot
+  let focused = -1;
+  const byLine = {};
+  L.forEach((l, k) => {
+    const c = D.cloud.find(w => w.line === l.i);
+    const pos = c ? c : { normX:.5, normY:.5, normZ:0, quadrant:'D' };
+    g.addDot(pos.normX, pos.normY, pos.quadrant, pos.normZ, { color: COL[l.station], radius: .035, label: l.who, meta: { line:l.i } });
+    byLine[l.i] = { k, l };
+  });
+  const meshes = (g.dotsGroup ? g.dotsGroup.children : []).filter(m => m.userData && m.userData.isGraphmapDot);
+  const GRAPH_SIZE = 2.8, Z_EXTENT = 2.2;
+
+  // ── the body on the graphmap (11-09): where the object actually stood, as height. One thin square per measure, at its
+  // reading as of the date shown (never a reading from after it). Only the light — the lines — went through the prism;
+  // the body has no station and no heat, so it is drawn as a level and nothing else. Its numbers are written in a line
+  // under the scoreboard, in the squares' own colours.
+  const BODYCOL = { war: 0xe8e2d6, barrel: 0xc9a06a, pump: 0xd4a94e, dollar: 0x7fa3c0, vote: 0xb9a7d8, law: 0x9fc7a8, prices: 0xd98f6a, jobs: 0xa9a9d6, mood: 0xd6c98a, lives: 0xb0523a, direction: 0xc7b8e6 };
+  let BODY = null, levels = {};
+  async function loadBody() { try { BODY = await fetch('../data/active/object.json?' + Date.now()).then(r => r.ok ? r.json() : null); } catch (e) { BODY = null; } }
+  const bodyAsOf = (m, day) => { let best = null; for (const r of m.readings) if (r[0] <= day) best = r; return best; };
+  function drawBody(day, used) {
+    if (!BODY || !g || !g.dotsGroup || !day) return;
+    const half = GRAPH_SIZE / 2, hex = c => '#' + c.toString(16).padStart(6, '0'); const parts = [];
+    BODY.body.forEach((m, n) => {
+      const r = bodyAsOf(m, day); let L = levels[m.id]; const col = BODYCOL[m.id] || 0xd4a94e; const on = !used || used.has(m.id);
+      if (!r) { if (L) L.grp.visible = false; parts.push(`<span style="opacity:.45"><i style="border-color:${hex(col)}"></i>${m.label} <b>—</b></span>`); return; }
+      if (!L || L.grp.parent !== g.dotsGroup) {
+        const grp = new THREE.Group(), h = half * (1.0 + 0.035 * n);   // each a little wider than the last, so two at one height still read as two
+        const geo = new THREE.BufferGeometry().setFromPoints([[-h, -h], [h, -h], [h, h], [-h, h], [-h, -h]].map(p => new THREE.Vector3(p[0], p[1], 0)));
+        const line = new THREE.Line(geo, new THREE.LineBasicMaterial({ color: col, transparent: true, opacity: 0.6 }));
+        grp.add(line); grp.userData.bodyLevel = m.id; g.dotsGroup.add(grp); L = levels[m.id] = { grp, line };
+      }
+      L.grp.visible = true; L.grp.position.z = r[1] * 0.75 * Z_EXTENT * 0.8; L.line.material.opacity = on ? 0.7 : 0.16;
+      parts.push(`<span style="opacity:${on ? 1 : .5}" title="${m.source.replace(/"/g, '&quot;')} — as of ${r[0]}"><i style="border-color:${hex(col)}"></i>${m.label} <b style="color:${hex(col)}">${r[1] > 0 ? '+' : ''}${r[1].toFixed(2)}</b></span>`);
+    });
+    let el = document.getElementById('bodyline');
+    if (!el) { const b = document.getElementById('board'); if (!b) return; el = document.createElement('div'); el.id = 'bodyline'; b.insertAdjacentElement('afterend', el);
+      el.style.cssText = 'display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12px;color:#8a8375;margin-top:4px;align-items:baseline';
+      const st = document.createElement('style'); st.textContent = '#bodyline i{display:inline-block;width:9px;height:9px;border:1.5px solid;margin-right:5px;vertical-align:-1px}#bodyline b{font-weight:normal;font-size:14px}'; document.head.appendChild(st); }
+    el.innerHTML = `<span>the body on ${day} —</span>` + parts.join('') + `<span style="opacity:.6">squares on the map, at these heights</span>`;
+  }
+
+  // ── the forecast pin (11-09): where the object's body stood when the forecast came due, pinned under (or over) the line's own dot ──
+  const PINCOL = { right: 0xd4aa52, wrong: 0xb0523a, open: 0x8a8378 };
+  const pinWord = f => (f.result || 'open').replace(' so far', '');
+  function pinColor(f) { const w = pinWord(f); return PINCOL[w] || PINCOL.open; }
+  function drawPin(l, f, pos) {   // pos: the line's dot in normalized plane coords {x, y, q, z (normZ)}
+    const at = f.atDue || f.latest; if (!at || at.z == null || !g.addDot) return null;
+    const nz = at.z * 0.75, col = pinColor(f);
+    g.addDot(pos.x, pos.y, pos.q, nz, { color: col, radius: .02, label: (f.state ? (f.negated ? 'not ' : '') + f.state : (l.measure || l.tracker)) + ' · ' + (f.judgedOn || (f.atDue && f.atDue.date) || 'now'), meta: { pin: l.i } });
+    const ms = (g.dotsGroup ? g.dotsGroup.children : []).filter(m => m.userData && m.userData.isGraphmapDot); const pin = ms[ms.length - 1];
+    if (pin && pin.material) { if (pin.material.emissive) pin.material.emissive.set(col); pin.material.transparent = true; pin.material.opacity = f.cameDue ? 0.95 : 0.55; }
+    const a = new THREE.Vector3((pos.x - 0.5) * GRAPH_SIZE, (0.5 - pos.y) * GRAPH_SIZE, (pos.z || 0) * Z_EXTENT * 0.8);
+    const b = new THREE.Vector3(a.x, a.y, nz * Z_EXTENT * 0.8);
+    const geo = new THREE.BufferGeometry().setFromPoints([a, b]);
+    const line = new THREE.Line(geo, new THREE.LineDashedMaterial({ color: col, dashSize: 0.05, gapSize: 0.035, transparent: true, opacity: 0.8 }));
+    line.computeLineDistances(); line.userData.pinFor = l.i; g.dotsGroup.add(line);
+    return pin;
+  }
+  const pinNote = (f, z) => `<span class="pin ${pinWord(f)}">▼ forecast · ${f.state ? (f.negated ? 'not ' : '') + f.state : 'the ' + (f.tracker || '')}` +
+    ` · due ${f.due}${f.dueFrom ? ' (' + f.dueFrom + ')' : ''} · <b>${f.result || 'open'}</b>` +
+    `${f.gap != null ? ' · gap ' + f.gap : ''}${f.exposure != null ? ' · exposure ' + f.exposure : ''}${f.gapNow != null ? ' · now ' + (f.gapNow > 0 ? '+' : '') + f.gapNow : ''}</span>`;
+  // every forecast line gets its pin (after the line dots, so the dot indices above stay put)
+  await loadBody(); const USED = new Set(L.map(l => l.measure || l.tracker || l.gear));
+  const pins = {};
+  L.filter(l => l.forecast).forEach(l => { const c = D.cloud.find(w => w.line === l.i); if (!c) return; const f = l.forecast; f.tracker = f.tracker || l.measure || l.tracker;
+    pins[l.i] = drawPin(l, f, { x: c.normX, y: c.normY, q: c.quadrant, z: c.normZ }); });
+
+  // words — HTML labels projected from their line's dot every frame
+  const wordsEl = document.getElementById('words'), list = document.getElementById('list');
+  const perLine = {};
+  const W = D.cloud.map(w => {
+    const el = document.createElement('div'); const n = (perLine[w.line] = (perLine[w.line] || 0) + 1) - 1;
+    el.className = `w ${w.station} ${w.tier}` + ((w.measure||w.tracker||w.gear) === 'shadow' || w.about === 'shadow' ? ' shadow' : '') + (w.gnostic ? ' gnostic' : '');
+    el.textContent = w.text; el.title = `${w.who} · ${w.date} · Dia ${w.dia} · z ${zs(w.z)} · ${(w.measure||w.tracker||w.gear)}${(w.lumens ?? w.light) === 'unmeasured' ? ' · unmeasured' : ''}`;
+    el.addEventListener('click', () => focus(w.line, true));
+    wordsEl.appendChild(el); return { w, el, n };
+  });
+  W.forEach(o => { if (pins[o.w.line]) o.el.classList.add('pinned'); });
+  const v = new THREE.Vector3(), cam = g.getCamera(), svg = document.getElementById('leaders');
+  // labels: anchored at their line's dot, pushed apart so none overlap, with a thin leader line back to the dot
+  let planeMesh = null;
+  function frame(){
+    const r = wordsEl.getBoundingClientRect(), GAP = 21;
+    // the graphmap may offset or size its canvas differently from the label layer: project onto the canvas's real box
+    const cvs = document.querySelector('#map canvas'); const cr = cvs ? cvs.getBoundingClientRect() : r;
+    const sx = x => cr.left - r.left + (x + 1) / 2 * cr.width, sy = y => cr.top - r.top + (1 - y) / 2 * cr.height;
+    const live = W.filter(o => !o.el.classList.contains('hidden'));
+    W.forEach(o => { const m = meshes[byLine[o.w.line] ? byLine[o.w.line].k : -1]; if (!m) { o.ok = false; return; }
+      m.getWorldPosition(v); v.project(cam); o.ok = v.z < 1; o.ax = sx(v.x); o.ay = sy(v.y); });
+    // the plane's footprint on screen, whatever the angle: labels go in two columns OUTSIDE it, never over it
+    let pxMin = 1e9, pxMax = -1e9;
+    if (!planeMesh) { let best = 0; g.getGroup().traverse(o => { const p = o.isMesh && o.geometry && o.geometry.parameters; if (p && p.width && p.height && p.width * p.height > best) { best = p.width * p.height; planeMesh = o; } }); }
+    if (planeMesh) { const pw = planeMesh.geometry.parameters.width / 2, ph = planeMesh.geometry.parameters.height / 2;
+      [[-pw, -ph], [pw, -ph], [-pw, ph], [pw, ph]].forEach(([a, b]) => { v.set(a, b, 0); planeMesh.localToWorld(v); v.project(cam); const x = sx(v.x); pxMin = Math.min(pxMin, x); pxMax = Math.max(pxMax, x); }); }
+    W.forEach(o => { if (o.ok) { pxMin = Math.min(pxMin, o.ax); pxMax = Math.max(pxMax, o.ax); } });
+    const cx = (pxMin + pxMax) / 2, fits = Math.floor((r.height - 20) / GAP);
+    const colX = { '-1': Math.max(8, pxMin - 18), '1': Math.min(r.width - 8, pxMax + 18) };
+    // a crowded column spills into the other one (alternating down the column), so no label leaves the frame
+    const home = live.filter(o => o.ok);
+    const bySide = { '-1': [], '1': [] };
+    home.forEach(o => bySide[o.ax < cx ? '-1' : '1'].push(o));
+    ['-1', '1'].forEach(sd => { const g0 = bySide[sd]; if (g0.length > fits) { g0.sort((a, b) => a.ay - b.ay || a.n - b.n); g0.forEach((o, k) => { if (k % 2) { bySide[sd === '-1' ? '1' : '-1'].push(o); o.spill = true; } else o.spill = false; }); bySide[sd] = g0.filter(o => !o.spill); } else g0.forEach(o => { o.spill = false; }); });
+    [-1, 1].forEach(side => {
+      const grp = bySide[String(side)].sort((a, b) => a.ay - b.ay || a.n - b.n);
+      let y = -1e9;
+      grp.forEach(o => { o.ly = Math.max(o.ay, y + GAP); y = o.ly; });
+      const over = y - (r.height - 14); if (over > 0) grp.forEach(o => { o.ly -= over; });
+      const under = 14 - (grp.length ? grp[0].ly : 14); if (under > 0) grp.forEach(o => { o.ly += under; });
+      // never let a label run out of the frame: if the column is too close to the edge, slide it in (it may then touch the plane)
+      const need = Math.max(0, ...grp.map(o => o.el.offsetWidth || 0)) + 10;
+      const x0 = side < 0 ? Math.max(colX['-1'], need) : Math.min(colX['1'], r.width - need);
+      grp.forEach(o => { o.lx = x0; o.side = side; });
+    });
+    let lines = '';
+    W.forEach(o => {
+      if (!o.ok || o.lx == null) return;
+      o.el.style.left = o.lx + 'px'; o.el.style.top = o.ly + 'px';
+      o.el.style.transform = o.side < 0 ? 'translate(-100%,-50%)' : 'translate(0,-50%)';
+      if (!o.el.classList.contains('hidden')) {
+        const col = { LI:'#e48a8a', RI:'#8fb0e0', LP:'#8fcf9f', RP:'#e8b56c' }[o.w.station];
+        lines += `<path d="M${o.ax.toFixed(1)},${o.ay.toFixed(1)} L${(o.lx - o.side * 6).toFixed(1)},${o.ly.toFixed(1)}" stroke="${col}" stroke-opacity="${o.w.line === focused ? .9 : .32}" fill="none" stroke-width="1"${(o.w.measure||o.w.tracker||o.w.gear) === 'shadow' ? ' stroke-dasharray="3 3"' : ''}/>`;
+      }
+    });
+    svg.innerHTML = lines;
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+
+  // the line list
+  const cards = {};
+  L.slice().sort((a, b) => (a.date + a.i).localeCompare(b.date + b.i)).forEach(l => {
+    const d = document.createElement('div'); d.className = 'line';
+    d.innerHTML = `<div class="meta"><span class="chip ${l.station}">${l.station}</span><span>@${l.who}</span><span>${l.date}</span><span>${(l.measure||l.tracker||l.gear)}${(l.lumens ?? l.light)==='unmeasured'?' · unmeasured':''}</span>${l.credulity && l.credulity!=='none'?'<span style="color:var(--gold)">credulity '+l.credulity+'</span>':''}${l.room!=null?'<span title="the line z minus the room z that day">room '+(l.room>0?'+':'')+l.room+'</span>':''}</div>${l.forecast ? pinNote(l.forecast) : ''}` +
+      `<q>${l.quote}</q><div class="s">Dia <b>${l.dia}</b> · ${l.tier} · <span class="z ${l.z>=0?'pos':'neg'}">z ${zs(l.z)}</span> · ${l.touch} · lumens <b>${l.lumens ?? l.light}</b></div>`;
+    d.addEventListener('click', () => focus(l.i, false)); list.appendChild(d); cards[l.i] = d;
+  });
+
+  // time
+  const stepEl = document.getElementById('step'), dnow = document.getElementById('dnow');
+  stepEl.max = steps.length - 1; stepEl.value = steps.length - 1;
+    function apply(){
+    const s = +stepEl.value, only = document.getElementById('onlyStep').checked, sh = document.getElementById('showShadow').checked;
+    dnow.textContent = steps[s]; drawBody(steps[s], USED);
+    W.forEach(o => {
+      const on = only ? o.w.step === s : o.w.step <= s;
+      const shadowOff = !sh && ((o.w.measure||o.w.tracker||o.w.gear) === 'shadow' || o.w.about === 'shadow');
+      const extra = o.n > 0 && o.w.line !== focused;   // one phrase per line; the rest appear when the line is tapped
+      o.el.classList.toggle('hidden', !on || shadowOff || extra); o.el.classList.toggle('focus', o.w.line === focused);
+    });
+    L.forEach(l => { const k = byLine[l.i].k; const st = steps.indexOf(l.date); const on = only ? st === s : st <= s; g.setDotVisible && g.setDotVisible(k, on); g.setDotEmphasis && g.setDotEmphasis(k, l.i === focused ? 1.8 : 1); });
+  }
+  function focus(i, scroll){ focused = i; Object.entries(cards).forEach(([k, c]) => c.classList.toggle('active', +k === i)); if (scroll && cards[i]) cards[i].scrollIntoView({ block:'center', behavior:'smooth' }); apply(); }
+  document.getElementById('resetView').addEventListener('click', e => { e.preventDefault(); g.setOrbit(ORBIT[0], ORBIT[1]); g.setZoom && g.setZoom(ZOOM); });
+  stepEl.addEventListener('input', apply); document.getElementById('onlyStep').addEventListener('change', apply); document.getElementById('showShadow').addEventListener('change', apply);
+  apply();
+  window.__cloud = { D, W, g };
+})();
+</script>
+</body>
+</html>

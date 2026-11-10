@@ -33,6 +33,7 @@ async function getJSON(url, tries = 3) {
       if (res.status === 429 || res.status >= 500) { last = 'HTTP ' + res.status; await sleep(3000 * (i + 1)); continue; }
       if (!res.ok) throw new Error('HTTP ' + res.status + ' ' + txt.slice(0, 160));
       if (!txt.trim()) return null;   // Census answers 204/empty when nothing matches
+      if (/^\s*</.test(txt)) throw new Error('the server answered with a page, not data: ' + txt.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 180));
       return JSON.parse(txt);
     } catch (e) { last = e.message; if (i === tries - 1) break; await sleep(1500 * (i + 1)); }
   }

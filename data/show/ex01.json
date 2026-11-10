@@ -1,7 +1,7 @@
 {
  "schema": "show/episode/v2",
  "show": "The Parallelogram Report",
- "aspect": "16:9",
+ "aspect": "9:16",
  "fps": 30,
  "endHold": 1.0,
  "voice": {
@@ -14,7 +14,7 @@
  },
  "id": "ex01",
  "title": "Explainer · Watch the Barrel (the Supply Shock Tracker)",
- "notes": "11-05. The supply shock tracker explainer, 3–5 min (handoff 2026-11-04 §3A). Script: data/show/ex01_script_v2.md. No tape. The globe stands still on the pedestal the whole way (globe: true, globeTurn: 0); globeMonth (new, dream-news.js) holds it on the month Ted reads. Stills in ex01/stills, drawn from data/active as fetched 11-06 (August in).",
+ "notes": "11-05. The supply shock tracker explainer, 3–5 min (handoff 2026-11-04 §3A). Script: data/show/ex01_script_v3.md. No tape. The globe stands still on the pedestal the whole way (globe: true, globeTurn: 0); globeMonth (new, dream-news.js) holds it on the month Ted reads. Stills in ex01/stills, drawn from data/active as fetched 11-06 (August in). 11-06: tedWalk (dream-news.js) — Ted walks from the desk to the globe on q_who and stays; the picture resolves as he arrives (trackerResolveShow). 11-06 (v3): the M3P (m3p/m3pScreen/m3pText/m3pHi), globeFocus and tedFrame (two/far/head); 9:16 for Twitter; stills and the quote card retired — the M3P carries them.",
  "pieces": [],
  "clips": {},
  "blocks": [
@@ -31,7 +31,8 @@
      "ted": "map",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "m3p": "off"
     },
     {
      "id": "q_noise",
@@ -51,7 +52,9 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "tedWalk": "pedestal",
+     "note": "Ted gets up and walks from the desk to the globe on the pedestal (11-06, Sailor); he stays there for the rest"
     }
    ]
   },
@@ -78,7 +81,56 @@
      "ted": "map",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "globeFocus": [
+      25,
+      52,
+      2.6
+     ],
+     "m3p": "low",
+     "m3pText": "<span style=\"color:#d4aa52\">gold</span> · paid in dollars &nbsp; <span style=\"color:#8aa2ff\">blue</span> · not &nbsp; <span style=\"color:#aab0bd\">dashed</span> · nobody can say"
+    },
+    {
+     "id": "g_m3p",
+     "type": "text",
+     "text": "It's a lot to take in. So here's the M3P. The Mark III Prism. A terminal station, running Prism, from Pacifica Dialectics.",
+     "caption": "The M3P",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "globeFocus": null,
+     "m3p": "dock",
+     "m3pScreen": "intro"
+    },
+    {
+     "id": "g_signals",
+     "type": "text",
+     "text": "It takes in signals. Where the oil went. What got hit. What it cost. What people said about it. And it refracts them, the way a prism splits light, into something you can actually read.",
+     "caption": "Signals in, light out",
+     "ted": "camera",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "m3pScreen": "signals",
+     "m3pHi": -1
+    },
+    {
+     "id": "g_fires",
+     "type": "text",
+     "text": "These fires are refineries that got hit this fall. Riyadh. Rabigh. Ras Tanura. The satellites see the fire. We check it against the reports.",
+     "caption": "What got hit",
+     "ted": "map",
+     "globe": true,
+     "globeTurn": 0,
+     "globeMonth": "2026-08",
+     "globeFocus": [
+      24,
+      45,
+      2.6
+     ],
+     "m3pScreen": "strikes",
+     "m3pHi": -1
     },
     {
      "id": "g_money",
@@ -88,39 +140,23 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
-    },
-    {
-     "id": "g_flows",
-     "type": "text",
-     "text": "The tracker has three layers. First, the flows. Where the barrels actually went, month by month. What really happened.",
-     "caption": "One · the flows",
-     "ted": "map",
-     "globe": true,
-     "globeTurn": 0,
-     "note": "no globeMonth: the month clock runs while Ted says month by month"
-    },
-    {
-     "id": "g_events",
-     "type": "text",
-     "text": "Second, the events. Strikes, seizures, sanctions, licenses. Each gets two dates: the day it happened, and the day we heard about it.",
-     "caption": "Two · the events",
-     "ted": "camera",
-     "globe": true,
-     "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "globeFocus": null,
+     "tedFrame": "head",
+     "m3pScreen": "signals",
+     "m3pHi": 0
     },
     {
      "id": "g_price",
      "type": "text",
-     "text": "Third, the price. Everyone's shouting about it, so we keep it. But last. The price is the shadow. The barrel is the thing.",
-     "caption": "Three · the price is the shadow",
+     "text": "The price is what everyone shouts about. It's the shadow. The barrel is the thing.",
+     "caption": "The shadow",
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-08",
-     "still": "ex01_shadow",
-     "stillCaption": "Brent and gas, EIA weekly"
+     "tedFrame": "two",
+     "m3pScreen": "shadow"
     }
    ]
   },
@@ -130,16 +166,6 @@
    "clip": true,
    "beats": [
     {
-     "id": "r_now",
-     "type": "text",
-     "text": "The official numbers run behind. The latest full month is August.",
-     "caption": "The latest full month: August",
-     "ted": "map",
-     "globe": true,
-     "globeTurn": 0,
-     "globeMonth": "2026-08"
-    },
-    {
      "id": "r_panel",
      "type": "text",
      "text": "We read five big buyers. Last October, ninety-one percent of the oil they bought was sold in dollars. In August, ninety.",
@@ -148,8 +174,7 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2025-10",
-     "still": "ex01_needle",
-     "stillCaption": "Five buyers · Oct 2025 → Aug 2026"
+     "m3pScreen": "needle"
     },
     {
      "id": "r_needle",
@@ -160,8 +185,7 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-07",
-     "still": "ex01_needle",
-     "stillCaption": "Five buyers · Oct 2025 → Aug 2026"
+     "m3pScreen": "needle"
     },
     {
      "id": "r_gulf",
@@ -172,8 +196,13 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-07",
-     "still": "ex01_america",
-     "stillCaption": "US crude imports by origin · EIA"
+     "globeFocus": [
+      27,
+      51,
+      2.2
+     ],
+     "m3p": "low",
+     "m3pText": "The Gulf → America: <b>8%</b> last fall · <b>zero</b> in July"
     },
     {
      "id": "r_ven",
@@ -184,8 +213,13 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-07",
-     "still": "ex01_america",
-     "stillCaption": "US crude imports by origin · EIA"
+     "globeFocus": [
+      10,
+      -67,
+      2.4
+     ],
+     "m3p": "dock",
+     "m3pScreen": "america"
     },
     {
      "id": "r_money",
@@ -195,7 +229,9 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-07"
+     "globeMonth": "2026-07",
+     "globeFocus": null,
+     "m3pScreen": "america"
     },
     {
      "id": "r_russia",
@@ -206,8 +242,12 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-07",
-     "still": "ex01_russia_india",
-     "stillCaption": "India's customs count · Comtrade"
+     "globeFocus": [
+      38,
+      62,
+      3.4
+     ],
+     "m3pScreen": "russia"
     },
     {
      "id": "r_august",
@@ -218,8 +258,12 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-08",
-     "still": "ex01_russia_india",
-     "stillCaption": "India's customs count · Comtrade"
+     "globeFocus": [
+      28,
+      52,
+      2.8
+     ],
+     "m3pScreen": "russia"
     },
     {
      "id": "r_both",
@@ -229,7 +273,10 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "globeFocus": null,
+     "tedFrame": "head",
+     "m3pScreen": "needle"
     }
    ]
   },
@@ -246,7 +293,10 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "tedFrame": "two",
+     "m3pScreen": "signals",
+     "m3pHi": 3
     },
     {
      "id": "c_diesel",
@@ -257,11 +307,8 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-08",
-     "quote": {
-      "text": "Russia will immediately supply 300,000 tons… 500,000 in November.",
-      "who": "Donald Trump",
-      "src": "Oct 11, 2026"
-     }
+     "m3pScreen": "diesel",
+     "tedFrame": "head"
     },
     {
      "id": "c_file",
@@ -271,7 +318,8 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "m3pScreen": "diesel"
     },
     {
      "id": "c_scored",
@@ -281,7 +329,9 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "tedFrame": "two",
+     "m3pScreen": "diesel"
     }
    ]
   },
@@ -298,7 +348,8 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "m3pScreen": "bet"
     },
     {
      "id": "o_call",
@@ -309,8 +360,7 @@
      "globe": true,
      "globeTurn": 0,
      "globeMonth": "2026-08",
-     "still": "ex01_america",
-     "stillCaption": "US crude imports by origin · EIA"
+     "m3pScreen": "bet"
     },
     {
      "id": "o_out",
@@ -320,9 +370,13 @@
      "ted": "camera",
      "globe": true,
      "globeTurn": 0,
-     "globeMonth": "2026-08"
+     "globeMonth": "2026-08",
+     "m3p": "off"
     }
    ]
   }
- ]
+ ],
+ "kicker": "Explainer",
+ "headline": "Watch the Barrel",
+ "dek": "Is more of the world's oil being sold in dollars this year, or less? A walk through the Supply Shock Tracker — and the M3P, the terminal that reads it."
 }

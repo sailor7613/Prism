@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prism</title>
+<!-- Prism, the instrument (11-10) — an interim landing until the physical model is built. Left to right it is the triptych:
+     THE OBJECT (the source of the beam: its body, its topic) → THE PRISM (pass a set through: the drop) →
+     THE REFRACTION (what has been thrown onto the graphmap: every parallelogram on file).
+     Reads data/active/object.json and data/parallelograms/index.json; nothing is computed here but pixels.
+     In the M3P: route #prism. The earlier Prism (Readings and pins) is linked at the foot. -->
+<style>
+  :root { --paper:#0c0b09; --paper-2:#14120e; --ink:#e8e2d6; --dim:#8a8375; --ghost:#55503f; --gold:#d4a94e; --ember:#c9664a; --LP:#8fcf9f; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { min-height:100%; }
+  body { background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; line-height:1.45; }
+  header { padding:74px 22px 8px; text-align:center; }   /* room for the prism on its line */
+  .kicker { font-size:11px; letter-spacing:.18em; color:var(--gold); text-transform:uppercase; }
+  h1 { font-size:clamp(22px,3vw,34px); font-weight:normal; margin:4px 0 6px; }
+  .lede { font-size:13px; color:var(--dim); max-width:70ch; margin:0 auto; } .lede b { color:var(--ink); font-weight:normal; }
+  main { padding:18px 22px 30px; display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:18px; max-width:1240px; margin:0 auto; }
+  .col { background:var(--paper-2); border:1px solid #1e1b15; border-radius:8px; padding:14px 16px 12px; display:flex; flex-direction:column; min-width:0; }
+  .col .step { font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ghost); }
+  .col h2 { font-weight:normal; font-size:21px; margin:2px 0 2px; } .col .what { font-size:12.5px; color:var(--dim); margin-bottom:10px; }
+  .go { display:inline-block; margin-top:auto; padding:8px 14px; border:1px solid rgba(212,169,78,.55); border-radius:6px; color:var(--gold); text-decoration:none; font-size:13px; letter-spacing:.04em; align-self:flex-start; }
+  .go:hover, .go:focus-visible { background:rgba(212,169,78,.1); }
+  .rows { margin:2px 0 12px; font-size:12.5px; }
+  .rows a, .rows div.r { display:flex; justify-content:space-between; gap:10px; padding:4px 0; border-top:1px solid #1e1b15; color:var(--ink); text-decoration:none; }
+  .rows a:hover span:first-child { color:var(--gold); }
+  .rows span.v { color:var(--dim); white-space:nowrap; } .rows span.v b { font-weight:normal; color:var(--ink); } .rows .neg b { color:var(--ember); } .rows .pos b { color:var(--LP); }
+  .sub { font-size:10.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ghost); margin:8px 0 2px; }
+  footer { padding:0 22px 30px; text-align:center; font-size:12px; color:var(--ghost); } footer a { color:var(--dim); }
+  @media (max-width:860px) { main { grid-template-columns:1fr; } header { padding-top:66px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Prism · the instrument</div>
+  <h1>An object, a prism, and what it throws</h1>
+  <div class="lede">The <b>object</b> is the political economy. Its talk — a parallelogram of it — goes through the <b>prism</b>, and lands on the <b>graphmap</b> by who said it, how hot, and what it claimed. What is measured of the object stands behind it as height.</div>
+</header>
+<main>
+  <section class="col" id="cObject">
+    <div class="step">1 · the source</div><h2>The Object</h2>
+    <div class="what" id="oWhat">the political economy — its body, and the topic it is being felt through now</div>
+    <div class="rows" id="oRows"></div>
+    <a class="go" href="object.html">open the Object →</a>
+  </section>
+  <section class="col">
+    <div class="step">2 · the prism</div><h2>The Drop</h2>
+    <div class="what">Pass a set through. Paste posts, a transcript, a headline — one speaker or many — and watch it read: the lines, the scores, the forecasts pinned to where the object actually stood.</div>
+    <div class="rows"><div class="r"><span>grammar → relational test → second pass → the body, as of each line's date</span></div><div class="r"><span>runs on this Mac; a set of twenty posts takes a couple of minutes</span></div></div>
+    <a class="go" href="drop.html">pass a set through →</a>
+  </section>
+  <section class="col">
+    <div class="step">3 · the refraction</div><h2>On the graphmap</h2>
+    <div class="what">Every parallelogram that has been passed through, as it landed.</div>
+    <div class="sub">records and sets</div><div class="rows" id="pRows"></div>
+    <div class="sub" id="roomSub" hidden>the room, day by day</div><div class="rows" id="rRows"></div>
+  </section>
+</main>
+<footer>The earlier Prism — Readings to respond to, pins on the graphmap — is still here: <a href="../app/">the workstation</a>. A pin is a line; it will be read the same way.</footer>
+<script>
+(async () => {
+  const zs = z => z == null ? '—' : (z > 0 ? '+' : '') + Number(z).toFixed(2);
+  const cls = z => z == null ? '' : z > 0.02 ? 'pos' : z < -0.02 ? 'neg' : '';
+  try {
+    const T = await fetch('../data/active/object.json?' + Date.now()).then(r => r.json());
+    document.getElementById('oWhat').textContent = T.object + ' — ' + T.measures.length + ' measures on file · the topic now: ' + T.topic.label + ' (' + T.topic.ledger.length + ' ledger entries, to ' + T.topic.ledger[T.topic.ledger.length - 1][0] + ')';
+    document.getElementById('oRows').innerHTML = T.body.map(b => { const r = b.readings[b.readings.length - 1];
+      return `<a href="object.html"><span>${b.label}</span><span class="v ${r ? cls(r[1]) : ''}">${r ? '<b>' + zs(r[1]) + '</b> · ' + r[0].slice(5) : 'no z yet'}</span></a>`; }).join('');
+  } catch (e) { document.getElementById('oRows').innerHTML = '<div class="r"><span>the object file could not be read</span></div>'; }
+  try {
+    const I = await fetch('../data/parallelograms/index.json?' + Date.now()).then(r => r.json());
+    const row = p => `<a href="cloud.html?p=${encodeURIComponent(p.id)}"><span>${p.title}</span><span class="v">${p.lines} lines · Dia <b>${p.dia}</b> · z <b>${zs(p.readZ)}</b>${p.lumens != null ? ' · Lumens <b>' + p.lumens + '</b>' : ''}</span></a>`;
+    const sets = I.sets.filter(p => !p.room), rooms = I.sets.filter(p => p.room);
+    document.getElementById('pRows').innerHTML = sets.map(row).join('') || '<div class="r"><span>nothing passed through yet</span></div>';
+    if (rooms.length) { document.getElementById('roomSub').hidden = false;
+      document.getElementById('rRows').innerHTML = rooms.slice(-8).reverse().map(p => `<a href="cloud.html?p=${encodeURIComponent(p.id)}"><span>${p.date}</span><span class="v ${cls(p.readZ)}">${p.lines} lines · z <b>${zs(p.readZ)}</b></span></a>`).join(''); }
+  } catch (e) { document.getElementById('pRows').innerHTML = '<div class="r"><span>no index of parallelograms yet — run the object build</span></div>'; }
+  // the M3P: a program in the glass — the prism rides at the centre of its line here
+  if (window.parent !== window) {
+    const tell = m => { try { window.parent.postMessage(m, '*'); } catch (e) {} };
+    tell({ type: 'g4:crumb', name: 'Prism', fn: '', crumb: 'Prism · the instrument' }); tell({ type: 'g4:navpos', t: 0.5 });
+    addEventListener('message', e => { const m = e.data || {}; if (m.type === 'g4:nav' && (m.dir === 'up' || m.dir === 'back')) tell({ type: 'g4:desk' }); });
+  }
+})();
+</script>
+</body>
+</html>
