@@ -2,8 +2,8 @@
 
 Register: 155 objects · this scan: 0 new, 0 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Survivor Justice Tax Prevention Act — Senate cloture on the motion to proceed (Cloture on the Motion to Proceed Agreed to)** — bill · voted · holder: the Senate · formed 2026-11-09 · 0 outlets (peak 0) · `obj_bill_hr-119-2347`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - none today
