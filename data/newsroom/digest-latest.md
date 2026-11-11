@@ -1,18 +1,23 @@
-# Newsroom digest — 2026-11-10
+# Newsroom digest — 2026-11-11
 
-Register: 155 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 159 objects · this scan: 4 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (3)
+- **House votes to effectively end the impeachment effort against Pete Hegseth** — ruling · ruled · holder: the Pentagon · formed 2026-11-11 · 20 outlets (peak 20) · `obj_thepenta_against-effectively-effort-end`
+- **Kennedy family joins lawsuit to block Trump arch** — ruling · ruled · holder: HHS · formed 2026-11-11 · 7 outlets (peak 7) · `obj_hhs_arch-block-family-joins`
+- **Judge weighs lawsuit brought by Peltola campaign over absentee ballots in Alaska US Senate race** — suit · sued · holder: a federal court · formed 2026-11-11 · 5 outlets (peak 5) · `obj_afederal_absentee-alaska-ballots-brought`
 
 ## Permanence breaks (went silent while unresolved)
-- none today
+- **DOJ Seeks To Overturn Steve Bannon Conviction** — ruling · ruled · holder: the Justice Department · formed 2026-11-06 · 14 outlets (peak 17) · `obj_thejusti_bannon-conviction-doj-overturn` · silent 5d after 2 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- none
+- **House votes to effectively end the impeachment effort against Pete Hegseth** — ruling · ruled · holder: the Pentagon · formed 2026-11-11 · 20 outlets (peak 20) · `obj_thepenta_against-effectively-effort-end`
+- **Kennedy family joins lawsuit to block Trump arch** — ruling · ruled · holder: HHS · formed 2026-11-11 · 7 outlets (peak 7) · `obj_hhs_arch-block-family-joins`
+- **Federal government failed to hold Epstein accountable , Republican committee says** — vote · voted · holder: ? · formed 2026-11-11 · 14 outlets (peak 14) · `obj_x_accountable-committee-epstein-failed`
+- **Judge weighs lawsuit brought by Peltola campaign over absentee ballots in Alaska US Senate race** — suit · sued · holder: a federal court · formed 2026-11-11 · 5 outlets (peak 5) · `obj_afederal_absentee-alaska-ballots-brought`
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
