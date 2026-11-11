@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────────────
+# chamber watch — the Object's chamber, kept close to live (2026-11-11).
+#
+# Every ten minutes while Congress may be voting, this looks for roll calls the
+# last full sweep has not seen. The House Clerk and the Senate publish each roll
+# call as its own small file, with no key and no quota, so a check that finds
+# nothing costs a handful of requests. When there is a new one it rebuilds
+# data/active/chamber.json (about 110 KB) and commits that one file — never the
+# 6 MB votes file; the three-hourly scan still owns that.
+#
+# It starts from the full sweep's last checkpoint and does not save its own, so
+# a new vote is fetched again by each check until the next full sweep takes it in.
+# That is a few extra requests, and it keeps this job from leaving anything behind.
+#
+# Honest timing: GitHub runs a ten-minute schedule late when it is busy. Expect a
+# new vote to show in 10–20 minutes, sometimes longer.
+# Hours: 9am–1am Eastern, Monday–Friday (in UTC below; shift an hour in summer).
+# ─────────────────────────────────────────────────────────────────────
+name: chamber watch
+
+on:
+  schedule:
+    - cron: '3-59/10 14-23 * * 1-5'
+    - cron: '3-59/10 0-5 * * 2-6'
+  workflow_dispatch: {}
+
+concurrency:
+  group: scan                  # shares the scan's lane: the two never sweep at once
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      # the full sweep's newest checkpoint — read, never written
+      - uses: actions/cache/restore@v4
+        with:
+          path: data/votes_checkpoint.json
+          key: votes-checkpoint-watch-${{ github.run_id }}
+          restore-keys: |
+            votes-checkpoint-
+
+      - name: Look for new roll calls
+        env:
+          VOTES_LIMIT: '60'
+        run: node scripts/fetch-votes.js || echo "the sweep hiccuped — the last chamber stands"
+
+      - name: Rebuild the chamber
+        run: python3 scripts/chamber-build.py || echo "the chamber was not rebuilt — the last one stands"
+
+      - name: Commit the chamber if it changed
+        run: |
+          git config user.name  "prism-scan"
+          git config user.email "prism-scan@users.noreply.github.com"
+          git add data/active/chamber.json
+          if git diff --cached --quiet; then
+            echo "no new roll call"
+          else
+            git commit -m "chamber: new roll call"
+            git reset --hard HEAD            # drop the runner's copies of the votes files; the scan owns those
+            git pull --rebase origin main
+            git push origin main
+          fi

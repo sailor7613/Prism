@@ -1548,6 +1548,7 @@
     <button class="ui-btn" id="nav-easel" onclick="navTo('Easel')" title="The easel — the case studies, on parchment">🖼 The Easel</button>
     <button class="ui-btn" id="nav-tracker" onclick="pedestalShow('tracker'); navTo('Tracker')" title="The Supply Shock Tracker — where America’s imported oil comes from, and what that does to the dollar, read plainly on the main pedestal">◉ The Tracker</button>
     <button class="ui-btn" id="nav-graphmap" onclick="pedestalShow('graphmap'); navTo('Graphmap')" title="The graphmap — the field where a trace stands">✳ The Graphmap</button>
+    <button class="ui-btn" id="nav-object" onclick="showObject()" title="The Object — the political economy on the pedestal, its light through the prism, onto the pool">◍ The Object</button>
     <button class="ui-btn" id="nav-g4" onclick="navTo('iMac G4')" title="The G4 — the villa's one computer">🖥 The G4</button>
   </div>
   <div class="cmp-view" id="cmp-places"></div>
@@ -1901,6 +1902,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="../src/js/prism-light.js?v=3"></script>  <!-- THE LIGHT: the beam + spectrum shared with the g4 navtool (2026-10-18) -->
+<script src="../src/js/prism-model.js?v=1"></script>   <!-- PRISM'S PHYSICAL MODEL (11-10): the Object, the prism, the map on the pool -->
 <script src="satellite.min.js"></script>
 <script>
 // ============================================================
@@ -5009,20 +5011,41 @@ const foam = (function buildFoamRibbon() {
 // river (the drawn ruling): the river runs, the pool holds — reflection
 // requires stillness. One ribbon mesh, flow is shader-side (uTime only).
 // ============================================================
+// (2026-11-10, Sailor: "can we make the river water better?") The first water was one sine stripe sliding down a
+// flat blue. This one is still one ribbon and one clock, but it reads as water: it runs faster mid-stream than at
+// the banks; it is deep and dark in the channel and pale over the shallows; its surface is drawn by two sizes of
+// drifting ripple, stretched along the flow; it takes the sky's sheen where you see it at a low angle; a broken
+// line of foam works along each bank; and its edge feathers into the ground instead of ending in a stripe.
+// uLight lowers it with the room (the Object's nocturne).
 const riverMat = new THREE.ShaderMaterial({
   transparent: true, depthWrite: false, side: THREE.DoubleSide,
-  uniforms: { uTime: { value: 0 } },
-  vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
+  uniforms: { uTime: { value: 0 }, uLight: { value: 1 } },
+  vertexShader: 'varying vec2 vUv; varying vec3 vW; void main(){ vUv = uv; vec4 w = modelMatrix * vec4(position, 1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }',
   fragmentShader: [
-    'varying vec2 vUv; uniform float uTime;',
+    'varying vec2 vUv; varying vec3 vW; uniform float uTime; uniform float uLight;',
+    'float h2(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }',
+    'float n2(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);',
+    '  return mix(mix(h2(i), h2(i + vec2(1.0, 0.0)), f.x), mix(h2(i + vec2(0.0, 1.0)), h2(i + vec2(1.0, 1.0)), f.x), f.y); }',
+    'float fbm(vec2 p){ return n2(p) * 0.55 + n2(p * 2.07 + 11.3) * 0.30 + n2(p * 4.31 + 5.1) * 0.15; }',
     'void main(){',
-    '  float flow = vUv.y - uTime * 0.32;',
-    '  float streak = sin(flow * 22.0 + sin(vUv.x * 11.0) * 1.4) * 0.5 + 0.5;',
-    '  streak = smoothstep(0.70, 1.0, streak) * 0.38;',
-    '  float edge = smoothstep(0.0, 0.20, vUv.x) * smoothstep(1.0, 0.80, vUv.x);',
-    '  vec3 col = mix(vec3(0.15, 0.30, 0.37), vec3(0.62, 0.78, 0.82), streak);',
-    '  col += vec3((1.0 - edge) * 0.22);',       // bank foam
-    '  gl_FragColor = vec4(col, 0.82);',
+    '  float c = abs(vUv.x - 0.5) * 2.0;',                                   // 0 mid-stream … 1 at the bank
+    '  float along = vUv.y * 2.0;',                                          // metres down the valley
+    '  float sp = mix(1.15, 0.40, c * c);',                                  // the channel runs; the banks drag
+    '  vec2 p = vec2(vUv.x * 3.4, along * 0.62 - uTime * sp * 0.62);',
+    '  float w = fbm(p * 0.9 + vec2(0.0, uTime * 0.03));',
+    '  vec2 q = p + vec2(w * 0.45, w * 0.2);',
+    '  float a1 = fbm(q * 1.9);',
+    '  float a2 = fbm(q * 4.6 + vec2(3.7, -uTime * 0.16));',
+    '  float ridge = 1.0 - abs(2.0 * fract(a1 * 3.4) - 1.0); ridge = smoothstep(0.86, 1.0, ridge) * smoothstep(0.25, 0.6, a2 + 0.15);',   // the long ripple lines, broken up
+    '  float glint = smoothstep(0.62, 0.90, a2);',                           // the small bright ones
+    '  vec3 col = mix(vec3(0.085, 0.250, 0.335), vec3(0.290, 0.540, 0.570), clamp(smoothstep(0.20, 1.0, c) * 0.85 + (a1 - 0.5) * 0.35, 0.0, 1.0));',
+    '  vec3 V = normalize(cameraPosition - vW); float fr = pow(1.0 - clamp(abs(V.y), 0.0, 1.0), 3.0);',
+    '  col = mix(col, vec3(0.60, 0.73, 0.84), fr * 0.55);',                  // the sky, at a low angle
+    '  col += vec3(0.72, 0.86, 0.90) * (ridge * 0.13 + glint * (0.13 + 0.45 * fr));',
+    '  float foam = smoothstep(0.80, 0.96, c + (a2 - 0.5) * 0.26);',
+    '  col = mix(col, vec3(0.86, 0.92, 0.93), foam * 0.72);',                // bank foam, broken and drifting
+    '  float alpha = 0.88 * (1.0 - smoothstep(0.92, 1.0, c));',              // the edge feathers into the ground
+    '  gl_FragColor = vec4(col * uLight, alpha);',
     '}'].join('\n')
 });
 
@@ -6070,244 +6093,10 @@ scene.add(poolWater);
 
 
 // ============================================================
-// POOL STATUE — Surfer figure at the far end of the reflection pool
-// v2: smoother torso, blended shoulders, better proportions
+// THE POOL STATUE IS GONE (2026-11-10, Sailor) — the surfer figure that stood at the far end of the
+// reflection pool was taken down. The pool's book stands there now (see THE POOL'S BOOK, by the
+// notebooks' pedestals). The figure is in the repo's history.
 // ============================================================
-(function buildPoolStatue() {
-  const statueGroup = new THREE.Group();
-  const marbleMat = new THREE.MeshStandardMaterial({
-    color: 0xd8c8b0, roughness: 0.38, metalness: 0.05
-  });
-  const hairMat = new THREE.MeshStandardMaterial({
-    color: 0x8a7058, roughness: 0.55, metalness: 0.02
-  });
-
-  // ---- PROPORTIONS ----
-  const H = 2.4;
-  const headH = H / 7.5;
-  const legH = headH * 3.5;
-  const torsoH = headH * 2.5;
-
-  // ---- TAPERED TUBE HELPER ----
-  function makeTaperedTube(curve, radii, tubSegs, radSegs) {
-    const pts = curve.getPoints(tubSegs);
-    const geo = new THREE.BufferGeometry();
-    const v = [], idx = [], n = [];
-    for (let i = 0; i <= tubSegs; i++) {
-      const t = i / tubSegs;
-      const rIdx = t * (radii.length - 1);
-      const rLow = Math.floor(rIdx), rHigh = Math.min(rLow + 1, radii.length - 1);
-      const radius = radii[rLow] * (1 - (rIdx - rLow)) + radii[rHigh] * (rIdx - rLow);
-      const tangent = curve.getTangent(t);
-      const up = new THREE.Vector3(0, 1, 0);
-      if (Math.abs(tangent.dot(up)) > 0.99) up.set(1, 0, 0);
-      const right = new THREE.Vector3().crossVectors(tangent, up).normalize();
-      const realUp = new THREE.Vector3().crossVectors(right, tangent).normalize();
-      const center = pts[i];
-      for (let j = 0; j < radSegs; j++) {
-        const angle = (j / radSegs) * Math.PI * 2;
-        const px = center.x + (Math.cos(angle) * right.x + Math.sin(angle) * realUp.x) * radius;
-        const py = center.y + (Math.cos(angle) * right.y + Math.sin(angle) * realUp.y) * radius;
-        const pz = center.z + (Math.cos(angle) * right.z + Math.sin(angle) * realUp.z) * radius;
-        v.push(px, py, pz);
-        const nx = px - center.x, ny = py - center.y, nz = pz - center.z;
-        const nl = Math.sqrt(nx * nx + ny * ny + nz * nz) || 1;
-        n.push(nx / nl, ny / nl, nz / nl);
-      }
-    }
-    for (let i = 0; i < tubSegs; i++) {
-      for (let j = 0; j < radSegs; j++) {
-        const a = i * radSegs + j, b = i * radSegs + (j + 1) % radSegs;
-        const c = (i + 1) * radSegs + j, d = (i + 1) * radSegs + (j + 1) % radSegs;
-        idx.push(a, c, b, b, c, d);
-      }
-    }
-    geo.setAttribute('position', new THREE.Float32BufferAttribute(v, 3));
-    geo.setAttribute('normal', new THREE.Float32BufferAttribute(n, 3));
-    geo.setIndex(idx);
-    return geo;
-  }
-
-  const figureGroup = new THREE.Group();
-
-  // ---- LOFTED TORSO (24 segs, 14 rings) ----
-  const sections = [
-    { y: 0.00, rx: 0.20,  rz: 0.14,  ox: 0.00,  oz: 0 },
-    { y: 0.03, rx: 0.22,  rz: 0.155, ox: 0.01,  oz: 0 },
-    { y: 0.07, rx: 0.245, rz: 0.17,  ox: 0.02,  oz: 0 },
-    { y: 0.11, rx: 0.24,  rz: 0.165, ox: 0.025, oz: 0 },
-    { y: 0.16, rx: 0.215, rz: 0.155, ox: 0.025, oz: 0 },
-    { y: 0.22, rx: 0.165, rz: 0.135, ox: 0.02,  oz: 0 },
-    { y: 0.28, rx: 0.155, rz: 0.13,  ox: 0.015, oz: 0 },
-    { y: 0.34, rx: 0.17,  rz: 0.14,  ox: 0.01,  oz: 0.005 },
-    { y: 0.40, rx: 0.19,  rz: 0.15,  ox: 0.005, oz: 0.01 },
-    { y: 0.46, rx: 0.20,  rz: 0.155, ox: 0.0,   oz: 0.015 },
-    { y: 0.52, rx: 0.19,  rz: 0.14,  ox: -0.005,oz: 0.008 },
-    { y: 0.58, rx: 0.215, rz: 0.13,  ox: -0.015,oz: 0 },
-    { y: 0.62, rx: 0.18,  rz: 0.11,  ox: -0.015,oz: 0 },
-    { y: 0.66, rx: 0.09,  rz: 0.08,  ox: -0.012,oz: 0 },
-  ];
-  const segs = 24, rings = sections.length;
-  const verts = [], indices = [];
-  for (let r = 0; r < rings; r++) {
-    const s = sections[r];
-    for (let i = 0; i < segs; i++) {
-      const angle = (i / segs) * Math.PI * 2;
-      verts.push(Math.cos(angle) * s.rx + s.ox, s.y + legH, Math.sin(angle) * s.rz + s.oz);
-    }
-  }
-  const topS = sections[rings - 1];
-  verts.push(topS.ox, topS.y + legH, topS.oz);
-  const topCI = rings * segs;
-  const botS = sections[0];
-  verts.push(botS.ox, botS.y + legH, botS.oz);
-  const botCI = topCI + 1;
-  for (let r = 0; r < rings - 1; r++) {
-    for (let i = 0; i < segs; i++) {
-      const a = r * segs + i, b = r * segs + (i + 1) % segs;
-      const c = (r + 1) * segs + i, d = (r + 1) * segs + (i + 1) % segs;
-      indices.push(a, c, b, b, c, d);
-    }
-  }
-  for (let i = 0; i < segs; i++) indices.push((rings - 1) * segs + i, topCI, (rings - 1) * segs + (i + 1) % segs);
-  for (let i = 0; i < segs; i++) indices.push((i + 1) % segs, botCI, i);
-  const torsoGeo = new THREE.BufferGeometry();
-  torsoGeo.setAttribute('position', new THREE.Float32BufferAttribute(verts, 3));
-  torsoGeo.setIndex(indices);
-  torsoGeo.computeVertexNormals();
-  const torso = new THREE.Mesh(torsoGeo, marbleMat);
-  torso.rotation.z = 0.035;
-  figureGroup.add(torso);
-
-  // ---- SHOULDER CAPS ----
-  [-1, 1].forEach(side => {
-    const cap = new THREE.Mesh(new THREE.SphereGeometry(0.075, 12, 8), marbleMat);
-    cap.scale.set(1.1, 0.85, 1.0);
-    cap.position.set(side * 0.20, legH + 0.59, 0);
-    figureGroup.add(cap);
-  });
-
-  // ---- LEGS ----
-  const legRadii = [0.11, 0.10, 0.08, 0.065, 0.055, 0.045];
-  figureGroup.add(new THREE.Mesh(makeTaperedTube(new THREE.CatmullRomCurve3([
-    new THREE.Vector3(-0.085, legH, 0.01), new THREE.Vector3(-0.09, legH*0.75, 0.005),
-    new THREE.Vector3(-0.085, legH*0.50, -0.005), new THREE.Vector3(-0.08, legH*0.30, 0.005),
-    new THREE.Vector3(-0.075, legH*0.12, 0.0), new THREE.Vector3(-0.07, 0.04, 0),
-  ]), legRadii, 16, 12), marbleMat));
-  figureGroup.add(new THREE.Mesh(makeTaperedTube(new THREE.CatmullRomCurve3([
-    new THREE.Vector3(0.085, legH, 0.01), new THREE.Vector3(0.11, legH*0.75, 0.05),
-    new THREE.Vector3(0.12, legH*0.50, 0.07), new THREE.Vector3(0.11, legH*0.30, 0.04),
-    new THREE.Vector3(0.10, legH*0.12, 0.02), new THREE.Vector3(0.095, 0.04, 0.015),
-  ]), legRadii, 16, 12), marbleMat));
-  [{ x: -0.085, z: -0.01 }, { x: 0.12, z: 0.065 }].forEach(k => {
-    const knee = new THREE.Mesh(new THREE.SphereGeometry(0.03, 8, 6), marbleMat);
-    knee.scale.set(0.9, 0.7, 1.1); knee.position.set(k.x, legH * 0.48, k.z); figureGroup.add(knee);
-  });
-  [{ x: -0.07, z: 0.04, ry: 0 }, { x: 0.095, z: 0.055, ry: 0.08 }].forEach(f => {
-    const foot = new THREE.Mesh(new THREE.BoxGeometry(0.075, 0.03, 0.16), marbleMat);
-    foot.position.set(f.x, 0.016, f.z); foot.rotation.y = f.ry; figureGroup.add(foot);
-  });
-
-  // ---- ARMS ----
-  const armRadii = [0.065, 0.055, 0.045, 0.038, 0.034];
-  const rArmCurve = new THREE.CatmullRomCurve3([
-    new THREE.Vector3(-0.21, legH+0.58, 0.01), new THREE.Vector3(-0.27, legH+0.64, 0.04),
-    new THREE.Vector3(-0.29, legH+0.72, 0.03), new THREE.Vector3(-0.24, legH+0.79, -0.01),
-    new THREE.Vector3(-0.14, legH+0.80, -0.06), new THREE.Vector3(-0.04, legH+0.76, -0.09),
-  ]);
-  figureGroup.add(new THREE.Mesh(makeTaperedTube(rArmCurve, armRadii, 16, 10), marbleMat));
-  const lArmCurve = new THREE.CatmullRomCurve3([
-    new THREE.Vector3(0.21, legH+0.58, 0.01), new THREE.Vector3(0.25, legH+0.48, 0.02),
-    new THREE.Vector3(0.26, legH+0.36, 0.02), new THREE.Vector3(0.25, legH+0.24, 0.015),
-    new THREE.Vector3(0.23, legH+0.14, 0.01), new THREE.Vector3(0.21, legH+0.06, 0.005),
-  ]);
-  figureGroup.add(new THREE.Mesh(makeTaperedTube(lArmCurve, armRadii, 16, 10), marbleMat));
-  [rArmCurve, lArmCurve].forEach(c => {
-    const p = c.getPoint(1);
-    const h = new THREE.Mesh(new THREE.SphereGeometry(0.038, 8, 6), marbleMat);
-    h.position.copy(p); figureGroup.add(h);
-  });
-
-  // ---- NECK + HEAD ----
-  const headY = legH + torsoH + 0.06;
-  figureGroup.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3([
-    new THREE.Vector3(-0.012, legH+0.66, 0.005), new THREE.Vector3(-0.008, headY-0.04, 0.01),
-  ]), 6, 0.05, 10, false), marbleMat));
-  const headGrp = new THREE.Group();
-  headGrp.position.set(-0.008, headY+0.01, 0.01);
-  headGrp.rotation.z = 0.06; headGrp.rotation.x = -0.04;
-  const cranium = new THREE.Mesh(new THREE.SphereGeometry(headH*0.40, 14, 12), marbleMat);
-  cranium.scale.set(0.82, 1.0, 0.88); headGrp.add(cranium);
-  const face = new THREE.Mesh(new THREE.SphereGeometry(headH*0.35, 10, 8), marbleMat);
-  face.position.set(0, -headH*0.06, headH*0.14); face.scale.set(0.72, 0.78, 0.5); headGrp.add(face);
-  const noseMesh = new THREE.Mesh(new THREE.ConeGeometry(0.012, 0.04, 4), marbleMat);
-  noseMesh.position.set(0, -headH*0.05, headH*0.38); noseMesh.rotation.x = -0.3; headGrp.add(noseMesh);
-  const jaw = new THREE.Mesh(new THREE.SphereGeometry(headH*0.28, 8, 6), marbleMat);
-  jaw.position.set(0, -headH*0.20, headH*0.10); jaw.scale.set(0.70, 0.55, 0.65); headGrp.add(jaw);
-  const chin = new THREE.Mesh(new THREE.SphereGeometry(0.018, 6, 4), marbleMat);
-  chin.position.set(0, -headH*0.30, headH*0.18); headGrp.add(chin);
-  figureGroup.add(headGrp);
-
-  // ---- HAIR (12 strands, 4-point curves, thicker) ----
-  const hairR = 0.032;
-  const hairStrands = [
-    [[0.0,headY+headH*0.30,-headH*0.20],[0.03,headY-0.02,-0.16],[0.05,headY-0.18,-0.14],[0.06,headY-0.38,-0.12]],
-    [[-0.03,headY+headH*0.28,-headH*0.18],[-0.05,headY-0.04,-0.18],[-0.07,headY-0.22,-0.15],[-0.09,headY-0.42,-0.11]],
-    [[0.05,headY+headH*0.26,-headH*0.14],[0.08,headY-0.01,-0.16],[0.11,headY-0.20,-0.12],[0.12,headY-0.36,-0.09]],
-    [[-0.06,headY+headH*0.24,-headH*0.12],[-0.09,headY-0.03,-0.15],[-0.12,headY-0.24,-0.11],[-0.13,headY-0.40,-0.08]],
-    [[-0.09,headY+headH*0.18,-headH*0.04],[-0.14,headY-0.04,-0.08],[-0.17,headY-0.22,-0.04],[-0.18,headY-0.38,-0.01]],
-    [[-0.07,headY+headH*0.22,-headH*0.08],[-0.11,headY-0.06,-0.12],[-0.15,headY-0.28,-0.08],[-0.16,headY-0.44,-0.04]],
-    [[0.09,headY+headH*0.18,-headH*0.04],[0.14,headY-0.02,-0.07],[0.17,headY-0.18,-0.03],[0.19,headY-0.32,0.0]],
-    [[0.07,headY+headH*0.22,-headH*0.08],[0.12,headY-0.04,-0.10],[0.16,headY-0.24,-0.06],[0.18,headY-0.40,-0.02]],
-    [[0.02,headY+headH*0.24,-headH*0.22],[0.04,headY-0.10,-0.22],[0.06,headY-0.30,-0.20],[0.08,headY-0.55,-0.16]],
-    [[-0.01,headY+headH*0.26,-headH*0.20],[-0.02,headY-0.08,-0.24],[-0.03,headY-0.28,-0.22],[-0.04,headY-0.52,-0.18]],
-    [[0.01,headY+headH*0.32,-headH*0.16],[0.02,headY+0.02,-0.14],[0.03,headY-0.12,-0.13],[0.04,headY-0.28,-0.11]],
-    [[-0.02,headY+headH*0.30,-headH*0.14],[-0.03,headY+0.00,-0.16],[-0.04,headY-0.14,-0.15],[-0.05,headY-0.30,-0.13]],
-  ];
-  hairStrands.forEach(pts => {
-    const curve = new THREE.CatmullRomCurve3(pts.map(p => new THREE.Vector3(...p)));
-    figureGroup.add(new THREE.Mesh(new THREE.TubeGeometry(curve, 10, hairR, 6, false), hairMat));
-  });
-  [
-    { x:0.0, y:headY+headH*0.12, z:-headH*0.14, sx:1.15, sy:0.80, sz:1.20, r:headH*0.38 },
-    { x:-0.02, y:headY+headH*0.20, z:-headH*0.08, sx:1.05, sy:0.75, sz:1.10, r:headH*0.34 },
-    { x:0.02, y:headY+headH*0.05, z:-headH*0.18, sx:1.10, sy:0.70, sz:1.15, r:headH*0.30 },
-  ].forEach(h => {
-    const vol = new THREE.Mesh(new THREE.SphereGeometry(h.r, 10, 8), hairMat);
-    vol.position.set(h.x, h.y, h.z); vol.scale.set(h.sx, h.sy, h.sz); figureGroup.add(vol);
-  });
-
-  // ---- PEDESTAL ----
-  const pedH = 0.65, pedBase = 0.42, pedShaft = 0.15;
-  const pedMat = new THREE.MeshStandardMaterial({ color: 0xc8b898, roughness: 0.45, metalness: 0.06 });
-  statueGroup.add(mk(new THREE.BoxGeometry(pedBase*2.4, 0.07, pedBase*2.4), pedMat, 0, -0.035, 0));
-  statueGroup.add(mk(new THREE.CylinderGeometry(pedBase*0.85, pedBase, 0.06, 16), pedMat, 0, 0.05, 0));
-  const pTorus = new THREE.Mesh(new THREE.TorusGeometry(pedBase*0.75, 0.025, 8, 16), pedMat);
-  pTorus.rotation.x = Math.PI/2; pTorus.position.y = 0.10; statueGroup.add(pTorus);
-  const psH = pedH - 0.45;
-  const psGeo = new THREE.CylinderGeometry(pedShaft*0.88, pedShaft, psH, 14);
-  const psp = psGeo.attributes.position;
-  for (let i = 0; i < psp.count; i++) {
-    const px = psp.getX(i), pz = psp.getZ(i);
-    const ang = Math.atan2(pz, px), fd = 0.006*(1+Math.cos(ang*14));
-    const rr = Math.sqrt(px*px+pz*pz);
-    if (rr > 0.001) { const nr = rr-fd; psp.setX(i, px*(nr/rr)); psp.setZ(i, pz*(nr/rr)); }
-  }
-  psGeo.computeVertexNormals();
-  statueGroup.add(mk(psGeo, pedMat, 0, 0.13+psH/2, 0));
-  statueGroup.add(mk(new THREE.BoxGeometry(pedBase*1.6, 0.05, pedBase*1.6), pedMat, 0, pedH-0.08, 0));
-  statueGroup.add(mk(new THREE.BoxGeometry(pedBase*1.8, 0.04, pedBase*1.8), pedMat, 0, pedH-0.04, 0));
-  figureGroup.position.y = pedH - 0.02;
-  statueGroup.add(figureGroup);
-
-  // ---- PLACE STATUE ----
-  const sZ = poolZ + poolD/2 + 1.2;
-  statueGroup.position.set(0, BUILDING_Y, sZ);
-  statueGroup.rotation.y = Math.PI;
-  statueGroup.traverse(c => { if (c.isMesh) { c.castShadow = true; c.receiveShadow = true; } });
-  statueGroup.userData.isStatue = true;
-  scene.add(statueGroup);
-})();
 
 // ============================================================
 // SURFBOARD — Displacement hull, single flex fin
@@ -6812,7 +6601,7 @@ function loadTraceOnEasel(traceData) {
 
   console.log('[DreamGetty] Trace loaded on easel: ' + traceData.id);
   // (2026-10-12) the tracker layer keeps the pedestal unless a hand asks otherwise
-  try { if (typeof pedestalMode !== 'undefined' && pedestalMode === 'tracker') { galleryGraphmap.setTraceVisible(false); document.getElementById('trace-toggles').style.display = 'none'; } } catch (e) {}
+  try { if (typeof pedestalMode !== 'undefined' && (pedestalMode === 'tracker' || pedestalMode === 'object')) { galleryGraphmap.setTraceVisible(false); document.getElementById('trace-toggles').style.display = 'none'; } } catch (e) {}
 }
 
 function unloadTraceFromEasel() {
@@ -11317,7 +11106,8 @@ const PLACE_REGISTRY = [
   { key: 'library',  label: 'The Library',    x: -21, z: 2.5,  look: [-26, 3.2, 0],    off: [11, 6, 18] },
   { key: 'exedra',   label: 'The Exedra',     x: 21,  z: 2.5,  look: [26, 3.2, 0],     off: [-11, 6, 18] },
   { key: 'plaza',    label: 'The Plaza',      x: 10,  z: 6,    look: [10, 1.6, 6],     off: [7, 5, 12] },
-  { key: 'pool',     label: 'The Pool',       x: 0,   z: 20,   look: [0, 1.8, 20],     off: [9, 7, 17] },
+  { key: 'pool',     label: 'The Pool',       x: 0,   z: 20,   look: [0, 1.8, 20],     off: [9, 7, 17],
+    word: [0, BUILDING_Y, poolZ + poolD / 2 + 1.2] },   // (11-10) its book and its cloud stand at the far end, where the statue stood — the map lies on the water now
   { key: 'lawn',     label: 'The North Lawn', x: -14, z: -10,  look: [-14, 1.8, -10],  off: [10, 6, 16] },
   { key: 'overlook', label: 'The Overlook',   x: -9,  z: 44,   look: [-9, 0.6, 44],    off: [5, 7, -13] },
   { key: 'valley',   label: 'The Valley',     x: 0,   z: 60,   look: [0, -3, 60],      off: [8, 10, -18] },
@@ -15973,7 +15763,7 @@ function renderStatementField() {
     });
     Object.keys(byPlace).forEach(function (key) {
       const row = PLACE_REGISTRY.find(function (r) { return r.key === key; });
-      const pt = placePoint(key);
+      const pt = placeWordPoint(key);
       if (!pt) return;
       let g = cloudState.byPlace.get(key);
       if (!g) {
@@ -19413,6 +19203,12 @@ function placePoint(key) {
   if (!pl) return null;
   return new THREE.Vector3(pl.x, getVisitorHeight(pl.x, pl.z), pl.z);
 }
+// where a place's word stands — its cloud and its book. The place's own point, unless its row says otherwise (2026-11-10)
+function placeWordPoint(key) {
+  const pl = PLACE_REGISTRY.find(p => p.key === key);
+  if (pl && pl.word) return new THREE.Vector3(pl.word[0], pl.word[1], pl.word[2]);
+  return placePoint(key);
+}
 function gatherBegin(label, point) {
   gatherState.active = true; gatherState.label = label;
   gatherState.point = point.clone(); gatherState.members = {}; gatherState.hostAway = 0;
@@ -21177,6 +20973,20 @@ libraryWing.add(buildNotebookPedestal(-1, 'library'));
 const annexWing = buildWing(1, 'annex');
 annexWing.add(buildNotebookPedestal(1, 'exedra'));
 
+// ── THE POOL'S BOOK (2026-11-10, Sailor) ──────────────────────────────
+// It stood in the middle of the pool, wherever the pool's first word put it. It stands at the pool's
+// far end now, where the surfer statue was, on a stone landing off the end wall — always there, word or
+// no word, and turned the way you arrive. The pool's keyword cloud stands over it.
+(function buildPoolBook() {
+  const at = placeWordPoint('pool'), row = PLACE_REGISTRY.find(function (r) { return r.key === 'pool'; });
+  // a landing off the pool's end wall: the river's channel runs under this end of the pool, so nothing stands on the ground here
+  const z0 = poolZ + poolD / 2 + 0.35;                     // the rim's outer face
+  [[1.7, 0.22, at.z + 0.85 - z0, at.y - 0.11], [1.2, 0.34, (at.z + 0.85 - z0) * 0.62, at.y - 0.39], [0.8, 0.3, (at.z + 0.85 - z0) * 0.34, at.y - 0.71]].forEach(function (b) {
+    const m = mk(new THREE.BoxGeometry(b[0], b[1], b[2]), stoneLightMat, at.x, b[3], z0 + b[2] / 2); m.castShadow = true; m.receiveShadow = true; scene.add(m); });
+  scene.add(buildNotebookPedestal(0, 'pool', { x: at.x, y: at.y, z: at.z,
+    yaw: Math.atan2((row.look[0] + row.off[0]) - at.x, (row.look[2] + row.off[2]) - at.z) }));
+})();
+
 // ── The west court's kerb — the acacia's opening in the pavement ──
 // A tree growing out of the terrace wants an edge, or it reads as a
 // mistake rather than a planting.
@@ -22257,7 +22067,7 @@ const approach = {
 
 // Travel system — click on terrain to fly there
 // VANTAGES, not places (clarified 2026-08-05): half of these are views of
-// OBJECTS — the Elephant, the Pool Statue, a saddleback framing. They stay
+// OBJECTS — the Elephant, a saddleback framing. They stay
 // out of the registry because a vantage is a way of looking, not a place
 // you can stand, be summoned to, or make a statement in.
 const travelTargets = [
@@ -22266,7 +22076,6 @@ const travelTargets = [
   { name: 'Ocean Overlook', pos: new THREE.Vector3(0, 8, CLIFF_Z + 15), look: new THREE.Vector3(0, OCEAN_Y + 4, CLIFF_Z + 80) },
   { name: 'Elephant', pos: new THREE.Vector3(-18, getTerrainHeight(-18, -10) + 6, -6), look: new THREE.Vector3(-25, getTerrainHeight(-25, -15) + 2, -15) },
   { name: 'Saddleback View', pos: new THREE.Vector3(5, 15, -35), look: new THREE.Vector3(0, 20, -80) },
-  { name: 'Pool Statue', pos: new THREE.Vector3(3, BUILDING_Y + 2.2, poolZ + poolD / 2 + 4.5), look: new THREE.Vector3(0, BUILDING_Y + 1.8, poolZ + poolD / 2 + 1.2) },
 ];
 
 function updateCamera() {
@@ -22914,14 +22723,6 @@ addFocusTarget('iMac G4', imacPivot,
   new THREE.Vector3(IMAC_X, BUILDING_Y + G4_BASE_Y + 0.2, IMAC_Z) // hitbox position
 );
 
-// Pool Statue — surfer figure at the far end of the reflection pool
-const statueZ = poolZ + poolD / 2 + 1.2;
-addFocusTarget('Pool Statue', scene,
-  { x: 3, y: BUILDING_Y + 2.2, z: statueZ + 3.5 },              // camera: ocean side, offset right
-  { x: 0, y: BUILDING_Y + 1.8, z: statueZ },                     // look at: figure mid-body
-  { x: 2.5, y: 4, z: 2.5 },                                      // hitbox size
-  new THREE.Vector3(0, BUILDING_Y + 1.5, statueZ)                 // hitbox position
-);
 
 // Surfboard — displacement hull beside the pool
 addFocusTarget('Surfboard', surfboardGroup,
@@ -23039,7 +22840,7 @@ function navTo(name) {
 }
 
 function updateNavBar() {
-  const names = { 'Easel': 'nav-easel', 'Graphmap': 'nav-graphmap', 'iMac G4': 'nav-g4', 'Tracker': 'nav-tracker' };
+  const names = { 'Easel': 'nav-easel', 'Graphmap': 'nav-graphmap', 'iMac G4': 'nav-g4', 'Tracker': 'nav-tracker', 'Object': 'nav-object' };
   Object.keys(names).forEach(function(n) {
     const btn = document.getElementById(names[n]);
     if (btn) btn.classList.toggle('active', activeFocus && activeFocus.name === n);
@@ -24044,12 +23845,65 @@ function updateVenusNocturne() {
 }
 
 // ============================================================
+// THE OBJECT'S NOCTURNE — the villa dims for the Object's light (2026-11-10)
+// ============================================================
+// Sailor: "a sort of dark mode like we have with the Venus." Hold focus on the Object for a few seconds
+// and the villa lowers its lights the same way: ambient, sun and the spots ease down and the exposure
+// drops. The Object, the prism and the map carry their own light and do not dim, so the beam and what
+// it throws on the pool are what is left to see. Release focus (or toggle day/night, or put something
+// else on the pedestal) and the room comes back exactly as found. It waits its turn behind hers.
+const objectNocturne = { dim: 0, since: 0, saved: null, DELAY: 2500 };
+
+function cancelObjectNocturne() {
+  if (objectNocturne.saved) {
+    const s = objectNocturne.saved;
+    lights.ambient.intensity = s.amb;
+    lights.hemi.intensity = s.hemi;
+    lights.sun.intensity = s.sun;
+    lights.spotMain.intensity = s.spotMain;
+    lights.spotWarm.intensity = s.spotWarm;
+    renderer.toneMappingExposure = s.exp;
+    objectNocturne.saved = null;
+  }
+  objectNocturne.dim = 0;
+  objectNocturne.since = 0;
+}
+
+function updateObjectNocturne() {
+  const focused = !!(activeFocus && activeFocus.name === 'Object' && pedestalMode === 'object') && !venusNocturne.saved;
+  if (focused && !objectNocturne.since) objectNocturne.since = Date.now();
+  if (!focused) objectNocturne.since = 0;
+  const want = (focused && Date.now() - objectNocturne.since > objectNocturne.DELAY) ? 1 : 0;
+
+  if (want > 0 && !objectNocturne.saved) {
+    objectNocturne.saved = {
+      amb: lights.ambient.intensity, hemi: lights.hemi.intensity,
+      sun: lights.sun.intensity, spotMain: lights.spotMain.intensity,
+      spotWarm: lights.spotWarm.intensity, exp: renderer.toneMappingExposure,
+    };
+  }
+  if (!objectNocturne.saved) return;
+
+  objectNocturne.dim += (want - objectNocturne.dim) * 0.03;
+  if (want === 0 && objectNocturne.dim < 0.005) { cancelObjectNocturne(); return; }
+  const s = objectNocturne.saved, d = objectNocturne.dim;
+  const L = function (a, b) { return a + (b - a) * d; };
+  lights.ambient.intensity = L(s.amb, s.amb * 0.14);
+  lights.hemi.intensity = L(s.hemi, s.hemi * 0.14);
+  lights.sun.intensity = L(s.sun, s.sun * 0.05);
+  lights.spotMain.intensity = L(s.spotMain, s.spotMain * 0.18);
+  lights.spotWarm.intensity = L(s.spotWarm, s.spotWarm * 0.18);
+  renderer.toneMappingExposure = L(s.exp, s.exp * 0.4);
+}
+
+// ============================================================
 // MODE TOGGLE — DAY / NIGHT
 // ============================================================
 let modeTransition = null;
 
 function toggleMode() {
   cancelVenusNocturne();  // the room must be honest before the big lerp measures it
+  cancelObjectNocturne();
   isDarkMode = !isDarkMode;
   document.body.classList.toggle('light', !isDarkMode);
   document.getElementById('skylight-btn').textContent = isDarkMode ? 'Skylight' : 'Gallery';
@@ -24338,7 +24192,7 @@ function floatG4Screen() {
   }
 
   // Fly camera to whatever stands on the pedestal — the globe, when it is up (2026-10-12)
-  const gf = focusTargets.find(function(t) { return t.name === ((typeof pedestalMode !== 'undefined' && pedestalMode === 'tracker') ? 'Tracker' : 'Graphmap'); });
+  const gf = focusTargets.find(function(t) { return t.name === ((typeof pedestalMode !== 'undefined' && pedestalMode === 'tracker') ? 'Tracker' : (typeof pedestalMode !== 'undefined' && pedestalMode === 'object') ? 'Object' : 'Graphmap'); });
   if (gf) {
     approach.active = true;
     approach.progress = 0;
@@ -26169,14 +26023,17 @@ function trackerStripClick(uv) {
 // ── the pedestal holds one thing at a time: the graphmap, or the globe ──
 let pedestalMode = 'graphmap';
 function pedestalShow(mode) {
-  mode = (mode === 'tracker') ? 'tracker' : 'graphmap';
+  mode = (mode === 'tracker' || mode === 'object') ? mode : 'graphmap';   // (11-10) 'object': the Object on the pedestal, its light out to the pool
   pedestalMode = mode;
-  const tracker = mode === 'tracker';
-  try { if (typeof graphmapVisible !== 'undefined' && graphmapVisible === tracker && typeof toggleGraphmap === 'function') toggleGraphmap(); } catch (e) {}
-  trackerGlobe.visible = tracker;
+  const tracker = mode === 'tracker', off = mode !== 'graphmap';
+  try { if (typeof prismModel !== 'undefined' && prismModel) prismModel.show(mode === 'object'); } catch (e) {}
+  try { if (mode !== 'object') objectNocturne.since = 0; } catch (e) {}
+  try { const os = document.getElementById('object-strip'); if (os) os.style.display = mode === 'object' ? 'flex' : 'none'; } catch (e) {}
+  try { if (typeof graphmapVisible !== 'undefined' && graphmapVisible === off && typeof toggleGraphmap === 'function') toggleGraphmap(); } catch (e) {}
+  trackerGlobe.visible = tracker; trackerGlobe.scale.setScalar(1);
   try { trackerGlobe.traverse(function (o) { o.layers.set(PIERCE_LAYER); }); } catch (e) {}   // drawn with the living: in front of what is behind it, behind what is before it
   try { if (!tracker && typeof g4Tracker !== 'undefined' && g4Tracker.mode) g4TrackerLeave(); } catch (e) {}
-  const tt = document.getElementById('trace-toggles'); if (tt) tt.style.display = tracker ? 'none' : '';
+  const tt = document.getElementById('trace-toggles'); if (tt) tt.style.display = off ? 'none' : '';
   if (tracker) { trackerBuildGlobe(); g4ActiveFetch(); trackerFetchRules(); if (g4ActiveData && trackerRules && !trackerRig.built) trackerRedraw(); }
 }
 const trackerFocus = addFocusTarget('Tracker', trackerGlobe,
@@ -28806,7 +28663,7 @@ setTimeout(function () {
     // (2026-10-12) the trace hangs, but the pedestal keeps what it is holding —
     // the tracker stands on it for the public, and the graphmap is one ask away
     if (typeof graphmapVisible !== 'undefined' && !graphmapVisible &&
-        typeof toggleGraphmap === 'function' && (typeof pedestalMode === 'undefined' || pedestalMode !== 'tracker')) toggleGraphmap();
+        typeof toggleGraphmap === 'function' && (typeof pedestalMode === 'undefined' || (pedestalMode !== 'tracker' && pedestalMode !== 'object'))) toggleGraphmap();
     loadTraceOnEasel(td);
   } catch (e) {}
 }, 3500);
@@ -29365,6 +29222,7 @@ function animate() {
 
   // Venus nocturne — dims the villa after 15s of held focus on her
   updateVenusNocturne();
+  updateObjectNocturne();   // (11-10) and for the Object's light
 
   // Ocean waves
   animateOcean(t);
@@ -29538,6 +29396,7 @@ function animate() {
 
   // The river flows (shader-side; one uniform is the whole per-frame cost)
   riverMat.uniforms.uTime.value = t;
+  riverMat.uniforms.uLight.value = 1 - 0.6 * objectNocturne.dim;
   updateNarrationHighlight(t);
 
   // VHS video texture update
@@ -29559,6 +29418,7 @@ function animate() {
 
   // Story element animations (settle, scale-in, etc.)
   updateStoryAnimations();
+  try { if (prismModel && prismModel.group.visible) { const air = isDarkMode ? 0.7 : 1.0; prismModel.setAir(air + (0.1 - air) * objectNocturne.dim); prismModel.update(t, camera); } } catch (e) {}   // (11-10) Prism's physical model: its light adds in the dark and veils in the day
 
   // ── THE TWO PASSES (living pierce, 2026-08-02) ───────────────
   // Pass 1 draws the world. The depth buffer is then wiped and pass 2 draws
@@ -29603,6 +29463,81 @@ function onResize() {
 }
 window.addEventListener('resize', onResize);
 
+// ============================================================
+// THE OBJECT, THE PRISM, THE POOL (2026-11-10) — Prism's physical model, standing in the villa.
+// The Object takes the globe's place over the pedestal. The map lies on the reflection pool: the water
+// is zero, delivered stands above it, frustrated hangs below it. The prism floats between them, over the
+// near end of the pool. All of it is drawn with the living, so the beam is seen through the colonnade
+// and what hangs under the water is seen through the stone. src/js/prism-model.js; press/model.html is
+// the same scene on its own. Shown by pedestalShow('object') — the compass menu's "The Object" — or ?object.
+// ============================================================
+let prismModel = null;
+try {
+  prismModel = PrismModel.create(THREE, {
+    object: new THREE.Vector3(0, GRAPH_CENTER_Y, 0), objectR: TRACKER_R,
+    map: new THREE.Vector3(0, BUILDING_Y + 0.18, poolZ - 0.5), mapSize: 5,
+    right: new THREE.Vector3(1, 0, 0), near: new THREE.Vector3(0, 0, 1),      // standing at the pool looking at the house: right is right, the populists are nearest you
+    layer: PIERCE_LAYER, data: '../data/', set: 'tucker_record', sheets: 7, prismScale: 0.8, fan: 0.85, bright: true,
+  });
+  scene.add(prismModel.group);
+  addFocusTarget('Object', prismModel.group,
+    { x: 18.5, y: BUILDING_Y + 9.5, z: poolZ + 11.5 },          // from the lawn, to one side: the light is seen crossing, not coming at you
+    { x: 0, y: BUILDING_Y + 0.9, z: poolZ - 6 },
+    { x: 0.1, y: 0.1, z: 0.1 },
+    new THREE.Vector3(0, -50, 0)).hitbox.visible = false;
+  if (/[?&]object\b/.test(location.search)) setTimeout(function () { try { showObject(); } catch (e) {} }, 600);
+
+  // THE OBJECT'S MODES (2026-11-11) — a small strip while the Object is showing. A mode is one part of the body shown
+  // on the sphere: the history (every measure as a line round it), the chamber (Congress: a point for each sitting
+  // member, two balance beams, and the votes on file to step through — data/active/chamber.json, built by
+  // scripts/chamber-build.py from the roll-call sweep), the lives (a ray for each service member killed), the globe.
+  (function () {
+    const css = document.createElement('style');
+    css.textContent = '#object-strip{position:fixed;left:50%;transform:translateX(-50%);bottom:34px;z-index:30;display:none;align-items:center;gap:2px;max-width:94vw;padding:4px 6px;background:rgba(10,18,38,.74);border:1px solid rgba(233,236,242,.16);border-radius:10px;font:12px Georgia,serif;color:#e9ecf2;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}' +
+      '#object-strip button{background:none;border:0;color:#9aa3b8;font:inherit;padding:6px 9px;cursor:pointer;white-space:nowrap}#object-strip button.on{color:#e0b77a}#object-strip .v{font-size:15px;color:#e9ecf2}' +
+      '#object-strip .sep{width:1px;align-self:stretch;background:rgba(233,236,242,.16);margin:0 4px}#object-cap{max-width:52ch;padding:2px 6px;line-height:1.35;color:#cfd5e2}' +
+      '@media (max-width:720px){#object-strip{bottom:auto;top:calc(10px + env(safe-area-inset-top));flex-wrap:wrap;justify-content:center}#object-cap{order:5;flex-basis:100%;text-align:center;max-width:none;font-size:11.5px}}';
+    document.head.appendChild(css);
+    const el = document.createElement('div'); el.id = 'object-strip';
+    const NAMES = { history: 'the history', chamber: 'the chamber', lives: 'the lives', globe: 'the globe' };
+    el.innerHTML = prismModel.modes.map(function (m, i) { return '<button data-m="' + m + '"' + (i ? '' : ' class="on"') + '>' + (NAMES[m] || m) + '</button>'; }).join('') +
+      '<span class="sep"></span><button class="v ch" data-v="-1" title="the vote before">◂</button><span id="object-cap"></span><button class="v ch" data-v="1" title="the vote after">▸</button>';
+    document.body.appendChild(el);
+    const sync = function (mode, cap) {
+      el.querySelectorAll('[data-m]').forEach(function (b) { b.classList.toggle('on', b.dataset.m === mode); });
+      el.querySelectorAll('.ch').forEach(function (n) { n.style.display = mode === 'chamber' ? '' : 'none'; });
+      document.getElementById('object-cap').textContent = cap || '';
+    };
+    prismModel.onMode = sync; sync('history', prismModel.caption);
+    el.addEventListener('click', function (e) {
+      const b = e.target.closest('button'); if (!b) return;
+      if (b.dataset.m) prismModel.setMode(b.dataset.m);
+      else if (b.dataset.v) { const n = prismModel.votes.length; let i = prismModel.vote + (+b.dataset.v); if (i < -1) i = n - 1; if (i > n - 1) i = -1; prismModel.setVote(i); }   // −1 is the seats
+    });
+    // THE GLOBE IS ONE OF THE OBJECT'S MODES (2026-11-11, Sailor). The villa's own globe — the Supply Shock Tracker's, with its routes —
+    // stands just inside the Object's skin while that mode is open; the skin clears over it. The old way in (the compass menu's
+    // Tracker, the walk, the G4's timeline) still puts the globe on the pedestal by itself.
+    prismModel.onFace = function (name, open) {
+      if (name !== 'globe' || pedestalMode !== 'object') return;
+      const on = open > 0.01;
+      if (on && !trackerGlobe.visible) {
+        trackerGlobe.visible = true; trackerGlobe.scale.setScalar(0.985);
+        try { trackerGlobe.traverse(function (o) { o.layers.set(PIERCE_LAYER); }); } catch (e) {}
+        try { trackerBuildGlobe(); g4ActiveFetch(); trackerFetchRules(); if (g4ActiveData && trackerRules && !trackerRig.built) trackerRedraw(); } catch (e) {}
+      } else if (!on && trackerGlobe.visible) { trackerGlobe.visible = false; trackerGlobe.scale.setScalar(1); }
+    };
+  })();
+} catch (e) { try { console.warn('[prism-model] not built', e); } catch (x) {} }
+
+// the Object, shown and flown to: from the lawn on a wide screen; from farther back and higher on a tall one
+function showObject() {
+  pedestalShow('object');
+  const f = focusTargets.find(function (t) { return t.name === 'Object'; }); if (!f) return;
+  if (camera.aspect < 0.85) { f.camPos.set(13, BUILDING_Y + 17, poolZ + 27); f.lookAt.set(0, BUILDING_Y + 1.4, poolZ - 7.5); }
+  else { f.camPos.set(18.5, BUILDING_Y + 9.5, poolZ + 11.5); f.lookAt.set(0, BUILDING_Y + 0.9, poolZ - 6); }
+  if (activeFocus !== f) navTo('Object');
+}
+
 updateCamera();
 setLivingPierce(livingPierce.on);   // sync the menu label + layers before the first frame
 animate();
@@ -29639,7 +29574,7 @@ function g4Ease(t) { t = Math.max(0, Math.min(1, t)); return t < 0.5 ? 4 * t * t
 function g4EaseOut(t) { t = Math.max(0, Math.min(1, t)); return 1 - Math.pow(1 - t, 3); }
 function g4Now() { return performance.now() / 1000; }
 function g4FocusG4() { return focusTargets.find(function (f) { return f.name === 'iMac G4'; }); }
-function g4FocusPedestal() { return focusTargets.find(function (f) { return f.name === (pedestalMode === 'tracker' ? 'Tracker' : 'Graphmap'); }) || g4FocusG4(); }
+function g4FocusPedestal() { return focusTargets.find(function (f) { return f.name === (pedestalMode === 'tracker' ? 'Tracker' : pedestalMode === 'object' ? 'Object' : 'Graphmap'); }) || g4FocusG4(); }
 // where the docked screen sits in the world
 function g4DockedPose() {
   imacG4.updateMatrixWorld(true);
