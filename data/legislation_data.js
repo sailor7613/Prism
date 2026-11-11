@@ -2701,7 +2701,7 @@ const LEGISLATION_DATA = [
     "name": "Survivor Justice Tax Prevention Act",
     "meta": "H.R. 2347 · Passed House · Tax Policy",
     "id": "hr-119-2347",
-    "rc": 1,
+    "rc": 2,
     "mm": 0.49
   },
   {

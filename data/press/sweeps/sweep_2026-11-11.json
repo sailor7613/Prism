@@ -1,0 +1,2403 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-11",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 17,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 5,
+   "hits": 3,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 6,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 9,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 38,
+   "hits": 17,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 20,
+   "hits": 2,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 7,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 9,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 3,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 10,
+   "hits": 5,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 94,
+   "hits": 26,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 63,
+   "hits": 34,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 4,
+   "hits": 4,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 3,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "What is northern Europe’s new drone and warship plan to counter Russia?",
+   "dek": "UK-led coalition of 10 Northern European nations announces joint defence framework amid rising threats from Moscow.",
+   "opening": "",
+   "published": "2026-11-11T12:13:52+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/11/whats-northern-europes-new-drones-and-warships-plan-to-counter-russia?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "fed": [
+     "warsh"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Joe SLAMS GOP for NOT impeaching Hegseth: 'Extrajudicial killings in Caribbean are WAR CRIMES!'",
+   "dek": "The Morning Joe panel discusses House Republicans blocking a vote on the resolution to impeach Defense Secretary Pete Hegseth. Joe argues Republicans missed an opportunity to distance themselves from the administration after backlash over the Iran war. The panel considers what the vote says about President Trump’s influence over House Republicans. They also discuss whether Democrats could revisit impeachment if they win control of the House. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.",
+   "opening": "",
+   "published": "2026-11-11T12:10:12+00:00",
+   "link": "https://www.youtube.com/watch?v=46iRBkjqO-U",
+   "videoId": "46iRBkjqO-U",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Justin Jones: 'We have the new John Lewises and Fannie Lou Hamers rising up'",
+   "dek": "Tennessee Rep. Justin Jones praises the work of young activists who helped turn out Black voters and power Democrats to victory in the 2026 midterms. “People saw something that struck a chord with them,” he tells Ali Velshi. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: ",
+   "opening": "",
+   "published": "2026-11-11T11:45:53+00:00",
+   "link": "https://www.youtube.com/shorts/dVOcB-jxjqc",
+   "videoId": "dVOcB-jxjqc",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House Republicans BLOCK Pete Hegseth impeachment",
+   "dek": "House Republican leadership vowed to block the impeachment resolution against Defense Secretary Pete Hegseth, and last night they followed through. In a 211-204 vote, the House approved a procedural motion sending the resolution to the Judiciary Committee, effectively sidelining the impeachment push. Rep. Thomas Massie — who spearheaded the effort — was the only Republican to vote with Democrats, leaving GOP leaders with enough support to deny a vote on whether Hegseth should be removed from office. While Republicans worried attendance could allow Democrats to succeed, it turns out more Democr",
+   "opening": "",
+   "published": "2026-11-11T11:14:35+00:00",
+   "link": "https://www.youtube.com/watch?v=7G8OTXe0IPY",
+   "videoId": "7G8OTXe0IPY",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "effectively",
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The War Hero Who Refused to Give Up His Own. Plus. . .",
+   "dek": "In today&#8217;s Front Page, Eli Lake on the Hegseth impeachment. Spencer Klavan and the archbishop of San Francisco on why Silicon Valley needs God. Kat Rosenfield on the Cornell 7 texts. And more.",
+   "opening": "It&#8217;s Wednesday, November 11. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Spencer Klavan on why AI developers should find God. Kat Rosenfield on a trove of texts from the Cornell 7 case. Eli Lake reports on the Hegseth impeachment drama. And much more. But first: A Veterans Day essay by Aaron MacLean. America was founded on ideals that breed heroism: individuality, ambition, courage, and freedom. On Veterans Day, we honor the fullest expression of those ideals: the soldiers who put their lives on the line to preserve all that is precious about our country. Aaron MacLean is a veteran himself. For seven years, he was an active-duty member of the U.S. Marine Corps, including one year as an infantry officer in Afghanistan. But when we asked him to write in honor of Veterans Day, he chose to tell the story of another American hero. Today, Aaron introduces us to Johann &#8220;Hans&#8221; Kasten, who fought in World War II, died in 2007, and will be honored next week at Arlington National Cemetery. While being held as a POW by the Germans, Kasten was beaten for refusing to reveal which of his fellow American soldiers were Jewish. We are proud to bring you the story of this extraordinary man, just one of millions of heroes we celebrate today. Johann Kasten is buried at Arlington National Cemetery. Next door at the Pentagon, Pete Hegseth is trying his best to survive an impeachment push and cling to",
+   "published": "2026-11-11T11:02:32+00:00",
+   "link": "https://www.thefp.com/p/veterans-day-aaron-maclean-ai-transhumanism-god-cornell-hegseth-impeachment",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Did Democrats save Pete Hegseth from impeachment?",
+   "dek": "Eleven Democrats are absent from procedural vote that narrowly shelves House impeachment vote against defence secretary.",
+   "opening": "",
+   "published": "2026-11-11T10:32:03+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/11/did-democrats-save-pete-hegseth-from-impeachment?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US Treasury chief Bessent moved to military base after ‘Iranian threats’",
+   "dek": "Iran is said to have geo-located Bessent&#039;s $12.5m mansion in Washington, DC after a photo of it was published.",
+   "opening": "",
+   "published": "2026-11-11T10:16:38+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/11/us-treasury-chief-bessent-moved-to-military-base-after-iranian-threats?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Heating Costs Will Rise 7% on Average This Winter",
+   "dek": "People who use heating oil will see increases of around 70 percent because the war in Iran has greatly reduced supply of that fuel.",
+   "opening": "",
+   "published": "2026-11-11T10:04:21+00:00",
+   "link": "https://www.nytimes.com/2026/11/11/business/energy-environment/winter-heating-oil-costs.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "heating-oil": [
+     "heating oil"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A New Democratic-Tied Dark-Money Group Draws Scrutiny Over Midterm Spending",
+   "dek": "More money in the political system is coming from shadowy nonprofits that appear out of nowhere and start spending big with little disclosure.",
+   "opening": "",
+   "published": "2026-11-11T10:04:13+00:00",
+   "link": "https://www.nytimes.com/2026/11/11/us/democratic-dark-money-super-pac-complaint.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "This Trader Raised Alarm About Nvidia’s China Entanglements Months Ago",
+   "dek": "Christian Lamarco, a 31-year-old short seller and trader, warned about financial and personal problems at Nvidia in May.",
+   "opening": "",
+   "published": "2026-11-11T10:03:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/11/business/nvidia-megaspeed-christian-lamarco.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Honor and Anguish: A Veterans Day When the Losses Are New",
+   "dek": "For these military families who lost a loved one in the war with Iran, emotions run from pride to grief to anger.",
+   "opening": "",
+   "published": "2026-11-11T10:03:43+00:00",
+   "link": "https://www.nytimes.com/2026/11/11/us/iran-war-deaths-survivors-veterans-day.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "war with iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Lebanon Faces Economic ‘Catastrophe’ After War and Years of Mismanagement",
+   "dek": "Hezbollah’s conflict with Israel and the U.S.-Israel war with Iran have made systemic problems worse, causing the cost of living to soar and driving many Lebanese to despair.",
+   "opening": "",
+   "published": "2026-11-11T09:31:18+00:00",
+   "link": "https://www.nytimes.com/2026/11/11/world/middleeast/lebanon-economy-crisis-corruption-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "war with iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Battle Over Hegseth and the Future of House Republican Leadership",
+   "dek": "The effort to impeach War Secretary Pete Hegseth is thwarted – for now. Meanwhile Texas democrats roll out their progressive new agenda for the state including gun control, price freezes, and sanctuary cities - But can they actually get it done? And, James Gunn and Peter Safran are out as co-heads of DC Studios. Reporting from Tim Rice, Jennie Taer & Megan Basham. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 3:30 AM CT 🚨 Tired of the ads? Join DailyW",
+   "opening": "",
+   "published": "2026-11-11T09:30:32+00:00",
+   "link": "https://www.youtube.com/watch?v=VIXTt1Ydykg",
+   "videoId": "VIXTt1Ydykg",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US embassy refutes Houthis’ Yemen blockade claims, highlights siege on Taiz",
+   "dek": "US embassy says goods still flowing into Yemeni areas under Houthi control, while accusing the rebels of besieging Taiz.",
+   "opening": "",
+   "published": "2026-11-11T08:58:59+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/11/us-embassy-refutes-houthis-yemen-blockade-claims-highlights-siege-on-taiz?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran denies talks with US, says Hormuz will stay shut until demands are met",
+   "dek": "Mohsen Rezaei&#039;s comments come as the IRGC said at least three ships had hit mines and caught fire in the Hormuz strait.",
+   "opening": "",
+   "published": "2026-11-11T08:21:56+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/11/iran-denies-talks-with-us-says-hormuz-will-stay-shut-until-demands-are-met?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz"
+    ],
+    "iran": [
+     "iran",
+     "irgc"
+    ],
+    "hormuz": [
+     "hormuz"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bessent moved to military base as Iran threats exceed ‘advanced stage,’ official says",
+   "dek": "Treasury Secretary Scott Bessent was reportedly relocated to a military base as Iranian assassination plots against U.S. officials intensify.",
+   "opening": "Treasury Secretary Scott Bessent has been relocated from his home in Washington, D.C., to a military base amid Iranian assassination threats this week, a senior administration official confirmed to Fox News. Tehran has ramped up its efforts to target senior U.S. officials overseas, with White House chief of staff Stephen Miller and Secretary of State Marco Rubio also relocating to military or protected housing in recent weeks. The senior official told Fox that threats against Bessent had reached \"more than an advanced stage.\" The official declined to say when exactly Bessent was relocated. Bessent has played a central role in the economic battle against Iran, launching \"Operation Economic Outcast\" this summer in an effort to isolate Iran's economy from the rest of the world. COULD IRAN’S REGIME COLLAPSE? EXPERTS ASSESS BESSENT’S BID TO SEVER FINANCIAL LIFELINES Bessent said the wave of sanctions would bring about the \"asphyxiation\" of Iran's economy. The Treasury Department confirmed Bessent's departure in a statement to Fox News on Tuesday, adding that the secretary refuses to \"be deterred by the Iranian regime’s threats.\" The New York Times first reported Bessent's relocation, citing three anonymous sources. IRAN HAS 'SUBSTANTIALLY INCREASED' EFFORTS TO TARGET AMERICANS ABROAD, US INTELLIGENCE MEMO WARNS The move comes as President Donald Trump continues to seek to end the war via diplomatic means, leaning away from a return to full-scale war. Rubio himself downplayed the p",
+   "published": "2026-11-11T07:39:00-05:00",
+   "link": "https://www.foxnews.com/politics/bessent-moved-military-base-iran-threats-exceed-advanced-stage-official-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran",
+     "tehran",
+     "economic outcast"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Chinese university buys Nvidia AI H200 chips despite US ban, records show",
+   "dek": "Investigation reveals Chinese entities accessing US-restricted AI tech despite stringent export control measures.",
+   "opening": "",
+   "published": "2026-11-11T07:26:28+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/11/chinese-university-buys-nvidia-ai-h200-chips-despite-us-ban-records-show?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "export control",
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House effectively ends Hegseth impeachment. And, 3 men accused of plotting U.K. attacks",
+   "dek": "Defense Secretary Pete Hegseth has been spared from the House's impeachment effort, at least for now. And, federal prosecutors arrested three men accused of being Iran-backed operatives.",
+   "opening": "Defense Secretary Pete Hegseth has been spared from the House's impeachment effort, at least for now. And, federal prosecutors arrested three men accused of being Iran-backed operatives. (Image credit: Chip Somodevilla)",
+   "published": "2026-11-11T07:21:59-05:00",
+   "link": "https://www.npr.org/2026/11/11/g-s1-152949/up-first-newsletter-pete-hegseth-jim-jordan-iran-backed-trio-us-bases",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "effectively",
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Secretary Scott Bessent moved to military base over Iran threats and more top headlines",
+   "dek": "Get all the stories you need-to-know from the most powerful name in news delivered first thing every morning to your inbox.",
+   "opening": "1. Secretary Scott Bessent moved to military base over Iran threats 2. House GOP leaders block Massie's Hegseth impeachment push 3. First Medal of Honor hero to ever reenlist reflects on his service FULL SPEED AHEAD — Mullin doubles down on border security after crushing Republican midterm losses. Continue reading … STEPPING UP — Jim Jordan becomes new House GOP leader after closed-door vote, defeating Steve Scalise. Continue reading … CHAOS ON THE LINE — Florida Learjet crash 911 callers report hearing ‘bomb’ as plane carrying young family plunges near busy road. Continue reading … SKY-HIGH THREAT — Twice-deported illegal alien accused of trying to storm United cockpit. Continue reading … BLIND SPOT — AOC’s Nvidia criticism draws questions about Swalwell’s suspected spy ties. Continue reading … -- DESERT RECKONING — An overlooked generation of US troops gets its due after one Marine's 16-year fight. Continue reading … HOSTILE WELCOME — Object hurled at Biden's motorcade as crowd screams 'blood on your hands'. Continue reading … LAWYERED UP — Ilhan Omar's meeting after scandal-plagued recess could signal what's ahead. Continue reading … COMPROMISED SYSTEM — Explosive Epstein report details convicted sex trafficker's political connections. Continue reading … Click here for more cartoons… MORAL RECKONING — TPUSA spokesperson criticizes Jennifer Welch, Chappelle amid Charlie Kirk uproar. Continue reading ... HOUSE DIVIDED — Whoopi Goldberg lectures congressional Democratic infig",
+   "published": "2026-11-11T07:15:25-05:00",
+   "link": "https://www.foxnews.com/us/secretary-scott-bessent-moved-military-base-iran-threats-more-top-headlines",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "hegseth"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "family",
+     "block"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "epstein",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Washington AG's office indicates it will defend girls' sports ballot measure after ACLU sues to block it",
+   "dek": "Washington Attorney General Nick Brown says his office will defend Initiative 638, but ties to the ACLU, his former law firm and a union raise questions.",
+   "opening": "Washington Attorney General Nick Brown’s office indicated it will fight to uphold a new voter-approved measure barring biological males from girls’ school sports, after the ACLU of Washington and other groups announced a lawsuit to block the measure. \"When a new law is passed by the people or the Legislature, our role is to ensure it is defended regardless of our personal views about the policy. We will review court filings as they come and discuss next steps,\" Brown’s office told OutKick. However, the lawsuit to challenge the initiative involves Brown’s former law firm, a teachers union that supported his campaign and the former employer of his policy director. His office reiterated its position when OutKick asked follow-up questions about those connections and how the defense would be handled. JACKSON THOMPSON: WASHINGTON STATE DEMOCRATIC PARTY CALLS GIRLS' SPORTS INITIATIVE UNCONSTITUTIONAL \"We’re discussing next steps and do not have more to add to the previous comment at this time. Again, when a new law is passed by the people or the Legislature, our role is to ensure it is defended regardless of our personal views about the policy,\" the office said. The responses did not identify who would lead the defense or say whether the office had evaluated recusal or screening measures concerning those relationships. Pacifica Law Group, where Brown previously served as a partner, is representing the Washington Education Association in the challenge, according to the Northwest Prog",
+   "published": "2026-11-11T07:09:01-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/washington-ag-office-indicates-defend-girls-sports-ballot-measure-aclu-sues-block",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_approved-arch-construction-federal": [
+     "washington",
+     "approved"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "lawsuit",
+     "block"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "lawsuit",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Slain New Jersey mom’s bedroom furniture removed by investigators months after unsolved stabbing",
+   "dek": "Investigators removed a headboard, hamper and possible comforter marked with evidence tape from the Chester, New Jersey, home where Brooke Hanlon died.",
+   "opening": "CHESTER, N.J. — A neighbor confirmed investigators removed what appeared to be a headboard, hamper and possible comforter or quilt from the property where Brooke Hanlon, 35, was found stabbed to death earlier this year. Fox News Digital was on the scene outside the home on Pottersville Road in Chester, New Jersey, last week and witnessed investigators carrying scads of those items wrapped in brown paper and marked with evidence tape out of the Hanlon home. Hanlon, a psychotherapist and mother, was found fatally stabbed in the home on June 6. Her husband, James \"Conor\" Hanlon, had called 911 from the home after his wife was found stabbed there. No arrests have been made. He was seen speaking with police on Wednesday afternoon, his neighbors said. COPS RETURN TO NEW JERSEY MOTHER'S HOME MONTHS AFTER SHE WAS FOUND STABBED AND HUSBAND CALLED 911 On Thursday, Fox News Digital witnessed officers remove what appeared to be a large comforter from a second-story window at the house. It's a two-bedroom, two-bathroom home with few windows on the second floor. Several neighbors expressed concern to Fox News Digital over the lack of new information in the case. SLAIN NJ MOTHER 911 CALL MADE BY HER HUSBAND HAS FORENSIC EXPERT WARNING ONE MISTAKE COULD DERAIL FOCUS Investigators returning to the property had some residents hopeful for an arrest, neighbors said. NEW JERSEY MOM’S SLAYING HAS NEIGHBORS ON EDGE WITH EVERY 'STRANGE NOISE’ NEARLY 7 WEEKS LATER One neighbor said, \"I just want them",
+   "published": "2026-11-11T07:00:55-05:00",
+   "link": "https://www.foxnews.com/us/slain-new-jersey-moms-bedroom-furniture-removed-investigators-months-unsolved-stabbing",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "mother",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The election is over: It's time for young Jews to step up and lead",
+   "dek": "The election may be over, but young Jews still face a defining choice: Let antisemitism shape their future or build strong Jewish communities and become the leaders they want to see.",
+   "opening": "A week has passed since Election Day . The votes have been counted. But no election can decide how proudly we live as Jews, how we support one another or what kind of leaders we become. Those decisions belong to us. As the former student body president at the University of California, Santa Barbara, I know what it means to lead while your Jewish identity becomes a target. My experience, featured in the documentary \"October 8,\" taught me how urgently institutions need to confront antisemitism — and how much courage it can take to speak up when they fail. It also taught me that we cannot put our lives or our leadership on hold until someone else finds that courage. JEWISH TEENS PREPARE TO COMBAT ANTISEMITISM ON CAMPUS WITH HISTORY, HUMOR AND COURAGE Recently at the Jewish Student Union Presidents Conference in Stamford, Connecticut, I saw hundreds of Jewish high school students putting that principle into practice. They had gathered as the country headed into Election Day. But their leadership did not depend on who would win. They were already building Jewish communities in their schools. Already taking responsibility for something larger than themselves. Already choosing to show up. I recognized myself in them. I am a Jewish Student Union alumna. Before I became a student body president, I needed opportunities to understand my Jewish identity, develop my voice and discover that I had something worth contributing. BACK TO SCHOOL SHOULD NOT MEAN BACK TO FEAR FOR JEWISH STUDENTS ",
+   "published": "2026-11-11T07:00:23-05:00",
+   "link": "https://www.foxnews.com/opinion/election-over-time-young-jews-step-lead",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "communities",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Senate Republicans plan 54-day blitz to push Trump's agenda before Democrats seize power",
+   "dek": "John Thune and Senate Republicans agreed to a resolution to maximize their remaining 54 days in power before Democrats take control next year.",
+   "opening": "With their leadership elections settled, Senate Republicans are gearing up to \"maximize\" their remaining time in power before Senate Democrats take over next year. All eyes are again on Senate Majority Leader John Thune, R-S.D., who was re-elected to another term as the Republican leader. Shortly after winning, Thune declared that he and the Senate GOP were \"committed to being here to do whatever it takes to get as much done as we can.\" \"That means extending the calendar here, the number of days we're here, the number of hours we're here, the number of votes we may end up taking,\" Thune said. \"But we are going to finish this legislative session strong.\" SENATE GOP REBELLION FIZZLES AS THUNE KEEPS POWER DESPITE HISTORIC MIDTERM MASSACRE The Senate was initially set to be in roughly 20 days from Tuesday until the changing of the guard, but Republicans are now squeezing the juice out of every last minute to ram through must-pass legislation, dozens of President Donald Trump’s nominees and more. And Republicans agreed to hold themselves to that sprint until the end of the year at the tail end of their marathon closed-door meeting on Tuesday. Lawmakers plan to \"maximize the 54 days we have with congressional majorities, to confirm every judicial nominee and every executive nominee that the conference approves of, to pass our core Republican priorities, and to do everything humanly possible to pass a reconciliation bill before Jan. 3,\" according to a resolution agreed to in the mee",
+   "published": "2026-11-11T06:55:55-05:00",
+   "link": "https://www.foxnews.com/politics/senate-republicans-plan-54-day-blitz-push-trumps-agenda-before-democrats-seize-power",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House Dem criticizes Fetterman's record, mulls 2028 Senate bid",
+   "dek": "Democratic Rep. Madeleine Dean of Pennsylvania indicated to Politico that she&apos;s thinking about potentially mounting a bid for U.S. Senate.",
+   "opening": "Rep. Madeleine Dean, D-Pa., is reportedly mulling a U.S. Senate bid , a move which could mean challenging Sen. John Fetterman, D-Pa., who would need to seek re-election in 2028 if he wants to pursue a second term. \"I’m going to be considering it,\" Dean said in an interview with Politico published Tuesday. Dean expressed disappointment with Fetterman's performance as a senator. GAZA-BORN DEMOCRATIC SOCIALIST LAUNCHES PRIMARY BID AGAINST SEN JOHN FETTERMAN \"I have been concerned about, really, two things, which is his family and his health … and am very disappointed in his activity as a senator and in his votes,\" she noted, according to Politico. Dean's campaign did not immediately respond to Fox News Digital's comment request on Wednesday. BITTER FETTERMAN-EL-SAYED FEUD THREATENS TO COMPLICATE SCHUMER'S SENATE UNITY PUSH The congresswoman, who has served in the House since early 2019, just won re-election to a fifth term. Last year, a report quoted Dean as saying there was \"no way\" that she would mount a bid to challenge Fetterman. FETTERMAN PLAYS POLITICAL MAVERICK, BUT HIS VOTING RECORD TELLS ANOTHER STORY But she strongly criticized Fetterman after he recorded a video that played during the GOP midterm convention earlier this year. \"To me, that was a very sad stunt, that he would stand there aligning himself with the most corrupt president of our lifetime, if not the most corrupt president in history. I have said I hope John comes back to the Democratic fold,\" she said.",
+   "published": "2026-11-11T06:24:16-05:00",
+   "link": "https://www.foxnews.com/politics/house-dem-mulls-senate-bid-disappointed-fettermans-performance-senator",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Small-town Marine veteran refuses to back down in 16-year fight for America's forgotten heroes — and wins",
+   "dek": "Scott Stump, a Marine veteran from North Carolina, spent 16 years battling Congress and bureaucracy to build the Desert Storm memorial on the Mall.",
+   "opening": "A Marine veteran from a small North Carolina town spent 16 years fighting to build a national memorial honoring the Americans who served in Desert Shield and Desert Storm — overcoming congressional setbacks, years of bureaucratic hurdles and a lengthy battle over its location, all while refusing to use taxpayer money to get it done. \"I'm just an average everyday American,\" Scott Stump told Fox News Digital. \"I just felt like something had to be done to correct what I felt was a historical oversight.\" What began as one veteran's determination to ensure the sacrifices of the 1990-1991 Gulf War generation were not forgotten became a 16-year undertaking that culminated in the Oct. 24, 2026, opening of the Desert Shield and Desert Storm Memorial on the National Mall . Stump, who spearheaded the effort with a team of veteran volunteers, said he insisted from the beginning that the project be built without U.S. taxpayer funding, even as it required years of congressional action, federal approvals and financial support from donors. TRUMP SIGNS ACT CLEARING THE WAY FOR MEDAL OF HONOR MONUMENT ON NATIONAL MALL \"I made the decision right off the bat that [I] was not interested in encumbering the taxpayer at all,\" Stump said. \"This should be 100% privately funded. Just felt like it was the right thing to do.\" Stump said the idea first came to him in November 2010, as the country approached the 20th anniversary of Operation Desert Storm, the U.S.-led military campaign that liberated Kuwai",
+   "published": "2026-11-11T06:00:28-05:00",
+   "link": "https://www.foxnews.com/politics/small-town-marine-veteran-refuses-back-down-16-year-fight-americas-forgotten-heroes-wins",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_declares-monument-national-office": [
+     "national",
+     "monument"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mississippi voters forced to 'hope for the best' under strict voting laws",
+   "dek": "Mississippi's razor-thin Senate race has brought added scrutiny to its election system. MS NOW's Nnamdi Egwuonwu says voters are being sent on wild goose chases because of the state's restrictive voting laws. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now",
+   "opening": "",
+   "published": "2026-11-11T05:40:24+00:00",
+   "link": "https://www.youtube.com/watch?v=hbBes3Mq5ow",
+   "videoId": "hbBes3Mq5ow",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘It’s gonna rise anew’: Justin Jones says a Third Reconstruction is stirring in the South",
+   "dek": "A surge in Black voter turnout helped Democrats achieve historic victories in the 2026 midterms. Tennessee Rep. Justin Jones joins Ali Velshi to discuss what Democrats can do to transform their momentum into a real movement. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: ht",
+   "opening": "",
+   "published": "2026-11-11T05:38:43+00:00",
+   "link": "https://www.youtube.com/watch?v=V4EDW0q_Ewk",
+   "videoId": "V4EDW0q_Ewk",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "No Good Choices on Iran",
+   "dek": "As top Trump aides clash over a strategy to end the war, the administration is weighing escalation, narrower strikes and diplomacy.",
+   "opening": "",
+   "published": "2026-11-11T05:27:26+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/iran-trump-war-hegseth-impeach.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Stephen Miller’s promotion a 'DISASTROUS' decision for GOP | MS NOW Highlights",
+   "dek": "Ari Melber reports on the end of a historic week in Washington, as President Donald Trump announced longtime adviser Stephen Miller would replace Susie Wiles as White House Chief of Staff. Democratic Strategist James Carville and former Deputy White House Press Secretary Sarah Matthews join to discuss. Plus, Joe Scarborough argues that Democrats shouldn’t ‘take the bait’ and overreact to Miller’s promotion, especially after winning a decisive victory in the 2026 midterms. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW ",
+   "opening": "",
+   "published": "2026-11-11T05:25:55+00:00",
+   "link": "https://www.youtube.com/watch?v=XaAz17kgz2s",
+   "videoId": "XaAz17kgz2s",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Last Word with Lawrence O'Donnell - Nov. 10 | Audio Only",
+   "dek": "Listen to the audio version of The Last Word With Lawrence O’Donnell from the Nov. 10 broadcast. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Ohio #AmyActon #midterms",
+   "opening": "",
+   "published": "2026-11-11T05:22:30+00:00",
+   "link": "https://www.youtube.com/watch?v=AdtiQtK-8RU",
+   "videoId": "AdtiQtK-8RU",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Buttigieg: Time for 'BIG SWINGS'; New Democratic Congress eyes ambitious agenda",
+   "dek": "Former Transportation Secretary Pete Buttigieg talks with Jen Psaki about the big ideas and major reforms Democrats in the new Congress may take on, everything from Citizens United to the Electoral College. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ ",
+   "opening": "",
+   "published": "2026-11-11T05:16:25+00:00",
+   "link": "https://www.youtube.com/watch?v=HrrbMFRWzk4",
+   "videoId": "HrrbMFRWzk4",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "KENNEDYS & TRUMP ARCH",
+   "dek": "Descendants of President John F. Kennedy are asking a judge to block President Trump's monumental arch near Arlington National Cemetery.",
+   "opening": "Descendants of President John F. Kennedy are asking a judge to block President Trump's monumental arch near Arlington National Cemetery.",
+   "published": "2026-11-11T05:02:58-05:00",
+   "link": "https://www.npr.org/2026/11/11/nx-s1-6036845/kennedys-trump-arch",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "arch"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "kennedy",
+     "block",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ex-CIA officer on UK investigations into alleged Iran, Russia threats",
+   "dek": "NPR's Michel Martin speaks with former CIA senior executive clandestine service officer Daniel Hoffman about investigations in Britain into alleged threats linked to Iran and Russia.",
+   "opening": "NPR's Michel Martin speaks with former CIA senior executive clandestine service officer Daniel Hoffman about investigations in Britain into alleged threats linked to Iran and Russia.",
+   "published": "2026-11-11T05:02:57-05:00",
+   "link": "https://www.npr.org/2026/11/11/nx-s1-6036829/ex-cia-officer-on-uk-investigations-into-alleged-iran-russia-threats",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran-backed trio accused of plotting attacks on U.K. base hosting U.S. jets",
+   "dek": "Iran-backed operatives have been charged over nearly 20 attacks, including a plot on a U.K. base housing U.S. troops. Separately, a U.S. soldier is held in the U.K. on Russia spying claims.",
+   "opening": "Iran-backed operatives have been charged over nearly 20 attacks, including a plot on a U.K. base housing U.S. troops. Separately, a U.S. soldier is held in the U.K. on Russia spying claims. (Image credit: Alastair Grant)",
+   "published": "2026-11-11T05:02:54-05:00",
+   "link": "https://www.npr.org/2026/11/10/nx-s1-6036786/uk-iran-airbase-russia-spy",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House votes to end the impeachment effort against Pete Hegseth",
+   "dek": "The House was on course for a floor vote Wednesday on whether to impeach Pete Hegseth. That is until House Republicans used a procedural vote to effectively end the impeachment effort.",
+   "opening": "The House was on course for a floor vote Wednesday on whether to impeach Pete Hegseth. That is until House Republicans used a procedural vote to effectively end the impeachment effort.",
+   "published": "2026-11-11T05:02:51-05:00",
+   "link": "https://www.npr.org/2026/11/11/nx-s1-6035797/house-votes-to-end-the-impeachment-effort-against-pete-hegseth",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "effectively",
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mixed results from ballot measures on abortion and trans issues",
+   "dek": "Midterm ballot measures on abortion and transgender issues saw mixed results.",
+   "opening": "Midterm ballot measures on abortion and transgender issues saw mixed results.",
+   "published": "2026-11-11T05:02:50-05:00",
+   "link": "https://www.npr.org/2026/11/11/nx-s1-6035718/mixed-results-from-ballot-measures-on-abortion-and-trans-issues",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Steve Inskeep talks to ex-CIA analyst about alleged Nvidia Chinese spy case",
+   "dek": "NPR's Steve Inskeep talks with former CIA analyst Emily Harding about China's spy tactics in light of the alleged plot targeting the CEO of Nvidia.",
+   "opening": "NPR's Steve Inskeep talks with former CIA analyst Emily Harding about China's spy tactics in light of the alleged plot targeting the CEO of Nvidia.",
+   "published": "2026-11-11T05:02:47-05:00",
+   "link": "https://www.npr.org/2026/11/11/nx-s1-6035790/steve-inskeep-talks-to-ex-cia-analyst-about-alleged-nvidia-chinese-spy-case",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Morning News Brief: Hegseth impeachment, new House GOP leader, UK probes base plot",
+   "dek": "Republicans block Hegseth impeachment, Trump ally picked to lead House GOP minority, UK investigates alleged Iran-backed plot.",
+   "opening": "Republicans block Hegseth impeachment, Trump ally picked to lead House GOP minority, UK investigates alleged Iran-backed plot.",
+   "published": "2026-11-11T05:02:44-05:00",
+   "link": "https://www.npr.org/2026/11/11/nx-s1-6035568/morning-news-brief-hegseth-impeachment-new-house-gop-leader-uk-probes-base-plot",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Oil giant ExxonMobil left Venezuela years ago. Now it's considering a return",
+   "dek": "ExxonMobil has signed a memorandum of understanding with the Venezuelan government and its state-owned oil company to explore opportunities in the country.",
+   "opening": "ExxonMobil has signed a memorandum of understanding with the Venezuelan government and its state-owned oil company to explore opportunities in the country. (Image credit: Brendan Smialowski)",
+   "published": "2026-11-11T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/11/nx-s1-5979080/exxonmobil-oil-mou-venezuela",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ],
+    "refining-margin": [
+     "exxon"
+    ],
+    "june-mou": [
+     "memorandum of understanding"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Both sides now? Critics slam DOJ moves to dismiss convictions of Trump allies",
+   "dek": "The DOJ moved to dismiss criminal convictions of former Trump adviser Steve Bannon and of the Oath Keepers, in what it calls \"the interests of justice.\" Critics are crying foul.",
+   "opening": "The DOJ moved to dismiss criminal convictions of former Trump adviser Steve Bannon and of the Oath Keepers, in what it calls \"the interests of justice.\" Critics are crying foul. (Image credit: Steven Hirsch)",
+   "published": "2026-11-11T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/11/g-s1-152713/doj-abandons-convictions-trump-allies-no-defense",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thejusti_bannon-conviction-doj-overturn": [
+     "steve",
+     "bannon"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Massie tells MS NOW: GOP in 'suicide pact' after Hegseth impeachment fails",
+   "dek": "“I am disappointed.” Rep. Thomas Massie reacts to the failed effort to impeach Defense Secretary Pete Hegseth, telling MS NOW Congressional Reporter Mychael Schnell that his Republican colleagues remain in a “suicide pact” with the Trump administration over the Iran war despite their devastating midterm losses. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. ",
+   "opening": "",
+   "published": "2026-11-11T04:42:25+00:00",
+   "link": "https://www.youtube.com/shorts/DecAIgPmshA",
+   "videoId": "DecAIgPmshA",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "failed",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "ICE Deportation Flight Carrying Iranians Turns Back and Lands in Arizona",
+   "dek": "The Iranian immigrants in the plane were scheduled to be flown to Pakistan and then transferred to Iran, lawyers for the group said.",
+   "opening": "",
+   "published": "2026-11-11T03:57:10+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/asia/ice-deportation-flight-iran-mesa.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Did the Impeachment Threat Just Save Pete Hegseth?",
+   "dek": "The charges against him also implicate Trump. They forced the White House to defend him, instead of picking a new defense chief to move beyond the Iran war, writes Eli Lake.",
+   "opening": "Normally, the prospect of a cabinet secretary&#8217;s impeachment would be a reason for a president to cut him loose. In the case of Defense Secretary Pete Hegseth, the threat of impeachment is one very big reason why he will stay in his post at the Pentagon, at least for now. On Monday, Rep. Thomas Massie, a Republican who will exit Congress next year after losing his primary to a candidate endorsed by President Donald Trump, introduced articles of impeachment against Hegseth. The measures have earned support from nearly all of the Democrats in the House including the likely next speaker, Hakeem Jeffries. Since then, Trump and his senior team have rallied around Hegseth. And it worked. On Tuesday evening the House voted on near party lines 211&#8211;204 to refer the bill to the Judiciary Committee, effectively killing it. Eleven Democrats who might have approved of the impeachment appear to have missed or sat out the vote. But Massie said Tuesday he will now introduce all eight articles of impeachment as stand-alone bills. Read more",
+   "published": "2026-11-11T03:15:11+00:00",
+   "link": "https://www.thefp.com/p/impeach-hegseth-massie-trump-congress-eli-lake",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "effectively",
+     "impeachment",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans Turn Back Effort to Impeach Hegseth",
+   "dek": "The G.O.P. banded together to shelve impeachment articles against the defense secretary, sparing him from a damaging rebuke and potential ouster.",
+   "opening": "",
+   "published": "2026-11-11T03:08:02+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/house-hegseth-impeachment-vote.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Nvidia Honeypot Chinese Sexpionage Scandal, Explained | The Daily Show",
+   "dek": "Desi Lydic breaks down the scandalous sexpionage story surrounding Nvidia CEO Jensen Huang that's shaking the tech world. Huang engaged in an ongoing affair with an alleged Chinese spy while advocating for permission to sell his company’s microchips to the communist superpower, and has garnered sympathy from Trump and ire from others. Plus, Josh Johnson chimes in to defend Huang in his moment of need. #DailyShow #Nvidia #JensenHuang #Sexpionage 0:00 - Desi Lydic's TDS Welcome 0:20 - Nvidia CEO Admits Affair With Alleged Chinese Spy 3:00 - Nvidia CEO Posts Many Photos of Himself with Spy 4:42 -",
+   "opening": "",
+   "published": "2026-11-11T02:59:23+00:00",
+   "link": "https://www.youtube.com/watch?v=HA0ulwcacFI",
+   "videoId": "HA0ulwcacFI",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Kennedys Join Suit to Block Trump’s Arch, Saying It Would Mar J.F.K. Gravesite",
+   "dek": "The legal filing argues that the arch would cast a shadow on Kennedy family graves and disrupt the sightline from the eternal flame memorializing the former president.",
+   "opening": "",
+   "published": "2026-11-11T02:59:12+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/kennedy-trump-arch-lawsuit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_hhs_arch-block-family-joins": [
+     "kennedy",
+     "family",
+     "block",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How a Suspected Chinese Spy Gained Access to Nvidia Chips",
+   "dek": "A woman whom U.S. intelligence identified as a Chinese spy had ties to Nvidia’s chief executive, Jensen Huang, dating to at least 2023. Ana Swanson, our reporter on trade and economics, explains what new photos show.",
+   "opening": "",
+   "published": "2026-11-11T02:10:37+00:00",
+   "link": "https://www.nytimes.com/video/business/100000011273241/alice-huang-nvidia-china-spy.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "On the Defense: Takeaways From Hegseth’s Remarks on Articles of Impeachment",
+   "dek": "Defense Secretary Pete Hegseth broke a monthslong drought of news briefings to defend his record in office.",
+   "opening": "",
+   "published": "2026-11-11T01:56:46+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/hegseth-speech-impeachment-takeaways.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bessent Is Moved From D.C.-Area Home to Military Base Amid Iranian Threats",
+   "dek": "The Treasury secretary, who is leading an economic pressure campaign against Iran, is the latest Trump official to leave his home over security concerns.",
+   "opening": "",
+   "published": "2026-11-11T00:31:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/bessent-moved-base-iran-threats.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: Jim Jordan Voted In As Minority Leader & Cali Kills ‘Billionaire Tax’",
+   "dek": "War Secretary Pete Hegseth slams the impeachment effort against him, Florida’s AG subpoenas the Democratic Socialists of America, and it’s now official, California voters have shot down the “billionaire tax.” Get the facts first with Evening Wire. - - - Ep. 3189 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Quince - Give the gift of quality this holiday season. Download the Quince app for app-exclusive offers, or go to https://Quince.com. Get free shipping on your order and 365-day returns. Now available in Canada and the UK, too. And when Quince asks",
+   "opening": "",
+   "published": "2026-11-10T22:30:32+00:00",
+   "link": "https://www.youtube.com/watch?v=ijdmPCH_J3w",
+   "videoId": "ijdmPCH_J3w",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Niall Ferguson: Did a Blue Tsunami Just End an Era? Not So Fast.",
+   "dek": "It is always illuminating to listen to intelligent people with no interest in the past trying to interpret the results of the 2026 midterms. So let&#8217;s try again with a little historical perspective, writes Niall Ferguson.",
+   "opening": "The title of this year&#8217;s Booker Prize winner, by M. John Harrison, is The End of Everything . It&#8217;s a book for our times, depicting a postapocalyptic Britain being stealthily invaded by enigmatic aliens called the iGhetti. The Guardian &#8217;s reviewer got the point: &#8220;these eerie non-humans that. . . insert themselves into the neighborhood could be interpreted as LLMs made flesh.&#8221; The novel, wrote Michel Faber , &#8220;burrows deep into our psyches&#8212;into the psyche of our civilization&#8212;and exposes the terrifying insecurity of life right now.&#8221; There has been a lot of that kind of talk since last Tuesday&#8217;s midterm election results, which stunned tech bros and their hedgie fanboys, all of whom assumed that, whatever else happened, even a nightmare blue tsunami, Texas would be safe. But just as the Kent coast couldn&#8217;t keep out the iGhetti, so Austin couldn&#8217;t keep out the iDemi. This was a turning point, one leading hedge fund wrote. It signified the political death of MAGA, though not of economic populism. Where previously voters were open to the Donald Trump combination of deregulation, tariffs, and tax cuts, now the voters want protection from the market when prices go up, and that means taxing and regulating business. This was a fundamental change in the forces shaping policy debate, and required a complete rethink by investors. Well, maybe. But there&#8217;s a difference between a paradigm shift and a vibe shift (a ter",
+   "published": "2026-11-10T22:08:43+00:00",
+   "link": "https://www.thefp.com/p/niall-ferguson-biden-trump-history-midterms",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic’s Giant IPO Will Tie It Closer to Nvidia",
+   "dek": "Nvidia planned to invest $10 billion in Anthropic alongside its initial public offering, the largest of the new financial commitments from several giants to the A.I. company.",
+   "opening": "",
+   "published": "2026-11-10T22:03:38+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/business/anthropic-ipo-nvidia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mullin vows ‘zero change’ on immigration after Republicans suffer crushing midterm losses",
+   "dek": "Markwayne Mullin says the Department of Homeland Security is deporting roughly 3,600 people a day and promises &quot;zero change&quot; after midterm elections.",
+   "opening": "Department of Homeland Security Secretary Markwayne Mullin delivered a blunt message on immigration policy Tuesday, promising \"zero change\" following the midterm elections that dealt a crushing blow to the Republican Party. Mullin made the remarks during an appearance on Fox News' \"The Ingraham Angle,\" where host Laura Ingraham brought up President Donald Trump suggesting Republicans work with Democrats. \"Amnesty will never be on the table,\" Mullin said. WHITE HOUSE DOUBLES DOWN AFTER TRUMP ANGERS BASE BY FLOATING ILLEGAL ALIEN DEAL WITH DEMS He noted that the agency has been deporting roughly 3,600 individuals a day and has no plans to slow down. \"We haven't slowed down at all. We've reprioritized what we're doing by going after the worst of the worst, by getting the murderers and the rapists and child predators and drug bankers and cartel members,\" he added. While Democrats secured majorities in both the House and Senate during the midterm elections, Mullin said Republicans cannot trust the opposing party to work with them. \"You can't trust the Democrat Party we've been working with at all. You can't, because nothing's enough for them,\" he said. He also criticized the Democratic Party's leadership, pointing to the Democratic Socialists of America (DSA) and accusing the group of wanting to \"defund the country.\" \"You got DSA that's running the Democrat Party right now. They want to defund my agency, the Department of Homeland Security,\" he said. BORDER DEM POISED TO WIELD ICE",
+   "published": "2026-11-10T21:52:52-05:00",
+   "link": "https://www.foxnews.com/politics/mullin-vows-zero-change-immigration-republicans-suffer-crushing-midterm-losses",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "PETE HEGSETH IS F*CKED",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-11-10T21:40:06+00:00",
+   "link": "https://www.youtube.com/watch?v=kkL7RMcKTIU",
+   "videoId": "kkL7RMcKTIU",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Who Is Alice Huang, the Woman in the Middle of Nvidia’s Spy Scandal?",
+   "dek": "Alice Huang, who U.S. intelligence determined is a Chinese asset, emerged from the high-flying world of Shanghai finance to work with tech titans and obtain essential A.I. chips.",
+   "opening": "",
+   "published": "2026-11-10T21:12:39+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/technology/alice-huang-megaspeed-nvidia-jensen-huang.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US evacuates 13 military aircraft from second UK base as new Iran threat raises alarm",
+   "dek": "More than a dozen U.S. Air Force aircraft left RAF Mildenhall after a reported Iran-linked threat triggered the second-highest military alert level.",
+   "opening": "The U.S. Air Force abruptly relocated more than a dozen aircraft from RAF Mildenhall in eastern England amid an emerging security threat, U.S. officials confirmed Tuesday. The Wall Street Journal first reported the move, citing sources who said the threat originated in Iran. As U.S. officials assessed the threat's nature and urgency, commanders raised the base's security level to Force Protection Condition Charlie, the military's second-highest alert level, indicating a likely terrorist threat against personnel or facilities. IRAN HAS 'SUBSTANTIALLY INCREASED' EFFORTS TO TARGET AMERICANS ABROAD, US INTELLIGENCE MEMO WARNS Flight-tracking data and open-source analysts with the Military Air Tracking Alliance identified 13 U.S. aircraft leaving the base late Monday, the Associated Press said. Nine Boeing KC-135 Stratotankers were moved to airfields in Scotland, Germany and Spain. Three CV-22B Ospreys were relocated to nearby RAF Lakenheath, which has hardened aircraft shelters. A U.S. official told The Associated Press the moves were precautionary, noting that some aircraft were on rotational deployments while others were permanently stationed in the United Kingdom . IRAN UNDER SCRUTINY AFTER PLOT FOILED NEAR UK BASE USED BY US MILITARY The move marks the second major relocation of U.S. military aircraft from Britain in less than two months. In early October, the Air Force pulled heavy bombers from RAF Fairford in Gloucestershire after British counterterrorism police stopped thr",
+   "published": "2026-11-10T19:53:31-05:00",
+   "link": "https://www.foxnews.com/world/us-evacuates-13-military-aircraft-second-uk-base-new-iran-threat-raises-alarm",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rubio Says ‘Major Combat Operations’ in Iran War Are No Longer Needed",
+   "dek": "The U.S. secretary of state said that American economic pressure is doing sufficient damage to the leadership in Tehran.",
+   "opening": "",
+   "published": "2026-11-10T19:33:48+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/rubio-iran-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Hires Wachtell Lipton to Investigate CEO Jensen Huang’s Affair With Chinese Executive",
+   "dek": "Wachtell partner Joon H. Kim, a former acting U.S. attorney, is leading the inquiry into the chip maker’s chief executive.",
+   "opening": "",
+   "published": "2026-11-10T19:33:36+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/business/nvidia-wachtell-lipton-jensen-huang.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Despite Denial, Trump Was Told on Trip to China About Spying on Nvidia’s Jensen Huang",
+   "dek": "Before Jensen Huang boarded Air Force One en route to Beijing, the president was reminded of intelligence showing that he was in a relationship with a woman believed to be a Chinese spy.",
+   "opening": "",
+   "published": "2026-11-10T19:27:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/trump-china-trip-nvidia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rachel Maddow lays out what she'd like to see from Democrats after the midterms #dailyshow",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T19:18:06+00:00",
+   "link": "https://www.youtube.com/shorts/rFhgFX2BgT4",
+   "videoId": "rFhgFX2BgT4",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House rejects Hegseth impeachment as GOP selects Jordan and Thune as leaders",
+   "dek": "Power shifts in Washington continued as new party leadership began to take shape. In the House, the GOP picked Jim Jordan to be their new leader and Senate Republicans re-elected John Thune. The House also voted to quash an effort to impeach Defense Secretary Pete Hegseth. Lisa Desjardins reports.",
+   "opening": "",
+   "published": "2026-11-10T18:55:40-05:00",
+   "link": "https://www.pbs.org/newshour/show/house-rejects-hegseth-impeachment-as-gop-selects-jordan-and-thune-as-leaders",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A breakdown of the impeachment articles filed against Pete Hegseth",
+   "dek": "For a legal perspective on the effort to impeach Defense Secretary Pete Hegseth, Geoff Bennett spoke with Eugene Fidell. He's a longtime military law expert who served as a Coast Guard lawyer and later practiced military law in the private sector. He also co-founded the National Institute of Military Justice, an organization dedicated to improving the military justice system.",
+   "opening": "",
+   "published": "2026-11-10T18:50:33-05:00",
+   "link": "https://www.pbs.org/newshour/show/a-breakdown-of-the-impeachment-articles-filed-against-pete-hegseth",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: U.S. charges 3 with plotting attacks",
+   "dek": "In our news wrap Tuesday, the U.S. charged three men with being Iran-backed operatives who planned attacks on Jewish communities and an attack at a British air base, Russian and Ukrainian representatives met for peace talks for the first time in nine months and Israel's parliament was sworn in without a new government in place, after no party secured a majority in the election.",
+   "opening": "",
+   "published": "2026-11-10T18:45:02-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-u-s-charges-3-with-plotting-attacks-at-air-base-and-jewish-communities",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "communities",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mississippi voters reflect on surprising Senate race as count continues",
+   "dek": "Mississippi, a state not known for close elections, now sits in the center of the national spotlight as an unusually high number of absentee and provisional ballots will determine the size of the Democratic majority in the Senate. In partnership with the Pulitzer Center, Liz Landers reports on how election officials are handling the ongoing vote count and the historic nature of this Senate race.",
+   "opening": "",
+   "published": "2026-11-10T18:35:03-05:00",
+   "link": "https://www.pbs.org/newshour/show/mississippi-voters-reflect-on-surprising-senate-race-as-count-continues",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "absentee",
+     "ballots"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang Spy Sex Scandal THREATENS GLOBAL ECONOMY",
+   "dek": "Krystal and Saagar discuss the massive scandal unfolding with Nvidia's Jensen Huang. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebook:",
+   "opening": "",
+   "published": "2026-11-10T18:30:12+00:00",
+   "link": "https://www.youtube.com/watch?v=CEZ4ygUrWhM",
+   "videoId": "CEZ4ygUrWhM",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "House GOP leaders block Massie's Hegseth impeachment push",
+   "dek": "Rep. Thomas Massie introduced a privileged resolution to impeach Secretary of War Pete Hegseth, meaning it had to be considered by the full House.",
+   "opening": "Secretary of War Pete Hegseth is safe from an impeachment vote in the House of Representatives after GOP leaders successfully stopped a looming vote led by Rep. Thomas Massie, R-Ky. A vote to refer Massie's resolution to the House Judiciary Committee for consideration — which effectively killed it in its tracks — passed on Tuesday evening by a 211-204 margin, averting a potential impeachment vote on Wednesday. President Donald Trump celebrated the failed impeachment effort in a Truth Social post, calling Massie a \"major LOSER\" and praising Hegseth's record on military operations in Venezuela and Iran and recruitment. HEGSETH IMPEACHMENT VOTE LOOMS AS HOUSE REPUBLICANS PRIVATELY WARN IT COULD PASS \"The Democrats’ attempt to impeach Secretary of War Pete Hegseth has miserably FAILED!\" Trump wrote, calling the outcome the \"EXONERATION of a Great American Patriot.\" The GOP had been worried about having a significant number of absences on their side after their brutal midterm election performance last week, but it appears Speaker Mike Johnson, R-La., wrangled one more victory on his way out the leadership door. Massie's resolution is a wide-ranging piece of legislation accusing Hegseth of misusing his office via eight impeachment articles , spanning issues including the Iran war, U.S. strikes on suspected drug boats in the Caribbean and his retaliation against Sen. Mark Kelly, D-Ariz., over a video calling on troops to disobey \"unlawful orders.\" Hegseth railed against the effort a",
+   "published": "2026-11-10T18:16:18-05:00",
+   "link": "https://www.foxnews.com/politics/house-gop-leaders-block-massie-hegseth-impeachment-push",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "venezuela": [
+     "venezuela"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "mark",
+     "major"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "effectively",
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "failed",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'JUST FOLLOWING ORDERS': Hegseth Impeachment MELTDOWN",
+   "dek": "Krystal and Saagar discuss Hegseth melting down as Massie brings an impeachment push over the Iran war. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breaki",
+   "opening": "",
+   "published": "2026-11-10T17:30:28+00:00",
+   "link": "https://www.youtube.com/watch?v=KSdSq3L1k5w",
+   "videoId": "KSdSq3L1k5w",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'The time is now for change.' Bernie Sanders won't support Schumer for Senate Democratic leader",
+   "dek": "The demand for change sets up a seismic confrontation after the party's sweep to power in the midterm elections.",
+   "opening": "",
+   "published": "2026-11-10T17:26:53-05:00",
+   "link": "https://www.pbs.org/newshour/politics/the-time-is-now-for-change-bernie-sanders-wont-support-schumer-for-senate-democratic-leader",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ilhan Omar huddles with her DC-based lawyers during her first day back on Capitol Hill amid federal probes",
+   "dek": "Ilhan Omar&apos;s attorneys were spotted leaving her Capitol Hill office after a two-hour meeting as federal probes into immigration and her finances mount.",
+   "opening": "Rep. Ilhan Omar , D-Minn., returned to Capitol Hill this week and brought two lawyers with her after a scandal-plagued fall recess. Fox News spotted the two attorneys exiting her Washington, D.C., office Tuesday after what appeared to be a roughly two-hour meeting with the congresswoman. Omar hired two high-profile attorneys, Amy Jeffress and Joshua Matz, both of whom are partners at Heckler Fink LLP, amid dueling investigations. After emerging from Omar’s office on Tuesday, Fox News asked about their confidence in Omar’s defense against the federal government. OBAMA ADMIN FIRST LAUNCHED THE INVESTIGATION INTO ILHAN OMAR'S ALLEGED BROTHER MARRIAGE The attorneys were also asked about the recent news that both the Obama and Biden administrations had been the first to investigate Omar after she claimed that the Trump administration was politically targeting her. They remained silent. This is the first sighting of Omar back on the Hill after two federal departments opened investigations into the Somali-born congresswoman looking into both her immigration status and previous financial filings. In October, agents with Homeland Security Investigations (HSI) raided her Washington, D.C., home as part of what Fox News Digital learned was an investigation into whether she or her father committed fraud when filling out her immigration paperwork. She spent the final weeks of her campaign asking for money to defend herself in the investigations and accusing Trump of targeting her for polit",
+   "published": "2026-11-10T17:25:44-05:00",
+   "link": "https://www.foxnews.com/politics/ilhan-omar-huddles-dc-based-lawyers-first-day-back-capitol-hill-amid-federal-probes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "brought",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Gas prices fall below $4 a gallon for first time since July",
+   "dek": "AAA data shows the national average gas price dropped below $4 a gallon for the first time in months as winter blend fuel and lower demand ease costs.",
+   "opening": "Gasoline prices fell to their lowest level since July on Tuesday, with the national average price slipping below $4 a gallon for the first time in months. Data from AAA showed that the national average price dropped about 3 cents per gallon from Monday's report, with the average slipping to $3.97 a gallon on Tuesday. Gas prices have fallen about 17 cents per gallon over the last week, and roughly 39 cents from a month ago, according to AAA's data. CONSUMER INFLATION RISES FASTER THAN EXPECTED IN OCTOBER, CPI REPORT SHOWS The decline in prices comes as refiners have switched to winter blends of gasoline that typically cost slightly less than summer blends, which can be sold at gas stations starting as early as mid-September. Winter weather tends to result in fewer drivers on the road, which can reduce demand for fuel and contribute to a downward trend in prices, and AAA noted that gas prices may fall between 10 and 30 cents per gallon during the winter months. TRUMP ADMIN POURING $480M LOAN INTO GULF OF AMERICA OIL AND GAS PROJECT Consumers have faced higher gas prices for much of this year during the war in Iran, which has disrupted the flow of oil from the Middle East through the Strait of Hormuz and, in turn, constrained supplies for refiners to convert crude into gasoline. Gas prices hit a recent peak at $4.50 a gallon May 11, 2026, then declined to a recent low of $3.77 a gallon on July 6, according to data from the Energy Information Administration . CEO WARNS HIGH DIESE",
+   "published": "2026-11-10T17:12:23-05:00",
+   "link": "https://www.foxbusiness.com/economy/gas-prices-fall-below-4-gallon-first-time-since-july",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "refiner",
+     "hormuz",
+     "strait of",
+     "crude",
+     "gasoline"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Did a Chinese Spy Seduce NVIDIA's CEO Jensen Huang",
+   "dek": "AI and computing giant NVIDIA faces scrutiny over international security concerns after revelations that its CEO Jensen Huang may have had a romantic relationship with a Chinese spy. Investigations into chip distribution and intelligence risks could reshape the AI future. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 5:00 AM CT 🚨 Tired of the ads? Join DailyWire+ today and watch Morning Wire, along with all of our live news coverage, ad-free: https://bit.ly/3RzxiDM #MorningWire #DailyWire ",
+   "opening": "",
+   "published": "2026-11-10T17:04:03+00:00",
+   "link": "https://www.youtube.com/shorts/nK_jicNj6ic",
+   "videoId": "nK_jicNj6ic",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "American girl, 7, killed during Mexican cartel operation; mother blames police helicopter: report",
+   "dek": "Aranza Aidelany Pardo&apos;s mother says a Tamaulipas state police helicopter fired the shot that killed her 7-year-old during a Gulf Cartel operation.",
+   "opening": "A 7-year-old girl with dual U.S. and Mexican citizenship was shot and killed during a Mexican security operation targeting an alleged cartel member, and her mother accused police officers aboard a helicopter of firing the deadly shot. Aranza Aidelany Pardo died Oct. 29 in Matamoros, a Mexican border city across from Brownsville, Texas. She was among six people killed during the operation and subsequent roadblocks erected by the Gulf Cartel, according to The Associated Press. Her mother, Claudia Pardo García, told the AP that gunfire from a Tamaulipas state police helicopter struck her daughter in the head. Pardo was also wounded in the leg. Mexican authorities are investigating three officers aboard the helicopter who remain on active duty, according to Tamaulipas Public Security Secretary Carlos Arturo Pancardo. EXCLUSIVE: INSIDE TRUMP'S CARTEL CRACKDOWN AS WHITE HOUSE OFFICIAL DETAILS PRESIDENT'S PRIVATE BRIEFINGS The operation resulted in the arrest of Axel Alfredo Cárdenas Rodríguez, also known as El Titán, the son of an alleged Gulf Cartel leader and nephew of the group's imprisoned founder, Osiel Cárdenas Guillén. Pardo told the AP that she, her husband and their five children were returning home when they encountered cartel roadblocks and took a rural shortcut. She said a police helicopter began following their vehicle before circling in front of it. Her husband exited with his hands raised to show officers they were a family, but gunfire erupted. Aranza was struck in ",
+   "published": "2026-11-10T16:59:56-05:00",
+   "link": "https://www.foxnews.com/world/american-girl-7-killed-mexican-cartel-operation-mother-blames-police-helicopter-report",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "mother",
+     "girl"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Senior US Army soldier arrested in UK on suspicion of spying for Russia",
+   "dek": "U.K. police arrested a senior U.S. Army soldier in a Russia-linked espionage probe, drawing a sharp warning from FBI Director Kash Patel.",
+   "opening": "A senior U.S. Army soldier was arrested in England Tuesday on suspicion of espionage offenses related to Russia, according to U.K. police. The 41-year-old man, whose identity was not released, was detained as part of an investigation into suspected national security threats led by Counter Terrorism Policing , according to the Metropolitan Police. Officials said the arrest was carried out in coordination with the U.S. military and the FBI. \"This important arrest involves allegations of espionage, which is of the utmost concern to the United States and our allies,\" FBI Director Kash Patel said in a statement. FBI OFFERS $200K REWARD FOR FORMER AIR FORCE INTELLIGENCE AGENT ACCUSED OF SPYING FOR IRAN The soldier was arrested near Gloucester, and police are currently searching two locations in the wider Gloucestershire area as part of the ongoing joint U.K.-U.S. investigation. Police said the man was detained under the National Security Act 2023 and remains in custody at a London police station. The investigation is ongoing and is being led by officers from the Counter Terrorism Policing team in London. RUSSIAN SPIES ORCHESTRATED $40K MURDER PLOT IN NATION’S CAPITAL, US ALLEGES Deputy Assistant Commissioner Vicki Evans, the senior national coordinator for Counter Terrorism Policing, described the allegations as \"serious.\" \"We will work together to take robust action against those we suspect of any criminal activity that could undermine our national security,\" Evans said in a state",
+   "published": "2026-11-10T16:51:09-05:00",
+   "link": "https://www.foxnews.com/world/senior-us-army-soldier-arrested-uk-suspicion-spying-russia",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "allies",
+     "security"
+    ],
+    "obj_x_body-charged-death-foster": [
+     "murder",
+     "whose"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth labels impeachment push a policy dispute, but do lawmakers' allegations rise to high crimes?",
+   "dek": "Pete Hegseth calls eight impeachment articles mere &quot;policy disagreements&quot; as Rep. Thomas Massie alleges war powers violations and unlawful strikes.",
+   "opening": "War Secretary Pete Hegseth pushed back against an impeachment effort Tuesday, accusing lawmakers of trying to turn disagreements over President Donald Trump's military policies into impeachable offenses. Congress is preparing to vote on eight articles alleging the Pentagon chief violated federal law and abused his authority. \"One disgruntled congressman wants to shred it over policy disagreements. That's what it is: policy disagreements, not high crimes, not misdemeanors, not treason, not bribery, not the kinds of offenses the founders intended when they wrote the impeachment clause,\" Hegseth said at a Pentagon press conference Tuesday morning. \"The proper remedy for a policy disagreement, it's legislation, it's debate, it's the next presidential election,\" he added. But the impeachment resolution introduced Monday by Rep. Thomas Massie, R-Ky., goes beyond objections to the administration's military strategy. It alleges that Hegseth violated congressional war powers, authorized unlawful military operations and retaliated against a sitting senator for exercising his constitutional rights. HEGSETH RIPS IMPEACHMENT PUSH FROM OUTGOING REPUBLICAN AS 'FARCE,' 'STUNT' The clash puts the limits of impeachment at the center of a growing fight over Trump's national security agenda, testing whether lawmakers can make a constitutional case for removing Hegseth or are just using impeachment to challenge military and policy decisions they oppose. Massie's eight articles center on several o",
+   "published": "2026-11-10T16:44:25-05:00",
+   "link": "https://www.foxnews.com/politics/hegseth-calls-impeachment-push-policy-dispute-allegations-rise-high-crimes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "war-powers": [
+     "war powers"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Syria Weighs Sending Troops to Aid Saudi War With Houthis",
+   "dek": "Syrian reconnaissance teams have visited Saudi Arabia and Yemen ahead of a potential deployment, but a final decision has not been made, officials said.",
+   "opening": "",
+   "published": "2026-11-10T16:43:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/middleeast/syria-weighs-sending-troops-to-aid-saudi-war-with-houthis.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Florida AG subpoenas DSA over potential illegal funding from Cuba and China",
+   "dek": "James Uthmeier says a subpoena targets the Democratic Socialists of America over possible foreign donations tied to Cuba and China delegations.",
+   "opening": "Florida Attorney General James Uthmeier announced Tuesday that his office issued an investigative subpoena to the Democratic Socialists of America (DSA) to investigate whether the organization accepted contributions from \"foreign sources of concern,\" including entities in Cuba and China. \"Our laws prohibit accepting contributions from foreign sources of concern,\" Uthmeier said in a video statement. \"We will not allow foreign adversaries to influence Florida through the backdoor of non-private fundraising.\" The subpoena demands documents related to recent DSA delegations to China and Cuba, where organization members met with Cuban government officials, to determine if the DSA violated Florida's Deceptive and Unfair Trade Practices Act, according to Uthmeier. DEMOCRATIC SOCIALISTS OF AMERICA ACTIVISTS SIGNED PLEDGE TO SUPPORT, DEFEND 'CHINESE SOCIALISM' Uthmeier did not detail specific criminal allegations or name individuals accused of violating state law. The DSA has repeatedly praised the Cuban regime and routinely advocates for lifting American sanctions and ending the U.S. embargo against Havana. RNC WARNS DEMOCRATS FACE 'POLITICAL SUICIDE' AFTER DSA PRAISES FIDEL CASTRO, DEMANDS RUBIO'S PROSECUTION The organization has sent multiple delegations to Cuba in recent years. During a 2023 trip, DSA members met privately with Cuban President Miguel Díaz-Canel and sought to establish formal communication channels with government ministries, according to a State Department report ",
+   "published": "2026-11-10T16:36:43-05:00",
+   "link": "https://www.foxnews.com/politics/florida-ag-subpoenas-dsa-potential-illegal-funding-cuba-china",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Secrets, Chips and Spycraft: The Nvidia C.E.O. Scandal",
+   "dek": "Despite knowing about the relationship between one of the president’s closest allies and a woman later identified by U.S. officials as a Chinese spy, the Trump administration took no action.",
+   "opening": "",
+   "published": "2026-11-10T16:36:29+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/podcasts/the-daily/nvidia-jensen-huang-affair-chinese-spy-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mojtaba Khamenei aide's chilling '40 years' warning surfaces amid US push for Iran deal",
+   "dek": "Mohsen Rezaei once warned that ceasefire talks could last decades, as JD Vance reportedly reached out to him about resuming U.S.-Iran peace talks.",
+   "opening": "Iran's top security official, who reportedly received a letter from Vice President JD Vance about resuming peace talks, warned in a resurfaced interview that wartime negotiations with Tehran could drag on for decades, and during which both sides should \"be prepared to fight.\" Mohsen Rezaei, a former commander of Iran's Islamic Revolutionary Guard Corps (IRGC), now serves as secretary of the Supreme National Security Council and acts as a key aide to Supreme Leader Mojtaba Khamenei. He also helped shape Tehran's military strategy during the 1980-88 Iran-Iraq War . That eight-year conflict ended after Iran's then-supreme leader, Ayatollah Ruhollah Khomeini, accepted a U.N.-brokered cease-fire that he famously likened to drinking from a \"poisoned chalice.\" JD VANCE RETURNS TO WASHINGTON AFTER 16 HOURS OF IRAN PEACE TALKS COLLAPSE IN PAKISTAN \"Ceasefire means an unfinished war,\" Rezaei had said of the war in a 2006 interview with the Iranian publication Baztab. An English translation of the interview is preserved by George Washington University's National Security Archive . Asked whether both sides would remain in their positions and begin talks, Rezaei replied: \"Yes. Negotiations can take 30 to 40 years and during that time Iran and Iraq should be prepared to fight.\" Two decades after suggesting negotiations could drag on for years, Washington has reportedly been seeking talks with Rezaei, a key power player in Iran’s current military leadership. Vance sent him a letter proposin",
+   "published": "2026-11-10T16:33:04-05:00",
+   "link": "https://www.foxnews.com/world/mojtaba-khamenei-aide-chilling-40-years-warning-surfaces-us-push-iran-deal",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran",
+     "irgc"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "supreme",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "U.S. Received $12 Billion From Venezuela’s Oil, Report Shows",
+   "dek": "The workings of a U.S.-controlled bank account shed light on how Washington manages Venezuelan revenue after capturing the country’s president.",
+   "opening": "",
+   "published": "2026-11-10T16:23:18+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/americas/us-venezuela-oil-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Did Trump’s unmanliness cost Republicans the midterms? Tucker Carlson thinks so #dailyshow",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T16:12:19+00:00",
+   "link": "https://www.youtube.com/shorts/72jBAmMwLzk",
+   "videoId": "72jBAmMwLzk",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Oil Prices Have Tumbled in November. Here’s Why.",
+   "dek": "The global benchmark price is down more than $20 a barrel since late October, when it traded for around $113.",
+   "opening": "",
+   "published": "2026-11-10T15:59:29+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/business/energy-environment/oil-price-iran-trump-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Senate GOP rebellion fizzles as Thune keeps power despite historic midterm massacre",
+   "dek": "John Thune secured another term as Senate GOP leader despite Ron Johnson and Rick Scott pushing to delay elections after midterm losses.",
+   "opening": "There was neither an exodus nor a mass housecleaning in the Senate GOP leadership, despite frustration and rumblings of discontent among some lawmakers reeling from last week’s devastating midterm losses. Senate Majority Leader John Thune, R-S.D., secured another term as the top Republican behind the closed doors of the Old Senate Chamber, where lawmakers charted their course for their few remaining weeks in power and beyond. Thune, along with the bulk of his leadership team, which now includes Sen. Bernie Moreno, R-Ohio, were swiftly elected after a group of Republicans failed to delay the leadership elections. It wasn't without a fight, though, with conversations behind closed doors dragging on for over seven hours. GOP SENATOR WITHHOLDS SUPPORT FOR THUNE AS LEADERSHIP SHOWDOWN LOOMS Sen. Ron Johnson, R-Wis., led the charge to delay, and didn't stick around after his attempts to do so failed on a 31 to 15 vote in the Old Senate Chamber to proceed with the scheduled election. Johnson and others wanted to have a deep conversation about what had happened during the midterm elections, and a roadmap on what Republican leadership candidates could accomplish with the little time they had left in power. SENATE GOP REBELS MOVE TO DELAY LEADERSHIP VOTE, DEMAND RECKONING AFTER MIDTERM DISASTER But there was no opposition to any of the lawmakers running for leadership. \"This has never been anything against John Thune,\" Johnson said. \"I think he has been very unfairly attacked, you know",
+   "published": "2026-11-10T15:42:54-05:00",
+   "link": "https://www.foxnews.com/politics/senate-gop-rebellion-fizzles-thune-keeps-power-despite-historic-midterm-massacre",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "failed",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Short seller flagged Jensen Huang’s 'uncomfortably close' ties to alleged Chinese spy months ago",
+   "dek": "Culper Research flagged Jensen Huang&apos;s &quot;uncomfortably close relationship&quot; with Alice Huang months before the Nvidia CEO disclosed the affair.",
+   "opening": "Months before reports of the affair between Nvidia CEO Jensen Huang and alleged Chinese spy Alice Huang surfaced, a short seller noted the \"uncomfortably close relationship\" between the two. A report titled \"NVIDIA (NVDA): The China Problem\" was published by Culper Research in May 2026, and although it didn't directly suggest an affair between the two, it noted the close ties between them. The report also alleged that Megaspeed, the Singapore-based chip buyer Alice Huang worked for, was financed by Alibaba through shell companies. \"Nvidia CEO Jensen Huang has not only vouched for Megaspeed, but seems to have quite literally walked alongside Megaspeed at every step, while maintaining an uncomfortably close relationship with Megaspeed's Alice Huang, a Chinese national,\" Culper Research wrote. Culper Research, which is named after a spy ring created by George Washington during the American Revolutionary War, said that it was short on Nvidia because of the company's close ties to China amid geopolitical tensions with the U.S., which imposed export controls to block advanced AI chips from going to China. NVIDIA CASE HIGHLIGHTS RISKS OF ALLEGED 'HONEYPOT' SCHEMES TARGETING EXECUTIVES The report claimed that Chinese firms are still accessing Nvidia's advanced chips through diversion from other buyers in Southeast Asia. It also noted that Nvidia has vouched for Megaspeed, which is the largest buyer of the company's chips in Southeast Asia and has faced investigations by U.S. regulato",
+   "published": "2026-11-10T15:41:50-05:00",
+   "link": "https://www.foxbusiness.com/markets/short-seller-flagged-jensen-huangs-uncomfortably-close-ties-alleged-chinese-spy-months-ago",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "export control",
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats accused of 'No Kings' hypocrisy over push to change voter-approved trans sports measures",
+   "dek": "Colorado&apos;s Philip Weiser and Rep. Pramila Jayapal face &quot;No Kings&quot; hypocrisy claims after signaling efforts to overturn transgender sports ballot measures.",
+   "opening": "Voters in two Democratic strongholds approved restrictions on transgender participation in girls' sports last week, delivering rare Republican victories amid a blue wave. But Democratic officials are already discussing ways to change the measures, drawing accusations of hypocrisy from Republicans who point to their support for the \"No Kings\" movement. Colorado Gov.-elect Philip Weiser, who also criticized a separate ballot measure restricting gender-related surgeries for minors, and Rep. Pramila Jayapal , D-Wash., both raised objections to the measures approved in their respective states. At his first post-election news conference, he suggested Colorado's Democratic-controlled legislature could revisit the voter-approved measures, saying that it is \"statutory … and a natural and I believe appropriate role for the legislature to say ‘what are the adjustments that need to be added.\" PRO-TRANS ACTIVISTS HOLD RALLY AGAINST WASHINGTON STATE BALLOT INITIATIVE TO PROTECT GIRLS SPORTS Colorado voters approved ballot measures increasing penalties for fentanyl-related offenses , restricting transgender athletes from competing in sports designated for the opposite biological sex and prohibiting gender-related surgeries for minors. The measures passed even as Democrats swept into power across the state. \"I don’t believe it would be acceptable to Colorado to have every student athlete to have to go through full-body examinations or other invasions of privacy,\" Weiser added of the sports-r",
+   "published": "2026-11-10T15:37:45-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-accused-no-kings-hypocrisy-push-change-voter-approved-trans-sports-measures",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_ballots-california-court-doj": [
+     "push",
+     "separate"
+    ],
+    "obj_x_approved-arch-construction-federal": [
+     "washington",
+     "approved"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Top Dem cries ‘weaponization’ as comments warning young people not to join Trump admin land her in hot water",
+   "dek": "Dem Sen. Elissa Slotkin, D-Mich., cries &quot;weaponization&quot; after Trump ordered the Justice Department to investigate her remarks warning young Republicans about joining his administration.",
+   "opening": "Sen. Elissa Slotkin, D-Mich., is accusing President Donald Trump of escalating a coordinated \"weaponization\" campaign against her after he ordered the Justice Department to examine remarks she made warning young Republicans they could face \"a ton of problems\" if they joined his administration. In a Truth Social post over the weekend, President Trump accused Democrats of political weaponization and singled out Slotkin for \"go[ing] after all young people that believe in Republican values\" in her October remarks. \"By copy of this statement, I am ordering the Department of Justice to look into this criminal act, immediately!\" Trump wrote. In a video response posted Monday, Slotkin defended her remarks, saying she was referring to people who might be asked to violate the law or misuse taxpayer dollars and citing her First Amendment rights. \"A couple weeks ago, I talked about how anyone who is violating the law or misusing taxpayer dollars should be held accountable, and if there's young people who are thinking of joining people who are doing that, they should think twice,\" Slotkin said. \"If you're not violating the law — no problem.\" DEMS PIVOT FROM 'AFFORDABILITY' PITCH TO DHS PROBE THREATS AFTER MIDTERM WINS Slotkin said Trump began targeting her after her October remarks, first by \"name-checking\" her from the Oval Office before he \"really ramped up his coordinated play\" following Democrats’ midterm election gains. She also pointed to Attorney General Todd Blanche 's Sunday tele",
+   "published": "2026-11-10T15:12:12-05:00",
+   "link": "https://www.foxnews.com/politics/top-dem-cries-weaponization-comments-warning-young-people-not-join-trump-admin-lands-hot-water",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_declares-monument-national-office": [
+     "oval",
+     "office"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "accountable",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Impeachment Charges Against Defense Secretary Pete Hegseth, Explained",
+   "dek": "The charges accuse the defense secretary of illegally starting the war with Iran, directing extrajudicial killings and ignoring laws meant to minimize civilian casualties.",
+   "opening": "",
+   "published": "2026-11-10T15:09:50+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/us/politics/hegseth-impeachment-explainer-massie.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "war with iran"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Shanghai-based tycoon Neville Roy Singham's 'Squad,' Bernie Sanders donations resurface",
+   "dek": "FEC records show Neville Roy Singham and CodePink co-founder Jodie Evans have donated a combined $47,000 to Bernie Sanders, Pramila Jayapal and more.",
+   "opening": "A Shanghai-based tycoon known for pushing Chinese Communist Party talking points, whose activist network is flooding Capitol Hill this week, has directly funded some of the most powerful progressives in Congress, including members of \"The Squad.\" Federal Election Commission records show that Neville Roy Singham and his wife, CodePink co-founder Jodie Evans, have given more than a combined $47,000 to Sen. Bernie Sanders , I-Vt., and Reps. Pramila Jayapal, D-Wash., Ilhan Omar, D-Minn., and Chuy García, D-Ill. Omar's campaign took $4,200 from the couple from 2019 to 2023, according to FEC records . Singham gave her campaign $2,700 in March 2019, just weeks after she took office, and Evans gave $1,500 in two contributions in November and December 2023. None of it has been refunded. HOUSE PANEL TO PROBE FOREIGN ‘TROJAN HORSES’ AS SINGHAM SCRUTINY WIDENS Sanders' campaigns have taken in at least $6,800 from the couple, according to FEC records , most of it for his presidential bids. Singham gave $2,700 to Sanders' 2016 presidential campaign. Evans gave the 2016 campaign $2,800, of which it refunded $200, and at least $252 to his 2020 campaign in 2019. She also gave $1,250 to his Senate campaign committee, Friends of Bernie Sanders, in 2011. García's campaign took in $1,000 from Singham in August 2018, according to FEC records . He was running for his first term in Congress at the time, after winning the Democratic primary for Illinois' 4th Congressional District, Singham's home cit",
+   "published": "2026-11-10T15:05:56-05:00",
+   "link": "https://www.foxnews.com/politics/shanghai-based-tycoon-neville-roy-singham-squad-bernie-sanders-donations-resurface",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "refund"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TV anchor found dead with gunshot wound to head, officials arrest husband",
+   "dek": "The broadcaster’s husband claimed he was playing with a firearm when it discharged inside their home, according to a provincial official",
+   "opening": "The husband of a TV anchor was arrested in Pakistan Sunday after his wife was found dead with a gunshot wound to the head, according to officials. Rabiya Ahsan, 41, was allegedly killed inside her home in Rawalpindi, according to Punjab Information Minister Azma Zahid Bokhari. Ahsan worked as a program host for 92 News, where she established herself as a dedicated journalist alongside senior colleagues. She also frequently posted videos about national affairs on social media. Officials identified her husband as Ahsan Tahir Khan, who claimed he was playing with a firearm in the home when it accidentally discharged, Bokhari said. POPULAR TV HOST, MEDIA STAR FACES HANGING AFTER CONVICTION IN MAJOR SYNTHETIC DRUG TRAFFICKING CASE Khan reportedly works as a civil service officer at the Overseas Pakistanis Foundation, a government agency that supports citizens living abroad, according to local outlet The Express Tribune, citing police sources. Police are preparing to pursue a murder case against the suspect , according to the report. Rawalpindi police also confirmed in a post on X that a woman was killed in a Sunday shooting but did not immediately identify her. Authorities said officers seized the suspected weapon in connection with the husband's arrest. Ahsan's body was also transferred to a hospital for a postmortem examination. HUSBAND CHARGED WITH MURDER AFTER REALTOR WIFE FOUND SHOT DEAD INSIDE HOME IN WEALTHY VIRGINIA COUNTY The news of her death sparked an outpouring of gri",
+   "published": "2026-11-10T14:59:04-05:00",
+   "link": "https://www.foxnews.com/world/tv-anchor-found-dead-gunshot-wound-head-officials-arrest-husband",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "charged",
+     "murder",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Peltola widens narrow Alaska Senate lead over Sullivan as counting continues",
+   "dek": "Mary Peltola&apos;s lead over Dan Sullivan grew to 2,517 votes after Monday&apos;s ballot drop, but tens of thousands of absentee ballots remain uncounted.",
+   "opening": "Alaska's still too-close-to-call Senate race is expected to deliver another batch of ballot results Tuesday night after Monday's latest ballot drop expanded Democratic nominee Mary Peltola's lead over incumbent Republican Sen. Dan Sullivan to 2,517 first-choice votes. Still current as of Tuesday midday ET, Peltola stands at 48.6% (106,321 votes) to Sullivan’s 47.5% (103,804) in the ranked-choice voting system that will kick in if neither candidate gets across the 50% threshold. The controversial race, punctuated by the \"Decoy Dan\" scheme exposed by The New York Times, has Republican Gerald Heikes at 2.2% (4,865) and independent Daniel J. Sullivan Jr. at 1.7% (3,651 votes). Roughly 75–76% of the expected vote is in, with tens of thousands of early, absentee and questioned ballots still to be counted. ALASKA SENATE FIGHT HEATS UP AS SULLIVAN MOVES TO BLOCK PELTOLA LAWSUIT OVER REJECTED ABSENTEE BALLOT RECORDS \"After every vote is counted, it is clear that Mary Peltola will be elected Alaska’s next United States Senator,\" Peltola campaign manager Cheryl Bruce wrote in a statement Tuesday morning after that previous tranche of votes. \"Mary won today’s votes by a margin of 68-30, reflecting major support in key areas from Anchorage and Chevak. This overwhelming margin further strengthens Mary’s path to victory, and Mary is looking forward to continuing her relentless fight to lower costs and put Alaska first in the United States Senate after all votes are counted.\" Monday's drop a",
+   "published": "2026-11-10T14:46:24-05:00",
+   "link": "https://www.foxnews.com/politics/peltola-widens-narrow-alaska-senate-lead-sullivan-counting-continues",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "lawsuit",
+     "block"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "lawsuit",
+     "peltola",
+     "campaign",
+     "absentee",
+     "ballots"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Housing expert blasts 'absurd' California red tape keeping affordable homes out of reach",
+   "dek": "Mitch Roschelle says California bureaucracy is hindering affordable housing development in Los Angeles despite laws allowing additional housing units, calling the ‘blue tape’ ‘absurd.’",
+   "opening": "California’s push to make housing more affordable is facing a familiar obstacle: getting new homes built, even as state laws seek to encourage development. Macro Trends Advisors founding partner Mitch Roschelle told FOX Business’ Stuart Varney on \" Varney &amp; Co. \" about the bureaucratic hurdles facing California builders and how the state’s approach compares with Florida's. Roschelle said he had invested in a company working to build affordable housing in Los Angeles. The project sought to use legislation signed by Gov. Gavin Newsom that allowed additional housing units on certain properties without rezoning, but Roschelle said regulatory obstacles made the effort difficult. CALIFORNIA FACES ONE-TWO PUNCH AS VOTERS REJECT WEALTH TAX AND BILLIONAIRES EYE EXITS \"The reason why that company had a really, really hard time is the amount of red tape, which we should probably call blue tape because there’s nothing red about it, right? The amount of blue tape that takes place in California, especially in Los Angeles, especially post the fires is absurd,\" Roschelle said. While allowing more units on a property can create opportunities for development, it does not guarantee new homes will be built. Builders still face regulatory hurdles before construction can begin. CALIFORNIA WEALTH TAX ON BILLIONAIRES FAILS DESPITE BLUE WAVE, IN BLOW TO PROGRESSIVES Roschelle argued that bureaucracy, including decisions made by unelected officials, has made construction especially challenging in ",
+   "published": "2026-11-10T14:44:27-05:00",
+   "link": "https://www.foxbusiness.com/media/housing-expert-blasts-absurd-california-red-tape-keeping-affordable-homes-out-reach",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_ballots-california-court-doj": [
+     "push",
+     "california"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Najib Razak, Ex-Prime Minister of Malaysia, Is Released to House Arrest",
+   "dek": "Najib Razak, who was brought down in the multibillion-dollar 1MDB scandal, was released from prison to serve the rest of his sentence in his mansion.",
+   "opening": "",
+   "published": "2026-11-10T14:22:53+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/world/asia/malaysia-najib-razak-1mdb-house-arrest.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jim Jordan becomes new House GOP leader after closed-door vote, defeating Steve Scalise",
+   "dek": "Jim Jordan defeated Steve Scalise in a narrow secret ballot to become House GOP minority leader and President Trump&apos;s top defender in Congress.",
+   "opening": "House Judiciary Committee Chairman Jim Jordan , R-Ohio, will be President Donald Trump's top defender in Congress next year after winning a closed-door election for minority leader on Tuesday, sources told Fox News Digital. Jordan defeated Majority Leader Steve Scalise , R-La., currently the House of Representatives' No. 2 leader, in what's believed to be a narrow race. Jordan received 106 votes to Scalise’s 73, sources in the room told Fox News Digital. Fox News Digital heard loud, sustained applause from outside in the hallway when Jordan’s win became official. House Majority Whip Tom Emmer, R-Minn., also handily defeated Republican Study Committee Chairman August Pfluger, R-Texas, for the No. 2 leadership job of minority whip. The final vote count was 103 to 76, per sources. Sources said House GOP Conference Chairwoman Lisa McClain, R-Mich., meanwhile, also survived a challenge and kept her job. JORDAN EMERGES AS POTENTIAL NEXT GOP LEADER IF DEMS SEIZE HOUSE Republicans huddled for a candidate forum on Tuesday morning where all GOP lawmakers running for leadership positions were peppered with questions by their colleagues. Sources inside the room for their Tuesday morning leadership forum said Scalise and Jordan both pitched themselves as the best person to unify the conference, but also signaled they would give a wide berth for lawmakers to \"vote their districts,\" as one person put it. The question-and-answer session for House Republicans before electing their leader was ",
+   "published": "2026-11-10T14:20:38-05:00",
+   "link": "https://www.foxnews.com/politics/jim-jordan-becomes-new-house-gop-leader-after-closed-door-vote-defeating-steve-scalise",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Oil shock from Iran war led to drop in carbon pollution, scientists say",
+   "dek": "Emissions of heat-trapping carbon dioxide from the burning of fossil fuels decreased slightly this year due to the Iran war. I",
+   "opening": "",
+   "published": "2026-11-10T14:05:11-05:00",
+   "link": "https://www.pbs.org/newshour/science/oil-shock-from-iran-war-led-to-drop-in-carbon-pollution-scientists-say",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California voters reject tax on net worth of billionaires",
+   "dek": "The measure would have imposed a one-time 5% tax on the wealth of Californians whose net worth exceeds $1 billion.",
+   "opening": "",
+   "published": "2026-11-10T13:48:07-05:00",
+   "link": "https://www.pbs.org/newshour/politics/california-voters-reject-tax-on-net-worth-of-billionaires",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's first Iran war escalation post-midterm losses seeks to choke off Tehran’s trade",
+   "dek": "President Donald Trump launches Task Force Iron Gate to choke off Iran&apos;s land borders, but experts warn squeezing Tehran could trigger escalation.",
+   "opening": "President Donald Trump isn't backing off his pressure campaign against Iran despite claims the conflict contributed to sweeping Republican losses in last week's midterm elections. In fact, Trump is doubling down by expanding U.S. efforts to choke off the trade routes Tehran increasingly relies on as it tries to rebuild its military in the midst of war. The new effort, dubbed Task Force Iron Gate, takes aim at a vulnerability that has persisted despite the U.S. naval blockade: the land and Caspian Sea routes Iran can use to bring in goods, dual-use technology and military supplies beyond the reach of American warships. That approach, one expert claims, fits into a broader administration strategy of tightening the squeeze on Tehran while stopping short of restarting full-scale military operations. Meanwhile, others caution that it could produce escalation rather than an immediate diplomatic breakthrough. IRAN VOWS ‘ASTONISHING’ STRIKES AND LIFTS MISSILE-RANGE LIMIT AS US TARGETS LAND ROUTES \"We have Operation Iron Gate that just went into effect. That means nothing comes in by land,\" Trump said Sunday. But the roughly 20-person task force established at U.S. Central Command headquarters in Tampa is taking a quieter approach than Trump’s sweeping description might suggest. \"This is not a deployable special operation task force,\" Farzin Nadimi, a senior fellow at the Washington Institute for Near East Policy, told Fox News Digital, describing Iron Gate instead as a \"fusion cell\" ",
+   "published": "2026-11-10T13:43:25-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-first-iran-war-escalation-post-midterm-losses-seeks-choke-off-tehrans-trade",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "iran-terms": [
+     "naval blockade"
+    ],
+    "fed": [
+     "warsh"
+    ],
+    "iron-gate": [
+     "iron gate",
+     "task force iron gate",
+     "caspian",
+     "land borders",
+     "land routes"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats rally behind GOP lawmaker's Hegseth impeachment push, signal more to come in January",
+   "dek": "Democrats rallied behind Rep. Thomas Massie&apos;s eight-count impeachment resolution against Pete Hegseth, citing the Iran war and Nicolás Maduro&apos;s capture.",
+   "opening": "Top Democrats are lining up behind Republican Rep. Thomas Massie's effort to impeach War Secretary Pete Hegseth , signaling that the fight could continue when Democrats take control of Congress in January. \"Hard yes on the Hegseth impeachment resolution,\" House Minority Leader Hakeem Jeffries, D-N.Y., said ahead of its introduction. The Democratic reactions online telegraph an appetite to scrutinize Trump’s administration through congressional power once their majorities are formally sworn in in January, at the start of the 120th Congress. HAKEEM JEFFRIES DECLARES BID FOR HOUSE SPEAKER AFTER GOP'S MIDTERM MASSACRE Massie himself framed the effort as likely to be repeated in the new year. \"My Hegseth impeachment resolution is a much gentler version of what’s coming when Dems control Congress,\" Massie said. Already, Rep. Al Green, D-Texas — who has repeatedly introduced impeachment resolutions against President Donald Trump — urged his colleagues to expand their horizons for impeachment moments after Massie introduced his resolution. \"If the Constitution is to be honored and Congress respected, a president whom many members of Congress have declared impeachable must be impeached. Failure to do so would be another step toward making the Constitution meaningless and Congress powerless,\" Green wrote online. Massie is filing eight articles of impeachment against Hegseth, accusing him of violating the War Powers Resolution in Iran and Yemen, failing to prevent civilian casualties, u",
+   "published": "2026-11-10T13:35:26-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-rally-behind-gop-lawmaker-hegseth-impeachment-push-signal-more-january",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "venezuela": [
+     "maduro"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "war-powers": [
+     "war powers"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia’s Game of Thrones",
+   "dek": "Analysts and investors are asking whether the chipmaker needs to consider a successor to Jensen Huang, its C.E.O., as the company is engulfed in a spy scandal.",
+   "opening": "",
+   "published": "2026-11-10T13:21:38+00:00",
+   "link": "https://www.nytimes.com/2026/11/10/business/dealbook/nvidia-huang-succession.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Pete Hegseth Faces Impeachment",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T12:42:29-05:00",
+   "link": "https://www.theatlantic.com/national-security/2026/11/pete-hegseth-thomas-massie-impeachment/689353/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Can Democrats Hold Trump Accountable?",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T11:51:36-05:00",
+   "link": "https://www.theatlantic.com/politics/2026/11/democrats-trump-investigations-corruption/689354/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "accountable"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Riot-torn France struggles with chaos at home as Macron eyes military mission thousands of miles away",
+   "dek": "French President Emmanuel Macron&apos;s Lebanon military force plan hits resistance from Italy as Marco Rubio floats a civilian alternative to UNIFIL.",
+   "opening": "French President Emmanuel Macron is pushing ahead with plans for a new European military presence in Lebanon while struggling with mounting political and economic turmoil at home, even as the initiative encounters resistance from a key European partner and Washington considers an alternative that may not require troops. Secretary of State Marco Rubio confirmed that he had discussed the future of the United Nations Interim Force in Lebanon (UNIFIL) with Macron, suggesting that a replacement monitoring mechanism could be civilian rather than military. \"It doesn't have to be a military mission. It could be a civilian mission,\" Rubio said in remarks published Tuesday. Rubio explained that the administration is seeking a credible mechanism to verify arrangements under which Israeli forces withdraw from designated areas, the Lebanese Armed Forces (LAF) assume control and the Iran-backed terrorist group Hezbollah is prevented from returning. RUBIO ANNOUNCES FRAMEWORK DEAL BETWEEN ISRAEL AND LEBANON AS EXPERTS WARN IRAN WILL FIGHT TO SABOTAGE IT He suggested France could play a constructive role but emphasized that any arrangement would require agreement from both Lebanon and Israel. U.S. Ambassador to the United Nations Mike Waltz also made clear that Washington has no intention of preserving the existing peacekeeping mission. \"UNIFIL in its current form will not continue, and it must not continue — we are working with our international partners to draw down the mission and ensure t",
+   "published": "2026-11-10T11:22:36-05:00",
+   "link": "https://www.foxnews.com/world/riot-torn-france-struggles-chaos-home-macron-eyes-military-mission-thousands-miles-away",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang and the Honeypot. Plus. . .",
+   "dek": "In today&#8217;s Front Page, Tyler Cowen and Patrick McGee on Jensen Huang. Joe Nocera on the Democrats telling Trump to &#8220;lawyer up.&#8221; River Page on NYC&#8217;s e-bike wars. And more.",
+   "opening": "It&#8217;s Tuesday, November 10. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Joe Nocera asks if the Democrats can hold Donald Trump accountable without overreaching. River Page reports on the e-bikes terrorizing New York pedestrians. And much more. But first: Jensen Huang and the honeypot. The &#8220;honeypot&#8221; has long been a staple of spy fiction. How many times did a beautiful spy try to seduce James Bond? In the classic TV series The Americans , the Russian spy Philip Jennings has a long-running affair with an FBI secretary to glean secrets about the goings-on in her office. Tom Clancy and Frederick Forsyth are among the many authors who have used honeypots as a plot device. The goal was always to root out information that resides deep inside a government agency. With the recent disclosure that Nvidia CEO Jensen Huang may have been &#8220;honeypotted&#8221;&#8212;via his affair with Alice Huang, an alleged Chinese spy&#8212;it would appear that spying is no longer something governments do to each other. Rather, the really important secrets reside in corporations&#8212;and in the heads of the people who run them. Huang is one of the most powerful men in the world, and the fallout from his indiscretion could have immense ripple effects on the economy, not to mention the global order. But if you ask Free Press contributor Patrick McGee , &#8220;there&#8217;s a silver lining to all this dra",
+   "published": "2026-11-10T11:19:44+00:00",
+   "link": "https://www.thefp.com/p/jensen-huang-and-the-honeypot-plus-democrats-telling-trump-lawyer-up",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "accountable"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Here’s why last year’s government shutdown will haunt October’s inflation data.",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-10T10:48:00+00:00",
+   "link": "https://www.nytimes.com/live/2026/11/10/business/inflation-cpi-report-october/heres-why-last-years-government-shutdown-will-haunt-octobers-inflation-data",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Is AI Destroying the Next Generation of Leaders?",
+   "dek": "Yuval Levin, senior editor at &#8216;The New Atlantis,&#8217; reflects on a recent visit to Anthropic and what the AI revolution means for American institutions, the military, and the next generation of experts.",
+   "opening": "Yuval Levin ranks AI among the most important political questions facing the country, one with &#8220;no left and right.&#8221; Just last week, the midterms saw voters push back against artificial intelligence in a series of referenda&#8212;but the question of its place in American life is far from settled. Today, Levin joins School of War to discuss what he learned duri&#8230; Read more",
+   "published": "2026-11-10T10:19:18+00:00",
+   "link": "https://www.thefp.com/p/is-ai-destroying-the-next-generation",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "France Blames Iran for Cyberattack on Refrigeration Systems",
+   "dek": "The French foreign minister said he had summoned the Iranian ambassador to France after a cyberattack on hundreds of supermarkets last month. Iran did not immediately respond.",
+   "opening": "",
+   "published": "2026-11-10T10:08:25+00:00",
+   "link": "https://www.nytimes.com/2026/11/09/world/europe/france-iran-refrigerators-cyberattack.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump admin pouring $480M loan into Gulf of America oil and gas project",
+   "dek": "The U.S. Energy Department touted the financial close of a $480 million loan targeted at helping to boost oil and natural gas production in the Gulf of America.",
+   "opening": "The Energy Department is touting a $480 million loan meant to help boost oil and natural gas production in the Gulf of America. \"The U.S. Department of Energy’s (DOE) Office of Energy Dominance Financing (EDF) today announced the financial close of a $480 million loan for Arena Energy’s Project Elkhorn to increase oil and natural gas production across the Gulf of America shelf,\" the department noted in a press release obtained by Fox News. \"The project will modernize 22 offshore platforms off the coast of Louisiana and, at peak production, is expected to add up to 38,600 barrels of oil per day and up to 77 million cubic feet of natural gas per day to U.S. energy production,\" the release adds. TRUMP MEETS KEY IRAN WAR MEDIATOR AS UAE REVEALS MAJOR OIL EXPORT SURGE DESPITE CONFLICT The company is now producing about 30,000 barrels of oil in the gulf per day, according to the Energy Department . \"The United States is the world’s largest producer and exporter of oil and natural gas, and thanks to President Trump , American energy production will continue to grow,\" Energy Secretary Chris Wright said, according to the department. \"Project Elkhorn will increase oil production by up to 38,600 barrels per day and create thousands of jobs. By providing financing for projects like Project Elkhorn, the Energy Department is expanding domestic production and strengthening our energy security to power American prosperity for decades to come.\" TRUMP ANNOUNCES END OF BIDEN-ERA METHANE RULE, C",
+   "published": "2026-11-10T10:00:23-05:00",
+   "link": "https://www.foxbusiness.com/politics/trump-admin-pouring-480m-loan-gulf-america-oil-gas-project",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Says Deportation Policy Was “Too Tough”",
+   "dek": "President Trump provides a midterm autopsy – and his version of a mea culpa, a Chinese spy scandal shakes the world’s leading AI and computing company, and a new investigation from City Journal found California has been using taxpayer money for advertisements encouraging Californians to vote - but the advertisements might have been more targeted than meets the eye. Reporting from Ben Domenech & Megan Basham. Plus, we speak with Investigative Reporter Kenneth Schrupp. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to",
+   "opening": "",
+   "published": "2026-11-10T09:30:01+00:00",
+   "link": "https://www.youtube.com/watch?v=d4qEZK-AM-w",
+   "videoId": "d4qEZK-AM-w",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic targets valuation around $1T in blockbuster AI IPO, below initial expectation",
+   "dek": "Anthropic&apos;s IPO targets up to $1.02 trillion, falling well short of the $1.5 trillion valuation previously discussed as Wall Street reassesses AI costs.",
+   "opening": "Anthropic, the artificial intelligence company behind the Claude chatbot, is seeking a valuation of up to $1.02 trillion in a blockbuster initial public offering, falling short of earlier expectations as Wall Street grows increasingly cautious about the enormous costs fueling the AI boom. The San Francisco-based company plans to raise as much as $64.4 billion through the sale of 825 million shares priced between $70 and $78 apiece, according to an amended Securities and Exchange Commission filing released Tuesday. Anthropic will also raise $26 billion through a separate private placement involving major technology companies, including Google, Nvidia, Microsoft and AMD, bringing the combined fundraising target to as much as $90.4 billion. JOE MANCHIN CALLS ON TRUMP TO FREEZE AI IPOS, CLAIMS PRESIDENT HAS 'POWER TO SAVE HUMANITY' The proposed valuation is significantly below the $1.5 trillion figure previously discussed by prospective investors. At one point this year, investors had anticipated a valuation as high as $2 trillion, Reuters reported. The reduced target comes amid growing concerns about whether AI companies can generate sufficient returns to justify their massive spending on chips, data centers and computing infrastructure. \"What we are seeing is essentially a reassessment of Anthropic's value in a more challenging AI environment,\" Ipek Ozkardeskaya, senior analyst at Swissquote Bank, told Reuters. \"The company continues to post impressive growth, but investors are",
+   "published": "2026-11-10T09:24:14-05:00",
+   "link": "https://www.foxbusiness.com/markets/anthropic-targets-valuation-around-1t-blockbuster-ai-ipo-below-initial-expectation",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Consumer inflation rises faster than expected in October, CPI report shows",
+   "dek": "The Labor Department released the latest consumer price index data for October, which showed CPI inflation rose 0.4% on a monthly basis.",
+   "opening": "Inflation accelerated in October as the pace of consumer price growth trended higher. The Bureau of Labor Statistics (BLS) said on Wednesday that the consumer price index (CPI) – a broad measure of how much everyday goods like gasoline, groceries and rent cost – increased 0.4% on a monthly basis. It did not release an annual figure due to last year's government shutdown that prevented collection of October 2025 data. The monthly figure was slightly higher than the estimates of economists polled by LSEG, who expected inflation to rise 0.3% from the prior month. So-called core prices, which exclude volatile measurements of gasoline and groceries to better assess price growth trends, were up 0.3% in October. That figure is slightly higher than the 0.2% estimate of economists polled by LSEG. Like with headline CPI, the BLS was unable to release a year-over-year figure for core CPI due to last year's government shutdown disrupting data collection. High inflation has created severe financial pressures in recent years for most U.S. households, which are forced to pay more for everyday necessities like food and rent. Price hikes are particularly difficult for lower-income Americans because they tend to spend more of their already-stretched paychecks on necessities and have less flexibility to save. Energy prices rose 0.7% on a monthly basis in October, which is much cooler than the 5.2% reading in September and the 2.1% rise recorded in August. The energy index had experienced monthl",
+   "published": "2026-11-10T08:36:12-05:00",
+   "link": "https://www.foxbusiness.com/economy/cpi-inflation-october-2026",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "gasoline"
+    ],
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California wealth tax on billionaires fails despite blue wave, in blow to progressives",
+   "dek": "Governor Gavin Newsom urged voters to reject Proposition 40, citing its narrow spending focus, as California&apos;s billionaire wealth tax fell 52.8% to 47.2%.",
+   "opening": "California voters rejected Proposition 40, a proposed wealth tax on the net worth of billionaires, spurning a ballot proposition that would have imposed a one-time 5% tax on any Californian whose net worth exceeded $1 billion. With 100% of precincts reporting results as of Monday evening, 52.8% of Californians who voted for the measure, or 5,909,899 people, voted against it, according to California's secretary of state. Despite a sweeping blue wave that saw numerous prominent progressive Democrats such as Los Angeles Mayor-elect Nithya Raman win their races, the far-left pet policy wealth tax did not make it past the state's voters thanks in part to Gov. Gavin Newsom taking a stand against the measure. Newsom, a rumored 2028 presidential hopeful, wrote a lengthy Substack post in June explaining why he'd be voting against the measure while imploring Californians to do the same. CALIFORNIA FACES ONE-TWO PUNCH AS VOTERS REJECT WEALTH TAX AND BILLIONAIRES EYE EXITS Rather than come out generally against a wealth tax, Newsom objected particularly to the fact that, under the measure's text , revenue taken from the state's billionaires would go exclusively to funding healthcare. \"I’m voting no because this measure dedicates almost all of the revenue it raises to a single category of state spending,\" he wrote in the post. \"There is nothing for housing, nothing for childcare, nothing for public safety workers who must answer 911 calls, and nothing for our public universities that have",
+   "published": "2026-11-10T08:29:16-05:00",
+   "link": "https://www.foxbusiness.com/politics/california-wealth-tax-billionaires-fails-despite-blue-wave-blow-progressives",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
