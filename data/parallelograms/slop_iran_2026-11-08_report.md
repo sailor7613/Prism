@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-11-08
-*2026-11-10T14:23:10 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:30 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**14 lines · Dia 23 · read z -0.22 · Lumens 50 tracked (8 measured, 6 unmeasured) · credulity moments: none · forecasts: 0 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
+**14 lines · Dia 23 · read z -0.22 · Lumens 48 tracked (8 measured, 6 unmeasured) · credulity moments: none · forecasts: 0 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -14,7 +14,7 @@
 | 6 | fox | 2026-11-08 | after eight months of fighting Iran | object · war | T | -0.3 | 7 (7 7 16) | fluid | 0.511 | after eight months of fighting Iran · Iran War |
 | 7 | fox | 2026-11-08 | MAGA voters reveal who they want to see lead GOP in 2028 | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | who they want to see lead GOP in 2028 · early 2028 presidential election favorites |
 | 8 | nyt | 2026-11-07 | White voters without a college degree ... moved left this year | object · vote | T | -0.3 | 16 (16 16 16) | fluid | 0.84 | moved left this year · shifted left in the midterms |
-| 9 | nyt | 2026-11-07 | Some cited high prices, the war with Iran | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.84 | cited high prices · the war with Iran |
+| 9 | nyt | 2026-11-07 | Some cited high prices, the war with Iran | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.677 | cited high prices · the war with Iran |
 | 10 | shapiro | 2026-11-07 | from the Iran war and Trump's political baggage to candidate quality and voter f | object · war | F | -0.6 | 15 (15 15 15) | fluid | 0.722 | from the Iran war · what drove the Republican wipeout · voter frustration |
 | 11 | shapiro | 2026-11-07 | Trump's political baggage | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | Trump's political baggage · candidate quality |
 | 12 | nyt | 2026-11-07 | More Than 50 Killed in Yemen in One of the Deadliest 24 Hours of the War | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | More Than 50 Killed in Yemen · fighting between the Houthis and the Saudi-backed government |

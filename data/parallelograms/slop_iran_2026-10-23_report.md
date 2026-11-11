@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-10-23
-*2026-11-10T13:44:45 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**30 lines · Dia 23 · read z -0.29 · Lumens 49 tracked (27 measured, 3 unmeasured) · credulity moments: none · forecasts: 6 (2 came due: 2 right, 0 wrong; mean gap 0.0, exposure 0.0)**
+**30 lines · Dia 23 · read z -0.29 · Lumens 48 tracked (27 measured, 3 unmeasured) · credulity moments: none · forecasts: 6 (2 came due: 2 right, 0 wrong; mean gap 0.0, exposure 0.0)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -9,7 +9,7 @@
 | 1 | al-jazeera | 2026-10-23 | urge US-Iran diplomacy, not new attacks | object · war | F | -0.3 | 7 (7 7 16) | fluid | 0.511 | US-Iran diplomacy · not new attacks |
 | 2 | nyt | 2026-10-23 | Global Oil Price Hits $117 a Barrel, Highest Since April | object · barrel | T | -0.6 | 26 (16 26 26) | fluid | 0.74 | $117 a Barrel · Highest Since April |
 | 3 | nyt | 2026-10-23 | the war in Iran could escalate again, putting energy supplies at greater risk | object · war | M | -0.3 | 16 (7 16 16) | fluid | 0.462 | could escalate again · energy supplies at greater risk |
-| 4 | al-jazeera | 2026-10-23 | Democrats are framing the conflict as an affordability issue | object · prices | F | -0.6 | 15 (15 15 25) | fluid | 0.85 | affordability issue · framing the conflict |
+| 4 | al-jazeera | 2026-10-23 | Democrats are framing the conflict as an affordability issue | object · prices | F | -0.6 | 15 (15 15 25) | fluid | 0.654 | affordability issue · framing the conflict |
 | 5 | al-jazeera | 2026-10-23 | How Iran war is shaping US midterm vote | object · vote | F | +0.0 | 15 (15 15 25) | fluid | 0.842 | shaping US midterm vote |
 | 6 | surveillance | 2026-10-23 | Oil Surge | object · barrel | T | -0.6 | 16 (7 16 16) | fluid | 0.84 | Oil Surge |
 | 7 | surveillance | 2026-10-23 | US Could Resume Iran Strikes After Midterms | object · war | F | -0.6 | 16 (16 16 16) | fluid | 0.714 | Resume Iran Strikes · After Midterms |
@@ -20,7 +20,7 @@
 | 12 | npr-pbs | 2026-10-23 | Military reinforcements are heading to the Middle East | object · war | O | -0.3 | 16 (16 16 16) | fluid | 0.462 | Military reinforcements are heading · pointing to a potential attack on Iran |
 | 13 | npr-pbs | 2026-10-23 | millions of Americans have already voted in the midterms | object · vote | F | +0.0 | 15 (15 15 15) | fluid | 0.842 | millions of Americans · already voted in the midterms |
 | 14 | fox | 2026-10-23 | Republican Sen. Roger Marshall and Democrat Adam Hamilton clashed over Trump | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | clashed over Trump · heated Kansas Senate debate |
-| 15 | fox | 2026-10-23 | voice growing frustration over high prices | object · prices | F | -0.6 | 16 (16 16 16) | fluid | 0.84 | growing frustration over high prices · Trump supporters |
+| 15 | fox | 2026-10-23 | voice growing frustration over high prices | object · prices | F | -0.6 | 16 (16 16 16) | fluid | 0.647 | growing frustration over high prices · Trump supporters |
 | 16 | fox | 2026-10-23 | voice growing frustration over ... the Iran war | object · war | F | -0.6 | 16 (16 16 16) | fluid | 0.714 | growing frustration · the Iran war |
 | 17 | nyt | 2026-10-22 | Above Iran’s Capital, a Trump Impersonator Dances in a Jail Cell | object · war | F | +0.0 | 15 (15 15 15) | fluid | 0.212 | Trump Impersonator Dances · performance propaganda |
 | 18 | npr-pbs | 2026-10-22 | Iran says 7 oil tankers damaged in Strait of Hormuz | object · war | O | -0.3 | 26 (16 26 26) | fluid | 0.407 | 7 oil tankers damaged · Strait of Hormuz |

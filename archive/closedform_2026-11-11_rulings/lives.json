@@ -1,0 +1,98 @@
+{
+ "what": "Lives — US service members killed and wounded in the Iran war, as counted by the Pentagon's Defense Casualty Analysis System (DCAS) and reported in the press. A hand-kept ledger: every row carries the page it was read from. Read by Claude on 2026-11-10 from the sources below; Sailor to verify. Nothing here scores z.",
+ "status": "DRAFT — read from press reports of the Pentagon's count, not from DCAS directly",
+ "notOnFile": [
+  "Iranian dead and wounded",
+  "civilian and regional dead",
+  "any US count after 2026-08-21",
+  "the date of the 18th death"
+ ],
+ "killed": [
+  {
+   "date": "2026-03-01",
+   "n": 6,
+   "what": "six soldiers killed in a drone attack at Port Shuaiba, Kuwait",
+   "hostile": true,
+   "source": "https://www.fox35orlando.com/news/pentagons-official-tally-us-deaths-iran-war-climbs-14-after-navy-pilot-dies"
+  },
+  {
+   "date": "2026-03-08",
+   "n": 1,
+   "what": "a soldier died of wounds from the March 1 attack",
+   "hostile": true,
+   "source": "https://www.fox35orlando.com/news/pentagons-official-tally-us-deaths-iran-war-climbs-14-after-navy-pilot-dies"
+  },
+  {
+   "date": "2026-03-12",
+   "n": 6,
+   "what": "six airmen killed when a refueling plane crashed",
+   "hostile": null,
+   "source": "https://www.fox35orlando.com/news/pentagons-official-tally-us-deaths-iran-war-climbs-14-after-navy-pilot-dies"
+  },
+  {
+   "date": "2026-07-01",
+   "n": 1,
+   "what": "a Navy helicopter pilot lost in the Arabian Sea",
+   "hostile": false,
+   "source": "https://www.fox35orlando.com/news/pentagons-official-tally-us-deaths-iran-war-climbs-14-after-navy-pilot-dies"
+  },
+  {
+   "date": "2026-07-17",
+   "n": 3,
+   "what": "three soldiers killed in an Iranian attack in Jordan",
+   "hostile": true,
+   "source": "https://taskandpurpose.com/news/iran-war-us-troops-casualty-numbers.md"
+  },
+  {
+   "date": "2026-07-25",
+   "n": 1,
+   "what": "a soldier killed in the controlled detonation of a downed drone in Iraq (in July; dated here to the first report of 18)",
+   "hostile": null,
+   "dateIsReport": true,
+   "source": "https://taskandpurpose.com/news/iran-war-us-troops-casualty-numbers.md"
+  }
+ ],
+ "counts": [
+  {
+   "date": "2026-06-16",
+   "killed": 13,
+   "wounded": 413,
+   "by": "DCAS, as reported by The Intercept",
+   "note": "The Intercept reports a death in Kuwait on March 6 that is not on the Pentagon's list, and estimates the true wounded count above 625",
+   "source": "https://theintercept.com/2026/06/16/us-casualties-iran-still-rising/"
+  },
+  {
+   "date": "2026-07-13",
+   "killed": 14,
+   "wounded": null,
+   "by": "the Pentagon's official tally",
+   "source": "https://www.fox35orlando.com/news/pentagons-official-tally-us-deaths-iran-war-climbs-14-after-navy-pilot-dies"
+  },
+  {
+   "date": "2026-07-25",
+   "killed": 18,
+   "wounded": 624,
+   "by": "DCAS, as reported by Task & Purpose",
+   "source": "https://taskandpurpose.com/news/iran-war-us-troops-casualty-numbers.md"
+  },
+  {
+   "date": "2026-08-19",
+   "killed": 18,
+   "wounded": 697,
+   "by": "DCAS, as reported by Stars and Stripes",
+   "source": "https://www.stripes.com/theaters/us/2026-08-21/iran-war-casualty-increase-22617896.html"
+  },
+  {
+   "date": "2026-08-20",
+   "killed": 18,
+   "wounded": 757,
+   "by": "DCAS, as reported by Stars and Stripes",
+   "source": "https://www.stripes.com/theaters/us/2026-08-21/iran-war-casualty-increase-22617896.html"
+  }
+ ],
+ "ledgerHints": [],
+ "audience": {
+  "movedTo": "data/active/audience.json (11-10)"
+ },
+ "ledgerHintsResolved": "11-10: 04-08 was the two-week ceasefire (announced 04-07); 07-07/08 was the collapse of the June 17 memorandum. Both are on the war ledger now (object-build.py)."
+}

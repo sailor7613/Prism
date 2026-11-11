@@ -1,7 +1,7 @@
 # Parallelogram — The Crystal — captive dreamer on the war, Nov 2024 → Nov 2026
-*2026-11-10T15:35:55 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:17 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**38 lines · Dia 48 · read z 0.18 · Lumens 16 tracked (20 measured, 18 unmeasured) · credulity moments: [7, 14, 25, 36] · forecasts: 7 (2 came due: 0 right, 2 wrong; mean gap 1.0, exposure 0.22)**
+**38 lines · Dia 49 · read z 0.18 · Lumens 16 tracked (20 measured, 18 unmeasured) · credulity moments: [7, 14, 25, 36] · forecasts: 6 (1 came due: 0 right, 1 wrong; mean gap 1.0, exposure 0.15)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -10,10 +10,10 @@
 | 2 | siegfriedmuell | 2024-11-13 | Anyone talking about war with Iran is just out to lunch. | shadow · shadow | X | — | 80 (80 80 92) | denominated | unmeasured | Anyone talking about war · out to lunch |
 | 3 | captive_dreamer | 2025-06-11 | Israel going to war with Iran without us is somehow proving me wrong? | object · war | X | +0.3 | 60 (48 60 63) | coalition | 0.32 | Israel going to war with Iran · without us · proving me wrong |
 | 4 | captive_dreamer | 2025-06-11 | Are you stupid? (yes) | shadow · shadow | X | — | 80 (80 80 82) | denominated | unmeasured | Are you stupid? |
-| 5 | captive_dreamer | 2025-06-13 | no war with Iran, no nukes | object · war | O | +0.3 | 48 (40 48 50) | coalition | 0.364 | no war with Iran · no nukes |
+| 5 | captive_dreamer | 2025-06-13 | no war with Iran, no nukes | object · war | O | +0.3 | 50 (40 48 50) | coalition | 0.35 | no war with Iran · no nukes |
 | 6 | captive_dreamer | 2025-06-13 | I'll gladly eat my words (until then, I'm right yet again) | shadow · shadow | F | — | 58 (48 58 58) | coalition | unmeasured | eat my words · I'm right yet again |
-| 7 | captive_dreamer | 2025-06-22 | That didn't happen | object · war | O | +0.3 | 74 (73 74 92) | denominated | 0.052 | That didn't happen · dying for Israel · boots on the ground |
-| 8 | captive_dreamer | 2025-06-22 | that WONT happen | object · war | O | +0.6 | 15 (7 15 82) | fluid | 0.0 | that WONT happen · boots on the ground |
+| 7 | captive_dreamer | 2025-06-22 | That didn't happen | object · war | O | +0.3 | 64 (73 74 92) | coalition | 0.072 | That didn't happen · dying for Israel · boots on the ground |
+| 8 | captive_dreamer | 2025-06-22 | that WONT happen | object · war | O | +0.6 | 64 (7 15 82) | coalition | 0.0 | that WONT happen · boots on the ground |
 | 9 | captive_dreamer | 2025-06-22 | everyone is claiming victory. You're just missing the bigger picture here. | shadow · shadow | F | — | 80 (80 80 80) | denominated | unmeasured | everyone is claiming victory · missing the bigger picture |
 | 10 | captive_dreamer | 2025-06-23 | Many of us made our voices loud and clear that we didn't want to be embroiled in | shadow · shadow | T | — | 58 (25 58 58) | coalition | unmeasured | made our voices loud and clear · in good faith |
 | 11 | captive_dreamer | 2025-06-23 | Many denouncing Trump and MAGA were doing so because they're personally invested | shadow · shadow | F | — | 80 (80 80 83) | denominated | unmeasured | denouncing Trump and MAGA · personally invested in seeing the administration fail |
@@ -54,7 +54,6 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 | 1 | siegfriedmuell | 2024-11-13 | War is simply not in the cards | not war | 2029-01-20 | **wrong so far** | +0.9 | the war begins — the US and Israel strike Iran; Khamenei is killed (2026-02-28) | 1.0 | 0.15 | — |
 | 8 | captive_dreamer | 2025-06-22 | boots on the ground in Iran... that WONT happen | not boots | 2029-01-20 | **right so far** | +0.6 | not on the ledger | 0.0 | 0.0 | — |
 | 17 | captivedreamer7 | 2025-07-01 | If there's a single US boot dropped on Iran during Trump's presidency, | not boots | 2029-01-20 | **right so far** | +0.3 | not on the ledger | 0.0 | 0.0 | — |
-| 22 | captive_dreamer | 2026-02-28 | boots on ground would be a big mistake | boots | 2026-02-28 — the war began 2026-02-28 | **wrong** | -0.3 | not on the ledger | 1.0 | 0.07 | — |
 | 29 | captive_dreamer | 2026-03-06 | let's hope this resolves quickly | war | 2026-04-06 | wrong | +0.0 | -1.00 (2026-02-28) | 1.0 | 0.15 | -0.75 (2026-09-01) | +0.75 |
 | 35 | captive_dreamer | 2026-08-28 | very little chance a boots-on-the-ground invasion of Iran will happen | not boots | open | **right so far** | +0.3 | not on the ledger | 0.0 | 0.0 | — |
 
@@ -65,8 +64,15 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 - line 25 (captivedreamer7, 2026-02-28) **withdrawn**, turning on line 17: “even if there were, I don't care anymore.” — He had bet he would denounce the whole MAGA movement over a single US boot on Iran, and now says that even if there were boots he does not care, which disowns the test in advance.
 - line 36 (captive_dreamer, 2026-11-05) **withdrawn**, turning on line 23: “I explicitly opposed the Iran war from the outset” — He claims to have opposed the Iran war from the outset, but when it began he only said we have to see how it plays out, and a week later he was willing to give Trump the benefit of the doubt.
 
+## Ruled not a forecast
+
+- line 22: “I think boots on ground would be a big mistake and still do!” — a judgment about a hypothetical, not a forecast (Sailor 11-11) (the forecast pass read it as: boots on ground would be a big mistake)
+
 ## Held to Sailor's rulings
 
+- line 5: coalition 50 (the model said 48) — read as said on the day: he is still arguing his forecast out with the other side. What came after is carried by the forecast scoring, never by re-reading the line (band ruled by Sailor 11-11; the number is Claude's 11-07 read)
+- line 7: coalition 64 (the model said 74) — first half of 'That didn't happen - that WONT happen' — read as said on the day: he is still arguing his forecast out with the other side. What came after is carried by the forecast scoring, never by re-reading the line (band ruled by Sailor 11-11; the number is Claude's 11-07 read)
+- line 8: coalition 64 (the model said 15) — second half of 'That didn't happen - that WONT happen' — read as said on the day: he is still arguing his forecast out with the other side. What came after is carried by the forecast scoring, never by re-reading the line (band ruled by Sailor 11-11; the number is Claude's 11-07 read)
 - line 25: denominated 70 (the model said 83) — 'even if there were' answers every reply in advance; settling his own bet is capital spent, the bridge burned to his own earlier position; the object is sacrificed to keep the reaction (Sailor: highly denominated; Haiku read it fluid)
 - line 26: denominated 70 (the model said 83) — 'even if there were' answers every reply in advance; settling his own bet is capital spent, the bridge burned to his own earlier position; the object is sacrificed to keep the reaction (Sailor: highly denominated; Haiku read it fluid)
 - line 27: coalition 63 (the model said 7) — a claim about his own record that the set contradicts: an argument to reposition him, #8 (Sailor agreed Claude's reading; Haiku read it open, 7)
@@ -77,6 +83,6 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 
 | band | lines | z | Dia | words |
 |---|---|---|---|---|
-| RP fluid | 13 | 0.25 | 13 | Trump winning · means no war · War is simply not in the cards · that WONT happen · boots on the ground · war with Iran update · No · war with Iran |
-| RP coalition | 14 | 0.09 | 56 | Israel going to war with Iran · without us · proving me wrong · no war with Iran · no nukes · eat my words · I'm right yet again · made our voices loud and clear |
-| RP denominated | 11 | 0.15 | 78 | Anyone talking about war · out to lunch · Are you stupid? · That didn't happen · dying for Israel · boots on the ground · everyone is claiming victory · missing the bigger picture |
+| RP fluid | 12 | 0.21 | 13 | Trump winning · means no war · War is simply not in the cards · war with Iran update · No · war with Iran · greatest issue we face in the West · no "boots on the ground" |
+| RP coalition | 16 | 0.17 | 57 | Israel going to war with Iran · without us · proving me wrong · no war with Iran · no nukes · eat my words · I'm right yet again · That didn't happen |
+| RP denominated | 10 | 0.0 | 79 | Anyone talking about war · out to lunch · Are you stupid? · everyone is claiming victory · missing the bigger picture · denouncing Trump and MAGA · personally invested in seeing the administration fail · pro immigration |

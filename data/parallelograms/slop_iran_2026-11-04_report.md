@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-11-04
-*2026-11-10T14:15:47 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:30 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**42 lines · Dia 21 · read z -0.35 · Lumens 56 tracked (28 measured, 14 unmeasured) · credulity moments: none · forecasts: 7 (1 came due: 0 right, 1 wrong; mean gap 1.0, exposure 0.16)**
+**42 lines · Dia 21 · read z -0.35 · Lumens 57 tracked (28 measured, 14 unmeasured) · credulity moments: none · forecasts: 7 (1 came due: 0 right, 1 wrong; mean gap 1.0, exposure 0.16)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -28,11 +28,11 @@
 | 20 | npr-pbs | 2026-11-04 | which has sent fuel prices soaring — a major source of frustration for voters | object · pump | M | -0.6 | 16 (16 16 16) | fluid | 0.732 | sent fuel prices soaring · a major source of frustration for voters |
 | 21 | fox | 2026-11-04 | Iranian leaders claimed vindication after Democrats seized Congress | shadow · shadow | F | — | 15 (15 15 25) | fluid | unmeasured | claimed vindication · Democrats seized Congress |
 | 22 | fox | 2026-11-04 | JD Vance bluntly stating the war caused Republican midterm losses | object · war | M | -0.6 | 16 (15 16 25) | fluid | 0.714 | the war caused Republican midterm losses · bluntly stating |
-| 23 | npr-pbs | 2026-11-04 | Democrats will have the ability to subpoena records and compel individuals to te | object · law | M | +0.0 | 16 (15 16 25) | fluid | 0.42 | subpoena records · compel individuals to testify |
-| 24 | npr-pbs | 2026-11-04 | the Iran war and Trump's business interests may all come under the microscope | object · law | F | +0.0 | 15 (7 15 15) | fluid | 0.425 | may all come under the microscope · the Iran war |
+| 23 | npr-pbs | 2026-11-04 | Democrats will have the ability to subpoena records and compel individuals to te | object · law | M | +0.0 | 16 (15 16 25) | fluid | 0.672 | subpoena records · compel individuals to testify |
+| 24 | npr-pbs | 2026-11-04 | the Iran war and Trump's business interests may all come under the microscope | object · law | F | +0.0 | 15 (7 15 15) | fluid | 0.68 | may all come under the microscope · the Iran war |
 | 25 | npr-pbs | 2026-11-04 | Iranian leaders say midterm results show U.S. voters have rejected Trump's war | object · vote | F | -0.6 | 15 (15 15 25) | fluid | 0.773 | voters have rejected Trump's war · midterm results show |
-| 26 | npr-pbs | 2026-11-04 | Concerns about the war, particularly frustration over rising prices for fuel and | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.84 | frustration over rising prices · helped Democrats win control |
-| 27 | fox | 2026-11-04 | inflation, tariffs and the Iran war drove a historic Democratic sweep | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.84 | inflation, tariffs and the Iran war · drove a historic Democratic sweep |
+| 26 | npr-pbs | 2026-11-04 | Concerns about the war, particularly frustration over rising prices for fuel and | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.677 | frustration over rising prices · helped Democrats win control |
+| 27 | fox | 2026-11-04 | inflation, tariffs and the Iran war drove a historic Democratic sweep | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.677 | inflation, tariffs and the Iran war · drove a historic Democratic sweep |
 | 28 | fox | 2026-11-04 | President Donald hTrump's job approval sank to 38% | shadow · shadow | T | — | 15 (15 15 15) | fluid | unmeasured | job approval sank to 38% |
 | 29 | npr-pbs | 2026-11-04 | Vance blames Iran war for GOP midterm losses | shadow · shadow | M | — | 16 (15 16 25) | fluid | unmeasured | blames Iran war · GOP midterm losses |
 | 30 | npr-pbs | 2026-11-04 | seemingly sought to distance himself from election results | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | seemingly sought to distance himself · election results |
@@ -57,8 +57,8 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 | 11 | al-jazeera | 2026-11-04 | Trump says he would launch the Iran war again | war | open | **right so far** | -0.3 | the war begins — the US and Israel strike Iran; Khamenei is killed (2026-02-28) | 0.0 | 0.0 | — |
 | 12 | al-jazeera | 2026-11-04 | Trump would launch the Iran war again | war | open | **right so far** | -0.6 | the war begins — the US and Israel strike Iran; Khamenei is killed (2026-02-28) | 0.0 | 0.0 | — |
 | 14 | al-jazeera | 2026-11-04 | Trump may still attack Iran | us-strikes | open | **right so far** | +0.0 | US strikes Fordow, Natanz, Isfahan (2025-06-22) | 0.0 | 0.0 | — |
-| 23 | npr-pbs | 2026-11-04 | Iran war and other Trump matters may come under congressional investig | law | open | open | +0.0 | — | — | — | -0.50 (2026-06-24) | +0.50 |
-| 24 | npr-pbs | 2026-11-04 | Democrats' new majority may subpoena and probe the Iran war and Trump' | law | open | open | +0.0 | — | — | — | -0.50 (2026-06-24) | +0.50 |
+| 23 | npr-pbs | 2026-11-04 | Iran war and other Trump matters may come under congressional investig | law | open | open | +0.0 | — | — | — | +0.20 (2026-06-24) | -0.20 |
+| 24 | npr-pbs | 2026-11-04 | Democrats' new majority may subpoena and probe the Iran war and Trump' | law | open | open | +0.0 | — | — | — | +0.20 (2026-06-24) | -0.20 |
 | 37 | nyt | 2026-11-04 | fighting with Iran will resume and be worse this time around | war-resumes | open | **right so far** | -0.6 | Trump declares the deal over; US strikes widen; Iran shuts the strait (2026-07-08) | 0.0 | 0.0 | — |
 | 40 | nyt | 2026-11-03 | Iran would reopen the Strait of Hormuz in 2 days as part of a US deal | not strait-closed | 2026-11-05 — said 2026-11-03 + 2 days | **wrong** | +0.3 | the Strait of Hormuz shut by Iran (2026-07-08) | 1.0 | 0.16 | — |
 

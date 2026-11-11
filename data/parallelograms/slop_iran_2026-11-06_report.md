@@ -1,13 +1,13 @@
 # Parallelogram — The Room — iran · 2026-11-06
-*2026-11-10T14:21:28 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:30 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**26 lines · Dia 23 · read z -0.12 · Lumens 30 tracked (12 measured, 14 unmeasured) · credulity moments: none · forecasts: 2 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
+**26 lines · Dia 23 · read z -0.12 · Lumens 29 tracked (12 measured, 14 unmeasured) · credulity moments: none · forecasts: 2 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
 | 0 | al-jazeera | 2026-11-06 | Yemeni gov’t forces, Houthis trade blame for deadly strikes on Taiz market | object · war | F | +0.0 | 15 (15 15 15) | fluid | 0.212 | Yemeni gov’t forces, Houthis trade blame · deadly strikes on Taiz market |
 | 1 | fox | 2026-11-06 | Anna Paulina Luna says she will reject all corporate PAC money and foreign polic | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | reject all corporate PAC money · foreign policy-linked funding |
-| 2 | nyt | 2026-11-06 | Anger over tariffs and higher costs because of the war in Iran led many Republic | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.84 | higher costs because of the war in Iran · led many Republican farmers and ranchers to vote blue |
+| 2 | nyt | 2026-11-06 | Anger over tariffs and higher costs because of the war in Iran led many Republic | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.677 | higher costs because of the war in Iran · led many Republican farmers and ranchers to vote blue |
 | 3 | fox | 2026-11-06 | Russia secretly bolstered Iran's missile arsenal before war with US, records unc | object · war | T | +0.0 | 16 (7 16 16) | fluid | 0.21 | Russia secretly bolstered Iran's missile arsenal · before war with US · records uncover |
 | 4 | fox | 2026-11-06 | Thomas Massie plans to reintroduce articles of impeachment against Pete Hegseth  | shadow · shadow | F | — | 16 (7 16 25) | fluid | unmeasured | reintroduce articles of impeachment · against Pete Hegseth · next week |
 | 5 | nyt | 2026-11-06 | with Ukraine, Iran and NATO all hanging in the balance | object · war | F | +0.0 | 15 (15 15 15) | fluid | 0.212 | Iran and NATO all hanging in the balance · Europe Still Sees Trump As Powerful |

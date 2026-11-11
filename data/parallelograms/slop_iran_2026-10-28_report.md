@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-10-28
-*2026-11-10T14:00:39 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**24 lines · Dia 25 · read z -0.19 · Lumens 36 tracked (17 measured, 7 unmeasured) · credulity moments: none · forecasts: 6 (2 came due: 1 right, 1 wrong; mean gap 0.41, exposure 0.12)**
+**24 lines · Dia 25 · read z -0.19 · Lumens 35 tracked (17 measured, 7 unmeasured) · credulity moments: none · forecasts: 6 (2 came due: 1 right, 1 wrong; mean gap 0.41, exposure 0.12)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -17,7 +17,7 @@
 | 9 | al-jazeera | 2026-10-28 | Are GCC countries looking for a regional security pact with Iran? | object · war | F | +0.0 | 15 (7 15 15) | fluid | 0.212 | regional security pact with Iran |
 | 10 | al-jazeera | 2026-10-28 | Iran is using the threat of spy networks to detain and execute political opponen | object · war | F | +0.0 | 15 (15 15 15) | fluid | 0.212 | using the threat of spy networks · detain and execute political opponents |
 | 11 | fox | 2026-10-28 | Trump's EPA is lowering costs | object · barrel | M | +0.3 | 48 (16 48 48) | coalition | 0.08 | EPA is lowering costs · save Americans $45 billion · 210 million more barrels of oil |
-| 12 | npr-pbs | 2026-10-28 | inflation has accelerated in the past couple of months as the Iran war has cause | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.84 | inflation has accelerated · the Iran war has caused spikes in oil and gas prices |
+| 12 | npr-pbs | 2026-10-28 | inflation has accelerated in the past couple of months as the Iran war has cause | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.647 | inflation has accelerated · the Iran war has caused spikes in oil and gas prices |
 | 13 | fox | 2026-10-28 | Mike Collins drops Election Day gas price prediction | object · pump | F | +0.0 | 15 (15 15 48) | fluid | 0.164 | Election Day gas price prediction |
 | 14 | fox | 2026-10-28 | his role in landing Audi's $4.2 billion deal | shadow · shadow | T | — | 48 (15 48 48) | coalition | unmeasured | his role in landing Audi's $4.2 billion deal |
 | 15 | fox | 2026-10-28 | Democrats' path runs through Trump Country | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | Senate control is a coin flip · Democrats' path runs through Trump Country |

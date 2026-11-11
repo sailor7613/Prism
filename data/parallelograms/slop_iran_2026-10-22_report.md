@@ -1,5 +1,5 @@
 # Parallelogram — The Room — iran · 2026-10-22
-*2026-11-10T13:41:49 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
 **27 lines · Dia 21 · read z -0.43 · Lumens 50 tracked (21 measured, 6 unmeasured) · credulity moments: none · forecasts: 10 (4 came due: 4 right, 0 wrong; mean gap 0.0, exposure 0.0)**
 

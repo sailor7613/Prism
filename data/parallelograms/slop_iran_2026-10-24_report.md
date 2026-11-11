@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-10-24
-*2026-11-10T13:47:31 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**26 lines · Dia 16 · read z -0.3 · Lumens 48 tracked (20 measured, 6 unmeasured) · credulity moments: none · forecasts: 4 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
+**26 lines · Dia 16 · read z -0.3 · Lumens 47 tracked (20 measured, 6 unmeasured) · credulity moments: none · forecasts: 4 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -13,7 +13,7 @@
 | 5 | al-jazeera | 2026-10-24 | Iran says won't allow US warships to get close as Trump ponders new attacks | object · war | F | -0.3 | 16 (16 16 16) | fluid | 0.462 | won't allow US warships to get close · Trump ponders new attacks |
 | 6 | al-jazeera | 2026-10-24 | Iranian officials, media and analysts sense war is closer, but signal there will | object · war | F | -0.6 | 16 (16 16 16) | fluid | 0.714 | war is closer · there will be no backing down |
 | 7 | nyt | 2026-10-24 | Ticket prices jumped after fuel costs spiked because of the war with Iran | object · pump | M | -0.6 | 16 (16 16 16) | fluid | 0.658 | fuel costs spiked · because of the war with Iran |
-| 8 | nyt | 2026-10-24 | even an end to the conflict will not bring fares back down quickly | object · prices | F | -0.6 | 16 (16 16 16) | fluid | 0.84 | will not bring fares back down quickly · High Airfares May Be Here to Stay |
+| 8 | nyt | 2026-10-24 | even an end to the conflict will not bring fares back down quickly | object · prices | F | -0.6 | 16 (16 16 16) | fluid | 0.647 | will not bring fares back down quickly · High Airfares May Be Here to Stay |
 | 9 | al-jazeera | 2026-10-24 | US intelligence memo warns that Iranian plots against US citizens in the Middle  | object · war | T | -0.3 | 16 (16 16 16) | fluid | 0.462 | intelligence memo warns · Iranian plots against US citizens |
 | 10 | npr-pbs | 2026-10-24 | U.S. is reducing staffing at 4 Middle East embassies over increased threats from | object · war | T | -0.3 | 16 (16 16 16) | fluid | 0.462 | reducing staffing at 4 Middle East embassies · increased threats from Iran |
 | 11 | npr-pbs | 2026-10-24 | Director of National Intelligence Jay Clayton said his teams 'have received inte | object · war | T | -0.3 | 16 (16 16 16) | fluid | 0.462 | Iran has substantially increased efforts to target U.S. personnel · have received intelligence |
@@ -39,7 +39,7 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 | # | who | said | forecast | state / measure | due | result | line z | the body at due | gap | exposure | now |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 6 | al-jazeera | 2026-10-24 | Iranian officials sense war is closer and signal no backing down | war | open | **right so far** | -0.6 | the war begins — the US and Israel strike Iran; Khamenei is killed (2026-02-28) | 0.0 | 0.0 | — |
-| 8 | nyt | 2026-10-24 | Even an end to the conflict will not bring airfares back down quickly | prices | open | open | -0.6 | — | — | — | -0.61 (2026-10-31) | +0.01 |
+| 8 | nyt | 2026-10-24 | Even an end to the conflict will not bring airfares back down quickly | prices | open | open | -0.6 | — | — | — | -0.31 (2026-10-31) | -0.29 |
 | 16 | nyt | 2026-10-23 | investors fear the war in Iran could escalate again | war-resumes | open | **right so far** | -0.3 | Trump declares the deal over; US strikes widen; Iran shuts the strait (2026-07-08) | 0.0 | 0.0 | — |
 | 24 | npr-pbs | 2026-10-23 | Reinforcements and departures point to a potential attack on Iran | us-strikes | open | **right so far** | -0.3 | US strikes Fordow, Natanz, Isfahan (2025-06-22) | 0.0 | 0.0 | — |
 

@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-10-20
-*2026-11-10T13:36:56 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**33 lines · Dia 25 · read z -0.25 · Lumens 45 tracked (23 measured, 10 unmeasured) · credulity moments: none · forecasts: 3 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
+**33 lines · Dia 25 · read z -0.25 · Lumens 44 tracked (23 measured, 10 unmeasured) · credulity moments: none · forecasts: 3 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -30,7 +30,7 @@
 | 22 | fox | 2026-10-19 | Vance said he will not weigh in on Israel's upcoming election | shadow · shadow | T | — | 15 (15 15 15) | fluid | unmeasured | declines to endorse Netanyahu · will not weigh in |
 | 23 | secular-talk | 2026-10-19 | DIRE WARNING of MASS US CASUALTIES | object · lives | F | +0.0 | 50 (50 50 50) | coalition | unmeasured | DIRE WARNING · MASS US CASUALTIES · EVACUATE NOW |
 | 24 | nyt | 2026-10-19 | Saudi Arabia Postpones Its FII Investment Event After Houthi Attacks | object · war | T | +0.0 | 7 (7 7 16) | fluid | 0.232 | Postpones Its FII Investment Event · After Houthi Attacks |
-| 25 | fox | 2026-10-19 | Macron cited the Iran war and its impact on fuel and living costs | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.84 | cited the Iran war · impact on fuel and living costs |
+| 25 | fox | 2026-10-19 | Macron cited the Iran war and its impact on fuel and living costs | object · prices | M | -0.6 | 16 (16 16 16) | fluid | 0.647 | cited the Iran war · impact on fuel and living costs |
 | 26 | free-press | 2026-10-19 | why Trump may be Putin’s best hope | shadow · shadow | F | — | 15 (15 15 58) | fluid | unmeasured | Trump may be Putin’s best hope |
 | 27 | breaking-points | 2026-10-19 | Israel Plots IRAN WAR Restart | object · war | F | -0.3 | 50 (50 50 50) | coalition | 0.275 | Israel Plots IRAN WAR Restart · Krystal and Saagar discuss |
 | 28 | breaking-points | 2026-10-19 | Trump ENDORSES Flailing BIBI | shadow · shadow | F | — | 48 (48 48 58) | coalition | unmeasured | Trump ENDORSES Flailing BIBI · ahead of election |
@@ -46,7 +46,7 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 | # | who | said | forecast | state / measure | due | result | line z | the body at due | gap | exposure | now |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 2 | nyt | 2026-10-20 | Officials warn of an impending humanitarian disaster in Taiz as the Ho | war | open | open | +0.0 | — | — | — | -0.75 (2026-09-01) | +0.75 |
-| 23 | secular-talk | 2026-10-19 | Warns of MASS US CASUALTIES if the US goes to war with Iran; urges eva | casualties | open — its condition is not the war beginning — open | **wrong so far** | +0.0 | 18 US service members killed by 2026-11-10 (the line means at least 200) | 1.0 | 0.5 | — |
+| 23 | secular-talk | 2026-10-19 | Warns of MASS US CASUALTIES if the US goes to war with Iran; urges eva | casualties | open — its condition is not the war beginning — open | **wrong so far** | +0.0 | 18 US service members killed by 2026-11-11 (the line means at least 200) | 1.0 | 0.5 | — |
 | 27 | breaking-points | 2026-10-19 | Israel plots an Iran war restart | war-resumes | open | **right so far** | -0.3 | Trump declares the deal over; US strikes widen; Iran shuts the strait (2026-07-08) | 0.0 | 0.0 | — |
 
 ## Second pass — where credulity switches (DiaGnostic)

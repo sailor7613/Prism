@@ -1,13 +1,13 @@
 # Parallelogram — The Room — iran · 2026-10-30
-*2026-11-10T14:05:50 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
 **23 lines · Dia 25 · read z -0.34 · Lumens 45 tracked (15 measured, 8 unmeasured) · credulity moments: none · forecasts: 6 (2 came due: 1 right, 1 wrong; mean gap 0.23, exposure 0.07)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0 | nyt | 2026-10-30 | Factors like inflation, interest rates, A.I. and the war with Iran are far more  | object · prices | F | +0.0 | 15 (15 15 16) | fluid | 0.476 | Factors like inflation, interest rates · the war with Iran are far more important |
+| 0 | nyt | 2026-10-30 | Factors like inflation, interest rates, A.I. and the war with Iran are far more  | object · prices | F | +0.0 | 15 (15 15 16) | fluid | 0.705 | Factors like inflation, interest rates · the war with Iran are far more important |
 | 1 | ms-now | 2026-10-30 | only 24% of adults approve of President Trump's war with Iran | object · vote | T | -0.6 | 16 (7 16 26) | fluid | 0.764 | only 24% of adults approve · President Trump's war with Iran |
-| 2 | ms-now | 2026-10-30 | Congress 'needs to have a spine and stand up to this insanity' | object · law | F | -0.6 | 60 (50 60 60) | coalition | 0.36 | needs to have a spine · stand up to this insanity |
+| 2 | ms-now | 2026-10-30 | Congress 'needs to have a spine and stand up to this insanity' | object · law | F | -0.6 | 60 (50 60 60) | coalition | 0.08 | needs to have a spine · stand up to this insanity |
 | 3 | ms-now | 2026-10-30 | how he would find a way to end the conflict if elected | object · war | F | +0.0 | 15 (15 15 48) | fluid | 0.212 | find a way to end the conflict · if elected |
 | 4 | al-jazeera | 2026-10-30 | As Houthi missiles strike Aden, residents stockpile food and prepare escape plan | object · war | O | -0.6 | 26 (16 26 26) | fluid | 0.629 | Houthi missiles strike Aden · stockpile food and prepare escape plans |
 | 5 | free-press | 2026-10-30 | Aaron MacLean on Trump's options in Iran | object · war | F | +0.0 | 15 (15 15 25) | fluid | 0.212 | Trump's options in Iran |

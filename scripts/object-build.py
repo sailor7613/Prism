@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """object-build — the object as Prism holds it (Sailor + Claude, 2026-11-09; replaces trackers-build.py, which replaced gears-build.py).
 
-ONE OBJECT: the political economy. z is for the audience (American citizens and voters): +1 it delivered for them,
--1 it frustrated them. The object has a BODY and a LIGHT.
+ONE OBJECT: the political economy. z is read against the Object itself, not against an audience (ruled 11-11; this
+replaces the audience wording of 10-22): +1 realized · -1 frustrated. What the Object is realizing is left open.
+The object has a BODY and a LIGHT.
   THE BODY — what is measured. Each measure is a dated series of readings, [date, z, sigma, note]:
     war     the topic's own state by date — a step line of facts, sigma 0
     barrel  Brent spot (price.json)
@@ -11,12 +12,13 @@ ONE OBJECT: the political economy. z is for the audience (American citizens and 
             (src/js/tracker-core.js — the same number the villa and BloomBurger show)
     vote    exit polls (one reading so far)
   THE LIGHT — what is said. The room: each day's sweep on the topic through the closed form (slop-day.py → discourse.json).
-THE TOPIC is the face of the object turned toward the audience now (PG01, the Iran war). It carries the LEDGER (what has
+THE TOPIC is the face the object shows now (PG01, the Iran war). It carries the LEDGER (what has
 happened, as named states) and the ZERO DATE every body reading is measured from — the zero belongs to the topic, not
 to the measure: another topic needs its own.
 Only the light goes through the prism (a parallelogram is a piece of it, surfaced by the sweep or written into the drop).
 The body has no station and no heat; it reaches the graphmap as height. The body judges the light, never the reverse.
-Every rule is a DRAFT for Sailor. Writes data/active/object.json. Run after the SST fetch.
+The rules were ruled by Sailor on 2026-11-11 (Handoffs/2026-11-11_The_Object_in_the_Villa_Handoff.md); a rule still marked
+DRAFT is a scale he has not ruled. Writes data/active/object.json. Run after the SST fetch.
 Usage: python3 scripts/object-build.py"""
 import json, os, subprocess, calendar
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,16 +45,16 @@ LEDGER = [['2025-06-13', 'israel-strikes', 'Israel strikes Iran'],
           ['2026-04-07', 'ceasefire', 'a two-week ceasefire (reported 04-08); extended indefinitely in late April', 'https://www.goodmorningamerica.com/news/story/us-iran-ceasefire-mou-broke-timeline-134622392'],
           ['2026-06-17', 'accord', 'the US and Iran sign a 14-point memorandum: the ceasefire made formal, the blockade ended, the strait reopened', 'https://www.goodmorningamerica.com/news/story/us-iran-ceasefire-mou-broke-timeline-134622392'],
           ['2026-06-25', 'accord-broken', 'first violation: Iran strikes a ship in the strait, the US answers; contained by 06-26', 'https://www.goodmorningamerica.com/news/story/us-iran-ceasefire-mou-broke-timeline-134622392'],
-          ['2026-07-07', 'us-strikes', 'Iran strikes three vessels; the US strikes back and pulls Iran\'s oil licence', 'https://www.goodmorningamerica.com/news/story/us-iran-ceasefire-mou-broke-timeline-134622392'],
+          ['2026-07-07', 'us-strikes', 'Iran strikes three vessels (07-06 by Al Jazeera\'s account); the US pulls Iran\'s oil licence; the US strikes follow on 07-08 and 07-09', 'https://www.goodmorningamerica.com/news/story/us-iran-ceasefire-mou-broke-timeline-134622392'],
           ['2026-07-08', 'war-resumes', 'Trump declares the deal over; US strikes widen; Iran shuts the strait', 'https://aljazeera.com/news/2026/7/13/march-to-july-whats-different-as-us-iran-fighting-escalates-again'],
           ['2026-07-08', 'strait-closed', 'the Strait of Hormuz shut by Iran', 'https://aljazeera.com/news/2026/7/13/march-to-july-whats-different-as-us-iran-fighting-escalates-again'],
           ['2026-07-13', 'blockade', 'the US naval blockade of Iranian ports reinstated', 'https://www.omanobserver.om/article/1194239/world/region/the-latest-on-where-the-iran-war-stands'],
           ['2026-07-17', 'us-dead', 'three US service members killed in an Iranian attack in Jordan, on an eighth night of strikes', 'https://www.omanobserver.om/article/1194239/world/region/the-latest-on-where-the-iran-war-stands'],
           ['2026-08-02', 'assault-called-off', 'Trump cancels a planned assault at the request of Middle Eastern states; talks through Oman and Qatar', 'https://www.omanobserver.om/article/1194239/world/region/the-latest-on-where-the-iran-war-stands'],
-          ['2026-09-01', 'lull', 'the last major US strikes; after this, major combat paused with no truce — the strait shut, the blockade on', 'https://gulfnews.com/uae/us-israel-iran-war-lull-nears-breaking-point-us-israel-weighing-new-strikes-what-to-know-oct-20-2026-1.500716736'],
+          ['2026-09-01', 'lull', 'the last major US strikes (per IranWire); after this, major combat paused with no truce. The strait\'s state is disputed — Iran says closed, CentCom says open', 'https://gulfnews.com/uae/us-israel-iran-war-lull-nears-breaking-point-us-israel-weighing-new-strikes-what-to-know-oct-20-2026-1.500716736'],
           ['2026-11-03', 'us-strikes', 'the US strikes Qeshm island overnight into election day (Trump: a minor attack); Iran calls the US reply to its Hormuz plan unconvincing', 'https://aljazeera.com/news/2026/11/4/iran-says-us-reply-to-hormuz-plan-unconvincing-trump-confirms-strikes'],
           ['2026-11-06', 'us-strikes', 'Qeshm struck again; 11 ships attacked in and around the strait in the week, three sunk; no truce', 'https://aljazeera.com/news/2026/11/7/qeshm-island-and-hormuz-hit-as-mediators-try-to-prevent-us-iran-escalation']]
-LEDGER_NOTE = 'on file to 2026-11-07, read from the press on 11-10; a hand-kept ledger, every row with its source'
+LEDGER_NOTE = 'on file to 2026-11-07, read from the press on 11-10 and checked against each row\'s source on 11-11; a hand-kept ledger, every row from 2026 with its source'
 STATES = {'congress-ends-war': 'Congress orders the forces out (a war-powers resolution passes both chambers)', 'war': 'a US war with Iran', 'us-strikes': 'US strikes on Iran', 'israel-strikes': 'Israeli strikes on Iran', 'ceasefire': 'a ceasefire', 'accord': 'a signed deal ending the fighting', 'accord-broken': 'a signed deal violated', 'war-resumes': 'the fighting resumes after a ceasefire', 'strait-closed': 'the Strait of Hormuz closed', 'blockade': 'a US naval blockade of Iran', 'lull': 'major combat paused without a truce', 'assault-called-off': 'a planned assault cancelled',
           'boots': 'US ground troops in Iran', 'nuclear-strike': 'a US nuclear strike', 'world-war': 'a world war / war with Russia or China',
           'regime-change': 'the Iranian regime falls', 'war-ends': 'the war ends',
@@ -62,7 +64,10 @@ war = [['2024-11-05', 0.5, 0.0, 'no war — the promise, holding'],
        ['2025-06-13', 0.0, 0.0, 'Israel strikes Iran; no US boots'],
        ['2025-06-22', -0.5, 0.0, 'US strikes Fordow, Natanz, Isfahan'],
        [WAR_START, -1.0, 0.0, 'the war begins'],
-       # 11-10 (DRAFT for Sailor): the line moves with the ledger — a ceasefire is the fighting paused, not the promise restored
+       # Ruled 11-11. Above no war (+0.5) the scale is left for peace that is built: no war with a signed agreement in force +0.75 ·
+       # no war with a multilateral settlement, inspected, that has held +1. A signed deal after a war starts at -0.25 and climbs
+       # those same steps as it holds (the 06-17 memorandum broke on 07-08 before it climbed).
+       # 11-10: the line moves with the ledger — a ceasefire is the fighting paused, not the promise restored
        ['2026-04-07', -0.5, 0.0, 'ceasefire'],
        ['2026-06-17', -0.25, 0.0, 'the memorandum signed'],
        ['2026-07-08', -1.0, 0.0, 'the deal over; the war resumes'],
@@ -80,8 +85,8 @@ for d, v in gas:
     pump.append([d, round(max(-1, min(1, -pct / 50)), 3), 0.10, round(pct, 1)])
 
 # THE BARREL. Rule (plain): every +20% on Brent since the war began moves z by -0.2; capped at ±1. Brent is what the
-# commentators quote ("$30 gas", "surging oil prices"); the pump is what the audience pays. Sigma 0.15: a world price,
-# two steps from the audience. Same file as the pump (price.json).
+# commentators quote ("$30 gas", "surging oil prices"); the pump is what people pay. Sigma 0.15: a world price,
+# two steps from the pump. Same file as the pump (price.json).
 brent = P['RBRTE']['points']
 bbase = at(brent, WAR_START)
 barrel = []
@@ -97,10 +102,10 @@ disc = json.load(open(A('discourse.json'))) if os.path.exists(A('discourse.json'
 dreads = (disc.get('objects', {}).get('iran') or {}).get('readings', [])
 
 # THE VOTE. Rule (plain): z = -(share calling the war the wrong decision - share calling it right) ÷ 100.
-# Sigma 0.25: one exit poll, and cause is soft. Given the vantage ruling (the audience is the voter), this is the
-# audience's own z, measured directly, once — the other trackers are proxies for it between elections.
+# Sigma 0.25: one exit poll, and cause is soft. The voters' own verdict on the war, measured directly, once. (11-11: z is
+# read against the Object, not an audience; the vote stays on the body as one of its measures.)
 vote = [['2026-11-03', -0.26, 0.25, {'wrong': 63, 'right': 37, 'crucialOrMajor': 74,
-         'source': 'NBC News exit poll, 2026-11-03, as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/)'}]]
+         'source': "NBC News Exit Poll, 2026-11-03 — NBC's own page gives 63% wrong decision (nbcnews.com/politics/2026-election/exit-poll-trump-midterms-voters-economy-disapproval-rcna607045). The 37% right and the 74% crucial-or-major are the same poll as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/); NBC's page could not be opened on 11-11 to confirm those two"}]]
 
 # THE DOLLAR. The needle itself: the dollar's share of the panel's named barrel, by month, from tracker-core.js.
 # Rule (plain): every -3 points of share since the war began = -0.2 z (3 points is the needle's own threshold for
@@ -198,18 +203,25 @@ try:
         if b_['billId'] in tb_ and d_ >= first_:
             law_events.append({'date': d_, 'chamber': 'law', 'bill': b_['billId'], 'title': b_['title'][:110], 'what': 'enacted', 'result': 'Became law', 'warPowers': False})
     law_events.sort(key=lambda e_: e_['date'])
-    # the step line (DRAFT): only the war-powers question moves it. Took the question up 0 · declined to check the war -0.5 ·
-    # ordered the forces out +0.5 (not on file). No reading before the first vote: a line dated earlier is unmeasured.
-    lz_ = []
+    # the step line (ruled 11-11): the law measures whether Congress uses its power over the war — not whether the war goes
+    # on, which the war's own measure carries. Ordered the forces out +0.5 (the resolution passed by both chambers) · a
+    # recorded vote held on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5.
+    # A vote kept from the floor leaves no roll call, so those rows are hand-kept in LAW_BLOCKED, each with its source
+    # (none on file). Not ruled: a resolution passed by one chamber only — it reads as a vote held (+0.2) until Sailor rules it.
+    LAW_BLOCKED = []   # [date, note, source]
+    lz_ = [[WAR_START, 0.0, 0.0, 'nothing voted on yet']]; passed_ = set()
     for e_ in law_events:
         if not e_['warPowers']: continue
         up_ = bool(re.search(r'agreed|passed', e_['result'].lower()))
         final_ = bool(re.search(r'on passage|joint resolution', e_['what'].lower()))
-        z_ = 0.5 if (up_ and final_) else 0.0 if up_ else -0.5
-        lz_.append([e_['date'], z_, 0.0, f"{e_['chamber'].capitalize()}: {e_['what'].lower().replace('on the ', '')} — {e_['yea']}–{e_['nay']}, {'agreed' if up_ else 'rejected'}"])
+        if up_ and final_: passed_.add(e_['chamber'])
+        z_ = 0.5 if {'senate', 'house'} <= passed_ else 0.2
+        lz_.append([e_['date'], z_, 0.0, f"{e_['chamber'].capitalize()}: {e_['what'].lower().replace('on the ', '')} — {e_['yea']}–{e_['nay']}, {'agreed' if up_ else 'rejected'}; a recorded vote held"])
+    for b_ in LAW_BLOCKED: lz_.append([b_[0], -0.5, 0.0, b_[1]])
+    lz_.sort(key=lambda r_: r_[0])
     law_view = {'id': 'law', 'label': 'the law', 'kind': 'state', 'pace': 'months', 'source': "what Congress did about the topic — recorded votes on the war-powers resolution (prism_votes.json), as of " + asof,
-                'rule': 'what the law had done about the war on that day: took the question up 0 · declined to check the war -0.5 · ordered the forces out +0.5; sigma 0. No reading before the first vote',
-                'readings': lz_, 'events': law_events, 'note': 'DRAFT for Sailor — the step values are a proposal. ' + str(len(law_events)) + ' recorded votes and enactments on bills that name the topic are listed under the topic'}
+                'rule': 'whether Congress had used its power over the war on that day: ordered the forces out +0.5 · held a recorded vote on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5; sigma 0',
+                'readings': lz_, 'events': law_events, 'note': 'ruled 11-11. A resolution passed by one chamber only is not ruled and reads +0.2; no vote kept from the floor is on file (that row is hand-kept). ' + str(len(law_events)) + ' recorded votes and enactments on bills that name the topic are listed under the topic'}
     measures.append(law_measure)
 except Exception as e_:
     print('law: not read —', repr(e_))
@@ -217,8 +229,9 @@ except Exception as e_:
 # THE BODY BEYOND ENERGY (11-10) — the cost of living, groceries, wages, jobs, the mortgage, the market, the ten-year and
 # the mood, from data/active/fred.json (scripts/active-fred.js — FRED's keyless CSV route). Standing: each in its own
 # units. A month's figure is dated to its last day; a daily series is thinned to the last reading of each week.
-# Under the topic, only the three whose direction is not in dispute are read as z (DRAFT rules): prices, jobs, the mood.
-# The market, the ten-year, the mortgage, wages and groceries stand without a z until Sailor rules their sign.
+# Under the topic (ruled 11-11): prices, groceries, the mortgage, jobs and the mood are read as z; wages are read against
+# prices, never alone. The market and the ten-year stand WITHOUT a z by ruling — neither says on its own whether the
+# Object is realizing or frustrating. They stay on the standing body as measures to call up.
 fred_view, fred_ids = [], []
 try:
     FP_ = os.environ.get('OBJ_FRED') or A('fred.json')
@@ -250,10 +263,10 @@ try:
                          'series': series, 'sinceZero': {'value': f_since(level, pct), 'unit': '%' if pct else 'points'}})
         fred_ids.append(id_); return level
     L_prices = f_std('prices', 'CPIAUCSL', 'the cost of living', '% a year', 'months', 'yoy', True)
-    f_std('groceries', 'CUSR0000SAF11', 'groceries', '% a year', 'months', 'yoy', True)
-    f_std('wages', 'CES0500000003', 'wages', '% a year', 'months', 'yoy', True)
+    L_groc = f_std('groceries', 'CUSR0000SAF11', 'groceries', '% a year', 'months', 'yoy', True)
+    L_wages = f_std('wages', 'CES0500000003', 'wages', '% a year', 'months', 'yoy', True)
     L_jobs = f_std('jobs', 'UNRATE', 'jobs', '%', 'months', 'month', False)
-    f_std('mortgage', 'MORTGAGE30US', 'the mortgage', '%', 'weeks', 'week', False)
+    L_mort = f_std('mortgage', 'MORTGAGE30US', 'the mortgage', '%', 'weeks', 'week', False)
     f_std('market', 'SP500', 'the market', 'index', 'days', 'week', True)
     f_std('tenyear', 'DGS10', 'the ten-year', '%', 'days', 'week', False)
     L_mood = f_std('mood', 'UMCSENT', 'the mood', 'index', 'months', 'month', False)
@@ -262,20 +275,30 @@ try:
         if not b_: return
         rs_ = [[d_, round(max(-1, min(1, fn(v_, b_[1]))), 3) + 0.0, sigma, round(v_, 2)] for d_, v_ in level if d_ >= b_[0]]
         fred_view.append({'id': id_, 'label': label, 'kind': 'reading', 'pace': pace, 'source': source, 'rule': rule, 'base': list(b_), 'readings': rs_, 'note': note})
-    f_view('prices', 'the cost of living', L_prices, lambda v_, b_: -((v_ / b_ - 1) * 100) / 5, 0.10, 'months', 'CPI, all items, monthly — BLS, by FRED (fred.json)',
-           "every +1% on the price level since the topic's zero = -0.2 z; capped at ±1", 'DRAFT — all prices, not only the pump')
+    f_view('prices', 'the cost of living', L_prices, lambda v_, b_: -((v_ / b_ - 1) * 100) / 10, 0.10, 'months', 'CPI, all items, monthly — BLS, by FRED (fred.json)',
+           "every +1% on the price level since the topic's zero = -0.1 z; capped at ±1", 'ruled 11-11, halved from -0.2 — all prices, not only the pump')
     f_view('jobs', 'jobs', L_jobs, lambda v_, b_: -(v_ - b_) * 0.4, 0.10, 'months', 'the unemployment rate, monthly — BLS, by FRED (fred.json)',
-           "every +0.5 points of unemployment since the topic's zero = -0.2 z; capped at ±1", 'DRAFT')
+           "every +0.5 points of unemployment since the topic's zero = -0.2 z; capped at ±1", 'ruled 11-11')
     f_view('mood', 'the mood', L_mood, lambda v_, b_: (v_ - b_) / 25, 0.15, 'months', 'consumer sentiment, monthly — University of Michigan, by FRED (fred.json)',
-           "every -5 points of sentiment since the topic's zero = -0.2 z; capped at ±1", "DRAFT — the audience's own report of how it is going, between elections")
+           "every -5 points of sentiment since the topic's zero = -0.2 z; capped at ±1", 'ruled 11-11 — a reading of the mood; the mood is part of the body')
+    f_view('groceries', 'groceries', L_groc, lambda v_, b_: -((v_ / b_ - 1) * 100) / 10, 0.10, 'months', 'CPI, food at home, monthly — BLS, by FRED (fred.json)',
+           "every +1% on grocery prices since the topic's zero = -0.1 z; capped at ±1", 'sign ruled 11-11 (up is frustrated); the scale is a DRAFT, set to match the cost of living')
+    f_view('mortgage', 'the mortgage', L_mort, lambda v_, b_: -(v_ - b_) * 0.2, 0.10, 'weeks', 'the 30-year fixed mortgage rate, weekly — Freddie Mac, by FRED (fred.json)',
+           "every +1 point on the mortgage rate since the topic's zero = -0.2 z; capped at ±1", "sign ruled 11-11 (up is frustrated); the scale is a DRAFT — a point on the rate adds about a tenth to a new loan's payment, so it matches the pump")
+    L_real = None
+    if L_wages and L_prices:
+        pm_ = {d_[:7]: v_ for d_, v_ in L_prices}
+        L_real = [[d_, v_ / pm_[d_[:7]] * 1000] for d_, v_ in L_wages if d_[:7] in pm_]
+    f_view('wages', 'wages', L_real, lambda v_, b_: ((v_ / b_ - 1) * 100) / 10, 0.10, 'months', 'average hourly earnings set against the CPI, monthly — BLS, by FRED (fred.json)',
+           "wages scored against prices: every 1% that pay gains on prices since the topic's zero = +0.1 z, every 1% it loses = -0.1; capped at ±1", 'ruled 11-11 (wages are read against prices, never alone); the scale is a DRAFT, set to match the cost of living. The fourth figure is pay over prices, an index')
     if FJ_ is None: print('fred: no data/active/fred.json yet — run "Fetch the Body.command"')
 except Exception as e_:
     print('fred: not read —', repr(e_))
 
 # LIVES (11-10) — US service members killed in the war, from the hand-kept ledger data/active/lives.json (every row carries
 # the page it was read from; the Pentagon's own count as reported in the press). Standing: the running count by date.
-# Under the topic it is named so a line can point at it, but it carries NO z — how many dead is how frustrated is
-# Sailor's ruling. Iranian and civilian dead are not on file.
+# Under the topic it is named so a line can point at it, but it carries NO z, permanently (ruled 11-11): the dead and
+# wounded are counted and shown, never scored. Iranian and civilian dead are not on file.
 lives_view = None
 try:
     LJ_ = json.load(open(A('lives.json'))) if os.path.exists(A('lives.json')) else None
@@ -290,19 +313,19 @@ try:
                          'series': ser_, 'sinceZero': {'value': ser_[-1][1], 'unit': 'US service members killed', 'also': wl_[-1]['wounded'] if wl_ else None, 'alsoUnit': 'wounded (' + wl_[-1]['date'][5:] + ')' if wl_ else ''},
                          'events': LJ_['killed'], 'counts': cs_, 'notOnFile': LJ_.get('notOnFile', []), 'status': LJ_.get('status')})
         lives_view = {'id': 'lives', 'label': 'lives', 'kind': 'reading', 'pace': 'days', 'source': "US service members killed and wounded — the Pentagon's count as reported in the press (lives.json)",
-                      'rule': 'no z yet — how many dead is how frustrated is a ruling Sailor has not made. A line about the dead is named here and stays unmeasured',
+                      'rule': 'no z, permanently (ruled 11-11): the dead and wounded are counted and shown, never scored. A line about the dead is named here and stays unmeasured',
                       'readings': [], 'note': str(ser_[-1][1]) + ' killed' + (', ' + str(wl_[-1]['wounded']) + ' wounded' if wl_ else '') + ' on file to ' + ser_[-1][0] + '. Iranian and civilian dead are not on file'}
         if LJ_.get('ledgerHints'): print('lives: the casualty reports point at ledger dates not on the war\'s ledger —', [h_['date'] for h_ in LJ_['ledgerHints']])
 except Exception as e_:
     print('lives: not read —', repr(e_))
 
-# THE AUDIENCE BETWEEN ELECTIONS (11-10) — approval and direction, from the hand-kept, sourced file data/active/audience.json.
+# THE MOOD BETWEEN ELECTIONS (11-10; 11-11: 'audience' is retired as z's vantage — the file keeps its name, audience.json) — approval and direction, from the hand-kept, sourced file data/active/audience.json.
 #   approval   presidential job approval, all adults: Gallup monthly through 2025; from 2026 the mean of the polls the
 #              American Presidency Project lists for the month (each row named in the file), dated to the month's last poll
 #   direction  Gallup, % satisfied with the way things are going, monthly
-# Under the topic only direction is read as z (DRAFT) — it is the audience's own report, like the mood. Approval stands
-# without a z: it is a verdict on a person, and its sign for the audience is Sailor's to rule.
-aud_view = None
+# Under the topic both are read as z (ruled 11-11): direction, and approval on direction's scale — approval up reads
+# realized. Both are readings of the mood, and the mood is part of the body.
+aud_view = None; app_view = None
 try:
     AJ_ = json.load(open(A('audience.json'))) if os.path.exists(A('audience.json')) else None
     if AJ_:
@@ -322,7 +345,13 @@ try:
             aud_view = {'id': 'direction', 'label': 'direction', 'kind': 'reading', 'pace': 'months', 'source': 'Gallup — % satisfied with the way things are going, monthly (audience.json)',
                         'rule': "every -5 points of satisfaction since the topic's zero = -0.2 z; capped at ±1", 'base': list(b_),
                         'readings': [[d_, round(max(-1, min(1, (v_ - b_[1]) / 25)), 3) + 0.0, 0.15, v_] for d_, v_ in dser_ if d_ >= b_[0]],
-                        'note': "DRAFT — the audience's own report of how things are going, between elections"}
+                        'note': 'ruled 11-11 — a reading of the mood; the mood is part of the body'}
+        ba_ = at(aser_, WAR_START)
+        if ba_:
+            app_view = {'id': 'approval', 'label': 'approval', 'kind': 'reading', 'pace': 'months', 'source': 'presidential job approval, all adults, by month (audience.json)',
+                        'rule': "every -5 points of approval since the topic's zero = -0.2 z; capped at ±1", 'base': list(ba_),
+                        'readings': [[d_, round(max(-1, min(1, (v_ - ba_[1]) / 25)), 3) + 0.0, 0.15, v_] for d_, v_ in aser_ if d_ >= ba_[0]],
+                        'note': "ruled 11-11: approval up reads realized, on direction's scale — a reading of the mood, which is part of the body"}
 except Exception as e_:
     print('audience: not read —', repr(e_))
 
@@ -348,14 +377,14 @@ prevalence = {'what': "each day's sweep, counted by the topic its items matched 
               'days': pdays, 'items': pitems, 'order': sorted(ptotal, key=lambda k: -ptotal[k]), 'labels': TOPIC_LABEL, 'counts': pcounts, 'total': ptotal}
 
 doc = {
- 'what': 'The object as Prism holds it. Its BODY is what is measured (dated readings); its LIGHT is what is said (the room). The TOPIC is the face turned toward the audience now: it carries the ledger and the zero date the body is measured from. Only the light goes through the prism; the body reaches the graphmap as height. The body judges the light, never the reverse. DRAFT — every rule here is a proposal for Sailor.',
+ 'what': 'The object as Prism holds it. Its BODY is what is measured (dated readings); its LIGHT is what is said (the room). The TOPIC is the face the object shows now: it carries the ledger and the zero date the body is measured from. Only the light goes through the prism; the body reaches the graphmap as height. The body judges the light, never the reverse. Ruled by Sailor 2026-11-11; a rule marked DRAFT is a scale not yet ruled.',
  'object': 'the political economy',
  'measures': measures, 'measuresNote': 'the standing body: each measure in its own units, no topic in it', 'notYetMeasured': MISSING,
  'topics': {'PG01': {'label': 'the Iran war', 'zero': WAR_START, 'room': 'iran', 'ledger': LEDGER, 'state': war, 'question': {'label': 'the vote on it', 'readings': vote},
-                     'law': law_events, 'reads': ['barrel', 'pump', 'dollar', 'law'] + [v_['id'] for v_ in fred_view] + (['direction'] if aud_view else []) + (['lives'] if lives_view else []), 'note': 'a topic is a zero date, a ledger of what happened, and a slice of the light, laid over the standing body'}},
+                     'law': law_events, 'reads': ['barrel', 'pump', 'dollar', 'law'] + [v_['id'] for v_ in fred_view] + (['direction'] if aud_view else []) + (['approval'] if app_view else []) + (['lives'] if lives_view else []), 'note': 'a topic is a zero date, a ledger of what happened, and a slice of the light, laid over the standing body'}},
  'prevalent': 'PG01', 'prevalence': prevalence,
  'viewNote': 'topic / body / room below are the object as seen under the prevalent topic — the standing measures read as change since its zero, plus the topic\'s own state line and its question to the voters. The closed form reads this view.',
- 'vantage': 'the audience — American citizens and voters: +1 it delivered for them · -1 it frustrated them',
+ 'vantage': 'the Object itself — z is read against the Object of political economy, not against an audience: +1 realized · -1 frustrated (ruled 11-11; replaces the audience wording of 10-22). What the Object is realizing is left open',
  'topic': {'id': 'PG01', 'label': 'the Iran war', 'zero': WAR_START, 'zeroNote': 'the war begins — every body reading is change since this date',
            'ledger': LEDGER, 'ledgerTo': LEDGER_NOTE, 'states': STATES, 'unmeasuredStates': UNMEASURED_STATES, 'room': 'iran',
            'ledgerNote': 'what has happened, as named states. A forecast naming a state is scored against the ledger (right/wrong by due), not z. DRAFT for Sailor: a state not on it has not happened as far as Prism knows'},
@@ -363,18 +392,18 @@ doc = {
  'readingShape': '[date, z, sigma, note]',
  'body': [
   {'id': 'war', 'label': 'the war itself', 'kind': 'state', 'pace': 'days', 'source': "the topic's own state by date — a step line of facts, not a measurement",
-   'rule': 'what the object had done to the no-war promise on that day: no war +0.5 · Israel strikes Iran without the US 0 · US strikes Iran -0.5 · the war -1 · a ceasefire -0.5 · a signed deal -0.25 · the war resumed -1 · combat paused without a truce -0.75; sigma 0',
+   'rule': 'what the object had done to the no-war promise on that day: no war with a multilateral settlement, inspected, that has held +1 · no war with a signed agreement in force +0.75 · no war +0.5 · Israel strikes Iran without the US 0 · US strikes Iran -0.5 · the war -1 · a ceasefire -0.5 · a signed deal -0.25, climbing the upper steps as it holds · the war resumed -1 · combat paused without a truce -0.75; sigma 0 (ruled 11-11)',
    'readings': war, 'note': 'what every forecast in the set was about'},
   {'id': 'barrel', 'label': 'the barrel', 'kind': 'reading', 'pace': 'days', 'source': 'SST — Brent spot, $/bbl (price.json)',
-   'rule': 'every +20% on Brent since the topic\'s zero = -0.2 z; capped at ±1', 'base': bbase, 'readings': barrel, 'note': 'what the commentators quote; the pump is what the audience pays'},
+   'rule': 'every +20% on Brent since the topic\'s zero = -0.2 z; capped at ±1', 'base': bbase, 'readings': barrel, 'note': 'what the commentators quote; the pump is what people pay'},
   {'id': 'pump', 'label': 'the pump', 'kind': 'reading', 'pace': 'weeks', 'source': 'SST — EIA US regular gasoline, retail, weekly (price.json)',
    'rule': 'every +10% at the pump since the topic\'s zero = -0.2 z; capped at ±1', 'base': base, 'readings': pump, 'note': 'reads the pump since the war, not the war\'s effect on the pump'},
   {'id': 'dollar', 'label': 'the dollar', 'kind': 'reading', 'pace': 'years', 'source': 'SST — the needle: the dollar\'s share of the five-station panel\'s named barrel, monthly (tracker-core.js on active.json + settlement.json)',
    'rule': 'every -3 points of dollar share since the topic\'s zero = -0.2 z; capped at ±1; a month is dated to its last day', 'base': dbase and [WAR_START[:7], round(dbase[1], 3)], 'readings': dollar,
-   'note': 'P3 is a forecast line read against this measure, not a condition for it'},
+   'note': 'the sign is ruled 11-11: a falling share is frustrated, and what it frustrates is the Object. P3 is an ordinary forecast line read against this measure'},
   {'id': 'vote', 'label': 'the vote', 'kind': 'reading', 'pace': 'months', 'source': 'exit polls on "was the war the right decision"',
-   'rule': 'z = -(wrong - right) ÷ 100', 'readings': vote, 'note': 'one reading; a line dated before it is read against it as the nearest measurement and flagged. The audience\'s own z — and the one measure the light reaches: the audience heard the room, then voted'},
- ] + ([law_view] if law_view else []) + fred_view + ([aud_view] if aud_view else []) + ([lives_view] if lives_view else []),
+   'rule': 'z = -(wrong - right) ÷ 100', 'readings': vote, 'note': 'one reading; a line dated before it is read against it as the nearest measurement and flagged. The voters\' own verdict, and the one measure the light reaches: the voters heard the room, then voted'},
+ ] + ([law_view] if law_view else []) + fred_view + ([aud_view] if aud_view else []) + ([app_view] if app_view else []) + ([lives_view] if lives_view else []),
  'room': {'id': 'room', 'label': 'the room', 'kind': 'discourse', 'pace': 'days', 'source': 'the slop sweep — each day\'s headlines and deks on the topic, every station, through the closed form (slop-day.py → discourse.json)',
            'rule': 'the day\'s read z across the swept lines; sigma = the spread (std) of their z, floor 0.15. Never lights a line: a line gets room = its z - the room\'s z on its date', 'readings': dreads,
            'note': 'the daily average of the light on this topic — what the whole room said. Not a score of anyone; a line is placed against it. Lumens stays body-only'},

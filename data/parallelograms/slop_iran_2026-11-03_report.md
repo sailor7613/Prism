@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-11-03
-*2026-11-10T22:44:20 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:30 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**25 lines · Dia 20 · read z -0.18 · Lumens 42 tracked (20 measured, 5 unmeasured) · credulity moments: none · forecasts: 6 (3 came due: 0 right, 3 wrong; mean gap 0.56, exposure 0.26)**
+**25 lines · Dia 20 · read z -0.18 · Lumens 43 tracked (20 measured, 5 unmeasured) · credulity moments: none · forecasts: 6 (3 came due: 0 right, 3 wrong; mean gap 0.56, exposure 0.26)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -25,7 +25,7 @@
 | 17 | npr-pbs | 2026-11-03 | Netanyahu has pushed for another wave of strikes on Iran after the U.S. election | object · war | M | -0.3 | 16 (16 16 16) | fluid | 0.462 | pushed for another wave · strikes on Iran · after the U.S. elections |
 | 18 | npr-pbs | 2026-11-03 | Indian navy rescues 20 crew from Iranian fishing boat hijacked off Somalia | object · war | T | +0.0 | 15 (15 15 15) | fluid | 0.212 | Indian navy rescues · hijacked off Somalia |
 | 19 | fox | 2026-11-03 | High prices for gasoline and other goods are key issues for midterm voters | object · pump | F | -0.6 | 16 (16 16 16) | fluid | 0.732 | High prices for gasoline · key issues for midterm voters |
-| 20 | fox | 2026-11-03 | six in 10 Americans citing the cost of living as their chief concern | object · prices | T | -0.3 | 16 (16 16 16) | fluid | 0.662 | six in 10 Americans · cost of living · chief concern |
+| 20 | fox | 2026-11-03 | six in 10 Americans citing the cost of living as their chief concern | object · prices | T | -0.3 | 16 (16 16 16) | fluid | 0.84 | six in 10 Americans · cost of living · chief concern |
 | 21 | fox | 2026-11-03 | early voting shatters records with over 54 million ballots already cast nationwi | shadow · vote | T | — | 15 (15 15 15) | fluid | unmeasured | early voting shatters records · 54 million ballots |
 | 22 | secular-talk | 2026-11-03 | Iran REJECTS TRUMP In Final Message | object · war | F | -0.3 | 48 (15 48 58) | coalition | 0.286 | Iran REJECTS TRUMP · Final Message |
 | 23 | nyt | 2026-11-02 | Gulf Economies, Torn by War in Iran, Desperately Need a Return to Normal | object · war | F | +0.0 | 16 (16 16 16) | fluid | 0.21 | Torn by War in Iran · Desperately Need a Return to Normal |

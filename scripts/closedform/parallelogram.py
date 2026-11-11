@@ -76,9 +76,9 @@ def grammar_prompt(meta, items, G):
             "say what each line is about. You never score how heated a line is. Judge the words, never the speaker's reputation. "
             "Reply with JSON only.")
     posts = json.dumps([{'n': it['n'], 'who': it['who'], 'date': it['date'], 'text': it['text']} for it in items], ensure_ascii=False, indent=1)   # 11-09: items carry their own n (the grammar is asked in chunks)
-    user = f"""THE OBJECT: {G['object']} — did it deliver for the audience, or frustrate them.
+    user = f"""THE OBJECT: {G['object']} — is it realized, or frustrated.
 THE TOPIC (the face of the object these lines are about): {topic_label(meta, G)}
-z: +1 = the object realized for the audience (American citizens and voters) · -1 = it frustrated them
+z: +1 = the object realized · -1 = the object frustrated. z is read against the object itself, never against what an audience wants (ruled 11-11). The signs are the body's own: no war, steady prices, work, a Congress that uses its power, a dollar holding its share and a steadier mood read realized; their opposites read frustrated.
 
 THE BODY — what is measured of the object (each a dated series of readings; a line is read against the one it talks about, as of its own date):
 {gl}
@@ -106,7 +106,7 @@ Answer: {{"lines": [ ... ]}} — valid JSON only. Inside a string never use a do
 
 def relational_prompt(meta, lines, PAT, G):
     obj = topic_label(meta, G)
-    P = {'object': {'label': obj, 'zAxis': {'pos': 'realized for the audience', 'neg': 'frustrated for the audience'}},
+    P = {'object': {'label': obj, 'zAxis': {'pos': 'the object realized (read against the object itself, not an audience)', 'neg': 'the object frustrated'}},
          'title': meta.get('title', ''), 'names': {},
          'lines': [{'who': l['who'], 'station': l['station'], 'quote': l['quote'] + (('   [voice: ' + l['subject'] + ' — reported or described by ' + l['who'] + '; the whole post: ' + l.get('post_text', '') + ']') if l.get('subject') and l['subject'].lstrip('@').lower() != l['who'].lstrip('@').lower() else '')} for l in lines]}
     F = [{'id': f"body:{t['id']}", 'fact': f"{t['label']}: {(t['readings'][-1][1] if t['readings'] else 'no reading yet')} on the object's z ({t['source']})",
@@ -145,7 +145,7 @@ For EVERY line that forecasts — says what will happen, or what would happen IF
  "count": number or null,      // only for a forecast of the dead (state "casualties"): the smallest number the line means — "thousands" 2000 · "hundreds" 200 · "dozens" 24 · a number it names. Otherwise null
  "says": "the forecast in the line's own words, short"}}
 STATES: {vocab}
-A line about the present or the past is not a forecast: leave it out. A warning with no claim about what will happen is not a forecast.
+A line about the present or the past is not a forecast: leave it out. A warning with no claim about what will happen is not a forecast. A judgment about a hypothetical is not a forecast either (ruled 11-11): 'X would be a mistake' or 'we should never do X' says what the speaker thinks of X, not that X will or won't happen — leave it out.
 Answer: {{"forecasts": [ ... ]}} — valid JSON only. Inside a string never use a double quote."""
         ans, _u = D.call(sys_, user, k, READ_MODEL)
         got = ans.get('forecasts', ans.get('lines', []))
@@ -183,7 +183,7 @@ def gnostic(pid, h, lines, k, runs, fresh):
     user = f"""LINES (every line in the set, in order, with dates):
 {json.dumps(L, ensure_ascii=False, indent=1)}
 
-objectOnThatDate is what the object (the war) actually was on the line's date, from the object's body. bodyOnThatDate, where present, is the reading of the measure the line talks about (the pump, the vote, the dollar; z +1 realized … -1 frustrated for the audience) as of that date. due is the date a forecasting line said the object would have moved by.
+objectOnThatDate is what the object (the war) actually was on the line's date, from the object's body. bodyOnThatDate, where present, is the reading of the measure the line talks about (the pump, the vote, the dollar; z +1 realized … -1 frustrated, read against the object itself) as of that date. due is the date a forecasting line said the object would have moved by.
 
 A CREDULITY SWITCH is where a speaker's own earlier words in this set come due and he refuses them, or where he takes up what he had refused. Check every line against every earlier line by the same speaker (or an ally in the set). Three kinds count, all equally:
 1. A test he set comes due and he refuses it: he said what would change his mind, or made a bet; objectOnThatDate shows the condition met (or the object moved against his forecast), and he holds the forecast anyway, narrows its terms, or settles the bet himself. (withdrawn)
@@ -273,8 +273,21 @@ def main():
     def plus(day, n):
         return (datetime.date.fromisoformat(day) + datetime.timedelta(days=int(n))).isoformat()
     seen = set()
+    # 11-11 (ruled): a judgment about a hypothetical is not a forecast. A line Sailor has ruled out (rulings.json → notForecast,
+    # matched by its words) keeps no due date, whatever the grammar or the forecast pass said.
+    _rp = os.path.join(D.OUT, 'rulings.json')
+    _nf = [x_ for x_ in (json.load(open(_rp)).get('notForecast', []) if os.path.exists(_rp) else []) if x_.get('piece') in (None, pid)]
+    def not_forecast(l):
+        lq = l['quote'].lower().strip()
+        for x_ in _nf:
+            rq = (x_.get('quote') or '').lower().strip()
+            if rq and lq and difflib.SequenceMatcher(None, lq, rq).find_longest_match(0, len(lq), 0, len(rq)).size >= max(16, 0.8 * min(len(lq), len(rq))): return x_
+        return None
     for l in lines:
         f = FX.get(str(l['i']))
+        nf_ = not_forecast(l)
+        if nf_ and (f or l.get('due')):
+            l['notForecast'] = {'why': nf_.get('why'), 'readAs': (f or {}).get('says'), 'due': l.get('due')}; l['due'] = None; continue
         if not f: continue
         key_ = (l['post'], f.get('state'), bool(f.get('negated')), (f.get('says') or '')[:40])
         if key_ in seen: continue   # 11-09: the same forecast handed to a second line of the same post
@@ -461,6 +474,8 @@ def main():
     G2 = [l for l in S if l['credulity'] != 'none']
     R += ['', '## Second pass — where credulity switches (DiaGnostic)', '']
     R += [f"- line {l['i']} ({l['who']}, {l['date']}) **{l['credulity']}**, turning on line {l.get('turnsOn')}: “{l['quote'][:90]}” — {l.get('gnosticWhy', '')}" for l in G2] or ['- none found']
+    NF = [l for l in S if l.get('notForecast')]
+    if NF: R += ['', '## Ruled not a forecast', ''] + [f"- line {l['i']}: “{l['quote'][:90]}” — {l['notForecast']['why']} (the forecast pass read it as: {l['notForecast'].get('readAs')})" for l in NF]
     HR = [l for l in S if l.get('handRuled')]
     if HR:
         R += ['', "## Held to Sailor's rulings", ''] + [f"- line {l['i']}: {l['handRuled']['tier']} {l['handRuled']['dia']} (the model said {l['handRuled']['derivedDia']}) — {l['handRuled']['why']}" for l in HR]

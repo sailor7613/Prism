@@ -101,7 +101,7 @@ def prompt(P, F, PAT):
     if _pr: rul += '\n' + '\n'.join(f"- PRINCIPLE · {x['name']}: {x['rule']} (case: {x['case']})" for x in _pr)
     fac = '\n'.join(f"[{f['id']}] {f['fact']}  ({f['source']}{'' if f['tracked'] else '; not tracked'})" for f in F) or '(no tracker facts for this object)'
     user = f"""OBJECT: {obj.get('label', P.get('title'))}
-z: +1 = {za.get('pos', 'realized for the audience')}  ·  −1 = {za.get('neg', 'frustrated for the audience')}
+z: +1 = {za.get('pos', 'the object realized')}  ·  −1 = {za.get('neg', 'the object frustrated')}
 
 TRACKER FACTS (what the object measurably is):
 {fac}

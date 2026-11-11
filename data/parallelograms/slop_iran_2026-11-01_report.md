@@ -1,12 +1,12 @@
 # Parallelogram — The Room — iran · 2026-11-01
-*2026-11-10T14:07:07 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**11 lines · Dia 22 · read z -0.53 · Lumens 54 tracked (4 measured, 7 unmeasured) · credulity moments: none · forecasts: 1 (1 came due: 1 right, 0 wrong; mean gap 0.0, exposure 0.0)**
+**11 lines · Dia 22 · read z -0.52 · Lumens 47 tracked (4 measured, 7 unmeasured) · credulity moments: none · forecasts: 1 (1 came due: 1 right, 0 wrong; mean gap 0.0, exposure 0.0)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 0 | ms-now | 2026-11-01 | his tariffs and the war in Iran have caused inflation to spike to it's current l | object · prices | M | -0.6 | 50 (50 50 50) | coalition | 0.5 | caused inflation to spike · current level of 3.7% |
-| 1 | ms-now | 2026-11-01 | Prices have also spiked across the board | object · prices | O | -0.6 | 16 (7 16 16) | fluid | 0.84 | spiked across the board · groceries to electricity |
+| 0 | ms-now | 2026-11-01 | his tariffs and the war in Iran have caused inflation to spike to it's current l | object · prices | M | -0.6 | 50 (50 50 50) | coalition | 0.403 | caused inflation to spike · current level of 3.7% |
+| 1 | ms-now | 2026-11-01 | Prices have also spiked across the board | object · prices | O | -0.6 | 16 (7 16 16) | fluid | 0.677 | spiked across the board · groceries to electricity |
 | 2 | ms-now | 2026-11-01 | making companies hesitant to hire new people, and created a low-hire, low-fire j | object · jobs | M | -0.6 | 7 (7 7 16) | fluid | 0.353 | hesitant to hire · low-hire, low-fire job market |
 | 3 | ms-now | 2026-11-01 | Trump still boasts about the so-called successes | shadow · shadow | F | — | 58 (58 58 58) | coalition | unmeasured | still boasts · so-called successes |
 | 4 | fox | 2026-11-01 | Paige Spiranac unloads her Halloween content on America | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | Halloween content |

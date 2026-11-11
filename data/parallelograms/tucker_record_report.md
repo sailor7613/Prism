@@ -1,7 +1,7 @@
 # Parallelogram — The Record — Tucker Carlson on the war, Nov 2024 → Nov 2026
-*2026-11-10T21:28:05 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:17 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**39 lines · Dia 53 · read z -0.46 · Lumens 21 tracked (22 measured, 17 unmeasured) · credulity moments: none · forecasts: 9 (5 came due: 1 right, 4 wrong; mean gap 0.8, exposure 2.2)**
+**39 lines · Dia 53 · read z -0.46 · Lumens 21 tracked (23 measured, 16 unmeasured) · credulity moments: none · forecasts: 9 (5 came due: 1 right, 4 wrong; mean gap 0.8, exposure 2.2)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -32,7 +32,7 @@
 | 24 | TuckerCarlson | 2026-03-05 | Could this be a religious war designed to rebuild the Third Temple on the ashes  | object · war | F | -0.6 | 50 (48 50 58) | coalition | 0.3 | religious war · Third Temple · ashes of Al Aqsa |
 | 25 | TuckerCarlson | 2026-03-06 | how this war changes American politics forever | object · war | F | +0.0 | 15 (15 15 15) | fluid | 0.0 | this war · changes American politics · forever |
 | 26 | TuckerCarlson | 2026-03-09 | Pray that the spell breaks and the world is saved. | object · war | F | -0.6 | 80 (80 80 81) | denominated | 0.12 | the spell breaks · the world is saved |
-| 27 | TuckerCarlson | 2026-03-12 | it should be illegal to yoke our military to a foreign power in war | object · law | M | -0.6 | 50 (16 50 50) | coalition | unmeasured | should be illegal · yoke our military · foreign power |
+| 27 | TuckerCarlson | 2026-03-12 | it should be illegal to yoke our military to a foreign power in war | object · law | M | -0.6 | 50 (16 50 50) | coalition | 0.2 | should be illegal · yoke our military · foreign power |
 | 28 | TuckerCarlson | 2026-03-12 | Bret Weinstein on how it happened. | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | how it happened |
 | 29 | TuckerCarlson | 2026-03-19 | why we actually went to war with Iran | shadow · shadow | F | — | 15 (7 15 58) | fluid | unmeasured | why we actually went · war with Iran |
 | 30 | TuckerCarlson | 2026-03-26 | ground troops are often followed by tyranny in the country that sends them | object · war | M | -0.3 | 40 (16 40 50) | coalition | 0.18 | ground troops · followed by tyranny · country that sends them |
@@ -54,7 +54,7 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 | 1 | TuckerCarlson | 2024-11-20 | Wars with Russia and Iran are the counterattack. | war | open | **right so far** | -0.6 | the war begins — the US and Israel strike Iran; Khamenei is killed (2026-02-28) | 0.0 | 0.0 | — |
 | 5 | TuckerCarlson | 2025-06-05 | A war with Iran would amount to a profound betrayal of his supporters. | war | 2026-02-28 — the war began 2026-02-28 | right | -0.9 | -1.00 (2026-02-28) | 0.1 | 0.05 | -0.75 (2026-09-01) | -0.15 |
 | 6 | TuckerCarlson | 2025-06-05 | The first week of a war with Iran could easily kill thousands of Ameri | casualties | 2026-03-07 — the war began 2026-02-28 + 7 days | **wrong** | -0.9 | 6 US service members killed by 2026-03-07 (the line means at least 2000) | 1.0 | 0.5 | — |
-| 7 | TuckerCarlson | 2025-06-05 | It could also collapse our economy, as surging oil prices trigger unma | prices | 2026-02-28 — the war began 2026-02-28 | wrong | -0.9 | +0.00 (2026-02-28) | -0.9 | -0.45 | -0.61 (2026-10-31) | -0.29 |
+| 7 | TuckerCarlson | 2025-06-05 | It could also collapse our economy, as surging oil prices trigger unma | prices | 2026-02-28 — the war began 2026-02-28 | wrong | -0.9 | +0.00 (2026-02-28) | -0.9 | -0.45 | -0.31 (2026-10-31) | -0.59 |
 | 8 | TuckerCarlson | 2025-06-05 | An attack on Iran could very easily become a world war. We'd lose. | world-war | 2026-02-28 — the war began 2026-02-28 | **wrong** | -0.9 | not on the ledger | 1.0 | 0.6 | — |
 | 25 | TuckerCarlson | 2026-03-06 | how this war changes American politics forever | war | open | open | +0.0 | — | — | — | -0.75 (2026-09-01) | +0.75 |
 | 33 | TuckerCarlson | 2026-11-02 | the Trump administration may be within days of launching a nuclear str | nuclear-strike | 2026-11-07 — said 2026-11-02 + 5 days | **wrong** | -0.9 | not on the ledger | 1.0 | 0.6 | — |

@@ -1,7 +1,7 @@
 # Parallelogram — The Room — iran · 2026-10-29
-*2026-11-10T14:02:59 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
-**21 lines · Dia 21 · read z -0.26 · Lumens 42 tracked (14 measured, 7 unmeasured) · credulity moments: none · forecasts: 4 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
+**21 lines · Dia 21 · read z -0.26 · Lumens 43 tracked (14 measured, 7 unmeasured) · credulity moments: none · forecasts: 4 (0 came due: 0 right, 0 wrong; mean gap None, exposure None)**
 
 | # | who | date | quote | about · measure | touch | z | Dia (runs) | tier | lumens | lit words |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -15,8 +15,8 @@
 | 7 | fox | 2026-10-29 | brings you stories on the rising anti-Jewish prejudice across the U.S. and the w | shadow · shadow | F | — | 15 (15 15 15) | fluid | unmeasured | Antisemitism Exposed · rising anti-Jewish prejudice |
 | 8 | npr-pbs | 2026-10-29 | Rising gas prices drove much of the inflation increase | object · pump | M | -0.6 | 16 (16 16 26) | fluid | 0.666 | Rising gas prices drove much of the inflation increase |
 | 9 | npr-pbs | 2026-10-29 | oil prices above $100 a barrel, up from below $70 before the Iran war | object · barrel | T | -0.6 | 16 (16 16 26) | fluid | 0.84 | above $100 a barrel · up from below $70 before the Iran war |
-| 10 | npr-pbs | 2026-10-29 | prices also rose outside of fuel costs | object · prices | T | -0.6 | 16 (16 16 16) | fluid | 0.84 | prices also rose outside of fuel costs |
-| 11 | fox | 2026-10-29 | DoorDash is buying grocery delivery platform Instacart | object · prices | F | +0.0 | 15 (15 15 15) | fluid | 0.476 | DoorDash is buying grocery delivery platform Instacart |
+| 10 | npr-pbs | 2026-10-29 | prices also rose outside of fuel costs | object · prices | T | -0.6 | 16 (16 16 16) | fluid | 0.647 | prices also rose outside of fuel costs |
+| 11 | fox | 2026-10-29 | DoorDash is buying grocery delivery platform Instacart | object · prices | F | +0.0 | 15 (15 15 15) | fluid | 0.705 | DoorDash is buying grocery delivery platform Instacart |
 | 12 | fox | 2026-10-29 | Hegseth fires top Pentagon strategist accused of leaking classified Iran | object · war | T | +0.0 | 15 (15 15 15) | fluid | 0.212 | fires top Pentagon strategist · accused of leaking classified Iran |
 | 13 | free-press | 2026-10-29 | Why Another Iran Strike Looks Inevitable | object · war | F | -0.6 | 16 (16 16 16) | fluid | 0.714 | Another Iran Strike Looks Inevitable |
 | 14 | nyt | 2026-10-29 | Vance Proposes Restarting Peace Talks in Outreach to Iranian Official | object · war | O | +0.3 | 7 (7 7 16) | fluid | 0.0 | Proposes Restarting Peace Talks · suggested an immediate resumption of comprehensive talks |

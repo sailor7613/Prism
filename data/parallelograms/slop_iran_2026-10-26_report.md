@@ -1,5 +1,5 @@
 # Parallelogram — The Room — iran · 2026-10-26
-*2026-11-10T13:54:10 · claude-haiku-5-5 · grammar read fresh · relational test ×3 (median) · derived draft*
+*2026-11-11T20:51:29 · claude-haiku-5-5 · grammar reused · relational test ×3 (median) · derived draft*
 
 **39 lines · Dia 20 · read z -0.24 · Lumens 43 tracked (31 measured, 8 unmeasured) · credulity moments: none · forecasts: 11 (2 came due: 2 right, 0 wrong; mean gap 0.02, exposure 0.01)**
 
@@ -25,11 +25,11 @@
 | 17 | npr-pbs | 2026-10-26 | reports of a clash between Prime Minister Benjamin Netanyahu and the Israeli mil | object · war | T | +0.0 | 25 (15 25 25) | fluid | 0.188 | reports of a clash · Netanyahu and the Israeli military over Iran |
 | 18 | npr-pbs | 2026-10-26 | Delegations meet in Iran with the Middle East on edge over potential for renewed | object · war | T | +0.0 | 16 (16 16 16) | fluid | 0.21 | Delegations meet in Iran · potential for renewed fighting |
 | 19 | npr-pbs | 2026-10-26 | Iran says diplomacy remains possible but rejects U.S. demands for surrender | object · war | T | +0.0 | 16 (16 16 16) | fluid | 0.21 | diplomacy remains possible · rejects U.S. demands for surrender |
-| 20 | npr-pbs | 2026-10-26 | Trump promised to stop inflation | object · prices | T | -0.3 | 16 (16 16 16) | fluid | 0.722 | Trump promised to stop inflation |
+| 20 | npr-pbs | 2026-10-26 | Trump promised to stop inflation | object · prices | T | -0.3 | 16 (16 16 16) | fluid | 0.84 | Trump promised to stop inflation |
 | 21 | npr-pbs | 2026-10-26 | Now Republicans may pay the price in the midterm elections | object · vote | F | -0.3 | 25 (15 25 25) | fluid | 0.75 | Republicans may pay the price · midterm elections |
 | 22 | npr-pbs | 2026-10-26 | Voters blame Trump, pointing to the Republican president's tariff policies and t | shadow · shadow | F | — | 16 (16 16 16) | fluid | unmeasured | Voters blame Trump · the war he started with Iran |
 | 23 | nyt | 2026-10-25 | Ticket prices jumped after fuel costs spiked because of the war with Iran | object · pump | M | -0.6 | 16 (16 16 16) | fluid | 0.658 | fuel costs spiked · because of the war with Iran |
-| 24 | nyt | 2026-10-25 | even an end to the conflict will not bring fares back down quickly | object · prices | F | -0.6 | 16 (16 16 16) | fluid | 0.84 | will not bring fares back down quickly |
+| 24 | nyt | 2026-10-25 | even an end to the conflict will not bring fares back down quickly | object · prices | F | -0.6 | 16 (16 16 16) | fluid | 0.647 | will not bring fares back down quickly |
 | 25 | nyt | 2026-10-25 | Saudi Arabia Reopens Riyadh Airport Even as Houthis Threaten Further Strikes | object · war | T | -0.3 | 16 (16 16 16) | fluid | 0.462 | Houthis Threaten Further Strikes |
 | 26 | nyt | 2026-10-25 | launched several deadly attacks on the airport this month | object · lives | T | +0.0 | 16 (7 16 16) | fluid | unmeasured | several deadly attacks · this month |
 | 27 | fox | 2026-10-25 | Israel drills for surprise attack with massive military exercise | object · war | T | +0.0 | 16 (15 16 25) | fluid | 0.21 | Israel drills for surprise attack · massive military exercise |
@@ -57,7 +57,7 @@ A forecast that names a STATE of the war (a world war, a nuclear strike, no war)
 | 12 | nyt | 2026-10-26 | US and Israel are drawing up plans to renew attacks on Iran | war-resumes | open | **right so far** | -0.3 | Trump declares the deal over; US strikes widen; Iran shuts the strait (2026-07-08) | 0.0 | 0.0 | — |
 | 21 | npr-pbs | 2026-10-26 | Republicans may pay the price in the midterm elections | vote | 2026-11-03 | right | -0.3 | -0.26 (2026-11-03) | -0.04 | -0.01 | -0.26 (2026-11-03) | -0.04 |
 | 23 | nyt | 2026-10-25 | Airfares will not come back down quickly even if the conflict ends | pump | open | open | -0.6 | — | — | — | -0.72 (2026-11-09) | +0.12 |
-| 24 | nyt | 2026-10-25 | even an end to the conflict will not bring airfares back down quickly | prices | open | open | -0.6 | — | — | — | -0.61 (2026-10-31) | +0.01 |
+| 24 | nyt | 2026-10-25 | even an end to the conflict will not bring airfares back down quickly | prices | open | open | -0.6 | — | — | — | -0.31 (2026-10-31) | -0.29 |
 | 25 | nyt | 2026-10-25 | Houthis threaten further strikes on Riyadh airport | other | open | **unmeasured** | -0.3 | not on the ledger | — | — | — |
 | 29 | npr-pbs | 2026-10-25 | Iranians fear a possible return to all-out war | war-resumes | open | **right so far** | -0.3 | Trump declares the deal over; US strikes widen; Iran shuts the strait (2026-07-08) | 0.0 | 0.0 | — |
 | 33 | npr-pbs | 2026-10-25 | Trump vows to finish the job in Iran | war-ends | open | **wrong so far** | -0.6 | not on the ledger | 1.0 | 0.16 | — |
