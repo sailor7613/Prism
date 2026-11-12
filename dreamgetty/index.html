@@ -185,6 +185,8 @@
   #compass-hud.soft .cmp-bearing, #wave-hud.soft .cmp-bearing {
     opacity: 1; pointer-events: auto; }
   #wave-hud.soft .cmp-bearing.cb-dim { opacity: 0.45; }
+  /* WAVES RETIRED (2026-11-12): the tool and its hint are out of the villa. Delete this one rule to bring them back. */
+  #wave-hud, #wave-hint, #wave-hint.on { display: none !important; }
   /* the waves sit beside the compass: same shelf, same rules */
   /* The split between the dial and the waves — one number, three rules
      (the hud, its hint, and the phone override below) instead of three
@@ -1415,7 +1417,7 @@
        `max-height: 76vh` needs 122 + 0.76H <= H, i.e. a viewport at least
        508px tall. At 375px the drawer's own top edge sits at −32px and no
        amount of scrolling brings it back, because scrolling moves the content
-       inside the box and not the box. The `◂ compass` row and, on a place
+       inside the box and not the box. The `◂ binnacle` row and, on a place
        page, the title and `go there` were simply unreachable in landscape —
        on the orientation a phone is most likely to be held for a 3D scene. */
     #nav-menu { bottom: 104px; max-height: calc(100vh - 124px); }
@@ -1473,7 +1475,11 @@
      HARD — click, and the speech menu unfolds as the same floating sprite
      pills: the Talks series, your profile, the docent's address.
      A small dot on the waves when a talk is waiting unheard. -->
-<div id="wave-hud" aria-label="the Waves — hover or hold for the voices, tap for the talks">
+<!-- THE WAVES ARE RETIRED (2026-11-12, Sailor: "Do we need it any more? … when we do come back around to a
+     social feed, its interface will probably be within the M3P"). The drawing, the hint and the feed panel are
+     still here and still wired, but hidden by one rule in the stylesheet (search WAVES RETIRED). Nothing in the
+     villa opens the feed now. -->
+<div id="wave-hud" aria-label="the Waves — retired">
   <div id="wave-ring"></div>
   <img id="wave-img" src="art/icons/waves.png" alt=""
        onerror="this.style.display='none';document.getElementById('wave-fallback').style.display='block'">
@@ -1502,7 +1508,9 @@
 <div id="wave-hint">the villa's voices — click the waves</div>
 
 <!-- no title attribute: the browser tooltip photobombed the ring -->
-<div id="compass-hud" aria-label="the Compass — hover or hold for your bearings, tap to unfold">
+<!-- THE BINNACLE (2026-11-11): the dial below is hidden and src/js/villa-binnacle.js draws the binnacle in its place.
+     The element keeps its id: the walk, the summons glow and the layout all hold it by that name. -->
+<div id="compass-hud" aria-label="the binnacle — tap for the courses">
   <div id="compass-dial">
     <div id="compass-ring"></div>
     <img id="compass-img" src="art/icons/compass.png" alt=""
@@ -1530,31 +1538,23 @@
        Icons: every row is an emoji until a hand-drawn icon exists at
        art/icons/<key>.png — the image simply takes over when present. -->
   <div class="cmp-view open" id="cmp-root">
-    <button class="ui-btn cmp-row" onclick="compassShow('places')" title="Where you can go — and, for each place, who is standing there and what has been said there">🧭 Places&nbsp;▸</button>
-    <button class="ui-btn cmp-row" onclick="compassShow('company')" title="Who lives here — tap a resident to lock the camera on them">🎭 Company&nbsp;▸</button>
-    <button class="ui-btn" onclick="openMeet()" title="Pick someone and pick a place — where they are, where you are, an instrument, an artwork, or another resident">🤝 Meet…</button>
-    <button class="ui-btn" id="visitor-btn" onclick="toggleVisitor()" title="Take your body's wheel — WASD or the arrows walk, click the ground to go there. Patrol is what your body does when you're away (RULED 2026-08-07)">🐾 Walk</button>
-    <button class="ui-btn" id="tour-btn" onclick="tourBegin()" title="Down to the sand, where everyone gathers, and Ted shows you how the place works — the Compass, the places, how word is left. About five minutes; Escape leaves it any time">🐾 walk with Ted</button>
-    <button class="ui-btn" id="ted-dock-btn" onclick="tedDockToggle()" title="Ask Ted to show you something — a place or an instrument — and he takes you there and explains it">🐺 ask Ted</button>
-    <div class="nav-menu-label">You</div>
-    <button class="ui-btn" id="identity-btn" onclick="openIdentityPanel()">⚿ identity</button>
-    <button class="ui-btn" id="ted-photo-btn" onclick="toggleTedPhoto()" title="Ted photo mode — click the ground to place him; he faces you and holds the pose while you frame the shot">📷 Ted</button>
-    <div class="nav-menu-label">Ways of looking</div>
-    <button class="ui-btn" id="skylight-btn" onclick="toggleMode()">Skylight</button>
-    <button class="ui-btn" onclick="toggleDiatribe()">Graphmap</button>
-    <button class="ui-btn" id="orbit-btn" onclick="toggleOrbit()">Orbit: Off</button>
-    <button class="ui-btn" id="pierce-btn" onclick="toggleLivingPierce()" title="The living pierce — residents show through walls, roofs and terrain while they are near you. What you cannot command, you can always see. (P)">◈ Pierce · on</button>
-    <div class="nav-menu-label">Instruments</div>
-    <button class="ui-btn" id="nav-easel" onclick="navTo('Easel')" title="The easel — the case studies, on parchment">🖼 The Easel</button>
-    <button class="ui-btn" id="nav-tracker" onclick="pedestalShow('tracker'); navTo('Tracker')" title="The Supply Shock Tracker — where America’s imported oil comes from, and what that does to the dollar, read plainly on the main pedestal">◉ The Tracker</button>
-    <button class="ui-btn" id="nav-graphmap" onclick="pedestalShow('graphmap'); navTo('Graphmap')" title="The graphmap — the field where a trace stands">✳ The Graphmap</button>
-    <button class="ui-btn" id="nav-object" onclick="showObject()" title="The Object — the political economy on the pedestal, its light through the prism, onto the pool">◍ The Object</button>
-    <button class="ui-btn" id="nav-g4" onclick="navTo('iMac G4')" title="The G4 — the villa's one computer">🖥 The G4</button>
+    <!-- THE BINNACLE'S PANEL (2026-11-11), and since 2026-11-12 the whole of this menu. Built by
+         src/js/villa-binnacle.js: the three keys, the courses, every other place, and the view keys.
+         THE OLD COMPASS ROWS ARE GONE (2026-11-12, Sailor: "delete whatever doesn't make sense any
+         longer, and integrate what remains"). Taken out: Places and Company (their own views), Meet,
+         walk with Ted, identity, the Tracker, the second Graphmap, and the rows the courses already
+         cover (the Object, the G4). Carried into the panel: Walk, ask Ted, Ted photo, day/night,
+         Orbit, Pierce, and the Graphmap and the Easel as courses.
+         The six empty elements below are not rows. Six functions write their state onto a button by
+         its id without checking it is there; these keep those ids alive. Nothing shows. -->
+    <div id="bn-panel"></div>
+    <span id="visitor-btn" hidden></span><span id="identity-btn" hidden></span><span id="ted-photo-btn" hidden></span>
+    <span id="skylight-btn" hidden></span><span id="orbit-btn" hidden></span><span id="pierce-btn" hidden></span>
   </div>
   <div class="cmp-view" id="cmp-places"></div>
   <div class="cmp-view" id="cmp-place"></div>
   <div class="cmp-view" id="cmp-company">
-    <button class="ui-btn cmp-back" onclick="compassShow('root')">◂ compass</button>
+    <button class="ui-btn cmp-back" onclick="compassShow('root')">◂ binnacle</button>
   <button class="ui-btn" id="trout-btn" onclick="tapResident('trout')" title="Trout Fish — tap to lock the camera on him. Arrives — in from the bay, up the river mouth, one leap through the reflection pool, then floating at eye level">🐟 Trout</button>
   <button class="ui-btn" id="seal-btn" onclick="tapResident('seal')" title="Matt Mondanile's Seal — tap to lock the camera on him. ashore from the surf, lounging on the beach, roaming up to the pool and back">🦭 Seal</button>
   <button class="ui-btn" id="y2k-btn" onclick="tapResident('y2k')" title="Y2K — tap to lock the camera on him. A Siberian husky, a liiitle bigger than Ted. Patrols the grounds on his own schedule">🐕 Y2K</button>
@@ -1764,7 +1764,7 @@
 <!-- The same sentence for a finger. `scroll to zoom` and `hover` are not
      things a phone has, and the hold gesture is not discoverable without
      being told once. Swapped by the pointer, not by the width. -->
-<div id="touch-hint-coarse">drag to look · pinch to zoom · tap to focus · hold the compass for your bearings</div>
+<div id="touch-hint-coarse">drag to look · pinch to zoom · tap to focus · tap the binnacle for a course</div>
 <div id="ted-photo-hint">ted photo · click the ground to place him — he faces you, then holds his gaze<br>click ted to sit ⇄ stand · drag orbits · ⇧drag pans · scroll zooms · H hides the chrome · esc exits</div>
 <div id="story-hud">
   <div class="hud-label">Prism Trace</div>
@@ -5019,14 +5019,15 @@ const foam = (function buildFoamRibbon() {
 // uLight lowers it with the room (the Object's nocturne).
 const riverMat = new THREE.ShaderMaterial({
   transparent: true, depthWrite: false, side: THREE.DoubleSide,
-  uniforms: { uTime: { value: 0 }, uLight: { value: 1 } },
+  uniforms: { uTime: { value: 0 }, uLight: { value: 1 }, uFilm: { value: 1 } },   // uFilm (11-11): the pool's film, lightly, on the river too; 0 is the river as it was
   vertexShader: 'varying vec2 vUv; varying vec3 vW; void main(){ vUv = uv; vec4 w = modelMatrix * vec4(position, 1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }',
   fragmentShader: [
-    'varying vec2 vUv; varying vec3 vW; uniform float uTime; uniform float uLight;',
+    'varying vec2 vUv; varying vec3 vW; uniform float uTime; uniform float uLight; uniform float uFilm;',
     'float h2(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }',
     'float n2(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);',
     '  return mix(mix(h2(i), h2(i + vec2(1.0, 0.0)), f.x), mix(h2(i + vec2(0.0, 1.0)), h2(i + vec2(1.0, 1.0)), f.x), f.y); }',
     'float fbm(vec2 p){ return n2(p) * 0.55 + n2(p * 2.07 + 11.3) * 0.30 + n2(p * 4.31 + 5.1) * 0.15; }',
+    'vec3 film(float t){ return 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); }',
     'void main(){',
     '  float c = abs(vUv.x - 0.5) * 2.0;',                                   // 0 mid-stream … 1 at the bank
     '  float along = vUv.y * 2.0;',                                          // metres down the valley
@@ -5042,6 +5043,7 @@ const riverMat = new THREE.ShaderMaterial({
     '  vec3 V = normalize(cameraPosition - vW); float fr = pow(1.0 - clamp(abs(V.y), 0.0, 1.0), 3.0);',
     '  col = mix(col, vec3(0.60, 0.73, 0.84), fr * 0.55);',                  // the sky, at a low angle
     '  col += vec3(0.72, 0.86, 0.90) * (ridge * 0.13 + glint * (0.13 + 0.45 * fr));',
+    '  col = mix(col, mix(film(a1 * 0.55 + along * 0.012 + uTime * 0.010), vec3(0.965, 0.945, 0.905), 0.45), (0.04 + 0.20 * fr + 0.10 * glint) * uFilm);',   // the pool\'s film, lightly (11-11)
     '  float foam = smoothstep(0.80, 0.96, c + (a2 - 0.5) * 0.26);',
     '  col = mix(col, vec3(0.86, 0.92, 0.93), foam * 0.72);',                // bank foam, broken and drifting
     '  float alpha = 0.88 * (1.0 - smoothstep(0.92, 1.0, c));',              // the edge feathers into the ground
@@ -6080,15 +6082,90 @@ const rimMat = stoneLightMat;
 });
 
 // Pool water surface — reflective
-const poolWater = new THREE.Mesh(
-  new THREE.PlaneGeometry(poolW - 0.2, poolD - 0.2),
-  new THREE.MeshStandardMaterial({
-    color: 0x1a3a5a, roughness: 0.05, metalness: 0.6,
-    transparent: true, opacity: 0.7,
-  })
-);
+// THE POOL'S WATER IS A FILM (2026-11-11, Sailor: "can we make the water more like the diagnostic
+// boundaries? … more fluid on the surface, maybe with our iridescent motif"). It was one flat tinted
+// plane. It is now a membrane stretched in the pool's frame, the way a boundary is stretched in the
+// map: held still at its edges, rising and falling slowly in the middle, with small ripples drifting
+// over the swell. The Venus's thin film rides the swell, strongest where you see the water at a low
+// angle, and from underneath the film is most of what there is. The moon and the two pool lamps
+// leave glints on it. It does not flow: the river runs, the pool holds (the 07-30 ruling stands).
+// Under the map the film is held back, so the map's own four colours stay the ones you read.
+// Knobs, all uniforms on poolWater.material: uFilm (how much film, 0 turns it off), uSwell (height
+// of the swell in metres), uLight (follows the room), uMapOn (hold the film back under the map).
+const POOL_SWELL_GLSL = [
+  'float swell(vec2 p, float t){',
+  '  float a = sin(p.x * 0.95 + t * 0.33 + 1.3 * sin(p.y * 0.38 - t * 0.21));',
+  '  float b = sin(p.y * 0.72 - t * 0.27 + 1.1 * sin(p.x * 0.55 + t * 0.17));',
+  '  float c = sin((p.x + p.y) * 0.41 + t * 0.19);',
+  '  return (a + b) * 0.42 + c * 0.16; }',
+  'float held(vec2 p, vec2 hf){ return smoothstep(0.0, 0.7, min(hf.x - abs(p.x), hf.y - abs(p.y))); }',   // 0 at the frame, 1 in open water
+].join('\n');
+const poolWaterMat = new THREE.ShaderMaterial({
+  transparent: true, side: THREE.DoubleSide,
+  uniforms: {
+    uT: { value: 0 }, uLight: { value: 1 }, uFilm: { value: 1 }, uSwell: { value: 0.028 }, uMapOn: { value: 0 },
+    uColor: { value: new THREE.Color(0x1a3a5a) },
+    uHalf: { value: new THREE.Vector2((poolW - 0.2) / 2, (poolD - 0.2) / 2) },
+    uMap: { value: new THREE.Vector3(0, 0.5, 2.5) },             // the map's centre on the plane, and its half-width
+    uMoon: { value: lights.moonBeam.position.clone().normalize() },
+    uL1: { value: new THREE.Vector3(-4.3, BUILDING_Y + 1.9, WD + 12 + poolD / 2 + 0.6) },
+    uL2: { value: new THREE.Vector3( 4.3, BUILDING_Y + 1.9, WD + 12 + poolD / 2 + 0.6) },
+    uLampOn: { value: 1 },
+  },
+  vertexShader: [
+    'varying vec2 vP; varying vec3 vW; uniform float uT; uniform float uSwell; uniform vec2 uHalf;',
+    POOL_SWELL_GLSL,
+    'void main(){ vP = position.xy; vec3 p = position;',
+    '  p.z += uSwell * swell(vP, uT) * held(vP, uHalf);',
+    '  vec4 w = modelMatrix * vec4(p, 1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }',
+  ].join('\n'),
+  fragmentShader: [
+    'varying vec2 vP; varying vec3 vW;',
+    'uniform float uT; uniform float uLight; uniform float uFilm; uniform float uMapOn; uniform float uLampOn;',
+    'uniform vec3 uColor; uniform vec2 uHalf; uniform vec3 uMap; uniform vec3 uMoon; uniform vec3 uL1; uniform vec3 uL2;',
+    'float h2(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }',
+    'float n2(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);',
+    '  return mix(mix(h2(i), h2(i + vec2(1.0, 0.0)), f.x), mix(h2(i + vec2(0.0, 1.0)), h2(i + vec2(1.0, 1.0)), f.x), f.y); }',
+    'float fbm(vec2 p){ return n2(p) * 0.55 + n2(p * 2.07 + 11.3) * 0.30 + n2(p * 4.31 + 5.1) * 0.15; }',
+    POOL_SWELL_GLSL,
+    'vec3 film(float t){ return 0.5 + 0.5 * cos(6.2831853 * t * 1.3 / vec3(0.65, 0.532, 0.473)); }',
+    'const vec3 CREAM = vec3(0.965, 0.945, 0.905);',
+    // the surface: the slow swell, and two sizes of ripple drifting over it
+    'float surf(vec2 p){ return swell(p, uT) * held(p, uHalf)',
+    '  + (fbm(p * 2.6 + vec2(uT * 0.045, -uT * 0.030)) - 0.5) * 0.55',
+    '  + (n2(p * 6.3 - vec2(uT * 0.060, uT * 0.040)) - 0.5) * 0.07; }',
+    'float glint(vec3 L, vec3 N, vec3 V, float k){ return pow(max(dot(reflect(-L, N), V), 0.0), k); }',
+    'void main(){',
+    '  vec2 p = vP; float e = 0.07;',
+    '  float h = surf(p), hx = (surf(p + vec2(e, 0.0)) - h) / e, hy = (surf(p + vec2(0.0, e)) - h) / e;',
+    '  vec3 N = normalize(vec3(-hx * 0.075, 1.0, hy * 0.075));',               // the plane\'s y runs toward the house
+    '  vec3 V = normalize(cameraPosition - vW);',
+    '  float below = step(V.y, 0.0);',                                        // the eye is under the water
+    '  float ndv = clamp(abs(dot(N, V)), 0.0, 1.0), fr = pow(1.0 - ndv, 3.0);',
+    '  float th = h * 0.27 + (1.0 - ndv) * 0.40 + p.y * 0.030 + uT * 0.012;',  // the film rides the swell and turns with the angle
+    '  vec3 f = mix(film(th), CREAM, 0.44);',
+    '  vec3 col = mix(uColor * 0.55, uColor * 1.25 + vec3(0.02, 0.04, 0.05), clamp(0.5 + h * 0.30, 0.0, 1.0));',
+    '  col = mix(col, vec3(0.55, 0.68, 0.82), fr * 0.50) * uLight;',         // the sky, at a low angle
+    '  vec2 dm = abs(p - uMap.xy) - uMap.z;',
+    '  float inMap = (1.0 - smoothstep(-0.5, 0.25, max(dm.x, dm.y))) * uMapOn;',
+    '  float amt = (0.13 + 0.40 * fr) * mix(1.0, 0.35, inMap) * uFilm;',
+    '  col = mix(col, f * (0.42 + 0.58 * uLight), amt);',
+    '  float keep = 0.40 + 0.60 * uLight;',
+    '  col += vec3(0.85, 0.90, 1.00) * glint(uMoon, N, V, 110.0) * 0.75 * keep;',                 // the moon
+    '  vec3 a1 = uL1 - vW, a2 = uL2 - vW;',                                                    // the two pool lamps
+    '  col += vec3(1.00, 0.78, 0.50) * uLampOn * 0.55 * (glint(normalize(a1), N, V, 46.0) / (1.0 + dot(a1, a1) * 0.02)',
+    '       + glint(normalize(a2), N, V, 46.0) / (1.0 + dot(a2, a2) * 0.02));',
+    '  float edge = min(uHalf.x - abs(p.x), uHalf.y - abs(p.y));',
+    '  col += CREAM * 0.09 * (1.0 - smoothstep(0.0, 0.07, edge)) * keep;',   // the line where it meets the stone
+    '  float alpha = 0.82;',
+    '  if (below > 0.5) { col = mix(col, f * (0.50 + 0.50 * uLight), 0.55 * uFilm); alpha = 0.50; }',   // from underneath: the film
+    '  gl_FragColor = vec4(col, alpha);',
+    '}'].join('\n'),
+});
+poolWaterMat.color = poolWaterMat.uniforms.uColor.value;     // the day/night change eases material.color; this is that colour
+const poolWater = new THREE.Mesh(new THREE.PlaneGeometry(poolW - 0.2, poolD - 0.2, 40, 96), poolWaterMat);
 poolWater.rotation.x = -Math.PI / 2;
-poolWater.position.set(0, BUILDING_Y + 0.16, poolZ);
+poolWater.position.set(0, BUILDING_Y + 0.19, poolZ);   // the basin's top is at +0.15: the swell (±0.028) must stay above it
 scene.add(poolWater);
 
 
@@ -11870,7 +11947,7 @@ function compassRenderTalks() {
   w.innerHTML = '';
   const back = document.createElement('button');
   back.className = 'ui-btn cmp-back';
-  back.textContent = '◂ compass';
+  back.textContent = '◂ binnacle';
   back.onclick = function () { compassShow('root'); };
   w.appendChild(back);
 
@@ -13974,7 +14051,13 @@ window.addEventListener('keydown', function (e) {
 // tick the feed lands. The mark is now written when the banner is actually
 // SHOWN, which is the considerTroutPrompt pattern: poll patiently, spend
 // the one offer once, never twice.
+const TOUR_RETIRED = true;
 function considerTourStart(tries) {
+  // RETIRED (2026-11-12). The walk teaches the Compass, the Places row and how word is left, and none
+  // of the three is in the villa's interface any more. A first visitor would be told to press rows
+  // that are not there. It is neither played nor offered until it is rewritten for the binnacle and
+  // the Object. tourBegin() still works if called by hand. Ted's errands (ask Ted) are not affected.
+  if (TOUR_RETIRED) return;
   tries = (tries == null) ? 200 : tries;
   if (tourSeen()) return;                   // once per PERSON, ever — see tourSeen
   if (tourState.on) return;
@@ -19126,6 +19209,7 @@ function goToPlace(key) {
   approach.endLook.set(pl.look[0], pl.look[1], pl.look[2]);
   approach.endPos.set(pl.look[0] + pl.off[0], pl.look[1] + pl.off[1], pl.look[2] + pl.off[2]);
   autoOrbit = false;
+  if (typeof flightMark === 'function') flightMark(pl.label, { place: key });   // flown (11-11)
   if (typeof meetState !== 'undefined') meetState.label = null;
   showNavLabel(pl.label);
   toggleNavMenu();
@@ -19924,6 +20008,11 @@ function goToPlaceFromRing(key) {
 // synthesises mouseenter on the first tap and never fires the matching
 // mouseleave, so the class stuck — and `#compass-hud.soft::before` is a
 // 400px invisible disc, which then ate taps across most of the screen.
+// NO HOVER, NO HOLD (2026-11-11, Sailor: "hover and click functions clash and the hover drops out").
+// Each tool did one thing on hover and another on click, and since both moved to the bottom-left corner
+// each one's invisible hover disc lay over the other tool. Both rings are retired: a tap opens, and that
+// is all either tool does. The ring code below is left standing; nothing calls it.
+const HUD_NO_SOFT = true;
 function hudIsCoarse() {
   try { return window.matchMedia('(hover: none), (pointer: coarse)').matches; }
   catch (e) { return false; }
@@ -19955,6 +20044,7 @@ function hudKeepPillsOnScreen(ring) {
 // hold = soft, tap = unfold — wired once, for both huds.
 function hudWireHold(hud, begin, end) {
   if (!hud) return;
+  if (HUD_NO_SOFT) return;
   let holdTimer = null;
   const clearHold = function () { if (holdTimer) { clearTimeout(holdTimer); holdTimer = null; } };
 
@@ -20218,7 +20308,7 @@ function waveUnheardTick() {
   if (!hud) return;
   let leaveTimer = null;
   hud.addEventListener('mouseenter', function () {
-    if (hudIsCoarse()) return;              // a synthesised hover is not a hover
+    if (HUD_NO_SOFT || hudIsCoarse()) return;              // a synthesised hover is not a hover
     if (leaveTimer) { clearTimeout(leaveTimer); leaveTimer = null; }
     waveSoftBegin();
   });
@@ -20268,7 +20358,7 @@ function waveUnheardTick() {
   // disc's rim for 200ms is passing, not leaving.
   let softLeaveTimer = null;
   hud.addEventListener('mouseenter', function () {
-    if (hudIsCoarse()) return;              // see hudWireHold — iOS fakes this one
+    if (HUD_NO_SOFT || hudIsCoarse()) return;              // see hudWireHold — iOS fakes this one
     if (softLeaveTimer) { clearTimeout(softLeaveTimer); softLeaveTimer = null; }
     compassSoftBegin();
   });
@@ -20306,7 +20396,7 @@ function compassRenderPlaces() {
   w.innerHTML = '';
   const back = document.createElement('button');
   back.className = 'ui-btn cmp-back';
-  back.textContent = '◂ compass';
+  back.textContent = '◂ binnacle';
   back.onclick = function () { compassShow('root'); };
   w.appendChild(back);
   PLACE_REGISTRY.filter(compassPlaceKnown).forEach(function (p) {
@@ -22091,6 +22181,7 @@ function updateCamera() {
   // not assumed. Now the eye IS at the chair.
   if (typeof obsCameraTick === 'function' && obsCameraTick()) return;
   if (typeof parallaxTick === 'function') parallaxTick();
+  if (typeof villaFlightIdle === 'function') villaFlightIdle();   // the binnacle (11-11): the slow turn after a landing, and AUTO — src/js/villa-binnacle.js
   // Screen-locked: hold camera steady on the G4 screen, no orbit
   if (g4State.screenLocked && !approach.active) {
     camera.lookAt(camTarget);
@@ -22135,6 +22226,10 @@ function updateCamera() {
     return;
   }
   if (approach.active) {
+    // A MARKED MOVE IS FLOWN, NOT CUT (2026-11-11, Sailor: "curated, pre-programmed flight patterns").
+    // flightMark() at the call site says so; flightTick flies the curve, banks it, and lands it. An
+    // unmarked move (a talk's glide, the walk) falls through to the straight line below, as before.
+    if (typeof flightTick === 'function' && flightTick()) return;
     if (approach.startTime < 0) approach.startTime = clock.getElapsedTime();
     const elapsed = clock.getElapsedTime() - approach.startTime;
     approach.progress = Math.min(elapsed / approach.duration, 1);
@@ -22189,6 +22284,7 @@ function travelTo(name) {
   approach.endPos.copy(t.pos);
   approach.endLook.copy(t.look);
   autoOrbit = false;
+  if (typeof flightMark === 'function') flightMark(t.name);   // flown (11-11)
 }
 
 // ============================================================
@@ -22773,6 +22869,7 @@ function focusOn(target) {
   approach.endPos.copy(target.camPos);
   approach.endLook.copy(target.lookAt);
   autoOrbit = false;
+  if (typeof flightMark === 'function') flightMark(target.name);   // flown (11-11)
   showInfoCard(target.name, target.dynamic ? 'Following · drag to orbit · click to release' : 'Click empty space to release');
   // Show G4 panel when focusing on iMac
   if (target.name === 'iMac G4' && parchState.loadedTrace) {
@@ -22807,6 +22904,7 @@ function releaseFocus() {
   approach.startLook.copy(camTarget);
   approach.endPos.set(5, 12, 38);
   approach.endLook.set(0, GRAPH_CENTER_Y, 0);
+  if (typeof flightMark === 'function') flightMark(null);   // flown, but letting go is not a course (11-11)
   updateNavBar();
 }
 
@@ -23811,6 +23909,20 @@ function cancelVenusNocturne() {
 }
 
 function updateVenusNocturne() {
+  // THE STANDING NIGHT (2026-11-11): the room is already down, so there is nothing for her to dim.
+  // Her own three lights are simply on, at the strength the darker room needs.
+  if (standingNight()) {
+    if (venusNocturne.saved) cancelVenusNocturne();
+    if (venusNocturne.stand == null) venusNocturne.stand = venusSpot.intensity;
+    venusSpot.intensity = Math.max(venusNocturne.stand, VENUS_NIGHT.spot);
+    venusRim.intensity = VENUS_NIGHT.rim;
+    venusUplight.intensity = VENUS_NIGHT.up;
+    return;
+  }
+  if (venusNocturne.stand != null) {               // day came back: her lights as they were
+    venusSpot.intensity = venusNocturne.stand; venusNocturne.stand = null;
+    venusRim.intensity = 0.12; venusUplight.intensity = 0;
+  }
   const focused = !!(activeFocus && activeFocus.name.indexOf('Venus') === 0);
   if (focused && !venusNocturne.since) venusNocturne.since = Date.now();
   if (!focused) venusNocturne.since = 0;
@@ -23854,6 +23966,19 @@ function updateVenusNocturne() {
 // else on the pedestal) and the room comes back exactly as found. It waits its turn behind hers.
 const objectNocturne = { dim: 0, since: 0, saved: null, DELAY: 2500 };
 
+// ============================================================
+// THE STANDING NIGHT (2026-11-11, Sailor: "let's live in this darker mode all the time … this is way nicer")
+// ============================================================
+// The Object's nocturne was something you had to hold focus on the Object to get. It is now how the
+// villa stands at night, from the first frame: the room's lights down, the exposure down, and the
+// Object, the prism, the map, the Venus and the lamps carrying the light. Nothing has to be focused.
+// By day (the Skylight button) nothing here applies and both nocturnes work as they always did.
+// One switch turns it off: STANDING_NIGHT = false, or ?night=old in the address.
+let STANDING_NIGHT = true;
+try { if (new URLSearchParams(location.search).get('night') === 'old') STANDING_NIGHT = false; } catch (e) {}
+const VENUS_NIGHT = { spot: 3.0, rim: 1.5, up: 1.2 };
+function standingNight() { return STANDING_NIGHT && isDarkMode && !modeTransition; }
+
 function cancelObjectNocturne() {
   if (objectNocturne.saved) {
     const s = objectNocturne.saved;
@@ -23870,10 +23995,11 @@ function cancelObjectNocturne() {
 }
 
 function updateObjectNocturne() {
+  const standing = standingNight();
   const focused = !!(activeFocus && activeFocus.name === 'Object' && pedestalMode === 'object') && !venusNocturne.saved;
   if (focused && !objectNocturne.since) objectNocturne.since = Date.now();
   if (!focused) objectNocturne.since = 0;
-  const want = (focused && Date.now() - objectNocturne.since > objectNocturne.DELAY) ? 1 : 0;
+  const want = (standing || (focused && Date.now() - objectNocturne.since > objectNocturne.DELAY)) ? 1 : 0;
 
   if (want > 0 && !objectNocturne.saved) {
     objectNocturne.saved = {
@@ -23881,6 +24007,9 @@ function updateObjectNocturne() {
       sun: lights.sun.intensity, spotMain: lights.spotMain.intensity,
       spotWarm: lights.spotWarm.intensity, exp: renderer.toneMappingExposure,
     };
+    // the first night of a visit is already night: no fade down from a brighter room on arrival
+    if (standing && !objectNocturne.stood) objectNocturne.dim = 1;
+    objectNocturne.stood = true;
   }
   if (!objectNocturne.saved) return;
 
@@ -29223,6 +29352,7 @@ function animate() {
   // Venus nocturne — dims the villa after 15s of held focus on her
   updateVenusNocturne();
   updateObjectNocturne();   // (11-10) and for the Object's light
+  updateVillaLamps(clock.getElapsedTime());   // (11-11) the lamps of the standing night
 
   // Ocean waves
   animateOcean(t);
@@ -29333,7 +29463,9 @@ function animate() {
   zebra.rotation.y = Math.PI * 0.6 + Math.sin(t * 0.15) * 0.02;
 
   // Pool water ripple
-  poolWater.position.y = BUILDING_Y + 0.16 + Math.sin(t * 0.7) * 0.005;
+  poolWaterMat.uniforms.uT.value = t;
+  poolWaterMat.uniforms.uLight.value = 1 - 0.6 * objectNocturne.dim;
+  try { poolWaterMat.uniforms.uMapOn.value = (pedestalMode === 'object') ? 1 : 0; poolWaterMat.uniforms.uLampOn.value = villaLamps.level; } catch (e) {}
 
   // Ted Turner patrol
   updateTedTurner(t);
@@ -29536,6 +29668,62 @@ function showObject() {
   if (camera.aspect < 0.85) { f.camPos.set(13, BUILDING_Y + 17, poolZ + 27); f.lookAt.set(0, BUILDING_Y + 1.4, poolZ - 7.5); }
   else { f.camPos.set(18.5, BUILDING_Y + 9.5, poolZ + 11.5); f.lookAt.set(0, BUILDING_Y + 0.9, poolZ - 6); }
   if (activeFocus !== f) navTo('Object');
+}
+
+// ============================================================
+// THE LAMPS (2026-11-11, Sailor: "maybe we add a few lamps")
+// ============================================================
+// Six standing lamps for the standing night: a thin bronze stem and a warm globe. Four stand in the
+// corners of the Galleria, two shorter ones at the seaward end of the pool, either side of the stand
+// that holds its book. Each throws a small pool of warm light and nothing more — the room stays dark.
+// They are lit at night and out by day. On the low tier the globes glow but cast no light, because
+// every light is paid for on every surface. To move one or add one, edit LAMP_SPOTS:
+// x, z, height of the stem, strength of the light, how far it reaches.
+const LAMP_SPOTS = [
+  [-8.5, -6.6, 2.7, 2.2, 12], [8.5, -6.6, 2.7, 2.2, 12],
+  [-8.5,  6.5, 2.7, 2.2, 12], [8.5,  6.5, 2.7, 2.2, 12],
+  [-4.3, poolZ + poolD / 2 + 0.6, 1.5, 1.5, 9], [4.3, poolZ + poolD / 2 + 0.6, 1.5, 1.5, 9],
+];
+const villaLamps = { list: [], level: isDarkMode ? 1 : 0, group: new THREE.Group() };
+(function () {
+  const c = document.createElement('canvas'); c.width = c.height = 64;
+  const g = c.getContext('2d'), gr = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+  gr.addColorStop(0, 'rgba(255,232,190,1)'); gr.addColorStop(0.25, 'rgba(255,210,145,0.5)'); gr.addColorStop(1, 'rgba(255,186,105,0)');
+  g.fillStyle = gr; g.fillRect(0, 0, 64, 64);
+  const haloTex = new THREE.CanvasTexture(c);
+  const bronze = new THREE.MeshStandardMaterial({ color: 0x4a3920, roughness: 0.42, metalness: 0.75 });
+  const lit = QUALITY.tier !== 'low';
+  LAMP_SPOTS.forEach(function (s) {
+    const H = s[2], lamp = new THREE.Group();
+    lamp.position.set(s[0], BUILDING_Y, s[1]);
+    const add = function (geo, mat, y) { const m = new THREE.Mesh(geo, mat); m.position.y = y; lamp.add(m); return m; };
+    add(new THREE.CylinderGeometry(0.30, 0.34, 0.06, 20), bronze, 0.03);            // the foot
+    add(new THREE.CylinderGeometry(0.06, 0.16, 0.24, 12), bronze, 0.18);
+    add(new THREE.CylinderGeometry(0.026, 0.034, H, 8), bronze, 0.06 + H / 2);      // the stem
+    add(new THREE.CylinderGeometry(0.13, 0.045, 0.1, 14), bronze, H + 0.11);        // the cup
+    const globe = add(new THREE.SphereGeometry(0.23, 22, 14),
+      new THREE.MeshBasicMaterial({ color: 0xffdcaa, toneMapped: false }), H + 0.37);
+    const halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: haloTex, transparent: true, opacity: 0.5,
+      blending: THREE.AdditiveBlending, depthWrite: false }));
+    halo.scale.setScalar(2.4); halo.position.y = H + 0.37; lamp.add(halo);
+    let light = null;
+    if (lit) { light = new THREE.PointLight(0xffc27e, s[3], s[4], 1.7); light.position.y = H + 0.45; lamp.add(light); }
+    villaLamps.group.add(lamp);
+    villaLamps.list.push({ globe: globe, halo: halo, light: light, power: s[3], seed: Math.random() * 6.28 });
+  });
+  scene.add(villaLamps.group);
+})();
+const LAMP_ON = new THREE.Color(0xffdcaa), LAMP_OFF = new THREE.Color(0x8a7a62);
+function updateVillaLamps(t) {
+  const want = isDarkMode ? 1 : 0;
+  villaLamps.level += (want - villaLamps.level) * 0.03;
+  const k = villaLamps.level;
+  villaLamps.list.forEach(function (l) {
+    const breath = 1 + 0.025 * Math.sin(t * 0.7 + l.seed);     // they are not perfectly steady
+    if (l.light) l.light.intensity = l.power * k * breath;
+    l.halo.material.opacity = 0.5 * k * breath;
+    l.globe.material.color.copy(LAMP_OFF).lerp(LAMP_ON, k);
+  });
 }
 
 updateCamera();
@@ -29952,5 +30140,6 @@ console.log('[Dream Getty v6] Story sequencer ready. G4 STORY tab wired.');
 })();
 </script>
 <script src="dream-news.js"></script>  <!-- DREAM NEWS: the desk in the Plaza; dormant without ?show= (2026-10-18) -->
+<script src="../src/js/villa-binnacle.js?v=7"></script>  <!-- THE BINNACLE AND THE FLIGHTS (2026-11-11): the nav tool, and every move flown as a curve -->
 </body>
 </html>
