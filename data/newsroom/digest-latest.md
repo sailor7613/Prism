@@ -1,12 +1,12 @@
-# Newsroom digest — 2026-11-11
+# Newsroom digest — 2026-11-12
 
-Register: 159 objects · this scan: 0 new, 2 seen again, 0 returned.
+Register: 162 objects · this scan: 0 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **DOJ Seeks To Overturn Steve Bannon Conviction** — ruling · ruled · holder: the Justice Department · formed 2026-11-06 · 14 outlets (peak 17) · `obj_thejusti_bannon-conviction-doj-overturn` · silent 5d after 2 scans
+- none today
 
 ## Returned after a break
 - none today
