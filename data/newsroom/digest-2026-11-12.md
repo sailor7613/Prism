@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-11-12
 
-Register: 159 objects · this scan: 0 new, 3 seen again, 0 returned.
+Register: 162 objects · this scan: 3 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (1)
+- **Alaska judge rules request by Peltola campaign for ballot data in Senate race not reasonable** — ruling · ruled · holder: a federal court · formed 2026-11-12 · 17 outlets (peak 17) · `obj_afederal_alaska-ballot-campaign-data`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
@@ -12,7 +12,9 @@ Register: 159 objects · this scan: 0 new, 3 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- none
+- **Alaska judge rules request by Peltola campaign for ballot data in Senate race not reasonable** — ruling · ruled · holder: a federal court · formed 2026-11-12 · 17 outlets (peak 17) · `obj_afederal_alaska-ballot-campaign-data`
+- **Father charged with attempted murder after infant found buried alive in dog crate** — indictment · charged · holder: ? · formed 2026-11-12 · 18 outlets (peak 18) · `obj_x_alive-attempted-buried-charged`
+- **Oakdale Visa Fraud Ringleader Sentenced to 10 Years** — indictment · charged · holder: ? · formed 2026-11-12 · 3 outlets (peak 3) · `obj_x_fraud-oakdale-ringleader-sentenced`
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
