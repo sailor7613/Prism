@@ -1,12 +1,12 @@
 # Newsroom digest — 2026-11-15
 
-Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 164 objects · this scan: 0 new, 1 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Survivor Justice Tax Prevention Act — Senate the motion to proceed (Motion to Proceed Agreed to)** — bill · voted · holder: the Senate · formed 2026-11-10 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 26 scans
+- **Survivor Justice Tax Prevention Act — Senate the motion to proceed (Motion to Proceed Agreed to)** — bill · voted · holder: the Senate · formed 2026-11-10 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 27 scans
 
 ## Returned after a break
 - none today
