@@ -1,0 +1,1701 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-14",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 21,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 4,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 34,
+   "hits": 11,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 18,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 1,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 6,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 2,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 5,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 11,
+   "hits": 6,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 73,
+   "hits": 20,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 51,
+   "hits": 32,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 3,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 2,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Trump-Xi-Putin trilateral meeting at APEC: What to expect",
+   "dek": "A nuclear treaty and the US&#039;s war on Iran are among priority topics for China, Russia and US leaders.",
+   "opening": "",
+   "published": "2026-11-14T12:14:14+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/14/trump-xi-putin-trilateral-meeting-at-apec-what-to-expect?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Oil Grab in Venezuela Is Testing the Country’s National Identity",
+   "dek": "Long-held beliefs in Venezuela about sovereign control over oil are fraying as the U.S. lays claim to the country’s oil reserves.",
+   "opening": "",
+   "published": "2026-11-14T10:10:01+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/world/americas/trump-venezuela-oil.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Migrant caravan heads to US from Mexico after Democrats’ midterm win",
+   "dek": "A migrant caravan of more than a thousand people is heading towards the US border from southern Mexico.",
+   "opening": "",
+   "published": "2026-11-14T09:43:54+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/14/migrant-caravan-heads-to-us-from-mexico-after-democrats-midterm-win?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Qatar and Turkiye sign a mutual defence pact: What do we know?",
+   "dek": "Analysts say the pact, agreed amid the US-Iran war, aims to deter attacks rather than build an offensive alliance.",
+   "opening": "",
+   "published": "2026-11-14T09:19:43+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/14/qatar-and-turkiye-sign-a-mutual-defence-pact-what-do-we-know?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "UN says 25 seafarers killed in, around Hormuz since US-Israel war on Iran",
+   "dek": "&#039;Situation cannot become new normal&#039;, says UN&#039;s Khaled Khiari, as Iran reports three more vessels hitting mines.",
+   "opening": "",
+   "published": "2026-11-14T07:46:36+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/14/un-says-25-seafarers-killed-in-around-hormuz-since-february?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside Arab nation's battle against radicalism as top official warns of threat brewing on Europe's streets",
+   "dek": "A senior United Arab Emirates official warns that European protests have crossed into national security threats, urging coexistence education first.",
+   "opening": "ABU DHABI, United Arab Emirates — A senior Emirati official is warning that demonstrations in Europe have crossed a line from political expression into a national security threat, arguing that extremism must be confronted before it turns violent. \"You can go demonstrate, talk, give a speech, but what [we] saw in the street in 11 cities in Europe is not freedom of speech. It is a threat to national security,\" Dr. Ali Rashid Al Nuaimi, chairman of the Defense, Interior and Foreign Affairs Committee of the UAE's Federal National Council, told Fox News Digital in an exclusive interview. The remarks come against a wider European debate over radicalization. On Nov. 3, Europol reported that authorities from 16 countries had referred more than 9,000 links to extremist and terrorist material appearing across 47 social media and gaming platforms. The operation targeted online role-playing content promoting jihadist, far-right, far-left and anarchist violence, including material that could draw minors toward extremist networks. AN IRANIAN REFUGEE'S WARNING TO AMERICAN UNIVERSITIES EMBRACING FOREIGN FUNDING AND RADICALISM What makes the UAE's response distinctive, officials and experts argue, is its belief that the struggle against extremism begins long before police make an arrest — in classrooms, families and the way people of different backgrounds learn to live together. \"The root is extremism, not violent extremism. … In our school system, we promote coexistence. We promote the value",
+   "published": "2026-11-14T07:00:53-05:00",
+   "link": "https://www.foxnews.com/world/inside-arab-nations-battle-against-radicalism-top-official-warns-threat-brewing-europes-streets",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "GOP newcomer who toppled Cory Mills sets sights on fraud, inflation as he heads to Capitol Hill",
+   "dek": "Rep.-elect Ryan Elijah, R-Fla., told Fox News Digital he wants to crack down on fraud and congressional insider trading.",
+   "opening": "EXCLUSIVE: Florida Republican congressman-elect Ryan Elijah told Fox News Digital that he is heading to Washington with an \"appetite\" to crack down on fraud, protect consumers and tackle inflation, while calling for bipartisan cooperation in the incoming Congress. Elijah, a former Central Florida sports broadcaster, made his remarks amid heightened scrutiny of fraud involving taxpayer-funded federal programs across the country. \"I'm going to lean into consumer protection — that's something I fought for my whole life — and lean into fraud,\" Elijah told Fox News Digital. \"There is so much more Washington could do against fraud. I hope there is a bipartisan appetite on both sides to not only protect consumers but also target some of this fraud that is wasting so much of our tax dollars.\" The incoming Republican, who beat embattled Rep. Cory Mills, R-Fla., in the Republican primary in August, expressed optimism that lawmakers from both parties could find common ground on addressing fraud and rising costs , arguing that voters sent a clear message during Tuesday's midterm elections. Elijah said voters \"made it loud and clear to both parties\" that they \"want change, they want inflation to come down, and they want life to become a little easier. So I think both parties need to look at that.\" Elijah also emphasized that members of Congress represent \"100% of the people in their district, not just 50%,\" arguing that bipartisan solutions are necessary to restore public trust and accoun",
+   "published": "2026-11-14T07:00:08-05:00",
+   "link": "https://www.foxnews.com/politics/gop-newcomer-who-toppled-cory-mills-sets-sights-fraud-inflation-he-heads-capitol-hill",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The 2028 presidential race is already full of surprises, prediction markets say",
+   "dek": "The 2028 presidential market report shows Jon Ossoff leading Democrats at 26% despite a third of his party never having heard of him.",
+   "opening": "The 2028 presidential election seems far away. Or is it already here? The midterm ballots are barely counted, and a long list of would-be candidates is already elbowing for a lane in a campaign that, by Election Day, will feel like it started during the Truman administration. Outside the Super Bowl, few things are as popular on prediction markets as a presidential race. Two years before anyone casts a ballot, Kalshi's 2028 markets have already drawn nearly half a billion dollars in trading. While prediction markets have an excellent long-term record of accuracy, this far from an election, you can't expect surgical precision. STU BURGUIERE: PUT YOUR MONEY WHERE YOUR MOUTH IS: PREDICTION MARKETS WON THE MIDTERMS What the markets can show us is who's trading like a blue chip, who's stuck in the middle, and whose campaign feels like a penny stock that needs a miracle rally to be competitive. So let's look ahead with a way-too-early presidential market report, starting at the top. What if I told you the Democratic front-runner for 2028 is a man a third of Democrats have never heard of? That's what a new Reuters/Ipsos poll found when it comes to Georgia Sen. Jon Ossoff, and plenty of other Americans are drawing a blank too. Still, a Democrat who wins Georgia by 18 points , in a state President Trump carried in 2024, doesn’t stay anonymous for long. Kalshi gives him a 26% chance of winning the Democratic nomination, the best in the field. Not bad for a guy much of his own party coul",
+   "published": "2026-11-14T06:50:21-05:00",
+   "link": "https://www.foxnews.com/opinion/2028-presidential-race-already-full-surprises-prediction-markets-say",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "campaign",
+     "ballots"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "campaign",
+     "ballot"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside the House GOP strategy to capitalize on Democrats' warring factions in the new Congress",
+   "dek": "Tom Emmer says House Republicans will use committee hearings and floor votes to hold Democrats accountable as the GOP shifts to minority status.",
+   "opening": "EXCLUSIVE: House Republicans are heading into the next Congress ready to brawl. Rep. Tom Emmer, R-Minn., who is set to go from the No. 3 most powerful House Republican to No. 2 next year, told Fox News Digital that the GOP will hold the new Democrat majority \"accountable\" for their far-left faction's ideas over the next two years, even if they cannot control what bills get a vote. Emmer, who has served as House majority whip for the past four years, was elected Tuesday to serve as minority whip alongside incoming House Minority Leader Jim Jordan , R-Ohio. The Speaker of the House position turns over to Democrats, and will likely be won by current minority leader Hakeem Jeffries, D-N.Y. And despite Jeffries poised to take control of what legislation gets to the House floor, Emmer signaled House Republicans would find ways to push their agenda as well. JIM JORDAN BECOMES NEW HOUSE GOP LEADER AFTER CLOSED-DOOR VOTE, DEFEATING STEVE SCALISE \"What's their answer to dealing with costs and wages? We're going to investigate Trump,\" Emmer said in reference to Democrats. \"That's not going to solve the problems that they created. So that's going to be the job of the whip, is to make sure that we have a coordinated process — committee hearings, floor votes — to expose and define exactly who these people really are.\" PROGRESSIVE GROUP'S 182-PAGE BLUEPRINT MAPS OUT POTENTIAL DEM INVESTIGATIONS INTO TRUMP, CORPORATE ALLIES Emmer, in his first print interview since winning the House minority",
+   "published": "2026-11-14T06:00:13-05:00",
+   "link": "https://www.foxnews.com/politics/inside-house-gop-strategy-capitalize-democrats-warring-factions-new-congress",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "accountable",
+     "republican",
+     "committee"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump keeps signaling an end to Iran war, but expert warns a crucial piece of his strategy is missing",
+   "dek": "President Donald Trump declared on Truth Social the U.S. no longer needs a deal with Iran, one day after proclaiming victory at Arlington.",
+   "opening": "President Donald Trump declared Thursday that the United States no longer needs a deal with Iran, abruptly shifting his diplomatic message just three days after expressing optimism about negotiations and directing Vice President JD Vance to focus on domestic issues instead. \"We don’t need a deal with Iran. Those days have long since passed,\" Trump wrote on Truth Social. \"We’ve got their money, Hundreds of Billions of Dollars, and we’ve got their Strait!\" Trump's latest declaration came just one day after he proclaimed victory over Iran during a Veterans Day ceremony at Arlington National Cemetery, while acknowledging that the conflict had not yet formally ended. \"We won,\" Trump said Wednesday. \"It’s just a question of when we end it. I want to make sure we have a total victory, not a 93 percent victory.\" TRUMP DEFENDS IRAN WAR DURING VETERANS DAY ADDRESS, SAYS HE IS MAKING THE WORLD 'SAFER' The president also thanked veterans \"working to ensure the world’s number one sponsor of state terrorism, the Islamic Republic of Iran, will never have a nuclear weapon.\" An administration official defended Trump's strategy, arguing that the United States has substantial leverage over Iran through its naval blockade and continued military pressure, even as questions remain about how the conflict will end. \"The United States is in a very strong position with control of the Strait of Hormuz and the Iranian economy collapsing. The President has been clear that the greatest naval blockade in h",
+   "published": "2026-11-14T06:00:05-05:00",
+   "link": "https://www.foxnews.com/politics/trump-keeps-signaling-end-iran-war-expert-warns-crucial-piece-his-strategy-missing",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "dollar": [
+     "dollar"
+    ],
+    "hormuz": [
+     "hormuz"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "iran-terms": [
+     "naval blockade"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sexual predator deported to Mexico hauled back to US for assault and murder of American mom",
+   "dek": "Miguel Angel Urbano-Vazquez was deported to Mexico after Sharon Van Gilder&apos;s 2002 murder but was later extradited and convicted decades later.",
+   "opening": "A serial rapist from Mexico who murdered an American woman more than two decades ago and terrorized other women in the United States has finally been brought to justice. Miguel Angel Urbano-Vazquez, who was previously deported to Mexico before being extradited back to the U.S., was found guilty earlier this month of aggravated first-degree murder in the March 2002 rape and strangulation of 39-year-old Sharon Van Gilder in Washington state. Her body was discovered along a rural road in Pierce County, Washington. Van Gilder's cousin, Brenda Doty, told Fox News Digital the fact that her killer was finally convicted nearly 25 years later is an overwhelming relief. YOGURT SHOP MURDERS FUEL FAMILY QUESTIONS ABOUT ACCOMPLICE AS RAGE LINGERS OVER WRONGFULLY ACCUSED \"I'd wake up in the middle of the night thinking about it,\" Doty said. \"She didn't deserve that.\" Van Gilder, a mother of two, was very close with her family. \"We just had so much fun together, riding ponies and horses and playing in the barn,\" Doty said. Doty remembers her cousin not just as a wonderful friend, but as a hero who decades ago saved her own daughter from drowning in a lake during a family outing. \"[Sharon] jumped into the water, swam over there, dove underneath and pulled her up. She saved my daughter's life,\" Doty said. \" \"My daughter was 8 years old, and she's 40 now,\" she said. Van Gilder was last seen leaving a bar in Tacoma with the killer and another man in March 2002, the Pierce County Sheriff's Offic",
+   "published": "2026-11-14T06:00:02-05:00",
+   "link": "https://www.foxnews.com/us/sexual-predator-deported-mexico-hauled-back-us-assault-murder-american-mom",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "mother",
+     "murder"
+    ],
+    "obj_x_alive-attempted-buried-charged": [
+     "murder",
+     "found"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "SEN BERNIE SANDERS: Democrats won big. Deliver real change now, or pay a terrible price",
+   "dek": "Election Day Democrats won 250-plus House seats and 56 Senate seats. Now the American people demand action on Medicare for All and a wealth tax.",
+   "opening": "On Election Day, the American people, all across the country, sent a very powerful message to our country’s ruling class. In a loud and surprisingly unified voice, they said NO to Trump’s pathological lying, his contempt for the Constitution and the rule of law, his narcissism, his corruption and his disastrous policies. But they also said something more. At a time when 60% of our people are living paycheck to paycheck, when we have unprecedented income and wealth inequality, when we have the highest rate of childhood poverty of any industrialized nation, when millions of seniors are unable to retire with dignity, and when our younger generation may end up having a lower standard of living than their parents, working families voted for change, REAL change. Despite billions of dollars in ugly and dishonest TV ads, Americans made it clear. They want an end to status quo politics and status quo policies that prop up a rigged economy and a corrupt campaign finance system. And it wasn't just the election results. According to a recent AP poll, 80% of registered voters want either \"complete and total upheaval\" or \"substantial change\" in how this country is run, including 97% of Democrats, 90% of independents and 58% of Republicans. BERNIE SANDERS WARNS DEMOCRATS NOT TO SPEND ALL THEIR TIME INVESTIGATING TRUMP On Election Day, Democrats won a massive victory. When the new Congress convenes, Democrats will have more than 250 members in the House and at least 55 members in the Senate.",
+   "published": "2026-11-14T05:50:58-05:00",
+   "link": "https://www.foxnews.com/opinion/sen-bernie-sanders-democrats-won-big-deliver-real-change-now-pay-terrible-price",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'Redo the House': Tim Snyder urges Democrats to act fast and enact transformational change",
+   "dek": "Democrats won big in the midterms. Now, they have a tremendous opportunity to show Americans that they can run an effective government. Timothy Snyder joins Ali Velshi to discuss why Democrats need to act fast and show they can deliver. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day cl",
+   "opening": "",
+   "published": "2026-11-14T05:36:02+00:00",
+   "link": "https://www.youtube.com/watch?v=EmWOliQ_heo",
+   "videoId": "EmWOliQ_heo",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Alaska Senate Race Between Dan Sullivan and Mary Peltola Still Counting Votes",
+   "dek": "The race between Senator Dan S. Sullivan and Ms. Peltola, a former congresswoman, is the only Senate contest that hasn’t been called.",
+   "opening": "",
+   "published": "2026-11-14T05:31:12+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/us/alaska-senate-race-ranked-choice-tabulation.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Socialist LA mayor's bold homelessness promise ahead of 2028 Olympics hit with reality check: 'Not optimistic'",
+   "dek": "Los Angeles mayor-elect Nithya Raman pledges to halve homeless encampments before the 2028 Olympics, but a local activist warns it won&apos;t work.",
+   "opening": "Incoming Los Angeles Mayor Nithya Raman has promised to cut the number of people sleeping in tents and homeless encampments by at least 50% before the 2028 Summer Olympics, but one local activist believes her vision may not be realistic. The blue city’s growing homeless population became a major focus of Raman’s mayoral campaign. A member of the Democratic Socialists of America (DSA) , she plans to expand shelter and housing options while stretching \"every dollar as far as possible.\" John Alle, a business owner and co-founder of the Santa Monica Coalition, told Fox News Digital Raman won’t be able to \"hide\" the city’s homelessness problem from tourists arriving for the Games and raised concerns about potential gaps in in her plan to deliver lasting results. \"I don't think we're going to be able to hide that before the crowds,\" Alle said, adding that the city has become a \"third-world country.\" 4 OF NATION'S LARGEST CITIES NOW LED BY SOCIALIST MAYORS AFTER TUESDAY'S ELECTION, AFFECTING TENS OF MILLIONS \"We're not hiding it now. We're seeing tourists being attacked in Santa Monica, we're seeing tourists being attacked in LA. Our tourism, everything that funds our general fund, our retail sales taxes are all down. The morale of the police, which we need, is down.\" Alle warned that Raman’s plan will be a temporary solution that will have homeless people moved off the streets ahead of the Olympics and returning once the Games are over. \"When the Olympics come, they'll be picked up",
+   "published": "2026-11-14T05:30:51-05:00",
+   "link": "https://www.foxnews.com/politics/socialist-la-mayor-bold-homelessness-promise-ahead-2028-olympics-hit-reality-check-not-optimistic",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Did the Redistricting Wars Backfire on Republicans? In a Word, No.",
+   "dek": "The G.O.P. was able to avoid more House midterm losses — on top of the advantage it already had from gerrymandering.",
+   "opening": "",
+   "published": "2026-11-14T05:14:26+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/upshot/gerrymanders-midterm-elections-republicans.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats seize on midterm wins to push massive minimum wage hikes, but economists see trouble ahead",
+   "dek": "Josh Shapiro says he wants to more than double Pennsylvania&apos;s minimum wage and codify abortion rights with the new Democratic trifecta.",
+   "opening": "Democrats are pushing major minimum-wage increases after their midterm victories, but economists warn the proposals could come with unintended consequences for small businesses and inexperienced workers. Pennsylvania Gov. Josh Shapiro is pledging to more than double his state's $7.25 minimum wage, while Illinois Gov. JB Pritzker is calling for a federal increase as Democrats make affordability a central part of their governing agenda. The renewed push comes as Seattle, which has one of the nation's highest minimum wages, faces concerns about rising business costs and employment opportunities — raising questions about the tradeoffs of higher wage mandates. \"We’re going to more than double Pennsylvania‘s minimum wage,\" Shapiro wrote in an X post this month. \"Codify abortion rights into our state Constitution. Fund mass transit. Build more housing. These are the commonsense things that Pennsylvanians want done.\" AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI \"And with a Democratic trifecta, we will deliver on all of them,\" he continued. Shapiro's proposal would raise Pennsylvania's minimum wage from $7.25 to $15 an hour, an increase of roughly 107%, prompting questions about how small businesses would absorb the additional labor costs. Tom Savidge, an economist with the American Institute for Economic Research, warned in an interview with Fox News Digital that steep wage increases could force small businesses to raise prices, redu",
+   "published": "2026-11-14T05:00:15-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-seize-midterm-wins-push-massive-minimum-wage-hikes-economists-see-trouble-ahead",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth's failed impeachment was a warning to Democrats. Where will they go from here?",
+   "dek": "Democrats have been given a huge opportunity with majorities in both the House and Senate — but the balance of priorities, timing, messaging and discipline are all going to be major tests.",
+   "opening": "Democrats have been given a huge opportunity with majorities in both the House and Senate — but the balance of priorities, timing, messaging and discipline are all going to be major tests. (Image credit: Tom Brenner)",
+   "published": "2026-11-14T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6040299/hegseth-impeachment-democrats-house-test",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "As Democrats win big, thirst traps of male candidates take social media by storm",
+   "dek": "It's everywhere on social media: Democrats celebrating the attractive men voters elected in the midterms. But it's bigger than a meme and says a lot about politics of masculinity in the age of Trump.",
+   "opening": "It's everywhere on social media: Democrats celebrating the attractive men voters elected in the midterms. But it's bigger than a meme and says a lot about politics of masculinity in the age of Trump. (Image credit: Brandon Bell)",
+   "published": "2026-11-14T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6040507/democrats-male-candidates-masculinity-trump",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Wall Street Week | Nvidia Shakeup, Midwest Stadium Bids, Care Work Gap, India’s Wedding Economy",
+   "dek": "This week, Illinois and Indiana are competing for one of the NFL’s most valuable franchises and potentially billions of dollars in surrounding development. Plus, an aging population is creating huge demand for care workers while wages and career opportunities struggle to keep up. Later, why weddings are such a large part of India’s economy. Chapters: 00:01:29 - Nvidia Shakeup 00:11:55 - Midwest Stadium Stakes 00:23:48 - Care Work Gap 00:35:47 - India’s Wedding Economy 00:47:19 - Blue Wave Banking Regulations -------- More on Bloomberg Television and Markets Like this video? Subscribe and turn ",
+   "opening": "",
+   "published": "2026-11-14T04:52:46+00:00",
+   "link": "https://www.youtube.com/watch?v=5jw4WtsMQqU",
+   "videoId": "5jw4WtsMQqU",
+   "publication": "bloomberg-streams",
+   "source": "bloomberg-streams",
+   "station": "RI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Massie's push to impeach Hegseth splits constituents in his own backyard: 'Pure spite'",
+   "dek": "Northern Kentucky residents offer sharply divided takes on Thomas Massie&apos;s push to impeach Pete Hegseth over the Iran war and his true motives.",
+   "opening": "KENTON COUNTY, Ky. — Rep. Thomas Massie's push to impeach War Secretary Pete Hegseth over the Iran war drew sharply different reactions from northern Kentucky residents interviewed by Fox News Digital, who offered competing assessments of the outgoing Republican congressman — and whether his latest confrontation with the Trump administration reflects principle or political payback. Fox News Digital visited Covington, the population center of Massie’s district, along with Newport, Erlanger and other communities across the river from Cincinnati, to ask residents about their outgoing congressman and his efforts to impeach the Pentagon chief. Richard Hassebrock, a Covington resident who said he has not always agreed with Massie, welcomed the impeachment effort. \"I'm not always a huge fan of Thomas Massie, but on this point I am,\" Hassebrock told Fox News Digital. TRUMP DEFENDS PENTAGON CHIEF AS MASSIE TARGETS HIM: 'HEGSETH SHOULD BE PRAISED, NOT IMPEACHED' Craig Cuskey, who works in the Covington area but lives just outside the bounds of Massie’s district in Louisville, described the impeachment push as \"pure spite\" and \"petty,\" saying his opinion of the congressman had deteriorated. The contrasting reactions came after House Republicans voted to refer Massie's impeachment effort against Hegseth to committee, adding another confrontation to the Kentucky Republican's long-running disagreements with President Donald Trump and his party's leadership. Democrats poised to take the gav",
+   "published": "2026-11-14T04:00:19-05:00",
+   "link": "https://www.foxnews.com/politics/massie-push-impeach-hegseth-splits-constituents-backyard-pure-spite",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Blue wave meets ballot box surprises as voters split on abortion, voter ID and billionaire taxes",
+   "dek": "Voters in three states approved voter ID measures, while California rejected a billionaire wealth tax and Idaho turned down a proposal to expand abortion rights.",
+   "opening": "While Democrats’ midterm sweep dominated Election Night, voters in several states delivered consequential — and sometimes crosscutting — verdicts on voter ID, abortion access, taxes and English-language laws. But the down-ballot decisions largely unfolded beneath the shadow of the GOP’s crushing losses, offering a separate look at the policy priorities voters chose to elevate in their states. Read on to learn more about some of the most significant ballot measure results that will be shaping the lives of thousands of Americans. DEMOCRATS ‘DIVORCED FROM VOTERS’ AS 5 STATES BACK CITIZEN-ONLY VOTING, BOLSTERING GOP PUSH Voters in Nevada , North Carolina and Ohio all voted to pass voter ID requirements, even as talks among federal lawmakers have stalled on the issue, showcasing that the issue remains a point of public interest. In North Carolina, the state has required photo ID for in-person voting since 2018. But with the adoption of a constitutional amendment in a 59.6% to 40.3% vote, the Tar Heel State expanded the requirement to all forms of voting. Similarly, in Ohio, voters passed Issue 3 in a 65.3% to 34.6% vote. Although Ohio already had pre-existing in-person voter-ID laws, Issue 3 codified the requirement in the state’s constitution, making it harder to overturn later. Finally, in Nevada, Question 7 passed in a 62.1% to 37.8% vote, establishing a constitutional amendment to enact the state’s first voter-ID requirement. It compels voters to show ID when voting in person ",
+   "published": "2026-11-14T04:00:00-05:00",
+   "link": "https://www.foxnews.com/politics/blue-wave-meets-ballot-box-surprises-voters-split-abortion-voter-id-billionaire-taxes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "push",
+     "separate",
+     "california"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump to Meet With Putin and Xi in China, With Nuclear Proliferation on the Agenda",
+   "dek": "The president plans to also discuss the war against Iran, but is not expected to bring up Russia’s war in Ukraine or the scandal that has engulfed Jensen Huang.",
+   "opening": "",
+   "published": "2026-11-14T02:24:24+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/us/politics/trump-putin-xi-china-nuclear-proliferation.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Scandal Prompts Questions of What It Means to Be a Spy",
+   "dek": "U.S. intelligence agencies believe a woman who had an affair with Jensen Huang was a Chinese asset. But there is much more that they are still assessing about her role.",
+   "opening": "",
+   "published": "2026-11-14T01:22:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/us/politics/nvidia-alice-huang-spy-china.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrat flips Alaska governor's mansion after Trump-backed GOP infighting",
+   "dek": "President Trump endorsed Republican Bernadette Wilson for Alaska governor, but bitter GOP infighting and ranked-choice voting complicated the race to succeed Mike Dunleavy.",
+   "opening": "Democrat Jonathan Kreiss-Tomkins has won Alaska's gubernatorial election, defeating Trump-endorsed Republican Bernadette Wilson and flipping the governor's mansion. The Associated Press called the race for Kreiss-Tomkins, a former state lawmaker, Friday evening local time. He is the first Democratic governor in Alaska since 1998. Alaska's gubernatorial election became an unusual contest as Republicans battled among themselves over who should succeed Gov. Mike Dunleavy, who was barred from seeking a third consecutive term. A BLUE WAVE IN GOVERNORS' MANSIONS COULD HURT FAMILIES MORE THAN A BLUE CONGRESS Wilson, a conservative activist and former political operative, received President Donald Trump's endorsement during a campaign in which multiple Republicans competed for the governor's office. Trump publicly criticized fellow Republicans Dave Bronson and Treg Taylor, accusing them of dividing conservative voters and potentially jeopardizing the party's hold on the governorship. Bronson, a former Anchorage mayor , and Taylor, a former Alaska attorney general, remained part of the Republican field, creating a complicated general-election contest. ALASKAN POLITICAL SCION HOPES TO HOLD ONTO STATE'S SINGLE HOUSE SEAT Kreiss-Tomkins, a former state representative from Sitka , emerged as the Democratic contender, seeking to return his party to the governor's mansion after Dunleavy's two terms. The election unfolded under Alaska's ranked-choice voting system , which allows voters to ra",
+   "published": "2026-11-14T01:09:34-05:00",
+   "link": "https://www.foxnews.com/politics/democrat-flips-alaska-governors-mansion-trump-backed-gop-infighting",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "republican"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Despite Nvidia’s Drop, Stocks Push Ahead",
+   "dek": "A drop in Nvidia shares after the ouster of the company’s chief executive has not spread to the rest of the market, as stocks have held their ground broadly.",
+   "opening": "",
+   "published": "2026-11-14T00:40:29+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/business/nvidia-turmoil-stock-market.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Two Drinks with . . . Ari Emanuel",
+   "dek": "Drinking his coffee black, Ari Emanuel talks about losing Taylor Swift, his brother running for president, and feeling like &#8216;a pimple on the ass of an ant.&#8217;",
+   "opening": "About 40 seconds after I sit down across from Ari Emanuel, his phone rings. &#8220;I think you&#8217;re going to owe me money,&#8221; Hollywood&#8217;s superagent tells his interlocutor. Emanuel&#8212;who represents Oprah Winfrey, Mark Wahlberg, Dwayne &#8220;The Rock&#8221; Johnson, Adele, Denzel Washington, and many more&#8212;doesn&#8217;t do hellos. His friend on the phone lost a bet and owes him two bucks. But Emanuel, a billionaire and compulsive dealmaker, tells him that he&#8217;ll settle for just one dollar, &#8220;framed and signed.&#8221; An assistant&#8212;there&#8217;s a battalion of them&#8212;hands Emanuel a black coffee in a to-go cup. It&#8217;s 9 a.m., but Emanuel, 65, tan and trim, has been up since 4, running though his health regimen. It includes a workout, a dip in a cold plunge, and a cup of live worms &#8220;to eat the bad bacteria in my gut&#8221;&#8212;as he explains in his recently released memoir, Roll the Calls , which details his 30-odd years in the entertainment business. On the health score, he writes: &#8220;If you want to win at life, then isn&#8217;t Job One having more life?&#8221; Read more",
+   "published": "2026-11-14T00:19:01+00:00",
+   "link": "https://www.thefp.com/p/two-drinks-with-hollywoods-superagent-ari-emanuel",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrat Jonathan Kreiss-Tomkins wins race for Alaska governor, replaces a Republican",
+   "dek": "Kreiss-Tomkins, a former state legislator, ran a campaign emphasizing bipartisanship in the the state that usually votes Republican. At 37, he'll be the youngest governor in the state's history.",
+   "opening": "Kreiss-Tomkins, a former state legislator, ran a campaign emphasizing bipartisanship in the the state that usually votes Republican. At 37, he'll be the youngest governor in the state's history. (Image credit: Eric Stone)",
+   "published": "2026-11-14T00:12:43-05:00",
+   "link": "https://www.npr.org/2026/11/14/g-s1-151719/midterms-alaska-governor-kreiss-tomkins",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Numbers Behind Scott Colom’s Stunning Upset in the Mississippi Senate Race",
+   "dek": "To win a Senate seat in a highly polarized, deeply Republican state, Scott Colom needed a perfect storm. He got it.",
+   "opening": "",
+   "published": "2026-11-13T23:18:08+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/us/elections/scott-colom-senate-upset-history-mississippi.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: FAA Grounds All Flights & Democratic Civil War Erupts In the Senate",
+   "dek": "The FAA grounds all flights due to “extraordinary circumstances,” a Democratic civil war breaks out in the Senate, and the Nvidia spy scandal heads to capitol hill. Get the facts first with Evening Wire. - - - Ep. 3195 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Boll & Branch - Get cozy this holiday season with Boll & Branch! From luxurious organic cotton sheets to beautiful blankets and thoughtful gifts, enjoy early access to 25% off, free shipping, and extended returns at https://BollAndBranch.com/WIRE with code WIRE. Exclusions apply. - - - Priva",
+   "opening": "",
+   "published": "2026-11-13T22:54:27+00:00",
+   "link": "https://www.youtube.com/watch?v=CS8cr0TcbDs",
+   "videoId": "CS8cr0TcbDs",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats Vie for Support in Race for Top Senate Job",
+   "dek": "Senator Chris Van Hollen of Maryland said he wouldn’t run for president to focus on his leadership challenge to Senator Chuck Schumer, who remained confident he would prevail.",
+   "opening": "",
+   "published": "2026-11-13T22:53:50+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/us/politics/democrats-senate-leader.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mike Evans ruled out, Trent Williams questionable as NFC-leading 49ers' injury concerns persist",
+   "dek": "San Francisco 49ers receiver Mike Evans will miss a third straight game, but Deebo Samuel and Keenan Allen are set to boost the receiving corps.",
+   "opening": "The San Francisco 49ers will be without wide receiver Mike Evans for a third straight game Sunday after ruling him out against the Dallas Cowboys as he continues to deal with Achilles tendinitis. Meanwhile, it remains unclear whether standout left tackle Trent Williams will suit up after injuring his shoulder in practice this week. Injuries are an unavoidable part of the NFL , but few teams have dealt with them as consistently as the San Francisco 49ers have in recent seasons. Their injury report has become a weekly storyline. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE Evans and Williams were not the only concerns for San Francisco this week. Coach Kyle Shanahan said cornerbacks Deommodore Lenoir and Renardo Green were also on the injury report. Both missed practice Wednesday and Thursday after suffering injuries in last week’s game against Las Vegas, but they were limited participants Friday. Linebacker Dre Greenlaw was also listed as questionable after hurting his knee at practice Thursday, while cornerback Nate Hobbs (adductor), defensive back Upton Stout (shoulder, neck) and defensive tackle C.J. West (knee) were also questionable. At 38, Williams remains a 12-time Pro Bowler playing at a high level, making his availability significant for San Francisco. He left practice early Thursday and did not participate Friday, but Shanahan remained hopeful the veteran tackle would feel well enough to play Sunday. RAVENS FINALLY REVEAL LAMAR JACKSON'S OFFICIAL RETURN TIMELINE AND Q",
+   "published": "2026-11-13T22:45:06-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/mike-evans-ruled-out-trent-williams-questionable-nfc-leading-49ers-injury-concerns-persist",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "timeline"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Duffy sounds alarm over aging FAA system after nationwide air travel shutdown",
+   "dek": "Sean Duffy blamed outdated routers and 1980s-era copper lines for the FAA ground stop, demanding Congress approve $50 billion in emergency funding.",
+   "opening": "Transportation Secretary Sean Duffy blamed outdated routers and decades-old technology for Friday's nationwide Federal Aviation Administration (FAA) ground stop , urging Congress to approve $50 billion in emergency funding to rebuild the country's aging air traffic control system. Speaking at a White House news conference Friday evening, Duffy said the FAA began experiencing instability in its radar and communications systems around 3:36 p.m. ET, prompting the agency to issue a nationwide ground stop out of an abundance of caution. Duffy attributed the disruption to outdated switches and routers that became overloaded with data, leading to inconsistent information reaching air traffic controllers. \"We have old, old switches, old routers. We use 1980s little copper lines,\" Duffy said. NATIONWIDE FAA GROUND STOP LIFTED BUT CANCELLATIONS, SIGNIFICANT DELAYS TO CONTINUE: TRANSPORTATION SECRETARY Without a complete overhaul, Duffy warned that the nation's aging air traffic control infrastructure would remain vulnerable to future disruptions. \"What went down was old, right? It was the old legacy equipment. It failed,\" he said. \"And listen, it's going to continue to fail.\" The transportation secretary called on Congress to provide $50 billion to modernize the nation's air traffic control infrastructure, including replacing aging hardware, telecommunications equipment and control towers. JETBLUE CREDITORS HIRE ADVISORS AS FINANCIAL CONCERNS GROW: REPORT \"This is an emergency. I want ",
+   "published": "2026-11-13T22:16:39-05:00",
+   "link": "https://www.foxbusiness.com/politics/duffy-sounds-alarm-over-aging-faa-system-after-nationwide-air-travel-shutdown",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Cowboys owner Jerry Jones updates timeline for NFL's 18-game schedule, floats preseason reduction",
+   "dek": "Jerry Jones says the NFL could move to an 18-game schedule as soon as next year, but the NFLPA has vowed to defend player health and safety.",
+   "opening": "The NFL expanded from a 16-game schedule to 17 games in 2021. Since then, speculation has persisted about whether the league will eventually add an 18th regular-season game. Such a change would require negotiations over roster sizes, player salaries, the preseason schedule and the timing of the Super Bowl. The NFL Players Association would also have to approve the plan before it could move forward. But Jerry Jones , one of the NFL’s most high-profile and outspoken owners, offered a timeline Friday for when the league could add another regular-season game. \"I don’t think we’re far away from it,\" Jones told Dallas sports radio station 105.3 FM. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE Jones suggested the league could move to an expanded regular season as soon as 2027. \"I don’t know what is far away — next month, next year, maybe. Next year, maybe. That has to be negotiated with the players. But it’s in everybody’s best interest.\" Interest in potentially adding another game to the schedule for each of the NFL’s 32 teams has been fueled by the league’s growing popularity and expanded international schedule. This season features a record nine games played outside the U.S. A 10-game international slate has been approved for 2027. NFL Commissioner Roger Goodell has been a vocal supporter of many owners’ push for an 18-game schedule. Jones suggested the preseason could be shortened if the change becomes reality, with teams using the early weeks of the regular season to ramp up. \"Y",
+   "published": "2026-11-13T21:55:41-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/cowboys-owner-jerry-jones-updates-timeline-nfl-18-game-schedule-floats-preseason-reduction",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "timeline"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "ADF seeks to defend Washington girls' sports measure, argues state cannot fully represent female athletes",
+   "dek": "Female Athletes United seeks to join the defense of Washington Initiative 638 as an ACLU-backed lawsuit challenges the voter-approved girls sports law.",
+   "opening": "Alliance Defending Freedom filed a motion on behalf of Female Athletes United to defend Washington’s voter-approved girls sports initiative against an ACLU-backed lawsuit, arguing that the state cannot adequately represent the athletes’ interests. The Nov. 13 motion asks King County Superior Court to allow Female Athletes United to join the case as a defendant to defend Initiative 638. The request seeks the court’s permission to participate; it is not an order granting intervention. \"We’re asking to be allowed to step in and help the state of Washington defend the validity of the law so that I-638 goes into effect on December 3rd, just like the voters in the state of Washington asked for,\" ADF attorney Hal Frampton told Fox News Digital. WASHINGTON AG'S OFFICE INDICATES IT WILL DEFEND GIRLS' SPORTS BALLOT MEASURE AFTER ACLU SUES TO BLOCK IT The initiative would prohibit students who are biologically male from competing in school athletic competitions designated for female students. It also requires participants in girls’ competitions to provide verification of their biological sex from their personal healthcare provider as part of the sports physical process. The lawsuit challenging it includes parents, TransFamilies and the Washington Education Association as plaintiffs. They argue the measure violates Washington’s constitution, including privacy and equal-rights protections, by excluding transgender girls and imposing sex-verification requirements on participants in girls’ ",
+   "published": "2026-11-13T21:12:14-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/adf-seeks-defend-washington-girls-sports-measure-argues-state-cannot-fully-represent-female-athletes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_approved-arch-construction-federal": [
+     "washington",
+     "approved"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "lawsuit",
+     "block"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "request",
+     "ballot"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Scandal Unleashes a Flood of AI-Generated Memes",
+   "dek": "The revelations surrounding Jensen Huang, who resigned from Nvidia over extramarital affairs, inspired social media posts using the very technology his company helped develop.",
+   "opening": "",
+   "published": "2026-11-13T21:04:57+00:00",
+   "link": "https://www.nytimes.com/2026/11/12/world/asia/nvidia-ceo-huang-ai-memes.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Jensen Huang Was Essential to Nvidia’s Rise",
+   "dek": "Jensen Huang was the driving force at Nvidia, with 60 direct reports and no clear succession plan. Tripp Mickle, one of our technology reporters, examines Mr. Huang’s central role in the company and the artificial intelligence industry.",
+   "opening": "",
+   "published": "2026-11-13T20:14:05+00:00",
+   "link": "https://www.nytimes.com/video/business/100000011275611/why-jensen-huang-was-essential-to-nvidias-rise.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Get Focused on London’: How Iran’s Agents Attacked European Targets",
+   "dek": "A wave of assaults in Britain and elsewhere in the spring sowed fear across Europe. Prosecutors shed new light on how Iran took aim at U.S. allies.",
+   "opening": "",
+   "published": "2026-11-13T20:10:37+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/world/europe/iran-attacks-europe-britain.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Wall Street Loses a Powerful Dealmaker After Nvidia’s CEO Is Ousted",
+   "dek": "The ousted Nvidia chief executive was the consummate dealmaker leading the trillion-dollar A.I. build out.",
+   "opening": "",
+   "published": "2026-11-13T19:52:01+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/business/jensen-huang-nvidia-wall-street.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: Tanker crashes into river cruise boat in New Orleans",
+   "dek": "In our news wrap Friday, a ship collided with a river cruise boat in New Orleans, causing it to sink in the Mississippi River, some Microsoft users were offline for a second day as the company scrambled to restore its widely used suite of workplace software and the White House is tightening rules on how staffers interact with lobbyists.",
+   "opening": "",
+   "published": "2026-11-13T18:55:45-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-tanker-crashes-into-river-cruise-boat-in-new-orleans",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bessent accuses Lutnick of failing to prevent China from obtaining Nvidia chips",
+   "dek": "The fallout of Jensen Huang's downfall expanded into a public fight between two of President Trump's top advisers. Treasury Secretary Scott Bessent accused Commerce Secretary Howard Lutnick of failing to prevent China from obtaining Nvidia's most advanced chips. Nick Schifrin looks at the finger-pointing and the ongoing efforts to control advanced technology exports to China.",
+   "opening": "",
+   "published": "2026-11-13T18:50:51-05:00",
+   "link": "https://www.pbs.org/newshour/show/bessent-accuses-lutnick-of-failing-to-prevent-china-from-obtaining-nvidia-chips",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Does Van Hollen have enough support to beat Schumer in Senate leadership race?",
+   "dek": "Senate Democrats won back their majority last week, and now they're fighting over who will lead it. Maryland Sen. Chris Van Hollen has thrown his hat in the ring and says he will take on current Democratic leader Chuck Schumer. Congressional correspondent Lisa Desjardins reports on the first serious challenge Schumer has faced to his party leadership.",
+   "opening": "",
+   "published": "2026-11-13T18:40:11-05:00",
+   "link": "https://www.pbs.org/newshour/show/does-van-hollen-have-enough-support-to-beat-schumer-in-senate-leadership-race",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Brooks and Marcus on how Republicans are responding to midterm losses",
+   "dek": "David Brooks of The Atlantic and Ruth Marcus of The New Yorker join Amna Nawaz to discuss the week in politics, including the fallout of Nvidia CEO Jensen Huang's resignation and what the Trump administration knew, how Republicans are responding to their losses in the midterm elections, JD Vance's chances in 2028 and the Democratic leadership battle in the Senate.",
+   "opening": "",
+   "published": "2026-11-13T18:30:37-05:00",
+   "link": "https://www.pbs.org/newshour/show/brooks-and-marcus-on-how-republicans-are-responding-to-midterm-losses",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Signals New Strategy on Iran: A Waiting Game",
+   "dek": "The administration appears to be moving toward a long-term economic pressure campaign as President Trump expresses little urgency in securing a nuclear agreement.",
+   "opening": "",
+   "published": "2026-11-13T18:20:50+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/us/politics/trump-iran-strategy.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Biggest Scandal of the Trump Administration? Plus. . .",
+   "dek": "In today&#8217;s Front Page, Pottinger on why the Nvidia scandal is a political scandal of epic proportions, Dhillon tells all to Audrey Fahlberg in her first interview since leaving the Trump administration, and more.",
+   "opening": "It&#8217;s Friday, November 13. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Audrey Fahlberg interviews Harmeet Dhillon on why she quit the Trump administration. Roy Altman memorializes the federal judge who wasn&#8217;t afraid to talk politics outside the courtroom. Yuval Levin on how Congress&#8217;s new Democratic majority will move both parties to the right. And much more. But first: the scandal of the decade? Jensen Huang&#8217;s fall from grace this week is one of the year&#8217;s biggest spectacles in business, technology, and international politics. Yet now that the Nvidia founder has been ousted from the chip company he built into a titan, the world is still not sure what we&#8217;re looking at. The possibilities range from a salacious sex scandal &#224; la Bill Clinton to a strategic betrayal akin to the Rosenbergs . The plot thickened on Thursday as members of both parties called for Huang to testify before Congress. Lawmakers want to know whether the alleged Chinese spy with whom Huang had an affair helped smuggle restricted chips to her homeland&#8212;with or without Huang&#8217;s knowledge. Commerce Secretary Howard Lutnick is facing similar heat, as critics allege that he loosened barriers on foreign chip sales despite being warned of a possible scheme. These suspicions point to a gut-wrenching possibility: that the Donald Trump administration and major players in America&#8217;s A",
+   "published": "2026-11-13T18:11:35+00:00",
+   "link": "https://www.thefp.com/p/the-biggest-scandal-of-the-trump-jensen-huang-nvidia",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_afederal_alleged-aside-ballots-cant": [
+     "alleged",
+     "judge"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Is This the Most Serious Scandal of the Trump Era?",
+   "dek": "If Jensen Huang&#8217;s mistress was channeling Nvidia&#8217;s chips to China&#8212;and the administration looked the other way&#8212;it will constitute a breathtaking breach of national security, write Matt Pottinger and Liza Tobin.",
+   "opening": "Jensen Huang may have resigned from the AI-chip behemoth he founded, but the investigation into what he knew and when he knew it&#8212;about his mistress Alice Huang, and about where her company was delivering Nvidia&#8217;s most advanced chips&#8212;that&#8217;s just beginning. Congressional investigators will soon be asking whether Jensen Huang helped Alice Huang, an alleged Chinese spy, to circumvent U.S. export controls to supply powerful chips to China&#8217;s AI companies. Did he have access to&#8212;and pass on&#8212;U.S. classified information? As a member of the President&#8217;s Council of Advisors on Science and Technology, Jensen Huang was eligible for a security clearance and may have been briefed on sensitive intelligence. And given Alice Huang&#8217;s alleged ties to the Ministry of State Security (MSS), was she then feeding information to the Chinese government? We&#8217;ll return to Alice Huang and the MSS in a minute. But first we mustn&#8217;t overlook the companion narrative that only adds to the scandal. That is a story of brazen regulatory capture: how Jensen Huang gained personal, persistent access to the president of the United States, the secretary of commerce, and other key officials&#8212;and how he used that access to advocate policies that have put America&#8217;s foremost adversary, the People&#8217;s Republic of China, within reach of becoming the dominant power in artificial intelligence. &#8220;China is going to win the AI race,&#8221; Jensen ",
+   "published": "2026-11-13T18:08:09+00:00",
+   "link": "https://www.thefp.com/p/is-this-the-most-serious-scandal-of-trump-era-jensen-huang-nvidia",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "export control",
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bessent Faults Commerce Dept. for Failing to Blacklist Megaspeed",
+   "dek": "The Treasury secretary blamed the department for not sanctioning the Singaporean firm and said that Nvidia employees should be held accountable if they sidestepped the law.",
+   "opening": "",
+   "published": "2026-11-13T17:05:12+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/business/economy/bessent-commerce-megaspeed-lutnick.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang’s Resignation From Nvidia Worries the A.I. Start-Up World",
+   "dek": "Mr. Huang championed start-ups, with Nvidia holding $48 billion worth of stakes in 229 private companies, including OpenAI and Anthropic, at the end of July.",
+   "opening": "",
+   "published": "2026-11-13T16:36:28+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/technology/jensen-huang-silicon-valley-start-ups.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nationwide FAA ground stop lifted but cancellations, significant delays to continue: Transportation secretary",
+   "dek": "The Federal Aviation Administration lifted a nationwide ground stop after more than four hours due to communication issues impacted Air Route Traffic Control Centers on Friday.",
+   "opening": "An hours-long nationwide ground stop issued by the Federal Aviation Administration (FAA) on Friday afternoon was lifted after 8 p.m. ET, Transportation Secretary Sean Duffy said during a White House news conference. Duffy said in the White House briefing room: \"We’ve opened up the airspace,\" but he said it would take time to get flights out. \"It's going to be slow,\" he said. \"Check with your airline.\" Duffy said at 3:36 p.m. the U.S. began to experience \"instability for our radar and communications\" system and the ground stop was issued out of an abundance of caution. \"We had intermittent communication and intermittent radar … which is why we shut the airspace down,\" he said. TSA DISCOVERS SUSPECTED COCAINE WORTH $27,750 HIDDEN IN COFFEE CONTAINER AT AIRPORT \"We didn’t lose all communications,\" Duffy said, adding that \"lifesaving\" and law enforcement flights were allowed to continue. The U.S. has an \"incredibly old air traffic control system,\" he explained, adding, \"The system got overloaded.\" He also noted that President Donald Trump has been asking for funding to update the system. \"What’s more important than having an air traffic control system that works?\" he asked. Duffy said he’s now asking for $50 billion in emergency funding to update the system, adding that he couldn't rule out another outage. After the briefing, Duffy posted on X: \"The nationwide ground stop lifted at 8:15pm ET. Here’s a breakdown of today’s timeline: - At 3:36 p.m. ET, @FAANews experienced telecomm",
+   "published": "2026-11-13T16:28:37-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-us/nationwide-faa-ground-stop-lifted-cancellations-significant-delays-continue-transportation-secretary",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "timeline"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "With his challenge to Schumer, Van Hollen forces a debate over Democrats' mandate",
+   "dek": "Democrats say they have a mandate to deliver change, but as the party gets ready to retake the majority in both the House and Senate, there are divides over who should lead it.",
+   "opening": "Democrats say they have a mandate to deliver change, but as the party gets ready to retake the majority in both the House and Senate, there are divides over who should lead it.",
+   "published": "2026-11-13T16:06:09-05:00",
+   "link": "https://www.npr.org/2026/11/13/nx-s1-6040044/dem-senate-leader-fight",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rescues operations underway in New Orleans after tanker hits river cruise boat",
+   "dek": "A tanker struck a New Orleans river cruise with 129 passengers on board on Friday, partially submerging the boat. Rescues were underway on the Mississippi River, officials say.",
+   "opening": "",
+   "published": "2026-11-13T16:00:35-05:00",
+   "link": "https://www.pbs.org/newshour/nation/rescues-operations-underway-in-new-orleans-after-tanker-hits-river-cruise-boat",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fewer Fed Meetings Raise Stakes of Warsh’s Communications",
+   "dek": "The Federal Reserve will vote on interest rates less frequently beginning next year as part of a plan by the central bank’s chairman, Kevin M. Warsh, to overhaul how it operates.",
+   "opening": "",
+   "published": "2026-11-13T15:45:40+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/business/federal-reserve-meetings-warsh.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "fed": [
+     "warsh"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rep Lauren Boebert projected to lose House seat in another Democratic flip",
+   "dek": "Rep. Lauren Boebert, R-Colo., lost her congressional seat to Democratic challenger Eileen Laubacher. Boebert, an ally of President Trump, was seeking a fourth term.",
+   "opening": "GOP firebrand Rep. Lauren Boebert , R-Colo., is projected to lose her seat in the House to Democratic challenger Eileen Laubacher. The Associated Press made the call in the razor-thin race Friday afternoon in favor of Laubacher, who maintained her slim 48.7% lead over Boebert’s 47.9% once 99% of the ballots had been counted. GOP SENATOR SAYS REPUBLICANS CAN 'FORGET 2028' AS PARTY LOOKS TO RECLAIM UPPER CHAMBER Libertarian candidate Douglas Mangeris came in third with a little more than 3% of the vote. Laubacher is projected to win Colorado’s 4th Congressional District, according to the AP. Boebert was running for her fourth term in the state. She served her first two terms in Colorado’s third district and was running for her second term in the state’s fourth district. 2026 MIDTERMS: PRIMARIES, KEY RACES AND ELECTION RESULTS The 39-year-old congresswoman’s loss comes amid a blue wave that saw Democrats flip seats in Republican strongholds like Texas, Kansas, South Carolina and Mississippi. Democrats now have 256 seats in the House of Representatives to Republicans’ 169. A party needs 218 for a majority. Several races nationwide remain uncalled nearly two weeks after Election Day. This is a developing story. Please check back for updates.",
+   "published": "2026-11-13T15:37:39-05:00",
+   "link": "https://www.foxnews.com/politics/rep-lauren-boebert-projected-lose-house-seat-another-democratic-flip",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Former CIA Director John Brennan's son arrested after FBI uncovers dozens of alleged child porn images",
+   "dek": "Kyle Brennan, 40, son of former CIA Director John Brennan, was arrested on a federal child pornography charge after an FBI investigation, prosecutors say.",
+   "opening": "The son of former CIA Director John Brennan was arrested for allegedly possessing child pornography, Fox News has learned. Kyle Brennan, 40, was charged with transportation of child pornography, according to a federal complaint. The case originated when Adobe CyberTipline reports flagged accounts linked to Brennan for uploading illicit files involving minors. In April and June 2024, Adobe submitted two reports to the National Center for Missing and Exploited Children (NCMEC) regarding an account allegedly used to upload suspected child sexual abuse material. FEDERAL JUDGE BLOCKS BLUE STATE'S LAW PROHIBITING ICE AGENTS FROM WEARING MASKS ON THE JOB The FBI's Washington field office is involved in the investigation . Around April 7, 2024, three files were uploaded to the Adobe account. A review of the files indicated a file that appeared to be a morphed image combining the face of a minor girl, later identified as a 12-year-old, with the naked body of another minor, federal prosecutors said. Comcast records showed that the IP address used to upload the files was registered to Kyle Brennan at an address in Warrenton, Virginia, where he lives. Records from Apple later confirmed that the private relay account was registered to Brennan, authorities said. DOJ LAUNCHES GRAND JURY PROBE INTO MARXIST MOGUL NEVILLE ROY SINGHAM'S FUNDING OF LEFTIST GROUPS In July 2024, authorities searched Brennan's home and seized his iPhone. The case was referred to the FBI in October, and a judge sign",
+   "published": "2026-11-13T15:36:32-05:00",
+   "link": "https://www.foxnews.com/politics/former-cia-director-john-brennans-son-arrested-after-fbi-uncovers-dozens-alleged-child-porn-images",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_admissions-dismisses-harvard-judge": [
+     "judge",
+     "records"
+    ],
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ],
+    "obj_x_declares-monument-national-office": [
+     "office",
+     "national"
+    ],
+    "obj_x_body-charged-death-foster": [
+     "charged",
+     "girl"
+    ],
+    "obj_afederal_alleged-aside-ballots-cant": [
+     "alleged",
+     "judge"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang’s Fall Costs Asia an A.I. Ambassador to the U.S.",
+   "dek": "The ex-Nvidia C.E.O. was a bridge between companies and governments. His exit will reverberate, especially in China where it could accelerate a self-reliance drive.",
+   "opening": "",
+   "published": "2026-11-13T15:29:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/business/jensen-huang-nvidia-china-asia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Landslides Renew American Politics",
+   "dek": "When the electoral map seems fixed, the only way to win is turnout. Now that more states are in play, winning the center is key, writes Yuval Levin.",
+   "opening": "The ideological and policy implications of this month&#8217;s massive Democratic midterm victory remain far from clear. The public roundly rejected Republicans but still has a very low opinion of Democrats. And since congressional Democrats won&#8217;t have the numbers to routinely override presidential vetoes and did not even run on any shared agenda, they aren&#8217;t likely to chart any aggressive new direction in governing over the next two years. But in the long run, it may be the sheer scale and breadth of the Democrats&#8217; win that matters most, and that may signal the dawning of a new phase of American political life. Either party could plausibly dominate that next phase, or power could continue to swing back and forth. But simply by making large majorities imaginable again, and so focusing political competition on the median voter and the challenge of building broad coalitions, this election could allow for some renewal in our constitutional system. Read more",
+   "published": "2026-11-13T15:26:55+00:00",
+   "link": "https://www.thefp.com/p/how-landslides-renew-american-politics",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Schumer's leadership rival reveals major Senate rule change he'd pursue if elected",
+   "dek": "Chuck Schumer faces a rare contested Senate leadership race as Chris Van Hollen pushes to abolish the filibuster and shake up Democratic strategy.",
+   "opening": "DENVER — A mile above much of the country, and leagues away from Washington, D.C., Senate Minority Leader Chuck Schumer , D-N.Y., is facing a progressive rebellion that threatens his grip on power. The challenge is being led by Sen. Chris Van Hollen, D-Md., who has served under Schumer since 2017. And he is willing to go further than Schumer ever has on one issue: terminating the filibuster. Years ago, Schumer tried and failed to narrowly change the Senate’s rule to pass a sweeping voting rights package. Republicans have toyed with it over the last two years, but never pulled the trigger. SCHUMER'S FORMER ALLY MOUNTS LEADERSHIP CHALLENGE AS DEMOCRATS FACE RARE INTERNAL POWER STRUGGLE Van Hollen said, \"We need democracy in the United States Senate, and that means allowing, ultimately, a majority of senators to answer the call of the American people. \"So, that means 51 votes. So, my personal view has been all along that the filibuster is an anti-democratic … provision. It's not in our Constitution,\" Van Hollen added. \"It was put in there by senators to enhance their power over the power of the people.\" Van Hollen announced his challenge against Schumer , who has led Senate Democrats for nearly a decade, Thursday night after a listening campaign with Senate Democrats. It presents a rare opportunity for Senate Democrats since there hasn’t been a contested Democratic leadership election since 1994. Just a week earlier, Van Hollen was mulling higher office, but now he’s giving up a",
+   "published": "2026-11-13T15:15:55-05:00",
+   "link": "https://www.foxnews.com/politics/schumers-leadership-rival-reveals-major-senate-rule-change-hed-pursue-if-elected",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Pete Hegseth impeachment effort dies in the House as absent Democrats couldn't beat the traffic",
+   "dek": "Pete Hegseth narrowly avoided becoming only the third cabinet secretary ever impeached after 11 absent Democrats failed to reach the House floor.",
+   "opening": "Most of America bemoans political gridlock in the nation’s capital. DC area commuters deplore the city’s transit gridlock. But Pentagon chief Pete Hegseth may now be a fan of DC’s legendary traffic snarls. It appears that crosstown traffic may have prevented him from becoming only the third Cabinet secretary ever impeached by the House of Representatives. The House voted 211-204 this week to divert an effort by Rep. Thomas Massie (R-Ky.) to impeach Hegseth. House Republicans moved to block a straight, up-or-down vote on impeachment. Instead, Republicans forced a vote on sending the articles to the Judiciary Committee. That’s where they’d go to die. If the House failed to sidetrack the articles, Members would have then voted on actual impeachment. If a simple majority voted to impeach, Hegseth would join 19th century Secretary of War William Belknap and former Homeland Security Secretary Alejandro Mayorkas as the only Cabinet Members impeached by the House. But DC’s streetside congestion altered the parliamentary traffic on the House floor. All Democrats said they were intent on impeaching Hegseth. But Republicans faced an attendance problem. Seven of their Members were missing. The vote on sending the impeachment articles to committee was tight. The tally read 204-204 at one point. By rule, tie votes fail. That would have compelled a vote on actual impeachment. But a few more Republicans trickled in. The absent Democrats never did. Rep. Dan Newhouse (R-Wash.) presided over th",
+   "published": "2026-11-13T15:13:17-05:00",
+   "link": "https://www.foxnews.com/politics/pete-hegseth-impeachment-effort-dies-house-absent-democrats-couldnt-beat-traffic",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "failed",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Two top Trump Cabinet officials go to war over China spy scandal amid explosive accusations: report",
+   "dek": "A White House Situation Room meeting erupted after Nvidia CEO Jensen Huang&apos;s affair with a suspected Chinese spy tied to chip diversions was revealed.",
+   "opening": "A White House Situation Room meeting reportedly turned into a blowout between two of President Donald Trump's Cabinet secretaries after news broke that Nvidia CEO Jensen Huang had an affair with a suspect Chinese spy. Tempers apparently boiled over regarding claims Commerce Secretary Howard Lutnick dragged his feet on placing restrictions on a company run by a suspected Chinese spy with whom Huang admitted to having an affair, even after the Cabinet official received an intel memo informing him of the potential threat. Treasury Secretary Scott Bessent reportedly confronted Lutnick about that in the meeting, and other Cabinet officials took Bessent's side, according to Axios. Trump has for months called to place companies suspected of supplying China with Nvidia's complex AI chips on what is called the Entity List, a Department of Commerce export control list that identifies companies the U.S. government believes pose a serious risk to national security. A SPY TOOK OUT NVIDIA’S CEO; HERE’S HOW AMERICA STILL WINS THE AI RACE Three times — in May, August and last Thursday — Trump approved taking action against companies believed to be diverting Nvidia chips to China, according to Axios . One of those companies is Singapore-based Megaspeed International , which is reportedly one of Nvidia's largest customers. Suspected Chinese spy Alice Huang, with whom the former Nvidia CEO admitted to having an affair, is an executive at Megaspeed. Lutnick was accused of slow-rolling in putting",
+   "published": "2026-11-13T14:49:44-05:00",
+   "link": "https://www.foxnews.com/politics/two-top-trump-cabinet-officials-go-war-over-china-spy-scandal-amid-explosive-accusations-report",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "export control",
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia stock slide wipes out more than $20B in value for Jensen Huang over 5 days",
+   "dek": "The declining share price of Nvidia this week has wiped out around $20 billion of the value of ex-CEO Jensen Huang&apos;s stock holdings in the company.",
+   "opening": "The value of former Nvidia CEO Jensen Huang's stock holdings in the tech company have plunged more than $20 billion this week. A September Securities and Exchange Commission filing showed Huang reporting beneficial ownership of approximately 811.5 million Nvidia shares, including about 70.1 million shares held directly and hundreds of millions more held through trusts and other entities. Given Nvidia's closing share price of $186.64 on Friday Nov. 6, and with the price trading around $161 during the market session Friday, the value of Huang's holdings has declined by more than $20 billion this week. The decline represents a reduction in the market value of the shares, rather than realized losses from stock sales. Huang's resignation does not automatically affect his ownership of the shares. NVIDIA CEO JENSEN HUANG RESIGNS AMID INVESTIGATION INTO RELATIONSHIP WITH ALLEGED CHINESE SPY The company on Thursday announced that Huang had resigned from his roles as president, CEO and board member at Nvidia. He stepped down from the company days after admitting to marital infidelity. TRUMP SAYS ‘THERE IS ONLY ONE MAN’ TO REPLACE JENSEN HUANG AS NVIDIA CEO In a Sunday email to employees that Nvidia shared publicly, Huang said he had been \"unfaithful\" to his wife. \"My actions hurt her and our children. There is no excuse for what I did. I am deeply sorry,\" he said in a portion of the statement . \"Regarding the national security concerns raised in news reports, NVIDIA’s Board of Director",
+   "published": "2026-11-13T14:40:12-05:00",
+   "link": "https://www.foxbusiness.com/markets/nvidia-stock-slide-wipes-out-billions-value-jensen-huang-days",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Posner’s Last Lesson for the Judiciary",
+   "dek": "The legendary jurist died this week at age 87. His legacy is changing not only how judges like me think about the law but how we think of our role in American public life, writes Roy K. Altman.",
+   "opening": "The federal judiciary has lost a giant. Judge Richard A. Posner died this week at the age of 87 . Appointed by President Ronald Reagan in 1981, Judge Posner served for nearly 36 years on the Chicago-based U.S. Court of Appeals for the Seventh Circuit. His contribution to American law is staggering. Over his extraordinary career, he authored some 3,300 judicial opinions, hundreds of scholarly articles, and over 40 books. These writings fundamentally altered the way lawyers and judges think about the law. Judge Posner believed, for example, that judges should understand the world their decisions govern. As a professor at the University of Chicago, he helped pioneer the field of law and economics, which applies economic principles to legal questions. His seminal 1973 treatise, Economic Analysis of Law , taught generations of lawyers to examine how legal rules influence human behavior by allocating costs and creating incentives. He also encouraged judges to consider how their rulings would shape the future decision-making of individuals and institutions across our society. But Judge Posner didn&#8217;t just change how judges like me think about the law; he also challenged us to think differently about our place in American public life. Read more",
+   "published": "2026-11-13T14:34:21+00:00",
+   "link": "https://www.thefp.com/p/judge-posners-last-lesson-for-the-judiciary",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "judge",
+     "rules"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mortgage Rates Remain High as Affordability Challenges Persist",
+   "dek": "The average 30-year, fixed-rate home loan fell slightly, to 7.11 percent, pushing buyers and sellers to the sidelines until conditions improve.",
+   "opening": "",
+   "published": "2026-11-13T14:28:29+00:00",
+   "link": "https://www.nytimes.com/2026/11/12/business/mortgage-rates-home-sales-housing-market.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "housing": [
+     "mortgage rate"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Howard Lutnick Took Softer Line on Nvidia as Calls for Tougher Controls Grew",
+   "dek": "Critics say Howard Lutnick, the commerce secretary, and his department have shielded Nvidia as concerns have grown over A.I. chip sales to firms like Megaspeed.",
+   "opening": "",
+   "published": "2026-11-13T14:02:13+00:00",
+   "link": "https://www.nytimes.com/2026/11/12/us/politics/lutnick-nvidia-commerce-china-chips.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New candidate emerges to replace Jensen Huang as Nvidia CEO",
+   "dek": "The board of Nvidia has approached Rene Haas, the CEO of British chipmaker Arm, as it searches for a replacement for ousted CEO Jensen Huang, a report said.",
+   "opening": "Nvidia's Board of Directors has approached Rene Haas, the CEO of British chipmaker Arm, in its search for the successor to Jensen Huang, according to a report from the Financial Times. The outlet reported Friday that Haas, who had led Arm since 2022, spent seven years working at Nvidia more than a decade ago and has a \"strong relationship\" with Huang and some of Nvidia's board members. \"It’s a no comment from us,\" Arm told FOX Business when asked about the report. Huang resigned Thursday after Nvidia's board investigated his reported affair with a tech executive suspected of being a Chinese intelligence source. Huang is also alleged to have had extramarital relationships with two employees at Nvidia. MEET NVIDIA'S NEW INTERIM CEO: THE FORTUNE AND RISE OF COLETTE KRESS Nvidia said Thursday that Colette Kress, its current executive vice president and chief financial officer, has agreed to serve as interim CEO in the wake of Huang's departure. \"The Board is initiating a search for a permanent Chief Executive Officer and will consider internal and external candidates,\" the company said. NVIDIA CEO JENSEN HUANG RESIGNS AMID INVESTIGATION INTO RELATIONSHIP WITH ALLEGED CHINESE SPY Nvidia described Jensen's contributions to the company as \"profound.\" \"NVIDIA is one of the most consequential technology companies in the world. The Board and the company thank Jensen for his immeasurable contributions to the company and the industry,\" the company said. \"Kress has served as Executive Vic",
+   "published": "2026-11-13T13:44:27-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-tech/new-candidate-emerges-replace-jensen-huang-nvidia-ceo",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Schumer's former ally mounts leadership challenge as Democrats face rare internal power struggle",
+   "dek": "Senate Democrats face their first contested leadership race since 1994 as Chris Van Hollen challenges Chuck Schumer with Bernie Sanders&apos; backing.",
+   "opening": "Senate Democrats are getting an opportunity they haven’t had in decades: a different option for who their leader could be. Even before the blue wave crashed over Republicans and Democrats emerged with a commanding majority in the Senate, the rumblings for Senate Minority Leader Chuck Schumer, D-N.Y., to step aside were there. Now, he’s got a challenger in Sen. Chris Van Hollen, D-Md., a familiar face in Washington, D.C., who framed his bid against Schumer as one answering the call for change voters demanded. It’ll be the first time that a Senate Democratic leadership race will be contested since 1994. DEMOCRATS TURN ON SCHUMER AFTER HISTORIC ELECTION WINS AS POTENTIAL CHALLENGER EMERGES Van Hollen’s emergence, at 67, as the lone challenger to Schumer, 75, comes after lawmakers and candidates demanded a change in Democratic leadership before the election. That call has only intensified in the week after Democrats won the midterms, with Van Hollen interpreting the seismic political shift as an indictment of President Donald Trump that can only be acted on if Senate Democrats go in a new direction. The challenge is already dividing Senate Democrats. In an interview with MS NOW, Van Hollen didn’t offer a sharp policy contrast to Schumer, and cast doubt on Democrats’ ability to pass key progressive desires, like Medicare for All. \"But it should be very clear: While, you know, voters have rejected the Trump policies, they’ve not yet hired Democrats — they’ve given us a chance, we h",
+   "published": "2026-11-13T13:23:20-05:00",
+   "link": "https://www.foxnews.com/politics/schumers-former-ally-mounts-leadership-challenge-democrats-face-rare-internal-power-struggle",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Scorecard for Huang’s Exit From Nvidia",
+   "dek": "The ouster of Jensen Huang from the chipmaker he helped found is reverberating throughout Silicon Valley, Washington and beyond.",
+   "opening": "",
+   "published": "2026-11-13T13:19:40+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/business/dealbook/huang-nvidia-ouster-repercussions.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rubio takes aim at 'soulless global bureaucrats' pushing Marxism to undermine America",
+   "dek": "Secretary of State Marco Rubio is delivering a high-profile speech on the &quot;spirit of Marx&quot; Friday at the Federalist Society&apos; National Lawyers Convention.",
+   "opening": "FIRST ON FOX: Secretary of State Marco Rubio is taking aim at \"soulless global bureaucrats\" using \"rules-based order\" arguments to undermine U.S. foreign policy in a speech Friday, warning that the \"spirit of Marx\" outlived the Soviet Union. U.S. leaders of both parties defended the \"rules-based international order,\" the network of postwar institutions America built. Rubio is set to argue the system has been turned against the country that built it, the same case he made at his January 2025 confirmation hearing, when he called the postwar order \"a weapon being used against us.\" In a preview of Rubio’s speech obtained by Fox News Digital, he outlines how Marxism still has a strong presence in Western society, a view which is relevant amid the rise of communist and Marxist beliefs that have driven protests against the administration and Western beliefs. The remarks are subject to change during his speech. \"For this global elite, 'international law' is not a neutral body of rules,\" Rubio is expected to say. \"It's an instrument to advance their interests under the pretense of universal principles. They’re staunch defenders of democracy, until a particular election challenges their interests.\" RUBIO PUTS ENTIRE WORLD ON NOTICE AGAINST RISE OF 'POISONOUS' FAR-LEFT TERROR 'MASKED AS EQUALITY' \"Even as we defeated the institution of Soviet communism, we did not triumph over the spirit of Marx,\" Rubio’s expected remarks read. \"It lives on, in these new forms and doctrines, which would",
+   "published": "2026-11-13T12:41:40-05:00",
+   "link": "https://www.foxnews.com/politics/rubio-takes-aim-soulless-global-bureaucrats-pushing-marxism-undermine-america",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "western",
+     "postwar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's spy chiefs put Republican leaders on the clock over 'huge priority' as power shift looms over Congress",
+   "dek": "Trump&apos;s intelligence chiefs set a Dec. 9 deadline for Congress to reauthorize FISA Section 702 before Democrats take control of Capitol Hill.",
+   "opening": "EXCLUSIVE: President Donald Trump's top administration intelligence officials penned a letter to congressional leaders urging them to reauthorize the Foreign Intelligence Surveillance Act (FISA). An administration official told Fox News Digital the intel measure is at top of mind for the White House to get passed in the still-Republican-controlled Congress before Democrats take a majority on Capitol Hill in January. \"This is going to be a huge priority and push by the administration, by the White House for the lame-duck Congress, because this really needs to get done,\" the administration source said. \"Otherwise, we're kind of in trouble from a national security standpoint.\" They stressed that the White House is \"fully on board\" with the push by the intelligence agencies' leaders asking Congress to reauthorize the law, including the controversial Section 702. CONGRESS RETURNS TO BRUTAL LAME-DUCK STRETCH WITH SHUTDOWN DEADLINE, LEADERSHIP RACES: 'CLOSET IS FULL OF S—' The letter, signed by Attorney General Todd Blanche , Director of National Intelligence Jay Clayton and CIA Director John Ratcliffe, set a deadline for Dec. 9, 2026, less than a month before the new Congress will be sworn into office. Clayton and Ratcliffe briefed the Gang of 8 — members of Congress who are legally apprised of classified national security matters and covert operations by the executive branch — earlier this week about the status of FISA . TRUMP NOMINATES JAY CLAYTON, FORMER SEC CHAIRMAN, CURRENT US",
+   "published": "2026-11-13T11:11:21-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-spy-chiefs-put-republican-leaders-clock-huge-priority-power-shift-looms-congress",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ],
+    "obj_x_declares-monument-national-office": [
+     "office",
+     "national"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The mistake newly-elected Dems admit they can't afford to make with Trump after sweeping 2026 wins",
+   "dek": "Newly elected Democrats at a Denver conference urged their party to work with Donald Trump on costs and policy rather than focus solely on investigations.",
+   "opening": "DENVER — Congressional Democrats are heading into the next two years with a choice: focus on investigating President Donald Trump and his administration or look for ways to work with him to deliver results for Americans. The party, after sweeping pickups in last week's midterms, right away warned Trump and Republicans to \"lawyer up\" and in the following days began outlining investigations into the administration, including its handling of immigration enforcement, the president’s business interests and the Justice Department's actions. But newly elected Democrats and strategists at the \"What’s Next\" conference in Denver told Fox News Digital that their party should seek opportunities to work with Trump. The new guard argues that voters who elected them into office want to see results over partisan fights. ‘LAWYER UP’: DEMS IMMEDIATELY PUT TRUMP ON NOTICE AMID REPUBLICANS' MIDTERM BLOODBATH Hosted by Majority Democrats, the conference brought Democratic leaders, strategists and rising figures together to discuss the party’s direction after the midterms. Organizers billed it as an independent conversation about what Democrats should do next. Iowa Gov.-elect Rob Sand cautioned his party against making investigations and impeachments the focus of its new political momentum, particularly when the underlying issues have already been reported. Asked what he did not want Democrats to do as they take office, Sand said he did not want to see them \"throwing bombs\" at Republicans. Voters,",
+   "published": "2026-11-13T10:29:50-05:00",
+   "link": "https://www.foxnews.com/politics/mistake-newly-elected-dems-admit-cant-afford-make-trump-after-sweeping-2026-wins",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Meet the Tech Bro Whisperer, with Molly O’Shea",
+   "dek": "Molly O&#8217;Shea, the host of &#8216;Sourcery,&#8217; has interviewed founders like Palmer Luckey, Alex Karp, and Brian Armstrong. Today, she explains what the tech bros really want.",
+   "opening": "It&#8217;s easy to feel like Silicon Valley and the rest of America are two different countries these days. In San Francisco, the tech titans are building trillion-dollar companies and racing toward AGI, while the rest of us are worried about gas prices. But no matter how you feel about them, today&#8217;s tech bros are building businesses that may change our lives &#8230; Read more",
+   "published": "2026-11-13T10:02:18+00:00",
+   "link": "https://www.thefp.com/p/molly-oshea-suzy-weiss-palmer-luckey-alex-karp-jensen-huang",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Vance Out of Iran Talks & Iran Gets U.N. Role Over Women’s Rights and Terrorism",
+   "dek": "The Tech world faces a massive shake-up as Nvidia shares crater after its CEO resigns amid more allegations, President Trump pulls VP Vance from the Iran talks, saying “we don’t need a deal” – while gas prices continue to drop, and a migrant caravan in southern Mexico is heading toward the US, testing the presidents’ resolve on the border. Reporting from Megan Basham, Cabot Phillips & Tim Pearce. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 3:30 AM C",
+   "opening": "",
+   "published": "2026-11-13T09:30:20+00:00",
+   "link": "https://www.youtube.com/watch?v=YJS54QFiv8o",
+   "videoId": "YJS54QFiv8o",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "SOUND OFF: What's Chuck Schumer's future with Senate Dems?",
+   "dek": "What&apos;s your prediction on how Sen. Chuck Schumer fares against a new challenger to lead the Senate Democrats?",
+   "opening": "Sound off here: What's the future of the Senate Democrats' leadership now that Sen. Chuck Schumer faces a challenger?",
+   "published": "2026-11-13T09:18:30-05:00",
+   "link": "https://www.foxnews.com/politics/sound-off-whats-chuck-schumers-future-senate-dems",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rubio’s next move? Lawyers eye speech of 'visionary' leader for 2028 clues after GOP’s midterm wipeout",
+   "dek": "Secretary of State Marco Rubio&apos;s Federalist Society keynote comes as attendees wonder if he&apos;ll address GOP midterm losses and a 2028 presidential run.",
+   "opening": "Secretary of State Marco Rubio will deliver his first major speech apart from his diplomatic duties Friday following the GOP’s blowout midterm losses, with some attendees at the Federalist Society's National Lawyers Convention eager to hear how he will chart a path forward as the 2028 presidential race draws closer. \"I think it will be an interesting speech to see what he says post midterms,\" attendee Isaiah McKinney told Fox News Digital. \"I'm expecting him to discuss both the successes and failures of the administration and what his plans are moving forward — especially as the secretary of state. I hope he addresses the foreign policy implications and how he thinks foreign policy played a role into that, into the election results.\" Rubio will deliver an approximately 45-minute speech for the Barbara Olson Memorial Lecture, whose previous speakers include former Attorney General Bill Barr and The Free Press founder Bari Weiss. But another question weighs heavily on the minds of attendees at the annual conference in Washington, D.C., which attracts prominent lawyers affiliated with the conservative movement. HOUSE CONSERVATIVE EMERGES WITH 2028 PRESIDENTIAL PICK AFTER GOP'S MIDTERM MASSACRE: 'I AM ALL IN' \"There are a lot of people in the room who are going to be wondering if he's still planning on running for president someday,\" Rachel Paulose, a former U.S. attorney and general counsel at Upper Midwest Law Center, told Fox News Digital. \"That will be a question that will be",
+   "published": "2026-11-13T08:28:33-05:00",
+   "link": "https://www.foxnews.com/politics/rubios-next-move-lawyers-eye-speech-visionary-leader-2028-clues-gop-midterm-wipeout",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia CEO steps down. And, Sen. Chris Van Hollen to run for majority leader",
+   "dek": "Nvidia's chief financial officer has been appointed interim CEO after Jensen Huang stepped down from the role. And, Sen. Chris Van Hollen says he will challenge Chuck Schumer for majority leader.",
+   "opening": "Nvidia's chief financial officer has been appointed interim CEO after Jensen Huang stepped down from the role. And, Sen. Chris Van Hollen says he will challenge Chuck Schumer for majority leader. (Image credit: Stephen Maturen)",
+   "published": "2026-11-13T07:07:12-05:00",
+   "link": "https://www.npr.org/2026/11/13/g-s1-153532/up-first-newsletter-nvidia-jensen-huang-colette-kress-ukraine-russia-chris-van-hollen",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "schumer",
+     "role"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jeffries shredded over Hegseth impeachment snafu as Dem jockeys for speaker’s gavel",
+   "dek": "Eleven absent House Democrats handed Republicans a win on the Pete Hegseth impeachment vote, raising questions about Hakeem Jeffries&apos; leadership.",
+   "opening": "Back-to-back blunders on the House floor are raising questions over whether Democrats are ready for primetime as they're poised to take over the majority — and Minority Leader Hakeem Jeffries, D-N.Y., makes a bid for the top role. Democrats are projected to win 255 House seats, with 12 races yet to be called, and Jeffries is running to be Speaker of the House following the sweeping victories last week that saw the party make gains even in traditional Republican strongholds like Texas, Mississippi, Kansas and South Carolina. But some have questioned whether the recent snafus signal that Jeffries and other leaders may not be ready to be in command of the House majority. \"I may have to rethink my support of Hakeem Jeffries after the Hegseth impeachment vote,\" Fred Trump III, a Democrat, author and nephew of President Donald Trump, posted on X. \"Eleven Democrats do not show up? All Republicans vote it down.\" \" Pete Hegseth is laughing at you and is stronger today. Shame,\" he continued. \"A slap in the face of the military and veterans on this important day.\" HEGSETH THWARTS GOP-LED IMPEACHMENT PUSH AS QUESTIONS SWIRL OVER WHETHER ALLEGATIONS RISE TO HIGH CRIMES House GOP leaders successfully blocked Rep. Thomas Massie , R-Ky., from leading the charge to impeach Secretary of War Pete Hegseth earlier this week. Part of the reason for the failure was the absence of 11 House Democrats during a procedural vote on Tuesday evening. Had just seven of them been present, the vote to kill Ma",
+   "published": "2026-11-13T07:00:21-05:00",
+   "link": "https://www.foxnews.com/politics/jeffries-shredded-over-hegseth-impeachment-snafu-dem-jockeys-speakers-gavel",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push",
+     "leadership",
+     "role"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sen Bernie Sanders supports Chris Van Hollen's bid to challenge Schumer for Senate Democratic leader post",
+   "dek": "Sen. Bernie Sanders is backing Sen. Chris Van Hollen for the role of Senate Democratic leader, as Van Hollen challenges Sen. Chuck Schumer for the role.",
+   "opening": "Sen. Bernie Sanders , I-Vt., is backing Sen. Chris Van Hollen, D-Md., for the role of Senate Democratic leader. \"The American people voted for change. They want a Democratic Party that will stand up to powerful special interests, take on the billionaire class and fight for working families. That is why I am supporting Senator Chris Van Hollen to lead Senate Democrats,\" Sanders said in a Thursday post on X. Van Hollen threw his hat into the ring for the role on Thursday, mounting a challenge against current Senate Minority Leader Chuck Schumer , D-N.Y., who is looking to retain the Senate Democratic leader position to serve as Senate majority leader next year. \"In this election, Americans called on us to unrig an economy rigged against working people &amp; fueled by political corruption. To deliver, we need new leadership. This isn't about any one person – it’s about answering that call. That's why I’m running for Senate Majority Leader,\" Van Hollen said in a Thursday post on X. VAN HOLLEN CHALLENGES SCHUMER FOR SENATE LEADERSHIP AFTER DEMOCRATIC ELECTION SWEEP Schumer asserted in a post that he has the support to retain his leadership position: \"I welcome any discussion about the future of our caucus and the important work ahead. I’m proud of what we’ve accomplished together—55 seats and counting is an amazing result—and I have the votes to continue serving as Democratic Leader. I look forward to leading our new Democratic majority and delivering for the American people.\" San",
+   "published": "2026-11-13T06:06:30-05:00",
+   "link": "https://www.foxnews.com/politics/sen-bernie-sanders-supports-chris-van-hollen-bid-challenge-schumer-senate-democratic-leader-post",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer",
+     "leadership",
+     "role"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth awards medal to soldier who chastised him",
+   "dek": "Pete Hegseth was yelled at by a sentinel for poor decorum at Arlington National Cemetery. Now the Secretary of Defense has given him a medal.",
+   "opening": "Pete Hegseth was yelled at by a sentinel for poor decorum at Arlington National Cemetery. Now the Secretary of Defense has given him a medal. (Image credit: Mark Schiefelbein)",
+   "published": "2026-11-13T05:27:08-05:00",
+   "link": "https://www.npr.org/2026/11/13/nx-s1-6039845/hegseth-awards-medal-to-soldier-who-chastised-him",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
