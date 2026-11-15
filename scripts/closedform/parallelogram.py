@@ -12,6 +12,8 @@ import json, os, re, sys, hashlib, datetime, math, difflib
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import derive as D
 ROOT = D.ROOT; OUTD = os.path.join(ROOT, 'data', 'parallelograms'); os.makedirs(os.path.join(OUTD, 'in'), exist_ok=True)
+if os.environ.get('CF_OUT'):   # 11-13: a read by another model is kept apart (data/parallelograms/reads/<name>/), so it never writes over the standing read
+    OUTD = os.path.join(OUTD, 'reads', re.sub(r'[^A-Za-z0-9_.-]', '_', os.environ['CF_OUT'])); os.makedirs(OUTD, exist_ok=True)
 STATIONS = ['LI', 'RI', 'LP', 'RP']; TIERS = ['fluid', 'coalition', 'denominated']
 ZWORDS = {'realized strongly': 0.9, 'realized': 0.6, 'leaning realized': 0.3, 'neither': 0.0,
           'leaning frustrated': -0.3, 'frustrated': -0.6, 'frustrated strongly': -0.9}
@@ -95,11 +97,16 @@ For every line return:
  "touch": "O"|"T"|"M"|"F"|"X",   // O the object itself · T a dated record (a fact, a vote, a past statement) · M a mechanism (how one thing caused another) · F a frame (a story told about it) · X a challenge (counter-evidence)
  "measure": {enum},   // war = the fact of the war itself (will it happen, is it happening, boots or no boots)
  "due": "YYYY-MM-DD" or null,   // ONLY if the line forecasts: the date by which it says the object will have moved — a date it names, or the plain reading of its own words from the post's date ("within a week", "by the midterms", "this summer"). A line about the present or the past: null
- "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // what THIS line believes happened, on the object's z
+ "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // the side THIS line takes on where the object stands, or is being taken, as of its date — by the three rules below
  "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
  "credulity": "engaged"|"withdrawn"|"none",   // does the speaker accept (engaged) or refuse (withdrawn) a reading they would otherwise be expected to hold? most lines: none
  "station": "LI"|"RI"|"LP"|"RP",   // only a proposal: Left/Right x Institutional/Populist (outsider); the writer's label wins
  "why": "one plain sentence"}}
+HOW TO CHOOSE z (ruled 11-14, after two Sonnet reads of the same lines disagreed on z four times in ten; the disagreement was almost never about strength, it was about whether a line takes a side at all):
+1. A shadow line takes no side: "neither". It is about who is to blame, not about the object.
+2. A line that says nothing about the object's condition takes no side: "neither". An episode title or teaser that only names a topic ("X on how it happened"), a bare question, a hope, a prayer, a wish.
+3. A line that CARRIES THE LOGIC of a course someone is on takes the side that course leads to, even though the cost it names has not happened. "The first week of a war with Iran could easily kill thousands of Americans", said while men are lobbying for that war, reads frustrated: the speaker is naming what is being wagered. It is an extrapolation, not a forecast; give it no due date unless it says the thing WILL happen. Its strength is how hard the line reads the cost, not whether the cost came true (the body shows that, and the distance between the two is what Prism reads).
+   But a line that only weighs a course the line itself says nobody is on ("it would be a mistake to invade", "clearly that is not happening") takes no side from the course it weighs: "neither", unless it also says where things stand now.
 Answer: {{"lines": [ ... ]}} — valid JSON only. Inside a string never use a double quote; quote words with single quotes."""
     return sys_, user
 
@@ -236,11 +243,11 @@ def main():
     hs = h + '-ctx5'   # scoring/second-pass cache key (ctx5 11-08: measures, not gears; the line's own measure in the second pass; ctx4 11-07: the war added): the input + the prompt version (11-07: whole post only where the voice isn't the poster's own — ctx2 gave it to every line and flattened them)
     gpath = os.path.join(OUTD, f'{pid}.grammar.json')
     _PROG['path'] = os.path.join(OUTD, f'_run_{pid}.progress.json'); progress('grammar', posts=[{'n': i, 'who': it['who'], 'date': it['date'], 'station': it['station'], 'text': it['text']} for i, it in enumerate(items)])
-    k = None if dry else (D.key() or ('offline' if os.environ.get('CF_ANSWERS') else None))
+    k = None if dry else (('local' if D.is_local(D.MODEL) and D.is_local(READ_MODEL) else None) or D.key() or ('offline' if os.environ.get('CF_ANSWERS') else None))   # 11-13: all-local needs no key
     if not dry and not k:
         print('no ANTHROPIC_API_KEY — run "Run the Closed Form.command" once (it asks for the key)'); sys.exit(2)
     # 1 · grammar — saved and reused (reproducible)
-    hg = h + '-g2'   # grammar cache key (g2 11-08: measure + due fields)
+    hg = h + '-g3'   # grammar cache key (g3 11-14: the three rules for choosing z; g2 11-08: measure + due fields)
     reused = os.path.exists(gpath) and not fresh and json.load(open(gpath)).get('hash') == hg
     if reused:
         gram = json.load(open(gpath)); print('grammar: reused', gpath)

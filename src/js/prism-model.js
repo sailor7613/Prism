@@ -298,9 +298,12 @@
 
     // ── THE MAP, lying on the water: a field of four colours with no seam; from below, the film ──
     const mapFrame = new THREE.Group(); mapFrame.position.copy(C); mapFrame.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(EX, UP, EZ)); add(mapFrame);
-    { const plane = new THREE.Mesh(new THREE.PlaneGeometry(M, M), shader({ uniforms: Object.assign({ uT }, stationU), side: THREE.DoubleSide,
-        vertexShader: 'varying vec2 vUv; varying vec3 vW; void main(){ vUv = uv; vec4 w = modelMatrix * vec4(position,1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }',
-        fragmentShader: ['varying vec2 vUv; varying vec3 vW; uniform float uT;', FILM, FIELD,
+    // 11-12, the legibility pass (Sailor): vivid, lit by itself, clear quadrant boundaries. Deeper colour at ~62% in place
+    // of a 36% wash; each colour holds flat through its quadrant and blends only in a band at the axes; a bright line
+    // round the square in place of the fade; the lines in order — edge, axes, rings; the Venus film in the edge and the
+    // axes, never in the fields. ?map=old (or opts.mapOld) is the map as it was.
+    const MAP_OLD = !!opts.mapOld || /[?&]map=old\b/.test((root.location && root.location.search) || '');
+    { const fragOld = ['varying vec2 vUv; varying vec3 vW; uniform float uT;', FILM, FIELD,
           'float ring(float r, float at){ return smoothstep(0.014, 0.0, abs(r - at)); }',
           'void main(){ vec2 n = vec2(vUv.x, 1.0 - vUv.y); vec2 q = (n - 0.5) * 2.8; float r = length(q);',
           '  vec3 col = mix(field(n), CREAM, 0.12); float edge = smoothstep(0.0, 0.07, vUv.x) * smoothstep(1.0, 0.93, vUv.x) * smoothstep(0.0, 0.07, vUv.y) * smoothstep(1.0, 0.93, vUv.y);',
@@ -310,7 +313,32 @@
           '  if (!gl_FrontFacing) { vec3 V = normalize(cameraPosition - vW); float g = 1.0 - abs(V.y);',
           '    col = mix(mix(col, vec3(dot(col, vec3(0.333))), 0.55) * vec3(0.97, 0.98, 1.04), mix(film(r * 0.10 + g * 0.55 + uT * 0.01), CREAM, 0.45), 0.34); a = 0.34 * edge; }',
           '  col = mix(col, CREAM, lines); a = max(a, lines * edge * 0.8);',
-          '  gl_FragColor = vec4(col, a); }'].join('\n') }));
+          '  gl_FragColor = vec4(col, a); }'].join('\n');
+      const fragNew = ['varying vec2 vUv; varying vec3 vW; uniform float uT;', FILM, FIELD,
+          'uniform float uBand; uniform float uSat; uniform float uBody;',
+          'float ring(float r, float at){ return smoothstep(0.010, 0.002, abs(r - at)); }',
+          'vec3 quad(vec2 n){ vec2 s = smoothstep(0.5 - uBand, 0.5 + uBand, n); return mix(mix(cLI, cRI, s.x), mix(cLP, cRP, s.x), s.y); }',
+          'void main(){ vec2 n = vec2(vUv.x, 1.0 - vUv.y); vec2 q = (n - 0.5) * 2.8; float r = length(q);',
+          '  vec3 base = quad(n); float l = dot(base, vec3(0.299, 0.587, 0.114));',
+          '  vec3 col = clamp(mix(vec3(l), base, uSat), 0.0, 1.0) * 0.86;',                       // deeper, not lighter
+          '  col *= mix(1.0, 0.80, smoothstep(0.55, 1.95, r));',                                  // a little fuller at the centre, where the light lands
+          '  float e = min(min(vUv.x, 1.0 - vUv.x), min(vUv.y, 1.0 - vUv.y));',
+          '  float a = uBody;',
+          '  float edgeL = 1.0 - smoothstep(0.0035, 0.0085, e);',                                 // the line round the square
+          '  float axes = max(smoothstep(0.017, 0.006, abs(q.x)), smoothstep(0.017, 0.006, abs(q.y)));',
+          '  float rings = max(ring(r, 0.5051), ring(r, 0.8562));',                               // Dia 33 and 66
+          '  vec3 irid = mix(film(n.x * 0.85 + n.y * 0.55 + uT * 0.025), CREAM, 0.42) * 1.05;',
+          '  if (!gl_FrontFacing) { vec3 V = normalize(cameraPosition - vW); float g = 1.0 - abs(V.y);',   // from below: the film, as before
+          '    col = mix(mix(col, vec3(dot(col, vec3(0.333))), 0.45) * vec3(0.97, 0.98, 1.04), mix(film(r * 0.10 + g * 0.55 + uT * 0.01), CREAM, 0.45), 0.34); a = 0.40; }',
+          '  col = mix(col, CREAM, rings * 0.42);',
+          '  col = mix(col, irid, axes * 0.92);',
+          '  col = mix(col, irid, edgeL);',
+          '  a = max(a, max(edgeL, max(axes * 0.95, rings * 0.62)));',
+          '  gl_FragColor = vec4(col, a); }'].join('\n');
+      const plane = new THREE.Mesh(new THREE.PlaneGeometry(M, M), shader({ uniforms: Object.assign({ uT, uBand: { value: 0.085 }, uSat: { value: 1.7 }, uBody: { value: 0.62 } }, stationU), side: THREE.DoubleSide,
+        vertexShader: 'varying vec2 vUv; varying vec3 vW; void main(){ vUv = uv; vec4 w = modelMatrix * vec4(position,1.0); vW = w.xyz; gl_Position = projectionMatrix * viewMatrix * w; }',
+        fragmentShader: MAP_OLD ? fragOld : fragNew }));
+      group.userData.mapMat = plane.material;      // the knobs: uBand (width of the blend at the axes), uSat, uBody (how solid the fields are)
       plane.rotation.x = -Math.PI / 2; plane.position.y = 0.01; plane.renderOrder = 6; add(plane, mapFrame);
       // the depth under the water, as fine lines, so what hangs below hangs in something
       const h = HALF, y = -ZH - 0.08 * S, pts = [], k = [[-h, -h], [h, -h], [h, h], [-h, h]];
@@ -320,6 +348,7 @@
       const mg = new THREE.BufferGeometry(); mg.setAttribute('position', new THREE.Float32BufferAttribute([0, -ZH, 0, 0, ZH, 0], 3)); add(new THREE.Line(mg, lineM(CREAM, 0.6)), mapFrame);
       [-1, -0.5, 0.5, 1].forEach(z => { const t = new THREE.Mesh(new THREE.TorusGeometry(0.035 * S, 0.006 * S, 6, 20), basic(CREAM, { transparent: true, opacity: 0.6 })); t.rotation.x = Math.PI / 2; t.position.y = z * ZH; add(t, mapFrame); });
       [['LI', 0, 0], ['RI', 1, 0], ['LP', 0, 1], ['RP', 1, 1]].forEach(a => { const s = text(a[0], ST[a[0]], 0.34 * S); s.position.set((a[1] * 1.14 - 0.57) * M, 0.12 * S, (a[2] * 1.14 - 0.57) * M); add(s, mapFrame); });
+      if (!MAP_OLD) [['33', 0.5051], ['66', 0.8562]].forEach(a => { const s2 = text(a[0], CREAM, 0.17 * S); const rr = a[1] / 2.8 * M + 0.09 * S; s2.position.set(-rr - 0.06 * S, 0.06 * S, 0.11 * S); s2.material.opacity = 0.85; add(s2, mapFrame); });
       const up = text('+1  delivered', CREAM, 0.26 * S); up.position.set(0, ZH + 0.16 * S, 0); add(up, mapFrame);
       const dn = text('−1  frustrated', CREAM, 0.26 * S); dn.position.set(0, -ZH - 0.16 * S, 0); add(dn, mapFrame); }
     const local = (nx, ny, y) => new V3((nx - 0.5) * M, y || 0, (ny - 0.5) * M);       // a place on the map, in the map's own frame

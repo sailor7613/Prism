@@ -1,0 +1,43 @@
+{
+  "_note": "The local models the closed form can call (11-13). Each has a short name used as local:<name>. repos are tried in order; the first that loads is used. temp is the sampling temperature for a read. Names were looked up on 2026-11-13; this field moves in weeks.",
+  "models": {
+    "gemma": {
+      "label": "Gemma 4 31B",
+      "by": "Google",
+      "gb": 17,
+      "note": "reads carefully, slow (about 7 tokens a second on this Mac)",
+      "temp": 0.3,
+      "repos": [
+        "mlx-community/gemma-4-31B-it-qat-4bit",
+        "DreamFoundries/gemma-4-31B-it-4bit",
+        "mlx-community/gemma-4-31b-it-4bit"
+      ],
+      "think": false
+    },
+    "qwen": {
+      "label": "Qwen 3.6 35B",
+      "by": "Alibaba",
+      "gb": 20,
+      "note": "fast (about 59 tokens a second on this Mac)",
+      "temp": 0.3,
+      "think": false,
+      "repos": [
+        "mlx-community/Qwen3.6-35B-A3B-4bit-DWQ",
+        "mlx-community/Qwen3.6-35B-A3B-4bit",
+        "DreamFoundries/Qwen3.6-35B-A3B-4bit"
+      ]
+    },
+    "deepseek": {
+      "label": "DeepSeek R1 32B",
+      "by": "DeepSeek (a smaller model trained to reason the way DeepSeek R1 does)",
+      "gb": 19,
+      "note": "reasons step by step first, slow (about 7 tokens a second)",
+      "temp": 0.6,
+      "repos": [
+        "mlx-community/Unsloth-DeepSeek-R1-Distill-Qwen-32B-4bit",
+        "mlx-community/DeepSeek-R1-Distill-Qwen-32B-MLX-4Bit"
+      ],
+      "thinksFirst": true
+    }
+  }
+}

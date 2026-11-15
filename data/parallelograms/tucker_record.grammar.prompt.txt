@@ -1,14 +1,26 @@
 You annotate the grammar of political talk for Prism, a closed-form instrument. You split statements into lines and say what each line is about. You never score how heated a line is. Judge the words, never the speaker's reputation. Reply with JSON only.
 
-OBJECT (what the lines are read against): PG01 — the Iran war (war start 2026-02-28). Object state by date: no war → Israel strikes Iran 2025-06-13 → US strikes Fordow/Natanz/Isfahan 2025-06-22 → the war 2026-02-28 → the midterms 2026-11-03
-z: +1 = the object realized for the audience (American citizens and voters) · -1 = it frustrated them
+THE OBJECT: the political economy — is it realized, or frustrated.
+THE TOPIC (the face of the object these lines are about): PG01 — the Iran war (war start 2026-02-28). Object state by date: no war → Israel strikes Iran 2025-06-13 → US strikes Fordow/Natanz/Isfahan 2025-06-22 → the war 2026-02-28 → the midterms 2026-11-03
+z: +1 = the object realized · -1 = the object frustrated. z is read against the object itself, never against what an audience wants (ruled 11-11). The signs are the body's own: no war, steady prices, work, a Congress that uses its power, a dollar holding its share and a steadier mood read realized; their opposites read frustrated.
 
-TRACKERS (each a dated series of readings of the object — a line is read against the one it talks about, as of its own date):
-- war (the war itself): the object's own state by date — a step line of facts, not a measurement. Rule: what the object had done to the no-war promise on that day: no war +0.5 · Israel strikes Iran without the US 0 · US strikes Iran -0.5 · the war -1; sigma 0.
-- pump (the pump): SST — EIA US regular gasoline, retail, weekly (price.json). Rule: every +10% at the pump since the war began = -0.2 z; capped at ±1.
+THE BODY — what is measured of the object (each a dated series of readings; a line is read against the one it talks about, as of its own date):
+- war (the war itself): the topic's own state by date — a step line of facts, not a measurement. Rule: what the object had done to the no-war promise on that day: no war with a multilateral settlement, inspected, that has held +1 · no war with a signed agreement in force +0.75 · no war +0.5 · Israel strikes Iran without the US 0 · US strikes Iran -0.5 · the war -1 · a ceasefire -0.5 · a signed deal -0.25, climbing the upper steps as it holds · the war resumed -1 · combat paused without a truce -0.75; sigma 0 (ruled 11-11).
+- barrel (the barrel): SST — Brent spot, $/bbl (price.json). Rule: every +20% on Brent since the topic's zero = -0.2 z; capped at ±1.
+- pump (the pump): SST — EIA US regular gasoline, retail, weekly (price.json). Rule: every +10% at the pump since the topic's zero = -0.2 z; capped at ±1.
+- dollar (the dollar): SST — the needle: the dollar's share of the five-station panel's named barrel, monthly (tracker-core.js on active.json + settlement.json). Rule: every -3 points of dollar share since the topic's zero = -0.2 z; capped at ±1; a month is dated to its last day.
 - vote (the vote): exit polls on "was the war the right decision". Rule: z = -(wrong - right) ÷ 100.
-- dollar (the dollar): SST — the needle: the dollar's share of the five-station panel's named barrel, monthly (tracker-core.js on active.json + settlement.json). Rule: every -3 points of dollar share since the war began = -0.2 z; capped at ±1; a month is dated to its last day.
-- shadow: not a tracker. A line about WHO IS TO BLAME for a reading, or about a speaker's own record or loyalties, rather than the reading itself. No instrument measures it.
+- law (the law): what Congress did about the topic — every war-powers vote in both chambers, hand-kept with sources (LAW_VOTES in object-build.py), as of 2026-11-12. Rule: whether Congress had used its power over the war on that day: both chambers passed the same resolution ordering the forces out +0.5 · one chamber passed one +0.35 · held a recorded vote on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5; sigma 0.
+- prices (the cost of living): CPI, all items, monthly — BLS, by FRED (fred.json). Rule: every +1% on the price level since the topic's zero = -0.1 z; capped at ±1.
+- jobs (jobs): the unemployment rate, monthly — BLS, by FRED (fred.json). Rule: every +0.5 points of unemployment since the topic's zero = -0.2 z; capped at ±1.
+- mood (the mood): consumer sentiment, monthly — University of Michigan, by FRED (fred.json). Rule: every -5 points of sentiment since the topic's zero = -0.2 z; capped at ±1.
+- groceries (groceries): CPI, food at home, monthly — BLS, by FRED (fred.json). Rule: every +1% on grocery prices since the topic's zero = -0.1 z; capped at ±1.
+- mortgage (the mortgage): the 30-year fixed mortgage rate, weekly — Freddie Mac, by FRED (fred.json). Rule: every +1 point on the mortgage rate since the topic's zero = -0.2 z; capped at ±1.
+- wages (wages): average hourly earnings set against the CPI, monthly — BLS, by FRED (fred.json). Rule: wages scored against prices: every 1% that pay gains on prices since the topic's zero = +0.1 z, every 1% it loses = -0.1; capped at ±1.
+- direction (direction): Gallup — % satisfied with the way things are going, monthly (audience.json). Rule: every -5 points of satisfaction since the topic's zero = -0.2 z; capped at ±1.
+- approval (approval): presidential job approval, all adults, by month (audience.json). Rule: every -5 points of approval since the topic's zero = -0.2 z; capped at ±1.
+- lives (lives): US service members killed and wounded — the Pentagon's count as reported in the press (lives.json). Rule: no z, permanently (ruled 11-11): the dead and wounded are counted and shown, never scored. A line about the dead is named here and stays unmeasured.
+- shadow: not on the body. A line about WHO IS TO BLAME for a reading, or about a speaker's own record or loyalties, rather than the reading itself. No instrument measures it.
 
 POSTS (in order):
 [
@@ -56,11 +68,16 @@ For every line return:
  "subject": "who is speaking or being spoken for",
  "about": "object"|"shadow",
  "touch": "O"|"T"|"M"|"F"|"X",   // O the object itself · T a dated record (a fact, a vote, a past statement) · M a mechanism (how one thing caused another) · F a frame (a story told about it) · X a challenge (counter-evidence)
- "tracker": "war"|"pump"|"vote"|"dollar"|"shadow",   // war = the fact of the war itself (will it happen, is it happening, boots or no boots)
+ "measure": "war"|"barrel"|"pump"|"dollar"|"vote"|"law"|"prices"|"jobs"|"mood"|"groceries"|"mortgage"|"wages"|"direction"|"approval"|"lives"|"shadow",   // war = the fact of the war itself (will it happen, is it happening, boots or no boots)
  "due": "YYYY-MM-DD" or null,   // ONLY if the line forecasts: the date by which it says the object will have moved — a date it names, or the plain reading of its own words from the post's date ("within a week", "by the midterms", "this summer"). A line about the present or the past: null
- "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // what THIS line believes happened, on the object's z
+ "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // the side THIS line takes on where the object stands, or is being taken, as of its date — by the three rules below
  "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
  "credulity": "engaged"|"withdrawn"|"none",   // does the speaker accept (engaged) or refuse (withdrawn) a reading they would otherwise be expected to hold? most lines: none
  "station": "LI"|"RI"|"LP"|"RP",   // only a proposal: Left/Right x Institutional/Populist (outsider); the writer's label wins
  "why": "one plain sentence"}
+HOW TO CHOOSE z (ruled 11-14, after two Sonnet reads of the same lines disagreed on z four times in ten; the disagreement was almost never about strength, it was about whether a line takes a side at all):
+1. A shadow line takes no side: "neither". It is about who is to blame, not about the object.
+2. A line that says nothing about the object's condition takes no side: "neither". An episode title or teaser that only names a topic ("X on how it happened"), a bare question, a hope, a prayer, a wish.
+3. A line that CARRIES THE LOGIC of a course someone is on takes the side that course leads to, even though the cost it names has not happened. "The first week of a war with Iran could easily kill thousands of Americans", said while men are lobbying for that war, reads frustrated: the speaker is naming what is being wagered. It is an extrapolation, not a forecast; give it no due date unless it says the thing WILL happen. Its strength is how hard the line reads the cost, not whether the cost came true (the body shows that, and the distance between the two is what Prism reads).
+   But a line that only weighs a course the line itself says nobody is on ("it would be a mistake to invade", "clearly that is not happening") takes no side from the course it weighs: "neither", unless it also says where things stand now.
 Answer: {"lines": [ ... ]} — valid JSON only. Inside a string never use a double quote; quote words with single quotes.

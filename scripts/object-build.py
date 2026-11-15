@@ -17,8 +17,8 @@ happened, as named states) and the ZERO DATE every body reading is measured from
 to the measure: another topic needs its own.
 Only the light goes through the prism (a parallelogram is a piece of it, surfaced by the sweep or written into the drop).
 The body has no station and no heat; it reaches the graphmap as height. The body judges the light, never the reverse.
-The rules were ruled by Sailor on 2026-11-11 (Handoffs/2026-11-11_The_Object_in_the_Villa_Handoff.md); a rule still marked
-DRAFT is a scale he has not ruled. Writes data/active/object.json. Run after the SST fetch.
+The rules were ruled by Sailor on 2026-11-11 (Handoffs/2026-11-11_The_Object_in_the_Villa_Handoff.md); the three
+scales, one chamber passing and the Object's name were ruled on 2026-11-12. Writes data/active/object.json. Run after the SST fetch.
 Usage: python3 scripts/object-build.py"""
 import json, os, subprocess, calendar
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -105,7 +105,7 @@ dreads = (disc.get('objects', {}).get('iran') or {}).get('readings', [])
 # Sigma 0.25: one exit poll, and cause is soft. The voters' own verdict on the war, measured directly, once. (11-11: z is
 # read against the Object, not an audience; the vote stays on the body as one of its measures.)
 vote = [['2026-11-03', -0.26, 0.25, {'wrong': 63, 'right': 37, 'crucialOrMajor': 74,
-         'source': "NBC News Exit Poll, 2026-11-03 — NBC's own page gives 63% wrong decision (nbcnews.com/politics/2026-election/exit-poll-trump-midterms-voters-economy-disapproval-rcna607045). The 37% right and the 74% crucial-or-major are the same poll as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/); NBC's page could not be opened on 11-11 to confirm those two"}]]
+         'source': "NBC News Exit Poll, 2026-11-03 — NBC's own page gives 63% wrong decision (nbcnews.com/politics/2026-election/exit-poll-trump-midterms-voters-economy-disapproval-rcna607045). The 37% right and the 74% crucial-or-major are the same poll as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/); NBC's page could not be opened on 11-11 to confirm those two. On 11-12 both figures were found again in two more reports of the same NBC exit poll (Asia Times; The Blaze, which gives 34% crucial + 40% major)"}]]
 
 # THE DOLLAR. The needle itself: the dollar's share of the panel's named barrel, by month, from tracker-core.js.
 # Rule (plain): every -3 points of share since the war began = -0.2 z (3 points is the needle's own threshold for
@@ -206,22 +206,48 @@ try:
     # the step line (ruled 11-11): the law measures whether Congress uses its power over the war — not whether the war goes
     # on, which the war's own measure carries. Ordered the forces out +0.5 (the resolution passed by both chambers) · a
     # recorded vote held on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5.
-    # A vote kept from the floor leaves no roll call, so those rows are hand-kept in LAW_BLOCKED, each with its source
-    # (none on file). Not ruled: a resolution passed by one chamber only — it reads as a vote held (+0.2) until Sailor rules it.
-    LAW_BLOCKED = []   # [date, note, source]
-    lz_ = [[WAR_START, 0.0, 0.0, 'nothing voted on yet']]; passed_ = set()
-    for e_ in law_events:
-        if not e_['warPowers']: continue
-        up_ = bool(re.search(r'agreed|passed', e_['result'].lower()))
-        final_ = bool(re.search(r'on passage|joint resolution', e_['what'].lower()))
-        if up_ and final_: passed_.add(e_['chamber'])
-        z_ = 0.5 if {'senate', 'house'} <= passed_ else 0.2
-        lz_.append([e_['date'], z_, 0.0, f"{e_['chamber'].capitalize()}: {e_['what'].lower().replace('on the ', '')} — {e_['yea']}–{e_['nay']}, {'agreed' if up_ else 'rejected'}; a recorded vote held"])
-    for b_ in LAW_BLOCKED: lz_.append([b_[0], -0.5, 0.0, b_[1]])
+    # 11-12 (ruled): one chamber passing a resolution reads +0.35; +0.5 is kept for both chambers passing the SAME resolution.
+    # 11-12: the step line is built from a hand-kept record, LAW_VOTES. The bill catalog does not hold the war-powers
+    # resolutions (the House's concurrent resolutions, most of the Senate's joint resolutions), so the catalog showed two
+    # Senate votes and nothing else. Each row: [date, chamber, resolution, what happened, passed?, source].
+    # A vote kept from the floor leaves no roll call; it is a row with chamber 'house-blocked' and reads -0.5.
+    WIKI_ = 'en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12'
+    LAW_VOTES = [
+      ['2026-03-04', 'senate', 'S.J.Res. 104', 'blocked 53–47', False, WIKI_],
+      ['2026-03-05', 'house', 'H.Con.Res. 38', 'rejected 212–219', False, 'aljazeera.com/news/2026/3/5/us-house-narrowly-rejects-resolution-to-end-trumps-iran-war'],
+      ['2026-03-18', 'senate', 'S.J.Res. 118', 'blocked 53–47', False, WIKI_],
+      ['2026-03-24', 'senate', 'S.J.Res. 116', 'blocked 53–47', False, WIKI_],
+      ['2026-04-15', 'senate', 'S.J.Res. 123', 'blocked 52–47', False, WIKI_],
+      ['2026-04-16', 'house', 'H.Con.Res. 40', 'rejected 213–214, one present', False, 'tennesseelookout.com/2026/04/16/repub/us-house-narrowly-defeats-resolution-limiting-trump-war-powers/'],
+      ['2026-04-22', 'senate', 'S.J.Res. 114', 'blocked 51–46', False, WIKI_],
+      ['2026-04-30', 'senate', 'S.J.Res. 184', 'blocked 50–47', False, WIKI_],
+      ['2026-05-13', 'senate', 'S.J.Res. 163', 'blocked 50–49', False, WIKI_],
+      ['2026-05-14', 'house', 'H.Con.Res. 75', 'failed on a tie, 212–212', False, 'al-monitor.com/originals/2026/05/us-house-narrowly-rejects-bid-rein-trump-iran-war-powers'],
+      ['2026-05-19', 'senate', 'S.J.Res. 185', 'discharged from committee 50–47 (a procedural vote, not passage)', False, 'prism_votes.json'],
+      ['2026-05-21', 'house-blocked', 'H.Con.Res. 86', 'the scheduled vote pulled by House leadership when it was about to pass', False, 'axios.com/2026/05/21/house-iran-war-powers-vote'],
+      ['2026-06-03', 'house', 'H.Con.Res. 86', 'passed 215–208', True, 'mprnews.org/story/2026/06/03/npr-house-iran-war-powers-vote'],
+      ['2026-06-04', 'house', 'H.Con.Res. 84', 'blocked 324–92', False, WIKI_],
+      ['2026-06-16', 'senate', 'S.J.Res. 172', 'blocked 48–47', False, WIKI_],
+      ['2026-06-23', 'senate', 'H.Con.Res. 86', 'agreed to 50–48 — the same resolution the House passed on 06-03', True, 'rollcall.com/2026/06/23/senate-joins-house-in-calling-for-stop-to-us-war-on-iran/'],
+      ['2026-06-24', 'senate', 'S.J.Res. 185', 'motion to proceed rejected 47–50', False, 'cnn.com/2026/06/24/politics/senate-walks-back-iran-war-powers-vote'],
+      ['2026-07-23', 'house', 'a second resolution (Jayapal; number not on file)', 'passed 214–208', True, 'al-monitor.com/originals/2026/07/us-house-votes-curb-trumps-iran-war-powers-senate-backs-president'],
+      ['2026-07-23', 'senate', 'its own measure (number not on file)', 'blocked 49–47', False, 'al-monitor.com/originals/2026/07/us-house-votes-curb-trumps-iran-war-powers-senate-backs-president'],
+      ['2026-09-15', 'house', 'H.Con.Res. 89', 'passed 220–204', True, 'abc7ny.com/story/house-votes-third-time-end-iran-war-conflict-drags/19838811/'],
+      ['2026-09-24', 'senate', 'H.Con.Res. 89', 'rejected 49–50', False, 'senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm'],
+    ]
+    lz_ = [[WAR_START, 0.0, 0.0, 'nothing voted on yet']]; passed_ = {}
+    for d_, ch_, res_, what_, ok_, src_ in sorted(LAW_VOTES, key=lambda r_: r_[0]):
+        if ch_ == 'house-blocked':
+            lz_.append([d_, -0.5, 0.0, f"House: {res_} — {what_}; the vote kept from being held ({src_})"]); continue
+        if ok_: passed_.setdefault(res_, set()).add(ch_)
+        both_ = any({'senate', 'house'} <= c_ for c_ in passed_.values())
+        z_ = 0.5 if both_ else (0.35 if passed_ else 0.2)
+        say_ = 'both chambers have passed the same resolution' if both_ else ('one chamber has passed a resolution' if passed_ else 'a recorded vote held')
+        lz_.append([d_, z_, 0.0, f"{ch_.capitalize()}: {res_} — {what_}; {say_} ({src_})"])
     lz_.sort(key=lambda r_: r_[0])
-    law_view = {'id': 'law', 'label': 'the law', 'kind': 'state', 'pace': 'months', 'source': "what Congress did about the topic — recorded votes on the war-powers resolution (prism_votes.json), as of " + asof,
-                'rule': 'whether Congress had used its power over the war on that day: ordered the forces out +0.5 · held a recorded vote on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5; sigma 0',
-                'readings': lz_, 'events': law_events, 'note': 'ruled 11-11. A resolution passed by one chamber only is not ruled and reads +0.2; no vote kept from the floor is on file (that row is hand-kept). ' + str(len(law_events)) + ' recorded votes and enactments on bills that name the topic are listed under the topic'}
+    law_view = {'id': 'law', 'label': 'the law', 'kind': 'state', 'pace': 'months', 'source': "what Congress did about the topic — every war-powers vote in both chambers, hand-kept with sources (LAW_VOTES in object-build.py), as of " + asof,
+                'rule': 'whether Congress had used its power over the war on that day: both chambers passed the same resolution ordering the forces out +0.5 · one chamber passed one +0.35 · held a recorded vote on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5; sigma 0',
+                'readings': lz_, 'events': law_events, 'note': 'ruled 11-11; one chamber passing ruled 11-12 (+0.35). The step line is a hand-kept record of ' + str(len(LAW_VOTES)) + ' rows, each with its source, because the bill catalog does not hold the war-powers resolutions. The Senate rows from Wikipedia are a second-hand source. ' + str(len(law_events)) + ' recorded votes and enactments on bills that name the topic are listed under the topic'}
     measures.append(law_measure)
 except Exception as e_:
     print('law: not read —', repr(e_))
@@ -282,15 +308,15 @@ try:
     f_view('mood', 'the mood', L_mood, lambda v_, b_: (v_ - b_) / 25, 0.15, 'months', 'consumer sentiment, monthly — University of Michigan, by FRED (fred.json)',
            "every -5 points of sentiment since the topic's zero = -0.2 z; capped at ±1", 'ruled 11-11 — a reading of the mood; the mood is part of the body')
     f_view('groceries', 'groceries', L_groc, lambda v_, b_: -((v_ / b_ - 1) * 100) / 10, 0.10, 'months', 'CPI, food at home, monthly — BLS, by FRED (fred.json)',
-           "every +1% on grocery prices since the topic's zero = -0.1 z; capped at ±1", 'sign ruled 11-11 (up is frustrated); the scale is a DRAFT, set to match the cost of living')
+           "every +1% on grocery prices since the topic's zero = -0.1 z; capped at ±1", 'sign ruled 11-11 (up is frustrated); the scale ruled 11-12 as drafted, set to match the cost of living')
     f_view('mortgage', 'the mortgage', L_mort, lambda v_, b_: -(v_ - b_) * 0.2, 0.10, 'weeks', 'the 30-year fixed mortgage rate, weekly — Freddie Mac, by FRED (fred.json)',
-           "every +1 point on the mortgage rate since the topic's zero = -0.2 z; capped at ±1", "sign ruled 11-11 (up is frustrated); the scale is a DRAFT — a point on the rate adds about a tenth to a new loan's payment, so it matches the pump")
+           "every +1 point on the mortgage rate since the topic's zero = -0.2 z; capped at ±1", "sign ruled 11-11 (up is frustrated); the scale ruled 11-12 as drafted — a point on the rate adds about a tenth to a new loan's payment, so it matches the pump")
     L_real = None
     if L_wages and L_prices:
         pm_ = {d_[:7]: v_ for d_, v_ in L_prices}
         L_real = [[d_, v_ / pm_[d_[:7]] * 1000] for d_, v_ in L_wages if d_[:7] in pm_]
     f_view('wages', 'wages', L_real, lambda v_, b_: ((v_ / b_ - 1) * 100) / 10, 0.10, 'months', 'average hourly earnings set against the CPI, monthly — BLS, by FRED (fred.json)',
-           "wages scored against prices: every 1% that pay gains on prices since the topic's zero = +0.1 z, every 1% it loses = -0.1; capped at ±1", 'ruled 11-11 (wages are read against prices, never alone); the scale is a DRAFT, set to match the cost of living. The fourth figure is pay over prices, an index')
+           "wages scored against prices: every 1% that pay gains on prices since the topic's zero = +0.1 z, every 1% it loses = -0.1; capped at ±1", 'ruled 11-11 (wages are read against prices, never alone); the scale ruled 11-12 as drafted, set to match the cost of living. The fourth figure is pay over prices, an index')
     if FJ_ is None: print('fred: no data/active/fred.json yet — run "Fetch the Body.command"')
 except Exception as e_:
     print('fred: not read —', repr(e_))
@@ -378,7 +404,7 @@ prevalence = {'what': "each day's sweep, counted by the topic its items matched 
 
 doc = {
  'what': 'The object as Prism holds it. Its BODY is what is measured (dated readings); its LIGHT is what is said (the room). The TOPIC is the face the object shows now: it carries the ledger and the zero date the body is measured from. Only the light goes through the prism; the body reaches the graphmap as height. The body judges the light, never the reverse. Ruled by Sailor 2026-11-11; a rule marked DRAFT is a scale not yet ruled.',
- 'object': 'the political economy',
+ 'object': 'the political economy', 'name': 'the Object', 'fullName': 'the Object of Political Economy',
  'measures': measures, 'measuresNote': 'the standing body: each measure in its own units, no topic in it', 'notYetMeasured': MISSING,
  'topics': {'PG01': {'label': 'the Iran war', 'zero': WAR_START, 'room': 'iran', 'ledger': LEDGER, 'state': war, 'question': {'label': 'the vote on it', 'readings': vote},
                      'law': law_events, 'reads': ['barrel', 'pump', 'dollar', 'law'] + [v_['id'] for v_ in fred_view] + (['direction'] if aud_view else []) + (['approval'] if app_view else []) + (['lives'] if lives_view else []), 'note': 'a topic is a zero date, a ledger of what happened, and a slice of the light, laid over the standing body'}},
@@ -400,7 +426,7 @@ doc = {
    'rule': 'every +10% at the pump since the topic\'s zero = -0.2 z; capped at ±1', 'base': base, 'readings': pump, 'note': 'reads the pump since the war, not the war\'s effect on the pump'},
   {'id': 'dollar', 'label': 'the dollar', 'kind': 'reading', 'pace': 'years', 'source': 'SST — the needle: the dollar\'s share of the five-station panel\'s named barrel, monthly (tracker-core.js on active.json + settlement.json)',
    'rule': 'every -3 points of dollar share since the topic\'s zero = -0.2 z; capped at ±1; a month is dated to its last day', 'base': dbase and [WAR_START[:7], round(dbase[1], 3)], 'readings': dollar,
-   'note': 'the sign is ruled 11-11: a falling share is frustrated, and what it frustrates is the Object. P3 is an ordinary forecast line read against this measure'},
+   'note': 'the sign is ruled 11-11: a falling share is frustrated, and what it frustrates is the Object. P3 is a pattern read against this measure month by month, never scored right or wrong (ruled 11-12; was a forecast line 11-11)'},
   {'id': 'vote', 'label': 'the vote', 'kind': 'reading', 'pace': 'months', 'source': 'exit polls on "was the war the right decision"',
    'rule': 'z = -(wrong - right) ÷ 100', 'readings': vote, 'note': 'one reading; a line dated before it is read against it as the nearest measurement and flagged. The voters\' own verdict, and the one measure the light reaches: the voters heard the room, then voted'},
  ] + ([law_view] if law_view else []) + fred_view + ([aud_view] if aud_view else []) + ([app_view] if app_view else []) + ([lives_view] if lives_view else []),

@@ -67,6 +67,7 @@
   #bar.away { opacity: 0; transform: translateY(-100%); pointer-events: none; }
   #strip { position: fixed; left: 0; right: 0; top: var(--bar-h); height: 60px; z-index: 42; cursor: grab; touch-action: none; }
   #strip:active { cursor: grabbing; }
+  #strip.big, #strip.big:active { cursor: pointer; }   /* (11-13) the prism large in a program: a thing to rest on and tap, not a line to drag */
   #strip .hint { position: absolute; top: 50%; transform: translateY(-50%); font-family: var(--mono); font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-low); opacity: 0; transition: opacity .2s; pointer-events: none; }
   #strip .hint.l { left: 14px; } #strip .hint.r { right: 14px; }
   #strip.dragging .hint { opacity: 1; }
@@ -166,6 +167,7 @@
       <div class="tiles">
         <a class="g4-tile" href="#parallelogram"><div class="ic lit"><svg viewBox="0 0 64 64" width="58" height="58" aria-hidden="true"><defs><filter id="icPgSoft" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.2"/></filter><linearGradient id="icPgArc" x1="0" x2="1"><stop offset="0" stop-color="var(--film-0)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient></defs><path d="M20 16 H56 L44 48 H8 Z" fill="none" stroke="url(#icPgArc)" stroke-width="6" opacity=".4" filter="url(#icPgSoft)"/><path d="M20 16 H56 L44 48 H8 Z" fill="none" stroke="#f6f1e6" stroke-width="1.4" stroke-linejoin="round"/><path d="M23 26 H46 M20 33 H43 M17 40 H34" stroke="#f6f1e6" stroke-width="1.2" opacity=".55" stroke-linecap="round"/></svg></div><div class="n">Parallelogram</div><div class="s">the publication</div></a>
         <a class="g4-tile" href="#codex"><div class="ic lit"><span class="film loop" style="font-family:Georgia,serif;font-size:40px;line-height:1;text-shadow:0 0 14px rgba(246,241,230,.35)">¶</span></div><div class="n">Codex</div><div class="s">the plain glossary</div></a>
+        <a class="g4-tile" href="#chat"><div class="ic lit"><svg viewBox="0 0 64 64" width="56" height="56" aria-hidden="true"><defs><linearGradient id="icTalk" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="var(--film-1)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient></defs><path d="M12 14 H52 V40 H30 L19 51 V40 H12 Z" fill="none" stroke="url(#icTalk)" stroke-width="3" stroke-linejoin="round" opacity=".9"/><path d="M21 24 H43 M21 31 H36" stroke="url(#icTalk)" stroke-width="3" stroke-linecap="round" opacity=".55"/></svg></div><div class="n">Chat</div><div class="s">with a model on this Mac</div></a>
       </div>
       <div class="g4-key">M3P · the prism is the way in · tap it from anywhere to come back here · hold the glyph to see the room</div>
       <div class="g4-key" style="opacity:.5"><a href="#classic" style="text-decoration:none;color:inherit">prism · classic ↗</a></div>
@@ -249,7 +251,7 @@
     addEventListener('deviceorientation', e => { if (e.gamma == null) return; tiltX = Math.max(-0.6, Math.min(0.6, e.gamma / 45)); tiltY = Math.max(-0.4, Math.min(0.4, (e.beta - 40) / 60)); }, { passive: true });
     (function frame() {
       requestAnimationFrame(frame);
-      if (document.hidden || cv.classList.contains('away')) return;
+      if (document.hidden || cv.classList.contains('away') || window.__navRest) return;   // (11-14) at rest while a local model answers: the model and this drawing share one graphics chip
       const secs = (performance.now() - t0) / 1000;
       film.uniforms.uT.value = secs * 0.05;
       light.update(secs, group.rotation.y / 0.8);
@@ -264,6 +266,7 @@
     })();
     return { setDrag: v => { dx = v; }, setPos: t => { pos = Math.max(0, Math.min(1, +t || 0)); },
              setHeight: h => { navH = h; cv.style.height = h + 'px'; size(); },                                   // (11-10) large on the desk, 84 on its line
+             home: () => innerWidth * (0.5 + (pos - 0.5) * 0.78),                                                 // (11-13) where the prism comes to rest, in screen pixels
              x: () => innerWidth / 2 + group.position.x / (2 * aspect * 1.1) * innerWidth };                    // where the prism is, in screen pixels
   })();
 
@@ -281,7 +284,9 @@
     codex:         { name: 'Codex',         fn: '',     src: '../bloomburger/#codex/object' },
     drop:          { name: 'Prism',         fn: 'IN',   src: '../press/drop.html' },      // inside Prism now; the address still works
     object:        { name: 'Prism',         fn: 'READ', src: '../press/object.html' },    // inside Prism now; the address still works
-    model:         { name: 'Prism',         fn: 'MODEL', src: '../press/model.html' },    // (11-10, late) the physical model: the Object, the prism, the pool — one scene
+    model:         { name: 'Prism',         fn: 'MODEL', src: '../press/model.html' },
+    chat:          { name: 'Chat',          fn: '',     src: '../press/chat.html' },      // (11-13) chat with a model that runs on this Mac; every message checks the project folder first
+    talk:          { name: 'Chat',          fn: '',     src: '../press/chat.html' },      // its first name, the same night; the address still works    // (11-10, late) the physical model: the Object, the prism, the pool — one scene
   };
   const isPG = h => h === 'parallelogram' || h === 'bloomburger';
   // (11-10) the prism on the desk: docked large at the desk's centre; back on its line inside a program
@@ -295,9 +300,27 @@
     }
   }
   addEventListener('resize', () => { if (!program) deskDock(true); });
+  // (11-13) the prism large inside a program (Chat asks for it: {type:'g4:navsize', h}). Its strip, which is what the pointer
+  // touches, shrinks to a box round the prism so the page under the rest of the top can be used; resting the pointer on the
+  // prism tells the program ({type:'g4:prismhover', on, x, y}: where the prism is and where its lower edge is, in the
+  // program's own pixels), which is how Chat drops its menu down. Any other program, and the desk, put it back.
+  let big = 0;
+  function placeBig() { if (!big) return; const sp = $('#strip'), w = Math.max(150, big * 1.15); sp.style.height = Math.round(big * .8) + 'px'; sp.style.width = w + 'px'; sp.style.left = Math.round(nav.home() - w / 2) + 'px'; sp.style.right = 'auto'; }
+  function navSize(h) {
+    const sp = $('#strip');
+    if (!h || h <= 84 || !program) { if (big) { big = 0; nav.setHeight(84); sp.style.height = ''; sp.style.width = ''; sp.style.left = ''; sp.style.right = ''; sp.classList.remove('big'); } return; }
+    big = Math.min(320, h); nav.setHeight(big); sp.classList.add('big'); placeBig();
+  }
+  addEventListener('resize', placeBig);
+  (function hover() {
+    const sp = $('#strip'); const tell = on => { if (!big) return; const r = sp.getBoundingClientRect(), pr = prog.getBoundingClientRect(); try { prog.contentWindow.postMessage({ type: 'g4:prismhover', on, x: nav.home() - pr.left, y: r.bottom - pr.top }, '*'); } catch (e) {} };
+    sp.addEventListener('pointerenter', e => { if (e.pointerType !== 'touch') tell(true); });
+    sp.addEventListener('pointerleave', e => { if (e.pointerType !== 'touch') tell(false); });
+  })();
   function route() {
     const h = location.hash.replace(/^#/, '') || 'desk';
     const head = h.split('/')[0];
+    if (big && head !== program) navSize(0);   // (11-13) the large prism belongs to the program that asked for it
     if (head === 'desk' || !PROGRAMS[head]) { program = null; desk.classList.add('on'); prog.classList.add('off'); setBar('M3P', '', 'desktop'); nav.setPos(0.5); deskDock(true); return; }
     const P = PROGRAMS[head];
     desk.classList.remove('on'); prog.classList.remove('off'); deskDock(false);
@@ -326,7 +349,7 @@
     function up() { if (program) toProg('up'); }
     st.addEventListener('pointerdown', e => { if (mode !== 'glass') return; x0 = e.clientX; y0 = e.clientY; dx = dy = 0; held = dragging = false; st.setPointerCapture(e.pointerId); nt.classList.add('holding'); holdT = setTimeout(() => { held = true; nt.classList.remove('holding'); if (navigator.vibrate) navigator.vibrate(12); up(); }, HOLD); });
     st.addEventListener('pointermove', e => { if (x0 == null) return; dx = e.clientX - x0; dy = e.clientY - y0; if (!dragging && Math.hypot(dx, dy) > 3) { clearTimeout(holdT); dragging = true; st.classList.add('dragging'); nt.classList.add('dragging'); } if (dragging) { nav.setDrag(clampD(dx)); nt.style.transform = `translateY(${dy}px)`; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: clampD(dx), dy: clampD(dy) }, '*'); } catch (e2) {} } });
-    function end() { if (x0 == null) return; clearTimeout(holdT); nt.classList.remove('holding'); st.classList.remove('dragging'); nt.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && !dragging && Math.abs(x0 - nav.x()) < (program ? 46 : 110)) { location.hash = program ? '#desk' : '#prism'; } else if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
+    function end() { if (x0 == null) return; clearTimeout(holdT); nt.classList.remove('holding'); st.classList.remove('dragging'); nt.classList.remove('dragging'); nav.setDrag(0); nt.style.transform = ''; try { prog.contentWindow && prog.contentWindow.postMessage({ type: 'g4:navdrag', dx: 0, dy: 0 }, '*'); } catch (e2) {} if (!held && !dragging && Math.abs(x0 - nav.x()) < (big ? big * .6 : program ? 46 : 110)) { location.hash = program ? '#desk' : '#prism'; } else if (!held && dragging) { if (Math.abs(dy) > Math.abs(dx)) { if (dy <= -SNAP) toProg('rise'); else if (dy >= SNAP) toProg('sink'); } else { if (dx <= -SNAP) toProg('forward'); else if (dx >= SNAP) toProg('back'); } } x0 = y0 = null; dx = dy = 0; }
     st.addEventListener('pointerup', end); st.addEventListener('pointercancel', end);
     addEventListener('keydown', e => {
       if (e.target.tagName === 'INPUT') return;
@@ -424,6 +447,8 @@
     else if (m.type === 'g4:desk') location.hash = '#desk';
     else if (m.type === 'g4:crumb') { progFn = m.fn || ''; setBar(m.name || (program && PROGRAMS[program].name) || 'g4', m.fn, m.crumb); }
     else if (m.type === 'g4:navpos') nav.setPos(m.t);
+    else if (m.type === 'g4:navsize') navSize(m.h);
+    else if (m.type === 'g4:navrest') window.__navRest = !!m.on;
     else if (m.type === 'g4:navdock') {   // a program asks the navtool to settle inside it (Prism's landing: the centre of the page)
       const nt = $('#navtool');
       const sp = $('#strip');

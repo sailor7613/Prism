@@ -1,10 +1,10 @@
 {
- "hash": "5739a3b43f59-g2",
- "at": "2026-11-10T12:46:29",
+ "hash": "5739a3b43f59-g3",
+ "at": "2026-11-14T12:58:46",
  "usage": {
   "model": "claude-sonnet-5-5",
-  "input_tokens": 12488,
-  "output_tokens": 9689,
+  "input_tokens": 16708,
+  "output_tokens": 10236,
   "calls": 4
  },
  "lines": [
@@ -22,7 +22,7 @@
     "got Donald Trump elected"
    ],
    "credulity": "none",
-   "why": "A story about why Trump won, not a reading of any measured object."
+   "why": "A claim about who won the election and why, with nothing about the war's condition."
   },
   {
    "post": 0,
@@ -32,29 +32,29 @@
    "touch": "F",
    "measure": "war",
    "due": null,
-   "z": "frustrated",
+   "z": "leaning frustrated",
    "lit": [
     "Wars with Russia and Iran",
     "the counterattack"
    ],
    "credulity": "none",
-   "why": "Frames the coming wars as retaliation against Trump's election, treating them as a bad outcome for voters."
+   "why": "Frames war with Iran as the coming move against the new president, a course that leads away from no war."
   },
   {
    "post": 1,
    "quote": "Mark Levin was at the White House today, lobbying for war with Iran.",
    "subject": "Tucker Carlson",
-   "about": "shadow",
+   "about": "object",
    "touch": "T",
-   "measure": "shadow",
+   "measure": "war",
    "due": null,
-   "z": "neither",
+   "z": "leaning frustrated",
    "lit": [
-    "Mark Levin",
-    "lobbying for war with Iran"
+    "lobbying for war with Iran",
+    "at the White House today"
    ],
    "credulity": "none",
-   "why": "Concerns who is pushing for war, not the state of the war itself."
+   "why": "Records a push toward war with Iran, naming the course being wagered."
   },
   {
    "post": 1,
@@ -70,40 +70,56 @@
     "anywhere near building a bomb"
    ],
    "credulity": "none",
-   "why": "Disputes the case for war, so the war would be unjustified for Americans."
+   "why": "Disputes the case for war, a case that is being used to push the country toward it."
   },
   {
    "post": 1,
-   "quote": "the real goal, which is regime change — young Americans heading back to the Middle East to topple yet another government",
-   "subject": "Tucker Carlson",
-   "about": "shadow",
-   "touch": "F",
-   "measure": "shadow",
-   "due": null,
-   "z": "frustrated",
-   "lit": [
-    "the real goal",
-    "regime change",
-    "young Americans heading back"
-   ],
-   "credulity": "none",
-   "why": "Attributes hidden motives to the war's advocates, a blame story."
-  },
-  {
-   "post": 1,
-   "quote": "A war with Iran would amount to a profound betrayal of his supporters. It would end his presidency.",
+   "quote": "Muammar Gaddafi tried that and wound up sodomized with a bayonet.",
    "subject": "Tucker Carlson",
    "about": "object",
    "touch": "M",
    "measure": "war",
    "due": null,
-   "z": "frustrated strongly",
+   "z": "leaning frustrated",
    "lit": [
-    "profound betrayal of his supporters",
-    "end his presidency"
+    "Gaddafi tried that",
+    "NATO killed him"
    ],
    "credulity": "none",
-   "why": "Says a war would betray the voters who chose a peace candidate."
+   "why": "Mechanism: Iran has learned not to disarm, which makes the standoff harder to settle."
+  },
+  {
+   "post": 1,
+   "quote": "the real goal, which is regime change — young Americans heading back to the Middle East to topple yet another government",
+   "subject": "Tucker Carlson",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "regime change",
+    "young Americans heading back to the Middle East"
+   ],
+   "credulity": "none",
+   "why": "Frames the push as a regime-change war that sends US troops back to the region."
+  },
+  {
+   "post": 1,
+   "quote": "It could also collapse our economy, as surging oil prices trigger unmanageable inflation. Consider the effects of $30 gasoline.",
+   "subject": "Tucker Carlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "pump",
+   "due": null,
+   "z": "frustrated strongly",
+   "lit": [
+    "surging oil prices",
+    "unmanageable inflation",
+    "$30 gasoline"
+   ],
+   "credulity": "none",
+   "why": "Names the cost at the pump and in prices that the course toward war would carry."
   },
   {
    "post": 1,
@@ -113,30 +129,13 @@
    "touch": "M",
    "measure": "lives",
    "due": null,
-   "z": "frustrated strongly",
+   "z": "neither",
    "lit": [
     "first week of a war",
     "kill thousands of Americans"
    ],
    "credulity": "none",
-   "why": "Forecasts mass American deaths from Iranian missiles if war starts, with no date since the war is hypothetical."
-  },
-  {
-   "post": 1,
-   "quote": "It could also collapse our economy, as surging oil prices trigger unmanageable inflation.",
-   "subject": "Tucker Carlson",
-   "about": "object",
-   "touch": "M",
-   "measure": "prices",
-   "due": null,
-   "z": "frustrated strongly",
-   "lit": [
-    "collapse our economy",
-    "surging oil prices",
-    "unmanageable inflation"
-   ],
-   "credulity": "none",
-   "why": "Mechanism from war to oil prices to inflation, undated because the war is conditional."
+   "why": "A line about American dead, which is counted and never scored."
   },
   {
    "post": 1,
@@ -148,15 +147,15 @@
    "due": null,
    "z": "frustrated strongly",
    "lit": [
-    "very easily become a world war",
+    "could very easily become a world war",
     "We'd lose"
    ],
    "credulity": "none",
-   "why": "Warns that Iran's allies would escalate the war into a lost world war."
+   "why": "Reads the war course as escalating to a war the US cannot win."
   },
   {
    "post": 1,
-   "quote": "to box the Trump administration into a regime change war in Iran",
+   "quote": "A war with Iran would amount to a profound betrayal of his supporters. It would end his presidency.",
    "subject": "Tucker Carlson",
    "about": "shadow",
    "touch": "F",
@@ -164,11 +163,27 @@
    "due": null,
    "z": "neither",
    "lit": [
-    "box the Trump administration",
-    "regime change war"
+    "profound betrayal of his supporters",
+    "end his presidency"
    ],
    "credulity": "none",
-   "why": "Blames Levin and allies for maneuvering Trump into war."
+   "why": "About Trump's loyalties and political fate, not the state of the war."
+  },
+  {
+   "post": 1,
+   "quote": "They denounce anyone who advocates for a deal as a traitor and a bigot.",
+   "subject": "Tucker Carlson",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "denounce anyone who advocates for a deal",
+    "traitor and a bigot"
+   ],
+   "credulity": "none",
+   "why": "Blames the war hawks for how they treat dissent."
   },
   {
    "post": 1,
@@ -184,11 +199,11 @@
    ],
    "credulity": "none",
    "station": "RP",
-   "why": "Urges Trump to reject the war camp and avoid war, a populist-right proposal."
+   "why": "A prayer that says nothing about where things stand."
   },
   {
    "post": 2,
-   "quote": "The real divide is between those who casually encourage violence, and those who seek to prevent it — between warmongers and peacemakers.",
+   "quote": "The real divide is between those who casually encourage violence, and those who seek to prevent it",
    "subject": "Tucker Carlson",
    "about": "shadow",
    "touch": "F",
@@ -200,7 +215,7 @@
     "casually encourage violence"
    ],
    "credulity": "none",
-   "why": "A moral frame sorting people by their stance on war, not a reading of the war."
+   "why": "Sorts people into camps, which is blame and not the war's condition."
   },
   {
    "post": 2,
@@ -213,11 +228,10 @@
    "z": "neither",
    "lit": [
     "calling Donald Trump today",
-    "demand air strikes",
-    "Sean Hannity, Mark Levin"
+    "Hannity, Levin, Murdoch"
    ],
    "credulity": "none",
-   "why": "Names who is pressing for US involvement and says they must answer for it, a blame line."
+   "why": "Names who is to blame for pushing US involvement."
   },
   {
    "post": 3,
@@ -227,30 +241,44 @@
    "touch": "F",
    "measure": "shadow",
    "due": null,
-   "z": "frustrated",
+   "z": "neither",
    "lit": [
     "president's enemies",
-    "destroy MAGA",
-    "the war on Iran"
+    "destroy MAGA"
    ],
    "credulity": "none",
-   "why": "Says Trump's enemies are using the war against his movement, a blame frame."
+   "why": "An episode teaser about who is using the war against whom."
   },
   {
    "post": 4,
    "quote": "Senator Ted Cruz demands regime change in Iran.",
    "subject": "Tucker Carlson",
-   "about": "shadow",
+   "about": "object",
    "touch": "T",
-   "measure": "shadow",
+   "measure": "war",
    "due": null,
-   "z": "neither",
+   "z": "leaning frustrated",
    "lit": [
     "Ted Cruz demands",
     "regime change in Iran"
    ],
    "credulity": "none",
-   "why": "Reports a senator's position and mocks it, a line about a speaker's record rather than the war."
+   "why": "Records a demand that pushes toward a regime-change war."
+  },
+  {
+   "post": 4,
+   "quote": "He's not interested in the details.",
+   "subject": "Tucker Carlson",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "not interested in the details"
+   ],
+   "credulity": "none",
+   "why": "A swipe at Cruz himself, not at the object."
   },
   {
    "post": 5,
@@ -260,12 +288,12 @@
    "touch": "O",
    "measure": "war",
    "due": null,
-   "z": "realized",
+   "z": "leaning realized",
    "lit": [
     "Thank God"
    ],
    "credulity": "none",
-   "why": "Relief on the day the fighting stopped, read as the war ending without escalation."
+   "why": "Relief that the fighting has stopped after the US strikes."
   },
   {
    "post": 6,
@@ -281,7 +309,7 @@
     "brokered a ceasefire"
    ],
    "credulity": "none",
-   "why": "He reports the June 2025 ceasefire as a relief, so the war's end is read as good for Americans."
+   "why": "He welcomes the ceasefire as a step back from the US-Iran fighting, which moves the war reading toward the no-war side."
   },
   {
    "post": 6,
@@ -296,7 +324,7 @@
     "last thing Mark Levin wanted"
    ],
    "credulity": "none",
-   "why": "It is about who wanted what, a point about a rival's loyalties and not about any reading."
+   "why": "It is about whose wishes the ceasefire went against, not about the state of the war."
   },
   {
    "post": 7,
@@ -311,7 +339,7 @@
     "interview with the president of Iran"
    ],
    "credulity": "none",
-   "why": "It announces an interview and says nothing about whether the war helped or hurt Americans."
+   "why": "A teaser that names an interview and says nothing about the condition of the object."
   },
   {
    "post": 8,
@@ -323,12 +351,11 @@
    "due": null,
    "z": "frustrated",
    "lit": [
-    "last chance",
-    "blow up Iran",
-    "America's military"
+    "last chance to blow up Iran",
+    "with America's military"
    ],
    "credulity": "none",
-   "why": "He frames the coming war as Israel using US forces for its own ends, which he treats as against American interests."
+   "why": "It carries the logic of a push toward a US war on Iran while lobbying for it is underway, so it reads the course as frustrating the no-war promise."
   },
   {
    "post": 8,
@@ -344,22 +371,7 @@
     "peak hysteria"
    ],
    "credulity": "none",
-   "why": "It blames a faction for pushing war and measures nothing."
-  },
-  {
-   "post": 8,
-   "quote": "what happens if they get their wish",
-   "subject": "Clayton Morris, as introduced by Tucker Carlson",
-   "about": "object",
-   "touch": "M",
-   "measure": "war",
-   "due": null,
-   "z": "leaning frustrated",
-   "lit": [
-    "what happens if they get their wish"
-   ],
-   "credulity": "none",
-   "why": "It hints that war would be a harmful result of the neocons' wish, but gives no detail or date."
+   "why": "It blames and characterizes the neocons rather than reporting a reading of the object."
   },
   {
    "post": 9,
@@ -369,50 +381,50 @@
    "touch": "F",
    "measure": "war",
    "due": null,
-   "z": "leaning frustrated",
+   "z": "neither",
    "lit": [
     "no sword is drawn",
     "Prince of Peace"
    ],
    "credulity": "none",
-   "why": "Posted just after the war began, the peace prayer treats the fighting as a wrong."
+   "why": "A prayer for peace states a wish and takes no side on where the war stands."
   },
   {
    "post": 10,
    "quote": "Israel's war and what it means.",
    "subject": "Tucker Carlson",
-   "about": "shadow",
+   "about": "object",
    "touch": "F",
-   "measure": "shadow",
+   "measure": "war",
    "due": null,
-   "z": "frustrated",
+   "z": "neither",
    "lit": [
-    "Israel's war"
+    "Israel's war",
+    "what it means"
    ],
    "credulity": "none",
-   "why": "Calling it 'Israel's war' assigns ownership and blame for the war, not a reading of its effects."
+   "why": "An episode title that names the topic and gives no reading of the object's condition."
   },
   {
    "post": 11,
-   "quote": "Could this be a religious war designed to rebuild the Third Temple on the ashes of Al Aqsa?",
+   "quote": "Could this be a religious war designed to rebuild the Third Temple on the ashes of Al Aqsa? Hope not.",
    "subject": "Tucker Carlson",
    "about": "object",
    "touch": "F",
    "measure": "war",
    "due": null,
-   "z": "frustrated",
+   "z": "neither",
    "lit": [
     "religious war",
-    "Third Temple",
-    "ashes of Al Aqsa"
+    "Hope not"
    ],
    "credulity": "none",
-   "why": "He casts the war as a religious project far from American interests, a bad thing for the country."
+   "why": "A speculative question followed by a hope, which takes no side on where things stand."
   },
   {
    "post": 12,
    "quote": "how this war changes American politics forever",
-   "subject": "Tucker Carlson, introducing Saagar Enjeti",
+   "subject": "Tucker Carlson, introducing a guest",
    "about": "object",
    "touch": "F",
    "measure": "war",
@@ -420,11 +432,10 @@
    "z": "neither",
    "lit": [
     "this war",
-    "changes American politics",
-    "forever"
+    "changes American politics forever"
    ],
    "credulity": "none",
-   "why": "A teaser framing the war as a lasting political turning point, without saying whether it helped or hurt."
+   "why": "An episode teaser that names the topic and the stakes but gives no reading of where the war stands."
   },
   {
    "post": 13,
@@ -434,62 +445,62 @@
    "touch": "F",
    "measure": "war",
    "due": null,
-   "z": "frustrated",
+   "z": "neither",
    "lit": [
-    "the spell breaks",
-    "the world is saved"
+    "Pray",
+    "the spell breaks"
    ],
    "credulity": "none",
-   "why": "Frames the war as a spell that endangers the world and needs breaking."
+   "why": "A prayer or wish that states no condition of the object."
   },
   {
    "post": 14,
    "quote": "it should be illegal to yoke our military to a foreign power in war",
    "subject": "Tucker Carlson",
    "about": "object",
-   "touch": "M",
-   "measure": "law",
+   "touch": "O",
+   "measure": "war",
    "due": null,
-   "z": "frustrated",
+   "z": "leaning frustrated",
    "lit": [
-    "should be illegal",
-    "yoke our military",
-    "foreign power"
+    "illegal to yoke our military",
+    "foreign power in war"
    ],
    "credulity": "none",
-   "station": "RP",
-   "why": "Proposes a legal ban on tying the US military to another country's wars, implying the current war did exactly that."
+   "why": "A proposal whose logic is that the military is currently tied to another country's war aims, so it leans toward frustrated.",
+   "station": "RP"
   },
   {
    "post": 14,
    "quote": "Bret Weinstein on how it happened.",
-   "subject": "Tucker Carlson, introducing Bret Weinstein",
-   "about": "shadow",
+   "subject": "Tucker Carlson, introducing a guest",
+   "about": "object",
    "touch": "F",
-   "measure": "shadow",
+   "measure": "war",
    "due": null,
    "z": "neither",
    "lit": [
+    "Bret Weinstein",
     "how it happened"
    ],
    "credulity": "none",
-   "why": "Points to an account of how the US got pulled in, which is about causes and blame, not a reading."
+   "why": "A teaser that names a guest and topic without saying where things stand."
   },
   {
    "post": 15,
-   "quote": "why we actually went to war with Iran",
-   "subject": "Tucker Carlson, introducing Joe Kent",
-   "about": "shadow",
+   "quote": "Joe Kent on why we actually went to war with Iran.",
+   "subject": "Tucker Carlson, introducing a guest",
+   "about": "object",
    "touch": "F",
-   "measure": "shadow",
+   "measure": "war",
    "due": null,
    "z": "neither",
    "lit": [
-    "why we actually went",
-    "war with Iran"
+    "Joe Kent",
+    "why we actually went to war"
    ],
    "credulity": "none",
-   "why": "Implies the stated reasons for the war are not the real ones, a question of motive rather than outcome."
+   "why": "A teaser promising a hidden-motive story, with no reading of the object's condition."
   },
   {
    "post": 16,
@@ -502,11 +513,10 @@
    "z": "leaning frustrated",
    "lit": [
     "ground troops",
-    "followed by tyranny",
-    "country that sends them"
+    "followed by tyranny"
    ],
    "credulity": "none",
-   "why": "Warns that sending ground troops tends to bring tyranny home, a causal claim against boots on the ground."
+   "why": "A mechanism naming the cost of escalating with ground troops while the war is under way."
   },
   {
    "post": 17,
@@ -516,14 +526,13 @@
    "touch": "T",
    "measure": "war",
    "due": null,
-   "z": "frustrated",
+   "z": "leaning frustrated",
    "lit": [
     "spending more a year",
-    "than we did during World War II",
-    "What are we getting for it?"
+    "than we did during World War II"
    ],
    "credulity": "none",
-   "why": "Cites record military spending and asks what Americans get for it, implying the war's cost is not paying off."
+   "why": "A factual claim of extreme military spending, offered as a cost with doubtful return."
   },
   {
    "post": 17,
@@ -538,12 +547,12 @@
     "how much is going to Israel"
    ],
    "credulity": "none",
-   "why": "Asks about loyalties and where the money goes, which is blame and allegiance, not a reading."
+   "why": "A question about whose interests the money serves, which is a question of loyalties and blame, not a reading."
   },
   {
    "post": 18,
-   "quote": "the Trump administration may be within days of launching a nuclear strike on Iran",
-   "subject": "Tucker Carlson",
+   "quote": "may be within days of launching a nuclear strike on Iran",
+   "subject": "Tucker Carlson, on the Trump administration",
    "about": "object",
    "touch": "O",
    "measure": "war",
@@ -552,44 +561,59 @@
    "lit": [
     "within days",
     "nuclear strike on Iran",
-    "Pickax Mountain"
+    "Trump is likely to decide by next weekend"
    ],
    "credulity": "none",
-   "why": "He forecasts a nuclear escalation of the war within days, which is the war itself getting worse."
+   "why": "It forecasts a sharp escalation of the war, to a nuclear strike, within days."
   },
   {
    "post": 18,
-   "quote": "Netanyahu is cornered and desperate.",
-   "subject": "Tucker Carlson",
+   "quote": "He needs this war.",
+   "subject": "Tucker Carlson, on Netanyahu",
    "about": "shadow",
    "touch": "F",
    "measure": "shadow",
    "due": null,
-   "z": "frustrated",
+   "z": "neither",
    "lit": [
-    "cornered and desperate",
-    "He needs this war",
-    "applied maximum pressure"
+    "Netanyahu is cornered and desperate",
+    "He needs this war"
    ],
    "credulity": "none",
-   "why": "He blames Netanyahu and his allies in the administration for pushing the war, which is a claim about who is to blame."
+   "why": "It is about Netanyahu's motives and who is to blame for pushing the war, not about the war's condition."
   },
   {
    "post": 18,
-   "quote": "In October alone, 11 of them were badly damaged in Hormuz. At this pace, a global depression is imminent.",
+   "quote": "After eight months of conflict, Gulf economies are teetering. So are global energy and fertilizer markets.",
    "subject": "Tucker Carlson",
    "about": "object",
-   "touch": "M",
+   "touch": "O",
    "measure": "barrel",
-   "due": "2026-12-31",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "Gulf economies are teetering",
+    "global energy and fertilizer markets"
+   ],
+   "credulity": "none",
+   "why": "It reports energy markets strained by the war."
+  },
+  {
+   "post": 18,
+   "quote": "In October alone, 11 of them were badly damaged in Hormuz.",
+   "subject": "Tucker Carlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "barrel",
+   "due": null,
    "z": "frustrated strongly",
    "lit": [
     "11 of them were badly damaged",
-    "global energy and fertilizer markets",
-    "global depression is imminent"
+    "In Hormuz",
+    "850 supertankers"
    ],
    "credulity": "none",
-   "why": "He traces tanker damage in Hormuz to wrecked energy markets and a coming depression."
+   "why": "It gives a dated count of tankers damaged, which bears on oil supply and price."
   },
   {
    "post": 18,
@@ -602,45 +626,58 @@
    "z": "frustrated strongly",
    "lit": [
     "first nuclear strike",
-    "World War Three is inevitable",
-    "free them to use nuclear weapons"
+    "World War Three is inevitable"
    ],
    "credulity": "none",
-   "why": "He describes a causal chain from an American nuclear strike to wider nuclear war."
+   "why": "It carries the logic of the course being lobbied for and names the worst cost, a chain of escalation to world war."
   },
   {
    "post": 18,
-   "quote": "the administration has quietly rewritten America's nuclear doctrine to make first use of so-called \"battlefield nukes\" easier",
-   "subject": "Tucker Carlson",
+   "quote": "They're right, though it won't be simple.",
+   "subject": "Tucker Carlson, on Vance and Witkoff",
    "about": "object",
-   "touch": "T",
+   "touch": "O",
    "measure": "war",
    "due": null,
-   "z": "frustrated",
+   "z": "leaning realized",
    "lit": [
-    "quietly rewritten",
-    "nuclear doctrine",
-    "first use"
+    "a deal with Iran can be made",
+    "more war is bad for everyone",
+    "a deal is worth making"
    ],
    "credulity": "none",
-   "why": "He cites a dated change in doctrine since February as making the war more dangerous."
+   "why": "It judges that a deal ending the fighting is reachable, though hard, which leans toward the no-war promise."
+  },
+  {
+   "post": 19,
+   "quote": "Neocons and climate hysterics have at least one thing in common: they know nothing about energy.",
+   "subject": "Tucker Carlson",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "know nothing about energy",
+    "Without it, things fall apart"
+   ],
+   "credulity": "none",
+   "why": "It attacks the people it blames for ignorance rather than stating any reading of the object."
   },
   {
    "post": 19,
    "quote": "Morgan Downey on the economic effects of American intervention.",
-   "subject": "Tucker Carlson",
+   "subject": "Tucker Carlson, introducing a guest",
    "about": "object",
    "touch": "F",
    "measure": "barrel",
    "due": null,
-   "z": "leaning frustrated",
+   "z": "neither",
    "lit": [
-    "know nothing about energy",
-    "Without it, things fall apart",
     "economic effects of American intervention"
    ],
    "credulity": "none",
-   "why": "He frames the intervention as economically damaging because of how it handles energy."
+   "why": "It is a teaser that names a topic and takes no side on the object's condition."
   }
  ]
 }

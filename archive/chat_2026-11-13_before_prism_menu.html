@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" class="g4">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chat</title>
+<!-- ======================================================================
+     Chat — Prism/press/chat.html — 2026-11-13 (first named Talk; renamed the same night)
+     A program in the M3P (g4/index.html, #chat): plain talk with a model that runs on this Mac. No closed form, no
+     scoring. Pick a model on the left, write at the bottom. With the folder switch on (the default), every message is first matched
+     against the notes in the PARALLELOGRAM PRISM folder (scripts/folder_index.py) and the model is handed the passages that bear on it;
+     the files it was handed are named under its answer. The words come back as the model makes them; when a model
+     thinks out loud first, the thinking is kept apart and dim, above the answer. Nothing leaves the Mac.
+     The server (scripts/serve-range.py) does the work: GET /local/models lists what is installed, POST /local/talk
+     sends the conversation and streams the answer, POST /local/stop lets go of the model mid-answer.
+     Chats are kept in this browser only (localStorage), newest first, thirty at most.
+     ====================================================================== -->
+<link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=2">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { font-family: var(--g4-os); color: var(--lt-cream); background: transparent; overflow: hidden; }
+  #app { position: relative; z-index: 1; height: 100%; display: grid; grid-template-columns: 250px minmax(0, 1fr); grid-template-rows: minmax(0, 1fr); }
+  .rect { background: rgba(var(--g4-blue-rgb), .10); border: 1px solid rgba(var(--g4-blue-rgb), .30); color: var(--lt-cream); border-radius: 3px; font: 13px var(--g4-os); cursor: pointer; padding: 7px 12px; }
+  .rect:hover { background: rgba(var(--g4-blue-rgb), .18); } .rect:disabled { opacity: .4; cursor: default; }
+  .lab { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: rgba(246,241,230,.42); margin: 0 0 8px; }
+
+  /* the left column: who, and the kept talks */
+  #side { min-height: 0; border-right: 1px solid var(--g4-rule); padding: 62px 14px 18px;   /* the top is left clear for the M3P's prism and its beam */ overflow-y: auto; display: flex; flex-direction: column; gap: 20px; background: rgba(6,11,26,.35); }
+  .m { display: block; width: 100%; text-align: left; margin-bottom: 7px; padding: 9px 11px; line-height: 1.3; }
+  .m b { font-weight: 600; font-size: 14px; } .m small { display: block; font-size: 11px; font-style: italic; color: rgba(246,241,230,.46); margin-top: 2px; }
+  .m.on { border-color: var(--film-1); background: rgba(var(--g4-blue-rgb), .22); box-shadow: 0 0 14px rgba(190,232,255,.10); }
+  .m.missing { opacity: .45; }
+  #note { width: 100%; height: 74px; resize: vertical; background: rgba(0,0,0,.25); border: 1px solid var(--g4-rule); color: var(--lt-cream); font: 12.5px/1.4 var(--g4-os); padding: 7px 9px; border-radius: 3px; }
+  #note:focus, #in:focus { outline: none; border-color: rgba(190,232,255,.5); }
+  #kept a { display: block; font-size: 12.5px; color: rgba(246,241,230,.62); text-decoration: none; padding: 5px 2px; border-bottom: 1px solid var(--g4-rule-soft); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #kept a:hover, #kept a.on { color: var(--lt-cream); } #kept a small { color: rgba(246,241,230,.34); font-style: italic; }
+
+  /* the talk */
+  #main { min-width: 0; min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) auto; height: 100%; }   /* minmax(0,…): without it the talk grows past the glass instead of scrolling */
+  #log { min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 62px max(22px, calc(50% - 400px)) 18px; }
+  .empty { color: rgba(246,241,230,.4); font-style: italic; text-align: center; margin-top: 18vh; line-height: 1.7; }
+  .empty b { display: block; font-style: normal; font-size: 22px; font-weight: 600; color: rgba(246,241,230,.8); margin-bottom: 6px; }
+  .me { margin: 20px 0 10px; padding: 10px 14px; background: rgba(var(--g4-blue-rgb), .12); border: 1px solid rgba(var(--g4-blue-rgb), .24); border-radius: 3px; white-space: pre-wrap; font-size: 15px; line-height: 1.5; }
+  .it { margin: 6px 0 4px; font-size: 15.5px; line-height: 1.62; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .it code { font: 13px ui-monospace, Menlo, monospace; background: rgba(0,0,0,.35); padding: 1px 5px; border-radius: 3px; }
+  .it pre { font: 12.5px/1.5 ui-monospace, Menlo, monospace; background: rgba(0,0,0,.4); border: 1px solid var(--g4-rule); padding: 10px 12px; border-radius: 3px; overflow-x: auto; margin: 8px 0; white-space: pre; }
+  .it b { font-weight: 600; color: #fff; }
+  details.th { margin: 6px 0; font-size: 13px; color: rgba(246,241,230,.44); }
+  details.th summary { cursor: pointer; font-style: italic; list-style: none; } details.th summary::-webkit-details-marker { display: none; }
+  details.th div { white-space: pre-wrap; padding: 6px 0 2px 12px; border-left: 1px solid var(--g4-rule); margin-top: 5px; line-height: 1.5; }
+  .n { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: rgba(246,241,230,.32); margin-bottom: 14px; }
+  .src { font-size: 11.5px; color: rgba(246,241,230,.42); margin: 2px 0 6px; line-height: 1.6; } .src a { color: var(--film-1); text-decoration: none; opacity: .8; } .src a:hover { opacity: 1; text-decoration: underline; }
+  .n.err { color: var(--lt-red); text-transform: none; letter-spacing: 0; font-size: 13px; }
+
+  /* the composer */
+  #foot { padding: 10px max(22px, calc(50% - 400px)) 18px; border-top: 1px solid var(--g4-rule-soft); }
+  #row { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: end; }
+  #in { width: 100%; min-height: 48px; max-height: 40vh; resize: none; background: rgba(0,0,0,.28); border: 1px solid var(--g4-rule); color: var(--lt-cream); font: 15px/1.45 var(--g4-os); padding: 12px 14px; border-radius: 3px; }
+  #stat { font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; color: rgba(246,241,230,.36); margin-top: 7px; min-height: 1.3em; }
+  @media (max-width: 760px) { #app { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); } #side { flex-direction: row; overflow-x: auto; border-right: 0; border-bottom: 1px solid var(--g4-rule); padding: 10px; } #side > div { min-width: 220px; } }
+</style>
+</head>
+<body>
+<div class="g4-sky"></div>
+<div id="app">
+  <aside id="side">
+    <div>
+      <div class="lab">Who you are chatting with</div>
+      <div id="who"></div>
+      <div id="whohint" style="font-size:12px;color:rgba(246,241,230,.45);font-style:italic;line-height:1.5"></div>
+    </div>
+    <div>
+      <div class="lab">How it should answer <span style="text-transform:none;letter-spacing:0;font-style:italic">(optional)</span></div>
+      <textarea id="note" spellcheck="false" placeholder="A standing note for the model. Example: answer plainly, in short paragraphs."></textarea>
+    </div>
+    <div>
+      <div class="lab">The project folder</div>
+      <label style="display:flex;gap:8px;align-items:flex-start;font-size:12.5px;line-height:1.45;color:rgba(246,241,230,.7);cursor:pointer"><input type="checkbox" id="folder" checked style="margin-top:3px"> <span>Every message checks the PARALLELOGRAM PRISM folder first. <i id="foldern" style="color:rgba(246,241,230,.4)"></i></span></label>
+    </div>
+    <div>
+      <button class="rect" id="new" style="width:100%">New chat</button>
+    </div>
+    <div style="min-height:0">
+      <div class="lab">Kept chats</div>
+      <div id="kept"></div>
+    </div>
+  </aside>
+  <main id="main">
+    <div id="log"></div>
+    <div id="foot">
+      <div id="row">
+        <textarea id="in" rows="1" placeholder="Write to it. Enter sends, Shift-Enter makes a new line."></textarea>
+        <button class="rect" id="go">Send</button>
+      </div>
+      <div id="stat"></div>
+    </div>
+  </main>
+</div>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const esc = x => String(x).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const store = { get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
+  let MODELS = [], WHO = store.get('talk.who', ''), TALK = { id: Date.now(), msgs: [] }, KEPT = store.get('talk.kept', []), busy = false, ctl = null;
+  $('folder').checked = store.get('talk.folder', true); $('folder').onchange = () => store.set('talk.folder', $('folder').checked);
+  $('note').value = store.get('talk.note', ''); $('note').oninput = () => store.set('talk.note', $('note').value);
+  const model = () => MODELS.find(x => x.name === WHO);
+  const crumb = () => { try { parent.postMessage({ type: 'g4:crumb', name: 'Chat', fn: '', crumb: model() ? model().label.toUpperCase() : 'CHAT' }, '*'); } catch (e) {} };
+
+  // how a model marks thinking out loud (the same marks local_worker.py reads): DeepSeek and Qwen; Gemma 4
+  const MARKS = [['<think>', '</think>'], ['<|channel>thought', '<channel|>']];
+  function split(t, thinksFirst) {
+    const th = [];
+    for (const [o, c] of MARKS) {
+      while (t.includes(c)) { const k = t.indexOf(c), head = t.slice(0, k), rest = t.slice(k + c.length), i = head.lastIndexOf(o); if (i >= 0) { th.push(head.slice(i + o.length)); t = head.slice(0, i) + rest; } else { th.push(head); t = rest; } thinksFirst = false; }
+      if (t.includes(o)) { const i = t.lastIndexOf(o); th.push(t.slice(i + o.length)); t = t.slice(0, i); thinksFirst = false; }
+    }
+    if (thinksFirst) { th.push(t); t = ''; }   // a model whose first words are always thinking, before its closing mark has come
+    return { text: t.replace(/<turn\|>/g, '').trim(), think: th.map(x => x.trim()).filter(Boolean).join('\n') };
+  }
+  // a little of the model's own formatting: code blocks, `code`, **bold**
+  function fmt(t) {
+    const parts = t.split(/```/); let out = '';
+    parts.forEach((p, i) => { out += i % 2 ? '<pre>' + esc(p.replace(/^[a-zA-Z0-9_+-]*\n/, '')) + '</pre>' : esc(p).replace(/`([^`\n]+)`/g, '<code>$1</code>').replace(/\*\*([^*\n]+)\*\*/g, '<b>$1</b>'); });
+    return out;
+  }
+  function itHTML(m, open) {
+    return (m.think ? `<details class="th"${open ? ' open' : ''}><summary>${open ? 'thinking…' : 'its thinking · show'}</summary><div>${esc(m.think)}</div></details>` : '') +
+      `<div class="it">${fmt(m.content || '')}</div>` + (m.src && m.src.length ? `<div class="src">read from the folder: ${m.src.map(x => `<a href="/${x.path.split('/').map(encodeURIComponent).join('/')}" target="_blank" title="${esc(x.date)}">${esc(x.path.split('/').pop().replace(/\.(md|txt|json)$/, '').replace(/_/g, ' '))}</a>`).join(' · ')}</div>` : '') + (m.n ? `<div class="n${m.err ? ' err' : ''}">${esc(m.n)}</div>` : '');
+  }
+  function draw() {
+    if (!TALK.msgs.length) {
+      $('log').innerHTML = `<div class="empty"><b>Chat</b>${model() && model().downloaded ? 'You are chatting with ' + esc(model().label) + '. It runs on this Mac and nothing leaves it.<br>The first answer waits while the model loads.' : MODELS.length ? 'Pick who you are chatting with, on the left.' : 'Looking for the models on this Mac…'}</div>`; return;
+    }
+    $('log').innerHTML = TALK.msgs.map(m => m.role === 'user' ? `<div class="me">${esc(m.content)}</div>` : `<div class="turn">${itHTML(m)}</div>`).join('');
+    $('log').scrollTop = 1e9;
+  }
+  function drawWho() {
+    if (WHO && !model()) WHO = '';
+    $('who').innerHTML = MODELS.map(x => `<button class="rect m${x.name === WHO ? ' on' : ''}${x.downloaded ? '' : ' missing'}" data-m="${x.name}"><b>${esc(x.label)}</b><small>${x.downloaded ? esc(x.note || '') : 'not on this Mac yet'}</small></button>`).join('');
+    $('who').querySelectorAll('button').forEach(b => b.onclick = () => { if (busy) return; WHO = b.dataset.m; store.set('talk.who', WHO); drawWho(); draw(); });
+    const x = model();
+    $('whohint').textContent = !MODELS.length ? '' : !x ? '' : !x.downloaded ? 'Double-click “Install the Local Models.command” in the project folder to get it.' : 'Changing who you chat with mid-chat is fine: the next one reads the whole chat so far.';
+    $('go').disabled = !x || !x.downloaded; crumb();
+  }
+  function drawKept() {
+    $('kept').innerHTML = KEPT.length ? KEPT.map(k => `<a href="#" data-id="${k.id}" class="${k.id === TALK.id ? 'on' : ''}">${esc(k.title)} <small>· ${esc(k.who || '')}</small></a>`).join('') : '<div style="font-size:12px;font-style:italic;color:rgba(246,241,230,.34)">None yet. A chat is kept once it has an answer.</div>';
+    $('kept').querySelectorAll('a').forEach(a => a.onclick = e => { e.preventDefault(); if (busy) return; const k = KEPT.find(x => String(x.id) === a.dataset.id); if (k) { TALK = { id: k.id, msgs: JSON.parse(JSON.stringify(k.msgs)) }; draw(); drawKept(); } });
+  }
+  function keep() {
+    const first = (TALK.msgs.find(m => m.role === 'user') || {}).content || 'a chat';
+    const k = { id: TALK.id, title: first.replace(/\s+/g, ' ').slice(0, 46), who: model() ? model().label : '', msgs: TALK.msgs };
+    KEPT = [k].concat(KEPT.filter(x => x.id !== TALK.id)).slice(0, 30); store.set('talk.kept', KEPT); drawKept();
+  }
+  $('new').onclick = () => { if (busy) return; TALK = { id: Date.now(), msgs: [] }; draw(); drawKept(); $('in').focus(); };
+
+  async function send() {
+    const q = $('in').value.trim(), x = model(); if (!q || !x || !x.downloaded || busy) return;
+    busy = true; $('in').value = ''; grow(); $('go').textContent = 'Stop'; TALK.msgs.push({ role: 'user', content: q });
+    const m = { role: 'assistant', content: '', think: '', who: x.label }; TALK.msgs.push(m); draw();
+    const turn = $('log').lastElementChild, t0 = Date.now(); let raw = '';
+    const tick = setInterval(() => { if (!raw) $('stat').textContent = x.label + ' · waiting for the first word · ' + Math.round((Date.now() - t0) / 1000) + 's'; }, 500);
+    const msgs = []; const note = $('note').value.trim(); if (note) msgs.push({ role: 'system', content: note });
+    TALK.msgs.slice(0, -1).forEach(z => { if (z.content) msgs.push({ role: z.role, content: z.content }); });
+    ctl = new AbortController(); let tail = '';
+    try {
+      const r = await fetch('/local/talk', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: WHO, messages: msgs, folder: $('folder').checked }), signal: ctl.signal });
+      const rd = r.body.getReader(), dec = new TextDecoder();
+      for (;;) {
+        const { done, value } = await rd.read(); if (done) break; raw += dec.decode(value, { stream: true });
+        const body = raw.split('\x1e'); tail = body[1] || ''; const s = split(body[0], x.thinksFirst); m.content = s.text; m.think = s.think;
+        const near = $('log').scrollHeight - $('log').scrollTop - $('log').clientHeight < 80;
+        turn.innerHTML = itHTML(m, !s.text); if (near) $('log').scrollTop = 1e9;
+        $('stat').textContent = x.label + (s.text ? ' · answering' : ' · thinking') + ' · ' + Math.round((Date.now() - t0) / 1000) + 's';
+      }
+      let n = {}; try { n = JSON.parse(tail || '{}'); } catch (e) {}
+      if (n.sources) m.src = n.sources;
+      if (n.error) { m.n = n.error; m.err = true; }
+      else m.n = x.label + ' · ' + (n.output_tokens || '?') + ' tokens · ' + (n.tps || '?') + ' a second';
+      if (!m.content && !m.think && !n.error) { m.content = raw.split('\x1e')[0]; }
+    } catch (e) {
+      m.n = e.name === 'AbortError' ? x.label + ' · stopped' : 'The M3P’s server is not answering. Open the M3P app again, or double-click “Serve the Workspace.command”.'; m.err = e.name !== 'AbortError';
+    }
+    clearInterval(tick); turn.innerHTML = itHTML(m); $('stat').textContent = ''; busy = false; ctl = null; $('go').textContent = 'Send';
+    if (!m.content && m.err) TALK.msgs.splice(-2, 2), $('in').value = q, grow();   // nothing came back: give the words back to the writer
+    if (TALK.msgs.some(z => z.role === 'assistant' && z.content)) keep();
+    $('in').focus();
+  }
+  function stop() { if (ctl) ctl.abort(); fetch('/local/stop', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }).catch(() => {}); }
+  $('go').onclick = () => busy ? stop() : send();
+  const grow = () => { const t = $('in'); t.style.height = 'auto'; t.style.height = Math.min(t.scrollHeight + 2, innerHeight * .4) + 'px'; };
+  $('in').addEventListener('input', grow);
+  $('in').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey && !e.isComposing) { e.preventDefault(); if (!busy) send(); } });
+
+  draw(); drawKept();
+  fetch('/local/models', { cache: 'no-store' }).then(r => r.json()).then(d => {
+    if (d.folder) $('foldern').textContent = d.folder.files + ' files of notes, specs and handoffs.';
+    MODELS = d.models || []; if (!WHO) WHO = (MODELS.find(x => x.downloaded) || {}).name || ''; drawWho(); draw();
+    if (!d.installed) $('whohint').textContent = 'The local models are not installed yet. Double-click “Install the Local Models.command” in the project folder.';
+  }).catch(() => { $('log').innerHTML = '<div class="empty"><b>Chat</b>The M3P’s server is not answering, or it was started before Chat was added.<br>Open the M3P app again, or close the server’s window and double-click “Serve the Workspace.command”.</div>'; });
+})();
+</script>
+</body>
+</html>

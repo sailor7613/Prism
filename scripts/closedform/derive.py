@@ -166,6 +166,50 @@ def salvage(t):
             except ValueError: pass
     return {key: got} if got else None
 
+# ── 11-13: a local model answers instead of Anthropic. A model named local:<name> (gemma, qwen, deepseek — the list is
+# local_models.json — or local:<hugging face repo>) is run on this Mac by local_worker.py, which is started once and
+# keeps the model in memory for the whole run. Nothing leaves the Mac and no key is needed.
+LOCAL_PY = os.path.expanduser('~/.prism-local/venv/bin/python')
+_WORKER = {}
+def is_local(m): return str(m or '').startswith('local:')
+def local_worker():
+    import subprocess, atexit
+    p = _WORKER.get('p')
+    if p and p.poll() is None: return p
+    py = os.environ.get('CF_LOCAL_PY') or (LOCAL_PY if os.path.exists(LOCAL_PY) else sys.executable)
+    p = subprocess.Popen([py, '-u', os.path.join(HERE, 'local_worker.py')], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1)
+    _WORKER['p'] = p; atexit.register(lambda: (p.stdin.close(), p.terminate()) if p.poll() is None else None)
+    return p
+def local_ask(req, on_tok=None):
+    """One request to the worker; returns its last line (the answer). on_tok gets each piece when req['stream'] is set."""
+    p = local_worker(); p.stdin.write(json.dumps(req, ensure_ascii=False) + '\n'); p.stdin.flush()
+    while True:
+        line = p.stdout.readline()
+        if not line: raise SystemExit('the local model stopped — if it has not been installed, run "Install the Local Models.command"')
+        try: d = json.loads(line)
+        except ValueError: continue
+        if 'tok' in d:
+            if on_tok: on_tok(d['tok'])
+            continue
+        return d
+def call_local(sys_, user, model):
+    name = model.split(':', 1)[1]
+    for attempt in range(3):
+        d = local_ask({'model': name, 'system': sys_, 'user': user, 'max_tokens': 8000})
+        if d.get('error'): raise SystemExit(f'{model}: {d["error"]}')
+        t = d.get('text', ''); u = {'model': model, 'repo': d.get('repo'), 'input_tokens': d.get('input_tokens', 0), 'output_tokens': d.get('output_tokens', 0), 'secs': d.get('secs'), 'tps': d.get('tps')}
+        print(f"  {model}: {u['output_tokens']} tokens in {u['secs']}s ({u['tps']}/s)")
+        m = re.search(r'\{.*\}', t, re.S)
+        try:
+            if not m: raise ValueError('no JSON')
+            return json.loads(m.group(0)), u
+        except ValueError as e:
+            open(os.path.join(OUT, '_last_bad_answer.txt'), 'w').write(t)
+            sv = salvage(t)
+            if sv: kk = list(sv)[0]; print(f'  {model}: the answer was not clean JSON ({e}) — salvaged {len(sv[kk])} {kk}'); return sv, u
+            print(f'  {model}: the answer was not clean JSON ({e}; {len(t)} chars) — asking again')
+    raise SystemExit(f'{model} gave no usable answer in three tries — see data/closedform/_last_bad_answer.txt')
+
 def call(sys_, user, k, model=None):
     # 11-07: offline mode — CF_ANSWERS names a JSON list of answers (one per call, in order); used when Claude answers in chat instead of the API
     if os.environ.get('CF_ANSWERS'):
@@ -173,6 +217,7 @@ def call(sys_, user, k, model=None):
         if n >= len(A): raise SystemExit(f'CF_ANSWERS: no answer #{n} (have {len(A)})')
         os.environ['CF_ANSWERS_I'] = str(n + 1); print(f'  offline answer #{n} ({os.environ["CF_ANSWERS"]})')
         return A[n], {'model': 'claude-in-chat (offline)', 'input_tokens': 0, 'output_tokens': 0}
+    if is_local(model or MODEL): return call_local(sys_, user, model or MODEL)   # 11-13
     # 11-04: Anthropic's reason is printed on any refusal; a setting the model won't take is dropped and the call retried,
     # and if the model name is refused the next one in CF_MODELS is tried
     import urllib.error
@@ -196,6 +241,10 @@ def call(sys_, user, k, model=None):
                 if e.code in (400, 404) and 'model' in low: break          # try the next model
                 if e.code in (429, 500, 529): import time; time.sleep(8); continue
                 raise SystemExit(f'Anthropic refused the request: {last}')
+            except (urllib.error.URLError, TimeoutError, ConnectionError, ssl.SSLError) as e:   # 11-13: a dropped or slow connection — wait and ask again (a run died on this while the models were downloading)
+                last = str(e); print(f'  {model}: the connection dropped ({last[:120]}) — trying again'); import time; time.sleep(10 * (attempt + 1))
+                if attempt == 2: raise SystemExit(f'the connection to Anthropic kept dropping: {last}')
+                continue
             t = ''.join(c.get('text', '') for c in d.get('content', []))
             m = re.search(r'\{.*\}', t, re.S); u = d.get('usage', {}); u['model'] = model
             try:

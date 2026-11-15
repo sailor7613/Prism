@@ -1902,7 +1902,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 <script src="../src/js/prism-light.js?v=3"></script>  <!-- THE LIGHT: the beam + spectrum shared with the g4 navtool (2026-10-18) -->
-<script src="../src/js/prism-model.js?v=1"></script>   <!-- PRISM'S PHYSICAL MODEL (11-10): the Object, the prism, the map on the pool -->
+<script src="../src/js/prism-model.js?v=3"></script>   <!-- PRISM'S PHYSICAL MODEL (11-10): the Object, the prism, the map on the pool -->
 <script src="satellite.min.js"></script>
 <script>
 // ============================================================
@@ -5186,67 +5186,13 @@ scene.add(coastalFlora);
 })();
 
 // ============================================================
-// SAILBOATS (2026-07-30) — vaguely Star class: low freeboard, tall rig,
-// big main + small jib, sailed heeled. Three of them, slow crossing courses.
+// THE FLEET (2026-11-12) — the three box boats of 07-30 are retired. The
+// sailboats are now true Stars, and how many sail, how hard they heel and
+// which way they go is read from the price. All of it is in
+// ../src/js/villa-fleet.js; this is only the hook the frame loop calls.
+// The old builder is kept in archive/dreamgetty_index_2026-11-12_before_fleet.html
 // ============================================================
-function buildStarBoat(sailTint) {
-  const g = new THREE.Group();
-  const hullMat = new THREE.MeshStandardMaterial({ color: 0x25354a, roughness: 0.5 });
-  const deckMat = new THREE.MeshStandardMaterial({ color: 0xc9b98a, roughness: 0.7 });
-  const sailMat = new THREE.MeshStandardMaterial({ color: sailTint, roughness: 0.85, side: THREE.DoubleSide });
-  const sparMat = new THREE.MeshStandardMaterial({ color: 0x8a6a45, roughness: 0.6 });
-  const hull = new THREE.Mesh(new THREE.BoxGeometry(1.0, 0.5, 4.2), hullMat);
-  hull.position.y = 0.05;
-  g.add(hull);
-  const prow = new THREE.Mesh(new THREE.BoxGeometry(0.71, 0.5, 0.71), hullMat);
-  prow.rotation.y = Math.PI / 4;
-  prow.position.set(0, 0.05, 2.2);
-  g.add(prow);
-  const deck = new THREE.Mesh(new THREE.BoxGeometry(0.9, 0.06, 4.0), deckMat);
-  deck.position.y = 0.33;
-  g.add(deck);
-  const mast = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.05, 5.6, 6), sparMat);
-  mast.position.set(0, 3.1, 0.7);
-  g.add(mast);
-  const boom = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, 2.6, 6), sparMat);
-  boom.rotation.x = Math.PI / 2;
-  boom.position.set(0, 0.75, -0.6);
-  g.add(boom);
-  const mainGeo = new THREE.BufferGeometry();
-  mainGeo.setAttribute('position', new THREE.Float32BufferAttribute([
-    0, 0.8, 0.68, 0, 5.8, 0.68, 0, 0.8, -1.9], 3));
-  mainGeo.computeVertexNormals();
-  g.add(new THREE.Mesh(mainGeo, sailMat));
-  const jibGeo = new THREE.BufferGeometry();
-  jibGeo.setAttribute('position', new THREE.Float32BufferAttribute([
-    0, 0.75, 2.1, 0, 4.6, 0.72, 0, 0.75, 0.72], 3));
-  jibGeo.computeVertexNormals();
-  g.add(new THREE.Mesh(jibGeo, sailMat));
-  g.traverse(o => { if (o.isMesh) o.castShadow = true; });
-  return g;
-}
-
-const sailboats = [];
-[{ cx: -55, cz: 200, rx: 45, rz: 28, ph: 0,   dir: 1,  tint: 0xf5f2e8 },
- { cx: 30,  cz: 235, rx: 60, rz: 35, ph: 2.1, dir: -1, tint: 0xefe8d5 },
- { cx: 80,  cz: 175, rx: 38, rz: 24, ph: 4.4, dir: 1,  tint: 0xf5eede }].forEach(c => {
-  const b = buildStarBoat(c.tint);
-  scene.add(b);
-  sailboats.push(Object.assign({ mesh: b }, c));
-});
-
-function animateBoats(t) {
-  sailboats.forEach(b => {
-    const a = b.ph + t * 0.045 * b.dir;
-    const x = b.cx + Math.cos(a) * b.rx;
-    const z = b.cz + Math.sin(a) * b.rz;
-    b.mesh.position.set(x, OCEAN_Y + 0.32 + Math.sin(t * 1.1 + b.ph) * 0.22, z);
-    const vx = -Math.sin(a) * b.rx * b.dir, vz = Math.cos(a) * b.rz * b.dir;
-    b.mesh.rotation.y = Math.atan2(vx, vz);
-    b.mesh.rotation.z = 0.16 * b.dir + Math.sin(t * 0.9 + b.ph) * 0.05; // heel
-    b.mesh.rotation.x = Math.sin(t * 1.3 + b.ph * 2) * 0.04;            // pitch
-  });
-}
+function animateBoats(t) { if (window.VillaFleet) window.VillaFleet.tick(t); }
 
 // ============================================================
 // SKY DOME
@@ -6103,7 +6049,8 @@ const POOL_SWELL_GLSL = [
 const poolWaterMat = new THREE.ShaderMaterial({
   transparent: true, side: THREE.DoubleSide,
   uniforms: {
-    uT: { value: 0 }, uLight: { value: 1 }, uFilm: { value: 1 }, uSwell: { value: 0.028 }, uMapOn: { value: 0 },
+    uT: { value: 0 }, uLight: { value: 1 }, uFilm: { value: 1 }, uSwell: { value: 0.028 }, uMapOn: { value: 0 }, uMapFilm: { value: /[?&]map=old\b/.test(location.search) ? 0.35 : 0.06 },   // (11-12) the film under the map: near none, so the map's four colours stay clean
+   
     uColor: { value: new THREE.Color(0x1a3a5a) },
     uHalf: { value: new THREE.Vector2((poolW - 0.2) / 2, (poolD - 0.2) / 2) },
     uMap: { value: new THREE.Vector3(0, 0.5, 2.5) },             // the map's centre on the plane, and its half-width
@@ -6121,7 +6068,7 @@ const poolWaterMat = new THREE.ShaderMaterial({
   ].join('\n'),
   fragmentShader: [
     'varying vec2 vP; varying vec3 vW;',
-    'uniform float uT; uniform float uLight; uniform float uFilm; uniform float uMapOn; uniform float uLampOn;',
+    'uniform float uT; uniform float uLight; uniform float uFilm; uniform float uMapOn; uniform float uLampOn; uniform float uMapFilm;',
     'uniform vec3 uColor; uniform vec2 uHalf; uniform vec3 uMap; uniform vec3 uMoon; uniform vec3 uL1; uniform vec3 uL2;',
     'float h2(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }',
     'float n2(vec2 p){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);',
@@ -6148,7 +6095,7 @@ const poolWaterMat = new THREE.ShaderMaterial({
     '  col = mix(col, vec3(0.55, 0.68, 0.82), fr * 0.50) * uLight;',         // the sky, at a low angle
     '  vec2 dm = abs(p - uMap.xy) - uMap.z;',
     '  float inMap = (1.0 - smoothstep(-0.5, 0.25, max(dm.x, dm.y))) * uMapOn;',
-    '  float amt = (0.13 + 0.40 * fr) * mix(1.0, 0.35, inMap) * uFilm;',
+    '  float amt = (0.13 + 0.40 * fr) * mix(1.0, uMapFilm, inMap) * uFilm;',
     '  col = mix(col, f * (0.42 + 0.58 * uLight), amt);',
     '  float keep = 0.40 + 0.60 * uLight;',
     '  col += vec3(0.85, 0.90, 1.00) * glint(uMoon, N, V, 110.0) * 0.75 * keep;',                 // the moon
@@ -15031,6 +14978,12 @@ const STELE_STONE = 0x1a1814;          // the pedestal's marble — low channels
 // No new field crosses the gate; no Worker change; the 400 cap covers both.
 const STELE_FACE_SPLIT = ' \u2042 ';
 const TROUT_STELE_ID = '1785778489227-trout-i09din';
+// THE STONE IS TAKEN DOWN (2026-11-12, Sailor: "get rid of the stele that's in
+// the pedestal"). It stood in the same spot as the beach's book stand and cut
+// through it. Trout's word is not lost: it is still in the feed, and it now
+// hangs in the beach's cloud with everything else said there. Set this back to
+// true and the stone stands again.
+const TROUT_STONE_STANDS = false;
 const steleField = new THREE.Group();
 steleField.name = 'statementField';
 scene.add(steleField);
@@ -15164,7 +15117,7 @@ function cloudSaidAt(placeKey) {
   const lab = pl ? pl.label.toLowerCase() : placeKey;
   const out = [];
   (feedState.entries || []).forEach(function (e) {
-    if (!e || !e.id || e.kind === 'address' || isTroutStone(e)) return;
+    if (!e || !e.id || e.kind === 'address' || (TROUT_STONE_STANDS && isTroutStone(e))) return;
     if (typeof isProfileEntry === 'function' && isProfileEntry(e)) return;
     if (typeof isSeenMark === 'function' && isSeenMark(e)) return;   // bookkeeping, not speech
     const inBook = (typeof notebookRoom === 'function') && notebookRoom(e) === placeKey;
@@ -15797,7 +15750,7 @@ function renderStatementField() {
   const answered = new Set(visible.map(e => e.id));
   // With clouds on, the STONE field is Trout's alone — everything else has
   // gone into the air over its place's book (below).
-  const standing = CLOUD_STATEMENTS ? ordered.filter(isTroutStone) : ordered;
+  const standing = CLOUD_STATEMENTS ? (TROUT_STONE_STANDS ? ordered.filter(isTroutStone) : []) : ordered;
 
   // THE STONES. With clouds on this is Trout's alone; with them off it is
   // every statement, exactly as it was before 08-16.
@@ -26988,7 +26941,7 @@ const TED_PLACE_LINES = {
   lawn:       'The North Lawn. When I give an address, this is where everyone sits — short in front, tall behind.',
   overlook:   'The Overlook. The whole villa from one cliff — the house behind you, the valley below, the sea out past the break.',
   valley:     'The Valley. The river comes down through here on its way from the saddle to the sea. Follow it either way and you cannot get lost.',
-  beach:      'The beach. Where everyone gathers, and where Trout left the oldest word the villa has kept — that stone is his.',
+  beach:      'The beach. Where everyone gathers, and where Trout left the oldest word the villa has kept.',
   rivermouth: 'The river mouth. Fresh water meets the surf here; the Princess comes up it on her back, and the turtle hauls out just there.',
   break:      'The break. Kyle works it — a bottlenose, and he leaps out of it. Austin goes in bill first from above.',
   kelp:       'The kelp bed. The Princess’s raft, offshore of the river. Haley watches her from the tideline — her cousin, a fox.',
@@ -30140,6 +30093,7 @@ console.log('[Dream Getty v6] Story sequencer ready. G4 STORY tab wired.');
 })();
 </script>
 <script src="dream-news.js"></script>  <!-- DREAM NEWS: the desk in the Plaza; dormant without ?show= (2026-10-18) -->
-<script src="../src/js/villa-binnacle.js?v=7"></script>  <!-- THE BINNACLE AND THE FLIGHTS (2026-11-11): the nav tool, and every move flown as a curve -->
+<script src="../src/js/villa-binnacle.js?v=8"></script>  <!-- THE BINNACLE AND THE FLIGHTS (2026-11-11): the nav tool, and every move flown as a curve -->
+<script src="../src/js/villa-fleet.js?v=2"></script>  <!-- THE FLEET (2026-11-12): the Stars on the sea, sailed by the price -->
 </body>
 </html>

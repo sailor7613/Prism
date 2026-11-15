@@ -107,6 +107,10 @@
       // over the pool, off the cliff's edge, down the valley
       via: [[3, 5.5, 33], [-2, 1.5, 47], [6, -3.5, 56]],
       looks: [{ at: 1.7, p: [0, -6, 72] }] },
+    { key: 'fleet', lcd: 'THE FLEET', kind: 'fleet', always: true, dur: 12 },
+      // out to a boat under sail (11-12). Its path is drawn fresh each time, from where she is: off
+      // the cliff, down to the water astern of her, up her leeward side, and round onto her bow
+      // looking back. She keeps sailing, so the flight rides with her and the view stays on her after.
   ];
   var CIRCUIT = ['object', 'beam', 'venus', 'galleria', 'pool'];   // what AUTO flies, in order
   var DWELL = 15;                                                   // seconds AUTO waits at a stop
@@ -560,7 +564,8 @@
     looks.push({ t: 1, p: lb });
     var name = fly.name, lcdName = c.lcd || shortName(name);
     return { curve: curve, dur: dur, len: L, tab: tab, looks: looks, end: b, endLook: lb, name: name, lcd: lcdName,
-      key: c.key || (fly.extra && fly.extra.place) || null, set: hdgOf(b, lb), short: short, named: name != null };
+      key: c.key || (fly.extra && fly.extra.place) || null, set: hdgOf(b, lb), short: short, named: name != null,
+      ride: c.ride || null, landed: c.landed || null };
   }
   // where each drawn point sits along the path, 0–1 by distance
   function pointFractions(curve, pts) {
@@ -631,6 +636,10 @@
     var e = p.tab[xi] + (p.tab[xi + 1] - p.tab[xi]) * (x - xi);
     p.curve.getPointAt(e, camera.position);
     lookAtT(p, e, flight.look); flight.lookAt = now;
+    if (p.ride) {                                                 // the thing flown to is moving: go with it, more and more
+      var rd = p.ride(), rw = e * e * (3 - 2 * e);
+      if (rd) { camera.position.addScaledVector(rd, rw); flight.look.addScaledVector(rd, rw); }
+    }
     camera.lookAt(flight.look);
     // the bank: how fast the path is turning here, eased in and out with the flight
     p.curve.getTangentAt(Math.max(0, e - 0.02), tmpA); p.curve.getTangentAt(Math.min(1, e + 0.02), tmpB);
@@ -642,8 +651,9 @@
     camera.rotateZ(flight.roll);
     if (t >= 1 && !approach.released) {
       flight.plan = null; flight.roll = 0;
-      handBack(approach.endLook);
+      handBack(p.ride ? flight.look.clone() : approach.endLook);
       onLanding(p);
+      if (p.landed) { try { p.landed(); } catch (e) {} }
     }
     return true;
   };
@@ -730,6 +740,7 @@
   function go(key, fromAuto) {
     var c = COURSES.find(function (k) { return k.key === key; });
     if (!fromAuto) standDownAuto();
+    try { if (window.VillaFleet) window.VillaFleet.release(); } catch (e) {}     // any course lets go of the boat
     closeMenu();
     try { if (typeof obsState !== 'undefined' && obsState.seated && typeof obsStand === 'function') obsStand(); } catch (e) {}
     if (!c) {                                         // any other place: it flies its own arc
@@ -760,6 +771,23 @@
         autoOrbit = false;
         window.flightMark(c.lcd);
         try { updateNavBar(); } catch (e) {}
+      } else if (c.kind === 'fleet') {
+        var F = window.VillaFleet, s = F && F.shot();
+        if (s) {
+          try { stopFollow(); } catch (e) {}
+          leaveFocus(null);
+          var fromLand = camera.position.z < 80;                  // from the house: off the cliff first
+          c.via = (fromLand ? [[2, 7, 47], [(2 + s.sweep[0]) / 2, 15, (47 + s.sweep[2]) / 2]] : []).concat([s.sweep]);
+          c.looks = [{ at: fromLand ? 1.3 : 0.5, p: s.look }];
+          c.ride = s.ride; c.landed = function () { F.chase(s.boat); };
+          approach.active = true; approach.progress = 0; approach.startTime = -1; approach.released = false;
+          approach.duration = c.dur;
+          approach.startPos.copy(camera.position); approach.startLook.copy(camTarget);
+          approach.endPos.set(s.end[0], s.end[1], s.end[2]); approach.endLook.set(s.look[0], s.look[1], s.look[2]);
+          autoOrbit = false;
+          window.flightMark(c.lcd);
+          try { updateNavBar(); } catch (e) {}
+        }
       }
     } catch (e) { try { console.warn('[binnacle] course failed', key, e); } catch (x) {} }
     flight.pending = null;
@@ -774,6 +802,7 @@
   }
   function setStandby() {
     standDownAuto(); flight.pan = null;
+    try { if (window.VillaFleet) window.VillaFleet.release(); } catch (e) {}
     flightAbort();
     bn.mode = 'stby';
     syncPanel();

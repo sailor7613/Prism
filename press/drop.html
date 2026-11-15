@@ -94,6 +94,23 @@
   .post .q.active { background:#1f1a12; }
   @media (max-width:860px) { .body { grid-template-columns:1fr; grid-template-rows: 1fr auto; } .map { grid-row:1; } .list { border-left:0; border-top:1px solid #221f19; max-height:34vh; } #map { min-height:52vh; } }
 
+  /* ── 11-13: who reads it (the model switch), the read beside the standing read, and the talk box ── */
+  .who { margin-top:16px; }
+  .who .lab { font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:7px; }
+  .who .opts { display:flex; gap:8px; flex-wrap:wrap; }
+  .who button { background:transparent; color:var(--dim); border:1px solid #2a261e; padding:8px 12px; font-size:13px; text-align:left; line-height:1.25; }
+  .who button small { display:block; font-size:10.5px; color:var(--ghost); letter-spacing:.03em; }
+  .who button.on { border-color:var(--gold); color:var(--ink); background:#17140e; }
+  .who button.missing { opacity:.5; }
+  .who .hint { font-size:12px; color:var(--dim); margin-top:7px; min-height:1.4em; }
+  #beside { font-size:12.5px; color:var(--dim); margin-top:10px; line-height:1.6; }
+  #beside b { color:var(--ink); font-weight:normal; } #beside a { color:var(--gold); }
+  .talk { margin-bottom:22px; }
+  #talklog { max-height:300px; overflow-y:auto; font-size:13.5px; margin-bottom:8px; }
+  #talklog .me { color:var(--ink); margin:8px 0 3px; } #talklog .it { color:#b9b1a1; white-space:pre-wrap; margin:3px 0 8px; }
+  #talklog .it i { color:var(--ghost); font-style:italic; } #talklog .n { font-size:10.5px; color:var(--ghost); letter-spacing:.05em; }
+  #talkin { width:100%; min-height:0; height:58px; font:13.5px/1.4 Georgia,serif; padding:9px 11px; }
+  .talk .row { margin-top:7px; } .talk button { padding:7px 14px; font-size:13px; }
   .pin{display:inline-block;margin-top:.2rem;padding:.1rem .45rem;border-radius:4px;font-size:.72rem;letter-spacing:.02em;border:1px solid transparent}
   .pin.right{color:#e9c87a;border-color:rgba(212,170,82,.5)} .pin.wrong{color:#e8927a;border-color:rgba(176,82,58,.55)} .pin.open,.pin.unmeasured{color:#b5ae9f;border-color:rgba(138,131,120,.5)}
   .w.pinned::after{content:' ▼';opacity:.7}
@@ -119,8 +136,20 @@ the next one
       <button id="go">Pass it through Prism</button>
       <span class="status" id="s">ready · runs on this Mac · a few cents a run</span>
     </div>
+    <div class="who">
+      <div class="lab">Who reads it</div>
+      <div class="opts" id="who"><button data-m="" class="on">Sonnet<small>Anthropic · a few cents a run</small></button></div>
+      <div class="hint" id="whohint"></div>
+      <div id="beside"></div>
+    </div>
   </main>
   <aside class="side">
+    <div class="talk hid" id="talk">
+      <h2>Talk to <span id="talkname">the model</span></h2>
+      <div id="talklog"></div>
+      <textarea id="talkin" spellcheck="true" placeholder="Say something to it. Enter sends."></textarea>
+      <div class="row"><button id="talkgo">Send</button><span class="status" id="talks"></span></div>
+    </div>
     <h2>What happens</h2>
     <ol>
       <li><b>Grammar.</b> The posts are split into lines: one statement, one speaker; what each is about (the object, or the shadow: who's to blame), and the few words that carry it.</li>
@@ -343,7 +372,7 @@ the next one
     if (BODY && p.lines && p.lines.length) drawBody(BODY.built, new Set(p.lines.map(l => l.measure || l.tracker || l.gear)));   // the body, as it stands now
     board(p); const n = Object.keys(byLine).length;
     const stage = { grammar: ['the grammar', 'reading ' + (p.posts || []).length + ' posts into lines'], relational: ['the relational test', scored.size + ' of ' + n + ' scored' + (p.chunk ? ' · asking lines ' + p.chunk[0] + '–' + (p.chunk[1] - 1) : '')],
-                    gnostic: ['the second pass', 'where his own words come due'], context: ['the context', 'each line against the object's body, as of its date'], done: ['done', n + ' lines · ' + scored.size + ' scored · ' + (moments.size ? moments.size + ' credulity moments' : 'no moments') + (pinned.size ? ' · ' + pinned.size + ' forecasts pinned' : '')] }[p.stage];
+                    gnostic: ['the second pass', 'where his own words come due'], context: ['the context', "each line against the object's body, as of its date"], done: ['done', n + ' lines · ' + scored.size + ' scored · ' + (moments.size ? moments.size + ' credulity moments' : 'no moments') + (pinned.size ? ' · ' + pinned.size + ' forecasts pinned' : '')] }[p.stage];
     if (stage && p.stage !== 'grammar' || (stage && n === 0)) tline(stage[0], stage[1]);
     $('stat').innerHTML = ['grammar', 'relational', 'gnostic', 'context', 'done'].map(s => `<span class="${s === p.stage ? 'on' : ''}">${{ grammar: 'grammar', relational: 'relational test', gnostic: 'second pass', context: 'context', done: 'done' }[s]}</span>`).join(' · ');
   }
@@ -397,24 +426,74 @@ the next one
     requestAnimationFrame(frame);
   }
 
+  // ── 11-13: who reads it. Sonnet, or a model on this Mac (the server lists them: /local/models). A local read is kept
+  // apart (data/parallelograms/reads/<model>/) and, when a standing read of the same set exists, set beside it.
+  let WHO = '', MODELS = [];
+  try { WHO = localStorage.getItem('drop.who') || ''; } catch (e) {}
+  const whoLabel = m => (MODELS.find(x => x.name === m) || {}).label || 'Sonnet';
+  function drawWho() {
+    const have = MODELS.find(x => x.name === WHO); if (WHO && !have) WHO = '';
+    $('who').innerHTML = '<button data-m=""' + (WHO ? '' : ' class="on"') + '>Sonnet<small>Anthropic · a few cents a run</small></button>' +
+      MODELS.map(x => `<button data-m="${x.name}" class="${x.name === WHO ? 'on' : ''}${x.downloaded ? '' : ' missing'}">${esc(x.label)}<small>${x.downloaded ? 'on this Mac · ' + x.gb + ' GB · ' + esc(x.note || '') : 'not downloaded'}</small></button>`).join('');
+    $('who').querySelectorAll('button').forEach(b => b.onclick = () => { WHO = b.dataset.m; try { localStorage.setItem('drop.who', WHO); } catch (e) {} drawWho(); });
+    const x = MODELS.find(y => y.name === WHO);
+    $('whohint').textContent = !WHO ? '' : !x.downloaded ? 'Not on this Mac yet. Double-click “Install the Local Models.command” in the project folder.' : 'Runs on this Mac. Nothing leaves it and it costs nothing. A full set takes minutes; the first answer waits for the model to load.';
+    $('s').textContent = WHO ? 'ready · ' + x.label + ' · runs on this Mac' : 'ready · runs on this Mac · a few cents a run';
+    $('talk').classList.toggle('hid', !MODELS.length); $('talkname').textContent = WHO ? x.label : 'a local model';
+    $('talks').textContent = WHO ? '' : 'pick a local model on the left';
+  }
+  fetch('/local/models', { cache: 'no-store' }).then(r => r.json()).then(d => { MODELS = d.models || []; drawWho(); }).catch(() => {});
+  async function beside(id, m) {
+    try {
+      const c = await fetch('/local/compare?id=' + id + '&m=' + m, { cache: 'no-store' }).then(r => r.json());
+      if (!c.ok) { $('beside').innerHTML = 'No standing read of this set to put it beside yet. Run it once with Sonnet and the two can be compared.'; return; }
+      const a = c.summary.agree, b0 = c.summary.board;
+      $('beside').innerHTML = `<b>${esc(whoLabel(m))} beside the standing read.</b> ${c.summary.paired} of ${c.summary.lines[0]} lines pair up. ` +
+        `Same tier on <b>${a.tier}%</b>. Dia within 5 points on <b>${c.summary.diaWithin5}%</b> (${c.summary.diaGapMean} apart on average). ` +
+        `Same object-or-shadow on <b>${a.about}%</b>, same measure on <b>${a.measure}%</b>, same z word on <b>${a['z word']}%</b>, same forecast call on <b>${a['forecast call']}%</b>. ` +
+        `Totals: Dia ${b0[0].dia} → ${b0[1].dia}, z ${b0[0].readZ} → ${b0[1].readZ}, Lumens ${b0[0].lumensTracked} → ${b0[1].lumensTracked}. <a href="${c.report}" target="_blank">every line that differs</a>`;
+    } catch (e) {}
+  }
+  // the talk box: plain talk with the chosen local model, no closed form. Its thinking, when it thinks out loud, is shown dim.
+  const TALK = [];
+  const showIt = t => esc(t).replace(/&lt;think>/g, '<i>').replace(/&lt;\/think>/g, '</i>');
+  async function say() {
+    const q = $('talkin').value.trim(); if (!q || !WHO || $('talkgo').disabled) return;
+    TALK.push({ role: 'user', content: q }); $('talkin').value = ''; $('talkgo').disabled = true; $('talks').textContent = 'thinking… (the first answer waits for the model to load)';
+    $('talklog').insertAdjacentHTML('beforeend', '<div class="me">' + esc(q) + '</div><div class="it"></div>'); const box = $('talklog').lastChild; let all = '';
+    try {
+      const r = await fetch('/local/talk', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: WHO, messages: TALK }) });
+      const rd = r.body.getReader(), dec = new TextDecoder();
+      for (;;) { const { done, value } = await rd.read(); if (done) break; all += dec.decode(value, { stream: true }); box.innerHTML = showIt(all.split('\x1e')[0]); $('talklog').scrollTop = 1e9; }
+      const [text, tail] = all.split('\x1e'); let n = {}; try { n = JSON.parse(tail || '{}'); } catch (e) {}
+      if (n.error) { box.innerHTML = esc(n.error); $('talks').textContent = 'stopped'; TALK.pop(); }
+      else { TALK.push({ role: 'assistant', content: text.replace(/<think>[\s\S]*?<\/think>/g, '').trim() }); $('talks').textContent = (n.output_tokens || '') + ' tokens · ' + (n.tps || '?') + ' a second'; }
+    } catch (e) { box.textContent = 'The local server is not running, or it was started before this was added. Close its Terminal window and double-click “Serve the Workspace.command” again.'; $('talks').textContent = ''; TALK.pop(); }
+    $('talkgo').disabled = false;
+  }
+  $('talkgo').onclick = say;
+  $('talkin').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); say(); } });
+
   $('unstage').onclick = e => { e.preventDefault(); unstage(); };
   let timer = null;
   $('go').onclick = async () => {
     const text = $('t').value; const title = (text.match(/^#\s*title:\s*(.+)$/m) || [])[1];
     $('go').disabled = true; $('s').textContent = 'writing the input…'; crumb('RUN', 'writing the input'); stageOn(title);
     let r;
-    try { r = await fetch('/parallelogram', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) }).then(x => x.json()); }
+    try { r = await fetch('/parallelogram', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, model: WHO }) }).then(x => x.json()); }
     catch (e) { $('s').textContent = 'the local server is not running — double-click “Serve the Workspace.command” first'; $('go').disabled = false; unstage(); return; }
-    const id = r.id; $('s').textContent = 'running · ' + id; crumb('RUN', 'running · ' + id); tell({ type: 'g4:navpos', t: 0.5 });
+    const id = r.id, m = r.model || '', t0 = Date.now(), dir = m ? 'reads/' + m + '/' : ''; $('beside').innerHTML = ''; $('s').textContent = 'running · ' + id; crumb('RUN', 'running · ' + id); tell({ type: 'g4:navpos', t: 0.5 });
     clearInterval(timer);
     timer = setInterval(async () => {
-      const st = await fetch('/parallelogram/status?id=' + id, { cache: 'no-store' }).then(x => x.json());
+      const st = await fetch('/parallelogram/status?id=' + id + (m ? '&m=' + m : ''), { cache: 'no-store' }).then(x => x.json());
+      if (m && !st.done) { const sec = Math.round((Date.now() - t0) / 1000); $('s').textContent = 'running · ' + id + ' · ' + whoLabel(m) + ' · ' + Math.floor(sec / 60) + ':' + String(sec % 60).padStart(2, '0'); }
       $('log').textContent = (st.log || '').trim().split('\n').slice(-3).join('\n'); draw(st.progress);
       if (st.done) {
         clearInterval(timer); $('go').disabled = false;
         if (st.ok) {
           $('s').textContent = 'done · ' + id;
-          $('cloud').href = 'cloud.html?p=' + id; $('rep').href = '../data/parallelograms/' + id + '_report.md'; $('cloud').classList.remove('hid'); $('rep').classList.remove('hid');
+          $('cloud').href = 'cloud.html?p=' + id; $('rep').href = '../data/parallelograms/' + dir + id + '_report.md'; $('cloud').classList.toggle('hid', !!m); $('rep').classList.remove('hid');
+          if (m) beside(id, m);
           crumb('OUT', id + ' · drag the prism forward for the cloud'); tell({ type: 'g4:navpos', t: 0.88 });
         } else { $('s').textContent = 'stopped — see the log'; tline('stopped', 'see the log'); crumb('IN', 'stopped · ' + id); tell({ type: 'g4:navpos', t: 0.12 }); }
       }

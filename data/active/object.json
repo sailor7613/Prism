@@ -1,6 +1,8 @@
 {
  "what": "The object as Prism holds it. Its BODY is what is measured (dated readings); its LIGHT is what is said (the room). The TOPIC is the face the object shows now: it carries the ledger and the zero date the body is measured from. Only the light goes through the prism; the body reaches the graphmap as height. The body judges the light, never the reverse. Ruled by Sailor 2026-11-11; a rule marked DRAFT is a scale not yet ruled.",
  "object": "the political economy",
+ "name": "the Object",
+ "fullName": "the Object of Political Economy",
  "measures": [
   {
    "id": "pump",
@@ -1213,10 +1215,14 @@
     [
      "2026-10-30",
      121.17
+    ],
+    [
+     "2026-11-06",
+     100.41
     ]
    ],
    "sinceZero": {
-    "value": 69.8,
+    "value": 40.7,
     "unit": "%"
    }
   },
@@ -1282,8 +1288,8 @@
    "label": "the law",
    "unit": "a month",
    "pace": "months",
-   "asOf": "2026-11-11",
-   "source": "what Congress did: recorded votes in both chambers (the roll-call sweep) and laws enacted (the bill catalog) — on file as of 2026-11-11",
+   "asOf": "2026-11-12",
+   "source": "what Congress did: recorded votes in both chambers (the roll-call sweep) and laws enacted (the bill catalog) — on file as of 2026-11-12",
    "seriesLabel": "recorded votes",
    "series": [
     [
@@ -1471,7 +1477,7 @@
      0
     ],
     [
-     "2026-11-11",
+     "2026-11-12",
      2
     ]
    ],
@@ -1663,7 +1669,7 @@
       18
      ],
      [
-      "2026-11-11",
+      "2026-11-12",
       2
      ]
     ]
@@ -1675,8 +1681,8 @@
     "alsoUnit": "laws"
    },
    "fell": {
-    "from": "2025-11-11",
-    "to": "2026-11-11",
+    "from": "2025-11-12",
+    "to": "2026-11-12",
     "votes": 285,
     "laws": 101,
     "rows": [
@@ -5673,7 +5679,7 @@
        "wrong": 63,
        "right": 37,
        "crucialOrMajor": 74,
-       "source": "NBC News Exit Poll, 2026-11-03 — NBC's own page gives 63% wrong decision (nbcnews.com/politics/2026-election/exit-poll-trump-midterms-voters-economy-disapproval-rcna607045). The 37% right and the 74% crucial-or-major are the same poll as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/); NBC's page could not be opened on 11-11 to confirm those two"
+       "source": "NBC News Exit Poll, 2026-11-03 — NBC's own page gives 63% wrong decision (nbcnews.com/politics/2026-election/exit-poll-trump-midterms-voters-economy-disapproval-rcna607045). The 37% right and the 74% crucial-or-major are the same poll as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/); NBC's page could not be opened on 11-11 to confirm those two. On 11-12 both figures were found again in two more reports of the same NBC exit poll (Asia Times; The Blaze, which gives 34% crucial + 40% major)"
       }
      ]
     ]
@@ -5882,7 +5888,8 @@
    "2026-11-08",
    "2026-11-09",
    "2026-11-10",
-   "2026-11-11"
+   "2026-11-11",
+   "2026-11-12"
   ],
   "items": [
    15,
@@ -5906,7 +5913,8 @@
    63,
    93,
    108,
-   109
+   109,
+   101
   ],
   "order": [
    "midterms",
@@ -5916,20 +5924,22 @@
    "dollar",
    "chips",
    "tariffs",
-   "me-sen",
    "venezuela",
+   "me-sen",
    "russia-sanctions",
-   "shutdown",
    "iran-war",
+   "shutdown",
    "housing",
-   "war-powers",
    "hormuz",
    "fed",
    "heating-oil",
-   "iron-gate",
-   "iran-terms",
    "refining-margin",
-   "june-mou"
+   "iron-gate",
+   "war-powers",
+   "blockade",
+   "june-mou",
+   "iran-terms",
+   "wh-memo"
   ],
   "labels": {
    "midterms": "the midterms",
@@ -5968,7 +5978,8 @@
     2,
     3,
     6,
-    5
+    5,
+    7
    ],
    "tx-sen": [
     2,
@@ -5992,55 +6003,8 @@
     1,
     3,
     1,
-    0
-   ],
-   "dollar": [
     0,
-    11,
-    6,
-    4,
-    4,
-    2,
-    3,
-    4,
-    6,
-    6,
-    6,
-    2,
-    6,
-    0,
-    1,
-    2,
-    5,
-    6,
-    3,
-    6,
-    4,
-    2
-   ],
-   "me-sen": [
-    0,
-    3,
-    2,
-    2,
-    6,
-    3,
-    2,
-    2,
-    3,
-    3,
-    4,
-    3,
-    1,
-    3,
-    2,
-    5,
-    1,
-    0,
-    1,
-    0,
-    0,
-    0
+    1
    ],
    "midterms": [
     0,
@@ -6064,7 +6028,8 @@
     34,
     45,
     35,
-    25
+    25,
+    32
    ],
    "venezuela": [
     0,
@@ -6088,7 +6053,8 @@
     0,
     3,
     8,
-    4
+    4,
+    1
    ],
    "russia-sanctions": [
     0,
@@ -6112,31 +6078,8 @@
     2,
     3,
     0,
-    2
-   ],
-   "iran": [
-    0,
-    24,
-    13,
-    15,
-    21,
-    16,
-    17,
-    20,
-    25,
-    18,
-    16,
-    16,
-    7,
-    9,
-    14,
-    30,
-    18,
-    17,
-    11,
-    27,
-    27,
-    34
+    2,
+    1
    ],
    "tariffs": [
     0,
@@ -6160,6 +6103,82 @@
     2,
     1,
     1,
+    2,
+    1
+   ],
+   "iran": [
+    0,
+    24,
+    13,
+    15,
+    21,
+    16,
+    17,
+    20,
+    25,
+    18,
+    16,
+    16,
+    7,
+    9,
+    14,
+    30,
+    18,
+    17,
+    11,
+    27,
+    27,
+    34,
+    17
+   ],
+   "me-sen": [
+    0,
+    3,
+    2,
+    2,
+    6,
+    3,
+    2,
+    2,
+    3,
+    3,
+    4,
+    3,
+    1,
+    3,
+    2,
+    5,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1
+   ],
+   "dollar": [
+    0,
+    11,
+    6,
+    4,
+    4,
+    2,
+    3,
+    4,
+    6,
+    6,
+    6,
+    2,
+    6,
+    0,
+    1,
+    2,
+    5,
+    6,
+    3,
+    6,
+    4,
+    2,
     2
    ],
    "housing": [
@@ -6184,7 +6203,8 @@
     0,
     0,
     0,
-    0
+    0,
+    1
    ],
    "chips": [
     0,
@@ -6208,7 +6228,8 @@
     1,
     14,
     25,
-    17
+    17,
+    24
    ],
    "shutdown": [
     0,
@@ -6232,9 +6253,10 @@
     0,
     2,
     3,
-    2
+    2,
+    0
    ],
-   "war-powers": [
+   "hormuz": [
     0,
     0,
     0,
@@ -6256,54 +6278,7 @@
     0,
     0,
     0,
-    2
-   ],
-   "heating-oil": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    1
-   ],
-   "iron-gate": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
+    2,
     1
    ],
    "iran-war": [
@@ -6328,9 +6303,10 @@
     0,
     0,
     0,
-    13
+    13,
+    7
    ],
-   "iran-terms": [
+   "heating-oil": [
     0,
     0,
     0,
@@ -6352,6 +6328,32 @@
     0,
     0,
     0,
+    1,
+    1
+   ],
+   "fed": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
     1
    ],
    "refining-margin": [
@@ -6376,9 +6378,10 @@
     0,
     0,
     0,
+    1,
     1
    ],
-   "hormuz": [
+   "iron-gate": [
     0,
     0,
     0,
@@ -6400,33 +6403,111 @@
     0,
     0,
     0,
-    2
-   ],
-   "fed": [
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    0,
-    2
+    1,
+    1
    ],
    "june-mou": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "iran-terms": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0
+   ],
+   "war-powers": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2,
+    0
+   ],
+   "blockade": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    2
+   ],
+   "wh-memo": [
+    0,
     0,
     0,
     0,
@@ -6452,27 +6533,29 @@
    ]
   },
   "total": {
-   "diesel": 127,
-   "tx-sen": 97,
-   "dollar": 89,
-   "me-sen": 46,
-   "midterms": 1012,
-   "venezuela": 46,
-   "russia-sanctions": 45,
-   "iran": 395,
-   "tariffs": 51,
-   "housing": 9,
-   "chips": 67,
+   "diesel": 134,
+   "tx-sen": 98,
+   "midterms": 1044,
+   "venezuela": 47,
+   "russia-sanctions": 46,
+   "tariffs": 52,
+   "iran": 412,
+   "me-sen": 47,
+   "dollar": 91,
+   "housing": 10,
+   "chips": 91,
    "shutdown": 15,
-   "war-powers": 2,
-   "heating-oil": 1,
-   "iron-gate": 1,
-   "iran-war": 13,
+   "hormuz": 3,
+   "iran-war": 20,
+   "heating-oil": 2,
+   "fed": 3,
+   "refining-margin": 2,
+   "iron-gate": 2,
+   "june-mou": 1,
    "iran-terms": 1,
-   "refining-margin": 1,
-   "hormuz": 2,
-   "fed": 2,
-   "june-mou": 1
+   "war-powers": 2,
+   "blockade": 2,
+   "wh-memo": 1
   }
  },
  "viewNote": "topic / body / room below are the object as seen under the prevalent topic — the standing measures read as change since its zero, plus the topic's own state line and its question to the voters. The closed form reads this view.",
@@ -6889,6 +6972,12 @@
      -0.698,
      0.15,
      69.8
+    ],
+    [
+     "2026-11-06",
+     -0.407,
+     0.15,
+     40.7
     ]
    ],
    "note": "what the commentators quote; the pump is what people pay"
@@ -7264,7 +7353,7 @@
      }
     ]
    ],
-   "note": "the sign is ruled 11-11: a falling share is frustrated, and what it frustrates is the Object. P3 is an ordinary forecast line read against this measure"
+   "note": "the sign is ruled 11-11: a falling share is frustrated, and what it frustrates is the Object. P3 is a pattern read against this measure month by month, never scored right or wrong (ruled 11-12; was a forecast line 11-11)"
   },
   {
    "id": "vote",
@@ -7282,7 +7371,7 @@
       "wrong": 63,
       "right": 37,
       "crucialOrMajor": 74,
-      "source": "NBC News Exit Poll, 2026-11-03 — NBC's own page gives 63% wrong decision (nbcnews.com/politics/2026-election/exit-poll-trump-midterms-voters-economy-disapproval-rcna607045). The 37% right and the 74% crucial-or-major are the same poll as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/); NBC's page could not be opened on 11-11 to confirm those two"
+      "source": "NBC News Exit Poll, 2026-11-03 — NBC's own page gives 63% wrong decision (nbcnews.com/politics/2026-election/exit-poll-trump-midterms-voters-economy-disapproval-rcna607045). The 37% right and the 74% crucial-or-major are the same poll as reported by The Federalist (thefederalist.com/2026/11/03/exit-poll-iran-war-was-crucial-or-major-factor-for-3-in-4-voters/); NBC's page could not be opened on 11-11 to confirm those two. On 11-12 both figures were found again in two more reports of the same NBC exit poll (Asia Times; The Blaze, which gives 34% crucial + 40% major)"
      }
     ]
    ],
@@ -7293,8 +7382,8 @@
    "label": "the law",
    "kind": "state",
    "pace": "months",
-   "source": "what Congress did about the topic — recorded votes on the war-powers resolution (prism_votes.json), as of 2026-11-11",
-   "rule": "whether Congress had used its power over the war on that day: ordered the forces out +0.5 · held a recorded vote on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5; sigma 0",
+   "source": "what Congress did about the topic — every war-powers vote in both chambers, hand-kept with sources (LAW_VOTES in object-build.py), as of 2026-11-12",
+   "rule": "whether Congress had used its power over the war on that day: both chambers passed the same resolution ordering the forces out +0.5 · one chamber passed one +0.35 · held a recorded vote on the question +0.2, whatever the count · nothing voted on 0 · the vote kept from being held -0.5; sigma 0",
    "readings": [
     [
      "2026-02-28",
@@ -7303,16 +7392,130 @@
      "nothing voted on yet"
     ],
     [
+     "2026-03-04",
+     0.2,
+     0.0,
+     "Senate: S.J.Res. 104 — blocked 53–47; a recorded vote held (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-03-05",
+     0.2,
+     0.0,
+     "House: H.Con.Res. 38 — rejected 212–219; a recorded vote held (aljazeera.com/news/2026/3/5/us-house-narrowly-rejects-resolution-to-end-trumps-iran-war)"
+    ],
+    [
+     "2026-03-18",
+     0.2,
+     0.0,
+     "Senate: S.J.Res. 118 — blocked 53–47; a recorded vote held (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-03-24",
+     0.2,
+     0.0,
+     "Senate: S.J.Res. 116 — blocked 53–47; a recorded vote held (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-04-15",
+     0.2,
+     0.0,
+     "Senate: S.J.Res. 123 — blocked 52–47; a recorded vote held (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-04-16",
+     0.2,
+     0.0,
+     "House: H.Con.Res. 40 — rejected 213–214, one present; a recorded vote held (tennesseelookout.com/2026/04/16/repub/us-house-narrowly-defeats-resolution-limiting-trump-war-powers/)"
+    ],
+    [
+     "2026-04-22",
+     0.2,
+     0.0,
+     "Senate: S.J.Res. 114 — blocked 51–46; a recorded vote held (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-04-30",
+     0.2,
+     0.0,
+     "Senate: S.J.Res. 184 — blocked 50–47; a recorded vote held (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-05-13",
+     0.2,
+     0.0,
+     "Senate: S.J.Res. 163 — blocked 50–49; a recorded vote held (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-05-14",
+     0.2,
+     0.0,
+     "House: H.Con.Res. 75 — failed on a tie, 212–212; a recorded vote held (al-monitor.com/originals/2026/05/us-house-narrowly-rejects-bid-rein-trump-iran-war-powers)"
+    ],
+    [
      "2026-05-19",
      0.2,
      0.0,
-     "Senate: motion to discharge — 50–47, agreed; a recorded vote held"
+     "Senate: S.J.Res. 185 — discharged from committee 50–47 (a procedural vote, not passage); a recorded vote held (prism_votes.json)"
+    ],
+    [
+     "2026-05-21",
+     -0.5,
+     0.0,
+     "House: H.Con.Res. 86 — the scheduled vote pulled by House leadership when it was about to pass; the vote kept from being held (axios.com/2026/05/21/house-iran-war-powers-vote)"
+    ],
+    [
+     "2026-06-03",
+     0.35,
+     0.0,
+     "House: H.Con.Res. 86 — passed 215–208; one chamber has passed a resolution (mprnews.org/story/2026/06/03/npr-house-iran-war-powers-vote)"
+    ],
+    [
+     "2026-06-04",
+     0.35,
+     0.0,
+     "House: H.Con.Res. 84 — blocked 324–92; one chamber has passed a resolution (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-06-16",
+     0.35,
+     0.0,
+     "Senate: S.J.Res. 172 — blocked 48–47; one chamber has passed a resolution (en.wikipedia.org/wiki/War_Powers_Resolution (Iran, 2026), read 11-12)"
+    ],
+    [
+     "2026-06-23",
+     0.5,
+     0.0,
+     "Senate: H.Con.Res. 86 — agreed to 50–48 — the same resolution the House passed on 06-03; both chambers have passed the same resolution (rollcall.com/2026/06/23/senate-joins-house-in-calling-for-stop-to-us-war-on-iran/)"
     ],
     [
      "2026-06-24",
-     0.2,
+     0.5,
      0.0,
-     "Senate: motion to proceed — 47–50, rejected; a recorded vote held"
+     "Senate: S.J.Res. 185 — motion to proceed rejected 47–50; both chambers have passed the same resolution (cnn.com/2026/06/24/politics/senate-walks-back-iran-war-powers-vote)"
+    ],
+    [
+     "2026-07-23",
+     0.5,
+     0.0,
+     "House: a second resolution (Jayapal; number not on file) — passed 214–208; both chambers have passed the same resolution (al-monitor.com/originals/2026/07/us-house-votes-curb-trumps-iran-war-powers-senate-backs-president)"
+    ],
+    [
+     "2026-07-23",
+     0.5,
+     0.0,
+     "Senate: its own measure (number not on file) — blocked 49–47; both chambers have passed the same resolution (al-monitor.com/originals/2026/07/us-house-votes-curb-trumps-iran-war-powers-senate-backs-president)"
+    ],
+    [
+     "2026-09-15",
+     0.5,
+     0.0,
+     "House: H.Con.Res. 89 — passed 220–204; both chambers have passed the same resolution (abc7ny.com/story/house-votes-third-time-end-iran-war-conflict-drags/19838811/)"
+    ],
+    [
+     "2026-09-24",
+     0.5,
+     0.0,
+     "Senate: H.Con.Res. 89 — rejected 49–50; both chambers have passed the same resolution (senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm)"
     ]
    ],
    "events": [
@@ -7476,7 +7679,7 @@
      "warPowers": false
     }
    ],
-   "note": "ruled 11-11. A resolution passed by one chamber only is not ruled and reads +0.2; no vote kept from the floor is on file (that row is hand-kept). 7 recorded votes and enactments on bills that name the topic are listed under the topic"
+   "note": "ruled 11-11; one chamber passing ruled 11-12 (+0.35). The step line is a hand-kept record of 21 rows, each with its source, because the bill catalog does not hold the war-powers resolutions. The Senate rows from Wikipedia are a second-hand source. 7 recorded votes and enactments on bills that name the topic are listed under the topic"
   },
   {
    "id": "prices",
@@ -7746,7 +7949,7 @@
      322.54
     ]
    ],
-   "note": "sign ruled 11-11 (up is frustrated); the scale is a DRAFT, set to match the cost of living"
+   "note": "sign ruled 11-11 (up is frustrated); the scale ruled 11-12 as drafted, set to match the cost of living"
   },
   {
    "id": "mortgage",
@@ -7983,7 +8186,7 @@
      7.18
     ]
    ],
-   "note": "sign ruled 11-11 (up is frustrated); the scale is a DRAFT — a point on the rate adds about a tenth to a new loan's payment, so it matches the pump"
+   "note": "sign ruled 11-11 (up is frustrated); the scale ruled 11-12 as drafted — a point on the rate adds about a tenth to a new loan's payment, so it matches the pump"
   },
   {
    "id": "wages",
@@ -8052,7 +8255,7 @@
      112.6
     ]
    ],
-   "note": "ruled 11-11 (wages are read against prices, never alone); the scale is a DRAFT, set to match the cost of living. The fourth figure is pay over prices, an index"
+   "note": "ruled 11-11 (wages are read against prices, never alone); the scale ruled 11-12 as drafted, set to match the cost of living. The fourth figure is pay over prices, an index"
   },
   {
    "id": "direction",

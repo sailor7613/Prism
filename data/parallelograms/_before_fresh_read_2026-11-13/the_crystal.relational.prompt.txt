@@ -1,0 +1,244 @@
+You answer fixed questions from Prism's Diatribe Derivation Protocol about scored lines of political talk. You never give a Diatribe number; rules compute it from your answers. Judge the line, never the speaker's reputation, and never tone: a calm line can be fully denominated and an angry one fluid. Judge both sides of the map the same way. Holding a firm view is not denomination; talking over the other side, with the answer fixed before they speak, is. Reply with JSON only.
+
+OBJECT: PG01 — the Iran war (war start 2026-02-28). Object state by date: no war → Israel strikes Iran 2025-06-13 → US strikes Fordow/Natanz/Isfahan 2025-06-22 → the war 2026-02-28 → the midterms 2026-11-03
+z: +1 = realized for the audience  ·  −1 = frustrated for the audience
+
+TRACKER FACTS (what the object measurably is):
+[gear:pump] the pump: -0.828 on the object's z (SST — EIA US regular gasoline, retail (price.json))  (the clockwork, data/active/gears.json)
+[gear:vote] the vote: -0.26 on the object's z (exit polls (vote-cause tracker, to be built))  (the clockwork, data/active/gears.json)
+[gear:war] the war itself: -1.0 on the object's z (the object's own state by date (a step line, not a measurement))  (the clockwork, data/active/gears.json)
+[gear:dollar] the dollar: no reading yet on the object's z (SST settlement layer (settlement.json) + P3)  (the clockwork, data/active/gears.json; not tracked)
+
+DENOMINATION PATTERNS (library):
+#1 Preemptive Denomination Foreclosure [Defensive; stage 2→3] — Classifying a position as denominated before evaluating its substance, making evaluation unnecessary.
+#2 Performative Institutional Denomination [Performative; stage 3] — Participating in institutional sabotage then voting the opposite way. The institutional actor's public position and institutional behavior directly contradict each other.
+#3 Destroying Functional Mechanism While Claiming to Want Better [Performative; stage 3] — The "maximum pressure" / "free nuclear fuel forever" pattern. A functional mechanism (JCPOA, diplomatic framework) is destroyed with the stated justification that a better one will replace it. The replacement never mater
+#4 Defensive Denomination Through Non-Engagement (Single Instance) [Defensive; stage 2] — Unable to praise, criticize, or engage, so saying nothing. The Abraham Accords silence pattern — a genuine achievement by an opponent that the subject's frame cannot accommodate, producing a void.
+#5 Conspiratorial Boundary Enforcement [Conspiratorial; stage 3→4] — Reclassifying political disagreement as evidence of hidden allegiance to a monstrous enemy. Structurally identical on left (Clinton-Gabbard) and right (QAnon recruitment). The person disappears into a category.
+#6 Institutional Denomination Through Question Selection [Performative; stage 2] — Media/institutional framing that determines which question gets asked, which determines the answer. Appears neutral but the frame does the analytical work before anyone makes an argument.
+#7 Z-Suppression Through Definitional Retreat (Individual) [Defensive; stage 2→3] — An individual actor narrowing the definition of a prediction or promise to avoid falsification. The Z-gap between promise and outcome shrinks not because reality changed but because the measuring instrument was recalibra
+#8 Z-Suppression Through Historical Revision [Denial; stage 3] — Rewriting the past to eliminate the gap between promise and outcome. Unlike #7 (which narrows future-facing definitions), this operates retroactively — the past itself is revised to match the present.
+#9 Performative Glorification [Performative; stage 3] — Operation names, staged photos, historical cosplay — treating military or political action as aesthetic spectacle. The spectacle IS the content; the substance (consequences, costs, strategic rationale) is invisible behin
+#10 Institutional Definitional Reclassification [Performative; stage 3] — Institutional-scale relabeling performed under authority (testimony, official statements, fact-checks) that makes the old terminology — and therefore the old questions — feel conspiratorial to use. The reclassification h
+#11 Institutional Acknowledgment That Neutralizes Its Own Content [Performative + Defensive (dual-mode); stage 3] — Partially acknowledging a real phenomenon while constructing a frame that makes further pursuit evidence of enemy allegiance. "Yes, but..." structure where the "but" structurally prevents the "yes" from producing consequ
+#12 Conspiratorial Object Destruction Through Totalization [Conspiratorial; stage 4] — Totalizing narrative absorbs all evidence, discrediting legitimate inquiry. The object (actual elite misconduct, actual policy problems) disappears into an unfalsifiable framework that makes engagement with substance unn
+#13 Denial Mode (Left-Side Conspiratorial Variant) [Denial; stage 3] — Defensive dismissal that protects political allies by refusing to engage evidence. The evidence is not absorbed into a totalizing counter-narrative (#12) but simply denied standing. Mundane corruption (Burisma) escalated
+#14 Paired Theater Delegation [Performative; stage 3→4] — +Y institutional apparatus delegates different war/policy theaters across parties as institutional function. Both parties perform opposition on the other's assigned theater while maintaining shared institutional commitme
+#15 Defensive Non-Engagement, Compounding Over Time [Defensive; stage 2→3] — Progressive silence across NAFTA opposition failure, IIRIRA, Obama deportations, Biden Title 42 — each instance of non-engagement makes the next easier. Informal capital accumulates ("we support immigrants") without form
+#16 Z-Gap by Architectural Design [Performative (structural); stage 3] — Statutory or institutional architecture that structurally produces the problem it claims to address. IIRIRA creates conditions that generate unauthorized immigration while criminalizing it. The Z-gap is load-bearing — th
+#17 Denomination Catastrophe [Reactionary; stage 3→4] — Real informal capital (genuine border community suffering, real economic grievance) denominated into a vehicle (racialized threat narrative) that freezes the capital permanently, foreclosing the cross-axis exchange that 
+#18 Honesty That Raises Diatribe [Performative (inverse — the prior moral justification was the performance; the honesty breaks it); stage 3] — An actor's candid statement reveals institutional priorities that contradict the moral basis of an operation. Rubio: "while restoring democracy remains a long-term goal, coercing the current government to address U.S. se
+#19 Democratic Performance Masking Institutional Capture [Performative; stage 3] — Framing a +Y institutional achievement as democratic empowerment. The denomination is in the *characterization*, not the procedure — the procedure (Supreme Court ruling) is legitimate; the framing ("returning to the peop
+#20 Cultural Diagnosis Masking Economic Mechanism [Defensive (bilateral); stage 2→3] — Accurate cultural observation → values attribution → suppression of economic cause. Operates bilaterally. The right codes family formation as cultural/values issue; the left codes it as women's autonomy issue. Both frami
+#21 Procedural Sabotage of Democratic Mechanism [Performative; stage 3→4] — Changing rules to prevent substance from being decided, rather than engaging substance. The Ohio threshold gambit — attempting to raise the ballot initiative threshold from 50% to 60% specifically to prevent a known-majo
+#22 Retroactive Democratic Nullification [Performative; stage 3→4] — Using democratic form (ballot measure) to negate democratic substance (prior ballot result). The form/substance split is the diagnostic: democratic form as vehicle for anti-democratic substance. When a ballot measure is 
+#23 Performed Insurgency Serving Institutional Interests [Performative; stage 2→3] — +Y institutional actors manufacturing populist opposition to serve institutional interests. Heritage Foundation performing grassroots resistance to comprehensive immigration reform while serving institutional enforcement
+#27 Performative Y-Crossing [Performative; stage 2] — Stated position crosses the Y-axis under identifiable political pressure, producing a formal ledger entry (vote, statement, co-sponsorship) without producing a wake in the informal ledger. Actor returns to prior Y-positi
+#28 Foreclosure Over the Reply [Defensive (denominated variant of #1); stage 3] — A position is classified as denominated before its substance is weighed, and the speaker then talks over the other side's actual reply — answering the classification instead of what was said, the answer fixed before the 
+
+RULED CASES (Sailor's own rulings — follow their reasoning):
+- Abdul El-Sayed: 'it shouldn't be this hard to pay taxes and know that that money's gonna be spent on you and your kids, instead of dropping bombs on somebody else and their kids' → object: substance · others: working · capital: false · coalition — faces the object — the tradeoff between spending here and bombs abroad — but it's a campaign line built to win the room; the line is scored, not the man's reputation
+- Olivia Reingold: 'literally just repeated the gist of the claim that got him in hot water this week' → object: signal · others: closed · capital: false · denominated — files his line under the ad before meeting it, and talks over what he actually said
+- Haley Stevens: 'we can't stand with Hasan Piker' → object: signal · others: closed · capital: true · denominated — dismisses her party's nominee by association instead of answering him, and spends her capital doing it — the bridge to her own party burned
+- Troy Jackson (hypothetical — not said): 'she had the opportunity and the power to introduce a war powers resolution herself, and she didn't — and that's why those nine votes didn't matter' → object: substance · others: working · capital: false · coalition — Sailor's grounding proof: the same conclusion as 'those votes are meaningless', grounded in a checkable mechanism of her record — she can answer it, the audience can check it — so it cools from #28 to coalition. Grounding a pre-emption in a mechanism moves it back toward #1 or out of the patterns.
+- captive dreamer: 'they had to mix in the most delegitimizing lies possible' → object: signal · others: closed · capital: false · denominated — calls the war's critics liars wholesale and talks over them; the closed form's 92 is right (Sailor)
+- captive dreamer: 'I mocked the people who were crazy and actually supported baps criticism of the war' → object: signal · others: working · capital: false · coalition — describes his own record to win the room back; it isn't an attack on anyone (Sailor: 45)
+- PRINCIPLE · reported speech: When a speaker passes on someone else's view, it depends on how he presents it. If he affirms its logic, score it as his own. If he presents it as a specimen (a barometer, an example of what others believe), score his framing of it, not the view. (case: captive dreamer 2026-11-04: his 2024 Trump friend's year of Epstein and 'Israel controlling Trump', offered as 'a good barometer')
+
+LINES:
+[
+ {
+  "i": 0,
+  "who": "siegfriedmuell",
+  "station": "RP",
+  "quote": "Trump winning means no war. War is simply not in the cards.   [voice: siegfriedmuell, speaking for himself — reported or described by siegfriedmuell; the whole post: Trump winning means no war. War is simply not in the cards. Anyone talking about war with Iran is just out to lunch.]"
+ },
+ {
+  "i": 1,
+  "who": "siegfriedmuell",
+  "station": "RP",
+  "quote": "Anyone talking about war with Iran is just out to lunch.   [voice: siegfriedmuell, against war-warners — reported or described by siegfriedmuell; the whole post: Trump winning means no war. War is simply not in the cards. Anyone talking about war with Iran is just out to lunch.]"
+ },
+ {
+  "i": 2,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Israel going to war with Iran without us is somehow proving me wrong?   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: Wait, so Israel going to war with Iran without us is somehow proving me wrong? Are you stupid? (yes)]"
+ },
+ {
+  "i": 3,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Are you stupid? (yes)   [voice: captive_dreamer, to his critic — reported or described by captive_dreamer; the whole post: Wait, so Israel going to war with Iran without us is somehow proving me wrong? Are you stupid? (yes)]"
+ },
+ {
+  "i": 4,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "So, no war with Iran, no nukes. Wake me up when that changes   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: So, no war with Iran, no nukes. Wake me up when that changes, I'll gladly eat my words (until then, I'm right yet again)]"
+ },
+ {
+  "i": 5,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "I'll gladly eat my words (until then, I'm right yet again)   [voice: captive_dreamer, on his own record — reported or described by captive_dreamer; the whole post: So, no war with Iran, no nukes. Wake me up when that changes, I'll gladly eat my words (until then, I'm right yet again)]"
+ },
+ {
+  "i": 6,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "That didn't happen - that WONT happen   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: The whole point - the entire point - was that we would be \"dying for Israel\" and have \"boots on the ground\" in Iran. That didn't happen - that WONT happen - and yet everyone is claiming victory. You're just missing the bigger picture here.]"
+ },
+ {
+  "i": 7,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "everyone is claiming victory. You're just missing the bigger picture here.   [voice: captive_dreamer, against others — reported or described by captive_dreamer; the whole post: The whole point - the entire point - was that we would be \"dying for Israel\" and have \"boots on the ground\" in Iran. That didn't happen - that WONT happen - and yet everyone is claiming victory. You're just missing the bigger picture here.]"
+ },
+ {
+  "i": 8,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "we didn't want to be embroiled in a forever war in the Middle East - but it was in good faith!   [voice: captive_dreamer, speaking for 'many of us' — reported or described by captive_dreamer; the whole post: Many of us made our voices loud and clear that we didn't want to be embroiled in a forever war in the Middle East - but it was in good faith! Many denouncing Trump and MAGA were doing so because they're personally invested in seeing the administration fail. Big difference!]"
+ },
+ {
+  "i": 9,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Many denouncing Trump and MAGA were doing so because they're personally invested in seeing the administration fail.   [voice: captive_dreamer, about Trump's critics — reported or described by captive_dreamer; the whole post: Many of us made our voices loud and clear that we didn't want to be embroiled in a forever war in the Middle East - but it was in good faith! Many denouncing Trump and MAGA were doing so because they're personally invested in seeing the administration fail. Big difference!]"
+ },
+ {
+  "i": 10,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Can I get a war with Iran update? You guys had all those big spaces and posts about regime change, nuclear strikes and Americans dying for Israel.   [voice: captive_dreamer, to opponents — reported or described by captive_dreamer; the whole post: Can I get a war with Iran update? You guys had all those big spaces and posts about regime change, nuclear strikes and Americans dying for Israel. Can we get an update on that]"
+ },
+ {
+  "i": 11,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "No 'war with Iran.'   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: No \"war with Iran.\" Everyone said MAGA was \"over\" last week. Instead we got the biggest ever increase in ICE and border funding possible. Thank you TRUMP!]"
+ },
+ {
+  "i": 12,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Everyone said MAGA was 'over' last week. Instead we got the biggest ever increase in ICE and border funding possible. Thank you TRUMP!   [voice: captive_dreamer, on MAGA and Trump — reported or described by captive_dreamer; the whole post: No \"war with Iran.\" Everyone said MAGA was \"over\" last week. Instead we got the biggest ever increase in ICE and border funding possible. Thank you TRUMP!]"
+ },
+ {
+  "i": 13,
+  "who": "captivedreamer7",
+  "station": "RP",
+  "quote": "If there's a single US boot dropped on Iran during Trump's presidency, I'll make a video denouncing the entire MAGA movement.   [voice: captivedreamer7, on his own loyalty — reported or described by captivedreamer7; the whole post: If there's a single US boot dropped on Iran during Trump's presidency, I'll make a video denouncing the entire MAGA movement.]"
+ },
+ {
+  "i": 14,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Immigration is the greatest issue we face in the West.   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: Immigration is the greatest issue we face in the West. All of these people listed are pro immigration. I don't care if they're \"based anti zionists\" - they're the enemy]"
+ },
+ {
+  "i": 15,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "I don't care if they're \"based anti zionists\" - they're the enemy   [voice: captive_dreamer, about anti-Zionist figures — reported or described by captive_dreamer; the whole post: Immigration is the greatest issue we face in the West. All of these people listed are pro immigration. I don't care if they're \"based anti zionists\" - they're the enemy]"
+ },
+ {
+  "i": 16,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Of course there are no 'boots on the ground' in Iran   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: Of course there are no \"boots on the ground\" in Iran and these liars know this, they just want to score internet points for headpats from cult leader figures. I think boots on ground would be a big mistake and still do! But we have to see how this plays out.]"
+ },
+ {
+  "i": 17,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "these liars know this, they just want to score internet points for headpats from cult leader figures   [voice: captive_dreamer, about critics — reported or described by captive_dreamer; the whole post: Of course there are no \"boots on the ground\" in Iran and these liars know this, they just want to score internet points for headpats from cult leader figures. I think boots on ground would be a big mistake and still do! But we have to see how this plays out.]"
+ },
+ {
+  "i": 18,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "I think boots on ground would be a big mistake and still do! But we have to see how this plays out.   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: Of course there are no \"boots on the ground\" in Iran and these liars know this, they just want to score internet points for headpats from cult leader figures. I think boots on ground would be a big mistake and still do! But we have to see how this plays out.]"
+ },
+ {
+  "i": 19,
+  "who": "captivedreamer7",
+  "station": "RP",
+  "quote": "Of course there are no boots on the ground in Iran   [voice: captivedreamer7, speaking for himself — reported or described by captivedreamer7; the whole post: Of course there are no boots on the ground in Iran, but even if there were, I don't care anymore. As long as He controls immigration, I don't care what happens.]"
+ },
+ {
+  "i": 20,
+  "who": "captivedreamer7",
+  "station": "RP",
+  "quote": "even if there were, I don't care anymore. As long as He controls immigration, I don't care what happens.   [voice: captivedreamer7, on his own loyalty — reported or described by captivedreamer7; the whole post: Of course there are no boots on the ground in Iran, but even if there were, I don't care anymore. As long as He controls immigration, I don't care what happens.]"
+ },
+ {
+  "i": 21,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "I'm skeptical of these strikes and we should in no universe have boots on the ground in Iran, let's hope this resolves quickly and I'm willing to give Trump the benefit of the doubt.   [voice: captive_dreamer, quoting his own earlier statement — reported or described by captive_dreamer; the whole post: Me: \"I'm skeptical of these strikes and we should in no universe have boots on the ground in Iran, let's hope this resolves quickly and I'm willing to give Trump the benefit of the doubt.\" The price one pays for nuance on this app:]"
+ },
+ {
+  "i": 22,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "The price one pays for nuance on this app   [voice: captive_dreamer, on how he is treated — reported or described by captive_dreamer; the whole post: Me: \"I'm skeptical of these strikes and we should in no universe have boots on the ground in Iran, let's hope this resolves quickly and I'm willing to give Trump the benefit of the doubt.\" The price one pays for nuance on this app:]"
+ },
+ {
+  "i": 23,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "All these people do is lie - ive said the same   [voice: captive_dreamer, about critics and his own record — reported or described by captive_dreamer; the whole post: All these people do is lie - ive said the same and now that it's happening I hope it is resolved quickly and we can move onto other things]"
+ },
+ {
+  "i": 24,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "now that it's happening I hope it is resolved quickly and we can move onto other things   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: All these people do is lie - ive said the same and now that it's happening I hope it is resolved quickly and we can move onto other things]"
+ },
+ {
+  "i": 25,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Like I've always said, I think it would be a massive mistake for some boots on the ground invasion of Iran.   [voice: captive_dreamer, on his own record — reported or described by captive_dreamer; the whole post: Like I've always said, I think it would be a massive mistake for some boots on the ground invasion of Iran. Clearly that's not happening and there's very little chance it will happen.]"
+ },
+ {
+  "i": 26,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "Clearly that's not happening and there's very little chance it will happen.   [voice: captive_dreamer, speaking for himself — reported or described by captive_dreamer; the whole post: Like I've always said, I think it would be a massive mistake for some boots on the ground invasion of Iran. Clearly that's not happening and there's very little chance it will happen.]"
+ },
+ {
+  "i": 27,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "I explicitly opposed the Iran war from the outset   [voice: captive_dreamer, on his own record — reported or described by captive_dreamer; the whole post: I explicitly opposed the Iran war from the outset and didn't call any reasonable critics \"third worldists.\" This is very disappointing to see from you. The people attacking me daily were these retard righters. And you know full well the Zioshills hate me too.]"
+ },
+ {
+  "i": 28,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "didn't call any reasonable critics \"third worldists.\" This is very disappointing to see from you.   [voice: captive_dreamer, to an ally — reported or described by captive_dreamer; the whole post: I explicitly opposed the Iran war from the outset and didn't call any reasonable critics \"third worldists.\" This is very disappointing to see from you. The people attacking me daily were these retard righters. And you know full well the Zioshills hate me too.]"
+ },
+ {
+  "i": 29,
+  "who": "captive_dreamer",
+  "station": "RP",
+  "quote": "you know full well the Zioshills hate me too   [voice: captive_dreamer, on who attacks him — reported or described by captive_dreamer; the whole post: I explicitly opposed the Iran war from the outset and didn't call any reasonable critics \"third worldists.\" This is very disappointing to see from you. The people attacking me daily were these retard righters. And you know full well the Zioshills hate me too.]"
+ }
+]
+
+For every line return:
+{"i": n,
+ "substance": true|false,            // does it engage the object's actual substance? Substance is whatever THIS object is made of: for a war, costs, flows, votes, deaths; for a cultural object, the works themselves and how people take them
+ "facts_touched": ["fact id", …],
+ "contradicts": ["fact id", …],
+ "object": "substance"|"signal",     // does it take up the object's substance (as defined above), or a signal about it (who said it, which side, the controversy)?
+ "others": "open"|"working"|"closed",// toward the other side and the audience. open: states a belief, no instinct to convince or qualify. working: built to persuade or rally — a campaign or rally line, an applause line, an argument aimed at winning a room or an opponent over, still answering them. closed: talks over them, its answer fixed before they speak (pre-empts or dismisses their response). Most political speech to a crowd is working.
+ "capital": true|false,              // is THE SPEAKER spending their own political capital in this statement — burning a bridge of their own rather than gathering support? (describing someone else's defiance is not the speaker's capital)
+ "patterns": [{"n": number, "phrase": "the words that show it"}],   // only patterns plainly present; [] is a fine answer
+ "facing": "object"|"argument",      // toward the thing, or toward the argument about the thing
+ "place": "low"|"mid"|"high",        // where in its band
+ "why": "one plain sentence"}
+Answer: {"lines": [ … ]} — valid JSON only. Inside a string never use a double quote; quote words with single quotes.

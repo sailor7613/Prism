@@ -1,13 +1,13 @@
 {
  "hash": "5739a3b43f59-ctx5",
- "at": "2026-11-10T12:49:52",
+ "at": "2026-11-14T13:02:23",
  "lines": {
   "0": {
-   "dia": 58,
+   "dia": 48,
    "tier": "coalition",
    "runs": [
     48,
-    58,
+    48,
     58
    ],
    "flags": [],
@@ -16,7 +16,7 @@
     "others": "working",
     "capital": false,
     "facing": "argument",
-    "why": "Credits the election result to prayers, a claim about who won and why, not about the war's costs or flows."
+    "why": "Credits the electoral result to prayer, a rallying claim about who won rather than anything about the war's costs or flows."
    },
    "patterns": []
   },
@@ -34,7 +34,7 @@
     "others": "working",
     "capital": false,
     "facing": "argument",
-    "why": "Frames the wars as a counterattack, a political story about motive rather than the war's measurable state."
+    "why": "Casts the wars as a counterattack, a causal story about motive rather than any measured state of the war."
    },
    "patterns": []
   },
@@ -42,9 +42,9 @@
    "dia": 58,
    "tier": "coalition",
    "runs": [
-    48,
     58,
-    59
+    58,
+    58
    ],
    "flags": [],
    "relational": {
@@ -52,53 +52,37 @@
     "others": "working",
     "capital": false,
     "facing": "argument",
-    "why": "Points at a named person and his lobbying, a signal about who is pushing the war rather than its substance."
+    "why": "Names a pro-war figure lobbying the White House, which is about the actors and the argument over the war rather than its substance."
    },
    "patterns": []
   },
   "3": {
-   "dia": 50,
-   "tier": "coalition",
-   "runs": [
-    50,
-    50,
-    84
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "working",
-    "capital": false,
-    "facing": "argument",
-    "why": "Disputes the stated nuclear justification for the war with a flat intelligence claim aimed at opponents, without giving the evidence."
-   },
-   "patterns": []
-  },
-  "4": {
-   "dia": 78,
+   "dia": 81,
    "tier": "denominated",
    "runs": [
-    77,
-    78,
+    50,
+    81,
     83
    ],
-   "flags": [],
+   "flags": [
+    "#1 read as #28 (the split: it talks over the reply)"
+   ],
    "relational": {
     "object": "substance",
     "others": "closed",
     "capital": false,
     "facing": "argument",
-    "why": "Recasts every stated reason for war as cover for regime change, so the opponents' own arguments cannot count."
+    "why": "Disputes the war's nuclear rationale on its merits, then classifies anyone holding the opposite view as ignorant or dishonest before their answer can be weighed."
    },
    "patterns": [
-    12
+    1
    ]
   },
-  "5": {
+  "4": {
    "dia": 50,
    "tier": "coalition",
    "runs": [
-    50,
+    48,
     50,
     58
    ],
@@ -108,17 +92,39 @@
     "others": "working",
     "capital": false,
     "facing": "argument",
-    "why": "Predicts the political cost of a war to Trump and his base, an argument aimed at persuading the audience rather than dismissing anyone."
+    "why": "Uses a graphic historical example to argue that disarmament invites attack, rallying the room on deterrence logic."
    },
    "patterns": []
+  },
+  "5": {
+   "dia": 81,
+   "tier": "denominated",
+   "runs": [
+    76,
+    81,
+    84
+   ],
+   "flags": [
+    "#1 read as #28 (the split: it talks over the reply)"
+   ],
+   "relational": {
+    "object": "substance",
+    "others": "closed",
+    "capital": false,
+    "facing": "argument",
+    "why": "Claims the stated reason for war is a cover story and names regime change as the real goal, pre-empting the other side's answer before it is weighed."
+   },
+   "patterns": [
+    1
+   ]
   },
   "6": {
    "dia": 50,
    "tier": "coalition",
    "runs": [
-    16,
     50,
-    60
+    50,
+    50
    ],
    "flags": [],
    "relational": {
@@ -126,7 +132,7 @@
     "others": "working",
     "capital": false,
     "facing": "object",
-    "why": "Warns of American deaths in the first week of war, engaging the war's human cost with a hedged but persuasive prediction."
+    "why": "Ties the war to oil prices, gasoline costs, and inflation, which are the measured flows of the object, though framed as a warning."
    },
    "patterns": []
   },
@@ -143,516 +149,30 @@
     "object": "substance",
     "others": "working",
     "capital": false,
-    "facing": "argument",
-    "why": "Links the war to oil prices and inflation, which is the cost-of-living substance the tracker measures and is consistent with its frustrated readings."
+    "facing": "object",
+    "why": "Puts the war's human cost in American deaths, a real count the object is measured on, to move the room."
    },
    "patterns": []
   },
   "8": {
-   "dia": 60,
+   "dia": 50,
    "tier": "coalition",
    "runs": [
-    60,
-    60,
-    60
+    50,
+    50,
+    50
    ],
    "flags": [],
    "relational": {
     "object": "substance",
     "others": "working",
     "capital": false,
-    "facing": "argument",
-    "why": "Predicts escalation to world war and a US loss, a bold forecast built to win the room against those favouring attack."
+    "facing": "object",
+    "why": "Projects escalation to a world war and a US loss, a substantive claim about the war's stakes stated as a fixed conclusion."
    },
    "patterns": []
   },
   "9": {
-   "dia": 78,
-   "tier": "denominated",
-   "runs": [
-    77,
-    78,
-    83
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "Attributes a hidden boxing-in purpose to opponents' push for enrichment limits, pre-empting any answer that they simply want a deal."
-   },
-   "patterns": [
-    12
-   ]
-  },
-  "10": {
-   "dia": 81,
-   "tier": "denominated",
-   "runs": [
-    76,
-    81,
-    97
-   ],
-   "flags": [
-    "#1 read as #28 (the split: it talks over the reply)"
-   ],
-   "relational": {
-    "object": "substance",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "It takes up war costs, deaths and gasoline prices, but pre-classifies the other side's intelligence claims as lies and motives as hidden before answering them."
-   },
-   "patterns": [
-    1
-   ]
-  },
-  "11": {
-   "dia": 80,
-   "tier": "denominated",
-   "runs": [
-    80,
-    80,
-    83
-   ],
-   "flags": [
-    "#1 read as #28 (the split: it talks over the reply)"
-   ],
-   "relational": {
-    "object": "signal",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "It sorts named opponents into warmongers by label and threatens them, not engaging what they argue."
-   },
-   "patterns": [
-    1
-   ]
-  },
-  "12": {
-   "dia": 80,
-   "tier": "denominated",
-   "runs": [
-    58,
-    80,
-    83
-   ],
-   "flags": [
-    "#1 read as #28 (the split: it talks over the reply)"
-   ],
-   "relational": {
-    "object": "signal",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "It defines the opposing camp by who is calling whom, classifying them before weighing any of their reasons."
-   },
-   "patterns": [
-    1
-   ]
-  },
-  "13": {
-   "dia": 48,
-   "tier": "coalition",
-   "runs": [
-    48,
-    48,
-    58
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "working",
-    "capital": false,
-    "facing": "argument",
-    "why": "A share of Bannon's intra-right fight framed as enemies destroying MAGA, a political signal rather than the war's substance."
-   },
-   "patterns": []
-  },
-  "14": {
-   "dia": 80,
-   "tier": "denominated",
-   "runs": [
-    48,
-    80,
-    80
-   ],
-   "flags": [
-    "#1 read as #28 (the split: it talks over the reply)"
-   ],
-   "relational": {
-    "object": "signal",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "It dismisses Cruz's call for regime change as empty before engaging its content."
-   },
-   "patterns": [
-    1
-   ]
-  },
-  "15": {
-   "dia": 15,
-   "tier": "fluid",
-   "runs": [
-    15,
-    15,
-    15
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "open",
-    "capital": false,
-    "facing": "object",
-    "why": "A bare reaction of relief with no content, pointing at the ceasefire without describing it."
-   },
-   "patterns": []
-  },
-  "16": {
-   "dia": 50,
-   "tier": "coalition",
-   "runs": [
-    40,
-    50,
-    50
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "working",
-    "capital": false,
-    "facing": "object",
-    "why": "It states the state of the war (a ceasefire) and credits Trump for it, a rally-style claim aimed at the room."
-   },
-   "patterns": []
-  },
-  "17": {
-   "dia": 92,
-   "tier": "denominated",
-   "runs": [
-    58,
-    92,
-    92
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "It dismisses Levin's position by attributing a motive to him rather than engaging the ceasefire itself."
-   },
-   "patterns": []
-  },
-  "18": {
-   "dia": 15,
-   "tier": "fluid",
-   "runs": [
-    15,
-    15,
-    15
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "open",
-    "capital": false,
-    "facing": "object",
-    "why": "A promo for an interview with Iran's president, pointing at who is speaking rather than at the war itself."
-   },
-   "patterns": []
-  },
-  "19": {
-   "dia": 80,
-   "tier": "denominated",
-   "runs": [
-    50,
-    80,
-    83
-   ],
-   "flags": [
-    "#1 read as #28 (the split: it talks over the reply)"
-   ],
-   "relational": {
-    "object": "signal",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "It labels the neocons' position as hysteria and motivated by Israel's last chance before any of their reasons are weighed."
-   },
-   "patterns": [
-    1
-   ]
-  },
-  "20": {
-   "dia": 80,
-   "tier": "denominated",
-   "runs": [
-    80,
-    80,
-    80
-   ],
-   "flags": [
-    "#1 read as #28 (the split: it talks over the reply)"
-   ],
-   "relational": {
-    "object": "signal",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "Dismisses the opposing side as hysterical before weighing any of its case, so the answer is fixed in advance."
-   },
-   "patterns": [
-    1
-   ]
-  },
-  "21": {
-   "dia": 48,
-   "tier": "coalition",
-   "runs": [
-    44,
-    48,
-    48
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "working",
-    "capital": false,
-    "facing": "argument",
-    "why": "A teaser hook for a guest that promises consequences without stating any measurable cost."
-   },
-   "patterns": []
-  },
-  "22": {
-   "dia": 15,
-   "tier": "fluid",
-   "runs": [
-    15,
-    15,
-    15
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "open",
-    "capital": false,
-    "facing": "object",
-    "why": "A quoted prayer for peace that states a sentiment about the war without engaging its costs or flows."
-   },
-   "patterns": []
-  },
-  "23": {
-   "dia": 15,
-   "tier": "fluid",
-   "runs": [
-    15,
-    15,
-    15
-   ],
-   "flags": [
-    "patterns #6 say 35–55, the band says fluid 0–33"
-   ],
-   "relational": {
-    "object": "signal",
-    "others": "open",
-    "capital": false,
-    "facing": "argument",
-    "why": "Titles the war as Israel's, so the frame of ownership sets the question before any evidence is offered."
-   },
-   "patterns": [
-    6
-   ]
-  },
-  "24": {
-   "dia": 50,
-   "tier": "coalition",
-   "runs": [
-    48,
-    50,
-    58
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "working",
-    "capital": false,
-    "facing": "argument",
-    "why": "A rhetorical question with a hidden-motive frame that steers the audience toward a religious explanation without evidence."
-   },
-   "patterns": [
-    6
-   ]
-  },
-  "25": {
-   "dia": 15,
-   "tier": "fluid",
-   "runs": [
-    15,
-    15,
-    15
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "open",
-    "capital": false,
-    "facing": "argument",
-    "why": "A segment teaser on political fallout that names no measurable effect."
-   },
-   "patterns": []
-  },
-  "26": {
-   "dia": 80,
-   "tier": "denominated",
-   "runs": [
-    80,
-    80,
-    81
-   ],
-   "flags": [
-    "#1 read as #28 (the split: it talks over the reply)"
-   ],
-   "relational": {
-    "object": "signal",
-    "others": "closed",
-    "capital": false,
-    "facing": "argument",
-    "why": "Casts those who support the war as spellbound, classifying their position as delusion rather than answering it."
-   },
-   "patterns": [
-    1
-   ]
-  },
-  "27": {
-   "dia": 50,
-   "tier": "coalition",
-   "runs": [
-    16,
-    50,
-    50
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "working",
-    "capital": false,
-    "facing": "argument",
-    "why": "It argues for a legal limit on subordinating US military action to a foreign power, a checkable mechanism of the war's making, and it still answers an opposing view."
-   },
-   "patterns": []
-  },
-  "28": {
-   "dia": 15,
-   "tier": "fluid",
-   "runs": [
-    15,
-    15,
-    15
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "open",
-    "capital": false,
-    "facing": "argument",
-    "why": "Introduces a guest on how the war happened without stating any claim of its own."
-   },
-   "patterns": []
-  },
-  "29": {
-   "dia": 15,
-   "tier": "fluid",
-   "runs": [
-    7,
-    15,
-    58
-   ],
-   "flags": [],
-   "relational": {
-    "object": "signal",
-    "others": "open",
-    "capital": false,
-    "facing": "argument",
-    "why": "The 'actually' hints at a hidden reason for the war, but as a guest intro it makes no checkable claim."
-   },
-   "patterns": []
-  },
-  "30": {
-   "dia": 40,
-   "tier": "coalition",
-   "runs": [
-    16,
-    40,
-    50
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "working",
-    "capital": false,
-    "facing": "argument",
-    "why": "A general claim about how ground troops lead to tyranny, aimed at winning the room against escalation without engaging the war's costs or votes."
-   },
-   "patterns": []
-  },
-  "31": {
-   "dia": 50,
-   "tier": "coalition",
-   "runs": [
-    50,
-    50,
-    50
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "working",
-    "capital": false,
-    "facing": "object",
-    "why": "Puts the military's cost against its returns in a rhetorical question built to win the room, though it names real spending."
-   },
-   "patterns": []
-  },
-  "32": {
-   "dia": 40,
-   "tier": "coalition",
-   "runs": [
-    40,
-    40,
-    40
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "working",
-    "capital": false,
-    "facing": "object",
-    "why": "Asks about money flowing to Israel, a real flow question, phrased as a rally line."
-   },
-   "patterns": []
-  },
-  "33": {
-   "dia": 60,
-   "tier": "coalition",
-   "runs": [
-    50,
-    60,
-    60
-   ],
-   "flags": [],
-   "relational": {
-    "object": "substance",
-    "others": "working",
-    "capital": false,
-    "facing": "argument",
-    "why": "Claims a nuclear strike on Iran may be days away, an alarm built to rouse the audience against the administration."
-   },
-   "patterns": []
-  },
-  "34": {
    "dia": 58,
    "tier": "coalition",
    "runs": [
@@ -666,47 +186,349 @@
     "others": "working",
     "capital": false,
     "facing": "argument",
-    "why": "Attributes the push for the war to Netanyahu's political survival, a motive claim about an actor rather than the war's costs or flows."
+    "why": "Frames the war mainly as a political danger to Trump and his supporters, a signal about who it would hurt rather than the war's measured costs."
    },
    "patterns": []
   },
-  "35": {
-   "dia": 60,
+  "10": {
+   "dia": 82,
+   "tier": "denominated",
+   "runs": [
+    81,
+    82,
+    83
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "closed",
+    "capital": false,
+    "facing": "argument",
+    "why": "It argues costs of war (gasoline, inflation, American deaths) but calls the other side liars and motive-readers in advance, with the answer fixed before they speak."
+   },
+   "patterns": [
+    12
+   ]
+  },
+  "11": {
+   "dia": 58,
    "tier": "coalition",
    "runs": [
     50,
-    60,
-    60
+    58,
+    74
    ],
    "flags": [],
    "relational": {
-    "object": "substance",
+    "object": "signal",
     "others": "working",
     "capital": false,
-    "facing": "object",
-    "why": "Ties tanker damage in Hormuz to a predicted global depression, a substance claim about oil flows built to alarm the audience."
+    "facing": "argument",
+    "why": "A closing plea aimed at Trump and the audience that characterizes Levin's camp rather than the war's costs."
    },
    "patterns": []
   },
-  "36": {
-   "dia": 60,
+  "12": {
+   "dia": 83,
+   "tier": "denominated",
+   "runs": [
+    80,
+    83,
+    97
+   ],
+   "flags": [
+    "#1 read as #28 (the split: it talks over the reply)"
+   ],
+   "relational": {
+    "object": "signal",
+    "others": "closed",
+    "capital": true,
+    "facing": "argument",
+    "why": "Sorts opponents into warmongers before engaging their case and names media figures, burning bridges with them."
+   },
+   "patterns": [
+    1
+   ]
+  },
+  "13": {
+   "dia": 97,
+   "tier": "denominated",
+   "runs": [
+    83,
+    97,
+    97
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "closed",
+    "capital": true,
+    "facing": "argument",
+    "why": "It names specific people as warmongers who will have to answer, a dismissal by association that spends the speaker's standing with them."
+   },
+   "patterns": []
+  },
+  "14": {
+   "dia": 48,
    "tier": "coalition",
    "runs": [
-    60,
-    60,
-    60
+    48,
+    48,
+    58
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "facing": "argument",
+    "why": "Sharing Bannon's claim that the president's enemies are destroying MAGA is a rally line about who the enemy is, not about the war's costs."
+   },
+   "patterns": []
+  },
+  "15": {
+   "dia": 58,
+   "tier": "coalition",
+   "runs": [
+    48,
+    58,
+    92
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "facing": "argument",
+    "why": "It flags Cruz's call for regime change as a figure's position, a jab at a person rather than a measure of the war's state."
+   },
+   "patterns": []
+  },
+  "16": {
+   "dia": 80,
+   "tier": "denominated",
+   "runs": [
+    80,
+    80,
+    92
+   ],
+   "flags": [
+    "#1 read as #28 (the split: it talks over the reply)"
+   ],
+   "relational": {
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "facing": "argument",
+    "why": "Dismisses Cruz's case by character before it can be heard, so the answer is fixed in advance."
+   },
+   "patterns": [
+    1
+   ]
+  },
+  "17": {
+   "dia": 15,
+   "tier": "fluid",
+   "runs": [
+    7,
+    15,
+    15
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "facing": "object",
+    "why": "A bare reaction of relief with no claim about costs, votes, or flows."
+   },
+   "patterns": []
+  },
+  "18": {
+   "dia": 16,
+   "tier": "fluid",
+   "runs": [
+    7,
+    16,
+    50
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "open",
+    "capital": false,
+    "facing": "object",
+    "why": "It states that a ceasefire was brokered, a real change in the war's state, with no instinct to convince or qualify."
+   },
+   "patterns": []
+  },
+  "19": {
+   "dia": 92,
+   "tier": "denominated",
+   "runs": [
+    80,
+    92,
+    92
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "facing": "argument",
+    "why": "It asserts what Levin wanted and dismisses his position by motive rather than by its substance."
+   },
+   "patterns": []
+  },
+  "20": {
+   "dia": 15,
+   "tier": "fluid",
+   "runs": [
+    15,
+    15,
+    15
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "facing": "argument",
+    "why": "A promotional post announcing an interview with Iran's president, saying nothing about the war's costs or consequences."
+   },
+   "patterns": []
+  },
+  "21": {
+   "dia": 50,
+   "tier": "coalition",
+   "runs": [
+    50,
+    50,
+    50
    ],
    "flags": [],
    "relational": {
     "object": "substance",
     "others": "working",
     "capital": false,
-    "facing": "object",
-    "why": "Declares a nuclear escalation leads to a wider war, a maximal prediction offered to move the audience."
+    "facing": "argument",
+    "why": "Claims the war is Israel's push to draw American military power into Iran, an argument aimed at rallying an audience against the hawks."
    },
    "patterns": []
   },
-  "37": {
+  "22": {
+   "dia": 80,
+   "tier": "denominated",
+   "runs": [
+    80,
+    80,
+    83
+   ],
+   "flags": [
+    "#1 read as #28 (the split: it talks over the reply)"
+   ],
+   "relational": {
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "facing": "argument",
+    "why": "Labels the opposing side as hysterical before engaging any of its argument, so the answer is fixed in advance."
+   },
+   "patterns": [
+    1
+   ]
+  },
+  "23": {
+   "dia": 15,
+   "tier": "fluid",
+   "runs": [
+    15,
+    15,
+    15
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "facing": "object",
+    "why": "A religious prayer for peace that states a hope but engages no costs, votes, or flows of the war."
+   },
+   "patterns": []
+  },
+  "24": {
+   "dia": 7,
+   "tier": "fluid",
+   "runs": [
+    7,
+    7,
+    7
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "open",
+    "capital": false,
+    "facing": "object",
+    "why": "A topic label naming the war and what it means, with no argument pressed on anyone."
+   },
+   "patterns": []
+  },
+  "25": {
+   "dia": 58,
+   "tier": "coalition",
+   "runs": [
+    25,
+    58,
+    58
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "facing": "argument",
+    "why": "Raises a speculative religious-motive question about the war to provoke suspicion in the audience rather than engaging costs or votes."
+   },
+   "patterns": []
+  },
+  "26": {
+   "dia": 15,
+   "tier": "fluid",
+   "runs": [
+    7,
+    15,
+    15
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "facing": "argument",
+    "why": "Introduces a guest on the war's effect on American politics, a signal about politics rather than the war's measured state."
+   },
+   "patterns": []
+  },
+  "27": {
+   "dia": 58,
+   "tier": "coalition",
+   "runs": [
+    58,
+    58,
+    80
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "facing": "argument",
+    "why": "Calls for the war's supporters to be freed from a spell, casting them as enchanted rather than arguing with them."
+   },
+   "patterns": []
+  },
+  "28": {
    "dia": 50,
    "tier": "coalition",
    "runs": [
@@ -720,17 +542,71 @@
     "others": "working",
     "capital": false,
     "facing": "object",
-    "why": "Claims the administration changed nuclear doctrine to ease battlefield nuke use, a concrete policy claim argued to persuade."
+    "why": "Argues for a law barring the military from being yoked to a foreign power in war, a policy claim aimed at persuading listeners."
    },
    "patterns": []
   },
-  "38": {
-   "dia": 40,
+  "29": {
+   "dia": 15,
+   "tier": "fluid",
+   "runs": [
+    15,
+    15,
+    15
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "facing": "argument",
+    "why": "Introduces a guest who will explain how the war came about, a promotional line naming a speaker rather than engaging the war's substance."
+   },
+   "patterns": []
+  },
+  "30": {
+   "dia": 15,
+   "tier": "fluid",
+   "runs": [
+    15,
+    15,
+    15
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "facing": "argument",
+    "why": "A guest introduction that promises an explanation of the war's cause without engaging any measurable cost or flow."
+   },
+   "patterns": []
+  },
+  "31": {
+   "dia": 50,
    "tier": "coalition",
    "runs": [
-    40,
-    40,
-    40
+    7,
+    50,
+    50
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "facing": "argument",
+    "why": "Argues a general consequence of ground troops for home liberty, aimed at persuading the audience, without tying it to a measured fact of the war."
+   },
+   "patterns": []
+  },
+  "32": {
+   "dia": 50,
+   "tier": "coalition",
+   "runs": [
+    16,
+    50,
+    50
    ],
    "flags": [],
    "relational": {
@@ -738,7 +614,173 @@
     "others": "working",
     "capital": false,
     "facing": "object",
-    "why": "Points to a piece on the economic effects of intervention, naming the substance without arguing it; the post's wider 'know nothing about energy' dismissal is outside this quoted line."
+    "why": "Puts the war's military spending cost on the table as a question of what is being received, aimed at winning the room."
+   },
+   "patterns": []
+  },
+  "33": {
+   "dia": 48,
+   "tier": "coalition",
+   "runs": [
+    7,
+    48,
+    58
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "facing": "argument",
+    "why": "A question that steers attention toward Israel's role rather than the war's measurable substance, pressing the audience toward a source-based reading."
+   },
+   "patterns": []
+  },
+  "34": {
+   "dia": 60,
+   "tier": "coalition",
+   "runs": [
+    60,
+    60,
+    60
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "facing": "object",
+    "why": "Reports a possible nuclear strike as an escalation of the war, aimed at alarming the audience against it."
+   },
+   "patterns": []
+  },
+  "35": {
+   "dia": 58,
+   "tier": "coalition",
+   "runs": [
+    50,
+    58,
+    58
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "working",
+    "capital": false,
+    "facing": "argument",
+    "why": "Ascribes a motive to Netanyahu for the war, a claim about a person rather than the war's measured state."
+   },
+   "patterns": []
+  },
+  "36": {
+   "dia": 50,
+   "tier": "coalition",
+   "runs": [
+    16,
+    50,
+    50
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "facing": "object",
+    "why": "Names the war's economic cost to Gulf economies and energy markets, consistent with the falling barrel and pump readings."
+   },
+   "patterns": []
+  },
+  "37": {
+   "dia": 16,
+   "tier": "fluid",
+   "runs": [
+    7,
+    16,
+    50
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "open",
+    "capital": false,
+    "facing": "object",
+    "why": "States a concrete flow disruption, eleven supertankers damaged in Hormuz, stated as a report rather than an argument."
+   },
+   "patterns": []
+  },
+  "38": {
+   "dia": 60,
+   "tier": "coalition",
+   "runs": [
+    60,
+    60,
+    60
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "working",
+    "capital": false,
+    "facing": "object",
+    "why": "Forecasts that the war will become world war after a nuclear strike, an alarm aimed at convincing the audience the stakes are total."
+   },
+   "patterns": []
+  },
+  "39": {
+   "dia": 16,
+   "tier": "fluid",
+   "runs": [
+    15,
+    16,
+    16
+   ],
+   "flags": [],
+   "relational": {
+    "object": "substance",
+    "others": "open",
+    "capital": false,
+    "facing": "object",
+    "why": "Agrees that the diplomatic path Vance and Witkoff argue for is viable while qualifying that it will be hard, without talking over the other side."
+   },
+   "patterns": []
+  },
+  "40": {
+   "dia": 80,
+   "tier": "denominated",
+   "runs": [
+    80,
+    80,
+    80
+   ],
+   "flags": [
+    "#1 read as #28 (the split: it talks over the reply)"
+   ],
+   "relational": {
+    "object": "signal",
+    "others": "closed",
+    "capital": false,
+    "facing": "argument",
+    "why": "Dismisses the neocon position by insulting its holders as knowing nothing about energy, so the answer is fixed before any engagement with the war's costs or flows."
+   },
+   "patterns": [
+    1
+   ]
+  },
+  "41": {
+   "dia": 15,
+   "tier": "fluid",
+   "runs": [
+    7,
+    15,
+    15
+   ],
+   "flags": [],
+   "relational": {
+    "object": "signal",
+    "others": "open",
+    "capital": false,
+    "facing": "object",
+    "why": "It only introduces a guest and names the topic of economic effects without making any claim about the war's costs."
    },
    "patterns": []
   }
