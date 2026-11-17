@@ -1,12 +1,15 @@
-# Newsroom digest — 2026-11-14
+# Newsroom digest — 2026-11-16
 
-Register: 163 objects · this scan: 0 new, 1 seen again, 0 returned.
+Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- none today
+- **House votes to effectively end the impeachment effort against Pete Hegseth** — ruling · ruled · holder: the Pentagon · formed 2026-11-11 · 10 outlets (peak 20) · `obj_thepenta_against-effectively-effort-end` · silent 5d after 3 scans
+- **Kennedy family joins lawsuit to block Trump arch** — ruling · ruled · holder: HHS · formed 2026-11-11 · 5 outlets (peak 7) · `obj_hhs_arch-block-family-joins` · silent 5d after 4 scans
+- **Federal government failed to hold Epstein accountable , Republican committee says** — vote · voted · holder: ? · formed 2026-11-11 · 11 outlets (peak 14) · `obj_x_accountable-committee-epstein-failed` · silent 5d after 3 scans
+- **Judge weighs lawsuit brought by Peltola campaign over absentee ballots in Alaska US Senate race** — suit · sued · holder: a federal court · formed 2026-11-11 · 5 outlets (peak 5) · `obj_afederal_absentee-alaska-ballots-brought` · silent 5d after 4 scans
 
 ## Returned after a break
 - none today

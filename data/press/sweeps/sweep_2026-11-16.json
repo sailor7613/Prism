@@ -1,0 +1,1689 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-16",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 22,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 2,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 4,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 8,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 27,
+   "hits": 10,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 14,
+   "hits": 1,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 8,
+   "hits": 6,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 62,
+   "hits": 19,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 45,
+   "hits": 28,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 3,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 3,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Trump Administration Moves to Close A.I. Chip Loophole Ahead of China Trip",
+   "dek": "The rules, a topic of fierce debate in the administration, could cut back on Nvidia’s sales to foreign data centers serving Chinese companies.",
+   "opening": "",
+   "published": "2026-11-16T13:56:01+00:00",
+   "link": "https://www.nytimes.com/2026/11/16/us/politics/trump-china-ai-chip-loophole.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "rules",
+     "data"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'INSANITY!': VandeHei BLASTS lack of 'COMPETENCE' at govt. agencies where systems 'need fixing'",
+   "dek": "AXIOS’s Jim VandeHei joins Morning Joe to discuss his new Behind the Curtain piece, “The Chain-Reaction Era: Shock and Awe, Forever.” He argues that politics, AI, media and business are so interconnected that change can move faster than institutions can absorb. The examples include the election, an AI-and-spy story and the FAA shutdown, though the column says the FAA outage was unrelated to the other events. VandeHei and the panel also discuss why the government needs people with expertise to manage complex systems and aging infrastructure. MS NOW: My Source for News, Opinion, and the World. »",
+   "opening": "",
+   "published": "2026-11-16T13:41:09+00:00",
+   "link": "https://www.youtube.com/watch?v=DM5XvfDJ9Jg",
+   "videoId": "DM5XvfDJ9Jg",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Permitting Bill Would Charge Data Centers Billions for Power",
+   "dek": "The permitting bill could make it easier to build data centers for A.I. but a novel provision would also force data centers to pay much more for power.",
+   "opening": "",
+   "published": "2026-11-16T13:30:34+00:00",
+   "link": "https://www.nytimes.com/2026/11/16/climate/permitting-bill-data-centers-electricity-rates.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bahrain Convicts Dozens of Shiite Clerics in Sweeping Terrorism Trial",
+   "dek": "The defendants were accused of colluding with Iran. Rights groups said the case raised concerns about religious persecution in Bahrain, which is ruled by a Sunni monarchy.",
+   "opening": "",
+   "published": "2026-11-16T12:54:55+00:00",
+   "link": "https://www.nytimes.com/2026/11/16/world/middleeast/bahrain-shiite-clerics-convicted.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Is Jensen Huang Plotting a Comeback?",
+   "dek": "Prominent figures in Silicon Valley want to see Jensen Huang reinstalled as Nvidia’s boss. Some in the Trump administration don’t want him to return.",
+   "opening": "",
+   "published": "2026-11-16T12:45:52+00:00",
+   "link": "https://www.nytimes.com/2026/11/16/business/dealbook/huang-comeback-nvidia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Taking Credit",
+   "dek": "My colleagues look at the debate inside the Democratic Party about which faction can take credit for the midterm romp.",
+   "opening": "",
+   "published": "2026-11-16T11:38:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/16/briefing/taking-credit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Silicon Valley is backing Nvidia ex-CEO Jensen Huang after his ouster",
+   "dek": "Huang&#039;s peers, including Elon Musk, have praised his business acumen and potential risks to the US&#039;s AI goals.",
+   "opening": "",
+   "published": "2026-11-16T11:05:47+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/16/why-silicon-valley-is-backing-nvidia-ex-ceo-jensen-huang-after-his-ouster?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The $570 Billion Man. The Tech Bros Looking for Love. Plus. . .",
+   "dek": "Ben Shapiro goes to Hollywood. Will Chuck Schumer survive? The strange case of Ilhan Omar. And more.",
+   "opening": "It&#8217;s Monday, November 16. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Eli Lake on the Democrats&#8217; showdown over who will lead the Senate. Jed Rubenfeld on the strange case of Ilhan Omar. Coleman Hughes interviews Ben Shapiro. And much more. But first: How much is one CEO worth? On Sunday, the Financial Times reported that Jensen Huang and his allies were plotting his return as CEO of Nvidia, the giant chip maker he co-founded and ran until his resignation last week. On one level, the idea is&#8212;how to put this?&#8212;insane. Only last week, Huang stepped down after reports of three affairs&#8212;one with an alleged Chinese spy and two with women who reported to him at Nvidia&#8212;and is now being scrutinized (including by Matt Pottinger and Liza Tobin in these pages ) over allegations he worked to evade export controls on chips. How could Huang possibly do the job again? But consider a number: $570 billion. That&#8217;s how much Nvidia&#8217;s stock market value has dropped since the start of the scandal. It&#8217;s therefore arguably a crude measure of Huang&#8217;s value to the company. And, when faced with that many zeros, what are a few indiscretions? Or so the members of Nvidia&#8217;s board of directors might be asking themselves. All of which makes Jensen Huang the latest case study in the age-old matter of what one man is worth, and whether anyone is truly indispensable. T",
+   "published": "2026-11-16T11:03:29+00:00",
+   "link": "https://www.thefp.com/p/the-570-billion-man-the-tech-bros",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "diesel": [
+     "crude"
+    ],
+    "chips": [
+     "export control",
+     "nvidia"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "USS Roosevelt arrives in Middle East: Is the US-Iran war about to resume?",
+   "dek": "The aircraft carrier joins two others operating in the US Central Command area of responsibility.",
+   "opening": "",
+   "published": "2026-11-16T10:14:27+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/16/uss-roosevelt-arrives-in-middle-east-is-the-us-iran-war-about-to-resume?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Airstrikes on Iran Missile Sites May Shed Light on Justification for Dams",
+   "dek": "Environmentalists have long puzzled over a wide network of water projects lacking any obvious justification. Then their areas were targeted in airstrikes.",
+   "opening": "",
+   "published": "2026-11-16T10:10:58+00:00",
+   "link": "https://www.nytimes.com/2026/11/16/world/europe/iran-dams-missile-sites-environmentalists.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-strikes": [
+     "strikes on iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Netanyahu’s Grand Strategy, with Ron Dermer",
+   "dek": "The former Israeli ambassador joins &#8216;School of War&#8217; to examine Israel&#8217;s long-term strategy, the Iranian threat, and the possibility of a transformed Middle East.",
+   "opening": "With the Israeli government in limbo after last month&#8217;s elections, very little about the country&#8217;s military and political future is certain. But Ron Dermer, one of Prime Minister Benjamin Netanyahu&#8217;s closest advisers and a key architect of the Abraham Accords, is optimistic&#8212;even if I don&#8217;t entirely share his confidence. Today, the former Israeli ambassa&#8230; Read more",
+   "published": "2026-11-16T10:02:47+00:00",
+   "link": "https://www.thefp.com/p/netanyahus-grand-strategy-with-ron",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ben Shapiro on the End of MAGA",
+   "dek": "Watch now (53 mins) | Ben Shapiro explains why Republicans lost, Democrats may go further left, and J.D. Vance can&#8217;t inherit Donald Trump&#8217;s coalition.",
+   "opening": "Is MAGA dead? And was it ever really anything more than Donald Trump himself? In the wake of Republicans&#8217; disastrous midterm performance, Ben Shapiro joined me to discuss what went wrong for the GOP and what the results reveal about the future of both parties. Shapiro believes the midterms were more a rejection of the chaos, corruption, and dysfunction &#8230; Read more",
+   "published": "2026-11-16T10:02:22+00:00",
+   "link": "https://www.thefp.com/p/ben-shapiro-on-the-end-of-maga",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Third US aircraft carrier arrives in Middle East amid tensions with Iran",
+   "dek": "Trump shares a message saying: ‘May God protect our troops’ as the USS Theodore Roosevelt arrives in the Middle East.",
+   "opening": "",
+   "published": "2026-11-16T09:31:36+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/16/third-us-aircraft-carrier-arrives-in-middle-east-amid-tensions-with-iran?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Could America’s Outdated Air Traffic System Fail Again?",
+   "dek": "Concerns over the security and safety of our air travel grow – as more details come to light about the FAA grounding all flights. More White House officials are forced to relocate to bases amid heightened targeting threats. And, the DC drama ratchets up – with a deepening Democrat power struggle – and an escalating Nvidia security scandal. Reporting from Tim Rice. Plus, we speak with former FAA Official Mark Dumbroff and National Security Expert at The Heritage Foundation, Victoria Coates. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of w",
+   "opening": "",
+   "published": "2026-11-16T09:30:18+00:00",
+   "link": "https://www.youtube.com/watch?v=15d0LPvJ3lw",
+   "videoId": "15d0LPvJ3lw",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Kachin: where Myanmar’s rare earth minerals are in tight grip",
+   "dek": "In Myanmar’s northern state of Kachin lies millions of dollars worth of rare earth minerals.",
+   "opening": "",
+   "published": "2026-11-16T08:49:51+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/16/kachin-where-myanmars-rare-earth-minerals-are-in-tight-grip?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Pompeii home buried by Mount Vesuvius yields personal treasures untouched for nearly 2,000 years",
+   "dek": "A woman&apos;s cabinet sealed since Mount Vesuvius erupted in A.D. 79 held a children&apos;s amulet necklace, perfume bottle, bronze coins and makeup tools, archaeologists found.",
+   "opening": "Archaeologists excavating a home in ancient Pompeii recently uncovered the remains of an ancient Roman cabinet — revealing intimate belongings buried for nearly 2,000 years. The discovery was announced by Pompeii Archaeological Park. Officials said in a press release in late October, which was translated from Italian, that the cabinet was discovered in house IX 11, 7, also known as the House of Cornelius Maximus, along the Via dell'Abbondanza. HIDDEN UNDERGROUND CHAMBER REVEALED BENEATH HOME OF LEGENDARY ROMAN EMPEROR The cabinet — which officials believe belonged to a woman — had apparently remained unopened since Mount Vesuvius erupted in 79 A.D. Using clues from the excavation, archaeologists were able to determine what the cabinet originally looked like and identify the belongings stored inside. Pictures released by officials show ancient pottery and other artifacts uncovered during the excavation. The cabinet contained tweezers, a tool for mixing makeup and a glass perfume bottle , as well as an incense burner, a bronze oil lamp and lead weights. SUNKEN ROYAL PALACE WITH CLEOPATRA LINK YIELDS RARE FIND TIED TO LONG-LOST WONDER OF ANCIENT WORLD Among the discoveries was a necklace made up of at least 24 miniature charms, including depictions of gods, hands, feet, pine cones and bunches of grapes. Such necklaces, known as crepundia, were given to Roman children as protective amulets . They also made noise as children moved, which allowed adults to hear them. Officials beli",
+   "published": "2026-11-16T08:00:58-05:00",
+   "link": "https://www.foxnews.com/travel/pompeii-home-buried-mount-vesuvius-yields-personal-treasures-untouched-nearly-2000-years",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_alive-attempted-buried-charged": [
+     "found",
+     "buried"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Monday air travel faces key test after FAA ground stop as possible cause emerges",
+   "dek": "Transportation Secretary Sean Duffy expects flights to normalize Monday after an FAA communications outage caused widespread cancellations and delays nationwide.",
+   "opening": "Air travel across the U.S. faces a key test Monday as airlines work to resume normal operations following a nationwide ground stop that disrupted thousands of flights, while federal officials investigate router problems at two facilities as a possible cause of the communications failure. As of 7 a.m. ET Monday, 284 flights within, into or out of the United States had been canceled and another 954 delayed, according to flight-tracking website FlightAware. American Airlines led carriers with 157 cancellations, followed by SkyWest with 41 and JetBlue with 30. The disruptions followed a weekend of widespread flight problems. By early Monday, more than 28,300 flights had been delayed and 18,520 canceled since Friday, underscoring the scale of the travel turmoil. FAA GROUND STOP TIMELINE: WEEKEND CHAOS GROUNDS PLANES AND POSTPONES GAMES Transportation Secretary Sean Duffy predicted that air travel would return to normal Monday, telling ABC's \"This Week\" on Sunday that flights would be \"probably fully normal\" by the start of the workweek. SOFTWARE COMPANY WITH THOUSANDS OF FORTUNE 500 CLIENTS JOINS MICROSOFT IN EXPERIENCING MAJOR OUTAGE The Federal Aviation Administration issued a nationwide ground stop Friday that halted nearly all departing flights for almost five hours, marking the longest nationwide shutdown of U.S. air travel since the Sept. 11, 2001, terrorist attacks. Federal investigators have focused on network problems at two FAA facilities as they work to determine what t",
+   "published": "2026-11-16T08:00:46-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-air-space/monday-air-travel-faces-key-test-faa-ground-stop-possible-cause-emerges",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ],
+    "obj_x_events-here-iran-major": [
+     "timeline",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Prosecutor issues 'significant' warning to Warren over Trump-linked probes and more top headlines",
+   "dek": "Get all the stories you need-to-know from the most powerful name in news delivered first thing every morning to your inbox.",
+   "opening": "1. Federal prosecutor warns Sen. Warren could face ‘significant legal consequences’ over investigations 2. Iran issues ‘we will find you’ threat to two US Navy officers 3. Monday travel faces critical test as airlines recover from historic FAA ground stop COSTLY AGENDA — Dems plot massive spending spree — and Trump leaves door open to a deal. Continue reading … ‘WE ARE DROWNING’ — Small town residents cry for help as 'devastating' immigrant influx wreaks havoc. Continue reading … TROUBLED WATERS — Recordings capture calls for help before tanker hit New Orleans cruise ship. Continue reading … DEADLY TAKE — Teen’s fatal mauling during TikTok shoot leads to arrests, alleged cover-up probe. Continue reading … COMEBACK BID — Jensen Huang eyes Nvidia CEO return with Silicon Valley backing. Continue reading … -- JUDGMENT CALL — White House calls it 'insanity' after teen shooter walks free on probation. Continue reading … ETHICS ON TRIAL — Wealthiest incoming congressman vows 'nobody should get rich in public office'. Continue reading … PAWNS FOR PUTIN — Young women promised jobs abroad face a darker reality tied to Russia's drone factories. Continue reading … UNDER SIEGE — Trump's inner circle retreats behind military gates as ex-agents raise fresh questions. Continue reading … Click here for more cartoons… PIVOTAL SCORECARD — New religious freedom rankings reveal surprising state divide as legal expert warns of costly burdens. Continue reading ... BEHIND CLOSED DOORS — Biden says h",
+   "published": "2026-11-16T07:02:52-05:00",
+   "link": "https://www.foxnews.com/us/prosecutor-issues-significant-warning-warren-over-trump-linked-probes-more-top-headlines",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Cuba’s rulers can shout at diplomats. They cannot silence the cry for freedom",
+   "dek": "GAESA&apos;s alleged $14.5 billion in financial accounts could cover every Cuban&apos;s salary for two years, yet Havana blames the U.S. at the United Nations.",
+   "opening": "The world is beginning to push back against the propaganda Havana has peddled for decades at the United Nations as the corruption, oppression and hypocrisy of its Communist rulers are exposed for all to see. But there is more work to do. Havana’s regime cronies are desperate to survive in the face of growing international pressure, and the free world must continue to confront their lies and expose their corruption until they no longer hold power. For the first time in 31 years, under the leadership of President Trump, a third of the world declined to support Havana’s sham anti-embargo resolution at the U.N. 63 nations refused to vote with the Cuban regime, more than double last year’s number. By way of comparison: only two countries voted against Cuba during all four years of the Biden administration — and the U.S. even voted with Cuba under Obama. TRUMP EXPANDS CUBA SANCTIONS BEYOND US COMPANIES IN MAJOR CRACKDOWN ON FOREIGN ENABLERS Two weeks ago, I stood before the General Assembly and asked Cuba’s robber-barons a few simple questions. Why do they wear Rolexes while their people struggle to buy groceries? Why do their families have yachts and private islands while hospitals run out of medicine? Why does their military conglomerate control billions while ordinary Cubans sit in the dark? The regime’s \"diplomats\" responded by pounding their desks, shouting and trying to intimidate me. Their foreign minister marched toward the podium. And their first secretary confronted an Am",
+   "published": "2026-11-16T07:00:03-05:00",
+   "link": "https://www.foxnews.com/opinion/cubas-rulers-shout-down-diplomats-cannot-silence-cry-freedom",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "push",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Megaspeed Says Alice Huang Left Company in August 2025",
+   "dek": "The Singaporean company’s statement was its first to address the status of Ms. Huang, a former executive who had a relationship with Jensen Huang of Nvidia. U.S. officials say she was spying for China.",
+   "opening": "",
+   "published": "2026-11-16T06:02:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/business/megaspeed-alice-huang-nvidia-china.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside the Denver gathering where Democrats’ upbeat, Obama-era feel meets the 2028 race",
+   "dek": "Concert-style campaign posters and Obama-era energy defined the Denver gathering where Democratic leaders began jockeying for the 2028 election.",
+   "opening": "DENVER — Live music, concert-style campaign posters and a packed schedule of Democratic leaders set the scene in Denver, where party strategists and potential 2028 contenders gathered to celebrate midterm gains and start shaping what comes next. The industrial-style venue, with indoor and outdoor spaces, gave the two-day \"What’s Next\" gathering a festival feel. Democrats moved between political programming, live music and social events. Beneath the party atmosphere, potential contenders tested their messages and sized up the field, as Democrats began jockeying over the party’s direction and who might lead it in 2028. The event had an unmistakably Obama-era feel, with its hopeful message and celebratory campaign atmosphere. DEMS DESCEND ON DENVER TO SIZE UP 2028; WE ASKED WHO WANTS IN THE RACE Matt Corridon, a Democratic strategist and communications adviser at Majority Democrats, said the comparison made sense. \"The theme of that campaign was hope, and a lot of folks who are here now either worked on that campaign or were inspired by that campaign,\" Corridon said. \"I think one of the themes of this event is hopefulness for the Democratic Party moving forward. It’s a comparison that doesn’t shock me.\" That hopeful energy showed up in the event’s posters and playful swag, some of which Ahmad Ali, communications director for the Searchlight Institute, helped design. DEMOCRATS RIDE MIDTERM WAVE AS 2028 HOPEFULS GATHER IN DENVER TO MAP THEIR NEXT MOVES \"I think we’re seeing a Demo",
+   "published": "2026-11-16T06:00:01-05:00",
+   "link": "https://www.foxnews.com/politics/inside-denver-gathering-democrats-upbeat-obama-era-feel-meets-2028-race",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_events-here-iran-major": [
+     "here",
+     "events"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Too Many Chips in One Basket?",
+   "dek": "The U.S. economy hitched its wagon to Nvidia and Jensen Huang. Now that he has stepped down, the company faces deep uncertainty.",
+   "opening": "",
+   "published": "2026-11-16T05:29:19+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/nvidia-jensen-huang-ai-chips.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "I voted to open trade with China. 25 years later, it’s time for us to fix that mistake",
+   "dek": "Former senator who voted to grant China permanent normal trade relations now calls it the worst vote of his career and urges disengagement.",
+   "opening": "Twenty-five years ago, in December 2001, China officially joined the World Trade Organization (WTO) and fully entered the global economy. This was only possible because, a year earlier, the United States granted the communist country permanent normal trading relations status, granting China a level of access to our economy normally reserved for friends and allies like Great Britain and Israel. I was one of 83 senators who voted to do so. I now look back on it as the worst vote I made in 14 years in the Senate. Since that day, China has grown into an economic and military powerhouse. It has used that status malevolently, conducting genocides targeting Uyghurs, Tibetans and Falun Gong practitioners. It has organized an alliance of authoritarians to menace the free world, and it has empowered human rights abuses across the globe. It is now building up its nuclear weapons capacity to pair with a naval fleet now more numerous than our own. BIPARTISAN DUO WANTS TO REMIND CONGRESS, TRUMP OF CHINA'S 'ATROCITIES' AHEAD OF XI VISIT By allowing China to join the WTO , the U.S. made a fundamental policy error. We believed — or deceived ourselves into believing — that a communist China engaged in the global economy would grow more open and free. We thought a China more exposed to the free world would be gravitationally attracted to freedom. CORPORATE AMERICA'S CHINA ADDICTION HAS BECOME A NATIONAL SECURITY THREAT This has proven to be a tragic miscalculation. It is long past time to end C",
+   "published": "2026-11-16T05:00:58-05:00",
+   "link": "https://www.foxnews.com/opinion/voted-open-trade-china-25-years-later-time-fix-mistake",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "allies",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats plot massive spending spree after midterm rout — and Trump could help them pull it off",
+   "dek": "After their resounding Election Night victory, Democrats plot massive Medicaid restoration, ACA tax credits expansion and housing assistance funding.",
+   "opening": "With a resounding Election Night victory behind them, Democrats are getting to work by plotting a massive government spending expansion paired with tax adjustments to pay for it. In this quest, they may find an unlikely ally in the White House. Though the new crop of Democrats doesn’t take office until early next year, many are already announcing plans to aggressively increase government healthcare expenditures, cut checks directly to voters, restore housing assistance funding and pressure the federal government into repealing cuts to the bureaucracy. Republicans, increasingly abandoning their once dogmatic opposition to increased social spending, could end up backing some of the measures Democrats seek to enact in their efforts to make life more affordable. President Donald Trump, for instance, expressed interest in cutting deals with liberal lawmakers on Election Night as it became apparent that the midterms were going to be disastrous for the GOP. Trump and Vice President JD Vance, seen by many as the president's heir apparent, have made it clear that they do not categorically oppose the extension of Affordable Care Act subsidies, one of the marquee items on the Democratic agenda, but signaled that they would like to see increased verification requirements to crack down on alleged fraud. Both have also signaled an openness to raising taxes on high-earners to help the federal government balance its budget, though estimates regarding how much these new levies would raise gen",
+   "published": "2026-11-16T05:00:56-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-plot-massive-spending-spree-after-midterm-rout-trump-could-help-them-pull-off",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rural voters revolted because they wanted Republicans to help them. GOP didn’t deliver",
+   "dek": "Diesel at $5.25 a gallon, timber production down 79% and soaring farm costs fueled a rural voter revolt that cost Republicans key Senate seats.",
+   "opening": "Rural counties swung more than 15 percentage points toward Democrats in the 2026 midterms . Republicans lost rural strongholds including Iowa, South Carolina and Kansas, where a Democrat won a U.S. Senate seat for the first time since 1932. Republicans haven’t fully lost rural America, but they got one heck of a warning. Just before the election, a national survey of rural voters found that about 75% rated their local cost of living as fair or poor. Nearly half worried about making their rent or mortgage payments. FOX NEWS POLL: SQUEEZED BY COSTS, FRUSTRATED VOTERS TURN TO THE DEMOCRATS The GOP doesn't need another consultant's postmortem to understand what happened. It needs to look at what's happening to the people who feed, build and power this country. Farm production expenses are projected to reach nearly $493 billion in 2026, up 4.5% in a single year, while inflation-adjusted net farm income is expected to fall 5.5%. In 2012, John Deere's flagship combine cost roughly $454,000, when wheat was $7.77 a bushel. Today, its flagship combine costs over $1.1 million, while wheat is projected at $6.91 a bushel. Meanwhile, family farm bankruptcies jumped 46% in 2025. BROOKE ROLLINS, MONICA CROWLEY: AMERICA’S FAMILY FARMS HAVE KEPT US STRONG FOR 250 YEARS Ranchers are seeing record cattle prices, but production costs have climbed nearly 30% since 2020. Ranchers also face a government-enabled meatpacking oligopoly where four companies account for roughly 85% of steer and heifer pu",
+   "published": "2026-11-16T05:00:06-05:00",
+   "link": "https://www.foxnews.com/opinion/rural-voters-revolted-wanted-republicans-help-gop-didnt-deliver",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout",
+   "dek": "The trip to China marks Trump's second time this year, and comes as the president and his party faced widespread backlash from voters in the recent midterm elections.",
+   "opening": "The trip to China marks Trump's second time this year, and comes as the president and his party faced widespread backlash from voters in the recent midterm elections. (Image credit: Kevin Dietsch)",
+   "published": "2026-11-16T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/16/nx-s1-6041738/trump-xi-and-putin-china-nvidia",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How America can win the AI race without burning voters",
+   "dek": "The AI industry faces a reckoning as voters backed 46 of 47 ballot measures limiting data center development over energy costs and water supply.",
+   "opening": "One of the biggest losers on Election Day was the AI industry. Across the country, voters delivered a clear warning about the rapid expansion of data centers powering artificial intelligence. Americans want technological progress, but not at the expense of their communities, electricity bills, water supplies or quality of life. According to Ballotpedia, 46 of the 47 data-center-related ballot measures decided in 2026 favored greater limits on development. The message is unmistakable: The industry is losing public confidence, and political leaders who ignore these concerns do so at their own peril. America needs more data centers, not fewer, to maintain its AI leadership. But technology companies cannot expect communities to welcome projects when residents believe they are absorbing the costs while corporations reap the benefits. RED COUNTIES WITH DATA CENTER PROJECTS SWUNG AWAY FROM GOP IN MIDTERMS, ANALYSIS FINDS We believe there is a better way forward. In our new report, Beyond the \"Wild West\" and Moratorium: A Bipartisan Framework for Smart and Responsible Data Center Investment , we outline a practical approach to preserving America's AI leadership while treating host communities fairly. Our perspectives are bipartisan: Robert Wolf served as an economic adviser to President Barack Obama, while Stephen Moore served as a senior economic adviser to President Donald Trump. AMERICA RUNS ON DATA. IF WE DON’T BUILD THE INFRASTRUCTURE, CHINA WILL AI is becoming one of this centu",
+   "published": "2026-11-16T04:50:24-05:00",
+   "link": "https://www.foxnews.com/opinion/how-america-can-win-ai-race-without-burning-voters",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "data",
+     "centers",
+     "communities",
+     "election"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "ballot",
+     "data"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Affordability was a key issue for midterm voters. It helped make childcare one, too",
+   "dek": "Childcare costs have surged, putting a major financial burden on U.S. families. Advocates say the subject once on the fringes of political debate became a major issue during the midterms.",
+   "opening": "Childcare costs have surged, putting a major financial burden on U.S. families. Advocates say the subject once on the fringes of political debate became a major issue during the midterms. (Image credit: Justin Sullivan)",
+   "published": "2026-11-16T04:45:55-05:00",
+   "link": "https://www.npr.org/2026/11/13/nx-s1-6034941/affordability-childcare-midterms",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democratic strategists think Montana House race could hold the secret to future wins",
+   "dek": "Montana is sending a Democrat to the U.S. House for the first time in three decades. Many in the party think Sam Forstag's campaign may be a playbook for how Democrats can win again in rural America",
+   "opening": "Montana is sending a Democrat to the U.S. House for the first time in three decades. Many in the party think Sam Forstag's campaign may be a playbook for how Democrats can win again in rural America",
+   "published": "2026-11-16T04:44:30-05:00",
+   "link": "https://www.npr.org/2026/11/16/nx-s1-6032798/democratic-strategists-think-montana-house-race-could-hold-the-secret-to-future-wins",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "house race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Chuck Schumer Won the Senate. Can He Keep His Job?",
+   "dek": "Until this year, it would have been hard to imagine him being punished for helping lead his party to a historic midterm election victory. A bid to unseat him shows the Democratic Party is changing, writes Eli Lake.",
+   "opening": "If you want to know just how far left the Democrats have traveled since their triumph in the midterms just two weeks ago, pay close attention to what happens to Senator Chuck Schumer. In most years, Schumer would be a lock for the powerful post of Senate majority leader, which he held from 2021 to 2025. As the minority leader in the past election cycle, he helped recruit and fund the candidates who have given his party a five-seat majority in the Senate, with the possibility of six depending on the outcome of the election in Alaska. And yet Schumer is facing an insurgent challenger, Chris Van Hollen , a Maryland senator who aligns with the progressive wing of his party. Since formally announcing his bid to be majority leader, Van Hollen has blasted Schumer for endorsing moderates in Senate primaries earlier this year. He has also threatened to shut down the federal government in order to defund the war in Iran. Van Hollen may not be likely to win. Unlike the House, the insurgent left is still nascent in the Senate with only a handful of committed members, including old-timer Bernie Sanders, newcomers such as Abdul El-Sayed of Michigan and Troy Jackson of Maine, and sometime fellow travelers like Connecticut&#8217;s Chris Murphy. But the challenge to Schumer shows that Democrats&#8217; rift over Israel wasn&#8217;t mere election fodder. It will be the most important factional line within the next congressional majority&#8212;and the side most hostile to Israel has the momentum",
+   "published": "2026-11-16T03:03:22+00:00",
+   "link": "https://www.thefp.com/p/chuck-schumer-won-the-senate-can-majority-midterms-democrats",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "me-sen": [
+     "troy jackson"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "war-funding": [
+     "defund the war"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "schumer"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tyler Cowen: How Much Is a CEO Worth? Ask Nvidia.",
+   "dek": "Nvidia lost $570 billion when its CEO resigned. The market&#8217;s slump after his exit reveals his failures&#8212;but also his value, writes Tyler Cowen.",
+   "opening": "How much is a CEO worth? As I am writing this column, the Nvidia share price has fallen by more than 12 percent since the allegations of Jensen Huang&#8217;s affair with an alleged Chinese spy, followed by other allegations of affairs with women who work at Nvidia, and Huang&#8217;s subsequent exit from the company. That represents a value loss of about $570 billion, bringing the market capitalization of the company under $4 trillion. If we go back to October 6, the company has fallen in value by more than 30 percent since that date, or about $1.85 trillion. It&#8217;s no surprise that, despite everything, the Financial Times reported Sunday that Huang is considering a comeback, backed by his allies in Silicon Valley. We&#8217;ll have a better sense of Huang&#8217;s overall value to his company once more facts are in. If his indiscretions drag down the company in the long run, along with the sudden leadership change, that will count against him. And if he schemed to evade U.S. export controls, that would partly overshadow his contributions because of the importance of national security. But from a purely material standpoint, Huang excelled in co-founding Nvidia, driving its growth aggressively, and seeing how important it was to cultivate the AI sector as a whole to boost the demand for the company&#8217;s GPUs and other products. Huang is an extreme example of a truth I believe is borne out by the evidence: that despite the fulminating about executive pay, many top CEOs are ",
+   "published": "2026-11-16T03:00:37+00:00",
+   "link": "https://www.thefp.com/p/tyler-cowen-how-much-is-a-ceo-worth-jensen-huang-nvidia",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "export control",
+     "nvidia"
+    ],
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "allies",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Perpetual paralysis: Why everything is grinding to a halt",
+   "dek": "From widespread airline disruptions and Microsoft&apos;s Outlook outage to the growing Nvidia scandal, America&apos;s latest failures reveal a troubling breakdown in competence, accountability and leadership.",
+   "opening": "Doesn't anything work around here anymore? A four-hour ground stop by the FAA plunged the airline system into utter chaos, with 3,600 flights canceled, people sleeping in terminals and an absurd degree of secrecy, leaving everyone to suspect the worst. Oh sure, said Transportation chief Sean Duffy , it's just that all our crumbling equipment failed to communicate with our new equipment and this will take days to untangle. This has been a problem for years and will take $50 billion to fix. Did we forget to tell you? Two days earlier, Microsoft was so very sorry, but its Outlook email system imploded for 36 hours. Entire offices shut down because no one could get any work done, with employees unable to send messages and unaware of who was trying to reach them. OUTAGES RAISE CONCERN OVER CYBER VULNERABILITIES IN US The outages crippled governments, schools and businesses around the world. The software giant couldn't quite say what happened, first blaming its servers and then a \"network capacity upgrade.\" But I suppose it fostered a feeling of togetherness, as if everyone was trapped in the same dark tunnel. We've all become accustomed to the frustrations of the digital world. I get 20 or more spam texts a day. I reflexively click on a button that says Stop and Delete Spam. But stopping and deleting doesn't seem to do any good, as the bogus messages keep coming in greater waves. They interrupt me again and again as a strange compulsion requires me to obliterate them. DUFFY: INVES",
+   "published": "2026-11-16T03:00:20-05:00",
+   "link": "https://www.foxnews.com/opinion/perpetual-paralysis-why-everything-grinding-halt",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Scott Colom FLIPPED Mississippi BLUE | The 11th Hour with Ali Velshi Weekly Highlights",
+   "dek": "Watch some of the best segments this week from 'The 11th Hour with Ali Velshi' and watch weeknights at 11PM EST on MS NOW. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Democrats #Midterms #Politics",
+   "opening": "",
+   "published": "2026-11-16T03:00:20+00:00",
+   "link": "https://www.youtube.com/watch?v=WUMn9snjb5c",
+   "videoId": "WUMn9snjb5c",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Federal prosecutor warns Sen Warren of 'legal consequences' if records aren't preserved in Trump-linked probes",
+   "dek": "U.S. Attorney Aaron Reitz warned Elizabeth Warren of legal consequences over her plans to investigate people close to President Donald Trump.",
+   "opening": "A federal prosecutor on Sunday warned Sen. Elizabeth Warren , D-Mass., of \"significant legal consequences\" if she failed to preserve records tied to potential congressional investigations involving allies of President Donald Trump. In a letter to Warren, who is poised to become Senate Banking Committee chair in January, U.S. Attorney for the Southern District of Texas Aaron Reitz accused the senator of planning \"to target private individuals close to President Trump\" with investigations. \"You appear eager to wield your future gavel like a tomahawk, hunting for the scalps of President Trump’s private associates,\" he wrote to Warren, currently the ⁠top Democrat on the Senate Banking Committee. Reitz’s letter and accompanying social media post include various puns and references to Native Americans that appear to mock Warren over previous claims about her Native American heritage. Trump and his allies have mocked Warren for years, including by calling her \"Pocahontas.\" ‘LAWYER UP’: DEMS IMMEDIATELY PUT TRUMP ON NOTICE AMID REPUBLICANS' MIDTERM BLOODBATH The letter demands that Warren preserve documents and communications Reitz considers relevant to his allegations that she intends to misuse congressional investigations against people associated with Trump. \"I am writing to give you formal notice of your obligation to preserve all documents, communications, and other electronically stored information relevant to your intent to weaponize congressional investigations and deprive ci",
+   "published": "2026-11-16T02:52:27-05:00",
+   "link": "https://www.foxnews.com/politics/federal-prosecutor-warns-sen-warren-legal-consequences-records-arent-preserved-trump-linked-probes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "failed",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Lawrence: Decency WON in Ohio | The Last Word Weekly Highlights",
+   "dek": "Watch some of the best segments this week from 'The Last Word with Lawrence O'Donnell' and watch weeknights at 10pm EST on MS NOW. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Democrats #Midterms #Politics",
+   "opening": "",
+   "published": "2026-11-16T02:00:12+00:00",
+   "link": "https://www.youtube.com/watch?v=SZaGMLABUOo",
+   "videoId": "SZaGMLABUOo",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Van Hollen will TAKE ON Schumer to lead Senate Dems | The Briefing with Jen Psaki Weekly Highlights",
+   "dek": "Watch some of the best segments this week from 'The Briefing with Jen Psaki' and watch Tuesdays-Fridays at 9pm EST on MS NOW. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #Democrats #Senate #Politics",
+   "opening": "",
+   "published": "2026-11-16T01:00:02+00:00",
+   "link": "https://www.youtube.com/watch?v=g4KiYfksoYU",
+   "videoId": "g4KiYfksoYU",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'It will be a sight for sore eyes:' Why Hillary Clinton CAN'T WAIT for Trump's State of the Union",
+   "dek": "“It will be a sight for sore eyes.” In conversation with MS NOW’s @ Rachel Maddow, former Secretary of State Hillary Clinton says she’s “looking forward” to Trump seeing women lawmakers during his State of the Union address, after a historic number of women were elected to office in the midterm elections. The full conversation is streaming NOW exclusively for MS NOW Members. Become a member TODAY to watch Rachel Maddow and Hillary Clinton’s full conversation at ms.now/membership. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become ",
+   "opening": "",
+   "published": "2026-11-15T23:56:12+00:00",
+   "link": "https://www.youtube.com/shorts/jc43-KxD07I",
+   "videoId": "jc43-KxD07I",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Fallout Looms Over Trump-Xi Meeting",
+   "dek": "So far, President Trump has indicated that he does not plan to press the Chinese leader about U.S. intelligence findings that a Chinese spy targeted Jensen Huang.",
+   "opening": "",
+   "published": "2026-11-15T22:54:41+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/us/politics/nvidia-trump-huang-china-xi.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Oil Grab in Venezuela Is Testing the Country’s National Identity",
+   "dek": "Long-held beliefs in Venezuela about sovereign control over oil are fraying as the U.S. lays claim to the country’s oil reserves.",
+   "opening": "",
+   "published": "2026-11-15T22:43:58+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/world/americas/trump-venezuela-oil.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New York hit with lawsuit over state's new social media warning label law",
+   "dek": "NetChoice sued over New York&apos;s social media law, arguing it blocks protected speech by forcing users to view warnings about mental health harms.",
+   "opening": "New York is facing a lawsuit over its new law that requires social media platforms ​to provide state-approved warning labels ‌to users about potentially addictive features. The lawsuit was filed in federal court on Friday by NetChoice, an internet trade group that represents more than 30 members, including Google, YouTube, Facebook, Instagram, Snapchat and TikTok. NetChoice argued that the law violates the First Amendment's right to free speech by forcing its members to display the state's \"preferred message.\" The group also said New York's law is \"designed to block, burden, and browbeat social media users\" by making them view the warning label as they open the app and after several hours of using it. META ORDERED TO PAY $25B AFTER JURY FINDS IT MISLED USERS ON DATA PRIVACY \"Unlike a static warning on a product label, these warnings repeatedly interrupt users and block access to protected speech,\" NetChoice said in its complaint. The law, signed by Gov. Kathy Hochul in December 2025, is set to take effect in January of next year. The measure requires social media platforms that use infinite scrolling, autoplay or algorithmic feeds to show users warning labels about potential harms to younger users. Hochul has defended the measure as an effort to protect young people from social media features that encourage excessive use. The message will include a caution from the U.S. Surgeon General that \"excessive use\" of social media \"may be associated with significant mental health harm",
+   "published": "2026-11-15T21:57:34-05:00",
+   "link": "https://www.foxbusiness.com/technology/new-york-hit-lawsuit-over-states-new-social-media-warning-label-law",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_hhs_arch-block-family-joins": [
+     "lawsuit",
+     "block"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jordan Sentences 3 to Death Over Greek Orthodox Church Attack",
+   "dek": "The Jordanian military said that the men, who were arrested after a shooting at a Greek Orthodox church last month, had been convicted of terrorism charges.",
+   "opening": "",
+   "published": "2026-11-15T21:33:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/middleeast/jordan-church-attack-death-sentence.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_astate_california-commute-death-disaster": [
+     "death",
+     "sentences"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Saudi-Backed Forces Retreat in Yemen, Leaving Key Strait in Houthi Control",
+   "dek": "It’s a setback for the Yemeni government and its ally Saudi Arabia, as analysts said the momentum in country’s civil war was tilting toward the Iran-backed Houthis.",
+   "opening": "",
+   "published": "2026-11-15T21:26:19+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/middleeast/saudi-houthis-yemen-red-sea.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Could the next major airline grounding be worse?",
+   "dek": "The outage that brought air travel across the country to a halt this weekend is highlighting chronic weaknesses in the country’s aging air traffic control infrastructure. There’s growing concern the next failure could be even worse, as the Transportation Department asks congress for $50 billion dollars in funding to upgrade the outdated system. Washington Examiner Homeland Security Reporter Anna Giaritelli and Reuters Transportation Reporter David Shepardson join “The Assignment” to discuss the repair lapses that led to the nationwide ground stop. MS NOW: My Source for News, Opinion, and the W",
+   "opening": "",
+   "published": "2026-11-15T21:17:54+00:00",
+   "link": "https://www.youtube.com/watch?v=yty8cUgF8J8",
+   "videoId": "yty8cUgF8J8",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "From a big hope to a BIG NOPE: Trump & GOP go deeper into MAGA MODE after midterm rejection",
+   "dek": "Some voters hoped midterm results would signal the beginning of the end for MAGA, but Trump and House Republicans are doubling down on MAGA icons responsible for the most extreme policy positions. The Assignment Desk explores Trump’s pivot to Stephen Miller while his Cabinet secretaries shower Trump with praise during the longest air traffic shutdown in 25 years. Watch Antonia Hylton’s chat with “The Dean Obeidallah Show” host Dean Obeidallah, Rolling Stone Political News Reporter Nikki McCann Ramirez, MS NOW Political Analyst Molly Jong-Fast, and MS NOW Reporter Alex Tabet. MS NOW: My Source ",
+   "opening": "",
+   "published": "2026-11-15T21:17:13+00:00",
+   "link": "https://www.youtube.com/watch?v=kDO2W1pOds4",
+   "videoId": "kDO2W1pOds4",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Florida is worth FIGHTING FOR’: Angie Nixon on her new PAC and path for Dems in The Sunshine State",
+   "dek": "Former Florida Senate nominee Angie Nixon is launching the ‘Never Scared PAC’, hoping to build on her electrifying campaign and harness the political power of Florida Democrats. After the midterm elections, MAGA Republicans lost in nearly every corner of America and barely managed to keep power in Florida. If Democrats had invested more, and earlier, could they have flipped the state? Nixon joins Antonia Hylton to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS N",
+   "opening": "",
+   "published": "2026-11-15T21:16:26+00:00",
+   "link": "https://www.youtube.com/watch?v=zUH4_rtme4M",
+   "videoId": "zUH4_rtme4M",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mexico's cartel 'godfather' convicted in American DEA agent's murder dies at age 80",
+   "dek": "The Guadalajara cartel boss convicted in DEA agent Enrique &quot;Kiki&quot; Camarena&apos;s murder died at 80, decades after the killing triggered Operation Leyenda.",
+   "opening": "The Mexican cartel boss who helped build a drug empire supplying the United States and was convicted in the murder of Drug Enforcement Administration agent Enrique \"Kiki\" Camarena has died at 80. Miguel Angel Felix Gallardo, known as the \"boss of bosses,\" died Sunday in a Guadalajara hospital after suffering multiple organ failure, The Associated Press reported , citing Jalisco’s security ministry. He had been transferred from prison Friday. Felix Gallardo had been behind bars since 1989, according to The AP. JOHN KOUFOS: TRUMP’S ‘SHIELD OF THE AMERICAS’ COULD HELP DEFEND US FROM CARTELS His death comes more than four decades after Camarena’s abduction and torture, a killing that sparked the largest homicide investigation in DEA history, according to the agency. In 2017, a Mexican federal judge gave Felix Gallardo a 37-year prison term for the murders of Camarena and Mexican pilot Alfredo Zavala, Excélsior reported . The judge also ordered more than 20 million pesos in compensation for the victims’ families, roughly $1.18 million at the time. Camarena was heading to meet his wife for lunch on Feb. 7, 1985, when five men abducted him as he left the U.S. Consulate in Guadalajara, according to the DEA. One of the attackers identified himself as a Mexican law enforcement official. DRUG CARTEL KINGPIN AMONG TARGETS IN SWEEPING TRUMP CRACKDOWN ON ALLEGED MEXICAN CORRUPTION NETWORK The 37-year-old agent was never seen alive again. The DEA says Camarena was believed to have been tort",
+   "published": "2026-11-15T20:54:06-05:00",
+   "link": "https://www.foxnews.com/world/mexicos-cartel-godfather-convicted-american-dea-agents-murder-dies-age-80",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "murder",
+     "death"
+    ],
+    "obj_afederal_alleged-aside-ballots-cant": [
+     "alleged",
+     "judge"
+    ],
+    "obj_x_alive-attempted-buried-charged": [
+     "murder",
+     "alive"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Will the Case Against Ilhan Omar Hold Up?",
+   "dek": "Her past marriage and immigration status warrant scrutiny, even if the Trump administration&#8217;s pursuit is motivated by politics, writes Jed Rubenfeld.",
+   "opening": "The saga of Democratic Rep. Ilhan Omar gets stranger and stranger. She&#8217;s already under criminal investigation, and the Trump administration may be even more likely to come after her now that Stephen Miller&#8212;a top immigration hawk and tormenter of the progressive left&#8212;has been elevated to White House chief of staff. But do they have a real case against the Minnesota congresswoman? On October 12, 2026, federal agents executed a search warrant at Omar&#8217;s home in Washington, D.C. That warrant&#8212;which could not have been issued unless a judge found probable cause&#8212; remains under seal , so we don&#8217;t know exactly what alleged crimes it&#8217;s based on. Nevertheless, it has been widely reported that the Justice Department is investigating two primary allegations: (1) that Omar married her own brother in 2009 to help him obtain immigration papers; and (2) that she was 18, not 17, when she received U.S. citizenship in 2000. (A separate investigation, led by U.S. Attorney Jeanine Pirro, is looking into alleged financial improprieties.) It&#8217;s plausible that the administration is targeting Omar for political reasons. She&#8217;s a founding member of the progressive &#8220;Squad&#8221; and a harsh critic of Donald Trump. Last month, the president called Omar &#8220;a sick,&#8221; &#8220;very dishonest person&#8221; who &#8220;hates our country.&#8221; After Omar and Rep. Rashida Tlaib (a Palestinian American) protested Trump at this year&#8217;s St",
+   "published": "2026-11-15T19:57:58+00:00",
+   "link": "https://www.thefp.com/p/will-the-case-against-ilhan-omar-immigration-politics-investigation",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_afederal_alleged-aside-ballots-cant": [
+     "alleged",
+     "judge"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Blinken warns US ground invasion of Iran would be 'absolute disaster' as Tehran escalates attacks",
+   "dek": "Former Secretary of State Antony Blinken warned a U.S. ground invasion of Iran would be an &quot;absolute disaster&quot; as Tehran launched drones at Bahrain.",
+   "opening": "Former Secretary of State Antony Blinken warned Saturday that airstrikes alone may not eliminate Iran's weapons capabilities, but said a U.S. ground invasion would be an \"absolute disaster.\" Speaking at the 24th Hindustan Times Leadership Summit in New Delhi, Blinken, who served under President Biden, pointed to Iran's massive territory, population of roughly 90 million and ability to produce weapons deep inside the country as obstacles to any military campaign aimed at dismantling its arsenal. \"The weapons that it continues to produce are back far enough, the range is great enough that you can't just take everything out,\" Blinken said. \"You'd probably have to have a land invasion of some kind to do that, which would be an absolute disaster.\" TRUMP KEEPS SIGNALING AN END TO IRAN WAR, BUT EXPERT WARNS A CRUCIAL PIECE OF HIS STRATEGY IS MISSING Blinken's warning came ahead of Iran claiming Sunday to have launched six drones at a U.S. military installation in Bahrain, while reports surfaced that neighboring Iraq faced concerns that its territory could be drawn into a potential American ground operation. Bahrain said its air defenses blocked several Iranian aerial attacks Sunday, the first such interceptions since September. Iran's Islamic Revolutionary Guard Corps (IRGC) said it targeted a U.S. air defense radar system at the Al-Rifaa helicopter base with six drones in retaliation for what it described as \"hostile US actions,\" according to Iranian state media, Reuters reported. ",
+   "published": "2026-11-15T19:17:38-05:00",
+   "link": "https://www.foxnews.com/world/blinken-warns-us-ground-invasion-iran-would-be-disaster-tehran-escalates-attacks",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran",
+     "irgc"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TikToker arrested after big cat mauls teen to death during video shoot at private farm",
+   "dek": "A TikToker and farm owner were arrested after a big cat fatally mauled a teenage worker during a video shoot in Pakistan, Lahore officials said.",
+   "opening": "A TikToker has been arrested alongside a farm owner after a big cat viciously mauled a teenage employee to death during a video shoot in eastern Pakistan, officials said Thursday. The attack happened at a private breeding farm near Kahna, according to The Times of India. The animal \"got out of control in the presence of the TikToker, who had come to the farmhouse to make a TikTok video, leaving a farm employee critically injured,\" Lahore police said in a post on X. Although police described the animal as a lioness, a photo shared by the agency alongside its statement appeared to show a tiger. 'LOOKSMAXXING' INFLUENCER CLAVICULAR CHARGED AFTER ALLEGEDLY SHOOTING DEAD ALLIGATOR ON LIVESTREAM The victim, 19, was identified as Talha, while the arrested farm owner was identified as Fayyaz and the TikToker as Noman, according to The Times of India. The outlet added that the TikToker had reportedly asked for the animal to be released from its enclosure for a TikTok video shoot . After the attack, Talha was rushed to a private hospital but died while undergoing treatment. **GRAPHIC WARNING** NEARLY 100 MONKEYS ESCAPE ENCLOSURE, INVADE NEIGHBORHOODS AS OFFICIALS SCRAMBLE TO RECAPTURE THEM Police opened a case into the incident and uncovered an alleged attempt to \"conceal the truth.\" \"An attempt was made to pass off the lioness attack as a dog attack ,\" police said. Investigators are examining whether the farm had the proper permits to keep the big cat, whether adequate safety measures",
+   "published": "2026-11-15T19:14:22-05:00",
+   "link": "https://www.foxnews.com/world/tiktoker-arrested-big-cat-mauls-teen-death-video-shoot-private-farm",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "charged",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Israel Kidnapped Iranian Generals in Hunt for Ron Arad",
+   "dek": "Israeli officials were convinced that Tehran was to blame for the airman’s disappearance. Alternative theories got little attention, until now.",
+   "opening": "",
+   "published": "2026-11-15T18:47:49+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/europe/ron-arad-missing-israel-iran-asgari-hunt.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Officials say a tanker's steering failed before it crashed into a cruise ship in New Orleans",
+   "dek": "The preliminary finding from National Transportation Safety Board officials provided the first official word on what caused Friday's crash of the Atlantic Asphalt tanker into the American Heritage cruise ship, which sent passengers, crew and two police officers plunging into the Mississippi River.",
+   "opening": "",
+   "published": "2026-11-15T18:02:00-05:00",
+   "link": "https://www.pbs.org/newshour/nation/officials-say-a-tankers-steering-failed-before-it-crashed-into-a-cruise-ship-in-new-orleans",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang weighs Nvidia CEO comeback as ally plans ‘war room’: report",
+   "dek": "Former Nvidia CEO Jensen Huang faces a reinstatement push backed by Elon Musk, Tim Sweeney and other tech leaders following his abrupt ouster.",
+   "opening": "Former Nvidia CEO Jensen Huang is discussing with close confidants the possibility of returning to the company as chief executive, according to the Financial Times. One Huang ally told the outlet they were putting together a \"war room\" of Silicon Valley executives to lobby Nvidia’s board for his return and would seek White House support. \"Everyone that matters in tech outside the frontier labs loves Jensen,\" one Huang ally told the outlet. The push follows Huang’s resignation amid reports of affairs with a suspected Chinese spy and several subordinates at the company. COLETTE KRESS NAMED NVIDIA INTERIM CEO AS JENSEN HUANG'S ABRUPT RESIGNATION RAISES INVESTOR CONCERNS Despite the show of support, some allies remain concerned about how Huang can overcome his reputational damage, the FT reported. \"Having an affair with a subordinate is a fireable offense,\" one ally said. NVIDIA LOSES ITS 'GODFATHER OF AI' AND NOW FACES FIRST BIG TEST WITHOUT HIM A website dedicated to the broader effort to \"bring Jensen back\" has also garnered more than 150,000 signatures, including those of prominent tech leaders such as SpaceX and Tesla CEO Elon Musk, Epic Games CEO Tim Sweeney, former Uber CEO Travis Kalanick and YouTube co-founder Steve Chen. The campaign says tens of thousands of signers identify themselves as Nvidia shareholders, alongside current and former employees. The website notes that affiliations are self-reported and have not been verified. In a post on X last week, the campaign a",
+   "published": "2026-11-15T17:57:14-05:00",
+   "link": "https://www.foxbusiness.com/technology/jensen-huang-weighs-nvidia-ceo-comeback-ally-plans-war-room-report",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "weighs",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's handpicked party chair faces a rebellion as midterm losses challenge president's grip on GOP",
+   "dek": "The emerging fight, which will shape the 2028 presidential nominating contest, represents a rare challenge to Trump's dominance, even after the party's worst midterm performance in a generation.",
+   "opening": "",
+   "published": "2026-11-15T17:43:07-05:00",
+   "link": "https://www.pbs.org/newshour/politics/trumps-handpicked-party-chair-faces-a-rebellion-as-midterm-losses-challenge-presidents-grip-on-gop",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "White House calls DC policies 'insanity' after 19-year-old gunman gets probation in shooting",
+   "dek": "A 19-year-old who prosecutors said fired more than 20 rounds into a D.C. neighborhood got probation, prompting the White House to slam the city&apos;s crime policies.",
+   "opening": "EXCLUSIVE – A 19-year-old who authorities say fired more than 20 rounds into a Washington, D.C., neighborhood and wounded a boy playing basketball has been released on probation, prompting the White House to denounce the city’s sentencing policies as \"insanity.\" Prosecutors wanted Darius Drew behind bars for five years. Instead, a judge suspended a two-year prison sentence and ordered 18 months of supervised probation under the Youth Rehabilitation Act, a D.C. law U.S. Attorney Jeanine Pirro had previously urged lawmakers to overhaul. \"The case illustrates the insanity of Washington, D.C.’s soft-on-crime policies that allow adults to receive just a slap on the wrist for dangerous crimes like firing twenty rounds of ammunition into the community,\" White House spokeswoman Lauren Bis told Fox News Digital. TRUMP’S DC LAW-AND-ORDER BLITZ MARKS ONE YEAR WITH EYE-POPPING HAUL OF SUSPECTS \"It is remarkable that even with these types of radical policies in place, President Trump’s Safe and Beautiful Task Force has been able to drive down violent crime in our nation’s capital,\" Bis added. Superior Court Judge Jennifer Di Toro granted Drew sentencing treatment under the Youth Rehabilitation Act over the government’s objection, according to federal prosecutors. Drew pleaded guilty Aug. 10 to aggravated assault and carrying a pistol without a license. CHAOTIC TEEN BRAWL GOES VIRAL AFTER TEEN TERROR PROMPTS US ATTORNEY PIRRO'S PLAN TO PROSECUTE PARENTS He was released Friday after spendin",
+   "published": "2026-11-15T17:31:11-05:00",
+   "link": "https://www.foxnews.com/politics/white-house-calls-dc-policies-insanity-after-19-year-old-gunman-gets-probation-shooting",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_alleged-aside-ballots-cant": [
+     "force",
+     "judge"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran vows ‘we will find you’ to 2 US Navy officers the day warship returns from Middle East",
+   "dek": "Iran&apos;s embassy in South Africa posted a &quot;We will find you&quot; threat targeting two USS Spruance officers as the destroyer returned to San Diego.",
+   "opening": "Iran’s embassy in South Africa threatened two U.S. Navy officers with a \"We will find you\" message online as their warship returned to San Diego on Friday after a historic 357-day deployment that included combat against Iranian forces. The warning, posted on X on Nov. 13 alongside images identifying the USS Spruance’s commanding officer and executive officer, prompted a regional expert to warn that Iran’s public targeting of American service members should set off alarm bells in Washington. The embassy identified Cmdr. Leigh R. Tate, commanding officer of the Spruance, and Lt. Cmdr. Jeffrey E. York, the ship’s executive officer. IRAN MINES US TROOPS' SOCIAL MEDIA AS MILITARY CONSIDERS SEIZING CELLPHONES \"We will find you,\" the embassy wrote on X. The embassy had previously singled out the officers in a March 28 post accusing them of ordering Tomahawk missile launches that killed 168 children at an elementary school in Minab, Iran. \"Remember these two criminals,\" the earlier post began. \"Don’t they have children of their own?\" the embassy asked at the time. Behnam Ben Taleblu , a senior fellow at the Foundation for Defense of Democracies, warned that the rhetoric coming out of Tehran should be taken seriously given Iran’s history of plotting attacks against American officials. \"This should be setting off alarm bells in Washington, in the White House, the Pentagon, and even within CENTCOM,\" Taleblu told Fox News Digital. \"The Islamic Republic has literally identified personnel ",
+   "published": "2026-11-15T15:58:36-05:00",
+   "link": "https://www.foxnews.com/world/iran-vows-we-find-you-2-us-navy-officers-day-warship-returns-from-middle-east",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "hormuz": [
+     "centcom"
+    ],
+    "fed": [
+     "warsh"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran Attacks Bahrain for the Second Time in Days",
+   "dek": "The resumption of attacks after a two-month lull comes as peace talks between the U.S. and Iran appear to have stalled.",
+   "opening": "",
+   "published": "2026-11-15T15:55:09+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/middleeast/bahrain-iran-israel.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "FAA ground stop timeline: Weekend chaos grounds planes and postpones games",
+   "dek": "Transportation Secretary Sean Duffy said overloaded routers tied to contractor L3Harris maintenance work triggered the longest nationwide FAA ground stop in 25 years.",
+   "opening": "A communications failure brought departures across the country to a halt Friday, stranding travelers, disrupting professional sports teams and sending federal officials scrambling to restore flights and determine what went wrong. The longest nationwide ground stop in 25 years ended after more than four hours, but the fallout stretched through the weekend as airlines worked through cancellations and investigators zeroed in on routers tied to the outage. Here’s a timeline of the shutdown and the federal response. All times are Eastern. 4 CRITICAL TRAVEL ISSUES FOR THOSE DELAYED AND DISRUPTED BY FAA NATIONWIDE GROUND STOP Transportation Secretary Sean Duffy said officials detected instability in radar data and communications at 3:36 p.m., affecting facilities that guide planes approaching airports and traveling between them. The Federal Aviation Administration (FAA) halted departures nationwide at 3:54 p.m. as controllers and pilots followed procedures to bring aircraft already airborne safely to the ground. About 3,500 flights were in the air. FAA SAYS AIR TRAVEL SHOULD BE BACK TO NORMAL SUNDAY AFTER NATIONWIDE GROUND STOP Duffy later emphasized that officials had not lost every radar feed or all telecommunications service. The inconsistent information was enough to trigger the shutdown as a safety precaution. Duffy said the ground stop was necessary because of \"a communication issue impacting all Air Route Traffic Control Centers.\" FAA technicians were investigating, he said. ",
+   "published": "2026-11-15T15:51:02-05:00",
+   "link": "https://www.foxnews.com/politics/faa-ground-stop-timeline-weekend-chaos-grounds-planes-postpones-games",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ],
+    "obj_x_events-here-iran-major": [
+     "here",
+     "timeline"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Jensen Huang Was Essential to Nvidia’s Rise",
+   "dek": "Jensen Huang was the driving force at Nvidia, with 60 direct reports and no clear succession plan. Tripp Mickle, one of our technology reporters, examines Mr. Huang’s central role in the company and the artificial intelligence industry.",
+   "opening": "",
+   "published": "2026-11-15T15:38:26+00:00",
+   "link": "https://www.nytimes.com/video/business/100000011275611/why-jensen-huang-was-essential-to-nvidias-rise.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Blocks Immediate Closure of East Potomac Park for Trump Golf Project",
+   "dek": "Judge Ana C. Reyes, who has been overseeing combative litigation, said the Trump administration would not be responsible for operating the course while the case proceeded.",
+   "opening": "",
+   "published": "2026-11-15T15:04:16+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/us/politics/trump-east-potomac-golf-course.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bessent calls for Nvidia leadership shake-up amid China chip scandal, urges outside CEO",
+   "dek": "Following the resignation of Nvidia founder and CEO Jensen Huang, Secretary of the Treasury Scott Bessent urged the company to choose an outsidse candidate as his replacement.",
+   "opening": "Treasury Secretary Scott Bessent called for Nvidia to hire its next CEO from outside the company following Jensen Huang's resignation, arguing that questions surrounding the chipmaker's compliance with U.S. export restrictions warrant a major leadership shake-up on \"Sunday Morning Futures.\" Bessent questioned whether Nvidia's alleged export compliance failures were isolated incidents or reflected deeper problems within the company. \"We will see if Nvidia intentionally ignored the warning signs of these shell companies, many of them in Singapore,\" Bessent said, claiming that Nvidia's accounts showed a crash in sales to China followed by a surge in sales to Singapore. \"And I have seen reporting that only 1% of the chips sold in Singapore remained in Singapore,\" he added. \"This makes me think that, as the board conducts a search for a new leader, that they need to go outside the company.\" NVIDIA STOCK SLIDE WIPES OUT MORE THAN $20B IN VALUE FOR JENSEN HUANG OVER 5 DAYS \"They need a dramatic shake-up.\" The Treasury chief's comments follow Huang's resignation Thursday after Nvidia's board investigated his reported affair with a tech executive suspected of being a Chinese intelligence source. Huang is also alleged to have had extramarital relationships with two employees at Nvidia. Regardless of Huang's \"foibles,\" Bessent demanded answers \"in the next 10 days from the board and from the outside counsel.\" JENSEN HUANG JOINS LIST OF HIGH-PROFILE FOUNDERS OUSTED FROM THEIR OWN COMPANI",
+   "published": "2026-11-15T14:25:00-05:00",
+   "link": "https://www.foxbusiness.com/business-leaders/bessent-calls-nvidia-leadership-shake-up-amid-china-chip-scandal-urges-outside-ceo",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "ousted",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Could everything be broken? Grounded jets, Microsoft outage, AI chaos make some wonder",
+   "dek": "Throw in a few more examples just from Friday — a cruise ship that overturned in New Orleans when a tanker slammed into it, suspicious drones over a U.S. air base in Britain, a bomb found near an ethanol plant in Ohio.",
+   "opening": "",
+   "published": "2026-11-15T12:05:04-05:00",
+   "link": "https://www.pbs.org/newshour/nation/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Megaspeed says Alice Huang left in 2025 as company conducts internal probe over Nvidia fallout",
+   "dek": "Megaspeed, which is under scrutiny over alleged transfers of advanced Nvidia chips to Chinese companies, also announced an internal investigation led by outside lawyers.",
+   "opening": "",
+   "published": "2026-11-15T11:48:48-05:00",
+   "link": "https://www.pbs.org/newshour/world/megaspeed-says-alice-huang-left-in-2025-as-company-conducts-internal-probe-over-nvidia-fallout",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Buttigieg takes swipe at Trump administration amid FAA flight chaos",
+   "dek": "Former Transportation Secretary Pete Buttigieg joked he&apos;d help travelers rebook flights at a hotel bar after the FAA&apos;s nationwide ground stop Friday.",
+   "opening": "DENVER — Former Transportation Secretary Pete Buttigieg took a swipe at the Trump administration’s handling of Friday’s nationwide FAA ground stop, joking that he would help stranded travelers rebook flights as delays and cancellations continued. I’ll begin with a public service announcement,\" Buttigieg told reporters in Denver. \"I will be available in the hotel bar following the concert for anybody who needs to rebook their flights or get a refund per your rights.\" He made the remark as the \" What’s Next \" conference wrapped up in Denver. The two-day gathering, hosted by Majority Democrats, brought leaders together to discuss the party’s direction after its midterm victories. DEMS DESCEND ON DENVER TO SIZE UP 2028; WE ASKED WHO WANTS IN THE RACE The FAA lifted the ground stop shortly after 8 p.m. Friday, more than four hours after it began, but flights remained delayed and canceled over the weekend. The agency cited safety concerns and serious air traffic control communications issues. Buttigieg, who said he had no inside information about the cause of the ground stop, later questioned why the aviation system’s safeguards had not prevented an outage of that scale. He said he was watching the disruption as a traveler with a flight scheduled for Saturday. \"The system has many redundancies in it, so that normally, if there’s one point of failure, something else can catch it,\" he said. \"It is not clear to me why that redundancy did not prevent an outage of this magnitude.\" SCHUM",
+   "published": "2026-11-15T11:28:15-05:00",
+   "link": "https://www.foxnews.com/politics/buttigieg-takes-swipe-trump-administration-amid-faa-flight-chaos",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "refund"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge temporarily blocks Trump from moving ahead on D.C. public golf course redevelopment",
+   "dek": "U.S. District Judge Ana Reyes issued the temporary restraining order before the East Potomac Golf Links was due to close Sunday for 15 months.",
+   "opening": "",
+   "published": "2026-11-15T11:20:54-05:00",
+   "link": "https://www.pbs.org/newshour/politics/judge-temporarily-blocks-trump-from-moving-ahead-on-d-c-public-golf-course-redevelopment",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "NYC DSA urges AOC to run for president while planning to take over City Council",
+   "dek": "NYC&apos;s Democratic Socialists of America voted to urge AOC to run for president in 2028, but some resolutions sparked an AI-generated controversy.",
+   "opening": "The New York City chapter of the Democratic Socialists of America overwhelmingly voted to urge Rep. Alexandria Ocasio-Cortez, D-N.Y., to run for president in 2028 on Saturday. NYC-DSA approved a resolution making the call in a 291 to 123 vote at the chapter's annual convention. Gustavo Gordillo, co-chair of the local DSA chapter, said the vote was not a formal endorsement, but is instead a \"a commitment to encouraging and building the foundation for a presidential campaign.\" \"AOC and New York City DSA are committed to building a stronger democratic socialist movement and DSA will create the conditions for a presidential campaign capable of advancing a working-class political agenda,\" Gordillo said at a press conference on Saturday. DEMOCRATIC SOCIALISTS OF AMERICA LEADER SAYS ‘MANY’ IN GROUP WOULD BE 'THRILLED' AT AOC IN 2028 The chapter also laid out its plans to take over New York City's City Council, among other resolutions. Several of the party's resolutions ran into controversy for appearing to be AI-generated, according to a report from Politico. When run through the AI detection tool Pangram, the 2029 City Council election resolution was rated 100% AI-generated, the outlet reported. Two other DSA resolutions were reportedly flagged as AI-generated as well, related to expanding DSA membership in community boards and interaction with South Asian communities. The chapter has a policy against AI usage and voted on Saturday to formally oppose the expansion of AI . NYC-DSA c",
+   "published": "2026-11-15T10:55:47-05:00",
+   "link": "https://www.foxnews.com/politics/nyc-dsa-urges-aoc-run-president-planning-take-over-city-council",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "communities",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Lutnick Pushed to Weaken Chip Rules That Overlap With His Family Business",
+   "dek": "The commerce secretary has been writing new rules that would affect Southeast Asian data centers, some of which are clients of his former firm.",
+   "opening": "",
+   "published": "2026-11-15T10:02:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/us/politics/trump-lutnick-ai-chips-nvidia-cantor-fitzgerald.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "rules",
+     "data"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang’s Downfall Brings Disbelief in Taiwan",
+   "dek": "The Nvidia chief executive’s resignation shocked people in his birthplace, where he is called “the people’s dad.”",
+   "opening": "",
+   "published": "2026-11-15T10:01:57+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/business/jensen-huang-taiwan.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "After Midterms Triumph, Democrats Look Quickly and Eagerly Ahead to 2028",
+   "dek": "Politicians, donors and campaign strategists are already imagining a large and contentious field of presidential contenders.",
+   "opening": "",
+   "published": "2026-11-15T10:01:00+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/us/politics/democrats-2028-presidential-candidates.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Congress' incoming wealthiest member vows to crack down on politicians getting rich in office",
+   "dek": "Joe Strada said he plans to crack down on congressional insider trading and politicians enriching themselves, drawing on his rise from bowling alley mechanic.",
+   "opening": "EXCLUSIVE: Rep.-elect Joe Strada, R-Fla., poised to become the wealthiest member of Congress, told Fox News Digital that he plans to crack down on politicians who enrich themselves while serving in public office when he takes office in January. Strada, who went from working as a bowling alley mechanic to owning a nationwide HVAC company, is expected to become Congress' richest member, according to Forbes. The incoming Republican argued that public office should be about serving Americans rather than accumulating personal wealth. \"We need to make sure that we hold politicians accountable,\" Strada told Fox News Digital. \"Nobody, and I mean nobody, should get rich in public office. We're there to serve the American people.\" \"If you want to get rich, stay in the private sector. I went into business to get rich, not Washington, D.C. I'm going to Washington, D.C., to serve the American people,\" he continued. The congressman-elect said combating congressional insider trading and political profiteering would be among his priorities as he prepares to leave the private sector for Capitol Hill. Strada pointed to his own rise from a blue-collar worker to a successful businessman as proof that the American Dream remains achievable, arguing that excessive government intervention has made it harder for others to follow a similar path. \"I started with nothing. I was a handyman at a bowling alley. If I can do it, other everyday Americans can. Government needs to get out of their way and help ",
+   "published": "2026-11-15T10:00:17-05:00",
+   "link": "https://www.foxnews.com/politics/congress-incoming-wealthiest-member-vows-crack-down-politicians-getting-rich-office",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "accountable",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Pentagon Ignored a Warning About the Danger of Iran’s Drones",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-15T09:52:46-05:00",
+   "link": "https://www.theatlantic.com/national-security/2026/11/pentagon-drones-iran-war-hegseth/689425/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Makes A Nonprofit Actually Effective?",
+   "dek": "Americans give hundreds of billions of dollars to charity every year, but what does effective generosity look like in practice? John Bickley and Georgia Howe sit down with Convoy of Hope’s Ethan Forhetz to discuss the organization’s global humanitarian work, disaster relief efforts, and mission to help communities break the cycle of generational poverty. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 3:30 AM CT 🚨 Tired of the ads? Join DailyWire+ today",
+   "opening": "",
+   "published": "2026-11-15T09:30:34+00:00",
+   "link": "https://www.youtube.com/watch?v=ojrXqA9bppM",
+   "videoId": "ojrXqA9bppM",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Putin's war machine tied to troubling recruitment of young women as new deals emerge",
+   "dek": "Two African governments signed deals with Russia&apos;s Alabuga drone factory zone as a Ukrainian probe alleges deceptive recruitment of young African women.",
+   "opening": "Two African governments have signed new agreements with a Russian industrial complex linked to the production of attack drones used against Ukraine, even as a Ukrainian investigation alleges Moscow is expanding a recruitment network that draws young African women into its military-industrial workforce. The agreements, signed in late October by Ghana and the Democratic Republic of the Congo with Russia's Alabuga Special Economic Zone, come months after Britain sanctioned individuals and entities associated with the Alabuga Start program over deceptive recruitment practices. The new partnerships raise questions about whether Russia's efforts to attract foreign workers could help sustain drone production as its war against Ukraine continues. The Ukrainian Security and Cooperation Centre says it has obtained internal documents identifying approximately 50 African women employed at Alabuga, alongside 10 Russian recruiters and two African intermediaries allegedly involved in attracting foreign workers. OUR ADVERSARIES ARE EVEN USING THE US BANKING SYSTEM. HERE’S HOW THEY GET AWAY WITH IT \"What we were able to do is basically to obtain internal documentation,\" Solomiya Khoma, the organization's head of international cooperation, told Fox News Digital in an exclusive interview. Khoma said the investigation went beyond previous reporting by attempting to establish how recruitment operates across borders, connecting Russian cultural organizations, local intermediaries and Alabuga's hum",
+   "published": "2026-11-15T09:00:46-05:00",
+   "link": "https://www.foxnews.com/world/putins-war-machine-tied-troubling-recruitment-young-women-new-deals-emerge",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "ukrainian",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "In calling for an end to the Iran War, Vance walks a fine line with Trump",
+   "dek": "A rift is opening up between President Trump and Vice President Vance when it comes to the Iran War. NPR's Ayesha Rascoe talks to Susan Glasser, staff writer at the New Yorker.",
+   "opening": "A rift is opening up between President Trump and Vice President Vance when it comes to the Iran War. NPR's Ayesha Rascoe talks to Susan Glasser, staff writer at the New Yorker.",
+   "published": "2026-11-15T08:11:23-05:00",
+   "link": "https://www.npr.org/2026/11/15/nx-s1-6040447/in-calling-for-an-end-to-the-iran-war-vance-walks-a-fine-line-with-trump",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's top officials retreat behind military gates as ex-FBI deputy points to what's fueling threats",
+   "dek": "Scott Bessent joins Todd Blanche, Marco Rubio and Pete Hegseth at Washington D.C. military bases amid Iranian assassination threats.",
+   "opening": "Military bases around Washington, D.C., have become an increasingly common refuge for some of President Donald Trump's most powerful officials, as threats linked to Iran and a surge in threats against public officials raise security concerns across the administration. \"So you have this combination of a permission structure on the left for violence, combine it with the ability to track it and create a long paper trail, and the numbers explode, and these threat matrices go crazy,\" former Secret Service agent and former FBI Deputy Director Dan Bongino said. Treasury Secretary Scott Bessent is the latest senior administration official to relocate to a military installation, joining a growing number of top Trump officials living behind military gates as federal authorities confront security threats that extend well beyond the White House. IRAN HAS 'SUBSTANTIALLY INCREASED' EFFORTS TO TARGET AMERICANS ABROAD, US INTELLIGENCE MEMO WARNS \"After The Wall Street Journal published an article featuring an online photo that allowed the location of the Secretary’s Georgetown home to be geo-located, security concerns began to increase which have now forced the Secretary to relocate to a military base for his safety. The news media has an obligation to act responsibly amid growing threats against public officials,\" a source familiar with the situation told Fox News Digital. Threats against Bessent had reached \"more than an advanced stage\" amid reported Iranian assassination threats , a senio",
+   "published": "2026-11-15T08:00:14-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-top-officials-retreat-behind-military-gates-ex-fbi-deputy-points-whats-fueling-threats",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside Senate GOP's tense post-election reckoning as Thune clashes with Republican critics",
+   "dek": "Senate Republicans kept John Thune as leader by acclamation after a heated closed-door meeting that some lawmakers compared to &quot;Festivus.&quot;",
+   "opening": "Senate Republicans huddled for hours on end to define their remaining time in power and determine if the leadership they had backed so far was the right choice moving forward into a new era in Washington, D.C. Some closed-door meetings over the last nearly two years Republicans have controlled the Senate have been animated, with policy pitches devolving into shouting matches — President Donald Trump and Sen. Bill Cassidy, R-La., infamously sparred over the Iran war earlier this year. This confab, their first since Senate Minority Leader Chuck Schumer, D-N.Y., and Democrats roared back into the majority, was different. In part, it was meant to develop a plan that would carry them through the final weeks of this year — that was agreed upon during the meeting, but not without its own drama after the fact on who could lay claim to the GOP’s 54-day blitz. SENATE GOP REBELLION FIZZLES AS THUNE KEEPS POWER DESPITE HISTORIC MIDTERM MASSACRE It was also a test to see if Republicans wanted to keep Senate Majority Leader John Thune, R-S.D., as their leader, or delay until a challenger appeared. But Republicans pushing for a delay acknowledged part of the problem: Who would want the job? \"I got the job because nobody else wants it,\" Thune told Fox News Digital after the dust settled in the Old Senate Chamber. And he did, along with much of the same leadership team that Senate Republicans elected when they won the majority two years ago, by acclamation, meaning no lawmaker objected to the",
+   "published": "2026-11-15T07:00:37-05:00",
+   "link": "https://www.foxnews.com/politics/inside-senate-gops-tense-post-election-reckoning-thune-clashes-republican-critics",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "As US credit card debt hits $1.29T, bank algorithms are rejecting debt-free, six-figure earners",
+   "dek": "Across the country, debt-free Americans earning six figures face credit card denials as bank algorithms flag thin credit files as high-risk behavior.",
+   "opening": "Across the country, Americans earning six-figure salaries, carrying no debt and sitting on healthy savings accounts are increasingly hitting an unexpected wall when applying for everyday credit cards or loans: instant denial from automated bank algorithms. The rejections highlight a growing rift between kitchen-table financial discipline and corporate underwriting models. While nationwide credit card balances have climbed to a record $1.29 trillion — a 67% surge since early 2021, according to the Federal Reserve Bank of New York — data from the Consumer Financial Protection Bureau (CFPB) shows an estimated 25 million adults have credit files \"too thin\" or stale to generate a standard score. Rather than rewarding households that avoid borrowing, modern underwriting algorithms can interpret limited recent credit activity as a sign of uncertain lending risk, potentially making it harder for some debt-free consumers to qualify for credit. \"Is corporate America penalizing people who live debt-free? I would say they're not penalizing them, but they are not prioritizing them because we're not the ones making them money,\" Jade Warshaw, co-host of \"The Ramsey Show\" — who paid off $460,000 in debt alongside her husband — told Fox News Digital. \"When you think about the credit score in general, the whole purpose, it's a product, and so it's out there for banks to make money. And if we're not going to be their customer, then yes, they're not going to prioritize us.\" IRS ANNOUNCES 2027 TA",
+   "published": "2026-11-15T07:00:18-05:00",
+   "link": "https://www.foxbusiness.com/personal-finance/us-credit-card-debt-hits-1-29t-bank-algorithms-rejecting-debt-free-six-figure-earners",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "fed": [
+     "warsh"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Small town residents cry for help as immigrant influx fueled by trucking industry has unintended consequences",
+   "dek": "A Fox News Digital investigation reveals Hamilton Township&apos;s freight fraud crackdown yielded 561 traffic stops and 36 arrests in southwest Ohio.",
+   "opening": "This article is Part 3 of a Fox News Digital exclusive series investigating trucking fraud, public safety, and assimilation concerns in southwest Ohio. You can read Part 1 here and Part 2 here . OHIO - An influx of Uzbek immigrants and trucking companies, coupled with mounting concerns about roadway safety and alleged fraud, is fueling frustration in southwest Ohio , where residents are speaking out about changes they say have left them feeling unsafe on their roads and increasingly uneasy in their own neighborhoods. Jane, a resident of southwest Ohio, is one of many who have been affected by the Uzbek influx, which she says ultimately drove her out of a new home she purchased in the area after just 18 months of living there. \"I have literally been screaming about what has been going on for years, and I'm like somebody needs to take notice of this,\" Jane told Fox News Digital. Jane recounted repeated problems involving neighbors she identified as Uzbek, describing unsupervised children grabbing moving cars, climbing construction equipment, threatening to punch, kick or choke her dog, and taking her child's bicycle while ignoring demands to return it. She also described children urinating on neighbors’ vehicles, adults slaughtering chickens outdoors in view of her frightened child, and semi-truck cabs obstructing driveways. WORKING-CLASS AMERICANS SAY THEIR TOWN IS THE NEXT DEARBORN — AND THEY'VE HAD ENOUGH Jane described feeling \"incredibly uncomfortable\" encountering groups ",
+   "published": "2026-11-15T05:00:51-05:00",
+   "link": "https://www.foxnews.com/politics/small-town-residents-cry-help-immigrant-influx-fueled-trucking-industry-unintended-consequences",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_fraud-oakdale-ringleader-sentenced": [
+     "fraud",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midterm voters ended the long-running GOP dominance in state legislatures",
+   "dek": "In several states, Democrats took control of legislatures that had been divided and they weakened GOP dominance in others. Issues on the agenda: More access to health care, new limits on school vouchers.",
+   "opening": "In several states, Democrats took control of legislatures that had been divided and they weakened GOP dominance in others. Issues on the agenda: More access to health care, new limits on school vouchers. (Image credit: Sarah Kallis)",
+   "published": "2026-11-15T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/15/nx-s1-6039175/midterms-legislatures-states-democrats-gop",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}

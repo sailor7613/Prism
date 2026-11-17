@@ -1,0 +1,1573 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-15",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 22,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 3,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 5,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 30,
+   "hits": 12,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 12,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 59,
+   "hits": 16,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 53,
+   "hits": 28,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 3,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Jensen Huang Carried a Secret for More Than a Year. It Led to His Downfall.",
+   "dek": "Nvidia’s leader said his relationship with a female customer was just about business. But what he was concealing eventually led to his resignation from the company he created.",
+   "opening": "",
+   "published": "2026-11-15T12:40:03+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/technology/jensen-huang-nvidia-board.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bahrain accuses Iran of attacking its territory to ‘settle’ score with US",
+   "dek": "Tehran says its air attacks on countries cooperating with the US are justified under international law.",
+   "opening": "",
+   "published": "2026-11-15T12:36:19+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/15/bahrain-accuses-iran-of-attacking-its-territory-to-settle-score-with-us?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran targets US military radar in Bahrain in ‘retaliatory’ drone strikes",
+   "dek": "Iran’s IRGC says six drones were launched at a US radar installation at an air base in Bahrain.",
+   "opening": "",
+   "published": "2026-11-15T12:15:51+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/15/iran-targets-us-military-radar-in-bahrain-in-retaliatory-drone-strikes?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "irgc"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran Attacks Bahrain for the Second Time in Days",
+   "dek": "The resumption of attacks after a two-month lull comes as peace talks between the U.S. and Iran appear to have stalled.",
+   "opening": "",
+   "published": "2026-11-15T12:07:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/middleeast/bahrain-iran-israel.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Ultraviolent, Wildly Successful, Uniquely American Phenomenon of Grand Theft Auto",
+   "dek": "Thursday, Nov. 19 will see the release of one of the biggest, most anticipated entertainment properties of the year: The video game Grand Theft Auto VI. The first Grand Theft Auto game was released in 1997, and immediately stoked controversy with its aggressively satirical portrait of amoral, criminal American culture. Over the past 30 years, the franchise has continued to keep a sharp satirical eye on American society, and its often unpleasant excesses. The sixth installment promises to touch on hot-button issues like the war on drugs, police violence, conspiracy theories and influencer cultu",
+   "opening": "Thursday, Nov. 19 will see the release of one of the biggest, most anticipated entertainment properties of the year: The video game Grand Theft Auto VI. The first Grand Theft Auto game was released in 1997, and immediately stoked controversy with its aggressively satirical portrait of amoral, criminal American culture. Over the past 30 years, the franchise has continued to keep a sharp satirical eye on American society, and its often unpleasant excesses. The sixth installment promises to touch on hot-button issues like the war on drugs, police violence, conspiracy theories and influencer culture. And yet, even though the game has already made one billion dollars in pre-order sales, it might be the last time we ever see one of this scale. In this episode of “The Sunday Daily,” Michael Barbaro talks with reporter Zachary Small, who covers video games for The Times, about Grand Theft Auto and how it became one of the biggest video game franchises of all time. &nbsp; On Today’s Episode Zachary Small is a New York Times reporter writing about the art world’s relationship to money, politics and technology. Photo credit: Jeenah Moon for Reuters. Background Reading The Grand Ambitions of Grand Theft Auto VI Miami Is Crime Ridden in ‘Grand Theft Auto.’ Should It Market the Myth? Get Ready for Grand Theft Auto VI and 11 More Games to Play This Fall For more information on today’s episode, visit nytimes.com/thedaily . Transcripts of each episode will be made available by the next workda",
+   "published": "2026-11-15T11:00:00+00:00",
+   "link": "https://www.nytimes.com/the-daily",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Lutnick Pushed to Weaken Chip Rules That Overlap With His Family Business",
+   "dek": "The commerce secretary has been writing new rules that would affect Southeast Asian data centers, some of which are clients of his former firm.",
+   "opening": "",
+   "published": "2026-11-15T10:02:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/us/politics/trump-lutnick-ai-chips-cantor-fitzgerald.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "rules",
+     "data"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang’s Downfall Brings Disbelief in Taiwan",
+   "dek": "The Nvidia chief executive’s resignation shocked people in his birthplace, where he is called “the people’s dad.”",
+   "opening": "",
+   "published": "2026-11-15T10:01:57+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/business/jensen-huang-taiwan.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "After Midterms Triumph, Democrats Look Quickly and Eagerly Ahead to 2028",
+   "dek": "Politicians, donors and campaign strategists are already imagining a large and contentious field of presidential contenders.",
+   "opening": "",
+   "published": "2026-11-15T10:01:00+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/us/politics/democrats-2028-presidential-candidates.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Reward for Black Women’s Work in Georgia: Leaders Who Look Like Them",
+   "dek": "Diligent ground-level efforts by Black women helped make Democrats competitive again in Georgia. Now they’ll hold seven of the top eight elected leadership roles in the state.",
+   "opening": "",
+   "published": "2026-11-15T10:00:54+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/us/black-women-georgia-leaders.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran says it targets US radar in Bahrain. What do we know?",
+   "dek": "Bahrain Defence Force says its air defence systems thwart several Iranian &#039;aerial attacks&#039;.",
+   "opening": "",
+   "published": "2026-11-15T09:41:27+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/15/iran-says-it-targets-us-radar-in-bahrain-what-do-we-know?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "After Decades of Blood and Mistrust, Doubts Over Who’s to Blame for an Israeli Hostage",
+   "dek": "Israeli spies kidnapped and killed Iranians. They were convinced that Tehran was to blame for a fallen airman. Alternative theories got little attention, until now.",
+   "opening": "",
+   "published": "2026-11-15T09:36:59+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/europe/ron-arad-missing-israel-iran-asgari-hunt.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Makes A Nonprofit Actually Effective?",
+   "dek": "Americans give hundreds of billions of dollars to charity every year, but what does effective generosity look like in practice? John Bickley and Georgia Howe sit down with Convoy of Hope’s Ethan Forhetz to discuss the organization’s global humanitarian work, disaster relief efforts, and mission to help communities break the cycle of generational poverty. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Subscribe and catch new episodes every day at 3:30 AM CT 🚨 Tired of the ads? Join DailyWire+ today",
+   "opening": "",
+   "published": "2026-11-15T09:30:34+00:00",
+   "link": "https://www.youtube.com/watch?v=ojrXqA9bppM",
+   "videoId": "ojrXqA9bppM",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jordan sentences three men to death by hanging after deadly church attack",
+   "dek": "Three men have been convicted of carrying out an attack on a church in the Karak governorate that killed nine people.",
+   "opening": "",
+   "published": "2026-11-15T08:15:04+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/15/jordan-sentences-three-men-to-death-by-hanging-after-deadly-church-attack?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_astate_california-commute-death-disaster": [
+     "death",
+     "sentences"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "ASEAN summit: Who’s attending and what’s at stake?",
+   "dek": "Energy disruptions as a result of the US-Israel war on Iran is a key issue for the import-dependent bloc.",
+   "opening": "",
+   "published": "2026-11-15T07:11:24+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/15/asean-summit-whos-attending-and-whats-at-stake?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside Senate GOP's tense post-election reckoning as Thune clashes with Republican critics",
+   "dek": "Senate Republicans kept John Thune as leader by acclamation after a heated closed-door meeting that some lawmakers compared to &quot;Festivus.&quot;",
+   "opening": "Senate Republicans huddled for hours on end to define their remaining time in power and determine if the leadership they had backed so far was the right choice moving forward into a new era in Washington, D.C. Some closed-door meetings over the last nearly two years Republicans have controlled the Senate have been animated, with policy pitches devolving into shouting matches — President Donald Trump and Sen. Bill Cassidy, R-La., infamously sparred over the Iran war earlier this year. This confab, their first since Senate Minority Leader Chuck Schumer, D-N.Y., and Democrats roared back into the majority, was different. In part, it was meant to develop a plan that would carry them through the final weeks of this year — that was agreed upon during the meeting, but not without its own drama after the fact on who could lay claim to the GOP’s 54-day blitz. SENATE GOP REBELLION FIZZLES AS THUNE KEEPS POWER DESPITE HISTORIC MIDTERM MASSACRE It was also a test to see if Republicans wanted to keep Senate Majority Leader John Thune, R-S.D., as their leader, or delay until a challenger appeared. But Republicans pushing for a delay acknowledged part of the problem: Who would want the job? \"I got the job because nobody else wants it,\" Thune told Fox News Digital after the dust settled in the Old Senate Chamber. And he did, along with much of the same leadership team that Senate Republicans elected when they won the majority two years ago, by acclamation, meaning no lawmaker objected to the",
+   "published": "2026-11-15T07:00:37-05:00",
+   "link": "https://www.foxnews.com/politics/inside-senate-gops-tense-post-election-reckoning-thune-clashes-republican-critics",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'Purge'-masked suspect accused of killing college student at Halloween bash — before his sister helps nab him",
+   "dek": "Omar Perez&apos;s sister identified him using police photos and the family&apos;s Life360 app after the University of Colorado Boulder student&apos;s killing.",
+   "opening": "Colorado police have identified the people sought in security footage released after a Halloween party shooting that killed a University of Colorado Boulder student, as prosecutors consider additional charges. On Thursday, Boulder Police Public Information Officer Dionne Waugh confirmed to Fox News Digital that \"everyone in the photos and video we released\" has now been identified. The primary suspect, Omar Perez, 18, faces murder and related charges in the death of Luca Hanlon, 19, following a deadly confrontation at an off-campus Oct. 31 party in Boulder’s University Hill neighborhood. MASS SHOOTING AT GEORGIA BLOCK PARTY LEAVES 2 DEAD, 35 INJURED After the arrest, detectives asked for the public's help in identifying three other people seen in video and photos from that night, including two males, one wearing an \"Art the Clown\" shirt and another in a red hoodie, and a female witness. It’s unclear whether they will face charges. \"The investigation is ongoing. When and if there are additional arrests or charges, I will send out a news release,\" Waugh said. Shannon Carbone, the public information officer (PIO) for the Boulder County District Attorney’s Office, told Fox News Digital that prosecutors \"successfully argued in court Tuesday to have Perez held without bond.\" Perez's preliminary hearing is scheduled for Feb. 10, 2027, according to the District Attorney's Office. The Colorado Public Defender’s Office declined to comment on the case. The university did not immediately",
+   "published": "2026-11-15T07:00:31-05:00",
+   "link": "https://www.foxnews.com/us/purge-masked-suspect-accused-killing-college-student-halloween-bash-sister-helps-nab-him",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_body-charged-death-foster": [
+     "murder",
+     "death"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "family",
+     "block"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "As US credit card debt hits $1.29T, bank algorithms are rejecting debt-free, six-figure earners",
+   "dek": "Across the country, debt-free Americans earning six figures face credit card denials as bank algorithms flag thin credit files as high-risk behavior.",
+   "opening": "Across the country, Americans earning six-figure salaries, carrying no debt and sitting on healthy savings accounts are increasingly hitting an unexpected wall when applying for everyday credit cards or loans: instant denial from automated bank algorithms. The rejections highlight a growing rift between kitchen-table financial discipline and corporate underwriting models. While nationwide credit card balances have climbed to a record $1.29 trillion — a 67% surge since early 2021, according to the Federal Reserve Bank of New York — data from the Consumer Financial Protection Bureau (CFPB) shows an estimated 25 million adults have credit files \"too thin\" or stale to generate a standard score. Rather than rewarding households that avoid borrowing, modern underwriting algorithms can interpret limited recent credit activity as a sign of uncertain lending risk, potentially making it harder for some debt-free consumers to qualify for credit. \"Is corporate America penalizing people who live debt-free? I would say they're not penalizing them, but they are not prioritizing them because we're not the ones making them money,\" Jade Warshaw, co-host of \"The Ramsey Show\" — who paid off $460,000 in debt alongside her husband — told Fox News Digital. \"When you think about the credit score in general, the whole purpose, it's a product, and so it's out there for banks to make money. And if we're not going to be their customer, then yes, they're not going to prioritize us.\" IRS ANNOUNCES 2027 TA",
+   "published": "2026-11-15T07:00:18-05:00",
+   "link": "https://www.foxbusiness.com/personal-finance/us-credit-card-debt-hits-1-29t-bank-algorithms-rejecting-debt-free-six-figure-earners",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "fed": [
+     "warsh"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "In Europe, an Emboldened Iran Contributes to a Sense of Anxiety",
+   "dek": "Prosecutors and government officials believe Iran or its proxies are behind a series of security breaches and threats in Britain and Europe, unsettling the region.",
+   "opening": "",
+   "published": "2026-11-15T05:01:20+00:00",
+   "link": "https://www.nytimes.com/2026/11/15/world/europe/iran-attacks-threats-europe.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "American Culture Quiz: Test yourself on fast-food face-offs and Oklahoma origins",
+   "dek": "The American Culture Quiz is a weekly test of our national traits, trends, history and people. This time, test your knowledge of fast-food face-offs, Oklahoma origins and a lot more.",
+   "opening": "The American Culture Quiz is a weekly test of our unique national traits, trends, history and people — including the latest news, events and sights and sounds of the United States. This week's quiz highlights fast-food face-offs, Oklahoma origins — and a whole lot more. Can you get all 8 questions right? Give it a try and see how well you do! CLICK HERE FOR MORE LIFESTYLE STORIES To try your hand at more quizzes from Fox News Digital, click here . And to take our latest News Quiz — published every Friday — click here.",
+   "published": "2026-11-15T05:00:53-05:00",
+   "link": "https://www.foxnews.com/lifestyle/american-culture-quiz-test-yourself-fast-food-face-offs-oklahoma-origins",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "events"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Small town residents cry for help as immigrant influx fueled by trucking industry has unintended consequences",
+   "dek": "A Fox News Digital investigation reveals Hamilton Township&apos;s freight fraud crackdown yielded 561 traffic stops and 36 arrests in southwest Ohio.",
+   "opening": "This article is Part 3 of a Fox News Digital exclusive series investigating trucking fraud, public safety, and assimilation concerns in southwest Ohio. You can read Part 1 here and Part 2 here . OHIO - An influx of Uzbek immigrants and trucking companies, coupled with mounting concerns about roadway safety and alleged fraud, is fueling frustration in southwest Ohio , where residents are speaking out about changes they say have left them feeling unsafe on their roads and increasingly uneasy in their own neighborhoods. Jane, a resident of southwest Ohio, is one of many who have been affected by the Uzbek influx, which she says ultimately drove her out of a new home she purchased in the area after just 18 months of living there. \"I have literally been screaming about what has been going on for years, and I'm like somebody needs to take notice of this,\" Jane told Fox News Digital. Jane recounted repeated problems involving neighbors she identified as Uzbek, describing unsupervised children grabbing moving cars, climbing construction equipment, threatening to punch, kick or choke her dog, and taking her child's bicycle while ignoring demands to return it. She also described children urinating on neighbors’ vehicles, adults slaughtering chickens outdoors in view of her frightened child, and semi-truck cabs obstructing driveways. WORKING-CLASS AMERICANS SAY THEIR TOWN IS THE NEXT DEARBORN — AND THEY'VE HAD ENOUGH Jane described feeling \"incredibly uncomfortable\" encountering groups ",
+   "published": "2026-11-15T05:00:51-05:00",
+   "link": "https://www.foxnews.com/politics/small-town-residents-cry-help-immigrant-influx-fueled-trucking-industry-unintended-consequences",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_fraud-oakdale-ringleader-sentenced": [
+     "fraud",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Midterm voters ended the long-running GOP dominance in state legislatures",
+   "dek": "In several states, Democrats took control of legislatures that had been divided and they weakened GOP dominance in others. Issues on the agenda: More access to health care, new limits on school vouchers.",
+   "opening": "In several states, Democrats took control of legislatures that had been divided and they weakened GOP dominance in others. Issues on the agenda: More access to health care, new limits on school vouchers. (Image credit: Sarah Kallis)",
+   "published": "2026-11-15T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/15/nx-s1-6039175/midterms-legislatures-states-democrats-gop",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Blocks Immediate Closure of East Potomac Park for Trump Golf Project",
+   "dek": "Judge Ana C. Reyes, who has been overseeing combative litigation, said the Trump administration would not be responsible for operating the course while the case proceeded.",
+   "opening": "",
+   "published": "2026-11-15T02:42:57+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/us/politics/trump-east-potomac-golf-course.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge temporarily blocks Trump from moving ahead on Washington public golf course redevelopment",
+   "dek": "A federal judge on Saturday ordered a two-week delay to any work at a historic Washington public golf course not far from the White House.",
+   "opening": "A federal judge on Saturday ordered a two-week delay to any work at a historic Washington public golf course not far from the White House. (Image credit: Tom Brenner)",
+   "published": "2026-11-14T23:28:45-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6041152/judge-trump-golf-course-blocks",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Family Dollar to Pay $63 Million Settlement for Overcharging Customers",
+   "dek": "Since 2023, the discount retailer has been overcharging shoppers “millions of dollars” at checkout, according to a complaint filed by federal regulators and 17 states.",
+   "opening": "",
+   "published": "2026-11-14T23:20:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/business/family-dollar-overcharging-settlement.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Who’s accountable? Questions MOUNT after nationwide FAA ground stop",
+   "dek": "Questions are mounting after Transportation Secretary Sean Duffy said a contractor installing a router corrupted the FAA’s network, triggering a nationwide ground stop. MS NOW’s Josh Einiger breaks down the failure and whether the FAA’s multibillion-dollar modernization effort is being properly managed. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more",
+   "opening": "",
+   "published": "2026-11-14T23:10:59+00:00",
+   "link": "https://www.youtube.com/shorts/pBcngd-gnJU",
+   "videoId": "pBcngd-gnJU",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How much did Trump really know about ex-Nvidia CEO Jensen Huang’s affair before it all imploded?",
+   "dek": "According to reports by The Wall Street Journal and The New York Times, President Trump was warned at least twice that ex-Nvidia CEO Jensen Huang was having an affair with someone U.S. intelligence identified as a potential Chinese asset. Host of the \"Prof G Markets\" podcast Ed Elson, Senior Vice President for The Grio Natasha Alford, New York Times Correspondent Katie Benner, and Hofstra University Professor of Law James Sample join the Assignment Desk with Antonia Hylton to break down the fallout and national security implications. MS NOW: My Source for News, Opinion, and the World. » Subscr",
+   "opening": "",
+   "published": "2026-11-14T22:17:33+00:00",
+   "link": "https://www.youtube.com/watch?v=j3HUXGcpmyw",
+   "videoId": "j3HUXGcpmyw",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Beyond EMBARRASSING at this point’: Fmr. Pentagon Spokesman lifts lid on Hegseth’s troubled tenure",
+   "dek": "Calls for Defense Secretary Pete Hegseth’s resignation only grew louder after he was scolded by a sentinel at the Tomb of the Unknown Soldier shortly after an impeachment vote against him failed in the House. Former Senior Defense Department Advisor and former Chief Pentagon Spokesperson John Ullyot joins Antonia Hylton to share more about his time working under Hegseth and how the Defense Department has been damaged under Hegseth’s leadership. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://",
+   "opening": "",
+   "published": "2026-11-14T22:03:34+00:00",
+   "link": "https://www.youtube.com/watch?v=-CRaEy84EK8",
+   "videoId": "-CRaEy84EK8",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "20-year CIA China analyst breaks down what Beijing may have wanted from Nvidia’s ex-CEO all along",
+   "dek": "Nvidia’s ex-CEO Jensen Huang and Commerce Secretary Howard Lutnick are set to speak to Congress about Huang’s affair with an alleged Chinese asset as national security experts warn of exposed risks in the A.I. industry. Former CIA Senior China Analyst Christopher Johnson and MS NOW Business Analyst Ron Insana share their thoughts with Antonia Hylton. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, ",
+   "opening": "",
+   "published": "2026-11-14T22:01:51+00:00",
+   "link": "https://www.youtube.com/watch?v=uddI09lsl3s",
+   "videoId": "uddI09lsl3s",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Federal judge blocks Trump's renovations of DC golf course hours before its closure",
+   "dek": "A federal judge cited Donald Trump&apos;s Truth Social posts as key evidence when issuing a temporary restraining order on the East Potomac renovation.",
+   "opening": "A federal judge issued a temporary restraining order Saturday to delay closing a D.C.-area golf course amid President Donald Trump 's push to have the course renovated. U.S. District Judge Ana Reyes issued the two-week delay before the East Potomac Golf Links was due to close Sunday for 15 months. The course sits on federally owned land at East Potomac Park and has been part of Washington's public golf scene for more than a century. Trump announced in May the course would undergo a \"historic renovation\" that would prepare it to host major professional golf events. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE The plaintiffs argue that Trump's plan would change the character of the accessible golf course and make it unaffordable, something the president denies. The White House did not immediately respond to a request for comment. Trump has dubbed the course \"Trash Island,\" doing so as recently on Saturday in a Truth Social post in which he said it is the \"worst\" course in the world. Trump said the conditions of the course are \"very dangerous,\" adding pictures of what appears to be the course in poor shape. \"The Fairways are far too close together. When you walk down the corridors of Trash Island, you don’t hear the sound of the running Potomac, all you hear is the sound of people screaming, 'FORE!',\" Trump wrote. Trump has posted about the course in the past. Reyes in her ruling Saturday noted that Trump's posts presented a problem for the government. SIGN UP FOR THE DAILY OUTKI",
+   "published": "2026-11-14T22:00:05-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/federal-judge-blocks-trumps-renovations-dc-golf-course-hours-before-closure",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ],
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major",
+     "events"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "judge",
+     "request"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Van Hollen TAKING ON SCHUMER for Senate Majority Leader could unfold",
+   "dek": "Maryland Sen. Chris Van Hollen is challenging Sen. Chuck Schumer for the top leadership position in the new Congress, following calls by progressive Democrats for a new generation of leadership and a bolder agenda. Executive Editor of The Nation John Nichols, Former Justice Department Director of the Office of Public Affairs Anthony Coley, and former Congressman Jamaal Bowman join Antonia Hylton to discuss how this battle will shape up. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/m",
+   "opening": "",
+   "published": "2026-11-14T21:58:50+00:00",
+   "link": "https://www.youtube.com/watch?v=BJFlyId8juw",
+   "videoId": "BJFlyId8juw",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dabo Swinney reacts after Clemson hits latest low with upset loss to Georgia Tech: 'Nobody coming to save us'",
+   "dek": "Georgia Tech rushed for 269 yards and handed Dabo Swinney one of his worst career losses as Clemson fell 20-6 at home to a team with a losing record.",
+   "opening": "Georgia Tech coach Brent Key overhauled his staff this week, firing multiple assistants amid a four-game losing streak. The shake-up came as a season that began with high expectations spiraled into disappointment. The Yellow Jackets responded Saturday, ending their losing streak with an upset road win over Clemson. The Dabo Swinney coached Tigers managed just 228 total yards in the 20-6 defeat at Memorial Stadium. The loss further dimmed Clemson’s ACC Championship game hopes and left the Tigers with injuries to both quarterbacks. Starter Tait Reynolds was forced to head to the locker room early with a leg injury, and Christopher Vizzina threw for 133 yards and an interception in relief. Vizzina went to the hospital after the game with his own injury. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE Swinney reacted to the latest low point in Clemson’s season, acknowledging that any turnaround would have to come from within. \"It's difficult, but ain't nobody coming to save us, nobody cares, we've got to find a way to get it done,\" Swinney said. Clemson has now lost nine of its last 11 home games against Power Four opponents. Under Swinney, the Tigers once put together school-record 40 consecutive home games at Memorial Stadium from 2016 through 2022. \"It's frustrating; we've not played well (at home) coming off two really good wins,\" Swinney continued. \"Really expected us to play great today. Great week of practice, but again, it didn't go our way. It's frustrating, but we don't mak",
+   "published": "2026-11-14T21:35:20-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/dabo-swinney-reacts-clemson-hits-latest-low-upset-loss-georgia-tech-nobody-coming-save-us",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "brent"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats push back on Duffy’s demand for $50 billion to upgrade air traffic systems.",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-14T21:15:09+00:00",
+   "link": "https://www.nytimes.com/live/2026/11/14/us/faa-nationwide-ground-stop-flights/democrats-congress-faa",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Millions of Americans use marijuana to sleep, but new study raises troubling questions",
+   "dek": "A Northwestern Medicine study found that marijuana users had objectively worse sleep quality, even though they didn&apos;t perceive their sleep as worse. Other experts weighed in.",
+   "opening": "Marijuana may be making sleep quality worse, despite its widespread use as a sleep aid, a recent Northwestern Medicine study found. The findings of the study , which included 1,266 participants, showed that both lifetime and recent cannabis users objectively had worse sleep quality, although they did not report their sleep to be worse. Participants were monitored for almost 35 years, from young adulthood into middle age, with scientists tracking their use of cannabis over time. AMERICA HITS MAJOR MARIJUANA MILESTONE AS DAILY WEED USE SURPASSES DAILY DRINKING In middle age, participants wore a sleep monitor on their wrist for a week and filled out surveys about their sleep quality . This allowed researchers to compare objective and subjective reports of participants’ sleep. \"Our data do not support the belief that cannabis is helpful as a sleep aid,\" said senior study author Mercedes R. Carnethon, Ph.D., as Northwestern Now reported. \"As cannabis becomes increasingly available and accepted, it's important to better understand its long-term associations with health behaviors such as sleep,\" Carnethon added. CLICK HERE TO SIGN UP FOR OUR LIFESTYLE NEWSLETTER Among all participants, a greater lifetime exposure to marijuana was linked to worse objective sleep quality. Those who had a higher cannabis usage over time were generally asleep for a lower percentage of the night and experienced more sleep disruption . Similarly, recent cannabis users were more likely to have more sleep f",
+   "published": "2026-11-14T19:45:30-05:00",
+   "link": "https://www.foxnews.com/health/millions-americans-use-marijuana-sleep-study-raises-troubling-questions",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Get Focused on London’: How Iran’s Agents Attacked European Targets",
+   "dek": "A wave of assaults in Britain and elsewhere in the spring sowed fear across Europe. Prosecutors shed new light on how Iran took aim at U.S. allies.",
+   "opening": "",
+   "published": "2026-11-14T19:23:20+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/world/europe/iran-attacks-europe-britain.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Florida city cancels St. Patrick's Day parade, citing new anti-DEI law",
+   "dek": "A new Florida law that prohibits taxpayer dollars from going toward diversity initiatives has prompted Delray Beach to cancel its St. Patrick's Day parade after a nearly 60-year run.",
+   "opening": "A new Florida law that prohibits taxpayer dollars from going toward diversity initiatives has prompted Delray Beach to cancel its St. Patrick's Day parade after a nearly 60-year run. (Image credit: Alex Wong)",
+   "published": "2026-11-14T19:03:52-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6041093/st-patricks-day-parade-canceled-florida-dei",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New Orleans port seeks tanker seizure after cruise ship crash sparks $1M lawsuit",
+   "dek": "A federal lawsuit seeks more than $1 million for damage to a New Orleans port terminal after an asphalt tanker collided with a river cruise ship on the Mississippi River.",
+   "opening": "The Port of New Orleans is seeking more than $1 million in damages after an asphalt tanker struck a docked river cruise ship on the Mississippi River, with a federal judge authorizing the tanker's seizure. The lawsuit, filed Friday in the U.S. District Court for the Eastern District of Louisiana and obtained by FOX Business, names the Atlantic Asphalt tanker, its owner, Nave Shipping SA, and its management company, Thome Ship Management Pte Ltd. The port alleges the collision caused more than $1 million in physical damage to its Thalia Street Terminal, where the American Heritage cruise ship was docked Friday afternoon. The port is also seeking compensation for cleanup, repairs and potential business interruption and lost revenue. WHO IS L3HARRIS, THE FEDERAL CONTRACTOR SEC. DUFFY SAYS MAY HAVE CAUSED THE FAA OUTAGE? The complaint accuses the tanker and the companies responsible for its operation of negligence, alleging they failed to take adequate precautions to avoid the collision. Chief U.S. District Judge Wendy Vitter granted the port's emergency request Friday, finding that circumstances warranted the vessel's prompt arrest. The court issued a warrant authorizing the tanker's seizure, although it was not immediately clear whether the warrant had been executed. The port is also seeking the tanker's potential sale to satisfy its financial claims. No sale has been ordered. FAA PROPOSES $350K FINE AGAINST CHARTER COMPANY OVER UNAUTHORIZED FLIGHTS The collision occurred aroun",
+   "published": "2026-11-14T19:01:31-05:00",
+   "link": "https://www.foxbusiness.com/economy/new-orleans-port-seeks-tanker-seizure-cruise-ship-crash-sparks-lawsuit",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "judge",
+     "lawsuit"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "judge",
+     "request"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Historian Heather Cox Richardson on Americans reclaiming government in the midterm elections",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-14T19:00:37+00:00",
+   "link": "https://www.youtube.com/shorts/yol8fgkhXD0",
+   "videoId": "yol8fgkhXD0",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "SpaceX makes history as Starship spacecraft caught by launch tower for first time",
+   "dek": "SpaceX achieved a historic first Saturday as its Mechazilla launch tower caught a returning Starship spacecraft after 22 hours in space, advancing its reusable rocket ambitions.",
+   "opening": "Elon Musk's SpaceX made history Saturday after its Starship spacecraft returned from orbit and was caught by giant mechanical arms at the company's Texas launch facility for the first time. The milestone came roughly 22 hours after Starship launched Friday from SpaceX's Starbase facility, although the company fell short of its goal of recovering both stages of the rocket after its Super Heavy booster exploded over the Gulf of America. The catch marks a major step toward SpaceX's goal of developing a fully reusable rocket system to reduce launch costs and support more frequent space missions. NASA UNVEILS $10B MOON BASE CONTRACT AS SPACEX, BLUE ORIGIN JOIN LUNAR GOLD RUSH During its 15th test flight, Starship deployed 26 Starlink satellites and completed 14 orbits around Earth before returning to the launch site, where the tower's mechanical arms, known as Mechazilla, caught the spacecraft. Walter Isaacson, Musk's biographer, celebrated the achievement on X, recalling a December 2020 meeting when Musk proposed catching Starship with the launch tower's mechanical arms. \"This is actually a bigger deal for humanity than most people can imagine,\" he wrote. \"I will always remember the looks on the engineers’ faces in the Starbase conference room in December 2020 when @elonmusk suggested, then insisted, that the Mechazilla launchpad arms could catch a returning Starship.\" War Secretary Pete Hegseth also congratulated Musk on X. \"Congrats @elonmusk — a great American. Keep leading th",
+   "published": "2026-11-14T18:46:56-05:00",
+   "link": "https://www.foxbusiness.com/technology/spacex-makes-history-starship-spacecraft-caught-launch-tower-first-time",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump to Meet With Putin and Xi in China, With Nuclear Proliferation on the Agenda",
+   "dek": "The president plans to also discuss the war against Iran, but is not expected to bring up Russia’s war in Ukraine or the scandal that has engulfed Jensen Huang.",
+   "opening": "",
+   "published": "2026-11-14T18:36:58+00:00",
+   "link": "https://www.nytimes.com/2026/11/13/us/politics/trump-putin-xi-china-nuclear-proliferation.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "With shifting Iran rhetoric following U.S. elections, Trump leaves Middle East in limbo about path ahead",
+   "dek": "Trump's tonal shifts have only added to the uncertainty about what comes next in a war in which America's allies were not consulted before it was started but nonetheless struggle to deal with its economic ramifications.",
+   "opening": "",
+   "published": "2026-11-14T16:17:42-05:00",
+   "link": "https://www.pbs.org/newshour/world/with-shifting-iran-rhetoric-following-u-s-elections-trump-leaves-middle-east-in-limbo-about-path-ahead",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Zelenskyy says a new European security framework floated by U.S. could benefit Putin",
+   "dek": "European leaders have stressed that decisions about the continent's security must be made by Europeans themselves, warning against allowing Russia to dictate the terms of a new security order or negotiate NATO's future.",
+   "opening": "",
+   "published": "2026-11-14T15:23:29-05:00",
+   "link": "https://www.pbs.org/newshour/world/zelenskyy-says-a-new-european-security-framework-floated-by-u-s-could-benefit-putin",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "zelenskyy",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New Orleans port sues to get control of tanker that crashed into cruise ship on Mississippi River",
+   "dek": "The lawsuit, filed by the Board of Commissioners of the Port of New Orleans, said the Atlantic Asphalt tanker caused at least $1 million in damage to its terminal. A judge issued a warrant Friday giving federal officials control of the ship for now.",
+   "opening": "",
+   "published": "2026-11-14T15:09:17-05:00",
+   "link": "https://www.pbs.org/newshour/nation/new-orleans-port-sues-to-get-control-of-tanker-that-crashed-into-cruise-ship-on-mississippi-river",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "judge",
+     "lawsuit"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Justice Alito warns America must preserve 3 core principles regardless of country’s ‘atmosphere’",
+   "dek": "Supreme Court Justice Samuel Alito outlined three principles he says Americans must always prioritize amid the 2026 midterms and the Iran War.",
+   "opening": "Supreme Court Justice Samuel Alito recently laid out three principles Americans must cling to to ensure the integrity of the republic: freedom of speech, religious liberty and racial equality. \"I'm not saying we're entering the dark age, but these are things that we have to preserve no matter what the atmosphere is in the country or the world at the time,\" Alito said during a fireside chat with Mollie Hemingway, editor-in-chief at the Federalist, which followed the Antonin Scalia Memorial Dinner at the 2026 National Lawyer's Convention in Washington D.C. The remarks come on the heels of the blue tsunami of the 2026 midterms, with Republicans losing 42 House seats and eight Senate seats, with the Alaska U.S. Senate race still uncalled. Democrats are set to take control of Congress with eight lawmakers backed by the Democratic Socialists of America. Both incoming and returning members have pressed for investigations and subpoenas targeting President Donald Trump and his administration. DEMOCRATS SEIZE HOUSE CONTROL IN STUNNING BLUE TSUNAMI, VOW RETRIBUTION AGAINST TRUMP ADMIN Alito's remarks also come amid the ongoing Iran war, which has destabilized oil supply chains across the globe, causing the price of goods and gas to jump. The 76-year-old jurist said preserving freedom of speech is paramount, warning that \"you cannot have Democratic self-fulfillment if you cannot have robust free speech.\" \"Even speech that is hurtful to some of the people who hear what is being said,\" Ali",
+   "published": "2026-11-14T14:29:34-05:00",
+   "link": "https://www.foxnews.com/politics/justice-alito-warns-america-preserve-3-core-principles-regardless-countrys-atmosphere",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'We can't let them down' -- After midterm wins, Democrats turn to charting path ahead",
+   "dek": "Democrats from across the country descended on Denver for a two-day conference to chart the course of their party after sweeping victories in the midterm elections.",
+   "opening": "Democrats from across the country descended on Denver for a two-day conference to chart the course of their party after sweeping victories in the midterm elections. (Image credit: David Zalubowski)",
+   "published": "2026-11-14T14:13:54-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6037777/democrats-midterms-whats-next-conference",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jon Stewart on Stephen Miller & Desi on Scott Colom's Mississippi Win | The Daily Show",
+   "dek": "Jon Stewart covers how Republicans are reacting to the blue wave from last week's midterm elections, Trump grappling with an afterlife dilemma on \"60 Minutes,\" and Stephen Miller's first day as the new White House chief of staff. Desi Lydic weighs in on Nvidia CEO Jensen Huang's honey trap sexpionage scandal, Lauren Boebert losing her congressional seat, and how House Democrats blew a Pete Hegseth impeachment vote after 11 of their members didn't show up. Plus, Desi chimes in on Scott Colom's historic win in Mississippi, where he became the first Black senator elected to the state in 150 years",
+   "opening": "",
+   "published": "2026-11-14T14:00:33+00:00",
+   "link": "https://www.youtube.com/watch?v=zpUnm09lTUk",
+   "videoId": "zpUnm09lTUk",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "chips": [
+     "nvidia"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Alaska voters reject ballot measure seeking to repeal open primaries and ranked voting system",
+   "dek": "The ballot measure, decided as part of the Nov. 3 election, marked the second time in two years that voters have rejected attempts to overturn the system and revert to partisan primaries and to general elections in which just one candidate can be selected.",
+   "opening": "",
+   "published": "2026-11-14T13:43:07-05:00",
+   "link": "https://www.pbs.org/newshour/politics/alaska-voters-reject-ballot-measure-seeking-to-repeal-open-primaries-and-ranked-voting-system",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "reject",
+     "election"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "ballot"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats try out a strange new emotion at post-midterms What's Next conference: hope",
+   "dek": "Democrats spent two days chewing over their future at the What's Next conference and trying to deal with the fact that it looks, for a moment at least, quite bright.",
+   "opening": "",
+   "published": "2026-11-14T13:19:50-05:00",
+   "link": "https://www.pbs.org/newshour/politics/democrats-try-out-a-strange-new-emotion-at-post-midterms-whats-next-conference-hope",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "5 Big Questions as C.E.O.s Meet in China",
+   "dek": "President Trump and U.S. tech executives are expected to gather for a major summit in Shenzhen next week. On the agenda: a stalled trade war, expanding export controls, and suspected spy games.",
+   "opening": "",
+   "published": "2026-11-14T13:00:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/business/dealbook/questions-china-us-apec-summit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "export control"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dems seize on midterm rout to demand ICE reform, but polls reveal a twist in who prioritized immigration",
+   "dek": "Rep.-elect Bobby Pulido and Texas Democrats push 2028 candidates to prioritize immigration reform after flipping Republican-leaning districts.",
+   "opening": "Democrats are seizing on their sweeping midterm victories to demand immigration reform, even as polling shows economic concerns far outpaced it as a priority for both Democratic and Hispanic voters. The push follows Democratic gains nationwide, including wins in Texas congressional districts redrawn to favor Republicans and major upsets in the state’s Senate and gubernatorial races. Some winners are casting the results as a mandate to challenge President Donald Trump’s immigration crackdown and putting prospective 2028 Democratic presidential candidates on notice. \"Whoever wants to get our support in ’28 has to prioritize immigration reform, period,\" Rep.-elect Bobby Pulido, D-Texas, who defeated Republican Rep. Monica De La Cruz in South Texas, said last recently at a news conference alongside fellow Texas Democrats pushing for immigration reform. REDISTRICTING EFFORTS BLOW UP IN REPUBLICANS' FACES AMID HISTORIC HOUSE LOSSES But Fox News Digital polling showed 27% of Republican voters ranked immigration as their top issue, compared to just 3% of Democrats. Pulido flipped a redrawn, Republican-leaning South Texas district , ousting De La Cruz, who won her re-election in 2024 by 14.2 points. Pulido campaigned on affordability while tying Trump's immigration enforcement raids at worksites to workforce shortages that hurt the economy. Rep. Henry Cuellar, D-Texas, told Fox News Digital voters who split their tickets between Trump and down-ballot Democrats in 2024 were responding ",
+   "published": "2026-11-14T11:36:20-05:00",
+   "link": "https://www.foxnews.com/politics/dems-seize-midterm-rout-demand-ice-reform-polls-reveal-twist-prioritized-immigration",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "polling"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats eye killing Senate filibuster, and lawmaker warns move could be a 'double-edged sword'",
+   "dek": "Ed Markey says the filibuster must be &quot;on the table&quot; as Democrats take the Senate, while Andy Kim warns the move could be a &quot;double-edged sword.&quot;",
+   "opening": "Democrat senators are leaving the door open to eliminating the Senate filibuster as their party prepares to take control of the chamber. One lawmaker said the move must be on the table, while another warned it could be a \"double-edged sword.\" \"Obviously, the filibuster is something that has to be on the table,\" Sen. Ed Markey, D-Mass., told Fox News Digital when asked about Democrats' plans for the chamber. But Sen. Andy Kim, D-N.J., warned that changing the rules could carry consequences long after Democrats leave power. SCHUMER, JEFFRIES SIDESTEP QUESTIONS ON NUKING FILIBUSTER, LAUNCHING ELON MUSK PROBE AFTER BLUE WAVE \"Some of these things that we see here can be very much a double-edged sword,\" Kim said. \"I'm not saying that's to deter us from doing it if we decide to do it. But I wanna make sure that everyone's clear-eyed about what we're doing.\" Scrapping the Senate's 60-vote hurdle would allow Democrats to advance most legislation with a simple majority, weakening Republicans ' ability to block their agenda but also giving the GOP the same advantage if it regains control. Fox News Digital pressed the senators on whether Democrats would consider changing the rules while President Donald Trump remains in office or wait until a potential Democratic presidential victory in 2028. \"We're discussing a progressive agenda right now and amongst the other Democratic senators,\" Markey said. \"So, I'll be listening to everyone's views on what is the best strategy.\" SCHUMER'S GRIP ON",
+   "published": "2026-11-14T11:00:48-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-eye-killing-senate-filibuster-lawmaker-warns-move-could-double-edged-sword",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "schumer"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dems descend on Denver to size up 2028; we asked who wants in the race",
+   "dek": "Josh Shapiro, Elissa Slotkin, Cory Booker and Ruben Gallego tested 2028 messaging at a Denver conference, and Chris Van Hollen bowed out early.",
+   "opening": "DENVER — Democrats are already making their case for 2028. Fresh off sweeping midterm victories , party leaders and rising stars descended on Denver for the What’s Next conference. Several potential presidential contenders tested their 2028 messaging before a crowd of activists, strategists and operatives. The conversations offered an early look at who may be considering a run and who is already stepping aside. Less than 24 hours after announcing a challenge to longtime Senate Democratic leader Sen. Chuck Schumer, D-N.Y., Sen. Chris Van Hollen, D-Md., told reporters he was \"no longer pursuing\" a presidential bid. SCHUMER'S LEADERSHIP RIVAL REVEALS MAJOR SENATE RULE CHANGE HE'D PURSUE IF ELECTED \"I believe that the size and scale of these majorities provides an opportunity for the United States Senate to answer the call of the American people,\" Van Hollen told reporters in Denver, pointing to what will be at least a 55-seat Democratic majority in the chamber. Van Hollen made the comments as Sen. Cory Booker, D-N.J., weighed whether to make another run for the White House in 2028. Booker said he is giving \"a lot of hard thought\" to a potential 2028 presidential campaign, though he said his focus now is pushing for what he called an \"American renewal.\" \"My purpose right now, I want to see America in the next five years have the biggest renewal, the biggest resetting of the economic table so it works for all Americans,\" Booker told Fox News Digital. He pointed to the cost of hous",
+   "published": "2026-11-14T10:22:21-05:00",
+   "link": "https://www.foxnews.com/politics/dems-descend-denver-size-2028-who-wants-race",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Oil Grab in Venezuela Is Testing the Country’s National Identity",
+   "dek": "Long-held beliefs in Venezuela about sovereign control over oil are fraying as the U.S. lays claim to the country’s oil reserves.",
+   "opening": "",
+   "published": "2026-11-14T10:10:01+00:00",
+   "link": "https://www.nytimes.com/2026/11/14/world/americas/trump-venezuela-oil.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dems' California redistricting mastermind flips script after helping party win 5 GOP seats: 'Kill'",
+   "dek": "Paul Mitchell, architect of California&apos;s Prop 50, claims Democrats should establish national standards to end partisan gerrymandering for good.",
+   "opening": "The architect of California's Democratic-friendly redistricting plan, which helped the party flip five Republican-held House seats in November's midterm elections, is now calling on Democrats to put an end to partisan gerrymandering nationwide. Paul Mitchell claimed in a San Francisco Chronicle op-ed published Wednesday that lawmakers should \"kill partisan gerrymandering for good.\" He made the comments after California voters approved Proposition 50 in November 2025, temporarily replacing the state's independently drawn congressional districts with a Democratic-friendly map for elections through 2030. REDISTRICTING EFFORTS BLOW UP IN REPUBLICANS' FACES AMID HISTORIC HOUSE LOSSES Mitchell acknowledged in his op-ed that Proposition 50 was designed to benefit Democrats but defended it as a temporary response to Republican-led redistricting efforts before calling for an end to partisan map making altogether. \"I wasn’t trying to do this [op-ed] to time with anyone’s efforts to do further gerrymandering,\" Mitchell told Fox News Digital Thursday evening. \"I always planned on doing this as soon as the election was over, and I even did a CNN interview with Elex Michaelson during the election coverage, where I said that the answer needs to be to stop this redistricting war and actually fix the problem. \"Prop 50 was the right response to what Republicans in Texas were doing, but recall that when Texas started doing this, our approach wasn’t to just start redistricting ourselves. We did ",
+   "published": "2026-11-14T10:00:06-05:00",
+   "link": "https://www.foxnews.com/politics/architect-dems-california-redistricting-win-makes-ironic-call-helping-flip-5-gop-seats-kill",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anti-Trump Republican courts other defectors as House weighs another vote against Iran war",
+   "dek": "Thomas Massie says he&apos;s offering Republicans a &quot;life boat from MAGA&quot; as he prepares to push a new Iran War Powers resolution to the House floor.",
+   "opening": "EXCLUSIVE : House Republicans and Democrats are preparing another effort to challenge President Donald Trump's military operations in Iran, with lawmakers signaling that additional Republicans could break with the president and support a War Powers resolution. Rep. Thomas Massie, R-Ky., told Fox News Digital that another Iran War Powers resolution could come to the House floor \"in the next few legislative days\" or around Christmas. This would mark the fourth attempt this year to restrict Trump's military actions against Iran . \"I'm offering Republicans a lifeboat from MAGA,\" Massie told Fox News Digital, expressing optimism that more members of his party could join the effort. 7 REPUBLICANS REBEL AGAINST TRUMP, VOTE WITH DEMS TO REIN IN IRAN WAR POWERS House Armed Services Committee Chairman Mike Rogers, R-Ala., told Fox News Digital that he would oppose the resolution but acknowledged that \"Massie has been having conversations with members\" in an effort to secure additional Republican support. Rep. Jeff Van Drew, R-N.J., echoed Rogers' assessment, suggesting that \"one or two\" additional Republicans could join Massie and the Democrats who previously supported the measure. SWING-DISTRICT REPUBLICAN BREAKS WITH TRUMP, PUSHES LIMITS ON IRAN WAR Reps. Tom Barrett, R-Mich., Warren Davidson, R-Ohio, and Brian Fitzpatrick, R-Pa., previously voted in favor of an Iran War Powers resolution. Barrett told Fox News Digital Thursday he would maintain his support if the new resolution mirr",
+   "published": "2026-11-14T09:00:51-05:00",
+   "link": "https://www.foxnews.com/politics/anti-trump-republican-courts-other-defectors-house-weighs-another-vote-against-iran-war",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "war-powers": [
+     "war powers"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "mark"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Florida Republican on Democrats' strategy: 'That's the choice they have to make ... persecution or policy'",
+   "dek": "Controversial Florida congressman says Democrats will choose to pursue persecution over policy but also signals a willingness to compromise, given the right conditions.",
+   "opening": "Florida's Rep. Randy Fine has a blunt prescription for a House Republican conference staring down a steep Democratic majority in January: stop worrying about compromise, hand the minority gavel to Rep. Jim Jordan and start fighting, suggesting Democrats will likely pursue political persecution as the main focus in the next Congress. In a wide-ranging interview with Fox News Digital, Fine, who expanded his own victory margin to 19 points even as Republicans lost control of the chamber, argued that voters punished the GOP not for its policies, but because they didn't see lawmakers willing to go to the mat for them. For Fine, the message sent by Jordan's election is unambiguous. \"Well, it says to me that we're ready to fight back. I mean, Jim Jordan has two unique qualifications for the job,\" Fine said. ‘HE BLAMED THE JEWS’: GOP CONGRESSMAN LEVELS EXPLOSIVE ACCUSATION AGAINST JD VANCE OVER ELECTION POSTMORTEM \"One, he's our best fighter. He protected and fought for President Trump during the ridiculous impeachments of President Trump's first term. He's just somebody who knows how to go into the arena and fight back. \"But the second thing is he's an extraordinary communicator. And over the next two years, we are in a very diminished minority. That's going to be our greatest strength is to point out why the Democratic policies won't actually improve anyone's lives, and to point out the policies that we would propose that will. \"So, as a fighter and a communicator, I think he's ver",
+   "published": "2026-11-14T09:00:09-05:00",
+   "link": "https://www.foxnews.com/politics/florida-republican-democrats-strategy-thats-choice-have-make-persecution-policy",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Software company with thousands of Fortune 500 clients joins Microsoft in experiencing major outage",
+   "dek": "Workday&apos;s major outage left 11,500 companies unable to access payroll and HR software, affecting Walmart, Target, Netflix and government agencies.",
+   "opening": "Workday, a business software that handles payroll and human resources management for thousands of prominent companies, experienced a major outage Friday, joining Microsoft in experiencing a shutdown this week. The platform manages services for 11,500 companies. \"Workday is currently unavailable,\" the platform signaled when users tried to gain access. \"We are experiencing a service interruption. Your service will be restored as quickly as possible. MICROSOFT APOLOGIZES AFTER MAJOR OUTLOOK OUTAGE WORLDWIDE, BLAMES TECHNICAL ISSUE \"We apologize for the inconvenience. If you are a Workday customer and require additional assistance, please contact the Workday Administrator within your organization. Otherwise, please check back later,\" the message continued. \"Some of our customers are experiencing a service disruption, and we’re working urgently to investigate and resolve the issue. We sincerely apologize for the challenges this is causing impacted customers.\" Retail giants, including Walmart and Target, are among the large retailers potentially affected. Workday's clientele also includes corporate giants like Netflix , Salesforce, PNC Bank, Chipotle, Southwest Airlines, General Electric and Nasdaq. Additionally, the platform serves numerous government agencies, including the cities of Philadelphia, Dallas, Seattle, Charlotte and Denver, as well as federal agencies like the U.S. Department of Energy. Workday also lists NASA’s Jet Propulsion Laboratory as a client. NATIONWIDE MICROS",
+   "published": "2026-11-14T08:13:18-05:00",
+   "link": "https://www.foxbusiness.com/technology/software-company-thousands-fortune-500-clients-joins-microsoft-experiencing-major-outage",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "shutdown": [
+     "shutdown"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Alaska voters aren't ditching ranked choice voting, top-four primaries",
+   "dek": "This is the second time Alaskans voted down an effort to repeal the state's unique election system, which voters first approved in 2020. A repeal effort in 2024 also failed narrowly.",
+   "opening": "This is the second time Alaskans voted down an effort to repeal the state's unique election system, which voters first approved in 2020. A repeal effort in 2024 also failed narrowly. (Image credit: Lindsey Wasson)",
+   "published": "2026-11-14T08:08:05-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6034952/alaska-results-ranked-choice-voting-nonpartisan-primary",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "GOP midterm bloodbath exposes cracks in Vance's 2028 White House ambitions",
+   "dek": "Rep. Randy Fine compared JD Vance&apos;s post-midterm remarks on the Iran war to 1932 Germany, vowing he will not support a 2028 presidential bid.",
+   "opening": "Vice President JD Vance has long been viewed as President Donald Trump's heir apparent, but a string of developments following Republicans' bruising midterm losses is raising new questions about his potential path to the White House in 2028. Vance is facing criticism from some Republicans over his explanation for the party's election defeats, particularly his decision to blame the Iran war. Other prominent Republicans are beginning to draw support for potential 2028 bids, complicating the political picture for the vice president. The political debate follows a devastating election for Republicans, who lost their majorities in both chambers of Congress beginning next year, with at least 30 GOP House members losing their races. TRUMP SAYS HE DOESN’T DISAGREE WITH VANCE THAT IRAN WAR FUELED GOP LOSSES The losses have prompted competing explanations from within the party over what went wrong and what Republicans should do differently. Some of Vance's allies have reportedly urged him to consider sitting out the 2028 race after the midterm losses, The Wall Street Journal reported Nov. 7. However, others close to the vice president still expect him to run, The Washington Post reported Friday, underscoring the uncertainty surrounding his political future. A Vance ally pushed back on suggestions that the midterm losses have diminished his 2028 prospects, saying the vice president will decide whether to run on his own timeline. The ally also argued that Vance would be better served by ",
+   "published": "2026-11-14T08:00:38-05:00",
+   "link": "https://www.foxnews.com/politics/gop-midterm-bloodbath-exposes-cracks-vances-2028-white-house-ambitions",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "timeline"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Week in Politics: Battle for Senate leader; young and independent midterm turnout",
+   "dek": "The battle over the next majority leader in the U.S. Senate reflects the turnout by younger and independent voters in the midterm elections.",
+   "opening": "The battle over the next majority leader in the U.S. Senate reflects the turnout by younger and independent voters in the midterm elections.",
+   "published": "2026-11-14T07:40:26-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6040156/week-in-politics-battle-for-senate-leader-young-and-independent-midterm-turnout",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "One industry increased DC lobbying 337% under Trump; here’s what’s driving the push",
+   "dek": "Lobbying spending on tariff-related filings surged 337% in 2026 as businesses scrambled to navigate trade shifts, Advancing American Freedom found.",
+   "opening": "FIRST ON FOX: President Donald Trump has made tariffs a centerpiece of his trade agenda, and businesses are spending more on D.C. bureaucrats to help navigate those rules. Rachel Greszler, who authored a new report from Advancing American Freedom (AAF), said companies are paying lobbyists to seek exemptions from tariffs instead of using that money to expand their businesses, hire workers or raise wages. A new report from former Vice President Mike Pence's group found that lobbying disclosures mention tariffs rising 239% in the third quarter of 2026 compared with the same period in 2024. The total spending reported on those filings jumped 337%, though it may include lobbying on issues beyond tariffs. A MUST-WIN MIDTERM STATE IS THE REAL LOSER OF TRUMP'S CANADA TRADE WAR \"Affordability is top of mind for many Americans,\" Greszler told Fox News Digital, arguing that changing tariffs are raising costs, threatening jobs and squeezing paychecks. Businesses are responding by stepping up their lobbying efforts. Fourteen organizations spent more than $1 million on lobbying in the third quarter, up from two in the same quarter of 2024. Another 105 spent more than $100,000, compared with 26 two years earlier. Tariffs may also be affecting prices consumers pay. TRUMP BET TARIFFS WOULD BRING BACK AMERICAN FACTORY JOBS; NEW REPORT SAYS IT DIDN'T WORK FLOURISH NY FED TARIFFS CHART: 30552508 Federal Reserve Bank of New York researchers estimated they added 2.9 percentage points to prices acr",
+   "published": "2026-11-14T07:30:39-05:00",
+   "link": "https://www.foxnews.com/politics/industry-drove-dc-lobbying-337-percent-trump-whats-driving-push",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside Arab nation's battle against radicalism as top official warns of threat brewing on Europe's streets",
+   "dek": "A senior United Arab Emirates official warns that European protests have crossed into national security threats, urging coexistence education first.",
+   "opening": "ABU DHABI, United Arab Emirates — A senior Emirati official is warning that demonstrations in Europe have crossed a line from political expression into a national security threat, arguing that extremism must be confronted before it turns violent. \"You can go demonstrate, talk, give a speech, but what [we] saw in the street in 11 cities in Europe is not freedom of speech. It is a threat to national security,\" Dr. Ali Rashid Al Nuaimi, chairman of the Defense, Interior and Foreign Affairs Committee of the UAE's Federal National Council, told Fox News Digital in an exclusive interview. The remarks come against a wider European debate over radicalization. On Nov. 3, Europol reported that authorities from 16 countries had referred more than 9,000 links to extremist and terrorist material appearing across 47 social media and gaming platforms. The operation targeted online role-playing content promoting jihadist, far-right, far-left and anarchist violence, including material that could draw minors toward extremist networks. AN IRANIAN REFUGEE'S WARNING TO AMERICAN UNIVERSITIES EMBRACING FOREIGN FUNDING AND RADICALISM What makes the UAE's response distinctive, officials and experts argue, is its belief that the struggle against extremism begins long before police make an arrest — in classrooms, families and the way people of different backgrounds learn to live together. \"The root is extremism, not violent extremism. … In our school system, we promote coexistence. We promote the value",
+   "published": "2026-11-14T07:00:53-05:00",
+   "link": "https://www.foxnews.com/world/inside-arab-nations-battle-against-radicalism-top-official-warns-threat-brewing-europes-streets",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "GOP newcomer who toppled Cory Mills sets sights on fraud, inflation as he heads to Capitol Hill",
+   "dek": "Rep.-elect Ryan Elijah, R-Fla., told Fox News Digital he wants to crack down on fraud and congressional insider trading after his midterm victory.",
+   "opening": "EXCLUSIVE: Florida Republican Congressman-elect Ryan Elijah told Fox News Digital he is heading to Washington with an \"appetite\" to crack down on fraud and protect consumers and tackle inflation, while calling for bipartisan cooperation in the incoming Congress. Elijah, a former Central Florida sports broadcaster, made his remarks amid heightened scrutiny of fraud involving taxpayer-funded federal programs across the country. \"I'm going to lean into consumer protection — that's something I fought for my whole life — and lean into fraud,\" Elijah told Fox News Digital. \"There is so much more Washington could do against fraud. I hope there is a bipartisan appetite on both sides to not only protect consumers but also target some of this fraud that is wasting so much of our tax dollars.\" FLORIDA CONGRESSMAN DIAGNOSES GOP'S BLUE TSUNAMI LOSSES: 'WE FAILED TO MAKE THEM THINK WE CARED ABOUT THEM' The incoming Republican, who beat embattled Rep. Cory Mills, R-Fla., in the Republican primary in August, expressed optimism that lawmakers from both parties could find common ground on addressing fraud and rising costs , arguing that voters sent a clear message during Tuesday's midterm elections. Elijah said voters \"made it loud and clear to both parties\" that they \"want change, they want inflation to come down and they want life to become a little easier. So, I think both parties need to look at that.\" 2026 MIDTERM ELECTION RESULTS BY STATE Elijah also emphasized that members of Congress r",
+   "published": "2026-11-14T07:00:08-05:00",
+   "link": "https://www.foxnews.com/politics/gop-newcomer-who-toppled-cory-mills-sets-sights-fraud-inflation-he-heads-capitol-hill",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "failed",
+     "republican"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside the House GOP strategy to capitalize on Democrats' warring factions in the new Congress",
+   "dek": "Tom Emmer says House Republicans will use committee hearings and floor votes to hold Democrats accountable as the GOP shifts to minority status.",
+   "opening": "EXCLUSIVE: House Republicans are heading into the next Congress ready to brawl. Rep. Tom Emmer, R-Minn., who will rise from the No. 3 most powerful House Republican to No. 2 next year, told Fox News Digital the GOP will hold the new Democrat majority \"accountable\" for the far-left faction's ideas over the next two years, even if it cannot control what bills get a vote. Emmer, who has served as House majority whip the past four years, was elected Tuesday to serve as minority whip alongside incoming House Minority Leader Jim Jordan , R-Ohio. The speaker of the House position turns over to Democrats and will likely be won by current minority leader Hakeem Jeffries, D-N.Y. And despite Jeffries being poised to take control of what legislation gets to the House floor, Emmer signaled House Republicans would find ways to push their agenda as well. JIM JORDAN BECOMES NEW HOUSE GOP LEADER AFTER CLOSED-DOOR VOTE, DEFEATING STEVE SCALISE \"What's their answer to dealing with costs and wages? We're going to investigate Trump,\" Emmer said in reference to Democrats. \"That's not going to solve the problems that they created. So, that's going to be the job of the whip, is to make sure that we have a coordinated process — committee hearings, floor votes — to expose and define exactly who these people really are.\" PROGRESSIVE GROUP'S 182-PAGE BLUEPRINT MAPS OUT POTENTIAL DEM INVESTIGATIONS INTO TRUMP, CORPORATE ALLIES Emmer, in his first print interview since winning the House minority whip job,",
+   "published": "2026-11-14T06:00:13-05:00",
+   "link": "https://www.foxnews.com/politics/inside-house-gop-strategy-capitalize-democrats-warring-factions-new-congress",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "accountable",
+     "republican",
+     "committee"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump keeps signaling an end to Iran war, but expert warns a crucial piece of his strategy is missing",
+   "dek": "President Donald Trump declared on Truth Social the U.S. no longer needs a deal with Iran, one day after proclaiming victory at Arlington.",
+   "opening": "President Donald Trump declared Thursday that the United States no longer needs a deal with Iran, abruptly shifting his diplomatic message just three days after expressing optimism about negotiations and directing Vice President JD Vance to focus on domestic issues instead. \"We don’t need a deal with Iran. Those days have long since passed,\" Trump wrote on Truth Social. \"We’ve got their money, Hundreds of Billions of Dollars, and we’ve got their Strait!\" Trump's latest declaration came just one day after he proclaimed victory over Iran during a Veterans Day ceremony at Arlington National Cemetery, while acknowledging that the conflict had not yet formally ended. \"We won,\" Trump said Wednesday. \"It’s just a question of when we end it. I want to make sure we have a total victory, not a 93% victory.\" TRUMP DEFENDS IRAN WAR DURING VETERANS DAY ADDRESS, SAYS HE IS MAKING THE WORLD 'SAFER' The president also thanked veterans \"working to ensure the world’s No. 1 sponsor of state terrorism, the Islamic Republic of Iran, will never have a nuclear weapon.\" An administration official defended Trump's strategy, arguing the United States has substantial leverage over Iran through its naval blockade and continued military pressure, even as questions remain about how the conflict will end. \"The United States is in a very strong position with control of the Strait of Hormuz and the Iranian economy collapsing. The president has been clear that the greatest naval blockade in history, Operation",
+   "published": "2026-11-14T06:00:05-05:00",
+   "link": "https://www.foxnews.com/politics/trump-keeps-signaling-end-iran-war-expert-warns-crucial-piece-his-strategy-missing",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "dollar": [
+     "dollar"
+    ],
+    "hormuz": [
+     "hormuz"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "iran-terms": [
+     "naval blockade"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Socialist LA mayor's bold homelessness promise ahead of 2028 Olympics hit with reality check: 'Not optimistic'",
+   "dek": "Los Angeles Mayor-elect Nithya Raman pledges to halve homeless encampments before the 2028 Olympics, but a local activist warns it won&apos;t work.",
+   "opening": "Incoming Los Angeles Mayor Nithya Raman has promised to cut the number of people sleeping in tents and homeless encampments by at least 50% before the 2028 Summer Olympics, but one local activist believes her vision may not be realistic. The blue city’s growing homeless population became a major focus of Raman’s mayoral campaign. A member of the Democratic Socialists of America (DSA) , she plans to expand shelter and housing options while stretching \"every dollar as far as possible.\" John Alle, a business owner and co-founder of the Santa Monica Coalition, told Fox News Digital Raman won’t be able to \"hide\" the city’s homelessness problem from tourists arriving for the Games and raised concerns about potential gaps in her plan to deliver lasting results. \"I don't think we're going to be able to hide that before the crowds,\" Alle said, adding that the city has become a \"Third World country.\" 4 OF NATION'S LARGEST CITIES NOW LED BY SOCIALIST MAYORS AFTER TUESDAY'S ELECTION, AFFECTING TENS OF MILLIONS \"We're not hiding it now. We're seeing tourists being attacked in Santa Monica. We're seeing tourists being attacked in LA. Our tourism, everything that funds our general fund, our retail sales taxes are all down. The morale of the police, which we need, is down.\" Alle warned that Raman’s plan will be a temporary solution that will move homeless people off the streets ahead of the Olympics, and they'll return once the Games are over. \"When the Olympics come, they'll be picked up, t",
+   "published": "2026-11-14T05:30:51-05:00",
+   "link": "https://www.foxnews.com/politics/socialist-la-mayor-bold-homelessness-promise-ahead-2028-olympics-hit-reality-check-not-optimistic",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats seize on midterm wins to push massive minimum wage hikes, but economists see trouble ahead",
+   "dek": "Josh Shapiro says he wants to more than double Pennsylvania&apos;s minimum wage and codify abortion rights with the new Democratic trifecta.",
+   "opening": "Democrats are pushing major minimum-wage increases after their midterm victories, but economists warn the proposals could come with unintended consequences for small businesses and inexperienced workers. Pennsylvania Gov. Josh Shapiro is pledging to more than double his state's $7.25 minimum wage, while Illinois Gov. JB Pritzker is calling for a federal increase as Democrats make affordability a central part of their governing agenda. The renewed push comes as Seattle, which has one of the nation's highest minimum wages, faces concerns about rising business costs and employment opportunities, raising questions about the tradeoffs of higher wage mandates. \"We’re going to more than double Pennsylvania‘s minimum wage,\" Shapiro wrote in an X post this month. \"Codify abortion rights into our state Constitution. Fund mass transit. Build more housing. These are the commonsense things that Pennsylvanians want done. AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI \"And with a Democratic trifecta, we will deliver on all of them.\" Shapiro's proposal would raise Pennsylvania's minimum wage from $7.25 to $15 an hour, an increase of roughly 107%, prompting questions about how small businesses would absorb the additional labor costs. Tom Savidge, an economist with the American Institute for Economic Research, warned in an interview with Fox News Digital that steep wage increases could force small businesses to raise prices, reduce workers' hour",
+   "published": "2026-11-14T05:00:15-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-seize-midterm-wins-push-massive-minimum-wage-hikes-economists-see-trouble-ahead",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth's failed impeachment was a warning to Democrats. Where will they go from here?",
+   "dek": "Democrats have been given a huge opportunity with majorities in both the House and Senate — but the balance of priorities, timing, messaging and discipline are all going to be major tests.",
+   "opening": "Democrats have been given a huge opportunity with majorities in both the House and Senate — but the balance of priorities, timing, messaging and discipline are all going to be major tests. (Image credit: Tom Brenner)",
+   "published": "2026-11-14T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/14/nx-s1-6040299/hegseth-impeachment-democrats-house-test",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Massie's push to impeach Hegseth splits constituents in his own backyard: 'Pure spite'",
+   "dek": "Northern Kentucky residents offer sharply divided takes on Thomas Massie&apos;s push to impeach Pete Hegseth over the Iran war and his true motives.",
+   "opening": "KENTON COUNTY, Ky. — Rep. Thomas Massie's push to impeach War Secretary Pete Hegseth over the Iran war drew sharply different reactions from northern Kentucky residents interviewed by Fox News Digital. The residents offered competing assessments of the outgoing Republican congressman and whether his latest confrontation with the Trump administration reflects principle or political payback. Fox News Digital visited Covington, the population center of Massie’s district, along with Newport, Erlanger and other communities across the river from Cincinnati, to ask residents about their outgoing congressman and his efforts to impeach the Pentagon chief. TRUMP DEFENDS PENTAGON CHIEF AS MASSIE TARGETS HIM: 'HEGSETH SHOULD BE PRAISED, NOT IMPEACHED' Richard Hassebrock, a Covington resident who said he has not always agreed with Massie, welcomed the impeachment effort. \"I'm not always a huge fan of Thomas Massie, but on this point I am,\" Hassebrock told Fox News Digital. Craig Cuskey, who works in the Covington area but lives just outside the bounds of Massie’s district in Louisville, described the impeachment push as \"pure spite\" and \"petty,\" saying his opinion of the congressman had deteriorated. The contrasting reactions came after House Republicans voted to refer Massie's impeachment effort against Hegseth to committee, adding another confrontation to the Kentucky Republican's long-running disagreements with President Donald Trump and his party's leadership. Democrats poised to take",
+   "published": "2026-11-14T04:00:19-05:00",
+   "link": "https://www.foxnews.com/politics/massie-push-impeach-hegseth-splits-constituents-backyard-pure-spite",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "impeachment",
+     "effort",
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Blue wave meets ballot box surprises as voters split on abortion, voter ID and billionaire taxes",
+   "dek": "Voters in three states approved voter ID measures, while California rejected a billionaire wealth tax and Idaho turned down a proposal to expand abortion rights.",
+   "opening": "While Democrats’ midterm sweep dominated election night, voters in several states delivered consequential — and sometimes crosscutting — verdicts on voter ID, abortion access, taxes and English-language laws. But the down-ballot decisions largely unfolded beneath the shadow of the GOP’s crushing losses, offering a separate look at the policy priorities voters chose to elevate in their states. Read on to learn more about some of the most significant ballot measure results that will be shaping the lives of thousands of Americans. DEMOCRATS ‘DIVORCED FROM VOTERS’ AS 5 STATES BACK CITIZEN-ONLY VOTING, BOLSTERING GOP PUSH Voters in Nevada , North Carolina and Ohio all voted to pass voter ID requirements, even as talks among federal lawmakers have stalled on the issue, showcasing that the issue remains a point of public interest. In North Carolina, the state has required photo ID for in-person voting since 2018. But with the adoption of a constitutional amendment in a 59.6% to 40.3% vote, the Tar Heel State expanded the requirement to all forms of voting. Similarly, in Ohio, voters passed Issue 3 by a 65.3% to 34.6% vote. Although Ohio already had preexisting in-person voter ID laws, Issue 3 codified the requirement in the state’s constitution, making it harder to overturn later. Finally, in Nevada, Question 7 passed by a 62.1% to 37.8% vote, establishing a constitutional amendment to enact the state’s first voter ID requirement. It compels voters to show ID when voting in person a",
+   "published": "2026-11-14T04:00:00-05:00",
+   "link": "https://www.foxnews.com/politics/blue-wave-meets-ballot-box-surprises-voters-split-abortion-voter-id-billionaire-taxes",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_ballots-california-court-doj": [
+     "push",
+     "separate",
+     "california"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
