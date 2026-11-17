@@ -26648,59 +26648,119 @@ function g4TrackerFilm(t) {
   const mix = function (a, f) { return Math.round(255 * (a * 0.5 + f * 0.5)); };
   return [mix(0.75, r), mix(0.82, g), mix(1.0, b)];
 }
-function g4TrackerHull(u, v) {
-  // half-beam and depth along the length; sections as half-ellipses pulled to a keel
-  const beam = 0.17 * Math.pow(Math.sin(Math.PI * u), 0.75), depth = 0.12 * (1 - 0.55 * Math.pow(2 * u - 1, 2)) * Math.pow(Math.sin(Math.PI * u), 0.3);
-  const y = beam * Math.sin(v * Math.PI / 2), z = -depth * Math.pow(Math.cos(v * Math.PI / 2), 1.4);
-  return [u - 0.5, y, z];
-}
-function g4TrackerBlueprint(ctx, W, H, T) {
-  const period = 4.2, n = 3;
+// (11-16) redrawn as a hull of the America's Cup Class type, four sheets; the same drawing is behind Chat (press/chat.html).
+// Its names are kept inside one function so they cannot meet anything else in this file.
+var g4HullSheetsFn = null;
+function g4TrackerBlueprint(ctx, W, H, T) { if (!g4HullSheetsFn) g4HullSheetsFn = g4HullSheetsMake(); return g4HullSheetsFn(ctx, W, H, T); }
+function g4HullSheetsMake() {
+// ── THE HULL (11-16): a hull of the America's Cup Class type, drawn as a naval architect's sheets ─────────────────────
+// Not any one boat: no team's lines were published. The proportions are the class's own, as published for its last
+// version: about 24.5 m overall and 19 m on the waterline, long overhangs at both ends, a narrow hull (3.7 m here), a
+// shallow canoe body, a deep fin carrying a lead bulb with winglets to 4.1 m of draft, a spade rudder, and a mast about
+// 32.5 m above the deck. The sheets follow the drafting conventions: a sheer plan with stations, waterlines and buttocks;
+// a half-breadth plan; a body plan with the forebody on the right; a sail plan with I, J, P and E.
+const LOA = 24.5, BOWK = 0.115, STERNK = 0.885, DRAFT = 4.13, MAST = 32.5, MASTX = 8.7;
+const sheerZ = u => 1.38 - 0.30 * u + 0.12 * (2 * u - 1) * (2 * u - 1);
+function keelZ(u) {   // the canoe body's profile: the stem, the rocker under the waterline, the counter rising to the transom
+  if (u < BOWK) return sheerZ(0) * 0.9 * Math.pow(1 - u / BOWK, 1.6);
+  if (u > STERNK) return 0.72 * Math.pow((u - STERNK) / (1 - STERNK), 1.3);
+  const t = (u - BOWK) / (STERNK - BOWK); return -0.86 * Math.pow(Math.sin(Math.PI * t), 0.85) * (1 - 0.18 * (t - 0.45)); }
+const halfBeam = u => 1.85 * Math.pow(Math.max(0, Math.sin(Math.PI * Math.pow(u, 0.9) * 0.93)), 0.75);
+function sec(u, v) { const b = halfBeam(u), kz = keelZ(u), sz = sheerZ(u); return [b * Math.pow(1 - Math.pow(1 - v, 2.2), 0.6), kz + (sz - kz) * Math.pow(v, 1.7)]; }
+function wlHalf(u, h) { const b = halfBeam(u), kz = keelZ(u), sz = sheerZ(u); if (h <= kz || b <= 0) return null; if (h >= sz) return b; const v = Math.pow((h - kz) / (sz - kz), 1 / 1.7); return b * Math.pow(1 - Math.pow(1 - v, 2.2), 0.6); }
+function buttZ(u, y0) { const b = halfBeam(u); if (y0 >= b * 0.985) return null; const v = 1 - Math.pow(1 - Math.pow(y0 / b, 1 / 0.6), 1 / 2.2); return keelZ(u) + (sheerZ(u) - keelZ(u)) * Math.pow(v, 1.7); }
+const FIN = [[10.3, null], [10.78, -3.45], [11.78, -3.45], [11.95, null]], BULB = { x: 11.45, z: -3.75, half: 2.85, r: 0.38 }, RUD = [[20.0, null], [20.16, -2.85], [20.6, -2.85], [20.78, null]];
+const bulbR = xn => BULB.r * Math.sqrt(Math.max(0, 1 - Math.pow(Math.abs(xn), 2.4)));
+
+  return function (ctx, W, H, T) {
+  const period = 4.2, n = 4;
   const which = Math.floor(T / period) % n, local = (T % period) / period;
-  // the envelope: up fast with a few blinks, hold, out with a blink
   let a = local < 0.12 ? local / 0.12 : local > 0.85 ? (1 - local) / 0.15 : 1;
   const blink = (local < 0.18 && Math.sin(T * 41) > 0.55) || (local > 0.84 && Math.sin(T * 31) > 0.6) ? 0.25 : 1;
   a *= blink * TRACKER_BLUEPRINT_ALPHA;
-  const col = g4TrackerFilm(T * 0.08 + which * 0.3);
-  const stroke = 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',';
+  const col = g4TrackerFilm(T * 0.08 + which * 0.3), stroke = 'rgba(' + col[0] + ',' + col[1] + ',' + col[2] + ',';
   ctx.save();
   ctx.lineWidth = 1.2; ctx.strokeStyle = stroke + a + ')'; ctx.shadowColor = stroke + (a * 0.8) + ')'; ctx.shadowBlur = 7;
-  ctx.font = '600 11px Georgia'; ctx.letterSpacing = '4px'; ctx.fillStyle = stroke + (a * 0.9) + ')'; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
-  const cx = 512, cy = 440;
+  ctx.font = '600 11px Georgia'; ctx.letterSpacing = '3px'; ctx.fillStyle = stroke + (a * 0.9) + ')'; ctx.textAlign = 'left'; ctx.textBaseline = 'alphabetic';
+  const line = pts => { let on = false; ctx.beginPath(); for (const p of pts) { if (!p) { on = false; continue; } on ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1]); on = true; } ctx.stroke(); };
+  const seg = (x1, y1, x2, y2) => { ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke(); };
+  const fine = f => { ctx.globalAlpha = 0.5; ctx.lineWidth = 0.8; f(); ctx.globalAlpha = 1; ctx.lineWidth = 1.2; };
+  const text = (s, x, y, al) => { ctx.textAlign = al || 'left'; ctx.fillText(s, x, y); ctx.textAlign = 'left'; };
+  const dim = (x1, y1, x2, y2, s) => { fine(() => { seg(x1, y1, x2, y2); const v = y1 === y2; seg(x1 - (v ? 0 : 5), y1 - (v ? 5 : 0), x1 + (v ? 0 : 5), y1 + (v ? 5 : 0)); seg(x2 - (v ? 0 : 5), y2 - (v ? 5 : 0), x2 + (v ? 0 : 5), y2 + (v ? 5 : 0)); }); if (y1 === y2) text(s, (x1 + x2) / 2, y1 - 7, 'center'); else text(s, x1 + 9, (y1 + y2) / 2 + 4); };
+  const block = (sheet, name) => { fine(() => ctx.strokeRect(676, 722, 290, 62)); text("A HULL OF THE AMERICA'S CUP CLASS TYPE", 688, 742); text(name + ' · SHEET ' + sheet + ' OF 4', 688, 759); text('CLASS PROPORTIONS · NO ONE BOAT', 688, 776); };
+  const us = []; for (let i = 0; i <= 96; i++) us.push(i / 96);
+  // the profile, used by the sheer plan and the sail plan
+  const profile = (X, Y) => {
+    line(us.map(u => [X(u * LOA), Y(sheerZ(u))])); line(us.map(u => [X(u * LOA), Y(keelZ(u))]));
+    seg(X(LOA), Y(keelZ(1)), X(LOA), Y(sheerZ(1))); seg(X(0), Y(keelZ(0)), X(0), Y(sheerZ(0)));
+    const app = P => line(P.map(p => [X(p[0]), Y(p[1] == null ? keelZ(p[0] / LOA) : p[1])]));
+    app(FIN); app(RUD);
+    fine(() => seg(X(11.62), Y(keelZ(11.62 / LOA)), X(11.52), Y(-3.45)));   // the trim tab's hinge
+    const top = [], bot = []; for (let i = 0; i <= 40; i++) { const xn = -1 + 2 * i / 40; top.push([X(BULB.x + xn * BULB.half), Y(BULB.z + bulbR(xn))]); bot.push([X(BULB.x + xn * BULB.half), Y(BULB.z - bulbR(xn))]); }
+    line(top); line(bot); line([[X(13.25), Y(-3.74)], [X(13.95), Y(-3.70)], [X(13.95), Y(-3.80)], [X(13.3), Y(-3.80)]]);   // the bulb, and a winglet
+  };
   if (which === 0) {
-    // lines plan: profile with waterlines, and the half-breadth under it
-    ctx.fillText('LINES PLAN · SHEER · WATERLINES', 72, 120);
-    const L = 880, X = function (u) { return 72 + u * L; };
-    ctx.beginPath(); for (let i = 0; i <= 60; i++) { const u = i / 60, p = g4TrackerHull(u, 0); const y = 330 - p[2] * 820; i ? ctx.lineTo(X(u), y) : ctx.moveTo(X(u), y); } ctx.stroke();
-    ctx.beginPath(); ctx.moveTo(X(0), 330 - 8); ctx.quadraticCurveTo(X(0.5), 330 - 60, X(1), 330 - 30); ctx.stroke();   // the sheer
-    for (let k = 1; k <= 4; k++) { const zz = 0.12 * k / 5; ctx.beginPath(); ctx.moveTo(X(0.05 + k * 0.01), 330 + zz * 820); ctx.lineTo(X(0.95 - k * 0.01), 330 + zz * 820); ctx.stroke(); }
-    for (let s = 0; s <= 10; s++) { ctx.beginPath(); ctx.moveTo(X(s / 10), 270); ctx.lineTo(X(s / 10), 440); ctx.stroke(); }
-    // half-breadth: waterlines from above
-    for (let k = 0; k <= 4; k++) { const v = 1 - k / 4.6; ctx.beginPath(); for (let i = 0; i <= 60; i++) { const u = i / 60, p = g4TrackerHull(u, v); const y = 600 - p[1] * 820; i ? ctx.lineTo(X(u), y) : ctx.moveTo(X(u), y); } ctx.stroke(); }
-    ctx.beginPath(); ctx.moveTo(X(0), 600); ctx.lineTo(X(1), 600); ctx.stroke();
+    text('LINES PLAN · SHEER · BUTTOCKS · WATERLINES', 72, 86);
+    const s = 35, X = m => 82 + m * s, Y = z => 250 - z * s, Yb = y => 590 + y * s;
+    fine(() => { [-0.5, 0.5, 1.0].forEach(z => seg(X(0.4), Y(z), X(LOA - 0.2), Y(z)));
+      for (let st = 0; st <= 10; st++) { const x = X((BOWK + (STERNK - BOWK) * st / 10) * LOA); seg(x, Y(1.75), x, Y(-1.15)); seg(x, Yb(-2.05), x, Yb(2.05)); }
+      [0.5, 1.0, 1.5].forEach(y0 => line(us.map(u => { const z = buttZ(u, y0); return z == null ? null : [X(u * LOA), Y(z)]; })));
+      [0.5, 1.0, 1.5].forEach(y0 => { seg(X(0.4), Yb(y0), X(LOA), Yb(y0)); seg(X(0.4), Yb(-y0), X(LOA), Yb(-y0)); }); });
+    for (let st = 0; st <= 10; st++) text(String(st), X((BOWK + (STERNK - BOWK) * st / 10) * LOA), Y(-1.15) + 15, 'center');
+    seg(X(-0.7), Y(0), X(LOA + 0.7), Y(0)); text('DWL', X(LOA + 0.9), Y(0) + 4);
+    profile(X, Y);
+    dim(X(BOWK * LOA), Y(2.25), X(STERNK * LOA), Y(2.25), 'LWL ' + ((STERNK - BOWK) * LOA).toFixed(2) + ' m');
+    dim(X(0), Y(-4.75), X(LOA), Y(-4.75), 'LOA ' + LOA.toFixed(2) + ' m');
+    dim(X(LOA + 0.5), Y(0), X(LOA + 0.5), Y(-DRAFT), 'DRAFT');
+    // the half-breadth plan: the deck's edge and the waterlines, seen from above
+    text('HALF-BREADTH PLAN', 72, Yb(-2.05) - 12);
+    seg(X(-0.7), Yb(0), X(LOA + 0.7), Yb(0));
+    [1, -1].forEach(sd => { line(us.map(u => [X(u * LOA), Yb(sd * halfBeam(u))]));
+      [-0.4, 0, 0.5].forEach(h => line(us.map(u => { const y = wlHalf(u, h); return y == null ? null : [X(u * LOA), Yb(sd * y)]; }))); });
+    seg(X(LOA), Yb(-halfBeam(1)), X(LOA), Yb(halfBeam(1)));
+    block(1, 'LINES PLAN');
   } else if (which === 1) {
-    ctx.fillText('BODY PLAN · SECTIONS AT STATIONS 0–10', 72, 120);
-    const S = 1600;
-    for (let s = 0; s <= 10; s++) {
-      const u = s / 10, side = s <= 5 ? -1 : 1;
-      ctx.beginPath(); for (let i = 0; i <= 30; i++) { const v = i / 30, p = g4TrackerHull(u, v); const x = cx + side * p[1] * S, y = cy + 40 - p[2] * S; i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); } ctx.stroke();
-    }
-    ctx.beginPath(); ctx.moveTo(cx, cy - 180); ctx.lineTo(cx, cy + 200); ctx.stroke();
-    for (let k = 0; k <= 3; k++) { const y = cy + 40 + 0.12 * k / 3.5 * S; ctx.beginPath(); ctx.moveTo(cx - 260, y); ctx.lineTo(cx + 260, y); ctx.stroke(); }
-    ctx.fillText('AFT', cx - 240, cy + 230); ctx.fillText('FWD', cx + 180, cy + 230);
+    text('BODY PLAN · SECTIONS AT STATIONS 0 TO 10', 72, 86);
+    const s = 104, cx = 512, X = y => cx + y * s, Y = z => 318 - z * s;
+    fine(() => { for (let z = -4; z <= 1.5; z += 0.5) seg(X(-2.35), Y(z), X(2.35), Y(z)); [0.5, 1, 1.5, 2].forEach(y => { seg(X(y), Y(1.7), X(y), Y(-4.3)); seg(X(-y), Y(1.7), X(-y), Y(-4.3)); }); });
+    seg(X(0), Y(1.85), X(0), Y(-4.35)); seg(X(-2.6), Y(0), X(2.6), Y(0)); text('DWL', X(2.7), Y(0) + 4);
+    for (let st = 0; st <= 10; st++) { const u = BOWK + (STERNK - BOWK) * st / 10, sd = st <= 5 ? 1 : -1, pts = []; for (let i = 0; i <= 36; i++) { const p = sec(u, i / 36); pts.push([X(sd * p[0]), Y(p[1])]); } line(pts); }
+    // the fin and its bulb, seen from ahead
+    const kt = keelZ(11.1 / LOA); [1, -1].forEach(sd => { seg(X(sd * 0.09), Y(kt), X(sd * 0.07), Y(-3.4)); line([[X(sd * 0.3), Y(-3.76)], [X(sd * 1.05), Y(-3.9)], [X(sd * 1.05), Y(-3.94)], [X(sd * 0.3), Y(-3.84)]]); });
+    ctx.beginPath(); ctx.arc(X(0), Y(BULB.z), BULB.r * s, 0, 6.2832); ctx.stroke();
+    text('AFT', X(-2.3), Y(-4.3) + 18); text('FWD', X(2.3), Y(-4.3) + 18, 'right');
+    dim(X(-1.85), Y(2.05), X(1.85), Y(2.05), 'BEAM 3.70 m'); dim(X(2.95), Y(0), X(2.95), Y(-DRAFT), 'DRAFT ' + DRAFT.toFixed(2) + ' m');
+    block(2, 'BODY PLAN');
+  } else if (which === 2) {
+    text('SAIL PLAN · I · J · P · E', 72, 86);
+    const s = 17.4, X = m => 300 + m * s, Y = z => 660 - z * s, dk = sheerZ(MASTX / LOA), top = dk + MAST, bm = dk + 1.9, hd = dk + 0.87 * MAST;
+    fine(() => seg(X(-1.5), Y(0), X(LOA + 1.5), Y(0))); profile(X, Y);
+    seg(X(MASTX - 0.12), Y(dk), X(MASTX - 0.12), Y(top)); seg(X(MASTX + 0.12), Y(dk), X(MASTX + 0.12), Y(top));
+    fine(() => { [0.2, 0.4, 0.6, 0.8].forEach(f => seg(X(MASTX - 0.95), Y(dk + f * MAST), X(MASTX + 0.95), Y(dk + f * MAST)));   // the spreaders
+      seg(X(MASTX), Y(top), X(LOA - 0.2), Y(sheerZ(1))); });                                                                      // the backstay
+    seg(X(MASTX), Y(bm), X(MASTX + 9.6), Y(bm - 0.15));                                                                          // the boom
+    ctx.beginPath(); ctx.moveTo(X(MASTX + 0.12), Y(top)); ctx.lineTo(X(MASTX + 1.7), Y(top - 0.25)); ctx.quadraticCurveTo(X(MASTX + 8.3), Y(dk + 19), X(MASTX + 9.6), Y(bm - 0.15)); ctx.stroke();   // the mainsail: a flat head and a full roach
+    seg(X(0.9), Y(sheerZ(0.04)), X(MASTX - 0.12), Y(hd));                                                                         // the forestay, and the jib's luff
+    ctx.beginPath(); ctx.moveTo(X(MASTX - 0.12), Y(hd)); ctx.quadraticCurveTo(X(MASTX + 1.2), Y(dk + 13), X(MASTX + 3.0), Y(dk + 1.5)); ctx.lineTo(X(0.9), Y(sheerZ(0.04))); ctx.stroke();
+    text('I', X(MASTX) - 26, Y(dk + 0.45 * MAST)); text('P', X(MASTX) + 14, Y(dk + 0.55 * MAST)); text('J', X(4.6), Y(dk) - 8, 'center'); text('E', X(MASTX + 4.8), Y(bm) + 16, 'center');
+    dim(X(LOA + 2.2), Y(dk), X(LOA + 2.2), Y(top), 'MAST ' + MAST.toFixed(1) + ' m');
+    block(3, 'SAIL PLAN');
   } else {
-    ctx.fillText('THE HULL · WIRE · TURNING', 72, 120);
-    const ang = T * 0.3, ca = Math.cos(ang), sa = Math.sin(ang), el = 0.42;
-    const P = function (u, v) {
-      const p = g4TrackerHull(u, Math.abs(v)); const x = p[0], y = p[1] * (v < 0 ? -1 : 1), z = p[2];   // z is down
-      const x1 = x * ca - y * sa, y1 = x * sa + y * ca;                       // yaw about the vertical
-      const d = 1 / (1.6 + y1 * 0.6);                                           // nearer is bigger
-      return [cx + x1 * 1500 * d, cy + 20 + (-z * Math.cos(el) * 1500 + y1 * Math.sin(el) * 1500) * d];
-    };
-    for (let s = 0; s <= 12; s++) { const u = s / 12; ctx.beginPath(); for (let i = 0; i <= 40; i++) { const v = -1 + 2 * i / 40, q = P(u, v); i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]); } ctx.stroke(); }
-    for (let k = -6; k <= 6; k++) { const v = k / 6; ctx.beginPath(); for (let i = 0; i <= 48; i++) { const u = i / 48, q = P(u, v); i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]); } ctx.stroke(); }
+    text('THE HULL · WIRE · TURNING', 72, 86);
+    const ang = T * 0.3, ca = Math.cos(ang), sa = Math.sin(ang), el = 0.42, k = 38, cx = 512, cy = 400;
+    const P = (x, y, z) => { const x1 = x * ca - y * sa, y1 = x * sa + y * ca, d = 1 / (1 + y1 * 0.012); return [cx + x1 * k * d, cy + (-z * Math.cos(el) + y1 * Math.sin(el)) * k * d]; };
+    const xm = u => (u - 0.5) * LOA;
+    fine(() => { for (let st = 0; st <= 16; st++) { const u = 0.02 + 0.96 * st / 16, pts = []; for (let i = -24; i <= 24; i++) { const p = sec(u, Math.abs(i) / 24); pts.push(P(xm(u), (i < 0 ? -1 : 1) * p[0], p[1])); } line(pts); } });
+    [1, -1].forEach(sd => { line(us.map(u => P(xm(u), sd * halfBeam(u), sheerZ(u)))); [0.3, 0.62].forEach(v => line(us.map(u => { const p = sec(u, v); return P(xm(u), sd * p[0], p[1]); }))); });
+    line(us.map(u => P(xm(u), 0, keelZ(u))));
+    const app = Q => line(Q.map(p => P(p[0] - LOA / 2, 0, p[1] == null ? keelZ(p[0] / LOA) : p[1]))); app(FIN); app(RUD);
+    [[0, 1], [0, -1], [1, 0], [-1, 0]].forEach(dr => { const pts = []; for (let i = 0; i <= 32; i++) { const xn = -1 + 2 * i / 32, r = bulbR(xn); pts.push(P(BULB.x + xn * BULB.half - LOA / 2, dr[0] * r, BULB.z + dr[1] * r)); } line(pts); });
+    [1, -1].forEach(sd => line([P(13.3 - LOA / 2, sd * 0.3, -3.78), P(13.9 - LOA / 2, sd * 1.05, -3.9), P(13.4 - LOA / 2, sd * 1.05, -3.9)]));
+    seg(...P(MASTX - LOA / 2, 0, sheerZ(MASTX / LOA)), ...P(MASTX - LOA / 2, 0, sheerZ(MASTX / LOA) + 3.2));   // the foot of the mast
+    block(4, 'THE HULL IN SPACE');
   }
   ctx.restore();
+};
 }
 // a click on the glass while it is the timeline
 function g4TrackerClick(uv) {

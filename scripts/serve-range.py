@@ -45,7 +45,11 @@ def folder():
             sys.path.insert(0, os.path.join(WS, 'Prism', 'scripts')); import folder_index
             FOLDER['ix'] = folder_index.Folder(WS)
         FOLDER['ix'].refresh(); return FOLDER['ix']
-def folder_context(msgs, m=None):
+def pinned_set(chat):
+    """The highest instruction set a chat is given, if Sailor has held it to one (data/chats/_pinned.json), else None (all of them)."""
+    try: return json.load(open(os.path.join(CHATS, '_pinned.json'))).get('chats', {}).get(str(chat))
+    except Exception: return None
+def folder_context(msgs, m=None, upto=None):
     """What a chat is handed from the folder: a short standing brief, and the passages that bear on the last thing said."""
     F = folder(); users = [m['content'] for m in msgs if m['role'] == 'user']
     q = users[-1] + (' ' + users[-2] if len(users) > 1 and len(users[-1]) < 160 else '')   # a short follow-up leans on the question before it
@@ -63,7 +67,12 @@ def folder_context(msgs, m=None):
              "They are background. Answer what he actually asked, in your own words, as one side of a conversation: say what you think, take a position, try the idea out. A list of what you cannot do is not an answer. "
              "Draw on a passage only when it bears on his question, and name the file when you do. Do not recite the state of the project unless he asks for it. Do not end with a list of options or ask him to specify a task. "
              "A newer dated file overrules an older one. If the passages do not cover the question, say so and answer from what you know; never invent what a file says. Write plainly. "
-             "Three habits to keep (11-14, from his first long chats with the local models): speak to him as 'you' and never call him 'the user'; when he asks what you think, commit to a claim of your own before he hints at one, and do not open by restating what he just said; and do not hand his statements back to him as settled fact: if something he says looks wrong against the passages or against what you know, say so plainly, and say when you are unsure. "]
+             ""]
+    # 11-15: the note is kept as numbered sets. Set 1 is everything above. A later addition is its own set, with its date, so a chat can be
+    # held to the set it began under (data/chats/_pinned.json: chat id -> the highest set it is given). A chat that is not pinned gets them all.
+    SETS = [(2, "Three habits to keep (11-14, from his first long chats with the local models): speak to him as 'you' and never call him 'the user'; when he asks what you think, commit to a claim of your own before he hints at one, and do not open by restating what he just said; and do not hand his statements back to him as settled fact: if something he says looks wrong against the passages or against what you know, say so plainly, and say when you are unsure. "),
+            (3, "How to lay out an answer (11-15; DeepSeek answered in numbered points too often): write in connected paragraphs, the way a person talks a thought through, each sentence leading to the next. Keep one line of thought going where you would otherwise break it into points. Use a numbered or bulleted list only when he asks for a list or for steps in order. ")]
+    parts[0] += ''.join(t for n, t in SETS if upto is None or n <= upto)
     # 11-14: what is searched, said plainly, so a question like "can you read the Enigma folder?" gets a true answer
     roots = {}
     for rel in F.files: roots[rel.split(os.sep)[0]] = roots.get(rel.split(os.sep)[0], 0) + 1
@@ -203,7 +212,7 @@ class RangeHandler(SimpleHTTPRequestHandler):
             srcs = [{'path': d['path'].replace(os.sep, '/'), 'date': ''} for d in docs]; limit = 6000
         elif body.get('folder') and any(x['role'] == 'user' for x in msgs):   # 11-13: every message checks the project folder first
             try:
-                ctx, srcs = folder_context(msgs, m); note = '\n\n'.join(x['content'] for x in msgs if x['role'] == 'system')
+                ctx, srcs = folder_context(msgs, m, pinned_set(body.get('chat'))); note = '\n\n'.join(x['content'] for x in msgs if x['role'] == 'system')
                 msgs = [{'role': 'system', 'content': ctx + ('\n\nSailor\'s standing note on how to answer: ' + note if note else '')}] + [x for x in msgs if x['role'] != 'system']
             except Exception as e: print('folder:', e, file=sys.stderr)
         if not body.get('folder') and not whole:

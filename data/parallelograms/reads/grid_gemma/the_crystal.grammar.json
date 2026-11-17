@@ -1,0 +1,611 @@
+{
+ "hash": "188a0deeae4d-g5",
+ "at": "2026-11-15T19:55:14",
+ "usage": {
+  "model": "local:gemma",
+  "input_tokens": 16064,
+  "output_tokens": 4983,
+  "calls": 5
+ },
+ "fixedLines": true,
+ "reader": "local:gemma",
+ "cutsFrom": "data/parallelograms/baselines/sonnet_2026-11-14_run2/the_crystal.grammar.json",
+ "missing": 0,
+ "lines": [
+  {
+   "post": 0,
+   "quote": "Trump winning means no war.",
+   "subject": "siegfriedmuell",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Trump winning",
+    "means no war"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker asserts that a specific political outcome ensures the absence of war."
+  },
+  {
+   "post": 0,
+   "quote": "War is simply not in the cards.",
+   "subject": "siegfriedmuell",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "War is simply",
+    "not in the cards"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker claims war is an impossibility."
+  },
+  {
+   "post": 0,
+   "quote": "Anyone talking about war with Iran is just out to lunch.",
+   "subject": "siegfriedmuell",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Anyone talking about war",
+    "is just out to lunch"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line attacks the mental state of those predicting war rather than the object itself."
+  },
+  {
+   "post": 1,
+   "quote": "Israel going to war with Iran without us is somehow proving me wrong?",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "X",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Israel going to war",
+    "without us",
+    "proving me wrong?"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A question challenging whether a third-party action affects the speaker's position on US involvement."
+  },
+  {
+   "post": 1,
+   "quote": "Are you stupid? (yes)",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Are you stupid?"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "An ad hominem attack on the interlocutor."
+  },
+  {
+   "post": 2,
+   "quote": "So, no war with Iran, no nukes.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "no war with Iran",
+    "no nukes"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker notes the current absence of US war and nuclear escalation."
+  },
+  {
+   "post": 2,
+   "quote": "until then, I'm right yet again",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "I'm right yet again"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A comment on the speaker's own record of accuracy."
+  },
+  {
+   "post": 3,
+   "quote": "That didn't happen - that WONT happen",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "didn't happen",
+    "WONT happen"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker asserts that US boots on the ground have not occurred and will not occur."
+  },
+  {
+   "post": 3,
+   "quote": "You're just missing the bigger picture here.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "missing the bigger picture"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker refers to a perspective or interpretation rather than a measured state of the object."
+  },
+  {
+   "post": 4,
+   "quote": "we didn't want to be embroiled in a forever war in the Middle East - but it was in good faith!",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "didn't want to be embroiled",
+    "forever war"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Expressing a desire to avoid war aligns with the realized state of the political economy."
+  },
+  {
+   "post": 4,
+   "quote": "Many denouncing Trump and MAGA were doing so because they're personally invested in seeing the administration fail.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "M",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "personally invested",
+    "seeing the administration fail"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line discusses the motives of critics rather than the state of the object."
+  },
+  {
+   "post": 5,
+   "quote": "Can I get a war with Iran update?",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "war with Iran update"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "A bare question asking for information is a teaser and takes no side."
+  },
+  {
+   "post": 5,
+   "quote": "You guys had all those big spaces and posts about regime change, nuclear strikes and Americans dying for Israel.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "regime change",
+    "nuclear strikes",
+    "Americans dying"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Recalling claims of war and death names the costs that frustrate the object."
+  },
+  {
+   "post": 6,
+   "quote": "No \"war with Iran.\"",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "No 'war with Iran'"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Stating that a bad state (war) has not come takes a side toward realization."
+  },
+  {
+   "post": 6,
+   "quote": "Everyone said MAGA was \"over\" last week. Instead we got the biggest ever increase in ICE and border funding possible. Thank you TRUMP!",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "Thank you TRUMP!"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A thanks for the current state of affairs (no war/border funding) reads as leaning realized."
+  },
+  {
+   "post": 7,
+   "quote": "If there's a single US boot dropped on Iran during Trump's presidency, I'll make a video denouncing the entire MAGA movement.",
+   "subject": "captivedreamer7",
+   "about": "object",
+   "touch": "X",
+   "measure": "war",
+   "due": "2029-01-20",
+   "z": "neither",
+   "lit": [
+    "single US boot dropped on Iran",
+    "denouncing the entire MAGA movement"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "This is a conditional wager on a future event, not a reading of the current state."
+  },
+  {
+   "post": 8,
+   "quote": "Immigration is the greatest issue we face in the West.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Immigration is the greatest issue"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line discusses immigration, which is not part of the measured body for the Iran war object."
+  },
+  {
+   "post": 8,
+   "quote": "All of these people listed are pro immigration. I don't care if they're \"based anti zionists\" - they're the enemy",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "they're the enemy"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line focuses on the identity and loyalty of people rather than the state of the political economy."
+  },
+  {
+   "post": 9,
+   "quote": "Of course there are no \"boots on the ground\" in Iran",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "no 'boots on the ground' in Iran"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Per rule 5, stating that a bad state (boots on the ground) has not occurred reads leaning realized."
+  },
+  {
+   "post": 9,
+   "quote": "these liars know this, they just want to score internet points for headpats from cult leader figures",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "these liars know this",
+    "score internet points"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the motives and character of others, which is shadow."
+  },
+  {
+   "post": 9,
+   "quote": "I think boots on ground would be a big mistake and still do!",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "boots on ground would be a big mistake"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Per rule 3, weighing a course the speaker says nobody is on (or is a mistake) takes no side."
+  },
+  {
+   "post": 9,
+   "quote": "But we have to see how this plays out.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "see how this plays out"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is a neutral observation about waiting for future developments."
+  },
+  {
+   "post": 10,
+   "quote": "Of course there are no boots on the ground in Iran",
+   "subject": "captivedreamer7",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "no boots on the ground in Iran"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Per rule 5, reporting the absence of a negative state (boots on ground) reads leaning realized."
+  },
+  {
+   "post": 10,
+   "quote": "even if there were, I don't care anymore. As long as He controls immigration, I don't care what happens.",
+   "subject": "captivedreamer7",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "As long as He controls immigration",
+    "I don't care what happens"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line expresses personal indifference based on a separate issue (immigration), which is shadow."
+  },
+  {
+   "post": 11,
+   "quote": "I'm skeptical of these strikes",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "skeptical of these strikes"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker expresses skepticism about the current military action."
+  },
+  {
+   "post": 11,
+   "quote": "we should in no universe have boots on the ground in Iran",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "no universe have boots on the ground"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker weighs a course they believe nobody is on or should be on."
+  },
+  {
+   "post": 11,
+   "quote": "let's hope this resolves quickly",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "hope this resolves quickly"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "This is a hope for a future state, which takes no side per rule 2."
+  },
+  {
+   "post": 11,
+   "quote": "I'm willing to give Trump the benefit of the doubt.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "give Trump the benefit of the doubt"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the speaker's attitude toward a person, not a measurement of the object."
+  },
+  {
+   "post": 11,
+   "quote": "The price one pays for nuance on this app:",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "price one pays for nuance"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the social cost of the speaker's discourse."
+  },
+  {
+   "post": 12,
+   "quote": "All these people do is lie",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "people do is lie"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the character of other people."
+  },
+  {
+   "post": 12,
+   "quote": "now that it's happening I hope it is resolved quickly and we can move onto other things",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "hope it is resolved quickly"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "This is a wish for the war to end, which takes no side per rule 2."
+  },
+  {
+   "post": 13,
+   "quote": "Like I've always said, I think it would be a massive mistake for some boots on the ground invasion of Iran.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "massive mistake for some boots",
+    "Clearly that's not happening"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker states that a bad state (boots on the ground) has not come, which reads leaning realized per rule 5."
+  },
+  {
+   "post": 13,
+   "quote": "Clearly that's not happening and there's very little chance it will happen.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "not happening",
+    "very little chance"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker states that a ground invasion is not occurring, which reads as a realized state of no war."
+  },
+  {
+   "post": 14,
+   "quote": "I explicitly opposed the Iran war from the outset",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "explicitly opposed",
+    "from the outset"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the speaker's own record and position rather than the state of the object."
+  },
+  {
+   "post": 14,
+   "quote": "didn't call any reasonable critics \"third worldists.\" This is very disappointing to see from you.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "didn't call",
+    "disappointing to see"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line concerns interpersonal conflict and the speaker's behavior toward critics."
+  },
+  {
+   "post": 14,
+   "quote": "The people attacking me daily were these",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "people attacking me",
+    "these retard righters"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line identifies the people attacking the speaker, which is a matter of shadow."
+  }
+ ]
+}

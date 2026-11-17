@@ -85,34 +85,63 @@ def ruled(pid):
     p = os.path.join(OUT, 'rulings.json')
     return json.load(open(p)).get('rows', []) if os.path.exists(p) else []
 
-def prompt(P, F, PAT):
+def settle(a):
+    """11-16: the band question is two yes-or-no answers now (verdict, reason). Python turns them into the one word the
+    rules have always used: a verdict on the other side is closed; a reason given or someone addressed is working; else open."""
+    if isinstance(a, dict) and ('verdict' in a or 'reason' in a):
+        a['others'] = 'closed' if a.get('verdict') is True else 'working' if a.get('reason') is True else 'open'
+    return a
+
+def prompt_patterns(P, PAT):
+    """11-16: the pattern library, asked on its own (call B). It is no longer in front of the reader while the band is being
+    decided: a limited reader went looking for a pattern to pin on a line and let the pattern set the band."""
+    lines = [{'i': i, 'who': (P.get('names') or {}).get(l['who'], l['who']), 'date': l.get('date'), 'quote': l['quote']} for i, l in enumerate(P['lines']) if l['station'] != 'O']
+    sys_ = ("You look for named patterns in lines of political talk for Prism, a closed-form instrument. Judge only the words of each line, "
+            "never the speaker's reputation and never anything that happened after the line's date. Reply with JSON only.")
+    pat = '\n'.join(f"#{p['n']} {p['name']} [{p['mode']}; stage {p['stage']}] — {p['desc'][:220]}" for p in PAT)
+    user = f"""DENOMINATION PATTERNS (library):
+{pat}
+
+LINES:
+{json.dumps(lines, ensure_ascii=False, indent=1)}
+
+For every line return:
+{{"i": n,
+ "patterns": [{{"n": number, "phrase": "the words of the line that show it"}}]}}   // only a pattern plainly present in the line's own words. Most lines show none: [] is the usual answer. A short or plain line (a thanks, a bare fact, a title) shows none.
+Answer: {{"lines": [ … ]}} — valid JSON only. Inside a string never use a double quote; quote words with single quotes."""
+    return sys_, user
+
+def prompt(P, F, PAT, split=False):
     obj = P.get('object') or {}; za = obj.get('zAxis') or {}
-    lines = [{'i': i, 'who': (P.get('names') or {}).get(l['who'], l['who']), 'station': l['station'], 'quote': l['quote']} for i, l in enumerate(P['lines']) if l['station'] != 'O']
+    lines = [dict({'i': i, 'who': (P.get('names') or {}).get(l['who'], l['who']), 'station': l['station'], 'quote': l['quote']}, **({'date': l.get('date'), 'then': l.get('then')} if split else {})) for i, l in enumerate(P['lines']) if l['station'] != 'O']
     sys_ = ("You answer fixed questions from Prism's Diatribe Derivation Protocol about scored lines of political talk. You never give a "
             "Diatribe number; rules compute it from your answers. Judge the line, never the speaker's reputation, and never tone: a calm line can be "
             "fully denominated and an angry one fluid. Judge both sides of the map the same way. Holding a firm view is not "
             "denomination; talking over the other side, with the answer fixed before they speak, is. Reply with JSON only.")
     pat = '\n'.join(f"#{p['n']} {p['name']} [{p['mode']}; stage {p['stage']}] — {p['desc'][:220]}" for p in PAT)
     stg = '\n'.join(f"{k}: {v[2]}" for k, v in STAGES.items())
-    rul = '\n'.join(f"- {r['who']}: '{r['quote']}' → object: {r['object']} · others: {r['others']} · capital: {str(r['capital']).lower()} · {r['tier']} — {r['why']}" for r in ruled(None)) or '(none yet)'
+    yn = lambda r: f"verdict: {'true' if r['others'] == 'closed' else 'false'} · reason: {'true' if r['others'] == 'working' else 'false'}" if split else f"others: {r['others']}"
+    rul = '\n'.join(f"- {r['who']}: '{r['quote']}' → object: {r['object']} · {yn(r)} · capital: {str(r['capital']).lower()} · {r['tier']} — {r['why']}" for r in ruled(None)) or '(none yet)'
     # 11-07: Sailor's principles (rulings that are rules, not single lines) ride along with the ruled cases
     _pp = os.path.join(OUT, 'rulings.json')
     _pr = json.load(open(_pp)).get('principles', []) if os.path.exists(_pp) else []
     if _pr: rul += '\n' + '\n'.join(f"- PRINCIPLE · {x['name']}: {x['rule']} (case: {x['case']})" for x in _pr)
     fac = '\n'.join(f"[{f['id']}] {f['fact']}  ({f['source']}{'' if f['tracked'] else '; not tracked'})" for f in F) or '(no tracker facts for this object)'
+    lib = '' if split else f"DENOMINATION PATTERNS (library):\n{pat}\n\n"
+    then = "Each line carries its date and 'then': the reading of the measure it talks about on that date. Judge each line against what was known on its own date. Nothing that happened later may count for or against it.\n\n" if split else ''
+    band_q = (' "verdict": true|false,              // does the line pass a verdict on the PEOPLE on the other side: say what they really want, what kind of people they are, that they lie, or that whatever they answer does not count? A claim about the object is not a verdict on people, however sure it sounds. false: \'The tariff is a tax.\' false: \'A tariff this size is simply not going to happen.\' false: \'Thank goodness.\' true: \'Anyone defending the tariff is lying or bought.\' true: \'He is not interested in the details.\'\n'
+              ' "reason": true|false,               // does the line do more than state? true if the line ITSELF gives its own because (a cause, or a consequence that would follow), or speaks to someone directly (a call, an instruction, a question put to them). Judge only the words of this line: a fact with no because, no consequence and nobody addressed is false, even if the lines around it use it as an argument. false: \'Imports cost more this year than last.\' true: \'The tariff will raise prices, because importers pass the cost on.\' true: \'Call your senator and tell him to vote no.\'') if split else ' "others": "open"|"working"|"closed",// how the line stands toward the other side. Judge what is IN the line, never what the speaker may have meant by it (11-15). open: the line says what the speaker holds, or reports something, and stops. No reason given, nobody addressed, nothing said about the other side (\'The tariff is a tax.\'). working: the line gives a reason, a fact or a consequence for its view, or it addresses someone to move them: an argument, a call, a question put to someone (\'The tariff will raise prices, because importers pass the cost on.\'). closed: the line settles the other side\'s answer for them: it names their motive, calls them liars, fools or traitors, or says anyone who disagrees is one (\'Anyone defending the tariff is lying or bought.\'). If a line does more than one of these, take the last that applies in the order open, working, closed.'
+    pat_q = '' if split else ' "patterns": [{"n": number, "phrase": "the words that show it"}],   // only patterns plainly present; [] is a fine answer\n'
     user = f"""OBJECT: {obj.get('label', P.get('title'))}
 z: +1 = {za.get('pos', 'the object realized')}  ·  −1 = {za.get('neg', 'the object frustrated')}
 
 TRACKER FACTS (what the object measurably is):
 {fac}
 
-DENOMINATION PATTERNS (library):
-{pat}
-
-RULED CASES (Sailor's own rulings — follow their reasoning):
+{lib}RULED CASES (Sailor's own rulings — follow their reasoning):
 {rul}
 
-LINES:
+{then}LINES:
 {json.dumps(lines, ensure_ascii=False, indent=1)}
 
 For every line return:
@@ -121,10 +150,9 @@ For every line return:
  "facts_touched": ["fact id", …],
  "contradicts": ["fact id", …],
  "object": "substance"|"signal",     // does it take up the object's substance (as defined above), or a signal about it (who said it, which side, the controversy)?
- "others": "open"|"working"|"closed",// toward the other side and the audience. open: states a belief, no instinct to convince or qualify. working: built to persuade or rally — a campaign or rally line, an applause line, an argument aimed at winning a room or an opponent over, still answering them. closed: talks over them, its answer fixed before they speak (pre-empts or dismisses their response). Most political speech to a crowd is working.
+{band_q}
  "capital": true|false,              // is THE SPEAKER spending their own political capital in this statement — burning a bridge of their own rather than gathering support? (describing someone else's defiance is not the speaker's capital)
- "patterns": [{{"n": number, "phrase": "the words that show it"}}],   // only patterns plainly present; [] is a fine answer
- "facing": "object"|"argument",      // toward the thing, or toward the argument about the thing
+{pat_q} "facing": "object"|"argument",      // toward the thing, or toward the argument about the thing
  "place": "low"|"mid"|"high",        // where in its band
  "why": "one plain sentence"}}
 Answer: {{"lines": [ … ]}} — valid JSON only. Inside a string never use a double quote; quote words with single quotes."""
@@ -261,6 +289,7 @@ def call(sys_, user, k, model=None):
 
 TIERS = {'fluid': (0, 33), 'coalition': (34, 66), 'denominated': (67, 100)}
 def tier_of(a):
+    settle(a)
     # the relational test (Sailor, 11-05): the band is the speaker's relationship with the other subjects — talking over
     # them, or spending their own capital → denominated; working to win them → coalition; stating it → fluid.
     # 11-05 (2nd run): taking up a signal instead of the substance no longer moves the band; it dims the line's lumens

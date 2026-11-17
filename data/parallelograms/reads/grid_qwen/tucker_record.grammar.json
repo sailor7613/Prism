@@ -1,0 +1,723 @@
+{
+ "hash": "5739a3b43f59-g5",
+ "at": "2026-11-15T17:00:17",
+ "usage": {
+  "model": "local:qwen",
+  "input_tokens": 21750,
+  "output_tokens": 6326,
+  "calls": 6
+ },
+ "fixedLines": true,
+ "reader": "local:qwen",
+ "cutsFrom": "data/parallelograms/baselines/sonnet_2026-11-14_run2/tucker_record.grammar.json",
+ "missing": 0,
+ "lines": [
+  {
+   "post": 0,
+   "quote": "The prayers of good people got Donald Trump elected two weeks ago.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "prayers of good people",
+    "got Donald Trump elected"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It attributes the election outcome to divine favor, which is a narrative frame about political legitimacy rather than a measurable state of the war object."
+  },
+  {
+   "post": 0,
+   "quote": "Wars with Russia and Iran are the counterattack.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "Wars with Russia and Iran",
+    "are the counterattack"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It identifies a specific course of action (war) being pursued as a reaction, which pushes the object toward the frustrated state of conflict, even if the war has not yet started."
+  },
+  {
+   "post": 1,
+   "quote": "Mark Levin was at the White House today, lobbying for war with Iran.",
+   "subject": "Mark Levin",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "Mark Levin was at the White House",
+    "lobbying for war with Iran"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It reports an act of lobbying for war, which is a push toward the frustrated state of the object, taking the side of the push at leaning strength."
+  },
+  {
+   "post": 1,
+   "quote": "there is zero credible intelligence that suggests Iran is anywhere near building a bomb",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "X",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "zero credible intelligence",
+    "Iran is anywhere near building a bomb"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It asserts that a key condition for war (imminent nuclear threat) does not exist, thereby supporting the realized state of no war."
+  },
+  {
+   "post": 1,
+   "quote": "Muammar Gaddafi tried that and wound up sodomized with a bayonet.",
+   "subject": "Muammar Gaddafi",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Muammar Gaddafi tried that",
+    "wound up sodomized with a bayonet"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It describes a past fate of a foreign leader to illustrate a point about regime change, which is a shadow element about blame and consequence rather than the current object state."
+  },
+  {
+   "post": 1,
+   "quote": "the real goal, which is regime change — young Americans heading back to the Middle East to topple yet another government",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "real goal",
+    "regime change"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It identifies the underlying mechanism driving the push for war, which is a course of action leading to the frustrated state of conflict."
+  },
+  {
+   "post": 1,
+   "quote": "It could also collapse our economy, as surging oil prices trigger unmanageable inflation. Consider the effects of $30 gasoline.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "barrel",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "collapse our economy",
+    "surging oil prices"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It carries the logic of the war course by naming the economic mechanism (oil prices) that would result, taking the side of the cost being wagered."
+  },
+  {
+   "post": 1,
+   "quote": "The first week of a war with Iran could easily kill thousands of Americans.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "lives",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "first week of a war",
+    "kill thousands of Americans"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It carries the logic of the war course by naming the human cost being wagered, taking the side of the cost being wagered."
+  },
+  {
+   "post": 1,
+   "quote": "An attack on Iran could very easily become a world war. We'd lose.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "frustrated strongly",
+   "lit": [
+    "world war",
+    "We'd lose"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker asserts that the war leads to a catastrophic outcome (loss/world war), taking the side of the object being frustrated by naming the cost of the course being pushed."
+  },
+  {
+   "post": 1,
+   "quote": "A war with Iran would amount to a profound betrayal of his supporters. It would end his presidency.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "profound betrayal",
+    "end his presidency"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The speaker describes the political and economic consequences of the war, reading as frustrated because it names the negative realization of the object's state (betrayal/collapse) associated with the war course."
+  },
+  {
+   "post": 1,
+   "quote": "They denounce anyone who advocates for a deal as a traitor and a bigot.",
+   "subject": "TuckerCarlson",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "denounce anyone",
+    "traitor and a bigot"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line describes the rhetorical behavior of opponents (labeling dissenters), which is about who is to blame or how they act, not the state of the war or economy itself."
+  },
+  {
+   "post": 1,
+   "quote": "Pray that Donald Trump ignores them.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Pray that Donald Trump ignores them"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is a prayer/hope for a future state where the war is avoided; per rule 2, prayers take no side on the object's current condition."
+  },
+  {
+   "post": 2,
+   "quote": "The real divide is between those who casually encourage violence, and those who seek to prevent it",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "real divide",
+    "encourage violence",
+    "prevent it"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line defines a moral frame for the conflict but does not assert a specific fact about the war's occurrence or its economic/political outcome, thus taking no side on the object's measured state."
+  },
+  {
+   "post": 2,
+   "quote": "anyone who's calling Donald Trump today to demand air strikes and other direct US military involvement",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "calling Donald Trump",
+    "demand air strikes"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line reports people pushing for military involvement (air strikes), which is an act taken toward the object; per rule 4, this reads as leaning frustrated because the push has not yet landed."
+  },
+  {
+   "post": 3,
+   "quote": "how the president's enemies are working to destroy MAGA with the war on Iran",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "enemies are working",
+    "destroy MAGA with the war"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "The line announces a discussion about the war's impact on political power; it is a teaser that frames the war as a destructive force, reading as leaning frustrated due to the negative action described."
+  },
+  {
+   "post": 4,
+   "quote": "Senator Ted Cruz demands regime change in Iran.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "Cruz demands regime change"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line reports a specific political act (demanding regime change) that moves the object toward war; per rule 4, this push reads as leaning frustrated."
+  },
+  {
+   "post": 4,
+   "quote": "He's not interested in the details.",
+   "subject": "Ted Cruz",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "not interested",
+    "the details"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It characterizes a political actor's motive rather than measuring the object's state or forecasting a specific outcome."
+  },
+  {
+   "post": 5,
+   "quote": "Thank God.",
+   "subject": "Tucker Carlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "Thank God"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It is a prayer of thanks for a realized event (the ceasefire mentioned in the adjacent post), which counts as leaning realized under rule 6."
+  },
+  {
+   "post": 6,
+   "quote": "Thank God Trump brokered a ceasefire.",
+   "subject": "Donald Trump",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "brokered a ceasefire"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It reports a specific action (brokerage) that resulted in a ceasefire, a step toward realizing the no-war object, read as leaning realized."
+  },
+  {
+   "post": 6,
+   "quote": "That's the last thing Mark Levin wanted.",
+   "subject": "Mark Levin",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "last thing",
+    "Mark Levin wanted"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It attributes a desire to a speaker, focusing on internal motivation rather than the external state of the object."
+  },
+  {
+   "post": 7,
+   "quote": "Our interview with the president of Iran.",
+   "subject": "Tucker Carlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "interview",
+    "president of Iran"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "It announces a future segment or content without stating a fact or opinion about the war's status itself."
+  },
+  {
+   "post": 8,
+   "quote": "This is Israel's last chance to blow up Iran with America's military",
+   "subject": "Israel",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "last chance",
+    "blow up Iran"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It frames a military strike as a realized or imminent action, which directly contradicts the no-war object, reading frustrated."
+  },
+  {
+   "post": 8,
+   "quote": "naturally the neocons have reached peak hysteria",
+   "subject": "neocons",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "peak hysteria"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It attacks the emotional state of a political group rather than measuring the object's condition."
+  },
+  {
+   "post": 9,
+   "quote": "So mightily spread abroad your Spirit, that all peoples may be gathered under the banner of the Prince of Peace",
+   "subject": "God",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "gathered under",
+    "Prince of Peace"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It is a prayer for a future ideal state of peace, which takes no side on the current object status under rule 2."
+  },
+  {
+   "post": 10,
+   "quote": "Israel's war and what it means.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Israel's war",
+    "what it means"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "The line only announces the topic of the post without asserting a specific condition or outcome regarding the war's status."
+  },
+  {
+   "post": 11,
+   "quote": "Could this be a religious war designed to rebuild the Third Temple on the ashes of Al Aqsa? Hope not.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "religious war",
+    "Hope not"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line expresses a hope against a specific religious interpretation of the war, which is a wish rather than a measurement of the object's realized or frustrated state."
+  },
+  {
+   "post": 12,
+   "quote": "how this war changes American politics forever",
+   "subject": "Saagar Enjeti",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "changes American politics",
+    "forever"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "The line is a teaser introducing a guest's analysis on the political consequences of the war, not a direct statement of the war's current status."
+  },
+  {
+   "post": 13,
+   "quote": "Pray that the spell breaks and the world is saved.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Pray that the spell breaks",
+    "world is saved"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is a prayer for a future outcome (the end of the war/conflict), which takes no side on the current state of the object."
+  },
+  {
+   "post": 14,
+   "quote": "it should be illegal to yoke our military to a foreign power in war",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "law",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "illegal to yoke",
+    "military to a foreign power"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line argues that the current alignment with Israel constitutes an illegal yoking of the military, implying the object (US sovereignty/war powers) is being frustrated by foreign influence."
+  },
+  {
+   "post": 14,
+   "quote": "Bret Weinstein on how it happened.",
+   "subject": "Bret Weinstein",
+   "about": "object",
+   "touch": "M",
+   "measure": "law",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "how it happened"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "The line is a teaser indicating that the guest will explain the mechanism of the situation, without stating the mechanism itself."
+  },
+  {
+   "post": 15,
+   "quote": "Joe Kent on why we actually went to war with Iran.",
+   "subject": "Joe Kent",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "why we actually went to war"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "The line is a teaser introducing a guest's explanation for the war's origin, not a statement of the war's current status or outcome."
+  },
+  {
+   "post": 16,
+   "quote": "ground troops are often followed by tyranny in the country that sends them",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "ground troops",
+    "followed by tyranny"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line extrapolates the negative consequence (tyranny) of the current course (ground troops/war), reading the object's trajectory as frustrated by the loss of liberty."
+  },
+  {
+   "post": 17,
+   "quote": "We're spending more a year on the military in adjusted dollars than we did during World War II.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "law",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "spending more a year on the military",
+    "adjusted dollars",
+    "during World War II"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line reports high military spending as a fact of congressional appropriation and executive execution, implying the exercise of power (law) is active and substantial, which aligns with the realization of the war object's logistical reality."
+  },
+  {
+   "post": 17,
+   "quote": "how much is going to Israel?",
+   "subject": "TuckerCarlson",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "how much is going to Israel"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line questions the allocation of resources to a foreign actor, focusing on blame and loyalty rather than the direct state of the war or domestic economic indicators defined by the body."
+  },
+  {
+   "post": 18,
+   "quote": "may be within days of launching a nuclear strike on Iran",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": "2026-11-08",
+   "z": "leaning frustrated",
+   "lit": [
+    "within days of launching",
+    "nuclear strike on Iran"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line forecasts a specific military action (war) within a short timeframe from the post date, carrying the logic of the war's escalation which is a frustrated state of the no-war object."
+  },
+  {
+   "post": 18,
+   "quote": "He needs this war.",
+   "subject": "Netanyahu",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "He needs this war"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line attributes a motive to a political figure rather than measuring an objective state of the war or economy; it is about who is to blame or why they act, which is shadow."
+  },
+  {
+   "post": 18,
+   "quote": "After eight months of conflict, Gulf economies are teetering. So are global energy and fertilizer markets.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "barrel",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "Gulf economies are teetering",
+    "global energy and fertilizer markets"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line describes the current state of global energy markets as unstable ('teetering'), which implies high prices or supply disruption, a frustrated state for the barrel and prices measures."
+  },
+  {
+   "post": 18,
+   "quote": "In October alone, 11 of them were badly damaged in Hormuz.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "11 of them were badly damaged",
+    "in Hormuz"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line reports specific combat-related damage to shipping infrastructure, confirming the active state of conflict and its disruption of trade, which is a frustrated state of the no-war promise."
+  },
+  {
+   "post": 18,
+   "quote": "After the first nuclear strike, World War Three is inevitable.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "frustrated strongly",
+   "lit": [
+    "first nuclear strike",
+    "World War Three is inevitable"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line extrapolates the logic of a nuclear strike to global war, carrying the ultimate frustrated state of the object (total war) with maximum severity, even if the event hasn't happened yet."
+  },
+  {
+   "post": 18,
+   "quote": "They're right, though it won't be simple.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "They're right",
+    "it won't be simple"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line validates the argument for a deal (avoiding war), taking the side of the course that leads to the no-war state (realized), despite acknowledging the difficulty of the mechanism."
+  },
+  {
+   "post": 19,
+   "quote": "Neocons and climate hysterics have at least one thing in common: they know nothing about energy.",
+   "subject": "TuckerCarlson",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Neocons and climate hysterics",
+    "know nothing about energy"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line attacks the character and knowledge of political opponents rather than measuring the state of the war or economy."
+  },
+  {
+   "post": 19,
+   "quote": "Morgan Downey on the economic effects of American intervention.",
+   "subject": "TuckerCarlson",
+   "about": "object",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Morgan Downey",
+    "economic effects of American intervention"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "The line announces a guest and a topic without stating a fact, opinion, or forecast about the object's condition."
+  }
+ ]
+}

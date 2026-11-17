@@ -1,0 +1,610 @@
+{
+ "hash": "188a0deeae4d-g5",
+ "at": "2026-11-15T23:30:27",
+ "usage": {
+  "model": "local:deepseek",
+  "input_tokens": 15459,
+  "output_tokens": 9328,
+  "calls": 5
+ },
+ "fixedLines": true,
+ "reader": "local:deepseek",
+ "cutsFrom": "data/parallelograms/baselines/sonnet_2026-11-14_run2/the_crystal.grammar.json",
+ "missing": 0,
+ "lines": [
+  {
+   "post": 0,
+   "quote": "Trump winning means no war.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Trump winning",
+    "means no war"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that Trump winning prevents war."
+  },
+  {
+   "post": 0,
+   "quote": "War is simply not in the cards.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "War",
+    "not in the cards"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that war is not going to happen."
+  },
+  {
+   "post": 0,
+   "quote": "Anyone talking about war with Iran is just out to lunch.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Anyone talking about war",
+    "out to lunch"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Dismisses talk of war as nonsensical."
+  },
+  {
+   "post": 1,
+   "quote": "Israel going to war with Iran without us is somehow proving me wrong?",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Israel going to war",
+    "proving me wrong"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Questions if Israel's action would affect the outcome."
+  },
+  {
+   "post": 1,
+   "quote": "Are you stupid? (yes)",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Are you stupid",
+    "yes"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Accuses the other person of being stupid."
+  },
+  {
+   "post": 2,
+   "quote": "So, no war with Iran, no nukes.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "no war with Iran",
+    "no nukes"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States there's no war and no nuclear issue."
+  },
+  {
+   "post": 2,
+   "quote": "until then, I'm right yet again",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "until then",
+    "I'm right yet again"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Claims to be correct about the situation."
+  },
+  {
+   "post": 3,
+   "quote": "That didn't happen - that WONT happen",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "That didn't happen",
+    "WONT happen"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that the event did not happen and won't in the future."
+  },
+  {
+   "post": 3,
+   "quote": "You're just missing the bigger picture here.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "M",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "missing the bigger picture"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a shadow line, so it takes no side."
+  },
+  {
+   "post": 4,
+   "quote": "we didn't want to be embroiled in a forever war in the Middle East - but it was in good faith!",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "didn't want to be embroiled",
+    "good faith"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "It states a past desire, indicating a positive side."
+  },
+  {
+   "post": 4,
+   "quote": "Many denouncing Trump and MAGA were doing so because they're personally invested in seeing the administration fail.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "M",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "personally invested"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Shadow line, no side taken."
+  },
+  {
+   "post": 5,
+   "quote": "Can I get a war with Iran update?",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "war with Iran update"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a question, so no side taken."
+  },
+  {
+   "post": 5,
+   "quote": "You guys had all those big spaces and posts about regime change, nuclear strikes and Americans dying for Israel.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "all those big spaces",
+    "Americans dying for Israel"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "It's pointing out discussions without real action, indicating frustration."
+  },
+  {
+   "post": 6,
+   "quote": "No \"war with Iran.\"",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "No 'war with Iran'"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Directly states there's no war."
+  },
+  {
+   "post": 6,
+   "quote": "Everyone said MAGA was \"over\" last week. Instead we got the biggest ever increase in ICE and border funding possible. Thank you TRUMP!",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "direction",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "increase in ICE and border funding",
+    "Thank you TRUMP"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "It's positive about Trump's actions, indicating realized."
+  },
+  {
+   "post": 7,
+   "quote": "If there's a single US boot dropped on Iran during Trump's presidency, I'll make a video denouncing the entire MAGA movement.",
+   "subject": "captivedreamer7",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "single US boot dropped",
+    "denouncing MAGA"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a conditional statement without taking a side on current status."
+  },
+  {
+   "post": 8,
+   "quote": "Immigration is the greatest issue we face in the West.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Immigration is the greatest issue"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about immigration."
+  },
+  {
+   "post": 8,
+   "quote": "All of these people listed are pro immigration. I don't care if they're \"based anti zionists\" - they're the enemy",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "pro immigration",
+    "they're the enemy"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It labels them as enemies."
+  },
+  {
+   "post": 9,
+   "quote": "Of course there are no \"boots on the ground\" in Iran",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "no boots on the ground"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It confirms no boots."
+  },
+  {
+   "post": 9,
+   "quote": "these liars know this, they just want to score internet points for headpats from cult leader figures",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "liars",
+    "score internet points"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It accuses them of motives."
+  },
+  {
+   "post": 9,
+   "quote": "I think boots on ground would be a big mistake and still do!",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "F",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "boots on ground would be a big mistake"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It opposes boots."
+  },
+  {
+   "post": 9,
+   "quote": "But we have to see how this plays out.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "M",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "see how this plays out"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's uncertain."
+  },
+  {
+   "post": 10,
+   "quote": "Of course there are no boots on the ground in Iran",
+   "subject": "captivedreamer7",
+   "about": "object",
+   "touch": "T",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "no boots on the ground"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It confirms no boots."
+  },
+  {
+   "post": 10,
+   "quote": "even if there were, I don't care anymore. As long as He controls immigration, I don't care what happens.",
+   "subject": "captivedreamer7",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "controls immigration",
+    "don't care what happens"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about immigration control."
+  },
+  {
+   "post": 11,
+   "quote": "I'm skeptical of these strikes",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "I'm skeptical of these strikes"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Expresses doubt about military actions."
+  },
+  {
+   "post": 11,
+   "quote": "we should in no universe have boots on the ground in Iran",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "in no universe have boots on the ground"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Advocates against ground troops, supporting the no-war stance."
+  },
+  {
+   "post": 11,
+   "quote": "let's hope this resolves quickly",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "let's hope this resolves quickly"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Expresses a wish without taking a stance."
+  },
+  {
+   "post": 11,
+   "quote": "I'm willing to give Trump the benefit of the doubt.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "give Trump the benefit of the doubt"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Personal opinion about Trump, not about the war."
+  },
+  {
+   "post": 11,
+   "quote": "The price one pays for nuance on this app:",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "price one pays for nuance"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Complains about the app's environment, not about the war."
+  },
+  {
+   "post": 12,
+   "quote": "All these people do is lie",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "All these people do is lie"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Accuses others, not about the war's condition."
+  },
+  {
+   "post": 12,
+   "quote": "now that it's happening I hope it is resolved quickly and we can move onto other things",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "hope it is resolved quickly"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Wish for resolution without stance."
+  },
+  {
+   "post": 13,
+   "quote": "Like I've always said, I think it would be a massive mistake for some boots on the ground invasion of Iran.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "massive mistake for boots on the ground"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Warns against ground invasion, but doesn't take a stance on current state."
+  },
+  {
+   "post": 13,
+   "quote": "Clearly that's not happening and there's very little chance it will happen.",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "not happening",
+    "very little chance"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Speaks confidently about boots not happening in Iran."
+  },
+  {
+   "post": 14,
+   "quote": "I explicitly opposed the Iran war from the outset",
+   "subject": "captive_dreamer",
+   "about": "object",
+   "touch": "O",
+   "measure": "war",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "explicitly opposed",
+    "from the outset"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Speaks confidently about opposition to the Iran war."
+  },
+  {
+   "post": 14,
+   "quote": "didn't call any reasonable critics \"third worldists.\" This is very disappointing to see from you.",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "didn't call",
+    "disappointing to see"
+   ],
+   "credulity": "withdrawn",
+   "kind": "statement",
+   "why": "Speaks about blame for name-calling."
+  },
+  {
+   "post": 14,
+   "quote": "The people attacking me daily were these",
+   "subject": "captive_dreamer",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "attacking me daily"
+   ],
+   "credulity": "withdrawn",
+   "kind": "statement",
+   "why": "Speaks about blame for attacks."
+  }
+ ]
+}

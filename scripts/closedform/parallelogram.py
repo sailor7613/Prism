@@ -11,6 +11,8 @@ The model answers questions; the rules make every number. Writes data/parallelog
 import json, os, re, sys, hashlib, datetime, math, difflib
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 import derive as D
+try: sys.stdout.reconfigure(line_buffering=True)   # 11-14: each line shows as it is printed, also when the output is piped into a log
+except Exception: pass
 ROOT = D.ROOT; OUTD = os.path.join(ROOT, 'data', 'parallelograms'); os.makedirs(os.path.join(OUTD, 'in'), exist_ok=True)
 if os.environ.get('CF_OUT'):   # 11-13: a read by another model is kept apart (data/parallelograms/reads/<name>/), so it never writes over the standing read
     OUTD = os.path.join(OUTD, 'reads', re.sub(r'[^A-Za-z0-9_.-]', '_', os.environ['CF_OUT'])); os.makedirs(OUTD, exist_ok=True)
@@ -101,24 +103,43 @@ For every line return:
  "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
  "credulity": "engaged"|"withdrawn"|"none",   // does the speaker accept (engaged) or refuse (withdrawn) a reading they would otherwise be expected to hold? most lines: none
  "station": "LI"|"RI"|"LP"|"RP",   // only a proposal: Left/Right x Institutional/Populist (outsider); the writer's label wins
+ "kind": "statement"|"teaser",   // teaser: the line only announces something to watch or read and names its topic or guest ('X on how it happened', 'Y on why we went to war'). It says nothing itself. Everything else: statement
  "why": "one plain sentence"}}
-HOW TO CHOOSE z (ruled 11-14, after two Sonnet reads of the same lines disagreed on z four times in ten; the disagreement was almost never about strength, it was about whether a line takes a side at all):
+HOW TO CHOOSE z (rules 1 to 3 ruled 11-14, after two Sonnet reads of the same lines disagreed on z four times in ten; the disagreement was almost never about strength, it was about whether a line takes a side at all):
 1. A shadow line takes no side: "neither". It is about who is to blame, not about the object.
-2. A line that says nothing about the object's condition takes no side: "neither". An episode title or teaser that only names a topic ("X on how it happened"), a bare question, a hope, a prayer, a wish.
+2. A line that says nothing about the object's condition takes no side: "neither". A bare question, a hope, a prayer, a wish. And a teaser (kind: teaser, ruled 11-15): it is filed as about the object, "neither", never as shadow, since it blames no one; it is kept and read like any line, and counted apart.
 3. A line that CARRIES THE LOGIC of a course someone is on takes the side that course leads to, even though the cost it names has not happened. "The first week of a war with Iran could easily kill thousands of Americans", said while men are lobbying for that war, reads frustrated: the speaker is naming what is being wagered. It is an extrapolation, not a forecast; give it no due date unless it says the thing WILL happen. Its strength is how hard the line reads the cost, not whether the cost came true (the body shows that, and the distance between the two is what Prism reads).
-   But a line that only weighs a course the line itself says nobody is on ("it would be a mistake to invade", "clearly that is not happening") takes no side from the course it weighs: "neither", unless it also says where things stand now.
+   But a line that only weighs a course the line itself says nobody is on ("it would be a mistake to invade") takes no side from the course it weighs: "neither". If it also says where things stand now ("clearly that is not happening"), rule 5 reads that part.
+4. A line that reports SOMEONE PUSHING for a course, as an act (ruled 11-15): lobbying, demanding, calling the president. It is about the object, not the shadow: it says where the object is being taken. It takes the side the push leads to, at leaning strength, because the push has not landed. "Mark Levin was at the White House today, lobbying for war with Iran" and "Senator Ted Cruz demands regime change in Iran" read leaning frustrated.
+   But a line about WHY someone wants it, or what kind of person he is, is shadow: "He needs this war". Nothing measured sees a motive.
+5. A line that says a bad state has NOT come takes a side (ruled 11-15): it says where things stand now. "Of course there are no boots on the ground in Iran" reads leaning realized. Read the words, whoever says them and whatever he wants.
+6. A PRAYER looks forward to something that has not happened: "neither" (rule 2). A THANKS looks back at something that did happen and calls it good: leaning realized (ruled 11-15). "Thank God.", posted the day of a ceasefire, reads leaning realized; when the words alone name nothing, the post's date and the object's state on that date say what is being thanked for.
 Answer: {{"lines": [ ... ]}} — valid JSON only. Inside a string never use a double quote; quote words with single quotes."""
     return sys_, user
 
 
+def same_voice(subject, who):
+    """Is the line in the poster's own voice? Names are compared without spaces, marks or case ('Tucker Carlson' is
+    'TuckerCarlson'; 'captive dreamer' is 'captivedreamer7'). 11-16: they were compared letter for letter before, so every
+    line of a poster whose handle is written differently from his name was sent with its whole post attached."""
+    n = lambda x: re.sub(r'[^a-z0-9]', '', str(x or '').lower()); a, b = n(subject), n(who)
+    return bool(a and b) and (a == b or a in b or b in a)
+
 def relational_prompt(meta, lines, PAT, G):
+    # 11-16: each line is shown the Object as it stood on the line's OWN date (the reading of the measure it talks about), and the
+    # facts block names what is measured without its latest values. A reader had been judging 2024 lines by a war that began in 2026.
+    def then(l):
+        m_ = measure(G, l.get('measure')) if l.get('measure') and l.get('measure') != 'shadow' else None
+        if not m_ or not l.get('date'): return None
+        rd = reading_at(G, l['measure'], l['date'])
+        return f"{m_['label']}: no reading yet on that date" if (not rd or rd.get('nearest')) else f"{m_['label']}: {rd['z']:+.2f} on {rd['date']}"
     obj = topic_label(meta, G)
     P = {'object': {'label': obj, 'zAxis': {'pos': 'the object realized (read against the object itself, not an audience)', 'neg': 'the object frustrated'}},
          'title': meta.get('title', ''), 'names': {},
-         'lines': [{'who': l['who'], 'station': l['station'], 'quote': l['quote'] + (('   [voice: ' + l['subject'] + ' — reported or described by ' + l['who'] + '; the whole post: ' + l.get('post_text', '') + ']') if l.get('subject') and l['subject'].lstrip('@').lower() != l['who'].lstrip('@').lower() else '')} for l in lines]}
-    F = [{'id': f"body:{t['id']}", 'fact': f"{t['label']}: {(t['readings'][-1][1] if t['readings'] else 'no reading yet')} on the object's z ({t['source']})",
+         'lines': [{'who': l['who'], 'station': l['station'], 'date': l.get('date'), 'then': then(l), 'quote': l['quote'] + (('   [voice: ' + l['subject'] + ' — reported or described by ' + l['who'] + '; the whole post: ' + l.get('post_text', '') + ']') if l.get('subject') and not same_voice(l['subject'], l['who']) else '')} for l in lines]}
+    F = [{'id': f"body:{t['id']}", 'fact': f"{t['label']} — measured on the object's z; each line below carries this measure's reading on its own date ({t['source']})",
           'source': "the object's body, data/active/object.json", 'tracked': bool(t['readings'])} for t in G['body']]
-    return D.prompt(P, F, PAT)
+    return D.prompt(P, F, PAT, split=True)
 
 
 def forecasts(pid, hg, lines, k, fresh, G=None):
@@ -186,8 +207,16 @@ def gnostic(pid, h, lines, k, runs, fresh):
         if l.get('measure') in (None, 'shadow', 'war'): return None
         r = reading_at(G, l['measure'], l['date'])
         return r and {'measure': l['measure'], 'z': r['z'], 'asOf': r['date']}
-    L = [{'i': l['i'], 'who': l['who'], 'date': l['date'], 'objectOnThatDate': state(l['date']), 'bodyOnThatDate': own(l), 'due': l.get('due'), 'quote': l['quote'], 'voice': l.get('subject'), 'post': l.get('post_text')} for l in lines]
-    user = f"""LINES (every line in the set, in order, with dates):
+    L = [{'i': l['i'], 'who': l['who'], 'date': l['date'], 'objectOnThatDate': state(l['date']), 'bodyOnThatDate': own(l), 'due': l.get('due'), 'quote': l['quote'], 'voice': l.get('subject'), 'post': l.get('post')} for l in lines]
+    # 11-16: each post is sent ONCE, numbered, and every line names the post it was cut from. Before, each line carried its whole
+    # post, so a long post cut into eleven lines was sent eleven times (Tucker's set came to about 21,000 tokens).
+    PO = {}
+    for l in lines:
+        if l.get('post') is not None and l.get('post_text') and l['post'] not in PO: PO[l['post']] = {'post': l['post'], 'who': l['who'], 'date': l['date'], 'text': l['post_text']}
+    user = f"""POSTS (each one once, in order; a line's "post" is the number of the post it was cut from):
+{json.dumps(list(PO.values()), ensure_ascii=False, indent=1)}
+
+LINES (every line in the set, in order, with dates):
 {json.dumps(L, ensure_ascii=False, indent=1)}
 
 objectOnThatDate is what the object (the war) actually was on the line's date, from the object's body. bodyOnThatDate, where present, is the reading of the measure the line talks about (the pump, the vote, the dollar; z +1 realized … -1 frustrated, read against the object itself) as of that date. due is the date a forecasting line said the object would have moved by.
@@ -210,7 +239,7 @@ Answer: {{"moments": [{{"i": n, "kind": 1|2|3, "credulity": "withdrawn"|"engaged
     for (i, cr), ms in votes.items():
         if len(ms) >= need and str(i) not in moments:
             moments[str(i)] = {'credulity': cr, 'kind': ms[0].get('kind'), 'turnsOn': ms[0].get('turnsOn'), 'why': ms[0].get('why'), 'votes': f'{len(ms)}/{runs}'}
-    json.dump({'hash': h, 'at': datetime.datetime.now().isoformat(timespec='seconds'), 'prompt': 'v2 11-08 (three kinds of switch)', 'moments': moments, 'runs': raw}, open(gp, 'w'), indent=1, ensure_ascii=False)
+    json.dump({'hash': h, 'at': datetime.datetime.now().isoformat(timespec='seconds'), 'prompt': 'v3 11-16 (three kinds of switch; each post sent once)', 'moments': moments, 'runs': raw}, open(gp, 'w'), indent=1, ensure_ascii=False)
     print(f'second pass: {len(moments)} moments'); return moments
 
 
@@ -240,14 +269,14 @@ def main():
     meta, items = parse(src); G = the_object(); PAT = D.patterns()
     pid = meta.get('id') or re.sub(r'[^a-z0-9]+', '_', meta.get('title', os.path.basename(src)).lower()).strip('_')
     h = hashlib.sha1(open(src, 'rb').read()).hexdigest()[:12]
-    hs = h + '-ctx5'   # scoring/second-pass cache key (ctx5 11-08: measures, not gears; the line's own measure in the second pass; ctx4 11-07: the war added): the input + the prompt version (11-07: whole post only where the voice isn't the poster's own — ctx2 gave it to every line and flattened them)
+    hs = h + '-ctx7'   # scoring/second-pass cache key (ctx7 11-16: the band from two yes-or-no answers (verdict, reason); each line shown the Object on its own date; the pattern library asked separately; ctx6 11-15: the 'others' question asks what is in the line, not what the speaker meant; ctx5 11-08: measures, not gears; the line's own measure in the second pass; ctx4 11-07: the war added): the input + the prompt version (11-07: whole post only where the voice isn't the poster's own — ctx2 gave it to every line and flattened them)
     gpath = os.path.join(OUTD, f'{pid}.grammar.json')
     _PROG['path'] = os.path.join(OUTD, f'_run_{pid}.progress.json'); progress('grammar', posts=[{'n': i, 'who': it['who'], 'date': it['date'], 'station': it['station'], 'text': it['text']} for i, it in enumerate(items)])
     k = None if dry else (('local' if D.is_local(D.MODEL) and D.is_local(READ_MODEL) else None) or D.key() or ('offline' if os.environ.get('CF_ANSWERS') else None))   # 11-13: all-local needs no key
     if not dry and not k:
         print('no ANTHROPIC_API_KEY — run "Run the Closed Form.command" once (it asks for the key)'); sys.exit(2)
     # 1 · grammar — saved and reused (reproducible)
-    hg = h + '-g3'   # grammar cache key (g3 11-14: the three rules for choosing z; g2 11-08: measure + due fields)
+    hg = h + '-g5'   # grammar cache key (g5 11-15: kind (statement or teaser), and rule 3's own example no longer contradicts rule 5; g4 11-15: rules 4 to 6, a push, an absence, a thanks; g3 11-14: the three rules for choosing z; g2 11-08: measure + due fields)
     reused = os.path.exists(gpath) and not fresh and json.load(open(gpath)).get('hash') == hg
     if reused:
         gram = json.load(open(gpath)); print('grammar: reused', gpath)
@@ -273,9 +302,11 @@ def main():
                       'stationProposed': None if it['station'] else g.get('station'), 'quote': g['quote'], 'subject': g.get('subject'),
                       'about': g.get('about'), 'touch': g.get('touch'), 'measure': g.get('measure') or g.get('tracker') or g.get('gear'), 'due': g.get('due') or None,
                       'z': None if (g.get('measure') or g.get('tracker') or g.get('gear')) == 'shadow' or g.get('about') == 'shadow' else ZWORDS.get(g.get('z'), 0.0),
-                      'zWord': g.get('z'), 'lit': g.get('lit', []), 'credulity': g.get('credulity', 'none'), 'whyGrammar': g.get('why'), 'post_text': it['text']})
+                      'zWord': g.get('z'), 'kind': 'teaser' if g.get('kind') == 'teaser' else 'statement', 'lit': g.get('lit', []), 'credulity': g.get('credulity', 'none'), 'whyGrammar': g.get('why'), 'post_text': it['text']})
     # 11-09: the forecast pass — conditional forecasts come due when the war measure says the condition was met
     FX = forecasts(pid, hg, lines, k, fresh or '--reforecast' in a, G)
+    for f_ in FX.values():   # 11-14: 'within' must be a number of days. A local model answered with the word 'days'; anything that is not a number is read as none
+        m_ = re.search(r'\d+', str(f_.get('within') if f_.get('within') is not None else '')); f_['within'] = int(m_.group(0)) if m_ else None
     WAR_DAY = next((r[0] for r in measure(G, 'war')['readings'] if r[1] <= -1), G['topic']['zero'])
     def plus(day, n):
         return (datetime.date.fromisoformat(day) + datetime.timedelta(days=int(n))).isoformat()
@@ -320,12 +351,20 @@ def main():
         for c0 in range(0, len(lines), CHUNK):
             part = lines[c0:c0 + CHUNK]
             s_, u_ = relational_prompt(meta, part, PAT, G)
+            # 11-16: the patterns are asked once per chunk, on their own (call B), and joined to every run's answers. The band
+            # question (call A, below) no longer has the library in it.
+            bs_, bu_ = D.prompt_patterns({'names': {}, 'lines': [{'who': l['who'], 'station': l['station'], 'date': l.get('date'), 'quote': l['quote']} for l in part]}, PAT)
+            bans, _bu = D.call(bs_, bu_, k); bpat = {}
+            for x in (bans.get('lines', []) if isinstance(bans, dict) else []):
+                try: j = int(x['i'])
+                except Exception: continue
+                if 0 <= j < len(part) and isinstance(x.get('patterns'), list): bpat[part[j]['i']] = [q for q in x['patterns'] if isinstance(q, dict) and isinstance(q.get('n'), int)]
             for _ in range(runs):
                 ans, _u = D.call(s_, u_, k)
                 for x in ans.get('lines', []):
                     try: j = int(x['i'])
                     except Exception: continue
-                    if 0 <= j < len(part): x['i'] = part[j]['i']; got.setdefault(x['i'], []).append(x)
+                    if 0 <= j < len(part): x['i'] = part[j]['i']; x['patterns'] = bpat.get(x['i'], []); D.settle(x); got.setdefault(x['i'], []).append(x)
                 sc = {}
                 for i2, xs in got.items():
                     rs2 = sorted(D.rules(dict(x2), PAT)['dia'] for x2 in xs); sc[str(i2)] = {'dia': rs2[len(rs2) // 2], 'tier': D.rules(dict(xs[0]), PAT)['tier'], 'runs': len(rs2)}
@@ -336,7 +375,7 @@ def main():
             if not rs: continue
             r, x = rs[len(rs) // 2]
             rel['lines'][str(l['i'])] = dict(dia=r['dia'], tier=r['tier'], runs=[q[0]['dia'] for q in rs], flags=r['flags'],
-                                            relational={k2: x.get(k2) for k2 in ('object', 'others', 'capital', 'facing', 'why')},
+                                            relational={k2: x.get(k2) for k2 in ('object', 'others', 'verdict', 'reason', 'capital', 'facing', 'why')},
                                             patterns=[p.get('n') for p in x.get('patterns', [])])
         json.dump(rel, open(rpath, 'w'), indent=1, ensure_ascii=False)
     for l in lines:
@@ -453,6 +492,9 @@ def main():
     sb = {'lines': len(S), 'dia': round(mean([l['dia'] for l in S])) if S else None, 'readZ': round(mean([l['z'] for l in S if l['z'] is not None]), 2) if any(l['z'] is not None for l in S) else None,
           'lumensTracked': round(100 * mean(lit)) if lit else None, 'measured': len(lit), 'unmeasured': len(S) - len(lit),
           'gnostic': [l['i'] for l in S if l['credulity'] != 'none'],
+          'teasers': [l['i'] for l in S if l.get('kind') == 'teaser'],   # 11-15: kept and read, and the averages are also given without them
+          'withoutTeasers': {'lines': len([l for l in S if l.get('kind') != 'teaser']), 'dia': (round(mean([l['dia'] for l in S if l.get('kind') != 'teaser'])) if any(l.get('kind') != 'teaser' for l in S) else None),
+                             'readZ': (round(mean([l['z'] for l in S if l.get('kind') != 'teaser' and l['z'] is not None]), 2) if any(l.get('kind') != 'teaser' and l['z'] is not None for l in S) else None)},
           'forecasts': {'lines': [l['i'] for l in FC], 'cameDue': len(FD), 'right': len([l for l in FD if l['forecast'].get('result') == 'right']), 'wrong': len([l for l in FD if l['forecast'].get('result') == 'wrong']),
                         'meanGap': round(mean([abs(l['forecast']['gap']) for l in FD]), 2) if FD else None,
                         'exposure': round(sum(abs(l['forecast']['exposure']) for l in FD), 2) if FD else None}}
