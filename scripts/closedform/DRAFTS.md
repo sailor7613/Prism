@@ -26,3 +26,7 @@ Agreement below is the share of lines on which the three counted readers all giv
 ## After draft 4
 
 The working set is closed for drafting. The next set is new discourse the rules have not seen, read under draft 4 as it stands. How far agreement falls on a new set is the measure of how much of the working set's agreement was fitting. The working set is then re-read under each later draft only as a check that nothing got worse.
+
+## Rulings, 2026-11-16 (evening)
+
+Sailor ruled six kinds of line; all are in `rulings.json` (principles and notForecast), none yet in the questions. For draft 5: a fact held up as a complaint leans frustrated; a claim to be right, a hope, a wait-and-see are rhetorical, not forecasts; the band of a prayer comes from what it says about others; a question is a question unless the post answers it; the speaker on himself is shadow; a teaser is the whole post (the readers missed the 2026-10-23 one).

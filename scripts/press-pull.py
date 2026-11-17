@@ -86,9 +86,18 @@ def ytdlp_json(url, flat=False, n=None):
 def route_youtube(url, program):
     need('yt-dlp', 'pip3 install yt-dlp')
     with tempfile.TemporaryDirectory() as td:
-        subprocess.check_call(['yt-dlp', '--skip-download', '--write-sub', '--write-auto-sub', '--sub-lang', 'en.*,en',
-                               '--sub-format', 'vtt', '--convert-subs', 'vtt', '-o', os.path.join(td, 'v'), '--no-warnings', url])
-        vtts = sorted(f for f in os.listdir(td) if f.endswith('.vtt'))
+        # YouTube answers 429 when several caption tracks are asked for at once, so ask for one at a time,
+        # then fall back to the browser's own sign-in. Stop at the first try that leaves a caption file.
+        base = ['yt-dlp', '--skip-download', '--write-sub', '--write-auto-sub', '--sub-format', 'vtt', '--convert-subs', 'vtt',
+                '--sleep-subtitles', '3', '--retries', '3', '-o', os.path.join(td, 'v'), '--no-warnings']
+        tries = [['--sub-lang', 'en'], ['--sub-lang', 'en-orig'], ['--sub-lang', 'en', '--cookies-from-browser', 'chrome'],
+                 ['--sub-lang', 'en', '--cookies-from-browser', 'safari'], ['--sub-lang', 'en.*']]
+        vtts = []
+        for i, extra in enumerate(tries):
+            if i: import time; time.sleep(8)
+            subprocess.call(base + extra + [url])
+            vtts = sorted(f for f in os.listdir(td) if f.endswith('.vtt') and os.path.getsize(os.path.join(td, f)) > 200)
+            if vtts: break
         if not vtts: sys.exit('no captions on this video')
         pref = [v for v in vtts if not re.search(r'\.en[-_.]?orig', v)] or vtts
         cues = parse_vtt(open(os.path.join(td, pref[0]), encoding='utf-8').read())
@@ -159,7 +168,8 @@ def sweep(pubs, objects, out_dir, days=1):
     try: M = json.load(open(mf))
     except Exception: M = {'schema': 'press/sweeps-manifest/v0', 'dates': []}
     if today.isoformat() not in M['dates']: M['dates'].append(today.isoformat()); M['dates'].sort()
-    json.dump(M, open(mf, 'w'), ensure_ascii=False, indent=1) since = _dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(days=days)
+    json.dump(M, open(mf, 'w'), ensure_ascii=False, indent=1)
+    since = _dt.datetime.now(_dt.timezone.utc) - _dt.timedelta(days=days)
     terms = {o: DEFAULT_TERMS.get(o, [o]) for o in objects}
     report = {'schema': 'press/sweep/v0', 'date': today.isoformat(), 'publications': {}, 'queue': []}
     for pub in pubs:
