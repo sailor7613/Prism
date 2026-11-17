@@ -1,4 +1,4 @@
-# Newsroom digest — 2026-11-16
+# Newsroom digest — 2026-11-17
 
 Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
 
@@ -6,10 +6,9 @@ Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **House votes to effectively end the impeachment effort against Pete Hegseth** — ruling · ruled · holder: the Pentagon · formed 2026-11-11 · 10 outlets (peak 20) · `obj_thepenta_against-effectively-effort-end` · silent 5d after 3 scans
-- **Kennedy family joins lawsuit to block Trump arch** — ruling · ruled · holder: HHS · formed 2026-11-11 · 5 outlets (peak 7) · `obj_hhs_arch-block-family-joins` · silent 5d after 4 scans
-- **Federal government failed to hold Epstein accountable , Republican committee says** — vote · voted · holder: ? · formed 2026-11-11 · 11 outlets (peak 14) · `obj_x_accountable-committee-epstein-failed` · silent 5d after 3 scans
-- **Judge weighs lawsuit brought by Peltola campaign over absentee ballots in Alaska US Senate race** — suit · sued · holder: a federal court · formed 2026-11-11 · 5 outlets (peak 5) · `obj_afederal_absentee-alaska-ballots-brought` · silent 5d after 4 scans
+- **Alaska judge rules request by Peltola campaign for ballot data in Senate race not reasonable** — ruling · ruled · holder: a federal court · formed 2026-11-12 · 11 outlets (peak 17) · `obj_afederal_alaska-ballot-campaign-data` · silent 5d after 4 scans
+- **Father charged with attempted murder after infant found buried alive in dog crate** — indictment · charged · holder: ? · formed 2026-11-12 · 16 outlets (peak 18) · `obj_x_alive-attempted-buried-charged` · silent 5d after 3 scans
+- **Oakdale Visa Fraud Ringleader Sentenced to 10 Years** — indictment · charged · holder: ? · formed 2026-11-12 · 3 outlets (peak 3) · `obj_x_fraud-oakdale-ringleader-sentenced` · silent 5d after 2 scans
 
 ## Returned after a break
 - none today
