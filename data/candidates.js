@@ -1,16 +1,16 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-17T16:16:26.355Z · 16 legislative + 3 news (GDELT, 3d)
+// 2026-11-18T01:03:04.321Z · 16 legislative + 2 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1794932134109,
+    "ts": 1794963728425,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.674,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2347",
+      "salience": 0.672,
+      "congressGovUrl": null,
       "votes": [
         {
           "voteId": "s-119-2-258",
@@ -284,7 +284,7 @@ window.PRISM_CANDIDATES = [
         }
       ]
     },
-    "title": "Survivor Justice Tax Prevention Act (2 roll calls)",
+    "title": "hr-119-2347 (2 roll calls)",
     "summary": "2026-11-10 senate: On the Motion to Proceed — Motion to Proceed Agreed to (62-21; D 15-19 · R 46-1 · I 1-1)\n2026-11-09 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Agreed to (73-25; D 21-23 · R 51-1 · I 1-1)",
     "framingDraft": null,
     "suggestedAxes": null,
@@ -397,11 +397,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1794932134109,
+    "ts": 1794963728425,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.656,
+      "salience": 0.654,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -654,11 +654,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1794932134109,
+    "ts": 1794963728425,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.646,
+      "salience": 0.645,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -911,11 +911,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1794932134109,
+    "ts": 1794963728425,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.611,
+      "salience": 0.609,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1168,11 +1168,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.603,
+      "salience": 0.601,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1425,11 +1425,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.54,
+      "salience": 0.539,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2338,11 +2338,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728425,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.499,
+      "salience": 0.497,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -2866,11 +2866,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728425,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.499,
+      "salience": 0.497,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3782,11 +3782,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.476,
+      "salience": 0.474,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4683,11 +4683,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.283,
+      "salience": 0.282,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5582,11 +5582,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.196,
+      "salience": 0.194,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6494,11 +6494,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.19,
+      "salience": 0.189,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7414,11 +7414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1794932134109,
+    "ts": 1794963728425,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.189,
+      "salience": 0.187,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8324,11 +8324,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.154,
+      "salience": 0.153,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9242,11 +9242,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1794932134108,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.111,
+      "salience": 0.11,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10122,11 +10122,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1794932134107,
+    "ts": 1794963728424,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.107,
+      "salience": 0.105,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -10996,92 +10996,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_air-faa-ground",
-    "source": "news",
-    "ts": 1794932186351,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.537,
-      "articles": [
-        {
-          "title": "US air travel should normalize Sunday after ground stop triggers mass cancellations , FAA says",
-          "url": "https://www.marinij.com/2026/11/13/us-air-travel-should-normalize-sunday-after-ground-stop-triggers-mass-cancellations-faa-says/",
-          "domain": "marinij.com",
-          "seendate": "2026-11-15T07:45:00Z",
-          "image": "https://www.marinij.com/wp-content/uploads/2026/11/APTOPIX_US_Nationwide_Ground_Stop_36833_3bc9c6-12.jpg"
-        },
-        {
-          "title": "US air travel should normalize by Sunday after ground stop triggers mass cancellations , FAA says",
-          "url": "https://www.pressdemocrat.com/2026/11/13/us-air-travel-should-normalize-by-sunday-after-ground-stop-triggers-mass-cancellations-faa-says/",
-          "domain": "pressdemocrat.com",
-          "seendate": "2026-11-14T21:00:00Z",
-          "image": "https://www.pressdemocrat.com/wp-content/uploads/2026/11/APTOPIX_US_Nationwide_Ground_Stop_36833_3bc9c6-11.jpg"
-        },
-        {
-          "title": "US air travel schedule should recover from ground stop by the end of Sunday , FAA says",
-          "url": "https://www.wxii12.com/article/faa-nationwide-ground-stop-sean-duffy-update/74430639",
-          "domain": "wxii12.com",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/92fc554d-0d81-4a5a-ba41-238e6346de40.jpg?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "US air travel schedule should recover from ground stop by the end of Sunday , FAA says",
-          "url": "https://www.wgal.com/article/faa-nationwide-ground-stop-sean-duffy-update/74430639",
-          "domain": "wgal.com",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/92fc554d-0d81-4a5a-ba41-238e6346de40.jpg?crop=1.00xw%3A0.847xh%3B0%2C0"
-        },
-        {
-          "title": "Domestic air travel schedule should recover from ground stop by the end of Sunday , FAA says",
-          "url": "https://www.baltimoresun.com/2026/11/14/domestic-air-travel-schedule-should-recover-from-ground-stop-by-the-end-of-sunday-faa-says/",
-          "domain": "baltimoresun.com",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "https://www.baltimoresun.com/wp-content/uploads/2026/11/AP26317839529157.jpg"
-        },
-        {
-          "title": "US air travel schedule should recover from ground stop by the end of Sunday , FAA says",
-          "url": "https://www.wishtv.com/news/national/thousands-of-flights-canceled-as-airlines-work-to-dig-out-from-nationwide-ground-stop/",
-          "domain": "wishtv.com",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "https://www.wishtv.com/wp-content/uploads/2026/11/14/AP26317861053005-scaled-e1794661463329.jpg"
-        },
-        {
-          "title": "US air travel should recover from ground stop by the end of Sunday , FAA says",
-          "url": "https://www.kcbd.com/2026/11/14/thousands-flights-canceled-airlines-work-dig-out-nationwide-ground-stop/",
-          "domain": "kcbd.com",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "https://gray-kcbd-prod.gtv-cdn.com/resizer/v2/MFQONTSCHJD55O6WIW32U4MHLI.jpg?auth=d9a48023356ae1acc60f69dce0cfd007f545f8eccd593a51d1cc75d028f4bef8&smart=true"
-        },
-        {
-          "title": "US air travel schedule should recover from ground stop by the end of Sunday , FAA says",
-          "url": "https://www.delcotimes.com/2026/11/14/us-air-travel-schedule-should-recover-from-ground-stop-by-the-end-of-sunday-faa-says/",
-          "domain": "delcotimes.com",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "https://www.delcotimes.com/wp-content/uploads/2026/11/APTOPIX_US_Nationwide_Ground_Stop_36833_3bc9c6-8.jpg"
-        }
-      ]
-    },
-    "title": "US air travel schedule should recover from ground stop by the end of Sunday , FAA says",
-    "summary": "2026-11-15 marinij.com: US air travel should normalize Sunday after ground stop triggers mass cancellations , FAA says\n2026-11-14 pressdemocrat.com: US air travel should normalize by Sunday after ground stop triggers mass cancellations , FAA says\n2026-11-14 wxii12.com: US air travel schedule should recover from ground stop by the end of Sunday , FAA says\n2026-11-14 wgal.com: US air travel schedule should recover from ground stop by the end of Sunday , FAA says\n2026-11-14 baltimoresun.com: Domestic air travel schedule should recover from ground stop by the end of Sunday , FAA says\n2026-11-14 wishtv.com: US air travel schedule should recover from ground stop by the end of Sunday , FAA says",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_disruptions-expected-flight",
     "source": "news",
-    "ts": 1794932186351,
+    "ts": 1794963784318,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.415,
+      "salience": 0.36,
       "articles": [
         {
           "title": "Flight disruptions expected to last into Monday",
@@ -11117,9 +11039,9 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ahead-cant-charting",
+    "cid": "cand_news_broken-chaos-could",
     "source": "news",
-    "ts": 1794932186351,
+    "ts": 1794963784318,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
@@ -11127,51 +11049,30 @@ window.PRISM_CANDIDATES = [
       "salience": 0.36,
       "articles": [
         {
-          "title": "  We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
-          "url": "https://www.klcc.org/npr-news/2026-11-14/we-cant-let-them-down-after-midterm-wins-democrats-turn-to-charting-path-ahead",
-          "domain": "klcc.org",
-          "seendate": "2026-11-14T21:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/22/64/879cc2d14c54a9ec911488b48d94/ap26317088763752.jpg"
+          "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
+          "url": "https://www.timesleaderonline.com/news/local-news/2026/11/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder/",
+          "domain": "timesleaderonline.com",
+          "seendate": "2026-11-16T08:15:00Z",
+          "image": "https://ogden_images.s3.amazonaws.com/www.timesleaderonline.com/images/2026/11/15184349/AP26318600536833-1.jpg"
         },
         {
-          "title": "  We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
-          "url": "https://www.kuow.org/npr-news/2026-11-14/we-cant-let-them-down-after-midterm-wins-democrats-turn-to-charting-path-ahead",
-          "domain": "kuow.org",
-          "seendate": "2026-11-14T21:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/22/64/879cc2d14c54a9ec911488b48d94/ap26317088763752.jpg"
+          "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
+          "url": "http://www.dailyadvance.com/news/national/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder/article_2d690647-3e99-5e64-ae1e-72ed9b03814e.html",
+          "domain": "dailyadvance.com",
+          "seendate": "2026-11-15T07:45:00Z",
+          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/9/f5/9f513de1-c3cb-5b68-afd4-50ce23a14a34/6af8a6346dacc.image.jpg?crop=1765%2C927%2C0%2C123"
         },
         {
-          "title": "  We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
-          "url": "https://www.ktep.org/politics/2026-11-14/we-cant-let-them-down-after-midterm-wins-democrats-turn-to-charting-path-ahead",
-          "domain": "ktep.org",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/22/64/879cc2d14c54a9ec911488b48d94/ap26317088763752.jpg"
-        },
-        {
-          "title": "  We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
-          "url": "https://www.wnmufm.org/2026-11-14/we-cant-let-them-down-after-midterm-wins-democrats-turn-to-charting-path-ahead",
-          "domain": "wnmufm.org",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/22/64/879cc2d14c54a9ec911488b48d94/ap26317088763752.jpg"
-        },
-        {
-          "title": "  We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
-          "url": "https://www.kgou.org/politics-and-government/2026-11-14/we-cant-let-them-down-after-midterm-wins-democrats-turn-to-charting-path-ahead",
-          "domain": "kgou.org",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/22/64/879cc2d14c54a9ec911488b48d94/ap26317088763752.jpg"
-        },
-        {
-          "title": "  We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
-          "url": "https://www.delawarepublic.org/npr-headlines/2026-11-14/we-cant-let-them-down-after-midterm-wins-democrats-turn-to-charting-path-ahead",
-          "domain": "delawarepublic.org",
-          "seendate": "2026-11-14T20:00:00Z",
-          "image": "http://npr-brightspot.s3.amazonaws.com/22/64/879cc2d14c54a9ec911488b48d94/ap26317088763752.jpg"
+          "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
+          "url": "https://www.dailygazette.com/hv360/ap/business/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder/article_2e4c1fa1-ead7-5986-92a3-a73a1de2741c.html",
+          "domain": "dailygazette.com",
+          "seendate": "2026-11-15T07:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/dailygazette.com/content/tncms/assets/v3/editorial/0/1d/01dba8b7-971a-5631-8c84-a3d7e64a2551/6af940bf9aa1f.image.jpg?crop=1765%2C927%2C0%2C123"
         }
       ]
     },
-    "title": "  We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
-    "summary": "2026-11-14 klcc.org:   We cant let them down  -- After midterm wins , Democrats turn to charting path ahead\n2026-11-14 kuow.org:   We cant let them down  -- After midterm wins , Democrats turn to charting path ahead\n2026-11-14 ktep.org:   We cant let them down  -- After midterm wins , Democrats turn to charting path ahead\n2026-11-14 wnmufm.org:   We cant let them down  -- After midterm wins , Democrats turn to charting path ahead\n2026-11-14 kgou.org:   We cant let them down  -- After midterm wins , Democrats turn to charting path ahead\n2026-11-14 delawarepublic.org:   We cant let them down  -- After midterm wins , Democrats turn to charting path ahead",
+    "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
+    "summary": "2026-11-16 timesleaderonline.com: Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder\n2026-11-15 dailyadvance.com: Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder\n2026-11-15 dailygazette.com: Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

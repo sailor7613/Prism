@@ -1,4 +1,4 @@
-# Newsroom digest — 2026-11-17
+# Newsroom digest — 2026-11-18
 
 Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
 
@@ -6,9 +6,7 @@ Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Alaska judge rules request by Peltola campaign for ballot data in Senate race not reasonable** — ruling · ruled · holder: a federal court · formed 2026-11-12 · 11 outlets (peak 17) · `obj_afederal_alaska-ballot-campaign-data` · silent 5d after 4 scans
-- **Father charged with attempted murder after infant found buried alive in dog crate** — indictment · charged · holder: ? · formed 2026-11-12 · 16 outlets (peak 18) · `obj_x_alive-attempted-buried-charged` · silent 5d after 3 scans
-- **Oakdale Visa Fraud Ringleader Sentenced to 10 Years** — indictment · charged · holder: ? · formed 2026-11-12 · 3 outlets (peak 3) · `obj_x_fraud-oakdale-ringleader-sentenced` · silent 5d after 2 scans
+- **Progressive Democrats , pundits push for Schumer to be ousted of leadership role** — appointment · personnel · holder: ? · formed 2026-11-13 · 4 outlets (peak 4) · `obj_x_democrats-leadership-ousted-progressive` · silent 5d after 6 scans
 
 ## Returned after a break
 - none today
