@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-18T01:03:04.321Z · 16 legislative + 2 news (GDELT, 3d)
+// 2026-11-18T11:57:40.483Z · 16 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1794963728425,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.672,
+      "salience": 0.67,
       "congressGovUrl": null,
       "votes": [
         {
@@ -397,11 +397,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1794963728425,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.654,
+      "salience": 0.652,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -654,11 +654,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1794963728425,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.645,
+      "salience": 0.643,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -911,11 +911,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1794963728425,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.609,
+      "salience": 0.607,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1168,11 +1168,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.601,
+      "salience": 0.599,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1425,11 +1425,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.539,
+      "salience": 0.537,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2338,11 +2338,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1794963728425,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.497,
+      "salience": 0.495,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -2866,11 +2866,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1794963728425,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.497,
+      "salience": 0.495,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3782,11 +3782,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.474,
+      "salience": 0.472,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4683,11 +4683,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.282,
+      "salience": 0.28,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5582,11 +5582,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.194,
+      "salience": 0.192,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6494,11 +6494,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.189,
+      "salience": 0.187,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7414,11 +7414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1794963728425,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.187,
+      "salience": 0.185,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8324,11 +8324,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.153,
+      "salience": 0.151,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9242,11 +9242,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.11,
+      "salience": 0.108,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10122,11 +10122,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1794963728424,
+    "ts": 1795003015173,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.105,
+      "salience": 0.103,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -10996,14 +10996,370 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_disruptions-expected-flight",
+    "cid": "cand_news_duffy-funding-ground",
     "source": "news",
-    "ts": 1794963784318,
+    "ts": 1795003060480,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.36,
+      "salience": 0.823,
+      "articles": [
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding",
+          "url": "https://wercfm.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "wercfm.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding",
+          "url": "https://wjno.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "wjno.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding",
+          "url": "https://wflaorlando.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "wflaorlando.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding | NewsRadio WKCY",
+          "url": "https://newsradiowkcy.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "newsradiowkcy.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding",
+          "url": "https://960weli.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "960weli.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding | PowerTalk 1460 AM & 101 . 1 FM",
+          "url": "https://powertalk1460.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "powertalk1460.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding | NewsRadio 1370 AM & 92 . 9 FM WSPD",
+          "url": "https://wspd.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "wspd.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding | News Radio 101 . 9 Big WAAX",
+          "url": "https://1019bigwaax.iheart.com/content/2026-11-17-duffy-updates-nationwide-ground-stop-urges-for-more-funding/",
+          "domain": "1019bigwaax.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afcbd5b3c966f9168376311?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding",
+    "summary": "2026-11-18 wercfm.iheart.com: Duffy Updates Nationwide Ground Stop , Urges For More Funding\n2026-11-18 wjno.iheart.com: Duffy Updates Nationwide Ground Stop , Urges For More Funding\n2026-11-18 wflaorlando.iheart.com: Duffy Updates Nationwide Ground Stop , Urges For More Funding\n2026-11-18 newsradiowkcy.iheart.com: Duffy Updates Nationwide Ground Stop , Urges For More Funding | NewsRadio WKCY\n2026-11-18 960weli.iheart.com: Duffy Updates Nationwide Ground Stop , Urges For More Funding\n2026-11-18 powertalk1460.iheart.com: Duffy Updates Nationwide Ground Stop , Urges For More Funding | PowerTalk 1460 AM & 101 . 1 FM",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_confident-hell-leader",
+    "source": "news",
+    "ts": 1795003060480,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.823,
+      "articles": [
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader | Newsradio WFLA Orlando",
+          "url": "https://wflaorlando.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "wflaorlando.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader | PowerTalk 1460 AM & 101 . 1 FM",
+          "url": "https://powertalk1460.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "powertalk1460.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader | NewsRadio 1370 AM & 92 . 9 FM WSPD",
+          "url": "https://wspd.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "wspd.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader | News Radio 101 . 9 Big WAAX",
+          "url": "https://1019bigwaax.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "1019bigwaax.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader",
+          "url": "https://wilm.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "wilm.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader",
+          "url": "https://wercfm.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "wercfm.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader | NewsRadio WKCY",
+          "url": "https://newsradiowkcy.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "newsradiowkcy.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Schumer Confident Hell Be Next Senate Majority Leader",
+          "url": "https://960weli.iheart.com/content/2026-11-17-schumer-confident-hell-be-next-senate-majority-leader/",
+          "domain": "960weli.iheart.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6afccf8bc71a64cf23357dbb?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Schumer Confident Hell Be Next Senate Majority Leader",
+    "summary": "2026-11-18 wflaorlando.iheart.com: Schumer Confident Hell Be Next Senate Majority Leader | Newsradio WFLA Orlando\n2026-11-18 powertalk1460.iheart.com: Schumer Confident Hell Be Next Senate Majority Leader | PowerTalk 1460 AM & 101 . 1 FM\n2026-11-18 wspd.iheart.com: Schumer Confident Hell Be Next Senate Majority Leader | NewsRadio 1370 AM & 92 . 9 FM WSPD\n2026-11-18 1019bigwaax.iheart.com: Schumer Confident Hell Be Next Senate Majority Leader | News Radio 101 . 9 Big WAAX\n2026-11-18 wilm.iheart.com: Schumer Confident Hell Be Next Senate Majority Leader\n2026-11-18 wercfm.iheart.com: Schumer Confident Hell Be Next Senate Majority Leader",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_allies-answers-criticism",
+    "source": "news",
+    "ts": 1795003060480,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.658,
+      "articles": [
+        {
+          "title": "Trump faces criticism as allies press the White House for answers on tech problems",
+          "url": "https://www.wral.com/news/ap/ec4d8-trump-faces-criticism-as-allies-press-the-white-house-for-answers-on-tech-problems/",
+          "domain": "wral.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://images.wral.com/47cca175-eddd-5cb3-8976-559b92bf8bbc"
+        },
+        {
+          "title": "Trump faces criticism , allies press for answers on tech problems – NBC 5 Dallas - Fort Worth",
+          "url": "https://www.nbcdfw.com/news/national-international/trump-faces-criticism-allies-press-white-house-for-answers-tech-problems/4107566/",
+          "domain": "nbcdfw.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://media.nbcdfw.com/2026/11/split-2-diagonal-1200x675-10-4.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Trump faces criticism , allies press for answers on tech problems – NBC Los Angeles",
+          "url": "https://www.nbclosangeles.com/news/national-international/trump-faces-criticism-allies-press-white-house-for-answers-tech-problems/3972059/",
+          "domain": "nbclosangeles.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://media.nbclosangeles.com/2026/11/split-2-diagonal-1200x675-10-4.jpg?quality=85&strip=all"
+        },
+        {
+          "title": "Trump faces criticism as allies press the White House for answers on tech problems",
+          "url": "https://www.mcall.com/2026/11/17/trump-service-disruptions-backlash/",
+          "domain": "mcall.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://www.mcall.com/wp-content/uploads/2026/11/Nationwide_Ground_Stop_4453__8a4d6c.jpg"
+        },
+        {
+          "title": "Trump faces criticism as allies press the White House for answers on tech problems",
+          "url": "https://www.greeleytribune.com/2026/11/17/trump-service-disruptions-backlash/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/11/Nationwide_Ground_Stop_4453__8a4d6c.jpg"
+        }
+      ]
+    },
+    "title": "Trump faces criticism as allies press the White House for answers on tech problems",
+    "summary": "2026-11-18 wral.com: Trump faces criticism as allies press the White House for answers on tech problems\n2026-11-18 nbcdfw.com: Trump faces criticism , allies press for answers on tech problems – NBC 5 Dallas - Fort Worth\n2026-11-18 nbclosangeles.com: Trump faces criticism , allies press for answers on tech problems – NBC Los Angeles\n2026-11-18 mcall.com: Trump faces criticism as allies press the White House for answers on tech problems\n2026-11-18 greeleytribune.com: Trump faces criticism as allies press the White House for answers on tech problems",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_2025-agrees-civilian",
+    "source": "news",
+    "ts": 1795003060480,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.603,
+      "articles": [
+        {
+          "title": "Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
+          "url": "https://www.ksat.com/news/politics/2026/11/17/congress-agrees-on-civilian-plane-locator-mandate-after-deadly-american-airlines-black-hawk-crash/",
+          "domain": "ksat.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/NFWG6A33Y5EKXJLRQQBCWRISSI.jpg?api_key=ksat_9a37fc89631abedf"
+        },
+        {
+          "title": "Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
+          "url": "https://www.mercurynews.com/2026/11/17/aviation-safety-civilian-plane-locator/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/11/Washington_Midair_Collision_46271-1.jpg"
+        },
+        {
+          "title": "Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
+          "url": "https://www.mcall.com/2026/11/17/aviation-safety-civilian-plane-locator/",
+          "domain": "mcall.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://www.mcall.com/wp-content/uploads/2026/11/Washington_Midair_Collision_46271-1.jpg"
+        },
+        {
+          "title": "Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
+          "url": "https://www.greeleytribune.com/2026/11/17/aviation-safety-civilian-plane-locator/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/11/Washington_Midair_Collision_46271-1.jpg"
+        }
+      ]
+    },
+    "title": "Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
+    "summary": "2026-11-18 ksat.com: Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision\n2026-11-18 mercurynews.com: Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision\n2026-11-18 mcall.com: Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision\n2026-11-18 greeleytribune.com: Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_board-ceo-does",
+    "source": "news",
+    "ts": 1795003060480,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.603,
+      "articles": [
+        {
+          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+          "url": "https://www.klcc.org/npr-news/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
+          "domain": "klcc.org",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
+        },
+        {
+          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+          "url": "https://www.kccu.org/business/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
+          "domain": "kccu.org",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
+        },
+        {
+          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+          "url": "https://news.prairiepublic.org/news-from-npr/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
+          "domain": "news.prairiepublic.org",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
+        },
+        {
+          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+          "url": "https://www.kazu.org/npr-news/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
+          "domain": "kazu.org",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
+        }
+      ]
+    },
+    "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+    "summary": "2026-11-18 klcc.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO\n2026-11-18 kccu.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO\n2026-11-18 news.prairiepublic.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO\n2026-11-18 kazu.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_fda-heidi-house",
+    "source": "news",
+    "ts": 1795003060480,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.548,
+      "articles": [
+        {
+          "title": "White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans",
+          "url": "https://www.mercurynews.com/2026/11/17/white-house-pulls-fda-nominee-heidi-overton-after-wavering-support-from-senate-republicans/",
+          "domain": "mercurynews.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://www.mercurynews.com/wp-content/uploads/2026/11/FDA_Commissioner.__6534.jpg"
+        },
+        {
+          "title": "White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans",
+          "url": "https://www.ksat.com/health/2026/11/18/white-house-pulls-fda-nominee-heidi-overton-after-wavering-support-from-senate-republicans/",
+          "domain": "ksat.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/B4BTVCKUBNC5HOIFD67IWVBRG4.jpg?api_key=ksat_9a37fc89631abedf"
+        },
+        {
+          "title": "White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans",
+          "url": "https://www.greeleytribune.com/2026/11/17/white-house-pulls-fda-nominee-heidi-overton-after-wavering-support-from-senate-republicans/",
+          "domain": "greeleytribune.com",
+          "seendate": "2026-11-18T01:15:00Z",
+          "image": "https://www.greeleytribune.com/wp-content/uploads/2026/11/FDA_Commissioner.__6534.jpg"
+        }
+      ]
+    },
+    "title": "White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans",
+    "summary": "2026-11-18 mercurynews.com: White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans\n2026-11-18 ksat.com: White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans\n2026-11-18 greeleytribune.com: White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_disruptions-expected-flight",
+    "source": "news",
+    "ts": 1795003060480,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.292,
       "articles": [
         {
           "title": "Flight disruptions expected to last into Monday",
@@ -11030,49 +11386,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Flight disruptions expected to last into Monday",
     "summary": "2026-11-16 wlrn.org: Flight disruptions expected to last into Monday\n2026-11-16 interlochenpublicradio.org: Flight disruptions expected to last into Monday\n2026-11-16 hppr.org: Flight disruptions expected to last into Monday",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_broken-chaos-could",
-    "source": "news",
-    "ts": 1794963784318,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.36,
-      "articles": [
-        {
-          "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
-          "url": "https://www.timesleaderonline.com/news/local-news/2026/11/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder/",
-          "domain": "timesleaderonline.com",
-          "seendate": "2026-11-16T08:15:00Z",
-          "image": "https://ogden_images.s3.amazonaws.com/www.timesleaderonline.com/images/2026/11/15184349/AP26318600536833-1.jpg"
-        },
-        {
-          "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
-          "url": "http://www.dailyadvance.com/news/national/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder/article_2d690647-3e99-5e64-ae1e-72ed9b03814e.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-11-15T07:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/9/f5/9f513de1-c3cb-5b68-afd4-50ce23a14a34/6af8a6346dacc.image.jpg?crop=1765%2C927%2C0%2C123"
-        },
-        {
-          "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
-          "url": "https://www.dailygazette.com/hv360/ap/business/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder/article_2e4c1fa1-ead7-5986-92a3-a73a1de2741c.html",
-          "domain": "dailygazette.com",
-          "seendate": "2026-11-15T07:45:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/dailygazette.com/content/tncms/assets/v3/editorial/0/1d/01dba8b7-971a-5631-8c84-a3d7e64a2551/6af940bf9aa1f.image.jpg?crop=1765%2C927%2C0%2C123"
-        }
-      ]
-    },
-    "title": "Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
-    "summary": "2026-11-16 timesleaderonline.com: Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder\n2026-11-15 dailyadvance.com: Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder\n2026-11-15 dailygazette.com: Could everything be broken ? Grounded jets , Microsoft outage , AI chaos make some wonder",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
