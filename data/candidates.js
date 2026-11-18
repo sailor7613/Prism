@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-18T11:57:40.483Z · 16 legislative + 7 news (GDELT, 3d)
+// 2026-11-18T20:43:39.635Z · 16 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.67,
+      "salience": 0.669,
       "congressGovUrl": null,
       "votes": [
         {
@@ -397,11 +397,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.652,
+      "salience": 0.651,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -654,11 +654,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.643,
+      "salience": 0.641,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -911,11 +911,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.607,
+      "salience": 0.605,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1168,11 +1168,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.599,
+      "salience": 0.597,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1425,11 +1425,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.537,
+      "salience": 0.535,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2338,11 +2338,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.495,
+      "salience": 0.494,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -2866,11 +2866,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.495,
+      "salience": 0.493,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3782,11 +3782,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.472,
+      "salience": 0.471,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4683,11 +4683,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.28,
+      "salience": 0.278,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5582,11 +5582,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.192,
+      "salience": 0.19,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6494,11 +6494,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.187,
+      "salience": 0.185,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7414,11 +7414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.185,
+      "salience": 0.184,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8324,11 +8324,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.151,
+      "salience": 0.149,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9242,11 +9242,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594716,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.108,
+      "salience": 0.106,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10122,11 +10122,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795003015173,
+    "ts": 1795034594715,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.103,
+      "salience": 0.101,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -10998,12 +10998,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_duffy-funding-ground",
     "source": "news",
-    "ts": 1795003060480,
+    "ts": 1795034619632,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.823,
+      "salience": 0.768,
       "articles": [
         {
           "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding",
@@ -11076,12 +11076,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_confident-hell-leader",
     "source": "news",
-    "ts": 1795003060480,
+    "ts": 1795034619633,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.823,
+      "salience": 0.768,
       "articles": [
         {
           "title": "Schumer Confident Hell Be Next Senate Majority Leader | Newsradio WFLA Orlando",
@@ -11154,12 +11154,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_allies-answers-criticism",
     "source": "news",
-    "ts": 1795003060480,
+    "ts": 1795034619632,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.658,
+      "salience": 0.603,
       "articles": [
         {
           "title": "Trump faces criticism as allies press the White House for answers on tech problems",
@@ -11211,12 +11211,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2025-agrees-civilian",
     "source": "news",
-    "ts": 1795003060480,
+    "ts": 1795034619632,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.603,
+      "salience": 0.548,
       "articles": [
         {
           "title": "Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
@@ -11259,64 +11259,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_board-ceo-does",
-    "source": "news",
-    "ts": 1795003060480,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.603,
-      "articles": [
-        {
-          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-          "url": "https://www.klcc.org/npr-news/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
-          "domain": "klcc.org",
-          "seendate": "2026-11-18T01:15:00Z",
-          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
-        },
-        {
-          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-          "url": "https://www.kccu.org/business/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
-          "domain": "kccu.org",
-          "seendate": "2026-11-18T01:15:00Z",
-          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
-        },
-        {
-          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-          "url": "https://news.prairiepublic.org/news-from-npr/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
-          "domain": "news.prairiepublic.org",
-          "seendate": "2026-11-18T01:15:00Z",
-          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
-        },
-        {
-          "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-          "url": "https://www.kazu.org/npr-news/2026-11-17/nvidia-board-says-it-does-not-intend-to-reinstate-jensen-huang-as-ceo",
-          "domain": "kazu.org",
-          "seendate": "2026-11-18T01:15:00Z",
-          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/e0/bd/038464ef47e8aca105d3fd442b4d/gettyimages-2304269603.jpg"
-        }
-      ]
-    },
-    "title": "Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-    "summary": "2026-11-18 klcc.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO\n2026-11-18 kccu.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO\n2026-11-18 news.prairiepublic.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO\n2026-11-18 kazu.org: Nvidia board says it does not intend to reinstate Jensen Huang as CEO",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_fda-heidi-house",
     "source": "news",
-    "ts": 1795003060480,
+    "ts": 1795034619632,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.548,
+      "salience": 0.493,
       "articles": [
         {
           "title": "White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans",
@@ -11354,12 +11304,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_disruptions-expected-flight",
     "source": "news",
-    "ts": 1795003060480,
+    "ts": 1795034619632,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.292,
+      "salience": 0.237,
       "articles": [
         {
           "title": "Flight disruptions expected to last into Monday",
