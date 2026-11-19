@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-18T20:43:39.635Z · 16 legislative + 6 news (GDELT, 3d)
+// 2026-11-19T02:40:54.828Z · 16 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.669,
+      "salience": 0.668,
       "congressGovUrl": null,
       "votes": [
         {
@@ -397,11 +397,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.651,
+      "salience": 0.649,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -654,11 +654,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.641,
+      "salience": 0.64,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -911,11 +911,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.605,
+      "salience": 0.604,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1168,11 +1168,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.597,
+      "salience": 0.596,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1425,11 +1425,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005387,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.535,
+      "salience": 0.534,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2338,11 +2338,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.494,
+      "salience": 0.493,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -2866,11 +2866,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.493,
+      "salience": 0.492,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3782,11 +3782,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005387,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.471,
+      "salience": 0.47,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4683,11 +4683,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005387,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.278,
+      "salience": 0.277,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5582,11 +5582,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005387,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.19,
+      "salience": 0.189,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6494,11 +6494,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.185,
+      "salience": 0.184,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7414,11 +7414,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.184,
+      "salience": 0.183,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8324,11 +8324,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005388,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.149,
+      "salience": 0.148,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9242,11 +9242,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795034594716,
+    "ts": 1795056005387,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.106,
+      "salience": 0.105,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10122,11 +10122,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795034594715,
+    "ts": 1795056005387,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.101,
+      "salience": 0.1,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -10998,12 +10998,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_duffy-funding-ground",
     "source": "news",
-    "ts": 1795034619632,
+    "ts": 1795056054825,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.768,
+      "salience": 0.731,
       "articles": [
         {
           "title": "Duffy Updates Nationwide Ground Stop , Urges For More Funding",
@@ -11076,12 +11076,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_confident-hell-leader",
     "source": "news",
-    "ts": 1795034619633,
+    "ts": 1795056054825,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.768,
+      "salience": 0.731,
       "articles": [
         {
           "title": "Schumer Confident Hell Be Next Senate Majority Leader | Newsradio WFLA Orlando",
@@ -11154,12 +11154,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_allies-answers-criticism",
     "source": "news",
-    "ts": 1795034619632,
+    "ts": 1795056054825,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.603,
+      "salience": 0.566,
       "articles": [
         {
           "title": "Trump faces criticism as allies press the White House for answers on tech problems",
@@ -11211,12 +11211,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_2025-agrees-civilian",
     "source": "news",
-    "ts": 1795034619632,
+    "ts": 1795056054825,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.548,
+      "salience": 0.511,
       "articles": [
         {
           "title": "Congress agrees on civilian plane locator mandate after deadly 2025 Washington , DC , midair collision",
@@ -11261,12 +11261,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_fda-heidi-house",
     "source": "news",
-    "ts": 1795034619632,
+    "ts": 1795056054824,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.493,
+      "salience": 0.456,
       "articles": [
         {
           "title": "White House pulls FDA nominee Heidi Overton after wavering support from Senate Republicans",
@@ -11304,12 +11304,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_disruptions-expected-flight",
     "source": "news",
-    "ts": 1795034619632,
+    "ts": 1795056054825,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.237,
+      "salience": 0.2,
       "articles": [
         {
           "title": "Flight disruptions expected to last into Monday",

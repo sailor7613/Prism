@@ -1,4 +1,4 @@
-# Newsroom digest — 2026-11-18
+# Newsroom digest — 2026-11-19
 
 Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
 
@@ -6,7 +6,7 @@ Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Progressive Democrats , pundits push for Schumer to be ousted of leadership role** — appointment · personnel · holder: ? · formed 2026-11-13 · 4 outlets (peak 4) · `obj_x_democrats-leadership-ousted-progressive` · silent 5d after 6 scans
+- **Disaster for justice : Trump slams Newsom plan to commute California death sentences** — indictment · charged · holder: a state · formed 2026-11-14 · 3 outlets (peak 3) · `obj_astate_california-commute-death-disaster` · silent 5d after 5 scans
 
 ## Returned after a break
 - none today
