@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-11-20
 
-Register: 168 objects · this scan: 0 new, 3 seen again, 1 returned.
+Register: 168 objects · this scan: 0 new, 2 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -9,7 +9,7 @@ Register: 168 objects · this scan: 0 new, 3 seen again, 1 returned.
 - none today
 
 ## Returned after a break
-- **Senate reaches bipartisan deal on permitting bill to speed approvals of new energy projects** — agreement · agreed · holder: the Senate · formed 2026-09-30 · 5 outlets (peak 5) · `obj_thesenat_approvals-bill-bipartisan-deal`
+- none today
 
 ## New objects (all)
 - none
