@@ -1,18 +1,23 @@
-# Newsroom digest — 2026-11-19
+# Newsroom digest — 2026-11-20
 
-Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 168 objects · this scan: 4 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (3)
+- **Senate Republican makes final push to end filibuster** — vote · voted · holder: the Senate · formed 2026-11-19 · 7 outlets (peak 7) · `obj_thesenat_end-filibuster-final-makes`
+- **Denmark ratifies Trump security deal over Greenland** — vote · voted · holder: the President · formed 2026-11-19 · 3 outlets (peak 3) · `obj_thepresi_deal-denmark-greenland-ratifies`
+- **Senate Republicans block latest Democratic effort to end the war in Iran** — ruling · ruled · holder: the Senate · formed 2026-11-19 · 3 outlets (peak 3) · `obj_thesenat_block-democratic-effort-end`
 
 ## Permanence breaks (went silent while unresolved)
-- **Disaster for justice : Trump slams Newsom plan to commute California death sentences** — indictment · charged · holder: a state · formed 2026-11-14 · 3 outlets (peak 3) · `obj_astate_california-commute-death-disaster` · silent 5d after 5 scans
+- none today
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- none
+- **Denmark ratifies Trump security deal over Greenland** — vote · voted · holder: the President · formed 2026-11-19 · 3 outlets (peak 3) · `obj_thepresi_deal-denmark-greenland-ratifies`
+- **California AG subpoenas Nvidia over concerns about former CEO , China ties** — hearing · compelled · holder: ? · formed 2026-11-20 · 3 outlets (peak 3) · `obj_x_about-california-ceo-china`
+- **Senate Republicans block latest Democratic effort to end the war in Iran** — ruling · ruled · holder: the Senate · formed 2026-11-19 · 3 outlets (peak 3) · `obj_thesenat_block-democratic-effort-end`
+- **Senate Republican makes final push to end filibuster** — vote · voted · holder: the Senate · formed 2026-11-19 · 7 outlets (peak 7) · `obj_thesenat_end-filibuster-final-makes`
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
