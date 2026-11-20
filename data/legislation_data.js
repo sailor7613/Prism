@@ -2616,8 +2616,8 @@ const LEGISLATION_DATA = [
     "name": "Survivor Justice Tax Prevention Act",
     "meta": "H.R. 2347 · Passed House · Tax Policy",
     "id": "hr-119-2347",
-    "rc": 2,
-    "mm": 0.49
+    "rc": 3,
+    "mm": 0.305
   },
   {
     "name": "To authorize, ratify, and confirm the Agreement of Settlement and Compromise to Resolve the Akwesasne Mohawk Land Claim in the State of New York, and for other purposes.",
