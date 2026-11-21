@@ -1,20 +1,18 @@
 # Newsroom digest — 2026-11-21
 
-Register: 172 objects · this scan: 2 new, 1 seen again, 1 returned.
+Register: 173 objects · this scan: 1 new, 5 seen again, 0 returned.
 
-## Queued for drafting (2)
-- **A second judge blocks Trump arch , saying it unlikely to succeed in court** — ruling · ruled · holder: a federal court · formed 2026-11-20 · 6 outlets (peak 6) · `obj_afederal_arch-blocks-court-judge`
-- **Court approves $7 . 25 billion settlement with Bayer over claims Roundup weed killer caused cancer** — vote · voted · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_approves-bayer-billion-cancer`
+## Queued for drafting (1)
+- **Judge Orders Halt On Iowa Lead Detonation Plan** — ruling · ruled · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_detonation-halt-iowa-judge`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
 
 ## Returned after a break
-- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 12 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction`
+- none today
 
 ## New objects (all)
-- **Court approves $7 . 25 billion settlement with Bayer over claims Roundup weed killer caused cancer** — vote · voted · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_approves-bayer-billion-cancer`
-- **A second judge blocks Trump arch , saying it unlikely to succeed in court** — ruling · ruled · holder: a federal court · formed 2026-11-20 · 6 outlets (peak 6) · `obj_afederal_arch-blocks-court-judge`
+- **Judge Orders Halt On Iowa Lead Detonation Plan** — ruling · ruled · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_detonation-halt-iowa-judge`
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
