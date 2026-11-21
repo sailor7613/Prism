@@ -1,20 +1,19 @@
-# Newsroom digest — 2026-11-17
+# Newsroom digest — 2026-11-20
 
-Register: 164 objects · this scan: 0 new, 0 seen again, 0 returned.
+Register: 170 objects · this scan: 2 new, 3 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Alaska judge rules request by Peltola campaign for ballot data in Senate race not reasonable** — ruling · ruled · holder: a federal court · formed 2026-11-12 · 11 outlets (peak 17) · `obj_afederal_alaska-ballot-campaign-data` · silent 5d after 4 scans
-- **Father charged with attempted murder after infant found buried alive in dog crate** — indictment · charged · holder: ? · formed 2026-11-12 · 16 outlets (peak 18) · `obj_x_alive-attempted-buried-charged` · silent 5d after 3 scans
-- **Oakdale Visa Fraud Ringleader Sentenced to 10 Years** — indictment · charged · holder: ? · formed 2026-11-12 · 3 outlets (peak 3) · `obj_x_fraud-oakdale-ringleader-sentenced` · silent 5d after 2 scans
+- none today
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- none
+- **Accused child sex predator Thomas Markle ruled competent to face trial** — ruling · ruled · holder: ? · formed 2026-11-20 · 3 outlets (peak 3) · `obj_x_accused-child-competent-face`
+- **California attorney general subpoenas Nvidia over chips , former CEO affair** — hearing · compelled · holder: the Justice Department · formed 2026-11-20 · 3 outlets (peak 3) · `obj_thejusti_affair-attorney-california-ceo`
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`

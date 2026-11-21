@@ -1,0 +1,1842 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-19",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 19,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 7,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 1,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 37,
+   "hits": 12,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 20,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 8,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 9,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 2,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 9,
+   "hits": 4,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 120,
+   "hits": 20,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 71,
+   "hits": 37,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 4,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Takeaways From the 2026 DealBook Summit",
+   "dek": "Leaders in artificial intelligence and governments discussed America’s shifting politics, the reverberations of Jensen Huang’s ouster at Nvidia and more on Wednesday.",
+   "opening": "",
+   "published": "2026-11-19T14:08:33+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/business/dealbook/dealbook-summit-musk-altman-ellison.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Saudi Sovereign Wealth Fund Tower Damaged as Houthis Attack Riyadh",
+   "dek": "Windows were blown out of a skyscraper that is home to the Public Investment Fund after the Yemeni militia fired missiles at the Saudi capital.",
+   "opening": "",
+   "published": "2026-11-19T14:01:32+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/world/middleeast/saudi-pif-riyadh-tower-houthis-attack.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic’s Trillion-Dollar Debut Is Watershed Moment for A.I.’s Risks and Rewards",
+   "dek": "As the technology surges ahead, policymakers in Washington have struggled to prepare for potential disruption to workers, businesses and the rest of the economy.",
+   "opening": "",
+   "published": "2026-11-19T13:20:40+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/business/anthropic-ipo-washington.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s DISASTEROUS election is over. Now DEMS must DELIVER.",
+   "dek": "Trump’s historic midterms defeat means the new Congress will be completely controlled by Democrats in January. Democrats also won big in the states with governorships. Symone and Eugene are clocking their campaign promises and talking about what they will do with this mandate and with this power. They make it clear these winners need to move fast to deliver on affordability issues like the cost of pharmaceuticals, groceries, and gas. They also talk about the need for Democrats to think about the larger picture – ending the filibuster and getting rid of the electoral college. Dr. Greg Carr, Ass",
+   "opening": "",
+   "published": "2026-11-19T13:00:31+00:00",
+   "link": "https://www.youtube.com/watch?v=s1Crp9ICmTE",
+   "videoId": "s1Crp9ICmTE",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How the War in Iran Will Remake the Global Energy Order",
+   "dek": "The International Energy Agency, in its most comprehensive analysis of the war’s fallout, found the oil shock could accelerate adoption of alternative power sources.",
+   "opening": "",
+   "published": "2026-11-19T12:51:17+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/business/cop31-energy-iea.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani, Musk, Altman, A.I. and Other DealBook Summit Highlights",
+   "dek": "Artificial intelligence, bubble fears, the Nvidia fallout, prediction markets, politics and other big topics that made headlines this year.",
+   "opening": "",
+   "published": "2026-11-19T12:20:02+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/business/dealbook/mamdani-musk-altman-summit-highlights.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Joe pokes fun at Elon Musk for saying he’s ‘not MAGA’",
+   "dek": "After spending hundreds of millions of dollars on Republican gubernatorial and senate campaigns, tech billionaire Elon Musk told the New York Times on Wednesday that he’s “not MAGA.” Joe pokes fun at the turnaround, saying on Morning Joe: “We will accept you.” MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most impor",
+   "opening": "",
+   "published": "2026-11-19T12:14:22+00:00",
+   "link": "https://www.youtube.com/shorts/HIGcLtqr89M",
+   "videoId": "HIGcLtqr89M",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran Keeps Up Unrelenting Attacks on Ships in the Strait of Hormuz",
+   "dek": "A recent strike on a ship that had already been disabled might signal a dangerous new phase for tankers operating in the Persian Gulf and surrounding waters.",
+   "opening": "",
+   "published": "2026-11-19T11:45:10+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/business/iran-tanker-attack-strait-of-hormuz.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of",
+     "tanker"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump claims Iran is developing bioweapons: Is there any evidence?",
+   "dek": "Trump threatens to &#039;wipe out&#039; Iran in case of attack as Tehran&#039;s capabilities remain unclear.",
+   "opening": "",
+   "published": "2026-11-19T11:38:39+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/19/trump-claims-iran-is-developing-bioweapons-is-there-any-evidence?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Confessions of a Former Prepper. Anthropic’s IPO and the Great AI Divide. Plus. . .",
+   "dek": "In today&#8217;s Front Page, Ross Douthat and Joe Nocera on the human Davids and their AI Goliaths. Jon Stokes makes the case for a minimal amount of doomsday prep. John Podhoretz on Hollywood&#8217;s golden age of self-pity. Jay Solomon on the frustrated former acolytes of millionaire Marxist heir Fergie Chambers. And much more.",
+   "opening": "It&#8217;s Thursday, November 19. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Confessions of a former prepper. John Podhoretz on Hollywood&#8217;s golden age of self-pity. Jay Solomon on the frustrated former acolytes of multimillionaire Marxist heir Fergie Chambers. And much more. But first: Ross Douthat and Joe Nocera on Anthropic&#8217;s IPO and the great AI divide. If you&#8217;re wondering why we live in an anxious, paranoid age, consider the stories that have dominated the news in recent days. The CEO of the most important chip manufacturer in the world has been accused of having an affair with an alleged Chinese spy and helping smuggle strategically vital technology into China. (Read our coverage of that here and here .) Air traffic control, banks, national security agencies, and other important systems have all been hit by tech outages in recent days. A coincidence&#8212;or evidence of something more sinister? (Read what the experts we asked had to say about that.) U.S. intelligence reportedly indicates that Iran is developing plans to detonate a dirty bomb in Washington, D.C. The president of the United States will meet today with his Russian and Chinese counterparts in what some have billed as Yalta 2.0. (Read Aaron MacLean on that summit .) Honeytraps, cyberattacks, and nuclear weapons. All set against the backdrop of a second Cold War. No wonder Niall Ferguson argued that James Bond ",
+   "published": "2026-11-19T11:03:27+00:00",
+   "link": "https://www.thefp.com/p/confessions-of-a-former-prepper-anthropics-ipo-plus",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Use Underdog Promo Code FOXNEWS to Unlock Play $10, Get $50 Promo for Texans-Colts on TNF",
+   "dek": "Use Underdog promo code FOXNEWS to unlock a play $10, get $50 promo in bonus entries for Colts at Texans on Thursday Night Football.",
+   "opening": "Week 11 opens with an AFC South rivalry in Houston. The Texans host the Colts on Thursday Night Football, and the betting market has moved hard toward the home team all week. Underdog is offering new users promo code FOXNEWS to unlock a play $10, get $50 promo in bonus entries for Texans-Colts. Both teams have struggled this season. Houston is 3-6 and Indianapolis is 3-7, but the Texans are now double-digit favorites after opening around 10 points. The Colts won the first meeting 19-17 in September, and they’ve covered in five of the last seven matchups between these rivals. Odds are subject to change Nico Collins receiving yards (higher): Houston’s offense leans on the pass, and Collins is C.J. Stroud’s top target. Indianapolis ranks near the bottom of the league in yards allowed per play, which makes this a favorable matchup for a big-play receiver. One deep shot can do most of the work. C.J. Stroud passing yards (higher): Stroud should have time and room against a Colts defense that has given up plenty this season. Even if Houston builds a lead, the Texans’ offense is built around Stroud’s arm, and he’ll keep throwing to put the game away. Jonathan Taylor rushing yards (higher): Indianapolis will lean on its best player to stay in the game. Taylor is the focal point of the Colts’ offense, and a heavy workload on a short week is the safest path for Indianapolis to keep it competitive. Houston can climb back into the AFC South race with a win. Indianapolis would love nothing",
+   "published": "2026-11-19T09:35:54-05:00",
+   "link": "https://www.foxnews.com/outkick-betting/use-underdog-promo-code-foxnews-unlock-play-10-get-50-promo-texans-colts-tnf",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "me-sen": [
+     "collins"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "ASRA Q. NOMANI: Old-guard Dems face Frankenstein moment as leftists come for them",
+   "dek": "Last Thursday, Ben Cohen and CodePink packed a House Longworth Building office demanding an end to the Iran war as activists turn on Democratic leaders.",
+   "opening": "WASHINGTON, D.C. — Ice cream magnate Ben Cohen and activists from the far-left nonprofit CodePink packed into a lawmaker's office in House Longworth Building Room 1236 last week, demanding an end to the war in Iran, a cutoff of U.S. military ties to Israel and the removal of Pentagon chief Pete Hegseth. Next door, in House Rayburn Building Room 2267, Capitol police officers arrested far-left, anti-Israel demonstrators, including prolific street theater activist Hazami Barmada, cloaked in symbolic blood red, as they packed another lawmaker's office, condemning complicity in Israel's alleged \"genocide\" of Palestinians in Gaza. Across Capitol Hill in Senate Hart Building Room 322, police officers arrested young adults from a far-left nonprofit and political action committee, Sunrise Movement, as they packed a senator's office, condemning his politics, including his support of Israel. The next day, an activist from a far-left nonprofit, Climate Defiance, screamed at a high-ranking lawmaker speaking at a political conference, calling him a \"traitor.\" But they weren't going after Republican lawmakers. They were far-left activists with a special target: The Democratic Party's leadership. JEFFRIES BRUSHES OFF OPPOSITION FROM FAR-LEFT DEMS WHO VOTED NO: 'WE’RE GOING TO WORK TOGETHER' The target of Cohen, the co-founder of Ben and Jerry's, was California Democratic Rep. Nancy Pelosi , former speaker of the House. The anti-Israel protesters had filled the office of Democratic Rep. Hakee",
+   "published": "2026-11-19T08:48:17-05:00",
+   "link": "https://www.foxnews.com/politics/asra-q-nomani-like-frankensteins-monster-far-left-network-turns-democrats-chuck-schumer",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "2026 CMA Awards: Winners and losers",
+   "dek": "Ella Langley led all nominees with nine nods at the 60th CMA Awards in Nashville, but the night&apos;s biggest winners may surprise country music fans.",
+   "opening": "The 60th CMA Awards took place Wednesday night at the Bridgestone Arena in Nashville, Tennessee, with Lainey Wilson returning as the award show's host for the third year in a row. Ella Langley capped off a historic night at the CMA Awards by winning entertainer of the year. With wins for entertainer, female vocalist, album (\"Dandelion\"), single, song, and music video of the year (\"Choosin' Texas\"), she became the first woman in CMA history, and only the second artist ever, alongside Alan Jackson in 2002, to sweep the ceremony's top five honors in a single night. Langley led the pack in nominations with a total of nine nominations, followed by Miranda Lambert with seven and Kacey Musgraves with five, proving women are taking over country music. MIRANDA LAMBERT, CARRIE UNDERWOOD 'SHOULD GET A RIBBON' FOR SURVIVING COUNTRY MUSIC IN MALE-DOMINATED ERA Here are the night’s biggest winners and all the nominees. WATCH: ELLA LANGLEY’S HANDS ARE FULL AFTER HISTORIC CMA AWARDS SWEEP WATCH: ELLA LANGLEY, MIRANDA LAMBERT AND THE 'CHOOSIN' TEXAS' TEAM POSE WITH THEIR CMA AWARDS WATCH: MIRANDA LAMBERT POSES WITH HER CMA AWARDS FOLLOWING HER WINS COUNTRY STARS LAINEY WILSON, LEANN RIMES AND KELSEA BALLERINI DAZZLE ON CMA AWARDS RED CARPET IN NASHVILLE GET ENTERTAINMENT SCOOP DELIVERED RIGHT TO YOUR EMAIL BY CLICKING HERE LIKE WHAT YOU'RE READING? CLICK HERE FOR MORE ENTERTAINMENT NEWS PUT YOUR ENTERTAINMENT KNOWLEDGE TO THE TEST AND SEE HOW YOU SCORE",
+   "published": "2026-11-19T08:30:49-05:00",
+   "link": "https://www.foxnews.com/entertainment/2026-cma-awards-winners-losers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Former Giants DC says Cam Skattebo shows exactly what went wrong under Brian Daboll's New York Giants",
+   "dek": "Wink Martindale says Cam Skattebo is a prime example of why the old New York Giants lost, jabbing Brian Daboll&apos;s regime over the quarterback sneak blunder.",
+   "opening": "Ex-Giants defensive coordinator Wink Martindale won't shy away from jabbing the franchise that bungled his exit. Since his somewhat mysterious ousting during the Brian Daboll era in January 2024, Martindale has been leaking details, mainly through his opinions of Daboll and players from that regime. Martindale targeted running back Cam Skattebo and former head coach Brian Daboll on Pat Leonard’s Talkin’ Ball podcast Wednesday. The former DC linked New York’s current backfield habits to the previous leadership's failed strategy. JAYDEN DANIELS THROWS THREE TOUCHDOWNS AS COMMANDERS RALLY PAST GIANTS THURSDAY NIGHT \"Skattebo for example, he's a great example of why the old Giants lost. ... The old regime was more interested in the buzz, the headlines. Which players were marketable on Twitter and things like that. Staring into the camera, and all that. How about pick up a blitz? How about shoving your quarterback on a quarterback sneak instead of staying in your stance?\" Martindale said. Martindale revisited last week's matchup, naming two moments from New York’s 24-21 Week 10 loss to Washington : Skattebo frozen on the field, stuck in his stance during a critical third-and-1 quarterback sneak. His brief stint in the doghouse over fumbling issues this season also contributes to Skattebo's shaky grip on the RB1 role. Weeks earlier on the same show, Martindale, not so generously, called Skattebo \"more of a Mike Alstott fullback slash, you know, running back.\" \"The old regime\" aims ",
+   "published": "2026-11-19T08:18:30-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/former-giants-dc-says-cam-skattebo-shows-exactly-what-went-wrong-under-brian-daboll-new-york-giants",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "leadership",
+     "role"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans hold lone Alaska House seat despite losing Senate, governor races",
+   "dek": "Rep. Nick Begich won re-election to Alaska&apos;s lone House seat after ranked-choice tabulation, a rare Republican bright spot in a Democratic wave.",
+   "opening": "Rep. Nick Begich, R-Alaska, won re-election to Alaska’s lone House seat Wednesday, surviving a Democratic wave that flipped both the Senate seat and the governor’s mansion. Begich, who was endorsed by President Donald Trump, defeated independent challenger Bill Hill, a commercial fisherman and retired teacher backed by the Alaska Democratic Party, following the state’s ranked-choice voting tabulation. Begich’s victory, called at 9:27 p.m. ET on Wednesday – more than two weeks after Election Day – stood in sharp contrast to the rest of Alaska’s top-of-the-ticket results, where voters handed Democrats major breakthroughs despite Trump winning the state by 13% in 2024. HUNDREDS OF SUBPOENAS FLY IN DOJ’S ‘DECOY DAN’ PROBE AS DEMOCRAT PELTOLA DECLARED WINNER IN ALASKA The race was among the final House contests called nationally after the Nov. 3 general election, offering a rare bright spot for Republicans in a midterm cycle that saw Democrats seize control of both chambers of Congress. Democrats thus far hold a 257-172 majority in the House, having flipped 46 seats to just three for Republicans. There are three races that remain too close to call. \"This process requires engagement, and the perspectives brought forward during the campaign added value for Alaskans as they made important decisions about their vote in this race,\" Begich said in a statement after his victory. Hill, who campaigned on lowering costs, curbing big money in politics and pushing back against billionaires, s",
+   "published": "2026-11-19T07:43:44-05:00",
+   "link": "https://www.foxnews.com/politics/republicans-hold-lone-alaska-house-seat-despite-losing-senate-governor-races",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "republican"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "brought",
+     "peltola",
+     "campaign"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Super Bowl champ Ben Watson speaks out on Christian Nigerian persecution, double-standards and Trump's impact",
+   "dek": "Super Bowl champion Benjamin Watson says he doesn&apos;t trust US leadership to protect persecuted Christians in Nigeria without public pressure on lawmakers.",
+   "opening": "Super Bowl champion Benjamin Watson called out \"double standards\" in human rights advocacy when asked about attention to Palestinians compared with persecuted Christians in Nigeria, and said he doesn’t trust US leadership to protect Christians in Nigeria without public pressure. \"I do think that there are double standards. I do think that, you know, we will exclude certain people from the same type of human dignity that we want for ourselves. I believe everybody deserves human dignity,\" Watson told Fox News Digital. \"I believe that the Palestinian deserves human dignity and respect. I believe that the Jew deserves human dignity and respect. I believe that those in Nigeria who are suffering deserve human dignity, and they have human dignity, and they deserve respect.\" Watson, a former New England Patriots tight end, is working with Global Christian Relief on its Stand With Them campaign, which aims to raise $1 million for relief and rebuilding efforts in Nigeria. Asked whether he trusted Trump to continue prioritizing the issue, Watson answered, \"No, I don’t. I don’t,\" despite the fact that Trump has already ordered a military strike against those targeting Christians in the country. \"And so I don’t trust that he will keep pressing this. I do trust that any president or any representative will push what the people think is important,\" he said. Watson urged Americans to contact lawmakers and discuss the crisis in their churches, homes and online. He also credited the administra",
+   "published": "2026-11-19T07:20:20-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/super-bowl-champ-ben-watson-speaks-christian-nigerian-persecution-double-standards-trumps-impact",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "push",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "China blocks Bloomberg reporter from Trump-Putin-Xi meeting over question to Trump",
+   "dek": "Chinese officials barred Bloomberg&apos;s Annmarie Hordern from the meeting of President Donald Trump, Xi Jinping and Vladimir Putin after her earlier question.",
+   "opening": "Chinese officials barred a Bloomberg reporter from a high-stakes meeting between President Donald Trump, Chinese President Xi Jinping and Russian President Vladimir Putin after she asked a question during an earlier bilateral session. The clash over press access unfolded on the sidelines of the Asia-Pacific Economic Cooperation Summit in Shenzhen, China , where the three leaders gathered for their first-ever three-way meeting to discuss nuclear arms control, trade and the wars in Ukraine and Iran. Despite a push from the White House to get her admitted, Chinese officials refused to budge on barring Bloomberg reporter Annmarie Hordern from the room. Hordern was blocked after she called out a question to Trump during his earlier one-on-one meeting with Xi: \"President Trump, has Jensen Huang been disloyal to the United States?\" CHINA'S XI SURPRISES TRUMP AT TARMAC, RECIPROCATING GESTURE SHOWN MONTHS AGO A second reporter also started to ask a question during the bilateral session but was shushed by Chinese officials. Beijing subsequently passed along a message to the U.S. travel pool warning that yelling questions is considered \"extremely rude\" and that journalists would be pulled from the room if they did so. A White House official, speaking on condition of anonymity because of the sensitivity surrounding the issue, said Chinese officials insisted Hordern not be allowed into the trilateral meeting even as the White House advocated for her inclusion. TRUMP BRINGS TWO DIVIDED CAB",
+   "published": "2026-11-19T07:10:11-05:00",
+   "link": "https://www.foxnews.com/politics/china-blocks-bloomberg-reporter-trump-putin-xi-meeting-question-trump",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s historic summit with Xi, Putin marks unprecedented moment in global diplomacy and more top headlines",
+   "dek": "Get all the stories you need-to-know from the most powerful name in news delivered first thing every morning to your inbox.",
+   "opening": "1. Trump’s summit with Xi, Putin marks unprecedented moment in global diplomacy 2. Trump downplays panic over tech outages: ‘Nobody’s going to play games with us’ 3. Elected Somali daycare owner in hot seat again as ICE confirms rumors about his wife NO MERCY — Susan Smith prosecutor fears her release would put her in grieving father’s face ‘every day’. Continue reading … ESCALATING THREAT — Iran hammers US radar installation in Bahrain for the third time in under a week. Continue reading … RADICALS REJOICE — Communist groups declare victory as Mamdani scraps NYPD unit. Continue reading … ‘WE’VE GOT THIS' — Nvidia’s new leader delivers bold message after Jensen Huang’s scandalous exit. Continue reading … -- CONTEMPT FIGHT — Supreme Court urged to defang ‘criminal trap’ that has sent Trump officials to prison. Continue reading … FISCAL FIGHT — Democrats could enter congressional majority in a government shutdown. Continue reading … FEDERAL DRAGNET — Alaska's 'Decoy Dan' scandal escalates as details of vast DOJ probe emerge after Dem win. Continue reading … AMERICA TARGETED — Irish activist indicted after allegedly plotting months to destroy $60M US warplane. Continue reading … Click here for more cartoons… NEAR-FATAL DOSE — Woman who says abortion pills nearly killed her urges RFK Jr to act on mail-order crackdown. Continue reading ... HOLLYWOOD WISHLIST — Trans actress pitched as 007's love interest to 'make history'. Continue reading … COSTLY SLIP-UP — Biden addresses infamo",
+   "published": "2026-11-19T07:10:01-05:00",
+   "link": "https://www.foxnews.com/us/trumps-historic-summit-xi-putin-global-diplomacy-more-top-headlines",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "chips": [
+     "nvidia"
+    ],
+    "shutdown": [
+     "shutdown"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MICHAEL RUIZ: What is a dirty bomb? Explosive terror threat explained",
+   "dek": "Iran&apos;s reported dirty bomb exploration puts new focus on a threat experts say could shut down a city and displace families even without mass casualties.",
+   "opening": "While no dirty bomb is known to have been successfully detonated in a terror attack, a reported Iranian effort to explore such an option has placed a new spotlight on long-standing fears of one — even as experts say the disruption could spread farther than the blast. A dirty bomb is an explosive designed to spread radioactive material — but not in the way an atomic bomb like those dropped in World War II would. \"Anything involving radiation sounds frightening, but there’s a big difference between a dirty bomb and a nuclear weapon,\" said Jason Pack, a retired FBI supervisory special agent who at one point served as the Jackson Field Office's weapons of mass destruction coordinator. Dirty bombs use a conventional blast to spread radioactive dust or a similar contaminant. US REMOVES RADIOACTIVE CANCER-TREATMENT MATERIAL FROM CENTRAL AMERICAN COUNTRY OVER 'DIRTY BOMB' RISK \"The initial blast may pose the greatest immediate danger, but the contamination, fear and disruption afterward could be significant,\" Pack told Fox News Digital. \"A dirty bomb doesn’t have to kill thousands of people to terrorize millions.\" An attack could certainly be deadly. It would also shut down significant portions of a targeted city, he said, displacing families and businesses. They're also risky to build, according to Pack. Bomb makers are at risk of exposing themselves to the same radioactive material they plan on using against the public, it's difficult to ensure the contaminants are dispersed in the",
+   "published": "2026-11-19T07:00:34-05:00",
+   "link": "https://www.foxnews.com/us/michael-ruiz-what-is-dirty-bomb-explosive-terror-threat-explained",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Susan Smith prosecutor fears her release would put her in grieving father’s face ‘every day’",
+   "dek": "Prosecutor Tommy Pope says Susan Smith would &quot;love the attention&quot; on social media if freed, putting her in ex-husband David Smith&apos;s face every day.",
+   "opening": "The prosecutor who put Susan Smith behind bars fears she would embrace social media attention if released on parole, putting her in the face of her slain sons’ grieving father \"every day.\" Susan Smith was convicted of two counts of murder in 1995 and sentenced to life in prison. While she was handed a life sentence, state law at the time allowed her to be considered for parole after serving 30 years. She will face a seven-person parole board in Columbia, South Carolina , on Thursday morning, who will decide if she will be let out of prison. Smith strapped her two young sons into her car and let it roll into a lake, killing them in what prosecutors argued was a bid to win back a former lover who did not want children. She was sentenced to life in prison. SUSAN SMITH'S EX-HUSBAND WANTS HER ‘IN PRISON UNTIL SHE DIES’ AFTER KILLING SONS IN ALLEGED BID TO WIN LOVER The two children, 3-year-old Michael and 14-month-old Alexander, were killed on Oct. 25, 1994. She initially gave police a false account, alleging that a Black man had carjacked her and taken her two children. Her husband believed the story, and the couple appeared together on national television pleading for the return of their kids. Rep. Tommy Pope, who is currently the speaker pro tempore for the South Carolina House of Representatives, prosecuted Smith and told Fox News Digital that if released, the convicted murderer would get on social media and \"love the attention.\" CONVICTED SERIAL RAPIST ORIGINALLY SENTENCED TO",
+   "published": "2026-11-19T06:00:56-05:00",
+   "link": "https://www.foxnews.com/us/susan-smith-prosecutor-fears-her-release-would-put-her-in-grieving-fathers-face-every-day",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_alive-attempted-buried-charged": [
+     "father",
+     "murder"
+    ],
+    "obj_x_fraud-oakdale-ringleader-sentenced": [
+     "sentenced",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats could enter congressional majority in a government shutdown",
+   "dek": "House Republicans on Capitol Hill worry Democrats&apos; post-midterm clout could trigger another government shutdown ahead of the Dec. 11 funding deadline.",
+   "opening": "There's nonzero chance Democrats could kick off their newfound dominance on Capitol Hill with another government shutdown . Several House Republicans told Fox News Digital they were worried about Democrats in both chambers making unreasonable and highly partisan demands ahead of the Dec. 11, 2026, federal funding deadline, potentially paralyzing the U.S. government until a deal could be reached. \"I’m concerned,\" Rep. Ryan Zinke, R-Mont., told Fox News Digital. \"I would say it is on my threat button, as a SEAL, it’s a five-meter target.\" Rep. Mike Haridopolos, R-Fla., suggested Democrats' recent midterm victories would give them the confidence to allow a shutdown to happen. REPORTER'S NOTEBOOK: CONGRESS DODGED A FALL SHUTDOWN, BUT THE REAL FIGHT LOOMS \"I’m very worried about it. Unfortunately, the Democrat tactics of shutting down the government worked for them politically, so I’m afraid they’re going to go back to their winning playbook,\" he said. SCHUMER, JEFFRIES SIDESTEP QUESTIONS ON NUKING FILIBUSTER, LAUNCHING ELON MUSK PROBE AFTER BLUE WAVE Congress opted to delay the government funding fight until after the midterm elections, passing a simple extension of fiscal year (FY) 2026 spending levels called a continuing resolution (CR) from the beginning of FY 2027 on Oct. 1 through Dec. 11. Republicans who spoke with Fox News Digital expressed varying levels of optimism about whether they could hash out a budget for FY 2027 before the end of the year. SENATE REPUBLICANS PLAN ",
+   "published": "2026-11-19T06:00:50-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-enter-congressional-majority-government-shutdown",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "shutdown": [
+     "shutdown",
+     "continuing resolution"
+    ],
+    "war-funding": [
+     "continuing resolution"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "schumer"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What Nvidia’s Interim CEO, Colette Kress, Said to Employees After Jensen Huang’s Resignation",
+   "dek": "At an all-hands meeting with employees, Colette Kress sought to put the indiscretions of Nvidia’s co-founder, Jensen Huang, behind them.",
+   "opening": "",
+   "published": "2026-11-19T05:11:13+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/technology/nvidia-jensen-huang-affair-colette-kress.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Supreme Court urged to defang ‘criminal trap’ that has sent Trump officials to prison",
+   "dek": "Peter Navarro asks the Supreme Court to overturn his contempt of Congress convictions, arguing willfulness could make such prosecutions harder to prove.",
+   "opening": "A Trump administration official who served four months in federal prison for defying a congressional subpoena is asking the Supreme Court to overturn his convictions in a case that could raise the bar for criminally prosecuting others who refuse to comply with Congress’s demands. Peter Navarro, who was a senior trade advisor to President Donald Trump during his first administration, filed a petition with the Supreme Court last month. Navarro currently serves in the Trump administration as senior counselor for trade and manufacturing. He was convicted in 2023 on two counts of contempt of Congress stemming from his refusal to provide testimony and documents to the Democratic-led House Jan. 6 committee on the grounds that he believed he was barred by executive privilege. If the justices take the case, they could make it harder to convict someone for defying a congressional subpoena by requiring proof that the person knew they were breaking the law. JUDGE TOSSES CASE AGAINST EX-FBI OFFICIALS ACCUSED OF LYING TO CONGRESS ABOUT HUNTER BIDEN INVESTIGATION Before Navarro’s trial, U. S. District Judge Amit Mehta ruled in August 2023 that he had failed to establish that Trump invoked executive privilege for the subpoena, barring him from relying on that claim as a defense. After serving his sentence, Navarro appealed his conviction to the U. S. Court of Appeals for the D. C. Circuit, which ruled that a person violates federal law by refusing to comply with a subpoena \"even if he subjec",
+   "published": "2026-11-19T05:00:50-05:00",
+   "link": "https://www.foxnews.com/politics/supreme-court-urged-defang-criminal-trap-sent-trump-officials-prison",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_bannon-conviction-doj-overturn": [
+     "overturn",
+     "conviction"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "failed",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Elected Somali daycare owner with fraud ties now revealed to also be married to illegal immigrant",
+   "dek": "Fox News Digital confirmed Minnesota DFL Rep. Abdi Daisane&apos;s wife, Ayaan Aydid, is in the U.S. illegally after crossing the southern border in 2023.",
+   "opening": "A Somali politician whose daycare business has been tied to fraud is married to an illegal alien, Fox News Digital has confirmed. Minnesota Democratic–Farmer–Labor Party (DFL) candidate Abdi Daisane defeated a Republican incumbent to win Minnesota’s House District 14A seat, which encompasses some of the city of St. Cloud. Daisane's wife, Ayaan Aydid, 30, is present in the country illegally, a Trump administration official confirmed on Wednesday afternoon after an Alpha News report on the subject. Aydid crossed the U.S. southern border with Mexico in 2023, during former President Joe Biden's administration. SOMALI DAYCARE OWNER TIED TO FRAUD WINS MINNESOTA HOUSE RACE SPARKING ONLINE FURY: 'LOST STATE' After Daisane's victory, a video surfaced of Aydid detailing to the BBC how she crossed into the United States at the southern border, sparking questions about her immigration status . An accompanying story describes Aydid as \"one of hundreds of Somalis who have jumped the US-Mexico border wall.\" \"It wasn't a hard journey,\" she said in the interview. Daisane, who delivered part of his victory speech in Somali, is the CEO of Blooming Kids Child Care Center in St. Cloud, which has received $7.29 million from the state-run Child Care Assistance Program since 2018. His childcare business also received $598,251.62 from the federally-funded Child and Adult Care Food Program (CACFP) since 2020. A nonprofit called Partners in Nutrition, which recently had to pay an $18.5 million civil se",
+   "published": "2026-11-19T05:00:22-05:00",
+   "link": "https://www.foxnews.com/politics/elected-somali-daycare-owner-fraud-ties-revealed-married-illegal-immigrant",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "house race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump, Xi and Putin meet as global alliances hang in the balance",
+   "dek": "President Trump, China's Xi Jinping and Russia's Vladimir Putin have gathered in Shenzhen, China, for a historic trilateral meeting, with Ukraine, Iran and nuclear disarmament on the agenda.",
+   "opening": "President Trump, China's Xi Jinping and Russia's Vladimir Putin have gathered in Shenzhen, China, for a historic trilateral meeting, with Ukraine, Iran and nuclear disarmament on the agenda. (Image credit: Win McNamee)",
+   "published": "2026-11-19T04:44:40-05:00",
+   "link": "https://www.npr.org/2026/11/18/nx-s1-6040432/trump-xi-and-putin-shenzhen-china-russia-usa",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Nvidia Chips Ended Up Within Reach of China’s Military",
+   "dek": "Alibaba, the Chinese internet giant behind the company at the center of the Nvidia spy saga, has used its A.I. computing technology to aid a lab with links to China’s military.",
+   "opening": "",
+   "published": "2026-11-19T04:13:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/technology/nvidia-alibaba-china-military.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's China trip: Historic Xi-Putin talks, 'superintelligence' boast and other top moments",
+   "dek": "President Donald Trump declared the U.S. the world leader in &quot;superintelligence&quot; at the APEC summit in Shenzhen, staking a tech claim amid the AI rivalry.",
+   "opening": "President Donald Trump's visit to China for the Asia-Pacific Economic Cooperation summit featured an elaborate welcome, warm exchanges with Chinese President Xi Jinping and Russian President Vladimir Putin, and a declaration of American technological dominance on Chinese soil. The gathering in Shenzhen culminated in the first-ever trilateral meeting between the leaders of the United States, China and Russia, with nuclear arms reductions and the war in Ukraine among the issues on the table. Here are some of the standout moments from Trump's visit. XI BREAKS PROTOCOL TO PERSONALLY WELCOME TRUMP AHEAD OF HISTORIC TRILATERAL SUMMIT AND MORE TOP HEADLINES Trump declared the United States the world leader in \"superintelligence\" during remarks at the summit Thursday, making the assertion in one of China's major technology hubs. \"The United States is also proud to be the world leader in superintelligence, the greatest technological transformation since the Industrial Revolution,\" Trump told APEC leaders. The remarks came as Washington and Beijing compete for leadership in artificial intelligence and advanced semiconductors . Trump joined Xi and Putin for the first-ever trilateral meeting between the leaders of the United States, China and Russia just after 3 a.m. ET, calling the gathering an opportunity to reduce nuclear weapons and address global conflicts. \"As the world's three largest nuclear powers by far, the United States, Russia and China are uniquely positioned to discuss how",
+   "published": "2026-11-19T04:12:39-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-china-trip-historic-xi-putin-talks-superintelligence-boast-other-top-moments",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "semiconductor"
+    ],
+    "obj_x_events-here-iran-major": [
+     "here",
+     "major"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fight Over Deportation Protections for Venezuelans Escalates With Request to Supreme Court",
+   "dek": "The justices previously allowed the Trump administration to lift protections for Venezuelans covered by the program known as Temporary Protected Status.",
+   "opening": "",
+   "published": "2026-11-19T03:27:28+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/us/politics/supreme-court-trump-deportation-venezuelans.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's massive DC triumphal arch project dealt another blow by federal judge",
+   "dek": "A federal judge extended her order blocking construction of President Donald Trump&apos;s triumphal arch in Washington, D.C., putting the project on hold until at least Dec. 3.",
+   "opening": "President Donald Trump 's proposed 250-foot triumphal arch near Arlington in Washington, D.C., was dealt another blow Wednesday when a federal judge extended an order blocking construction until at least early December. U.S. District Judge Tanya Chutkan extended her initial Nov. 5 temporary restraining order blocking construction of the arch for another 14 days, delaying progress on the structure until at least Dec. 3. The extension comes as Chutkan's original order was set to expire Thursday. The judge said the extension would give her additional time to consider lawsuits filed by the District of Columbia and Virginia seeking a longer-term injunction against the project. MULTIPLE KENNEDY FAMILY MEMBERS SEEK TO JOIN LEGAL BATTLE AGAINST TRUMP'S TRIUMPHAL ARCH The order marks the latest setback for one of the president's major projects in the nation's capital. Inspired by Paris' Arc de Triomphe, the proposed monument would stand near the Memorial Bridge, which connects Arlington National Cemetery to Washington, D.C. In a statement to Fox News Digital, the White House criticized the order, saying the project was being undercut by an \"activist district court.\" \"The judiciary should not be abused to politicize a structure designed to unite our nation,\" White House spokesman Davis Ingle said. \"We will continue making the case for this beautiful and fitting monument and are confident we will be fully vindicated as this litigation proceeds,\" he added. EXCAVATION SET TO BEGIN ON TRUM",
+   "published": "2026-11-19T03:00:30-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-massive-dc-triumphal-arch-project-dealt-another-blow-federal-judge",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "construction",
+     "arch"
+    ],
+    "obj_x_declares-monument-national-office": [
+     "national",
+     "monument"
+    ],
+    "obj_x_approved-arch-construction-federal": [
+     "washington",
+     "arch",
+     "construction"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "kennedy",
+     "family",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Peltola Beats Dan Sullivan x2 in Alaska & Manila Gives Trump a Warm \"YMCA\" Welcome | The Daily Show",
+   "dek": "Michael Kosta dives into the headlines: Alaska finally calls its Senate race for Democrat Mary Peltola, who beat out TWO guys named Dan Sullivan, and Trump stopped off in Manila en route to China, where the Filipinos rolled out an (extremely long) red carpet for him. Plus, Trump’s Cabinet continues to provide subpar explanations for nationwide tech outages, so Troy Iwata hits the streets to find out how New Yorkers are handling it. #DailyShow #Alaska #Manila #Trump 0:00 - Democrat Wins Alaska Senate Race 2:25 - Trump Heads to Asia Ahead of Xi & Putin Meeting 3:30 - The Philippines Roll Out the",
+   "opening": "",
+   "published": "2026-11-19T03:00:09+00:00",
+   "link": "https://www.youtube.com/watch?v=ORuXRjti77Y",
+   "videoId": "ORuXRjti77Y",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "With Alaska’s Senate Vote Counted, What Comes Next in the Last Frontier?",
+   "dek": "The race is scheduled to be certified next week, but the Justice Department is investigating after Republicans lodged cheating allegations against the eventual winner, Mary Peltola.",
+   "opening": "",
+   "published": "2026-11-19T02:58:29+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/us/politics/alaska-senate-count.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Arrives in China Focused on Friendship With Xi, Not Nvidia Spy Scandal",
+   "dek": "President Xi Jinping of China offered a hug and a red-carpet welcome as President Trump avoided discussing the espionage case that brought down Nvidia’s Jensen Huang.",
+   "opening": "",
+   "published": "2026-11-19T02:55:54+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/us/politics/trump-xi-shenzhen-spy-scandal.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Is AI’s Perfect Storm on the Horizon?",
+   "dek": "With Jensen Huang out and the Democrats taking power, some of the industry&#8217;s aggressive financial practices and data center construction are likely to be reined in. That could spell disaster, writes Joe Nocera.",
+   "opening": "&#8220;In the end,&#8221; wrote Bethany McLean in The Free Press last month, &#8220;the fundamental issue is simple: Can the debt be repaid when it&#8217;s supposed to be repaid?&#8221; The debt she was referring to was the billions of dollars&#8212;nay, hundreds of billions&#8212;being spent on AI infrastructure build-out, primarily the rapid construction of data centers. Thanks to the money they are throwing at the boom, the so-called hyperscalers&#8212;Amazon, Alphabet, Meta, Microsoft, and Oracle&#8212;are no longer cash-flow positive, despite the billions they reap in revenue each quarter. The neoclouds&#8212;that is, the relatively new companies that were created to actually develop data centers and then rent out the &#8220;compute&#8221; to the hyperscalers and others&#8212;are tens of billions in debt. A company called CoreWeave, for instance, reported that it had nearly $90 billion in debt and liabilities, and a net loss of $709 million in the third quarter alone. Its stock price is down more than 50 percent in the last six months. And then, of course, there&#8217;s Nvidia, the AI Goliath. The company&#8217;s cutting-edge semiconductors are the beating heart of the AI revolution, and its money is the driving force behind the build-out. On Tuesday evening, Nvidia released a staggering earnings report: $116 billion in third-quarter revenue, and net income of $65 billion . But it also disclosed that it has $32 billion in debt and another $118 billion in liabilities. Und",
+   "published": "2026-11-19T02:49:18+00:00",
+   "link": "https://www.thefp.com/p/artificial-intelligence-bubble-finance-perfect-storm",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "chips": [
+     "semiconductor",
+     "nvidia"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Grows Frustrated With Vance Over Iran War Critique",
+   "dek": "The tension comes at a critical juncture for the vice president, who is considering whether to run for president in 2028.",
+   "opening": "",
+   "published": "2026-11-19T01:23:01+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/us/politics/vance-trump-iran-2028-election-rubio.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Elon Musk Plays Down G.O.P. Support After Midterm Loss",
+   "dek": "The C.E.O. of SpaceX, who spent millions to back Republican candidates, sought to portray himself as a political moderate.",
+   "opening": "",
+   "published": "2026-11-19T00:58:47+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/business/dealbook/elon-musk-midterms.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani Talks Trump, Taxes and Oct. 7 at DealBook Summit",
+   "dek": "In a wide-ranging conversation, Mayor Zohran Mamdani of New York discussed the midterms, President Trump and that “tax the rich” video.",
+   "opening": "",
+   "published": "2026-11-19T00:09:44+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/business/dealbook/zohran-mamdani-dealbook-summit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Amount of Money We Spent Will Shock You…",
+   "dek": "Watch the full conversation here: https://youtu.be/KkesrW1N3mg Watch more here: https://watchtcn.co/49CDF2t #TuckerCarlson #Trump #war #Iran #Pentagon #Israel #poverty #inflation #money #WW2 #midterms #JDVance #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-19T00:00:25+00:00",
+   "link": "https://www.youtube.com/watch?v=oMfLeO9F_2k",
+   "videoId": "oMfLeO9F_2k",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How We Broke Open the Nvidia Investigation",
+   "dek": "A global reporting effort by The New York Times included many twists and turns, from surprising photos and shipment records to a big break through astonishing tips from sources.",
+   "opening": "",
+   "published": "2026-11-18T23:52:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/insider/nvidia-jensen-huang-spying-plot.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Weighs New Strikes on Iran as Israel Presses for Action, Officials Say",
+   "dek": "Warnings that Iran is rebuilding its missile stockpile and advancing biological and chemical programs have divided the Trump administration.",
+   "opening": "",
+   "published": "2026-11-18T23:13:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/us/politics/trump-israel-iran-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-strikes": [
+     "strikes on iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Think Iran's billboard threat against Trump is bad? Wait till you see what they have for his cabinet",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-18T22:35:21+00:00",
+   "link": "https://www.youtube.com/shorts/m4EfOTJI9LU",
+   "videoId": "m4EfOTJI9LU",
+   "publication": "daily-show",
+   "source": "daily-show",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Extends Block on Building Trump’s Triumphal Arch",
+   "dek": "Judge Tanya Chutkan barred the government from beginning work on the project for another two weeks.",
+   "opening": "",
+   "published": "2026-11-18T22:34:26+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/us/politics/judge-block-trump-arch.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "arch"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "block",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: Democrats Choose Their Leader in the House & GTA VI Breaks ALL Presale Records",
+   "dek": "Nvidia shuts down attempts to bring back its embattled CEO, Democrats officially pick their leader in the House, and the new Grand Theft Auto game breaks all presale records. Get the facts first with Evening Wire. - - - Ep. 3201 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Balance of Nature - Cozy season is here... but pumpkin spice doesn’t exactly count as a vegetable. 🍂 Build an easy daily habit with Balance of Nature and get 35% off your first subscription at https://BalanceofNature.com with code WIRE. - - - Privacy Policy: ⁠https://www.dailywire.",
+   "opening": "",
+   "published": "2026-11-18T22:30:35+00:00",
+   "link": "https://www.youtube.com/watch?v=o9sGDQPlUS4",
+   "videoId": "o9sGDQPlUS4",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang Is Top of Mind for Tech Leaders at DealBook Summit",
+   "dek": "Sam Altman of OpenAI and Palmer Luckey of Anduril expressed support for Mr. Huang, who resigned as chief executive of the chip maker Nvidia last week.",
+   "opening": "",
+   "published": "2026-11-18T22:30:34+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/business/dealbook/jensen-huang-nvidia-tech-leaders-reaction.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TRUMP BOMBS IRAN, IRAN IMMEDIATELY RETALIATES!! | The Kyle Kulinski Show",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-11-18T22:03:07+00:00",
+   "link": "https://www.youtube.com/watch?v=PU_Gpyq6NiU",
+   "videoId": "PU_Gpyq6NiU",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bukele gets hero’s welcome from afar as thousands rally in Haiti after gang crackdown",
+   "dek": "Thousands marched in Haiti to thank Nayib Bukele for sending troops to battle violent gangs, prompting an emotional response from the Salvadoran president.",
+   "opening": "Thousands of people in Haiti took to the streets Tuesday in a show of support for Salvadoran President Nayib Bukele deploying troops to the country to combat violent armed gangs. The demonstration unfolded as Haiti's Minister of Justice and Public Security, Patrick Pélissier, prepared to travel to San Salvador to discuss anti-gang strategies and ongoing troop cooperation. The president reflected on the moment in a post on X, sharing a video capturing a sea of people chanting, dancing and cheering in celebration. \"I never expected anything like this. I hear you loud and clear. I love you too. We will triumph. God will give us victory,\" Bukele said. BUKELE WARNS HAITIAN GANG LEADERS THAT HIS FORCES WILL 'FINISH' THEM AS HE DID IN EL SALVADOR According to Reuters, some demonstrators carried signs reading \"Long live Bukele\" and \"Down with the gangs,\" while others voiced their support for the Salvadoran leader. \"Only a week of operation, we can see the path to change in Haiti. We say thank you to Bukele for all the help he gives us,\" demonstrator Claudy Mayas said. Another demonstrator said Bukele was providing Haitians with the one thing they had been waiting years for. \"Four years ago, I could not go to Champs de Mars. I couldn't go to the south of Haiti,\" a demonstrator, also identified as Claude, said. \"We don’t ask much of the government. We don’t ask for jobs. We need only security.\" ROBOT DOGS MOUNTED WITH RIFLES DEPLOYED IN ANTI-GANG STADIUM OPERATION IN HAITI Just two wee",
+   "published": "2026-11-18T21:12:36-05:00",
+   "link": "https://www.foxnews.com/world/bukele-gets-heros-welcome-thousands-rally-haiti-gang-crackdown",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "clear",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran warns Bahrain monarchy its survival is at risk amid push to 'evict' US Fifth Fleet",
+   "dek": "Iran&apos;s Islamic Revolutionary Guard Corps warned Bahrain&apos;s monarchy its survival is in doubt as drones and missiles hit the U.S. Navy&apos;s Fifth Fleet home.",
+   "opening": "Iran's Islamic Revolutionary Guard Corps (IRGC) warned Wednesday that Bahrain's monarchy faces an existential threat as Iranian drones and missiles targeted U.S. military installations in the Gulf kingdom. Tehran's warning came amid renewed attacks on Bahrain, home to the U.S. Navy's Fifth Fleet, and a regional expert warned of Iran's decades-long efforts to destabilize the island nation and assert territorial claims. \"This is a regime that has tried to inflame tensions there for quite literally several decades and has claims to the island nation as well,\" Behnam Ben Taleblu , a senior fellow at the Foundation for Defense of Democracies (FDD), told Fox News Digital. BAHRAIN INTERCEPTS IRANIAN DRONES TARGETING US RADAR AFTER 2-MONTH LULL IN GULF STRIKES \"The Islamic Republic is also trying to use military force to evict the United States from the region,\" he added. In a warning directed at Bahrain's ruling Al Khalifa family, IRGC Brig. Gen. Hossein Mohebbi accused the monarchy of cooperating with military action against Iran , relying on U.S. protection and challenging Shiite religious authority. \"Colluding in the aggression against Islamic Iran, living inside the American security bubble, and encroaching on the authority of the Shiite religious leadership are three fundamental mistakes being made by the Al Khalifa regime,\" Mohebbi wrote on X . IRAN VOWS ‘ASTONISHING’ STRIKES AND LIFTS MISSILE-RANGE LIMIT AS US TARGETS LAND ROUTES \"If it persists in them, its survival under th",
+   "published": "2026-11-18T19:54:57-05:00",
+   "link": "https://www.foxnews.com/world/iran-warns-bahrain-monarchy-survival-risk-amid-push-evict-us-fifth-fleet",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran",
+     "irgc"
+    ],
+    "hormuz": [
+     "fifth fleet"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "iron-gate": [
+     "land routes"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "push",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic prices its IPO at $83 per share, valuing the AI giant at $1.5 trillion",
+   "dek": "The higher-than-anticipated pricing signals broad investor enthusiasm for AI stocks even amid some uncertainty in the market stemming from the ouster of Nvidia's CEO and worries about an AI bubble.",
+   "opening": "",
+   "published": "2026-11-18T19:54:39-05:00",
+   "link": "https://www.pbs.org/newshour/economy/anthropic-prices-its-ipo-at-83-per-share-valuing-the-ai-giant-at-1-5-trillion",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran widens Gulf attacks by targeting U.S. air base in Kuwait and sites in Bahrain",
+   "dek": "Iran said that its recent attacks — including those on other U.S. facilities in Bahrain on Sunday and Friday — were in response to U.S. drone surveillance operations and an attack on Iranian communications towers.",
+   "opening": "",
+   "published": "2026-11-18T19:36:03-05:00",
+   "link": "https://www.pbs.org/newshour/world/iran-widens-gulf-attacks-by-targeting-u-s-air-base-in-kuwait-and-sites-in-bahrain",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump lands in China for trade talks and high-stakes summit with Xi and Putin",
+   "dek": "President Trump landed in southern China after signing a trade deal and pledging increased defense cooperation with the Philippines. On Thursday, Trump will hold a historic summit with the Chinese and Russian presidents on the sidelines of a meeting of Asia-Pacific countries in Shenzhen, China. Nick Schifrin reports.",
+   "opening": "",
+   "published": "2026-11-18T18:55:44-05:00",
+   "link": "https://www.pbs.org/newshour/show/trump-lands-in-china-for-trade-talks-and-high-stakes-summit-with-xi-and-putin",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "trade deal"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: Democrats nominate Hakeem Jeffries for Speaker of the House",
+   "dek": "In our news wrap Wednesday, House Democratic Leader Hakeem Jeffries moved a step closer today to becoming the next Speaker of the House, Democrats have secured a 56-to-44 majority in the Senate after Mary Peltola won the last outstanding race in Alaska and Defense Secretary Pete Hegseth announced a new military agreement with Venezuela.",
+   "opening": "",
+   "published": "2026-11-18T18:45:27-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-democrats-nominate-hakeem-jeffries-for-speaker-of-the-house",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "venezuela": [
+     "venezuela"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans need to focus on 'quality of life issues,' ousted GOP Rep. Lawler says",
+   "dek": "More than 30 House Republican incumbents lost their seats in the general election amid this year's blue wave. One of those is Rep. Mike Lawler of New York. Lawler earned a reputation as a moderate, willing to buck his own party, and was rated one of the most bipartisan members of Congress during his time in office. Amna Nawaz spoke with Lawler about the midterm results and the future of the GOP.",
+   "opening": "",
+   "published": "2026-11-18T18:30:12-05:00",
+   "link": "https://www.pbs.org/newshour/show/republicans-need-to-focus-on-quality-of-life-issues-ousted-gop-rep-lawler-says",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hakeem Jeffries ALREADY CAVING On Iran War Funding",
+   "dek": "Ryan and Emily discuss Hakeem Jeffries already caving on funding for the Iran war. Warren Davidson: https://davidson.house.gov/ Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://",
+   "opening": "",
+   "published": "2026-11-18T18:30:08+00:00",
+   "link": "https://www.youtube.com/watch?v=9a2cqTFDrIc",
+   "videoId": "9a2cqTFDrIc",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "war-funding": [
+     "war funding"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Irish activist indicted in US over alleged destruction of $60M military plane",
+   "dek": "United States prosecutors say Daithi O&apos;Corrain spent months planning the Shannon Airport attack that left a $60 million C-130H Hercules beyond repair",
+   "opening": "An Irish anti-Israel activist was indicted in the United States after allegedly destroying a $60 million American military aircraft at an airport in Ireland , leaving the plane damaged beyond repair after what prosecutors described as months of meticulous planning. Federal prosecutors announced the indictment Tuesday, seven months after Daithi O'Corrain, 48, allegedly breached the security perimeter at Shannon Airport in western Ireland and broke into an unoccupied U.S. Air National Guard C-130H Hercules aircraft. Prosecutors said O'Corrain then spent hours damaging the aircraft, cutting critical wiring and hydraulic lines, smashing cockpit instruments, puncturing air ducts and pinching shut the aircraft's liquid oxygen line. 2 FOREIGN NATIONALS BREACH UK BASE HOUSING KEY US, NATO INTEL HUB AMID $556M EXPANSION The damage was so extensive it rendered the aircraft inoperable, and the $60 million plane will never return to active flight status, according to federal authorities. Photographs released by federal prosecutors show extensive damage inside the aircraft, including smashed cockpit instruments, severed wiring and damaged equipment. Other images show tools allegedly used in the attack and O'Corrain standing on the aircraft's roof before his arrest. According to the indictment, O'Corrain spent months researching the aircraft's construction, acquiring tools and gallium, a metal capable of corroding aluminum, and using a flight-tracking app to monitor military aircraft. He a",
+   "published": "2026-11-18T18:29:34-05:00",
+   "link": "https://www.foxnews.com/world/irish-activist-indicted-us-alleged-destruction-60m-military-plane",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "western",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Grand Theft Auto VI's release is a major cultural moment",
+   "dek": "One of the biggest entertainment launches in history is underway with billions of dollars at stake. It's the release of Grand Theft Auto VI, the latest edition of the long-awaited and controversial video game. If you're wondering what all the hype is about, Tim McPhillips has a helpful guide.",
+   "opening": "",
+   "published": "2026-11-18T18:15:22-05:00",
+   "link": "https://www.pbs.org/newshour/show/why-grand-theft-auto-vis-release-is-a-major-cultural-moment",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic prices IPO at $83 a share, blowing past target range: report",
+   "dek": "Fueled by strong demand for its Claude models and developer coding agent Claude Code, Anthropic reportedly priced its IPO well above expectations at $83 per share.",
+   "opening": "AI powerhouse Anthropic has priced its initial public offering at a whopping $83 per share, blowing past its expected target range of $70 to $78, a source familiar with the matter told Reuters. The Wednesday pricing marks one of the biggest market debuts in history and is the first time a major frontier AI developer has gone public. Anthropic increased the size of the offering from its initial plan of 825 million shares , the source told the outlet. ANTHROPIC TARGETS VALUATION AROUND $1T IN BLOCKBUSTER AI IPO, BELOW INITIAL EXPECTATION Anthropic's sale is the second mega-IPO this year focused on AI, following June's SpaceX sale, as investors jump at the chance for exposure to the fast-growing industry, even as the industry also faces mounting questions over the cost of developing and operating artificial intelligence models. The AI lab comes to the public market just months after SpaceX's record-setting IPO, even as the backdrop for AI stocks has turned more challenging. Chipmakers and cloud companies central to the business have come under pressure in recent weeks due to valuation concerns, mounting AI infrastructure costs, and the sudden resignation of Jensen Huang as CEO of chipmaker Nvidia , a key pillar of the industry's growth. TRUMP HOSTING ANTHROPIC CEO DARIO AMODEI FOR PRIVATE WHITE HOUSE DINNER The pricing follows a roadshow that attracted demand several times the number of shares offered, Reuters previously reported, despite questions about the company's outlook an",
+   "published": "2026-11-18T18:08:04-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-tech/anthropic-prices-ipo-83-share-blowing-target-range-report",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dozens of Army soldiers sign up for unique reenlistment incentive to play Grand Theft Auto VI",
+   "dek": "The U.S. Army offered Fort Stewart soldiers four-day passes to play &quot;Grand Theft Auto VI&quot; as a reenlistment perk, and 43 of 130 eligible troops took it.",
+   "opening": "The U.S. Army turned to one of the year’s most anticipated video games to get soldiers at Fort Stewart, Georgia, talking about reenlisting. The offer was a four-day pass to play \" Grand Theft Auto VI \" when it launches Thursday. The Army said 43 of the 130 eligible soldiers in the 9th Brigade Engineer Battalion chose the perk when they reenlisted for two to six more years, Task &amp; Purpose first reported. NBA PLAYER PREDICTS AMERICAN ATHLETES' PERFORMANCES WILL DIP IN NOVEMBER WHILE THEY PLAY GTA \"I’m all campaign. I’m all about the heist,\" Sgt. Jamire Smith, a combat engineer who signed up for six more years in the Army and took the four-day pass, told Task &amp; Purpose. \"I think I have a good 24 hours to waste on it.\" Smith said he had been close to leaving the Army before leaders in his company and battalion showed him they still needed his skills. He qualified for a roughly $60,000 reenlistment bonus after training to drive heavy breaching vehicles, the outlet reported. US ARMY HITS 2026 RECRUITING GOALS FOUR MONTHS EARLY, PETE HEGSETH ANNOUNCES AT WEST POINT COMMENCEMENT The battalion offered the pass from Aug. 1 through Nov. 14. The Army said the time off came on top of standard reenlistment incentives , which can include cash bonuses or a choice of duty station depending on a soldier’s eligibility and the Army’s needs. Staff Sgt. Brittany Wolfer, the battalion’s career counselor, called the perk an \"eye grabber.\" She pitched it to her commander after hearing Sgt. Ma",
+   "published": "2026-11-18T17:40:20-05:00",
+   "link": "https://www.foxnews.com/politics/dozens-army-soldiers-sign-up-unique-reenlistment-incentive-play-grand-theft-auto-vi",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "AP report: Bernie Sanders unveils how he'll push for Medicare for All when Democrats take power",
+   "dek": "Sen. Bernie Sanders is preparing to use his return atop a powerful Senate committee to push for sweeping changes to the nation's healthcare system, setting up an early test of how far Democrats are willing to go in embracing progressive priorities.",
+   "opening": "",
+   "published": "2026-11-18T17:38:31-05:00",
+   "link": "https://www.pbs.org/newshour/politics/ap-report-bernie-sanders-unveils-how-hell-push-for-medicare-for-all-when-democrats-take-power",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen DESPERATELY BEGS For Nvidia JOB BACK",
+   "dek": "Ryan and Emily discuss Jensen Huang desperately begging for his Nvidia job back. Sign up for a PREMIUM Breaking Points subscriptions for full early access to uncut shows and LIVE AMAs with the hosts every week: https://breakingpoints.supercast.com/ Merch Store: https://shop.breakingpoints.com/ To listen to Breaking Points as a podcast, check them out on Apple and Spotify Apple: https://podcasts.apple.com/us/podcast/breaking-points-with-krystal-and-saagar/id1570045623 Spotify: https://open.spotify.com/show/4Kbsy61zJSzPxNZZ3PKbXl Instagram: https://www.instagram.com/breakingpoints/ Facebook: htt",
+   "opening": "",
+   "published": "2026-11-18T17:30:04+00:00",
+   "link": "https://www.youtube.com/watch?v=VAiXTIsMjes",
+   "videoId": "VAiXTIsMjes",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why the Nvidia scandal is a national security issue",
+   "dek": "The Nvidia scandal has spilled over into the Trump administration, which is now under intense scrutiny for how it allowed America's top AI chips to end up in China's hands.",
+   "opening": "The Nvidia scandal has spilled over into the Trump administration, which is now under intense scrutiny for how it allowed America's top AI chips to end up in China's hands.",
+   "published": "2026-11-18T17:12:56-05:00",
+   "link": "https://www.npr.org/2026/11/18/nx-s1-6044275/why-the-nvidia-scandal-is-a-national-security-issue",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats flipped 9 U.S. Senate seats &mdash; the most in almost 70 years",
+   "dek": "Former Rep. Mary Peltola's victory over Republican incumbent Sen. Dan Sullivan in Alaska's competitive U.S. Senate race has flipped a ninth Republican-held seat to the Democrats, giving Peltola's party its biggest midterm gain in nearly 70 years.",
+   "opening": "",
+   "published": "2026-11-18T17:11:08-05:00",
+   "link": "https://www.pbs.org/newshour/politics/democrats-flipped-9-us-senate-seats-the-most-in-almost-70-years",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bill Ackman blasts Nvidia's board over Jensen Huang's ouster, says it 'panicked'",
+   "dek": "The billionaire hedge fund manager argues directors &quot;couldn&apos;t stand the heat&quot; and failed shareholders by ruling out Huang&apos;s return before gathering all the facts.",
+   "opening": "Billionaire hedge fund manager Bill Ackman on Wednesday took aim at Nvidia’s board of directors, accusing them of \"not acting in the best interest of shareholders \" in the sudden ouster of CEO Jensen Huang. In a fiery post on X, the Pershing Square Capital Management chief executive argued that the tech giant’s leadership \"panicked\" over negative headlines rather than conducting proper due diligence. \"What we know is that the board fired Jensen or forced his resignation for violating company policy and/or in response to the accusation of an affair with a spy,\" Ackman wrote. \"They did so without careful consideration of the impact on the company, its customers, its shareholders or other stakeholders. They rushed to judgment without the benefit of careful due diligence or even with a basic understanding of the facts.\" NVIDIA INTERIM CEO SAYS 'WE’VE GOT THIS' AS COMPANY LOOKS TO FUTURE WITHOUT JENSEN HUANG Ackman questioned how the board could have properly deliberated on a move with massive implications for shareholders and customers, pointing to the rapid timeline of Huang's exit. \"It takes time to convene a board meeting,\" Ackman said. \"There was time, maybe, for one Zoom. And this is a decision that should have been made by a board sitting in person and carefully deliberating the facts once they are known.\" While acknowledging that corporate boards have the authority to remove a chief executive over an \"inappropriate relationship with a subordinate,\" Ackman said it should no",
+   "published": "2026-11-18T16:54:57-05:00",
+   "link": "https://www.foxbusiness.com/business-leaders/bill-ackman-blasts-nvidias-board-over-jensen-huangs-ouster-says-panicked",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democratic strategists think Montana House race could hold the secret to future wins",
+   "dek": "Montana is sending a Democrat to the U.S. House for the first time in three decades. Many in the party think Sam Forstag's campaign may be a playbook for how Democrats can win again in rural America.",
+   "opening": "Montana is sending a Democrat to the U.S. House for the first time in three decades. Many in the party think Sam Forstag's campaign may be a playbook for how Democrats can win again in rural America.",
+   "published": "2026-11-18T16:53:07-05:00",
+   "link": "https://www.npr.org/2026/11/18/nx-s1-6032798-e1/democratic-strategists-think-montana-house-race-could-hold-the-secret-to-future-wins",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "house race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democratic Black women take over almost all state agencies in Georgia soon",
+   "dek": "In January, most of Georgia's state agencies will be headed by Black women who were all elected in the 2026 midterms.",
+   "opening": "In January, most of Georgia's state agencies will be headed by Black women who were all elected in the 2026 midterms.",
+   "published": "2026-11-18T16:51:33-05:00",
+   "link": "https://www.npr.org/2026/11/18/nx-s1-6043103/democratic-black-women-take-over-almost-all-state-agencies-in-georgia-soon",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US races to build bunkers across Middle East as Iranian strikes threaten American troops",
+   "dek": "The U.S. Army is hiring contractors to build 17 reinforced concrete bunkers in Israel, Saudi Arabia and Lebanon amid Iranian missile and drone attacks.",
+   "opening": "The U.S. Army is racing to hire contractors to build 17 reinforced concrete bunkers in Israel, Saudi Arabia and Lebanon to protect American and coalition troops from deadly missile and drone attacks, according to a government procurement notice posted Friday. The move comes amid escalating violence in the Middle East , where Iranian attacks on U.S. military installations have killed at least 23 American service members since war broke out in late February. On Tuesday, Iran also claimed responsibility for another strike on a U.S. military base in Bahrain, its third attack there in five days. BAHRAIN INTERCEPTS IRANIAN DRONES TARGETING US RADAR AFTER 2-MONTH LULL IN GULF STRIKES Kuwaiti air defenses also intercepted incoming drones as Israeli forces launched new strikes in eastern and southern Lebanon. The Army plans to build 10 bunkers in Israel, five in Saudi Arabia and two in Lebanon, replacing makeshift shelters made from shipping containers. \"Due to elevated regional force protection conditions, there is an urgent, high-priority requirement to replace nonstandard personnel protection shelters (e.g., converted shipping containers) and provide standardized, precast, reinforced concrete Indirect Fire bunkers,\" the Army said in the notice. \"The objective is to safeguard U.S. and coalition service members operating in potentially hostile environments across multiple countries in [U.S. Central Command] Area of Responsibility,\" the notice added. PENTAGON JUMPS FROM $225M TO $55B ",
+   "published": "2026-11-18T16:18:28-05:00",
+   "link": "https://www.foxnews.com/world/us-races-build-bunkers-across-middle-east-iranian-strikes-threaten-american-troops",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Kim Jong Un's nuclear buildup sparks 'serious concern' ahead of Trump-Xi-Putin summit",
+   "dek": "IAEA chief Rafael Grossi warned Kim Jong Un&apos;s North Korean uranium enrichment expansion at Yongbyon is complete, calling it a serious concern.",
+   "opening": "North Korean leader Kim Jong Un is accelerating his nuclear program, expanding a uranium enrichment facility that can produce plutonium for nuclear weapons, the United Nations' nuclear watchdog warned Wednesday, calling Pyongyang's growing program a \"cause for serious concern.\" International Atomic Energy Agency (IAEA) Director General Rafael Grossi said the latest construction at the Yongbyon nuclear complex began in mid-September and was externally complete by late October, raising fresh alarms about North Korea's production of weapons-grade nuclear material. \"The ongoing expansion of the DPRK's uranium enrichment programme remains a cause for serious concern,\" Grossi said in remarks to the IAEA's board of governors in Vienna , referring to North Korea by its official name, the Democratic People's Republic of Korea. TRUMP ARRIVES IN PHILIPPINES AHEAD OF XI JINPING SUMMIT IN CHINA AFTER GOP MIDTERM LOSSES The warning came as President Donald Trump prepared to meet President Xi Jinping and President Vladimir Putin on Thursday on the sidelines of the Asia-Pacific Economic Cooperation (APEC) summit in Shenzhen, China, for an unprecedented three-way summit expected to address nuclear arms negotiations and other global security concerns. Trump had also floated the possibility of meeting Kim during his trip to China, potentially opening another diplomatic channel with the North Korean dictator as Pyongyang continues to reject demands that it abandon its nuclear arsenal. TRUMP CANN",
+   "published": "2026-11-18T16:07:34-05:00",
+   "link": "https://www.foxnews.com/world/kim-jong-un-nuclear-buildup-sparks-serious-concern-trump-xi-putin-summit",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tucker: I Looked at the TPUSA Lineup. It’s All Neocons.",
+   "dek": "Watch the full conversation here: https://youtu.be/b3t5IDkOA6c Get “Fortress Americas: A New Monroe Doctrine” now at TuckerCarlsonBooks.com. Watch more here: https://watchtcn.co/49CDF2t Paid partnership: Ethos: Protect your family with life insurance from Ethos. Get up to $3 million in coverage in as little as 10 minutes at https://ethos.com/TUCKER #TuckerCarlson #Trump #middleeast #China #CIA #immigration #Iran #war #Iranwar #democrats #CharlieKirk #congress #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-18T16:00:00+00:00",
+   "link": "https://www.youtube.com/watch?v=H8UN-CotBRQ",
+   "videoId": "H8UN-CotBRQ",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "here"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran Fires Missiles and Drones at Gulf Arab States as Peace Talks Falter",
+   "dek": "Kuwait and Bahrain said they were targeted on Wednesday, a sign of how the Middle East is stuck in limbo between peace and full-blown war.",
+   "opening": "",
+   "published": "2026-11-18T15:37:11+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/world/middleeast/iran-attacks-bahrain-kuwait-ships-hormuz.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "China watchdog warns Trump faces ‘2-on-1’ showdown with Xi, Putin as Taiwan risks mount",
+   "dek": "President Donald Trump faces a &quot;two versus one&quot; dynamic with Xi Jinping and Vladimir Putin, who arrive as a team eyeing Taiwan and Ukraine gains.",
+   "opening": "President Donald Trump faces a potentially dangerous \"two versus one\" negotiating scenario when he meets with Chinese President Xi Jinping and Russian President Vladimir Putin, two senior members of a congressional China watchdog warned Wednesday, raising concerns that Beijing could seek concessions on Taiwan while Moscow pushes for greater U.S. pressure on Ukraine. \"I think it is two versus one. We have China and China's junior partner, Russia,\" Randall Schriver, chairman of the U.S.-China Economic and Security Review Commission, told Fox News Digital in a Zoom interview. \"Largely they come to the table as a team versus President Trump and the United States,\" he said, citing China's support for Russia's war in Ukraine. TRUMP ARRIVES IN PHILIPPINES AHEAD OF XI JINPING SUMMIT IN CHINA AFTER GOP MIDTERM LOSSES The warning comes ahead of Thursday's planned trilateral meeting in Shenzhen, China , on the sidelines of the Asia-Pacific Economic Cooperation summit. The high-stakes talks are expected to address issues such as the wars in Ukraine and Iran, trade and nuclear weapons. Mike Kuiken, the commission's vice chairman, echoed Schriver's assessment, arguing that Moscow's growing dependence on Beijing puts Trump at a disadvantage. \"Putin is a client state of Xi Jinping, and that essentially means that President Trump is in the room with a two against one scenario, and the stakes are significant,\" Kuiken told Fox News Digital. \"China is fueling Russia's war machine in Ukraine, and",
+   "published": "2026-11-18T15:33:16-05:00",
+   "link": "https://www.foxnews.com/world/china-watchdog-warns-trump-faces-2-on-1-showdown-xi-putin-taiwan-risks-mount",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hundreds of subpoenas fly in DOJ’s ‘Decoy Dan’ probe as Democrat Peltola declared winner in Alaska",
+   "dek": "The DOJ has issued 200 subpoenas in a multi-state criminal probe tied to &quot;Decoy&quot; Dan J. Sullivan&apos;s Alaska Senate run, per a law enforcement source.",
+   "opening": "EXCLUSIVE: The Justice Department has issued more than 200 subpoenas in its criminal investigation into Dan J. Sullivan — \"Decoy Dan\" — who ran against Republican Sen. Dan S. Sullivan in Alaska's U.S. Senate race, Fox News Digital has learned. News of the scope of the sprawling criminal probe comes after Democrat Mary Peltola was officially declared the winner of the four-way general election on Tuesday night — two weeks after Election Day. She won 144,302 votes to the incumbent Sullivan's 131,844. A GOP candidate named Gerald Heikes won 6,105 votes, while so-called \"Decoy Dan\" won 4,760 votes as a non-party affiliated candidate. A law enforcement source says the criminal case is continuing, and that Peltola being named the winner doesn't change anything from an investigative standpoint. The DOJ's investigation spans multiple states, and there are multiple criminal targets in the case, the source said. A second source familiar with the investigation confirmed that more than 200 subpoenas have been issued. Allegations have swirled that Democrats searched for a person with the name Dan Sullivan to run against the incumbent senator of the same name in order to confuse voters and potentially spoil the Republicans' chances of reelection. TRUMP ADMIN PUTS ALLEGED 'DECOY DAN' CONSPIRATORS ON NOTICE IN ALASKA ELECTION SPOILER PROBE High-profile Democrat attorney Marc Elias, whose law firm represents the Peltola campaign, is among those who received a criminal target letter from the D",
+   "published": "2026-11-18T14:54:54-05:00",
+   "link": "https://www.foxnews.com/politics/hundreds-subpoenas-fly-doj-decoy-dan-probe-democrat-peltola-declared-winner-alaska",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "senate race"
+    ],
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "peltola",
+     "campaign"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DHS denounces TX officials for allegedly planning to end cooperation with ICE",
+   "dek": "Homeland Security Secretary Markwayne Mullin says Texas mayors&apos; ICE cooperation bans would be a dereliction of duty, citing murderers and terrorists.",
+   "opening": "FIRST ON FOX: Secretary of Homeland Security Markwayne Mullin denounced Texas officials who announced plans to end local law enforcement's cooperation with Immigration and Customs Enforcement (ICE) in an exclusive statement to Fox News. Following the sweeping blue wave that saw Democrats take virtually every statewide office on the ballot on Nov. 3, incoming Democratic officials across Texas announced plans to end or severely limit their respective law enforcement offices' cooperation with ICE. Most notably, Houston Mayor John Whitmire issued a Nov. 6 executive order telling the city's police officers that they are no longer permitted to notify ICE if they encounter an illegal immigrant during a nonviolent encounter. DEMOCRAT GINA HINOJOSA STUNS ABBOTT, MAKES HISTORY AS FIRST LATINA TEXAS GOVERNOR Shortly after Whitmire's order, the mayors of Austin and San Antonio also issued executive orders limiting city police cooperation with ICE. \"If Texas were to stop cooperating with ICE and become a sanctuary state , it would be one of the worst derelictions of duty we’ve seen in a very long time,\" Mullin told Fox exclusively. TEXAS AG SUES HOUSTON MAYOR AND CITY COUNCIL OVER NEW SANCTUARY CITY ORDINANCE LIMITING ICE COOPERATION \"Recent illegal alien arrests in Texas include murderers, child sex traffickers, terrorists, gang members, sexual assailants, and drug traffickers. Texas has long been a great partner with DHS in the fight to arrest and remove illegal aliens from our communit",
+   "published": "2026-11-18T14:23:45-05:00",
+   "link": "https://www.foxnews.com/politics/dhs-denounces-tx-officials-allegedly-planning-end-cooperation-ice",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "abbott",
+     "hinojosa"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ukraine strikes 'one of the largest oil refineries' in southern Russia ahead of Putin-Trump meeting in China",
+   "dek": "Ukraine&apos;s military says its strikes hit a key oil refinery in Russia&apos;s Krasnodar Krai region ahead of President Donald Trump&apos;s meeting with Vladimir Putin.",
+   "opening": "Ukraine's military said it struck \"one of the largest oil refineries in southern Russia\" in the lead-up to President Donald Trump's meeting Thursday with Russian President Vladimir Putin. Trump will meet one-on-one with Putin on the sidelines of the Asia-Pacific Economic Cooperation (APEC) Summit in Shenzhen, China, a U.S. official confirmed to Fox News on Wednesday. The General Staff of the Armed Forces of Ukraine said explosions \"rocked\" Russia's Krasnodar Krai region last night and into this morning as Ukrainian forces \"carried out air strikes against the Ilsky and Afipsky oil refineries, two key fuel suppliers in southern Russia.\" \"Explosions and smoke were reported in the vicinity of the Ilsky Oil Refinery. Storage tanks were hit,\" it added. \"The Ilsky Oil Refinery is one of the largest oil refineries in southern Russia, with an annual processing capacity of approximately 6.6 million tons of crude oil. Its products are used, among other purposes, to meet the fuel requirements of the aggressor state's armed forces.\" UKRAINE RELEASES VIDEO SHOWING DAMAGE TO PUTIN'S PRIZED BRIDGE FOLLOWING 'UNPRECEDENTED OPERATION' IN CRIMEA The General Staff of the Armed Forces of Ukraine said an oil processing unit at the Afipsky Oil Refinery was damaged. \"Located in southern Russia, they provide some of the shortest supply routes for delivering fuel to Russian forces deployed on the frontline,\" it also said about the two facilities. \"Consequently, every fire at these facilities means les",
+   "published": "2026-11-18T13:32:36-05:00",
+   "link": "https://www.foxnews.com/world/ukraine-strikes-one-largest-oil-refineries-southern-russia-ahead-putin-trump-meeting-china",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "refiner",
+     "crude"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "16 Ecuadorian fishermen sue US government, allege drone attack destroyed their boat near the Galápagos",
+   "dek": "Ecuadorian fishermen allege U.S. drones struck their boat in the Pacific Ocean near the Galápagos, forcing the crew to jump overboard, a lawsuit says.",
+   "opening": "More than a dozen Ecuadorian fishermen have sued the federal government, alleging they were wrongly targeted in a drone strike that destroyed their boat in the Pacific Ocean earlier this year as part of the Trump administration’s broader campaign against vessels suspected of drug trafficking. The 16 fishermen aboard La Negra Francisca Duarte II say drones launched from a U.S. vessel struck their boat March 17, 2026, as they headed home from a two-week fishing trip near the Galápagos. The strike set the boat ablaze, forcing the crew to jump overboard and escape in lifeboats, according to a lawsuit filed Monday in federal court in Pennsylvania. All 16 survived, but two suffered serious burns. One man’s leg was burned to the bone, the lawsuit says. The fishermen’s lawyers say the crew had no ties to drug cartels or terrorist groups and posed no imminent threat when U.S. drones struck their vessel, which they say had been cleared by Ecuadorian authorities hours earlier. US MILITARY LAUNCHES FIRST AUTONOMOUS WARFARE COMMAND TO DEPLOY UNMANNED SYSTEMS ACROSS LATIN AMERICA After their boat was destroyed, the fishermen sailed toward a blue vessel, which the lawsuit identified as a U.S. ship. Some personnel wore U.S. Coast Guard vests, the suit says. They allegedly zip-tied the uninjured men, hooded them and forced them to stand barefoot on the hot metal deck with no food and little water. One injured fisherman was taken below deck for treatment, where U.S. personnel allegedly told hi",
+   "published": "2026-11-18T13:14:57-05:00",
+   "link": "https://www.foxnews.com/politics/16-ecuadorian-fishermen-sue-us-government-allege-drone-attack-destroyed-boat-galapagos",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "lawsuit",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia interim CEO says 'we’ve got this' as company looks to future without Jensen Huang",
+   "dek": "Nvidia interim CEO Colette Kress said the AI giant is well positioned after Jensen Huang&apos;s exit, as quarterly revenue of $115.8 billion beat estimates.",
+   "opening": "Nvidia interim CEO Colette Kress said on Tuesday's earnings call that the company is well-positioned to move forward following the abrupt resignation of co-founder and longtime CEO Jensen Huang last week following the revelation of extramarital affairs. Kress, who has served as Nvidia's CFO since 2013, delivered the AI giant's first quarterly earnings report since Huang's departure, which beat the market's expectations in terms of revenue and earnings per share. \"Our momentum is real. Our demand is accelerating. Our supply is growing. Our customers and our partners are with us, and employees are committed. We've got this,\" Kress said on the call. \"With the market-leading multiyear roadmap, supply agreements extending through to the end of the decade and sustainable demand, we are well positioned to accelerate Nvidia's leadership position,\" she added. NVIDIA RELEASES QUARTERLY EARNINGS, SUGGESTS FUTURE PLANS AFTER JENSEN HUANG'S RESIGNATION Investors were looking for the company to provide reassurance about its path forward as well as to post strong results over the prior three months in what was viewed as a test for the durability of the AI trade . Nvidia's earnings beat analysts' estimates for quarterly revenue , which came in at $115.8 billion and topped the estimate of $109.1 billion reflected in data compiled by LSEG. Diluted earnings per share were $2.68, beating the estimate of $2.48. Revenue was up 20% on a quarterly basis and 103% year over year, while earnings per sh",
+   "published": "2026-11-18T12:53:57-05:00",
+   "link": "https://www.foxbusiness.com/markets/nvidia-interim-ceo-says-weve-got-this-company-looks-future-without-jensen-huang",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "CodePink co-founder's $55M foundation reinstated in California amid grant questions",
+   "dek": "Medea Benjamin&apos;s Arc of Justice foundation regained California charitable registration after missed filings, but it stays on probation through August 2029.",
+   "opening": "CodePink co-founder Medea Benjamin’s $54.6 million family foundation has been reinstated as a California charity after years of missed financial filings, although questions linger over $2.7 million in grants it reported paying in 2024, the year its registration was suspended. The foundation, Arc of Justice, has poured $24.6 million into protest groups, legal advocacy organizations and progressive nonprofits over more than two decades, a previous Fox News Digital investigation found . The 2024 payouts included $350,000 to CodePink, according to the foundation’s 2024 federal tax return. Years of missed filings prompted regulators in California to revoke the foundation's charitable registration in January 2025 after more than a year of suspension for repeatedly failing to submit required annual reports or respond to regulatory notices. State regulators restored it in September, placing the foundation on three years probation. $54M CODEPINK-LINKED FOUNDATION SHUT DOWN IN CALIFORNIA POPS UP AT RAMSHACKLE MIAMI HOME Under California regulations, organizations with suspended or revoked charitable registrations are prohibited from distributing or spending charitable assets without the attorney general’s prior written approval, according to Title 11, Section 345(b) of to the California Code of Regulations . Fox News Digital asked the California Attorney General’s Office whether the foundation needed or received approval to distribute those grants. \"While the organization was suspended",
+   "published": "2026-11-18T12:45:38-05:00",
+   "link": "https://www.foxnews.com/politics/codepink-co-founders-55m-foundation-reinstated-california-amid-grant-questions",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_california-commute-death-disaster": [
+     "justice",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rare anti-government protests erupt in Iran over workers' deaths",
+   "dek": "Hundreds of Iranians chanted &quot;Death to the dictator!&quot; in Abdanan after a bus crash killed 13 oil refinery employees, with at least seven people arrested.",
+   "opening": "Hundreds of Iranians took to the streets chanting \"Death to the dictator!\" and other anti-government messages in the wake of a deadly bus crash over the weekend that killed 13 employees of an oil refinery company, reports said. The rare display of anti-government anger unfolded Tuesday in Abdanan, a city in western Iran near the country's border with Iraq. Demonstrators called for the resignation of company officials blamed for the accident. \"Those who seek to exploit this incident to disrupt public order and inflame people’s emotions will be dealt with decisively,\" local prosecutor Amrollah Meysaei was quoted by Iran's Mizan news agency as saying, according to Radio Free Europe. The outlet, citing Iran's Fars news agency, also reported that an estimated 1,000 people took part in the protests, making them the largest demonstrations since mass unrest swept across Iran at the beginning of this year. Some of the protesters reportedly tried to damage public property. IRAN LAUNCHES DRONE ASSAULT ON KUWAIT AFTER US STRIKE ON IRGC MISSILE SITE A video verified by The Associated Press showed protesters chanting \"Death to the dictator!\" A video shared by HRANA, a rights group based outside Iran, also showed a crowd of protesters marching through the center of Abdanan, calling for accountability for the road accident. The Hengaw Organization for Human Rights said at least seven people were arrested in Abdanan after Tuesday's protests. Two were later released, including a 15-year-old bo",
+   "published": "2026-11-18T11:20:00-05:00",
+   "link": "https://www.foxnews.com/world/rare-anti-government-protests-erupt-iran-workers-deaths",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "refiner"
+    ],
+    "iran": [
+     "iran",
+     "irgc"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Protesters call for regime change in Iran following deadly crash that killed 13 oil and gas workers",
+   "dek": "Hundreds take to the streets in western Iran after 13 oil workers are killed, with demonstrations escalating into political protests against Tehran&apos;s leadership.",
+   "opening": "Hundreds of protesters poured into the streets of western Iran on Tuesday following a deadly bus crash that killed 13 oil and gas workers, with demonstrations quickly escalating into anti-government chants with some protesters calling for the return of the Pahlavi monarchy. The unrest erupted in Abdanan, a city in Iran's Ilam province near the Iraqi border, where residents initially gathered to demand accountability for Saturday's fatal accident before turning their anger toward the Islamic Republic's leadership. Videos obtained by Fox News Digital showed large crowds marching through the streets, chanting \"Death to the dictator!\" IRANIAN PROTESTER HANGED HOURS AFTER MARRYING HIS IMPRISONED FIANCÉE OVER JAIL PHONE LINE Iranian-American journalist and foreign policy analyst Lisa Daftari said the demonstrations underscore the deeper political tensions facing Tehran. \"Abdanan is a reminder that the Islamic Republic sits on top of a dormant volcano,\" Daftari told Fox News Digital. \"These uprisings start with different catalysts, and in this case it was a local grievance, but they always arrive at the same conclusion.\" \"The slogans we hear are ‘Death to the Dictator’ and ‘Javid Shah,’ not complaints about a policy. They are an indictment of the entire system, top to bottom,\" she said. New reports Wednesday indicated that Iranian security forces arrested at least seven people, including a 15-year-old boy, during the unrest in Abdanan. The Hengaw Organization for Human Rights said t",
+   "published": "2026-11-18T11:17:58-05:00",
+   "link": "https://www.foxnews.com/world/protesters-call-regime-change-iran-following-deadly-crash-killed-13-oil-gas-workers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "iran-strikes": [
+     "regime change"
+    ],
+    "obj_thepresi_allies-clear-guarantees-postwar": [
+     "western",
+     "security"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Are We Under Attack? Plus. . .",
+   "dek": "In today&#8217;s Front Page, experts weigh in on whether the jarring wave of tech outages could be a coordinated attack. Aaron MacLean on Trump&#8217;s summit with Xi and Putin. The solar boom dividing upstate New York. Why working less may make you miserable. And more.",
+   "opening": "It&#8217;s Wednesday, November 18. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Aaron MacLean on Trump&#8217;s big summit. Lucy Biggers on New York&#8217;s solar boom. Arthur Brooks on the trouble with the four-day workweek. And much more. But first: Coincidence or cyberattack? If you tried to send an email, catch a flight, or log into your bank account over the past week, there&#8217;s a decent chance you hit a snag. Between Microsoft Outlook crashing for users around the world and the longest aviation ground stop since 9/11, it seems like a lot of our everyday systems just broke all at once. On top of that, CNN reports that U.S. intelligence indicates that Iran is developing plans to deploy a dirty bomb in Washington, D.C. Put it all together, and it&#8217;s easy to see why so many Americans are rattled. Officials say there&#8217;s no evidence that these events are connected, or that all the IT problems are the work of a malicious actor. When President Donald Trump was asked about them, he said, &#8220;It&#8217;s life. When you&#8217;re big and powerful, and you have all the money, things like that happen. It&#8217;s fine.&#8221; So is there reason to worry, or is this just an overdramatic overreaction? We put that question to H.R. McMaster , Tyler Cowen , Michael Shermer , and other experts in cybersecurity, geopolitics, and national defense. Read their takes on what the outages do&#8212;and d",
+   "published": "2026-11-18T11:00:47+00:00",
+   "link": "https://www.thefp.com/p/cyberattack-china-russia-trump-xi-putin-arthur-brooks",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_x_events-here-iran-major": [
+     "iran",
+     "events"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia halts China AI chip shipments despite US approval",
+   "dek": "Nvidia says it is no longer shipping licensed Hopper AI chips to China after selling $2.4 billion in the latest quarter, raising questions about future exports.",
+   "opening": "Nvidia has stopped shipping certain advanced artificial intelligence chips to China despite U.S. government approval for exports to eligible Chinese customers, and the company is excluding Chinese data center sales from its latest revenue forecast. Nvidia forecast fourth-quarter revenue of approximately $130 billion, plus or minus 3%, without factoring in sales of AI computing chips and systems to China . Colette Kress , Nvidia's interim CEO and longtime chief financial officer, said Tuesday that the company sold $2.4 billion worth of licensed Hopper-generation data center products to China during its fiscal third quarter, which ended Oct. 25. \"Our guidance does not have any licensed Hopper data center products included, and we are no longer shipping licensed Hopper data center products to China,\" Kress said in a statement. JENSEN HUANG SAYS HE IS WILLING TO RETURN AS NVIDIA CEO, SAYING ‘I OWN MY MISTAKES COMPLETELY’ Nvidia did not explain why the shipments stopped or say whether they would resume, leaving questions about the company's ability to serve the Chinese market despite changes to U.S. export rules. The announcement came as Nvidia reported third-quarter revenue of nearly $116 billion — more than double recorded a year earlier. Its data center business generated more than $107 billion in revenue, up 110% from the same period last year. The shipment halt follows a decision by the U.S. government earlier this year to ease export restrictions on certain Nvidia processors",
+   "published": "2026-11-18T10:55:07-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-tech/nvidia-halts-china-ai-chip-shipments-despite-us-approval",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "rules",
+     "data"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Americans misled on Social Security for decades as clock counts down on benefits, explosive report reveals",
+   "dek": "Sen. Ron Johnson says Americans are being scammed by Social Security, calling the program a legal Ponzi scheme that is hurtling toward insolvency by 2032.",
+   "opening": "FIRST ON FOX: A Senate Republican is sounding the alarm that Americans are being \"scammed\" by the government’s handling of Social Security, and warned that it’s too late to change the trajectory of the decades-old safety net. Senate Budget Committee Chair Ron Johnson, R-Wis., claimed in a new report called \"Social Security: The Reality… a Legal Ponzi Scheme,\" that the federal government has been duping Americans on what really happens with taxpayer money that flows into the program. As Social Security hurtles toward insolvency — meaning the fund will run out of money and be unable to pay 100% of scheduled benefits on time — Johnson warned in the report first obtained by Fox News Digital that \"once a Ponzi scheme begins to collapse, it can’t be fixed.\" AMERICA’S RETIREMENT SYSTEM IS BROKEN. TRUMP MAY HAVE FOUND A BOLD FIX \"It can only be liquidated, with late investors often receiving only pennies on the dollar for their end-of-scheme investments,\" Johnson said. \"Their only hope is that an underlying financial entity can provide a backstop to limit their losses.\" Johnson’s report projected that by 2032, when Social Security is expected to become insolvent, there will be a roughly $511 billion Social Security shortfall, equal to roughly 21% of the projected $2.4 trillion total federal deficit that year. The main thrust of Johnson’s report, which he wrote himself, is that Americans have been convinced that Social Security and the portion that comes from their paychecks that fund",
+   "published": "2026-11-18T10:44:46-05:00",
+   "link": "https://www.foxnews.com/politics/americans-misled-social-security-decades-clock-counts-benefits-explosive-report-reveals",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jeffries survives Dem vote to secure speaker position as progressive resistance clouds his chances",
+   "dek": "House Democrats nominated Hakeem Jeffries for speaker despite progressive backlash, setting up a January vote that could test party unity.",
+   "opening": "House Democrats selected Minority Leader Hakeem Jeffries, D-N.Y., as their nominee for speaker of the House in the 120th Congress following the party's sweeping midterm victories, a senior House Democratic staffer confirmed to Fox News Digital. Despite growing opposition from progressives over his leadership and ties to the Democratic establishment, Jeffries survived the secret-ballot vote on Wednesday in a \"landslide,\" according to the staffer, advancing him as the party's nominee to lead the majority in the new Congress. Only 11 Democrats voted against his speaker nomination. The New York lawmaker must now win a full House vote in January to secure the position. SENATE DEM CHALLENGING SEN CHUCK SCHUMER FOR LEADERSHIP POST BACKS HAKEEM JEFFRIES FOR HOUSE SPEAKER Jeffries ran unopposed for the nomination, although recent reports indicated Democratic congressional offices had been inundated with calls from frustrated voters urging lawmakers to select an alternative candidate. After he cleared the vote, the committee room where the incoming class of Democratic members, made up of re-elected and newly elected caucus members, erupted in cheering and clapping immediately following the vote. \"It was a blowout number,\" Rep. Bennie Thompson, D-Miss., told Fox News Digital after the vote. The Democratic leader has faced criticism from progressive members of his party over his support for Israel and his ties to corporate political action committees, which critics argue reflect the prio",
+   "published": "2026-11-18T10:35:16-05:00",
+   "link": "https://www.foxnews.com/politics/jeffries-survives-dem-vote-secure-speaker-position-progressive-resistance-clouds-his-chances",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "progressive",
+     "democrats",
+     "schumer",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Putin Will Continue Ukraine War Despite Plans to Meet Trump, Intelligence Says",
+   "dek": "President Trump plans to discuss Ukraine with the leaders of Russia and China. He has halted some sanctions on Russia and announced that the United States will buy Russian diesel.",
+   "opening": "",
+   "published": "2026-11-18T10:03:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/18/us/politics/trump-putin-ukraine-war.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A China Summit in the Midst of a Scandal",
+   "dek": "As Trump prepares to meet Xi and Putin in China amid the Nvidia scandal, AEI senior fellow Dan Blumenthal examines Beijing&#8217;s growing leverage and the stakes for American security.",
+   "opening": "With a high-stakes summit in China on the horizon and Nvidia embroiled in controversy, Washington faces mounting questions about its relationship with Beijing. Dan Blumenthal, a senior fellow at the American Enterprise Institute, joins me to discuss why Xi Jinping won&#8217;t talk nukes, why Jensen Huang&#8217;s lobbying efforts matter more than the spy story, and &#8230; Read more",
+   "published": "2026-11-18T10:00:37+00:00",
+   "link": "https://www.thefp.com/p/china-summit-nvidia-trump-taiwan-ai",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "diesel-cargo": [
+     "blumenthal"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Government investigators find AI platforms produce terror plot plans in undercover op",
+   "dek": "GAO investigators bypassed AI safeguards on ChatGPT, Claude, Gemini and Grok, obtaining feasible plans for terrorist attacks in under 12 hours of testing.",
+   "opening": "Federal investigators successfully bypassed safety safeguards on four major artificial intelligence platforms, obtaining detailed plans for potentially deadly terrorist attacks in less than 12 hours, according to a government watchdog report released Wednesday. The Government Accountability Office (GAO) found that ChatGPT , Claude, Gemini and Grok each generated information that could help carry out attacks targeting crowded locations or the nation's electrical grid during undercover testing conducted in spring 2026. Two platforms produced plans involving improvised explosive devices intended to cause mass casualties, while the other two outlined attacks on electrical infrastructure designed to inflict economic damage. The AI-generated responses included potential targets, locations, timing and attack methods. Although all four platforms initially activated safeguards to block or remove harmful content, investigators ultimately circumvented those protections. CHINESE AI MODEL INVESTIGATED AFTER RESEARCHER SAYS IT PROVIDED INSTRUCTIONS FOR BIOWEAPONS, ASSASSINATIONS GAO investigators also consulted experts and conducted real-world checks to assess the plans, finding that the information provided by all four platforms was sufficiently feasible to assist someone planning an attack. \"The potential benefits of this technology are immense, but they can also benefit malicious actors,\" the GAO warned, citing growing risks to national and economic security. The companies behind the pl",
+   "published": "2026-11-18T09:53:14-05:00",
+   "link": "https://www.foxnews.com/politics/government-investigators-find-ai-platforms-produce-terror-plot-plans-undercover-op",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_declares-monument-national-office": [
+     "office",
+     "national"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran targets US air base in Kuwait after US defensive strikes amid criticism from Gulf states",
+   "dek": "Iranian state media says Iran&apos;s army targeted U.S. assets at Ali Al Salem in Kuwait, as Kuwait&apos;s air defense intercepted hostile drone strikes.",
+   "opening": "Iran's army targeted U.S. assets, including drone and missile sites, at Ali Al Salem base in Kuwait on Tuesday, according to Iranian state media. Kuwait's army appeared to corroborate the attacks, reporting that its air defense systems were combating a series of hostile drone strikes. \"Kuwaiti air defenses are currently countering hostile drone attacks. The General Staff of the Army notes that any explosion sounds heard are the result of air defense systems intercepting hostile attacks. Everyone is requested to comply with the security and safety instructions issued by the relevant authorities,\" the army wrote in an X post. BLINKEN WARNS US GROUND INVASION OF IRAN WOULD BE 'ABSOLUTE DISASTER' AS TEHRAN ESCALATES ATTACKS The attacks are Iran's first on Kuwait in over two months. The Islamic Republic also reportedly targeted another U.S. ally in the Gulf on Wednesday, as Bahrain's General Command reported intercepting multiple Iranian aerial attacks . IRAN ESCALATES IN HORMUZ, CLAIMS STRIKE ON OMANI ISLAND IT SAYS 'ENEMY' USES FOR US MILITARY OPS Iran's attacks come shortly after the U.S. struck an Islamic Revolutionary Guard Corps (IRGC) missile site on Iran's Qeshm Island on Tuesday. That attack was a response to Iran targeting a U.S. radar installation at the Sheikh Isa base in Bahrain . IRAN VOWS ‘ASTONISHING’ STRIKES AND LIFTS MISSILE-RANGE LIMIT AS US TARGETS LAND ROUTES \"Earlier today, U.S. fighter aircraft used precision munitions to strike an Islamic Revolutionary Guar",
+   "published": "2026-11-18T09:39:08-05:00",
+   "link": "https://www.foxnews.com/world/iran-targets-us-air-base-kuwait-us-defensive-strikes-criticism-gulf-states",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz"
+    ],
+    "iran": [
+     "iran",
+     "tehran",
+     "irgc"
+    ],
+    "hormuz": [
+     "hormuz"
+    ],
+    "iron-gate": [
+     "land routes"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
