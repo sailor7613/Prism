@@ -1,19 +1,20 @@
-# Newsroom digest — 2026-11-20
+# Newsroom digest — 2026-11-21
 
-Register: 170 objects · this scan: 2 new, 3 seen again, 0 returned.
+Register: 172 objects · this scan: 2 new, 1 seen again, 1 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **A second judge blocks Trump arch , saying it unlikely to succeed in court** — ruling · ruled · holder: a federal court · formed 2026-11-20 · 6 outlets (peak 6) · `obj_afederal_arch-blocks-court-judge`
+- **Court approves $7 . 25 billion settlement with Bayer over claims Roundup weed killer caused cancer** — vote · voted · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_approves-bayer-billion-cancer`
 
 ## Permanence breaks (went silent while unresolved)
 - none today
 
 ## Returned after a break
-- none today
+- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 12 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction`
 
 ## New objects (all)
-- **Accused child sex predator Thomas Markle ruled competent to face trial** — ruling · ruled · holder: ? · formed 2026-11-20 · 3 outlets (peak 3) · `obj_x_accused-child-competent-face`
-- **California attorney general subpoenas Nvidia over chips , former CEO affair** — hearing · compelled · holder: the Justice Department · formed 2026-11-20 · 3 outlets (peak 3) · `obj_thejusti_affair-attorney-california-ceo`
+- **Court approves $7 . 25 billion settlement with Bayer over claims Roundup weed killer caused cancer** — vote · voted · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_approves-bayer-billion-cancer`
+- **A second judge blocks Trump arch , saying it unlikely to succeed in court** — ruling · ruled · holder: a federal court · formed 2026-11-20 · 6 outlets (peak 6) · `obj_afederal_arch-blocks-court-judge`
 
 ## Watching (46)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
