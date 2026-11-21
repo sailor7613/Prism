@@ -21,8 +21,8 @@ except Exception: pass
 import parallelogram as P
 
 PG = os.path.join(D.ROOT, 'data', 'parallelograms')
-BASE = os.path.join(PG, 'baselines', 'sonnet_2026-11-14_run2')   # whose line cuts every reader is given
-GRID = os.path.join(PG, 'grid')
+BASE = os.path.join(PG, 'baselines', os.environ.get('CF_BASE', 'sonnet_2026-11-14_run2'))   # whose line cuts every reader is given
+GRID = os.path.join(PG, os.environ.get('CF_GRID', 'grid')); os.makedirs(GRID, exist_ok=True)   # 11-17: a new set keeps its own grid folder (CF_GRID), so the working set's summary is not written over
 READERS = ['sonnet', 'qwen', 'gemma']     # counted: agreement is measured among these
 TRACKED = ['deepseek']                    # 11-15 (Sailor): read and shown beside the others, never counted. Its own three runs of a line spread about 38 points,
                                           # so it cannot say whether a question is tight; but how unsteady it is, and on which lines, is kept and watched over time

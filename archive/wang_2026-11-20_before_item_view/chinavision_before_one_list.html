@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" class="g4">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>望</title>
+<!-- ======================================================================
+     望 (wàng, to gaze into the distance) — Prism/press/chinavision.html — 2026-11-17. Named China Vision until 11-18; the file and data names keep that word.
+     A program in the M3P (g4/index.html, #chinavision): a feed of what is trending in Chinese media, translated.
+     It is only a feed to explore. Nothing here is scored, cut or read by Prism (Sailor 11-17: before any of Prism's
+     functions are applied, it is a top-line program that simply feeds translations of trending Chinese media, pop culture included).
+     The data is a pull: Prism/data/chinavision/feed_<date>_<time>.json, listed in data/chinavision/index.json.
+     Each item is one line from a platform's public hot list: its place, the translation, the Chinese as posted, the heat.
+     The menu is inside the prism, as in Chat: rest the pointer on it and it drops down (boards, kinds, earlier pulls).
+     ====================================================================== -->
+<link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=2">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { font-family: var(--g4-os); color: var(--lt-cream); background: transparent; overflow: hidden; --top: 150px; }
+  .rect { background: rgba(var(--g4-blue-rgb), .10); border: 1px solid rgba(var(--g4-blue-rgb), .30); color: var(--lt-cream); border-radius: 3px; font: 13px var(--g4-os); cursor: pointer; padding: 7px 12px; }
+  .rect:hover { background: rgba(var(--g4-blue-rgb), .18); }
+  .lab { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: rgba(246,241,230,.42); margin: 0 0 8px; }
+  #menu { position: absolute; z-index: 6; left: 16px; top: var(--top); width: 318px; max-height: calc(100% - var(--top) - 16px); overflow-y: auto;
+          padding: 16px 14px 14px; display: flex; flex-direction: column; gap: 18px;
+          background: rgba(7, 12, 28, .93); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+          border: 1px solid var(--g4-rule); border-radius: 4px; box-shadow: 0 18px 50px rgba(0,0,0,.55);
+          opacity: 0; transform: translateY(-10px); pointer-events: none; transition: opacity .22s ease, transform .28s cubic-bezier(.2,.8,.2,1); }
+  #menu::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, var(--film-0), var(--film-1), var(--film-2), var(--film-3), var(--film-4)); opacity: .75; }
+  #menu.on { opacity: 1; transform: none; pointer-events: auto; }
+  .m { display: block; width: 100%; text-align: left; margin-bottom: 6px; padding: 8px 11px; line-height: 1.3; }
+  .m b { font-weight: 600; font-size: 14px; } .m small { display: block; font-size: 11px; font-style: italic; color: rgba(246,241,230,.46); margin-top: 2px; }
+  .m.on { border-color: var(--film-1); background: rgba(var(--g4-blue-rgb), .22); box-shadow: 0 0 14px rgba(190,232,255,.10); }
+  .kinds { display: flex; flex-wrap: wrap; gap: 6px; } .kinds .rect { padding: 5px 9px; font-size: 12px; } .kinds .rect.on { border-color: var(--film-1); background: rgba(var(--g4-blue-rgb), .22); }
+
+  #main { height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: calc(var(--top) + 6px) max(22px, calc(50% - 430px)) 60px;
+          -webkit-mask-image: linear-gradient(to bottom, transparent calc(var(--top) * .5), #000 var(--top)); mask-image: linear-gradient(to bottom, transparent calc(var(--top) * .5), #000 var(--top)); }
+  h1 { font-size: 30px; font-weight: 600; letter-spacing: .01em; } h1 .wang { font-family: 'Songti SC', 'STSong', 'Noto Serif CJK SC', serif; font-size: 54px; font-weight: 600; line-height: 1; vertical-align: -6px; } h1 span + span { font-weight: 400; font-style: italic; color: rgba(246,241,230,.5); font-size: 16px; margin-left: 12px; }
+  #dek { margin: 8px 0 4px; font-size: 15px; line-height: 1.5; color: rgba(246,241,230,.72); max-width: 640px; }
+  #when { font-size: 12px; font-style: italic; color: rgba(246,241,230,.42); margin-bottom: 14px; }
+  #chip { display: inline-block; margin: 0 0 22px; font-size: 12.5px; color: rgba(246,241,230,.6); cursor: pointer; border-bottom: 1px dotted rgba(246,241,230,.3); padding-bottom: 2px; }
+  #chip b { color: #fff; font-weight: 600; }
+  .board { margin: 0 0 30px; }
+  .bh { display: flex; align-items: baseline; gap: 10px; padding-bottom: 7px; border-bottom: 1px solid var(--g4-rule); margin-bottom: 4px; }
+  .bh b { font-size: 17px; font-weight: 600; } .bh i { font-style: normal; font-size: 14px; color: rgba(246,241,230,.5); } .bh small { font-size: 12px; font-style: italic; color: rgba(246,241,230,.4); margin-left: auto; text-align: right; }
+  .row { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 13px 4px; border-bottom: 1px solid var(--g4-rule-soft); }
+  .note { font-size: 14.5px; line-height: 1.55; color: rgba(246,241,230,.82); margin-top: 8px; max-width: 620px; }
+  .src { font-size: 11.5px; color: rgba(246,241,230,.42); margin-top: 7px; } .src .pub { letter-spacing: .08em; text-transform: uppercase; font-size: 10.5px; }
+  .src a { color: var(--film-1); text-decoration: none; border-bottom: 1px dotted rgba(190,232,255,.4); } .src a:hover { color: #fff; }
+  .rk { font-size: 15px; color: rgba(246,241,230,.38); text-align: right; font-variant-numeric: tabular-nums; }
+  .rk.top { color: var(--film-2); }
+  .en { font-size: 16.5px; line-height: 1.4; } .zh { font-size: 13.5px; line-height: 1.45; color: rgba(246,241,230,.5); margin-top: 3px; }
+  .side { text-align: right; white-space: nowrap; font-size: 11.5px; color: rgba(246,241,230,.4); }
+  .side em { display: block; font-style: normal; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(246,241,230,.34); margin-top: 3px; }
+  .empty { color: rgba(246,241,230,.45); font-style: italic; margin-top: 8vh; text-align: center; line-height: 1.7; }
+  /* (11-18) the translation: each line rolls from Chinese to English, left to right, one after another (see the script). */
+  .tr[lang="zh"], .tr [lang="zh"] { letter-spacing: .04em; }
+  .tr .rest { opacity: .62; }
+  .tr .edge { background: linear-gradient(90deg, var(--film-1), var(--film-2), var(--film-3), var(--film-4)); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; text-shadow: 0 0 10px rgba(190,232,255,.35); }
+  .row .note, .row .src, .row .blk { opacity: 0; transition: opacity .6s ease .15s; } .row.done .note, .row.done .src, .row.done .blk { opacity: 1; }
+  /* (11-18) an item in full: the account, their words, how it was received, the way out. Accounts are ours; quotes are short and credited. */
+  .blk { margin-top: 12px; max-width: 620px; } .bl { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: rgba(246,241,230,.38); margin-bottom: 5px; }
+  .q { border-left: 2px solid var(--film-2); padding: 2px 0 2px 12px; margin-bottom: 8px; } .qe { font-size: 16px; line-height: 1.45; font-style: italic; } .qz { font-size: 13px; color: rgba(246,241,230,.5); margin-top: 3px; } .qz span { font-size: 11.5px; color: rgba(246,241,230,.4); }
+  .rc { font-size: 14px; line-height: 1.5; color: rgba(246,241,230,.78); padding-left: 14px; position: relative; margin-bottom: 4px; } .rc::before { content: '·'; position: absolute; left: 3px; color: var(--film-2); } .rc span { color: rgba(246,241,230,.45); font-size: 13px; }
+  /* (11-20) one item, opened: a headline is clicked and the item takes the page. The feed keeps the short form. */
+  .en[data-i] { cursor: pointer; } .en[data-i]:hover, .en[data-i]:focus-visible { color: #fff; text-decoration: underline; text-decoration-color: rgba(190,232,255,.5); text-underline-offset: 4px; outline: none; }
+  .tags { font-size: 11.5px; color: rgba(246,241,230,.45); margin-top: 7px; cursor: pointer; opacity: 0; transition: opacity .6s ease .15s; } .row.done .tags { opacity: 1; } .tags b { color: var(--film-1); font-weight: 400; } .tags:hover b { color: #fff; }
+  #item { display: none; } body.item #item { display: block; } body.item #head, body.item #feed, body.item #foot { display: none; }
+  .back { display: inline-block; font-size: 13px; color: var(--film-1); cursor: pointer; margin-bottom: 22px; border-bottom: 1px dotted rgba(190,232,255,.4); padding-bottom: 2px; } .back:hover { color: #fff; }
+  .meta { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; font-size: 12.5px; color: rgba(246,241,230,.55); margin-bottom: 12px; } .meta b { color: var(--lt-cream); font-weight: 600; letter-spacing: .06em; text-transform: uppercase; font-size: 12px; }
+  #item h2 { font-size: 27px; line-height: 1.3; font-weight: 600; max-width: 720px; } .hz { font-size: 17px; line-height: 1.5; color: rgba(246,241,230,.55); margin-top: 8px; max-width: 720px; }
+  .warn { font-size: 12.5px; font-style: italic; color: var(--film-3); margin-top: 8px; }
+  .sec { margin-top: 28px; max-width: 680px; } .sec .bl { margin-bottom: 9px; } .sec p { font-size: 16px; line-height: 1.62; color: rgba(246,241,230,.88); margin-bottom: 11px; } .sec p.none { font-style: italic; color: rgba(246,241,230,.5); font-size: 14.5px; }
+  .sec .q { margin-bottom: 14px; } .sec .qe { font-size: 18px; } .sec .rc { font-size: 15px; margin-bottom: 8px; } .sec .rc small { color: rgba(246,241,230,.4); font-size: 11.5px; margin-left: 6px; white-space: nowrap; }
+  .from { font-size: 12.5px; color: rgba(246,241,230,.5); line-height: 1.6; } .from a, .sec .ln a { color: var(--film-1); text-decoration: none; border-bottom: 1px dotted rgba(190,232,255,.4); } .from a:hover, .sec .ln a:hover { color: #fff; }
+  .facts { display: grid; grid-template-columns: max-content 1fr; gap: 5px 16px; font-size: 14px; } .facts span { color: rgba(246,241,230,.45); }
+  .rel { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 9px 2px; border-bottom: 1px solid var(--g4-rule-soft); cursor: pointer; } .rel:hover .re { color: #fff; }
+  .rel .mk { width: 18px; height: 18px; } .re { font-size: 14.5px; line-height: 1.4; } .re small { display: block; font-size: 12px; color: rgba(246,241,230,.45); margin-top: 2px; } .rel > i { font-style: normal; font-size: 11.5px; color: rgba(246,241,230,.42); white-space: nowrap; text-align: right; }
+  .cov { padding: 8px 0; border-bottom: 1px solid var(--g4-rule-soft); font-size: 14.5px; line-height: 1.45; } .cov small { display: block; font-size: 12px; color: rgba(246,241,230,.45); margin-top: 2px; }
+  .ln { font-size: 14px; line-height: 2; }
+  .mk { width: 22px; height: 22px; flex: none; align-self: center; margin-right: 2px; }
+  .mk * { fill: none; stroke: url(#cvFilm); stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+  #foot { margin-top: 10px; font-size: 12px; line-height: 1.6; color: rgba(246,241,230,.38); max-width: 640px; }
+  @media (max-width: 620px) { .en { font-size: 15.5px; } .row { grid-template-columns: 24px minmax(0, 1fr); } .side { display: none; } h1 { font-size: 25px; } #item h2 { font-size: 22px; } }
+</style>
+</head>
+<body>
+<div id="menu">
+  <div><div class="lab">Boards</div><div id="boards"></div></div>
+  <div><div class="lab">Kinds</div><div id="kinds" class="kinds"></div></div>
+  <div><div class="lab">Pulls</div><div id="pulls"></div></div>
+</div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="cvFilm" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="var(--film-1)"/><stop offset=".5" stop-color="var(--film-2)"/><stop offset="1" stop-color="var(--film-4)"/></linearGradient></defs></svg>
+<div id="main">
+  <div id="head">
+  <h1><span lang="zh" class="wang">望</span> <span>wàng · to gaze into the distance</span></h1>
+  <div id="dek" class="tr" data-zh="中国媒体此刻的热点，译成英文。一条可以随意浏览的信息流。" data-en="What is trending in Chinese media right now, translated. A feed to explore.">What is trending in Chinese media right now, translated. A feed to explore.</div>
+  <div id="when"></div>
+  <div id="chip"></div>
+  </div>
+  <div id="item"></div>
+  <div id="feed"><div class="empty">Loading the feed…</div></div>
+  <div id="foot"></div>
+</div>
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const DIR = '../data/chinavision/';
+  let INDEX = null, FEED = null, board = 'all', kind = 'all', file = null;
+  const stamp = () => /^(localhost|127\.|\[::1\])/.test(location.hostname) ? '?v=' + Date.now() : '';
+  const get = f => fetch(DIR + f + stamp()).then(r => { if (!r.ok) throw new Error(f + ' ' + r.status); return r.json(); });
+
+  function crumb() { try { parent.postMessage({ type: 'g4:crumb', name: '望', fn: '', crumb: board === 'all' ? 'FEED' : (FEED.boards[board] || {}).name.toUpperCase() }, '*'); } catch (e) {} }
+
+  // ── one item, opened (11-20). Everything 望 holds on a line: the account in full, the words, the reception, the same story on
+  // the other boards and in the other pulls, and the ways out. Nothing is fetched from outside when an item is opened.
+  let openI = null, backTop = 0; const CACHE = {};
+  const first = t => { const m = String(t).match(/^.{60,}?[.!?](?=\s|$)/); return m ? m[0] : String(t); };
+  const inside = i => [i.note ? 'Account' : '', (i.words || []).length ? i.words.length + (i.words.length > 1 ? ' quotes' : ' quote') : '', (i.reception || []).length || (i.comments || []).length ? 'How it was received' : '', (i.coverage || []).length ? i.coverage.length + ' headlines' : ''].filter(Boolean).join(' · ');
+  const pairs = t => { const c = String(t || '').match(/[一-鿿]|[A-Za-z0-9]+/g) || [], o = new Set(); for (let k = 0; k < c.length - 1; k++) o.add(c[k] + c[k + 1]); return o; };
+  // two lines are taken as the same story when most of the shorter one's character pairs are in the longer one
+  // (a Chinese character is one piece, a word in Latin letters such as APEC is one piece; seven in ten pairs must be shared)
+  function same(a, b) { if (a === b) return true; const A = pairs(a), B = pairs(b), S = A.size <= B.size ? A : B, L = S === A ? B : A; if (S.size < 2) return false; let n = 0; S.forEach(x => { if (L.has(x)) n++; }); return n >= Math.min(3, S.size) && n / S.size >= .7; }
+  // 86.4万 is 864,000: the Chinese figure is kept beside the plain one
+  const plain = h => { const m = String(h || '').match(/^([\d.]+)\s*([万亿])(.*)$/); return m ? Math.round(parseFloat(m[1]) * (m[2] === '万' ? 1e4 : 1e8)).toLocaleString('en-US') + m[3] + ' (' + m[1] + m[2] + ')' : String(h || ''); };
+  const sec = (t, h) => h ? '<div class="sec"><div class="bl">' + t + '</div>' + h + '</div>' : '';
+  const relRow = (x, k, F, extra) => '<div class="rel" ' + extra + '>' + mark(x.board) + '<div class="re">' + esc(x.en) + '<small lang="zh">' + esc(x.zh) + '</small></div><i>' + esc((F.boards[x.board] || {}).name || x.board) + ' · No. ' + x.rank + '</i></div>';
+
+  function openItem(n) {
+    const F = FEED, i = F.items[n]; if (!i) return; const B = F.boards[i.board] || {}, vid = i.board === 'bilipop';
+    if (openI == null) backTop = $('main').scrollTop; openI = n;
+    const paras = [i.note].concat(Array.isArray(i.more) ? i.more : (i.more ? [i.more] : [])).filter(Boolean);
+    const srcs = (i.sources || []).filter(x => x && x.url);
+    let story = paras.map(x => '<p>' + esc(x) + '</p>').join('');
+    if (!story) story = '<p class="none">' + esc(i.noAccount || (vid ? '望 does not watch the video. What is here comes from its title and from the comments under it.' : 'No account was written for this line in this pull. An account is written only when a recent article about the line is found in the news feeds 望 reads.')) + '</p>';
+    if (srcs.length && i.note) story += '<div class="from">Written from ' + srcs.map(x => '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.name) + ' ↗</a>' + (x.title ? ': “' + esc(x.titleEn || x.title) + '”' + (x.titleEn ? ' <span lang="zh">' + esc(x.title) + '</span>' : '') : '') + (x.date ? ' · ' + esc(x.date) : '')).join('<br>') + '<br>The account is a summary in our own words, not the article.</div>';
+    const words = (i.words || []).map(w => '<div class="q"><div class="qe tr" data-zh="' + esc(w.zh) + '" data-en="“' + esc(w.en) + '”">“' + esc(w.en) + '”</div><div class="qz" lang="zh">' + esc(w.zh) + (w.who ? ' <span>— ' + esc(w.who) + '</span>' : '') + '</div></div>').join('');
+    const recv = (i.reception || []).map(r => '<div class="rc">' + esc(r.en) + (r.zh ? ' <span lang="zh">' + esc(r.zh) + '</span>' : '') + '</div>').join('') +
+      (i.comments || []).map(c => '<div class="rc">' + esc(c.gist || c.en || '') + (c.likes != null ? '<small>' + Number(c.likes).toLocaleString('en-US') + ' likes</small>' : '') + '</div>').join('');
+    const V = i.video || {}, fact = (k, v) => v ? '<span>' + k + '</span><div>' + esc(v) + '</div>' : '';
+    const video = vid ? '<div class="facts">' + fact('Posted by', V.owner || String(i.source || '').replace(/^Bilibili · /, '')) + fact('Posted', V.posted) + fact('Length', V.length) + fact('Section', V.section) + fact('Views', V.views != null ? Number(V.views).toLocaleString('en-US') : plain(i.heat).replace(' views', '')) + fact('Likes', V.likes != null ? Number(V.likes).toLocaleString('en-US') : '') + fact('Comments', V.replies != null ? Number(V.replies).toLocaleString('en-US') : '') + fact('On-screen comments', V.danmaku != null ? Number(V.danmaku).toLocaleString('en-US') : '') + '</div>' + (V.about ? '<p style="margin-top:12px">' + esc(V.about) + '</p>' : '') : '';
+    const cov = (i.coverage || []).map(c => '<div class="cov">' + esc(c.en || c.zh) + '<small><span lang="zh">' + esc(c.zh) + '</span> · <a href="' + esc(c.url) + '" target="_blank" rel="noopener" style="color:var(--film-1);text-decoration:none">' + esc(c.outlet) + ' ↗</a>' + (c.date ? ' · ' + esc(c.date) : '') + '</small></div>').join('');
+    const also = F.items.map((x, k) => [x, k]).filter(([x, k]) => k !== n && x.board !== i.board && same(x.zh, i.zh)).map(([x, k]) => relRow(x, k, F, 'data-i="' + k + '"')).join('');
+    const outs = srcs.map(x => '<a href="' + esc(x.url) + '" target="_blank" rel="noopener">' + esc(x.name) + ' ↗</a>').concat(i.link ? ['<a href="' + esc(i.link) + '" target="_blank" rel="noopener">' + esc(i.linkLabel || 'look it up') + ' ↗</a>'] : [])
+      .concat(vid ? [] : ['<a href="https://search.bilibili.com/all?keyword=' + encodeURIComponent(i.zh) + '" target="_blank" rel="noopener">videos about it on Bilibili ↗</a>']);
+    $('item').innerHTML = '<span class="back" role="button" tabindex="0">← Back to the feed</span>' +
+      '<div class="meta">' + mark(i.board) + '<b>' + esc(B.name || i.board) + '</b><span lang="zh">' + esc(B.zh || '') + '</span><span>· No. ' + i.rank + ' on this list</span>' + (i.heat && !vid ? '<span>· heat ' + esc(plain(i.heat)) + '</span>' : '') + ((F.kinds || {})[i.kind] ? '<span>· ' + esc(F.kinds[i.kind]) + '</span>' : '') + '<span>· taken ' + esc(F.takenBeijing || '') + ' Beijing time</span></div>' +
+      '<h2 class="tr" data-zh="' + esc(i.zh) + '" data-en="' + esc(i.en) + '">' + esc(i.en) + '</h2><div class="hz" lang="zh">' + esc(i.zh) + '</div>' +
+      (i.enCheck ? '<div class="warn">Check this translation: ' + esc(i.enCheck) + '.</div>' : '') +
+      sec(vid ? 'The video' : 'The story', (vid ? video : '') + story) + sec('Their words', words) + sec(vid ? 'What viewers wrote' : 'How it was received', recv + ((i.comments || []).length ? '<p class="none" style="margin-top:10px">Each comment is given in one sentence of our own, beside its like count. The quoted phrases are the commenters’ words.</p>' : '')) +
+      sec('How outlets headlined it', cov) + sec('The same story on other boards', also) +
+      '<div class="sec" id="histSec"><div class="bl">In the other pulls</div><div id="hist"><p class="none">Looking through the other pulls…</p></div></div>' +
+      sec('Look further', '<div class="ln">' + outs.join('<br>') + '</div>') +
+      '<div class="sec"><p class="none">' + esc(B.about ? B.name + ': ' + B.about + '. ' : '') + 'A place on a hot list is given by the platform, and the lists are curated. Each platform is its own crowd, not the country.</p></div>';
+    document.body.classList.add('item'); $('main').scrollTop = 0; rollIn($('item')); history_(n);
+    try { parent.postMessage({ type: 'g4:crumb', name: '望', fn: '', crumb: ((B.name || 'ITEM') + ' ' + i.rank).toUpperCase() }, '*'); } catch (e) {}
+  }
+  // where the line stood in the other pulls 望 has taken. The pulls are files in the same folder; each is read once.
+  function history_(n) {
+    const i = FEED.items[n], ps = (INDEX.feeds || []).filter(p => p.file !== file);
+    if (!ps.length) { $('histSec').remove(); return; }
+    Promise.all(ps.map(p => (CACHE[p.file] = CACHE[p.file] || get(p.file).catch(() => null)).then(j => [p, j]))).then(rs => {
+      if (openI !== n || !$('hist')) return;
+      const rows = rs.map(([p, j]) => { if (!j) return ''; const hs = j.items.filter(x => same(x.zh, i.zh)); if (!hs.length) return '';
+        return '<div class="rel" data-f="' + esc(p.file) + '" data-z="' + esc(hs[0].zh) + '"><span></span><div class="re">' + esc(p.takenBeijing || p.file) + ' Beijing time<small>' + hs.map(x => esc((j.boards[x.board] || {}).name || x.board) + ' No. ' + x.rank).join(' · ') + '</small></div><i>open that pull ›</i></div>'; }).join('');
+      $('hist').innerHTML = rows || '<p class="none">This line is not on the boards in the other ' + ps.length + (ps.length > 1 ? ' pulls' : ' pull') + ' 望 has taken.</p>';
+    });
+  }
+  function closeItem(keep) { if (openI == null) return; openI = null; document.body.classList.remove('item'); $('item').innerHTML = ''; if (!keep) $('main').scrollTop = backTop; crumb(); }
+  function rollIn(c) { const els = [...c.querySelectorAll('.tr')]; if (REDUCE) { els.forEach(e => toEn(e, false)); return; }
+    els.forEach((e, k) => { e.dataset.s = 'zh'; settle(e, e.dataset.zh, 'zh'); later_(() => toEn(e, true), 260 + k * LAG); }); }
+  $('feed').addEventListener('click', e => { if (e.target.closest('a')) return; const t = e.target.closest('[data-i]'); if (t) openItem(+t.dataset.i); });
+  $('item').addEventListener('click', e => { if (e.target.closest('a')) return;
+    if (e.target.closest('.back')) return closeItem();
+    const t = e.target.closest('[data-i]'); if (t) return openItem(+t.dataset.i);
+    const f = e.target.closest('[data-f]'); if (f) { const z = f.dataset.z; closeItem(true); load(f.dataset.f).then(() => { const k = FEED.items.findIndex(x => x.zh === z); if (k >= 0) { backTop = 0; openItem(k); } }); } });
+  addEventListener('keydown', e => { if (e.key === 'Enter' && document.activeElement && document.activeElement.matches('[data-i], .back')) document.activeElement.click(); });
+
+  function draw() {
+    const F = FEED, order = Object.keys(F.boards);
+    const shown = order.filter(b => board === 'all' || b === board);
+    let html = '', n = 0;
+    for (const b of shown) {
+      const rows = F.items.filter(i => i.board === b && (kind === 'all' || i.kind === kind));
+      if (!rows.length) continue; n += rows.length;
+      const B = F.boards[b];
+      html += '<div class="board"><div class="bh">' + mark(b) + '<b class="tr" data-zh="' + esc(B.zh) + '" data-en="' + esc(B.name) + '">' + esc(B.name) + '</b><i>' + esc(B.zh) + '</i><small>' + esc(B.about) + '</small></div>' +
+        rows.map(i => '<div class="row"><div class="rk' + (i.rank <= 3 ? ' top' : '') + '">' + i.rank + '</div>' +
+          '<div><div class="en tr" role="button" tabindex="0" data-i="' + F.items.indexOf(i) + '" data-zh="' + esc(i.zh) + '" data-en="' + esc(i.en) + '">' + esc(i.en) + '</div><div class="zh" lang="zh">' + esc(i.zh) + '</div>' +
+          (i.note ? '<div class="note">' + esc(first(i.note)) + '</div>' : '') +
+          (inside(i) ? '<div class="tags" data-i="' + F.items.indexOf(i) + '">' + esc(inside(i)) + ' · <b>open ›</b></div>' : '') +
+          '<div class="src"><span class="pub">' + esc(i.source || B.name) + '</span>' + (i.sources || []).map(s => ' · <a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.name) + ' ↗</a>').join('') + (i.link ? ' · <a href="' + esc(i.link) + '" target="_blank" rel="noopener">' + esc(i.linkLabel || 'look it up') + ' ↗</a>' : '') + '</div></div>' +
+          '<div class="side">' + esc(i.heat || '') + '<em>' + esc((F.kinds || {})[i.kind] || '') + '</em></div></div>').join('') + '</div>';
+    }
+    $('feed').innerHTML = html || '<div class="empty">Nothing on this board of that kind in this pull.</div>';
+    $('when').textContent = 'Taken ' + (F.takenBeijing || '') + ' Beijing time' + (F.takenPacific ? ' (' + F.takenPacific + ' Pacific)' : '') + ' · ' + F.items.length + ' items';
+    $('chip').innerHTML = '<b>' + (board === 'all' ? 'All boards' : esc(F.boards[board].name)) + '</b>' + (kind === 'all' ? '' : ' · ' + esc(F.kinds[kind])) + ' · ' + n + ' shown ▾';
+    $('foot').innerHTML = esc(F.source || '') + '<br>' + esc(F.translatedBy ? 'Translation: ' + F.translatedBy : '') + '<br>The heat figures are each platform’s own and cannot be compared across boards. Each item is shown here in English; click a headline to open it and see everything 望 holds on it. The accounts are summaries in our own words, not the articles; the link goes out to the source or to a search for it.<br>On how things were received: what can be seen here is what was allowed to stay up. Hot lists are curated and comment sections are moderated, so a quiet reaction can mean little interest or can mean removal, and from outside the two look the same. Each platform is also its own crowd, not the country.';
+    $('boards').innerHTML = '<button class="rect m' + (board === 'all' ? ' on' : '') + '" data-b="all"><b>All boards</b><small>every list, in turn</small></button>' +
+      order.map(b => '<button class="rect m' + (board === b ? ' on' : '') + '" data-b="' + b + '"><b>' + esc(F.boards[b].name) + ' <span style="font-weight:400;opacity:.6">' + esc(F.boards[b].zh) + '</span></b><small>' + esc(F.boards[b].about) + '</small></button>').join('');
+    const have = new Set(F.items.map(i => i.kind));
+    $('kinds').innerHTML = '<button class="rect' + (kind === 'all' ? ' on' : '') + '" data-k="all">Everything</button>' +
+      Object.keys(F.kinds || {}).filter(k => have.has(k)).map(k => '<button class="rect' + (kind === k ? ' on' : '') + '" data-k="' + k + '">' + esc(F.kinds[k]) + '</button>').join('');
+    $('pulls').innerHTML = (INDEX.feeds || []).map(p => '<button class="rect m' + (p.file === file ? ' on' : '') + '" data-f="' + esc(p.file) + '"><b>' + esc(p.takenBeijing || p.file) + '</b><small>Beijing time · ' + (p.items || '') + ' items</small></button>').join('');
+    crumb(); runWave();
+  }
+
+  // ── the markers: one small drawing for each board, our own, in the film's line. They say what the board is
+  // (posts, a search, a video, a question, headlines, a screen of comments, a paper); they are not the platforms' logos.
+  const MARKS = {
+    weibo:    '<path d="M4 5h16v10h-8l-4 4v-4H4z"/><path d="M8.5 10h7"/>',
+    baidu:    '<circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/>',
+    douyin:   '<rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M10.6 9v6l4.6-3z"/>',
+    zhihu:    '<path d="M9 9.2a3 3 0 1 1 4.4 2.6c-.9.5-1.4 1.1-1.4 2.2"/><path d="M12 17.6v.2"/><path d="M5 3.5H3.5v17H5M19 3.5h1.5v17H19"/>',
+    toutiao:  '<path d="M4 6h16"/><path d="M4 11h11"/><path d="M4 15h13"/><path d="M4 19h7"/>',
+    bilibili: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M6 9.5h6M13 12h5M7 14.5h4"/>',
+    thepaper: '<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4"/><path d="M9 12h7M9 16h5"/>',
+    bilipop:  '<rect x="3" y="4" width="18" height="12" rx="2"/><path d="M10.4 7.6v4.8l4.2-2.4z"/><path d="M5 19.5h9M16 19.5h3"/>',
+  };
+  const mark = b => '<svg class="mk" viewBox="0 0 24 24" aria-hidden="true">' + (MARKS[b] || '<circle cx="12" cy="12" r="7"/>') + '</svg>';
+
+  // ── the translation (11-18, second version): a roll. Each line starts in Chinese and turns to English from left to right,
+  // one line a little after the one above it. While the page is read, one line at a time rolls back to Chinese and across
+  // to English again, the same way. With "reduce motion" on, none of this runs and the page is simply in English.
+  const REDUCE = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const LAG = 95, ROLL = 620;   // ms between one line starting and the next; ms for one line to roll across
+  let io = null, timers = [], gen = 0;
+  const later_ = (fn, ms) => { const id = setTimeout(fn, ms); timers.push(id); return id; };
+  function settle(el, to, lang) { el.textContent = to; if (lang) el.lang = lang; else el.removeAttribute('lang'); }
+  // one roll: the text 'to' comes in from the left over 'from'. The two or three characters at the meeting point carry the film's colours.
+  function roll(el, from, to, toLang, dur, done) {
+    const g = gen, t0 = performance.now();
+    const step = now => {
+      if (g !== gen || !el.isConnected) return;
+      const p = Math.min(1, (now - t0) / dur), e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      if (p >= 1) { settle(el, to, toLang); if (done) done(); return; }
+      const a = Math.round(e * to.length), b = Math.round(e * from.length), k = toLang ? 1 : 3;
+      el.removeAttribute('lang');
+      el.innerHTML = '<span' + (toLang ? ' lang="zh"' : '') + '>' + esc(to.slice(0, Math.max(0, a - k))) + '</span><span class="edge"' + (toLang ? ' lang="zh"' : '') + '>' + esc(to.slice(Math.max(0, a - k), a)) + '</span><span class="rest"' + (toLang ? '' : ' lang="zh"') + '>' + esc(from.slice(b)) + '</span>';
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+  function toEn(el, animate) {
+    if (el.dataset.s === 'en' || el.dataset.s === 'rolling') return;
+    const r = el.classList.contains('en') ? el.closest('.row') : null, fin = () => { el.dataset.s = 'en'; if (r) r.classList.add('done'); };
+    if (!animate) { settle(el, el.dataset.en); fin(); return; }
+    el.dataset.s = 'rolling'; roll(el, el.dataset.zh, el.dataset.en, null, ROLL + Math.min(500, el.dataset.en.length * 4), fin);
+  }
+  function runWave() {
+    gen++; timers.forEach(clearTimeout); timers = []; if (io) io.disconnect();
+    const M = $('main'), els = [...document.querySelectorAll('.tr')];
+    if (REDUCE) { els.forEach(e => toEn(e, false)); return; }
+    els.forEach(e => { e.dataset.s = 'zh'; delete e.dataset.f; settle(e, e.dataset.zh, 'zh'); const r = e.closest('.row'); if (r) r.classList.remove('done'); });
+    const mr = M.getBoundingClientRect(), first = [], rest = [];
+    els.forEach(e => { const r = e.getBoundingClientRect(); (r.top < mr.bottom - 10 ? first : rest).push(e); });
+    first.forEach((e, n) => later_(() => toEn(e, true), 700 + n * LAG));   // the Chinese is held for a moment, then the lines go one after another
+    let q = 0, qT = 0;   // lines met while scrolling keep the same lag between them
+    io = new IntersectionObserver(es => es.forEach(en => { if (!en.isIntersecting) return; const el = en.target; io.unobserve(el);
+      const now = performance.now(); if (now - qT > 400) q = 0; qT = now; later_(() => toEn(el, true), 160 + (q++) * LAG); }), { root: M, threshold: .5 });
+    rest.forEach(e => io.observe(e));
+  }
+  // while reading: one headline in view rolls to Chinese, holds, and rolls back to English
+  function reroll() {
+    if (REDUCE || document.hidden) return;
+    const mr = $('main').getBoundingClientRect();
+    const c = [...document.querySelectorAll('.en.tr[data-s="en"]')].filter(e => { if (e.dataset.f) return false; const r = e.getBoundingClientRect(); return r.top > mr.top + 60 && r.bottom < mr.bottom - 10; });
+    if (!c.length) return;
+    const el = c[Math.floor(Math.random() * c.length)], g = gen;
+    el.dataset.f = '1';
+    roll(el, el.dataset.en, el.dataset.zh, 'zh', 520, () => later_(() => { if (g !== gen) return; roll(el, el.dataset.zh, el.dataset.en, null, ROLL, () => { delete el.dataset.f; }); }, 650));
+  }
+  setInterval(reroll, 2800);
+
+  function load(f) { file = f; return get(f).then(j => { FEED = j; if (board !== 'all' && !FEED.boards[board]) board = 'all'; draw(); $('main').scrollTop = 0; }); }
+  $('menu').addEventListener('click', e => {
+    const t = e.target.closest('button'); if (!t) return; closeItem(true);
+    if (t.dataset.b) { board = t.dataset.b; draw(); $('main').scrollTop = 0; }
+    else if (t.dataset.k) { kind = t.dataset.k; draw(); }
+    else if (t.dataset.f) load(t.dataset.f);
+  });
+  get('index.json').then(j => { INDEX = j; return load(j.latest); })
+    .catch(e => { $('feed').innerHTML = '<div class="empty">No feed could be opened.<br>' + esc(e.message) + '</div>'; });
+
+  // the menu inside the prism: the same way as Chat (g4:navsize asks for the large prism; g4:prismhover says when the pointer rests on it)
+  const IN_SHELL = parent !== window; const BIG = () => innerWidth < 760 ? 132 : 204;
+  let closeT = null, onPrism = false, onMenu = false;
+  const menu = on => { clearTimeout(closeT); if (on) $('menu').classList.add('on'); else closeT = setTimeout(() => { if (!onPrism && !onMenu) $('menu').classList.remove('on'); }, 320); };
+  function sizePrism() { const h = BIG(); document.body.style.setProperty('--top', (IN_SHELL ? Math.round(h * .76) : 24) + 'px'); if (IN_SHELL) try { parent.postMessage({ type: 'g4:navsize', h }, '*'); } catch (e) {} }
+  sizePrism(); addEventListener('resize', sizePrism);
+  addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:prismhover') return;
+    onPrism = !!m.on; if (m.on && m.x != null) { const w = $('menu').offsetWidth || 318; $('menu').style.left = Math.max(10, Math.min(innerWidth - w - 10, m.x - w / 2)) + 'px'; if (m.y != null) $('menu').style.top = Math.max(40, m.y - 14) + 'px'; }
+    menu(m.on); });
+  $('menu').addEventListener('pointerenter', () => { onMenu = true; menu(true); });
+  $('menu').addEventListener('pointerleave', () => { onMenu = false; menu(false); });
+  $('chip').onclick = e => { e.stopPropagation(); const open = $('menu').classList.contains('on'); onMenu = !open; if (open) $('menu').classList.remove('on'); else menu(true); };
+  $('main').addEventListener('pointerdown', e => { if (!e.target.closest('#chip')) { onMenu = false; $('menu').classList.remove('on'); } });
+  addEventListener('keydown', e => { if (e.key === 'Escape') { if (openI != null && !$('menu').classList.contains('on')) closeItem(); onMenu = false; $('menu').classList.remove('on'); } });
+})();
+</script>
+</body>
+</html>

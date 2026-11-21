@@ -1,0 +1,470 @@
+The Jensen set — Tue Nov 17 22:51:33 PST 2026 — readers: sonnet qwen gemma deepseek — relational test x3
+
+=== the base cut (Sonnet) — started 22:51 ===
+  grammar: posts 0–5 → 10 lines
+  grammar: posts 6–11 → 10 lines
+  grammar: posts 12–17 → 9 lines
+  grammar: posts 18–23 → 6 lines
+  grammar: posts 24–29 → 8 lines
+  grammar: posts 30–35 → 10 lines
+  grammar: posts 36–41 → 12 lines
+  grammar: posts 42–47 → 12 lines
+  grammar: posts 48–53 → 11 lines
+  grammar: posts 54–59 → 13 lines
+  grammar: posts 60–65 → 13 lines
+  grammar: posts 66–71 → 19 lines
+  grammar: posts 72–77 → 11 lines
+  grammar: posts 78–83 → 13 lines
+  grammar: posts 84–87 → 15 lines
+grammar: 172 lines (claude-sonnet-5-5)
+  claude-haiku-5-5: the answer was not clean JSON (Expecting value: line 2 column 203 (char 214); stop_reason=end_turn, output_tokens=3015, 3094 chars) — asking again
+  claude-haiku-5-5: the answer was not clean JSON (Expecting value: line 2 column 266 (char 277); stop_reason=end_turn, output_tokens=3046, 3672 chars) — asking again
+second pass: 0 moments
+jensen_set: 172 lines · Dia 25 · z -0.01 · Lumens None (0/172 measured) → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/jensen_base/jensen_set_report.md
+base cut kept in data/parallelograms/baselines/sonnet_2026-11-17_jensen
+
+=== sonnet — started 23:09 ===
+  annotate: lines 0–7 → 8 of 8
+  annotate: lines 8–15 → 8 of 8
+  annotate: lines 16–23 → 8 of 8
+  annotate: lines 24–31 → 8 of 8
+  annotate: lines 32–39 → 8 of 8
+  annotate: lines 40–47 → 8 of 8
+  annotate: lines 48–55 → 8 of 8
+  annotate: lines 56–63 → 8 of 8
+  annotate: lines 64–71 → 8 of 8
+  annotate: lines 72–79 → 8 of 8
+  annotate: lines 80–87 → 8 of 8
+  annotate: lines 88–95 → 8 of 8
+  annotate: lines 96–103 → 8 of 8
+  annotate: lines 104–111 → 8 of 8
+  annotate: lines 112–119 → 8 of 8
+  annotate: lines 120–127 → 8 of 8
+  annotate: lines 128–135 → 8 of 8
+  annotate: lines 136–143 → 8 of 8
+  annotate: lines 144–151 → 8 of 8
+  annotate: lines 152–159 → 8 of 8
+  annotate: lines 160–167 → 8 of 8
+  annotate: lines 168–171 → 4 of 4
+annotate: 172 lines (claude-sonnet-5-5) · left out 0 · answers outside the choices 0 → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_sonnet/jensen_set.grammar.json
+grammar: reused /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_sonnet/jensen_set.grammar.json
+  claude-haiku-5-5: the answer was not clean JSON (Expecting value: line 2 column 188 (char 199); stop_reason=end_turn, output_tokens=3232, 3242 chars) — asking again
+  claude-haiku-5-5: the answer was not clean JSON (Expecting value: line 2 column 187 (char 198); stop_reason=end_turn, output_tokens=3118, 3068 chars) — asking again
+  claude-haiku-5-5: the answer was not clean JSON (Expecting value: line 1 column 199 (char 198); stop_reason=end_turn, output_tokens=2672, 3335 chars) — asking again
+  claude-haiku-5-5: the answer was not clean JSON (Expecting value: line 2 column 188 (char 199); stop_reason=end_turn, output_tokens=2991, 3089 chars) — asking again
+second pass: 0 moments
+jensen_set: 172 lines · Dia 25 · z 0.01 · Lumens None (0/172 measured) → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_sonnet/jensen_set_report.md
+=== sonnet — finished 23:26 ===
+jensen_set: fewer than two readers so far — nothing to set side by side
+
+=== qwen — started 23:26 ===
+  local: loading mlx-community/Qwen3.6-35B-A3B-4bit-DWQ …
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 848.67it/s]
+  local: mlx-community/Qwen3.6-35B-A3B-4bit-DWQ ready in 5s
+  local:qwen: 1211 tokens in 25.4s (59.8/s)
+  annotate: lines 0–7 → 8 of 8
+  local:qwen: 1225 tokens in 24.9s (59.6/s)
+  annotate: lines 8–15 → 8 of 8
+  local:qwen: 1052 tokens in 22.1s (59.6/s)
+  annotate: lines 16–23 → 8 of 8
+  local:qwen: 1168 tokens in 24.3s (59.4/s)
+  annotate: lines 24–31 → 8 of 8
+  local:qwen: 1141 tokens in 23.4s (59.6/s)
+  annotate: lines 32–39 → 8 of 8
+  local:qwen: 1172 tokens in 23.6s (59.8/s)
+  annotate: lines 40–47 → 8 of 8
+  local:qwen: 1154 tokens in 23.6s (59.7/s)
+  annotate: lines 48–55 → 8 of 8
+  local:qwen: 1075 tokens in 22.4s (59.6/s)
+  annotate: lines 56–63 → 8 of 8
+  local:qwen: 1207 tokens in 27.5s (55.1/s)
+  annotate: lines 64–71 → 8 of 8
+  local:qwen: 1213 tokens in 30.0s (50.5/s)
+  annotate: lines 72–79 → 8 of 8
+  local:qwen: 1263 tokens in 32.1s (48.8/s)
+  annotate: lines 80–87 → 8 of 8
+  local:qwen: 1059 tokens in 28.3s (47.4/s)
+  annotate: lines 88–95 → 8 of 8
+  local:qwen: 1191 tokens in 28.9s (52.0/s)
+  annotate: lines 96–103 → 8 of 8
+  local:qwen: 1237 tokens in 28.6s (54.6/s)
+  annotate: lines 104–111 → 8 of 8
+  local:qwen: 1104 tokens in 24.9s (57.9/s)
+  annotate: lines 112–119 → 8 of 8
+  local:qwen: 1221 tokens in 26.7s (59.4/s)
+  annotate: lines 120–127 → 8 of 8
+  local:qwen: 1313 tokens in 28.3s (60.1/s)
+  annotate: lines 128–135 → 8 of 8
+  local:qwen: 1061 tokens in 22.6s (60.9/s)
+  annotate: lines 136–143 → 8 of 8
+  local:qwen: 1169 tokens in 23.7s (60.7/s)
+  annotate: lines 144–151 → 8 of 8
+  local:qwen: 1180 tokens in 24.6s (60.6/s)
+  annotate: lines 152–159 → 8 of 8
+  local:qwen: 1290 tokens in 26.0s (60.6/s)
+  annotate: lines 160–167 → 8 of 8
+  local:qwen: 630 tokens in 14.8s (60.9/s)
+  annotate: lines 168–171 → 4 of 4
+annotate: 172 lines (local:qwen) · left out 0 · answers outside the choices 0 → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_qwen/jensen_set.grammar.json
+grammar: reused /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_qwen/jensen_set.grammar.json
+  local: loading mlx-community/Qwen3.6-35B-A3B-4bit-DWQ …
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Fetching 10 files: 100%|██████████| 10/10 [00:00<00:00, 1002.70it/s]
+  local: mlx-community/Qwen3.6-35B-A3B-4bit-DWQ ready in 5s
+  local:qwen: 333 tokens in 9.6s (61.2/s)
+  local:qwen: 1156 tokens in 28.7s (59.2/s)
+  local:qwen: 1221 tokens in 29.3s (59.2/s)
+  local:qwen: 1246 tokens in 29.8s (59.2/s)
+  local:qwen: 154 tokens in 6.4s (61.2/s)
+  local:qwen: 1184 tokens in 28.8s (59.1/s)
+  local:qwen: 1212 tokens in 29.3s (59.1/s)
+  local:qwen: 1222 tokens in 29.4s (59.1/s)
+  local:qwen: 211 tokens in 7.3s (61.1/s)
+  local:qwen: 1152 tokens in 28.1s (59.2/s)
+  local:qwen: 1147 tokens in 28.1s (59.1/s)
+  local:qwen: 1178 tokens in 28.6s (59.2/s)
+  local:qwen: 137 tokens in 6.1s (61.4/s)
+  local:qwen: 1178 tokens in 28.6s (59.1/s)
+  local:qwen: 1179 tokens in 28.6s (59.1/s)
+  local:qwen: 1212 tokens in 29.2s (59.1/s)
+  local:qwen: the answer was not clean JSON (Expecting value: line 14 column 12 (char 247); 3968 chars) — asking again
+  local:qwen: 1102 tokens in 27.3s (59.2/s)
+  local:qwen: 166 tokens in 6.6s (61.2/s)
+  local:qwen: the answer was not clean JSON (Expecting value: line 11 column 45 (char 308)) — salvaged 9 lines
+  local:qwen: 1109 tokens in 27.4s (59.2/s)
+  local:qwen: 1362 tokens in 31.8s (59.0/s)
+  local:qwen: 1298 tokens in 30.7s (58.9/s)
+  local:qwen: 183 tokens in 6.8s (61.3/s)
+  local:qwen: 1179 tokens in 28.7s (58.9/s)
+  local:qwen: 1283 tokens in 30.5s (58.9/s)
+  local:qwen: 1224 tokens in 29.4s (58.9/s)
+  local:qwen: 137 tokens in 6.2s (61.3/s)
+  local:qwen: 1242 tokens in 29.8s (58.9/s)
+  local:qwen: 1193 tokens in 29.0s (58.8/s)
+  local:qwen: 1242 tokens in 29.8s (58.9/s)
+  local:qwen: 137 tokens in 6.1s (61.2/s)
+  local:qwen: 1173 tokens in 28.7s (58.8/s)
+  local:qwen: 1139 tokens in 28.1s (58.8/s)
+  local:qwen: 1118 tokens in 27.7s (58.8/s)
+  local:qwen: 281 tokens in 8.5s (60.8/s)
+  local:qwen: 1250 tokens in 29.9s (58.8/s)
+  local:qwen: 1178 tokens in 28.6s (58.8/s)
+  local:qwen: 1202 tokens in 29.0s (58.8/s)
+  local:qwen: 292 tokens in 8.8s (60.9/s)
+  local:qwen: 1224 tokens in 29.6s (58.8/s)
+  local:qwen: 1209 tokens in 29.3s (58.8/s)
+  local:qwen: 1203 tokens in 29.2s (58.7/s)
+  local:qwen: 185 tokens in 7.0s (60.9/s)
+  local:qwen: 1134 tokens in 27.9s (58.8/s)
+  local:qwen: 1127 tokens in 27.8s (58.8/s)
+  local:qwen: 1211 tokens in 29.3s (58.8/s)
+  local:qwen: 246 tokens in 8.0s (60.9/s)
+  local:qwen: 1191 tokens in 29.0s (58.8/s)
+  local:qwen: 1094 tokens in 27.3s (58.8/s)
+  local:qwen: 1182 tokens in 28.8s (58.8/s)
+  local:qwen: 153 tokens in 6.4s (60.8/s)
+  local:qwen: 1206 tokens in 29.1s (58.8/s)
+  local:qwen: 1211 tokens in 29.2s (58.8/s)
+  local:qwen: 1200 tokens in 29.0s (58.8/s)
+  local:qwen: 137 tokens in 6.2s (61.0/s)
+  local:qwen: 1145 tokens in 31.8s (57.6/s)
+  local:qwen: 1114 tokens in 31.3s (57.6/s)
+  local:qwen: 1290 tokens in 34.4s (57.4/s)
+  local:qwen: 137 tokens in 6.1s (61.1/s)
+  local:qwen: 1271 tokens in 31.1s (58.5/s)
+  local:qwen: 1348 tokens in 32.4s (58.6/s)
+  local:qwen: 1273 tokens in 31.2s (58.5/s)
+  local:qwen: 211 tokens in 7.3s (60.8/s)
+  local:qwen: 1169 tokens in 28.4s (58.9/s)
+  local:qwen: 1201 tokens in 29.0s (58.9/s)
+  local:qwen: 1163 tokens in 28.3s (58.8/s)
+  local:qwen: 211 tokens in 7.4s (60.8/s)
+  local:qwen: 1195 tokens in 31.4s (58.1/s)
+  local:qwen: 1225 tokens in 31.9s (58.2/s)
+  local:qwen: 1181 tokens in 31.1s (58.2/s)
+  local:qwen: 33 tokens in 3.6s (62.8/s)
+  local:qwen: 281 tokens in 12.3s (59.7/s)
+  local:qwen: 263 tokens in 12.0s (59.7/s)
+  local:qwen: 260 tokens in 12.0s (59.8/s)
+  local:qwen: 227 tokens in 79.0s (45.7/s)
+  local:qwen: 226 tokens in 79.0s (45.7/s)
+  local:qwen: 98 tokens in 76.2s (45.9/s)
+second pass: 1 moments
+jensen_set: 172 lines · Dia 27 · z 0.04 · Lumens None (0/172 measured) → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_qwen/jensen_set_report.md
+=== qwen — finished 00:08 ===
+jensen_set: 2 readers · 172 lines · 132 split → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/grid_jensen/jensen_set_grid.md
+
+=== gemma — started 00:08 ===
+  local: loading mlx-community/gemma-4-31B-it-qat-4bit …
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 2745.52it/s]
+  local: mlx-community/gemma-4-31B-it-qat-4bit ready in 6s
+  local:gemma: 1102 tokens in 146.4s (10.1/s)
+  annotate: lines 0–7 → 8 of 8
+  local:gemma: 1092 tokens in 146.1s (10.1/s)
+  annotate: lines 8–15 → 8 of 8
+  local:gemma: 1123 tokens in 150.6s (10.1/s)
+  annotate: lines 16–23 → 8 of 8
+  local:gemma: 1049 tokens in 144.8s (10.1/s)
+  annotate: lines 24–31 → 8 of 8
+  local:gemma: 1133 tokens in 149.6s (10.1/s)
+  annotate: lines 32–39 → 8 of 8
+  local:gemma: 1021 tokens in 135.6s (10.1/s)
+  annotate: lines 40–47 → 8 of 8
+  local:gemma: 1069 tokens in 142.8s (10.1/s)
+  annotate: lines 48–55 → 8 of 8
+  local:gemma: 1114 tokens in 148.3s (10.1/s)
+  annotate: lines 56–63 → 8 of 8
+  local:gemma: 1066 tokens in 150.4s (10.1/s)
+  annotate: lines 64–71 → 8 of 8
+  local:gemma: 1329 tokens in 173.2s (10.1/s)
+  annotate: lines 72–79 → 8 of 8
+  local:gemma: 1107 tokens in 149.0s (10.1/s)
+  annotate: lines 80–87 → 8 of 8
+  local:gemma: 1144 tokens in 154.7s (10.1/s)
+  annotate: lines 88–95 → 8 of 8
+  local:gemma: 1111 tokens in 149.3s (10.1/s)
+  annotate: lines 96–103 → 8 of 8
+  local:gemma: 1163 tokens in 155.2s (10.1/s)
+  annotate: lines 104–111 → 8 of 8
+  local:gemma: 1153 tokens in 155.6s (10.1/s)
+  annotate: lines 112–119 → 8 of 8
+  local:gemma: 1120 tokens in 158.7s (10.0/s)
+  annotate: lines 120–127 → 8 of 8
+  local:gemma: 1126 tokens in 163.4s (10.0/s)
+  annotate: lines 128–135 → 8 of 8
+  local:gemma: 1147 tokens in 153.0s (10.1/s)
+  annotate: lines 136–143 → 8 of 8
+  local:gemma: 1039 tokens in 140.3s (10.1/s)
+  annotate: lines 144–151 → 8 of 8
+  local:gemma: 1095 tokens in 148.7s (10.1/s)
+  annotate: lines 152–159 → 8 of 8
+  local:gemma: 1091 tokens in 151.4s (10.1/s)
+  annotate: lines 160–167 → 8 of 8
+  local:gemma: 601 tokens in 99.2s (10.1/s)
+  annotate: lines 168–171 → 4 of 4
+annotate: 172 lines (local:gemma) · left out 0 · answers outside the choices 5 → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_gemma/jensen_set.grammar.json
+grammar: reused /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_gemma/jensen_set.grammar.json
+  local: loading mlx-community/gemma-4-31B-it-qat-4bit …
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Fetching 13 files: 100%|██████████| 13/13 [00:00<00:00, 2995.44it/s]
+  local: mlx-community/gemma-4-31B-it-qat-4bit ready in 7s
+  local:gemma: 253 tokens in 60.8s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 40 column 21 (char 487)) — salvaged 9 lines
+  local:gemma: 1047 tokens in 184.4s (9.9/s)
+  local:gemma: 1059 tokens in 185.7s (9.8/s)
+  local:gemma: 1040 tokens in 183.8s (9.8/s)
+  local:gemma: 252 tokens in 59.0s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 12 column 21 (char 151)) — salvaged 9 lines
+  local:gemma: 1053 tokens in 185.6s (9.8/s)
+  local:gemma: 1053 tokens in 185.6s (9.8/s)
+  local:gemma: 1060 tokens in 186.3s (9.8/s)
+  local:gemma: 247 tokens in 58.1s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 40 column 21 (char 487)) — salvaged 9 lines
+  local:gemma: 1007 tokens in 179.3s (9.9/s)
+  local:gemma: 1041 tokens in 182.7s (9.9/s)
+  local:gemma: 1021 tokens in 180.8s (9.9/s)
+  local:gemma: 254 tokens in 58.8s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 20 column 21 (char 247)) — salvaged 9 lines
+  local:gemma: 1062 tokens in 186.0s (9.8/s)
+  local:gemma: 1057 tokens in 185.5s (9.8/s)
+  local:gemma: 1020 tokens in 181.7s (9.9/s)
+  local:gemma: 218 tokens in 55.2s (10.2/s)
+  local:gemma: 1038 tokens in 190.5s (9.8/s)
+  local:gemma: 1036 tokens in 190.3s (9.8/s)
+  local:gemma: 1040 tokens in 190.6s (9.8/s)
+  local:gemma: 218 tokens in 55.2s (10.2/s)
+  local:gemma: 1053 tokens in 185.0s (9.8/s)
+  local:gemma: 1048 tokens in 184.5s (9.9/s)
+  local:gemma: 1049 tokens in 184.4s (9.9/s)
+  local:gemma: 263 tokens in 60.1s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 24 column 21 (char 295)) — salvaged 9 lines
+  local:gemma: 1065 tokens in 187.8s (9.8/s)
+  local:gemma: 1040 tokens in 185.4s (9.8/s)
+  local:gemma: 1065 tokens in 187.9s (9.8/s)
+  local:gemma: 218 tokens in 55.7s (10.2/s)
+  local:gemma: 1052 tokens in 187.6s (9.8/s)
+  local:gemma: 1041 tokens in 186.5s (9.8/s)
+  local:gemma: 1037 tokens in 186.0s (9.8/s)
+  local:gemma: 218 tokens in 55.2s (10.2/s)
+  local:gemma: 1029 tokens in 182.1s (9.9/s)
+  local:gemma: 1032 tokens in 182.4s (9.9/s)
+  local:gemma: 1030 tokens in 182.2s (9.9/s)
+  local:gemma: 311 tokens in 65.8s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 16 column 21 (char 199)) — salvaged 8 lines
+  local:gemma: 1071 tokens in 187.9s (9.8/s)
+  local:gemma: 1056 tokens in 186.3s (9.8/s)
+  local:gemma: 1059 tokens in 186.7s (9.8/s)
+  local:gemma: 245 tokens in 58.8s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 40 column 21 (char 487)) — salvaged 9 lines
+  local:gemma: 1049 tokens in 184.1s (9.9/s)
+  local:gemma: 1040 tokens in 183.2s (9.9/s)
+  local:gemma: 1044 tokens in 183.6s (9.9/s)
+  local:gemma: 218 tokens in 56.1s (10.2/s)
+  local:gemma: 1102 tokens in 190.6s (9.8/s)
+  local:gemma: 1112 tokens in 191.6s (9.8/s)
+  local:gemma: 1130 tokens in 193.5s (9.8/s)
+  local:gemma: 281 tokens in 61.9s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 8 column 16 (char 80)) — salvaged 8 lines
+  local:gemma: 1052 tokens in 186.0s (9.7/s)
+  local:gemma: 1045 tokens in 183.2s (9.9/s)
+  local:gemma: 1061 tokens in 184.9s (9.9/s)
+  local:gemma: 274 tokens in 62.1s (10.2/s)
+  local:gemma: the answer was not clean JSON (Expecting value: line 44 column 21 (char 536)) — salvaged 9 lines
+  local:gemma: 1038 tokens in 183.4s (9.9/s)
+  local:gemma: 1040 tokens in 183.7s (9.9/s)
+  local:gemma: 1061 tokens in 185.8s (9.8/s)
+  local:gemma: 218 tokens in 55.7s (10.2/s)
+  local:gemma: 1030 tokens in 181.1s (9.9/s)
+  local:gemma: 1042 tokens in 182.4s (9.9/s)
+  local:gemma: 1025 tokens in 180.6s (9.9/s)
+  local:gemma: 218 tokens in 55.2s (10.2/s)
+  local:gemma: 1086 tokens in 187.4s (9.9/s)
+  local:gemma: 1082 tokens in 187.0s (9.9/s)
+  local:gemma: 1086 tokens in 187.4s (9.9/s)
+  local:gemma: 218 tokens in 55.7s (10.2/s)
+  local:gemma: 1038 tokens in 184.1s (9.8/s)
+  local:gemma: 1035 tokens in 183.7s (9.8/s)
+  local:gemma: 1033 tokens in 183.5s (9.9/s)
+  local:gemma: 56 tokens in 32.8s (10.4/s)
+  local:gemma: 237 tokens in 91.9s (10.0/s)
+  local:gemma: 241 tokens in 92.3s (10.0/s)
+  local:gemma: 237 tokens in 91.9s (10.0/s)
+  local:gemma: 95 tokens in 599.8s (7.1/s)
+  local:gemma: 97 tokens in 600.1s (7.1/s)
+  local:gemma: 85 tokens in 598.3s (7.1/s)
+second pass: 1 moments
+jensen_set: 172 lines · Dia 34 · z 0.03 · Lumens None (0/172 measured) → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_gemma/jensen_set_report.md
+=== gemma — finished 04:32 ===
+jensen_set: 3 readers · 172 lines · 160 split → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/grid_jensen/jensen_set_grid.md
+
+=== deepseek — started 04:32 ===
+  local: loading mlx-community/Unsloth-DeepSeek-R1-Distill-Qwen-32B-4bit …
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 2711.64it/s]
+  local: mlx-community/Unsloth-DeepSeek-R1-Distill-Qwen-32B-4bit ready in 3s
+  local:deepseek: 1599 tokens in 132.5s (15.0/s)
+  annotate: lines 0–7 → 8 of 8
+  local:deepseek: 1791 tokens in 147.7s (14.9/s)
+  annotate: lines 8–15 → 8 of 8
+  local:deepseek: 1739 tokens in 145.1s (14.8/s)
+  annotate: lines 16–23 → 8 of 8
+  local:deepseek: 1622 tokens in 137.4s (14.9/s)
+  annotate: lines 24–31 → 8 of 8
+  local:deepseek: 2143 tokens in 170.6s (14.9/s)
+  annotate: lines 32–39 → 8 of 8
+  local:deepseek: 1814 tokens in 145.7s (15.0/s)
+  annotate: lines 40–47 → 8 of 8
+  local:deepseek: 1686 tokens in 138.5s (15.0/s)
+  annotate: lines 48–55 → 8 of 8
+  local:deepseek: 1583 tokens in 132.3s (15.0/s)
+  annotate: lines 56–63 → 8 of 8
+  local:deepseek: 1625 tokens in 141.7s (14.8/s)
+  annotate: lines 64–71 → 8 of 8
+  local:deepseek: 1584 tokens in 135.8s (14.9/s)
+  annotate: lines 72–79 → 8 of 8
+  local:deepseek: 1751 tokens in 145.5s (14.9/s)
+  annotate: lines 80–87 → 8 of 8
+  local:deepseek: 1665 tokens in 141.1s (14.9/s)
+  annotate: lines 88–95 → 8 of 8
+  local:deepseek: 1526 tokens in 129.4s (15.0/s)
+  annotate: lines 96–103 → 8 of 8
+  local:deepseek: 1463 tokens in 125.6s (15.1/s)
+  annotate: lines 104–111 → 8 of 8
+  local:deepseek: 1860 tokens in 153.5s (15.0/s)
+  annotate: lines 112–119 → 8 of 8
+  local:deepseek: 1809 tokens in 156.3s (14.8/s)
+  annotate: lines 120–127 → 8 of 8
+  local:deepseek: 1689 tokens in 151.6s (14.7/s)
+  annotate: lines 128–135 → 8 of 8
+  local:deepseek: 1665 tokens in 139.9s (14.9/s)
+  annotate: lines 136–143 → 8 of 8
+  local:deepseek: 1500 tokens in 127.1s (14.9/s)
+  annotate: lines 144–151 → 8 of 8
+  local:deepseek: 1092 tokens in 101.3s (15.0/s)
+  annotate: lines 152–159 → 8 of 8
+  local:deepseek: 2059 tokens in 170.4s (14.8/s)
+  annotate: lines 160–167 → 8 of 8
+  local:deepseek: 974 tokens in 93.7s (14.9/s)
+  annotate: lines 168–171 → 4 of 4
+annotate: 172 lines (local:deepseek) · left out 0 · answers outside the choices 1 → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_deepseek/jensen_set.grammar.json
+grammar: reused /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_deepseek/jensen_set.grammar.json
+  local: loading mlx-community/Unsloth-DeepSeek-R1-Distill-Qwen-32B-4bit …
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 2726.52it/s]
+  local: mlx-community/Unsloth-DeepSeek-R1-Distill-Qwen-32B-4bit ready in 1s
+  local:deepseek: 790 tokens in 77.0s (15.2/s)
+  local:deepseek: 1277 tokens in 146.5s (14.3/s)
+  local:deepseek: 1666 tokens in 174.1s (14.2/s)
+  local:deepseek: 2224 tokens in 214.1s (14.2/s)
+  local:deepseek: 1242 tokens in 107.0s (15.1/s)
+  local:deepseek: 2613 tokens in 242.8s (14.1/s)
+  local:deepseek: 1412 tokens in 156.4s (14.3/s)
+  local:deepseek: 1797 tokens in 183.9s (14.2/s)
+  local:deepseek: 801 tokens in 77.4s (15.1/s)
+  local:deepseek: 1800 tokens in 183.0s (14.2/s)
+  local:deepseek: 2204 tokens in 211.7s (14.2/s)
+  local:deepseek: 1429 tokens in 156.4s (14.3/s)
+  local:deepseek: 904 tokens in 84.4s (15.1/s)
+  local:deepseek: 1782 tokens in 182.4s (14.2/s)
+  local:deepseek: 1726 tokens in 178.5s (14.2/s)
+  local:deepseek: 1440 tokens in 158.0s (14.3/s)
+  local:deepseek: 721 tokens in 71.6s (15.3/s)
+  local:deepseek: 1532 tokens in 164.7s (14.2/s)
+  local:deepseek: 1719 tokens in 177.9s (14.2/s)
+  local:deepseek: 1524 tokens in 164.1s (14.2/s)
+  local:deepseek: 889 tokens in 83.1s (15.1/s)
+  local:deepseek: 1241 tokens in 143.4s (14.3/s)
+  local:deepseek: 1622 tokens in 170.5s (14.3/s)
+  local:deepseek: 2078 tokens in 203.2s (14.2/s)
+  local:deepseek: 738 tokens in 73.4s (15.1/s)
+  local:deepseek: 1708 tokens in 177.5s (14.2/s)
+  local:deepseek: 1396 tokens in 155.3s (14.3/s)
+  local:deepseek: 1634 tokens in 172.3s (14.2/s)
+  local:deepseek: 785 tokens in 76.2s (15.2/s)
+  local:deepseek: 2758 tokens in 252.9s (14.1/s)
+  local:deepseek: 2206 tokens in 212.8s (14.2/s)
+  local:deepseek: 1741 tokens in 179.6s (14.2/s)
+  local:deepseek: 657 tokens in 67.8s (15.1/s)
+  local:deepseek: 1607 tokens in 169.7s (14.2/s)
+  local:deepseek: 1687 tokens in 175.5s (14.2/s)
+  local:deepseek: 1585 tokens in 168.3s (14.2/s)
+  local:deepseek: 1106 tokens in 99.1s (15.0/s)
+  local:deepseek: 1460 tokens in 159.9s (14.2/s)
+  local:deepseek: 1545 tokens in 166.0s (14.2/s)
+  local:deepseek: 1530 tokens in 164.9s (14.2/s)
+  local:deepseek: 637 tokens in 66.6s (15.2/s)
+  local:deepseek: 1193 tokens in 173.4s (13.7/s)
+  local:deepseek: 2759 tokens in 290.3s (13.5/s)
+  local:deepseek: 1752 tokens in 214.9s (13.6/s)
+  local:deepseek: 598 tokens in 65.7s (14.9/s)
+  local:deepseek: 1527 tokens in 167.4s (14.2/s)
+  local:deepseek: 1611 tokens in 173.5s (14.2/s)
+  local:deepseek: 2008 tokens in 201.8s (14.1/s)
+  local:deepseek: 880 tokens in 82.5s (15.3/s)
+  local:deepseek: 1570 tokens in 164.9s (14.6/s)
+  local:deepseek: 1702 tokens in 174.1s (14.5/s)
+  local:deepseek: 2331 tokens in 218.2s (14.5/s)
+  local:deepseek: 853 tokens in 81.2s (15.3/s)
+  local:deepseek: 2025 tokens in 215.7s (14.1/s)
+  local:deepseek: 1654 tokens in 188.9s (14.2/s)
+  local:deepseek: 1416 tokens in 171.9s (14.3/s)
+  local:deepseek: 728 tokens in 71.9s (15.3/s)
+  local:deepseek: 1380 tokens in 157.3s (14.5/s)
+  local:deepseek: 1410 tokens in 159.4s (14.4/s)
+  local:deepseek: 1433 tokens in 162.7s (14.2/s)
+  local:deepseek: 813 tokens in 78.8s (15.0/s)
+  local:deepseek: 1576 tokens in 167.9s (14.2/s)
+  local:deepseek: 1655 tokens in 173.8s (14.2/s)
+  local:deepseek: 1613 tokens in 169.9s (14.3/s)
+  local:deepseek: 954 tokens in 87.4s (15.2/s)
+  local:deepseek: 1576 tokens in 165.8s (14.5/s)
+  local:deepseek: 765 tokens in 109.7s (14.6/s)
+  local:deepseek: 2276 tokens in 214.8s (14.5/s)
+  local:deepseek: 419 tokens in 47.3s (15.5/s)
+  local:deepseek: 600 tokens in 90.6s (14.8/s)
+  local:deepseek: 486 tokens in 82.9s (14.8/s)
+  local:deepseek: 525 tokens in 85.6s (14.8/s)
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (33817 > 16384). Running this sequence through the model will result in indexing errors
+  local:deepseek: 824 tokens in 593.0s (7.0/s)
+  local:deepseek: 529 tokens in 550.9s (7.1/s)
+  local:deepseek: 563 tokens in 555.7s (7.1/s)
+second pass: 0 moments
+jensen_set: 172 lines · Dia 24 · z 0.16 · Lumens None (0/172 measured) → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/reads/grid_deepseek/jensen_set_report.md
+=== deepseek — finished 08:52 ===
+jensen_set: 3 readers · 172 lines · 160 split → /Users/shanecorwin/Desktop/PARALLELOGRAM PRISM/Prism/data/parallelograms/grid_jensen/jensen_set_grid.md

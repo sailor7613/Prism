@@ -172,6 +172,15 @@ def _fix_quotes(obj):
         else: out.append(c)
     return ''.join(out)
 
+def requote(t):
+    """11-17: an answer that is valid JSON except that a whole string value is wrapped in single quotes ("why": 'It says...').
+    Each such value is re-quoted as a proper string (inner apostrophes and double quotes kept as text). None if it still does not parse."""
+    fixed = re.sub(r'("[A-Za-z_]+"\s*:\s*)\'(.*?)\'(\s*(?:,\s*"[A-Za-z_]+"\s*:|\}))', lambda m_: m_.group(1) + json.dumps(m_.group(2), ensure_ascii=False) + m_.group(3), t, flags=re.S)
+    if fixed == t: return None
+    try: return json.loads(fixed)
+    except ValueError: return None
+
+
 def salvage(t):
     # 11-07: keep the objects that parse (each carries its own "i"); fix inner quotes; a cut-off answer gives a partial list
     key = 'lines' if '"lines"' in t[:200] else ('moments' if '"moments"' in t[:200] else None)
@@ -205,7 +214,16 @@ def local_worker():
     p = _WORKER.get('p')
     if p and p.poll() is None: return p
     py = os.environ.get('CF_LOCAL_PY') or (LOCAL_PY if os.path.exists(LOCAL_PY) else sys.executable)
-    p = subprocess.Popen([py, '-u', os.path.join(HERE, 'local_worker.py')], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1)
+    # 11-18: on an Apple-silicon Mac the worker must run as arm64 (the model library, mlx, is arm64 only). When whatever started
+    # this process is an Intel program (an Intel python3, or anything under Rosetta), the private Python is started as Intel too
+    # and mlx will not load ("incompatible architecture, need x86_64"). So the worker is asked for as arm64 outright.
+    pre = []
+    if sys.platform == 'darwin':
+        try:
+            if subprocess.run(['/usr/sbin/sysctl', '-n', 'hw.optional.arm64'], capture_output=True, text=True).stdout.strip() == '1' and \
+               subprocess.run(['/usr/bin/arch', '-arm64', py, '-c', 'pass'], capture_output=True).returncode == 0: pre = ['/usr/bin/arch', '-arm64']
+        except Exception: pre = []
+    p = subprocess.Popen(pre + [py, '-u', os.path.join(HERE, 'local_worker.py')], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True, bufsize=1)
     _WORKER['p'] = p; atexit.register(lambda: (p.stdin.close(), p.terminate()) if p.poll() is None else None)
     return p
 def local_ask(req, on_tok=None):
@@ -222,6 +240,13 @@ def local_ask(req, on_tok=None):
         return d
 def call_local(sys_, user, model):
     name = model.split(':', 1)[1]
+    # 11-18: a fixed brief for a local reader (CF_BRIEF names the file, a path under scripts/closedform/ or a full path). It is put
+    # ahead of every question the reader is asked. Unset, nothing changes: the questions go out as before.
+    # 11-19 (draft 5c): the brief goes to the side question only (the grammar question). Ahead of the band questions it flattened the
+    # bands (coalition 23 → 8); with no brief there they came back (17). CF_BRIEF_FOR=all puts it ahead of every question again.
+    if os.environ.get('CF_BRIEF') and (os.environ.get('CF_BRIEF_FOR', 'side') == 'all' or 'annotate the grammar' in sys_):
+        bp = os.environ['CF_BRIEF']; bp = bp if os.path.isabs(bp) else os.path.join(HERE, bp)
+        sys_ = open(bp).read().strip() + '\n\n---\n\n' + sys_
     for attempt in range(3):
         d = local_ask({'model': name, 'system': sys_, 'user': user, 'max_tokens': 8000})
         if d.get('error'): raise SystemExit(f'{model}: {d["error"]}')
@@ -280,6 +305,8 @@ def call(sys_, user, k, model=None):
                 return json.loads(m.group(0)), u
             except ValueError as e:   # 11-05: a stray quote or a cut-off answer — keep the raw text; 11-07: salvage what parses before asking again
                 open(os.path.join(OUT, '_last_bad_answer.txt'), 'w').write(t)
+                rp = requote(m.group(0)) if m else None   # 11-17: Haiku sometimes wraps a whole string in single quotes ("why": '...'); put it right and keep the answer
+                if rp is not None: print(f'  {model}: a string was in single quotes — put right, answer kept'); return rp, u
                 sv = salvage(t)
                 if sv:
                     kk = list(sv)[0]; cut = d.get('stop_reason') == 'max_tokens' or not t.rstrip().endswith('}')

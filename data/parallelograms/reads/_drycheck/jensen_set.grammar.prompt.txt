@@ -1,0 +1,74 @@
+You annotate the grammar of political talk for Prism, a closed-form instrument. You split statements into lines and say what each line is about. You never score how heated a line is. Judge the words, never the speaker's reputation. Reply with JSON only.
+
+THE OBJECT: the political economy — is it realized, or frustrated.
+THE TOPIC (the face of the object these lines are about): PG02 — America's standing against China in AI, argued through the rule on selling AI chips to China. The rule by date: tightened step by step 2022 → Apr 2025 (the H20 needs a license) · loosened from May 2025 · the H200 cleared for approved Chinese buyers 2025-12-08 · Huang resigns 2026-11-12 · first tightening since, 2026-11-16
+z: +1 = the object realized · -1 = the object frustrated. z is read against the object itself, never against what an audience wants (ruled 11-11). The signs are the body's own: America ahead of China in AI, holding its lead, winning the market or the race reads realized; America behind, ceding ground or losing reads frustrated. The rule on selling chips to China is the means being argued over: a line gets its side from what it says about America's standing, never from which rule it wants (ruled 11-17, the deadlock rule).
+
+THE BODY — what is measured of the object (each a dated series of readings; a line is read against the one it talks about, as of its own date):
+- standing (America's standing against China in AI): NOT YET MEASURED. Candidates, both contested: Nvidia's share of the China market; the reported gap in chips. Until one is ruled, lines on this set carry a side (z) and no Lumens. Rule: sign ruled 11-17: ahead reads realized, behind or ceding reads frustrated; no scale.
+- shadow: not on the body. A line about WHO IS TO BLAME for a reading, or about a speaker's own record or loyalties, rather than the reading itself. No instrument measures it.
+
+POSTS (in order):
+[
+ {
+  "n": 0,
+  "who": "Dwarkesh Patel",
+  "date": "2026-04-15",
+  "text": "But how is shipping chips to China keeping the US ahead if they’re bottlenecked on compute?"
+ },
+ {
+  "n": 1,
+  "who": "Jensen Huang",
+  "date": "2026-04-15",
+  "text": "No, no. We've got Vera Rubin for the United States. We have Vera Rubin for the United States. Now, am I in the United States? Do you consider me part of the United States?"
+ },
+ {
+  "n": 2,
+  "who": "Jensen Huang",
+  "date": "2026-04-15",
+  "text": "You consider Nvidia a United States company? Okay. Number one, why is it that we don't come up with a regulation that's more balanced so that Nvidia can win around the world instead of giving up the world? Why would you want the United States to give up the world? The chip industry is part of the American ecosystem. It's part of American technology leadership. It's part of the AI ecosystem. It's part of AI leadership. Why is it that your policy, your philosophy, leads to the United States giving up a vast part of the world's market?"
+ },
+ {
+  "n": 3,
+  "who": "Dwarkesh Patel",
+  "date": "2026-04-15",
+  "text": "I guess the claim here is… Dario had this quote where he said that it's like Boeing bragging that we're selling North Korea nukes, but the missile casings are made by Boeing. And that's somehow enabling the US technology stack. Fundamentally, you're giving them this capability."
+ },
+ {
+  "n": 4,
+  "who": "Jensen Huang",
+  "date": "2026-04-15",
+  "text": "Comparing AI to anything that you just mentioned is lunacy."
+ },
+ {
+  "n": 5,
+  "who": "Dwarkesh Patel",
+  "date": "2026-04-15",
+  "text": "But AI is similar to enriched uranium, right? It can have positive uses, it can have negative uses. We still don't want to send enriched uranium to other countries."
+ }
+]
+
+Split every post into lines: one statement, one speaker, one thing it says. A short post is often one line; a long one may be two to four.
+For every line return:
+{"post": n, "quote": "the fewest of the post's own words that still carry the line (copy them; no paraphrase)",
+ "subject": "who is speaking or being spoken for",
+ "about": "object"|"shadow",
+ "touch": "O"|"T"|"M"|"F"|"X",   // O the object itself · T a dated record (a fact, a vote, a past statement) · M a mechanism (how one thing caused another) · F a frame (a story told about it) · X a challenge (counter-evidence)
+ "measure": "standing"|"shadow",   // standing = America's standing against China in AI (who is ahead, who is gaining, what a course does to that)
+ "due": "YYYY-MM-DD" or null,   // ONLY if the line forecasts: the date by which it says the object will have moved — a date it names, or the plain reading of its own words from the post's date ("within a week", "by the midterms", "this summer"). A line about the present or the past: null
+ "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // the side THIS line takes on where the object stands, or is being taken, as of its date — by the three rules below
+ "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
+ "credulity": "engaged"|"withdrawn"|"none",   // does the speaker accept (engaged) or refuse (withdrawn) a reading they would otherwise be expected to hold? most lines: none
+ "station": "LI"|"RI"|"LP"|"RP",   // only a proposal: Left/Right x Institutional/Populist (outsider); the writer's label wins
+ "kind": "statement"|"teaser",   // teaser: the line only announces something to watch or read and names its topic or guest ('X on how it happened', 'Y on why we went to war'). It says nothing itself. Everything else: statement
+ "why": "one plain sentence"}
+HOW TO CHOOSE z (rules 1 to 3 ruled 11-14, after two Sonnet reads of the same lines disagreed on z four times in ten; the disagreement was almost never about strength, it was about whether a line takes a side at all):
+1. A shadow line takes no side: "neither". It is about who is to blame, not about the object.
+2. A line that says nothing about the object's condition takes no side: "neither". A bare question, a hope, a prayer, a wish. And a teaser (kind: teaser, ruled 11-15): it is filed as about the object, "neither", never as shadow, since it blames no one; it is kept and read like any line, and counted apart.
+3. A line that CARRIES THE LOGIC of a course someone is on takes the side that course leads to, even though the cost it names has not happened. "The first week of a war with Iran could easily kill thousands of Americans", said while men are lobbying for that war, reads frustrated: the speaker is naming what is being wagered. It is an extrapolation, not a forecast; give it no due date unless it says the thing WILL happen. Its strength is how hard the line reads the cost, not whether the cost came true (the body shows that, and the distance between the two is what Prism reads).
+   But a line that only weighs a course the line itself says nobody is on ("it would be a mistake to invade") takes no side from the course it weighs: "neither". If it also says where things stand now ("clearly that is not happening"), rule 5 reads that part.
+4. A line that reports SOMEONE PUSHING for a course, as an act (ruled 11-15): lobbying, demanding, calling the president. It is about the object, not the shadow: it says where the object is being taken. It takes the side the push leads to, at leaning strength, because the push has not landed. "Mark Levin was at the White House today, lobbying for war with Iran" and "Senator Ted Cruz demands regime change in Iran" read leaning frustrated.
+   But a line about WHY someone wants it, or what kind of person he is, is shadow: "He needs this war". Nothing measured sees a motive.
+5. A line that says a bad state has NOT come takes a side (ruled 11-15): it says where things stand now. "Of course there are no boots on the ground in Iran" reads leaning realized. Read the words, whoever says them and whatever he wants.
+6. A PRAYER looks forward to something that has not happened: "neither" (rule 2). A THANKS looks back at something that did happen and calls it good: leaning realized (ruled 11-15). "Thank God.", posted the day of a ceasefire, reads leaning realized; when the words alone name nothing, the post's date and the object's state on that date say what is being thanked for.
+Answer: {"lines": [ ... ]} — valid JSON only. Inside a string never use a double quote; quote words with single quotes.

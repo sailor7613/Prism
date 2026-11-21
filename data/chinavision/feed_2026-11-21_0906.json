@@ -1,0 +1,963 @@
+{
+ "schema": "chinavision/feed/v0",
+ "id": "feed_2026-11-21_0906",
+ "takenBeijing": "2026-11-21 09:06",
+ "takenPacific": "2026-11-20 17:06",
+ "what": "望 (wàng): what is trending in Chinese media right now, translated. A feed to explore. Nothing here is scored or read by Prism.",
+ "source": "Each platform's own public hot list, read directly by chinavision-pull.py. Not read this time: Zhihu: HTTPError HTTP Error 403: Forbidden.",
+ "translatedBy": "local:qwen, on this Mac",
+ "notesBy": "Accounts, quotes and reception are written by local:qwen, on this Mac from the news pages it read. Reception comes from three places, each named beside it: the article itself, the hourly roundup published on Sina, and the top comments under the most-watched videos on Bilibili. What is visible is what was allowed to stay up. Accounts are in its own words; a quote is kept only when it is found exactly in its source and is short. The full texts stay on this Mac (data/chinavision/raw/) and are not shown. Read by Claude on 11-20: one headline translation corrected (it had left out America), four comment translations corrected (a character’s name, two nicknames, a term), and two reception summaries rewritten from the comments themselves.",
+ "boards": {
+  "weibo": {
+   "name": "Weibo",
+   "zh": "微博热搜",
+   "about": "what people are posting about"
+  },
+  "baidu": {
+   "name": "Baidu",
+   "zh": "百度热搜",
+   "about": "what people are searching for"
+  },
+  "douyin": {
+   "name": "Douyin",
+   "zh": "抖音热榜",
+   "about": "what people are watching (China's TikTok)"
+  },
+  "toutiao": {
+   "name": "Toutiao",
+   "zh": "今日头条",
+   "about": "the biggest news app's top stories"
+  },
+  "bilibili": {
+   "name": "Bilibili",
+   "zh": "B站热搜",
+   "about": "video site with a young audience"
+  },
+  "bilipop": {
+   "name": "Bilibili videos",
+   "zh": "B站热门视频",
+   "about": "the most-watched videos today, and what viewers wrote under them"
+  }
+ },
+ "kinds": {
+  "world": "World and state",
+  "america": "About America",
+  "money": "Money and business",
+  "tech": "Tech and AI",
+  "life": "Daily life",
+  "pop": "Pop culture",
+  "games": "Games",
+  "sport": "Sport"
+ },
+ "items": [
+  {
+   "board": "weibo",
+   "rank": 1,
+   "zh": "DeepSeek付费体验直线上升",
+   "heat": "115.4万",
+   "link": "https://www.baidu.com/s?wd=DeepSeek%E4%BB%98%E8%B4%B9%E4%BD%93%E9%AA%8C%E7%9B%B4%E7%BA%BF%E4%B8%8A%E5%8D%87",
+   "linkLabel": "search Baidu",
+   "en": "The cost of paid access to DeepSeek [a Chinese artificial intelligence company] is rising sharply",
+   "kind": "tech"
+  },
+  {
+   "board": "weibo",
+   "rank": 2,
+   "zh": "黎曼猜想",
+   "heat": "86.4万",
+   "link": "https://www.baidu.com/s?wd=%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3",
+   "linkLabel": "search Baidu",
+   "en": "The Riemann Hypothesis [a famous unsolved problem in mathematics]",
+   "kind": "world",
+   "note": "Anthropic mathematician Levent Alpöge claims he and the AI model Claude have proven the Riemann Hypothesis and its generalization, generating over 250,000 pages of text and 17 million lines of formalized code. The article notes that while some experts find the approach promising, the proof has not yet undergone the peer review required by the Clay Mathematics Institute to claim the million-dollar prize. It highlights skepticism regarding the reliability of AI-generated formal code and the timing of the announcement shortly after Anthropic's stock listing.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/297.htm"
+    }
+   ],
+   "words": [
+    {
+     "zh": "远远超过了我",
+     "en": "far exceeded me",
+     "who": "Levent Alpöge"
+    },
+    {
+     "zh": "运用一切",
+     "en": "use everything",
+     "who": "Alex Kontorovich"
+    }
+   ],
+   "reception": [
+    {
+     "en": "The article reports that Fields Medalist Terence Tao is reviewing the proof, while other mathematicians express cautious confidence or skepticism about the AI-generated code's validity and the announcement's timing."
+    },
+    {
+     "en": "“won't even look before 500 pages”",
+     "zh": "至少拿出 500 页版本前看都不看"
+    }
+   ]
+  },
+  {
+   "board": "weibo",
+   "rank": 3,
+   "zh": "APEC盛会效应拉满",
+   "heat": "67.9万",
+   "link": "https://www.baidu.com/s?wd=APEC%E7%9B%9B%E4%BC%9A%E6%95%88%E5%BA%94%E6%8B%89%E6%BB%A1",
+   "linkLabel": "search Baidu",
+   "en": "The APEC [Asia-Pacific Economic Cooperation] summit is generating maximum buzz",
+   "kind": "world"
+  },
+  {
+   "board": "weibo",
+   "rank": 4,
+   "zh": "胖东来搬离后原址所开新商场几乎倒闭",
+   "heat": "50.4万",
+   "link": "https://www.baidu.com/s?wd=%E8%83%96%E4%B8%9C%E6%9D%A5%E6%90%AC%E7%A6%BB%E5%90%8E%E5%8E%9F%E5%9D%80%E6%89%80%E5%BC%80%E6%96%B0%E5%95%86%E5%9C%BA%E5%87%A0%E4%B9%8E%E5%80%92%E9%97%AD",
+   "linkLabel": "search Baidu",
+   "en": "A new shopping mall opened on the site of Pang Dong Lai [a popular Chinese retail chain] after it moved out is nearly going bankrupt",
+   "kind": "money"
+  },
+  {
+   "board": "weibo",
+   "rank": 5,
+   "zh": "特朗普涉中俄美最新表态",
+   "heat": "40.8万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E6%B6%89%E4%B8%AD%E4%BF%84%E7%BE%8E%E6%9C%80%E6%96%B0%E8%A1%A8%E6%80%81",
+   "linkLabel": "search Baidu",
+   "en": "Trump's latest statements regarding China, Russia, and the US",
+   "kind": "america"
+  },
+  {
+   "board": "weibo",
+   "rank": 6,
+   "zh": "美AI科技股崩盘原因",
+   "heat": "33.5万",
+   "link": "https://www.baidu.com/s?wd=%E7%BE%8EAI%E7%A7%91%E6%8A%80%E8%82%A1%E5%B4%A9%E7%9B%98%E5%8E%9F%E5%9B%A0",
+   "linkLabel": "search Baidu",
+   "en": "The reasons behind the crash of US AI tech stocks",
+   "kind": "america"
+  },
+  {
+   "board": "weibo",
+   "rank": 7,
+   "zh": "张萌回应青稚打听式安慰",
+   "heat": "30.6万",
+   "link": "https://www.baidu.com/s?wd=%E5%BC%A0%E8%90%8C%E5%9B%9E%E5%BA%94%E9%9D%92%E7%A8%9A%E6%89%93%E5%90%AC%E5%BC%8F%E5%AE%89%E6%85%B0",
+   "linkLabel": "search Baidu",
+   "en": "Zhang Meng responds to accusations of offering 'interrogation-style' comfort",
+   "kind": "pop"
+  },
+  {
+   "board": "weibo",
+   "rank": 8,
+   "zh": "深圳人又开始原装出街了",
+   "heat": "28.5万",
+   "link": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E5%8F%88%E5%BC%80%E5%A7%8B%E5%8E%9F%E8%A3%85%E5%87%BA%E8%A1%97%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Shenzhen residents are once again dressing in their original, authentic style",
+   "kind": "life"
+  },
+  {
+   "board": "weibo",
+   "rank": 9,
+   "zh": "金价罕见大跌原因找到了",
+   "heat": "27.2万",
+   "link": "https://www.baidu.com/s?wd=%E9%87%91%E4%BB%B7%E7%BD%95%E8%A7%81%E5%A4%A7%E8%B7%8C%E5%8E%9F%E5%9B%A0%E6%89%BE%E5%88%B0%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "The cause of the rare and sharp drop in gold prices has been found",
+   "kind": "money"
+  },
+  {
+   "board": "weibo",
+   "rank": 10,
+   "zh": "成毅两京十五日演技表现",
+   "heat": "22.6万",
+   "link": "https://www.baidu.com/s?wd=%E6%88%90%E6%AF%85%E4%B8%A4%E4%BA%AC%E5%8D%81%E4%BA%94%E6%97%A5%E6%BC%94%E6%8A%80%E8%A1%A8%E7%8E%B0",
+   "linkLabel": "search Baidu",
+   "en": "Cheng Yi's acting performance in the drama 'Two Capitals, Fifteen Days'",
+   "kind": "pop"
+  },
+  {
+   "board": "weibo",
+   "rank": 11,
+   "zh": "孙芮结婚怀孕",
+   "heat": "22.5万",
+   "link": "https://www.baidu.com/s?wd=%E5%AD%99%E8%8A%AE%E7%BB%93%E5%A9%9A%E6%80%80%E5%AD%95",
+   "linkLabel": "search Baidu",
+   "en": "Sun Rui gets married and pregnant",
+   "kind": "pop"
+  },
+  {
+   "board": "weibo",
+   "rank": 12,
+   "zh": "张萌的大胆穿搭直接吓到孟子义",
+   "heat": "22.4万",
+   "link": "https://www.baidu.com/s?wd=%E5%BC%A0%E8%90%8C%E7%9A%84%E5%A4%A7%E8%83%86%E7%A9%BF%E6%90%AD%E7%9B%B4%E6%8E%A5%E5%90%93%E5%88%B0%E5%AD%9F%E5%AD%90%E4%B9%89",
+   "linkLabel": "search Baidu",
+   "en": "Zhang Meng's bold fashion choices directly startled Meng Ziyi",
+   "kind": "pop"
+  },
+  {
+   "board": "baidu",
+   "rank": 1,
+   "zh": "两张历史性同框照为何在中国定格",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%A4%E5%BC%A0%E5%8E%86%E5%8F%B2%E6%80%A7%E5%90%8C%E6%A1%86%E7%85%A7%E4%B8%BA%E4%BD%95%E5%9C%A8%E4%B8%AD%E5%9B%BD%E5%AE%9A%E6%A0%BC",
+   "linkLabel": "search Baidu",
+   "en": "Why two historic photos together were frozen in China",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 2,
+   "zh": "人民日报评“老人拆墙让路遭质疑”",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E8%AF%84%E2%80%9C%E8%80%81%E4%BA%BA%E6%8B%86%E5%A2%99%E8%AE%A9%E8%B7%AF%E9%81%AD%E8%B4%A8%E7%96%91%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "People's Daily comments on \"old man questioned for demolishing wall to make way\"",
+   "kind": "life"
+  },
+  {
+   "board": "baidu",
+   "rank": 3,
+   "zh": "特朗普：中俄美元首会晤意义重大",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4%E6%84%8F%E4%B9%89%E9%87%8D%E5%A4%A7",
+   "linkLabel": "search Baidu",
+   "en": "Trump: The China-Russia-US summit is of great significance",
+   "kind": "world",
+   "note": "US President Donald Trump stated that the first trilateral meeting between the leaders of the US, China, and Russia held in Shenzhen was highly significant and unprecedented. He described the atmosphere as warm and noted that the three nations reached a consensus to prevent nuclear conflict. The meeting resulted in the issuance of a joint peace declaration aimed at maintaining strategic stability among the major powers.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735606.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "多年来最具重大意义的国际峰会之一",
+     "en": "one of the most significant international summits in years",
+     "who": "Donald Trump"
+    },
+    {
+     "zh": "史无前例的三方和平宣言",
+     "en": "unprecedented trilateral peace declaration",
+     "who": "Donald Trump"
+    }
+   ]
+  },
+  {
+   "board": "baidu",
+   "rank": 4,
+   "zh": "科技新国货成“深圳特产”",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%A7%91%E6%8A%80%E6%96%B0%E5%9B%BD%E8%B4%A7%E6%88%90%E2%80%9C%E6%B7%B1%E5%9C%B3%E7%89%B9%E4%BA%A7%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "New domestic tech brands become \"Shenzhen specialties\"",
+   "kind": "tech"
+  },
+  {
+   "board": "baidu",
+   "rank": 5,
+   "zh": "高市搭讪特朗普被无视 日本网民：丢人",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E9%AB%98%E5%B8%82%E6%90%AD%E8%AE%AA%E7%89%B9%E6%9C%97%E6%99%AE%E8%A2%AB%E6%97%A0%E8%A7%86%20%E6%97%A5%E6%9C%AC%E7%BD%91%E6%B0%91%EF%BC%9A%E4%B8%A2%E4%BA%BA",
+   "linkLabel": "search Baidu",
+   "en": "Takaichi greeted Trump but was ignored; Japanese netizens: Shameful",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 6,
+   "zh": "一家人遛弯误入剧组还上了央视",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%BA%BA%E9%81%9B%E5%BC%AF%E8%AF%AF%E5%85%A5%E5%89%A7%E7%BB%84%E8%BF%98%E4%B8%8A%E4%BA%86%E5%A4%AE%E8%A7%86",
+   "linkLabel": "search Baidu",
+   "en": "Family goes for a walk, accidentally enters a film crew, and appears on CCTV",
+   "kind": "pop"
+  },
+  {
+   "board": "baidu",
+   "rank": 7,
+   "zh": "睡觉穿袜子有助入睡 但5类人不建议",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%9D%A1%E8%A7%89%E7%A9%BF%E8%A2%9C%E5%AD%90%E6%9C%89%E5%8A%A9%E5%85%A5%E7%9D%A1%20%E4%BD%865%E7%B1%BB%E4%BA%BA%E4%B8%8D%E5%BB%BA%E8%AE%AE",
+   "linkLabel": "search Baidu",
+   "en": "Wearing socks to bed helps you fall asleep, but not recommended for 5 types of people",
+   "kind": "life"
+  },
+  {
+   "board": "baidu",
+   "rank": 8,
+   "zh": "厉娜的经济损失回来了 绝味的还没有",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E5%8E%89%E5%A8%9C%E7%9A%84%E7%BB%8F%E6%B5%8E%E6%8D%9F%E5%A4%B1%E5%9B%9E%E6%9D%A5%E4%BA%86%20%E7%BB%9D%E5%91%B3%E7%9A%84%E8%BF%98%E6%B2%A1%E6%9C%89",
+   "linkLabel": "search Baidu",
+   "en": "Li Na's economic losses have returned, but Juewei's have not",
+   "kind": "money"
+  },
+  {
+   "board": "baidu",
+   "rank": 9,
+   "zh": "特朗普称不支持“台独”引岛内震动",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E4%B8%8D%E6%94%AF%E6%8C%81%E2%80%9C%E5%8F%B0%E7%8B%AC%E2%80%9D%E5%BC%95%E5%B2%9B%E5%86%85%E9%9C%87%E5%8A%A8",
+   "linkLabel": "search Baidu",
+   "en": "Trump's statement that he does not support \"Taiwan independence\" causes shock in Taiwan",
+   "kind": "america"
+  },
+  {
+   "board": "baidu",
+   "rank": 10,
+   "zh": "特朗普称赞深圳城市建设：完美无瑕",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E8%B5%9E%E6%B7%B1%E5%9C%B3%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE%EF%BC%9A%E5%AE%8C%E7%BE%8E%E6%97%A0%E7%91%95",
+   "linkLabel": "search Baidu",
+   "en": "Trump praises Shenzhen's urban construction: Flawless",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 11,
+   "zh": "武磊回应总进球达到300球",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E6%AD%A6%E7%A3%8A%E5%9B%9E%E5%BA%94%E6%80%BB%E8%BF%9B%E7%90%83%E8%BE%BE%E5%88%B0300%E7%90%83",
+   "linkLabel": "search Baidu",
+   "en": "Wu Lei responds to reaching 300 total goals",
+   "kind": "sport"
+  },
+  {
+   "board": "baidu",
+   "rank": 12,
+   "zh": "“社保断缴三个月账户清零”不实",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E2%80%9C%E7%A4%BE%E4%BF%9D%E6%96%AD%E7%BC%B4%E4%B8%89%E4%B8%AA%E6%9C%88%E8%B4%A6%E6%88%B7%E6%B8%85%E9%9B%B6%E2%80%9D%E4%B8%8D%E5%AE%9E",
+   "linkLabel": "search Baidu",
+   "en": "\"Social security account cleared after three months of non-payment\" is false",
+   "kind": "money"
+  },
+  {
+   "board": "douyin",
+   "rank": 1,
+   "zh": "美国三大股指全线大跌",
+   "heat": "1210.1万",
+   "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E5%9B%BD%E4%B8%89%E5%A4%A7%E8%82%A1%E6%8C%87%E5%85%A8%E7%BA%BF%E5%A4%A7%E8%B7%8C",
+   "linkLabel": "search Baidu",
+   "en": "US stock market plunges",
+   "kind": "america"
+  },
+  {
+   "board": "douyin",
+   "rank": 2,
+   "zh": "U17男足0:5西班牙",
+   "heat": "1209.7万",
+   "link": "https://www.baidu.com/s?wd=U17%E7%94%B7%E8%B6%B30%3A5%E8%A5%BF%E7%8F%AD%E7%89%99",
+   "linkLabel": "search Baidu",
+   "en": "U17 men's football 0:5 Spain",
+   "kind": "sport"
+  },
+  {
+   "board": "douyin",
+   "rank": 3,
+   "zh": "亚太前沿领域机遇看中国",
+   "heat": "1203.4万",
+   "link": "https://www.baidu.com/s?wd=%E4%BA%9A%E5%A4%AA%E5%89%8D%E6%B2%BF%E9%A2%86%E5%9F%9F%E6%9C%BA%E9%81%87%E7%9C%8B%E4%B8%AD%E5%9B%BD",
+   "linkLabel": "search Baidu",
+   "en": "China's opportunities in frontier fields in the Asia-Pacific",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 4,
+   "zh": "终于懂李白走到哪都写诗了",
+   "heat": "1138.6万",
+   "link": "https://www.baidu.com/s?wd=%E7%BB%88%E4%BA%8E%E6%87%82%E6%9D%8E%E7%99%BD%E8%B5%B0%E5%88%B0%E5%93%AA%E9%83%BD%E5%86%99%E8%AF%97%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Now I understand why Li Bai wrote poems wherever he went",
+   "kind": "pop"
+  },
+  {
+   "board": "douyin",
+   "rank": 5,
+   "zh": "泰国总理带夫人在深圳吃夜宵",
+   "heat": "1070.3万",
+   "link": "https://www.baidu.com/s?wd=%E6%B3%B0%E5%9B%BD%E6%80%BB%E7%90%86%E5%B8%A6%E5%A4%AB%E4%BA%BA%E5%9C%A8%E6%B7%B1%E5%9C%B3%E5%90%83%E5%A4%9C%E5%AE%B5",
+   "linkLabel": "search Baidu",
+   "en": "Thai Prime Minister eats late-night snacks in Shenzhen with his wife",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 6,
+   "zh": "外交部回应高市早苗涉台问题表态",
+   "heat": "1068.8万",
+   "link": "https://www.baidu.com/s?wd=%E5%A4%96%E4%BA%A4%E9%83%A8%E5%9B%9E%E5%BA%94%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E6%B6%89%E5%8F%B0%E9%97%AE%E9%A2%98%E8%A1%A8%E6%80%81",
+   "linkLabel": "search Baidu",
+   "en": "Foreign Ministry responds to Sanae Takaichi's remarks on Taiwan",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 7,
+   "zh": "粤菜亮相APEC欢迎晚宴",
+   "heat": "942.3万",
+   "link": "https://www.baidu.com/s?wd=%E7%B2%A4%E8%8F%9C%E4%BA%AE%E7%9B%B8APEC%E6%AC%A2%E8%BF%8E%E6%99%9A%E5%AE%B4",
+   "linkLabel": "search Baidu",
+   "en": "Cantonese cuisine featured at APEC welcome dinner",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 8,
+   "zh": "灯火里的深圳 照见开放与活力",
+   "heat": "932.1万",
+   "link": "https://www.baidu.com/s?wd=%E7%81%AF%E7%81%AB%E9%87%8C%E7%9A%84%E6%B7%B1%E5%9C%B3%20%E7%85%A7%E8%A7%81%E5%BC%80%E6%94%BE%E4%B8%8E%E6%B4%BB%E5%8A%9B",
+   "linkLabel": "search Baidu",
+   "en": "Shenzhen's lights reflect openness and vitality",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 9,
+   "zh": "普京抵达塔吉克斯坦进行访问",
+   "heat": "930.8万",
+   "link": "https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%E6%8A%B5%E8%BE%BE%E5%A1%94%E5%90%89%E5%85%8B%E6%96%AF%E5%9D%A6%E8%BF%9B%E8%A1%8C%E8%AE%BF%E9%97%AE",
+   "linkLabel": "search Baidu",
+   "en": "Putin arrives in Tajikistan for a visit",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 10,
+   "zh": "高市早苗搭话特朗普遭无视",
+   "heat": "925.6万",
+   "link": "https://www.baidu.com/s?wd=%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E6%90%AD%E8%AF%9D%E7%89%B9%E6%9C%97%E6%99%AE%E9%81%AD%E6%97%A0%E8%A7%86",
+   "linkLabel": "search Baidu",
+   "en": "Sanae Takaichi ignored by Trump",
+   "kind": "america"
+  },
+  {
+   "board": "douyin",
+   "rank": 11,
+   "zh": "墨西哥总统发视频感谢中方女保镖",
+   "heat": "918.8万",
+   "link": "https://www.baidu.com/s?wd=%E5%A2%A8%E8%A5%BF%E5%93%A5%E6%80%BB%E7%BB%9F%E5%8F%91%E8%A7%86%E9%A2%91%E6%84%9F%E8%B0%A2%E4%B8%AD%E6%96%B9%E5%A5%B3%E4%BF%9D%E9%95%96",
+   "linkLabel": "search Baidu",
+   "en": "Mexican President thanks Chinese female bodyguards in video",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 12,
+   "zh": "冬天吃碳水过热乎日子",
+   "heat": "917.2万",
+   "link": "https://www.baidu.com/s?wd=%E5%86%AC%E5%A4%A9%E5%90%83%E7%A2%B3%E6%B0%B4%E8%BF%87%E7%83%AD%E4%B9%8E%E6%97%A5%E5%AD%90",
+   "linkLabel": "search Baidu",
+   "en": "Eating carbs in winter for a warm life",
+   "kind": "life"
+  },
+  {
+   "board": "toutiao",
+   "rank": 1,
+   "zh": "金价跌回一年前 金店加价反而涨了",
+   "heat": "2775.7万",
+   "link": "https://www.baidu.com/s?wd=%E9%87%91%E4%BB%B7%E8%B7%8C%E5%9B%9E%E4%B8%80%E5%B9%B4%E5%89%8D%20%E9%87%91%E5%BA%97%E5%8A%A0%E4%BB%B7%E5%8F%8D%E8%80%8C%E6%B6%A8%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Gold prices have fallen back to levels from a year ago, yet gold shops have increased their markup fees.",
+   "kind": "money"
+  },
+  {
+   "board": "toutiao",
+   "rank": 2,
+   "zh": "特朗普：中俄美元首会晤史无前例",
+   "heat": "2511.6万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B",
+   "linkLabel": "search Baidu",
+   "en": "Trump: The meeting between the Chinese, Russian, and US presidents is unprecedented.",
+   "kind": "world",
+   "note": "US President Donald Trump stated that a recent three-way meeting between the leaders of the United States, China, and Russia in Shenzhen was unprecedented and highly significant. He described the atmosphere as warm and noted that the three nations reached a consensus to prevent nuclear conflict. The meeting resulted in the issuance of a joint peace declaration aimed at maintaining global stability. This report comes from China News Service, highlighting the diplomatic achievements of the APEC summit.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735606.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "史无前例",
+     "en": "unprecedented",
+     "who": "Trump"
+    },
+    {
+     "zh": "绝不能让核冲突发生",
+     "en": "never allow nuclear conflict",
+     "who": "Trump"
+    }
+   ]
+  },
+  {
+   "board": "toutiao",
+   "rank": 3,
+   "zh": "亚太经合组织贸易数字化合作框架",
+   "heat": "2272.5万",
+   "link": "https://www.baidu.com/s?wd=%E4%BA%9A%E5%A4%AA%E7%BB%8F%E5%90%88%E7%BB%84%E7%BB%87%E8%B4%B8%E6%98%93%E6%95%B0%E5%AD%97%E5%8C%96%E5%90%88%E4%BD%9C%E6%A1%86%E6%9E%B6",
+   "linkLabel": "search Baidu",
+   "en": "APEC trade digitalization cooperation framework.",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 4,
+   "zh": "胖东来原址开的新商场几乎倒闭",
+   "heat": "2056.3万",
+   "link": "https://www.baidu.com/s?wd=%E8%83%96%E4%B8%9C%E6%9D%A5%E5%8E%9F%E5%9D%80%E5%BC%80%E7%9A%84%E6%96%B0%E5%95%86%E5%9C%BA%E5%87%A0%E4%B9%8E%E5%80%92%E9%97%AD",
+   "linkLabel": "search Baidu",
+   "en": "A new shopping mall built on the original site of Pangdonglai is nearly going bankrupt.",
+   "kind": "money"
+  },
+  {
+   "board": "toutiao",
+   "rank": 5,
+   "zh": "特朗普称不支持“台独”引岛内震动",
+   "heat": "1860.6万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E4%B8%8D%E6%94%AF%E6%8C%81%E2%80%9C%E5%8F%B0%E7%8B%AC%E2%80%9D%E5%BC%95%E5%B2%9B%E5%86%85%E9%9C%87%E5%8A%A8",
+   "linkLabel": "search Baidu",
+   "en": "Trump's statement that he does not support \"Taiwan independence\" causes shock in Taiwan.",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 6,
+   "zh": "全球市场黑色星期五背后原因何在",
+   "heat": "1683.5万",
+   "link": "https://www.baidu.com/s?wd=%E5%85%A8%E7%90%83%E5%B8%82%E5%9C%BA%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F%E4%BA%94%E8%83%8C%E5%90%8E%E5%8E%9F%E5%9B%A0%E4%BD%95%E5%9C%A8",
+   "linkLabel": "search Baidu",
+   "en": "What are the reasons behind the global Black Friday market trends?",
+   "kind": "money"
+  },
+  {
+   "board": "toutiao",
+   "rank": 7,
+   "zh": "特朗普：伊朗不想达成我能接受的协议",
+   "heat": "1523.3万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E4%BC%8A%E6%9C%97%E4%B8%8D%E6%83%B3%E8%BE%BE%E6%88%90%E6%88%91%E8%83%BD%E6%8E%A5%E5%8F%97%E7%9A%84%E5%8D%8F%E8%AE%AE",
+   "linkLabel": "search Baidu",
+   "en": "Trump: Iran does not want to reach an agreement that I can accept.",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 8,
+   "zh": "特朗普称在中国度过一段美好时光",
+   "heat": "1378.4万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E5%9C%A8%E4%B8%AD%E5%9B%BD%E5%BA%A6%E8%BF%87%E4%B8%80%E6%AE%B5%E7%BE%8E%E5%A5%BD%E6%97%B6%E5%85%89",
+   "linkLabel": "search Baidu",
+   "en": "Trump says he had a wonderful time in China.",
+   "kind": "america"
+  },
+  {
+   "board": "toutiao",
+   "rank": 9,
+   "zh": "深圳华丽转型生动诠释APEC理念",
+   "heat": "1247.2万",
+   "link": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E5%8D%8E%E4%B8%BD%E8%BD%AC%E5%9E%8B%E7%94%9F%E5%8A%A8%E8%AF%A0%E9%87%8AAPEC%E7%90%86%E5%BF%B5",
+   "linkLabel": "search Baidu",
+   "en": "Shenzhen's magnificent transformation vividly interprets APEC concepts.",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 10,
+   "zh": "AI浪潮落幕了吗",
+   "heat": "1128.5万",
+   "link": "https://www.baidu.com/s?wd=AI%E6%B5%AA%E6%BD%AE%E8%90%BD%E5%B9%95%E4%BA%86%E5%90%97",
+   "linkLabel": "search Baidu",
+   "en": "Is the AI wave coming to an end?",
+   "kind": "tech"
+  },
+  {
+   "board": "toutiao",
+   "rank": 11,
+   "zh": "湖南株洲一仓库突发大火？不实",
+   "heat": "1021.1万",
+   "link": "https://www.baidu.com/s?wd=%E6%B9%96%E5%8D%97%E6%A0%AA%E6%B4%B2%E4%B8%80%E4%BB%93%E5%BA%93%E7%AA%81%E5%8F%91%E5%A4%A7%E7%81%AB%EF%BC%9F%E4%B8%8D%E5%AE%9E",
+   "linkLabel": "search Baidu",
+   "en": "A warehouse in Zhuzhou, Hunan, suddenly caught fire? This is false.",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 12,
+   "zh": "李亚鹏想帮王菲母女3人和声被拒绝",
+   "heat": "923.9万",
+   "link": "https://www.baidu.com/s?wd=%E6%9D%8E%E4%BA%9A%E9%B9%8F%E6%83%B3%E5%B8%AE%E7%8E%8B%E8%8F%B2%E6%AF%8D%E5%A5%B33%E4%BA%BA%E5%92%8C%E5%A3%B0%E8%A2%AB%E6%8B%92%E7%BB%9D",
+   "linkLabel": "search Baidu",
+   "en": "Li Yapeng wanted to help Wang Fei and her daughter sing harmony, but was refused.",
+   "kind": "pop"
+  },
+  {
+   "board": "bilibili",
+   "rank": 1,
+   "zh": "中俄美元首历史性会晤为何在中国",
+   "heat": "881.3万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E5%8E%86%E5%8F%B2%E6%80%A7%E4%BC%9A%E6%99%A4%E4%B8%BA%E4%BD%95%E5%9C%A8%E4%B8%AD%E5%9B%BD",
+   "linkLabel": "search Baidu",
+   "en": "Why the historic meeting of the Chinese, Russian and American presidents took place in China",
+   "kind": "world",
+   "note": "The article reports that US President Trump described a recent meeting in Shenzhen between the leaders of the US, China, and Russia as a historic and highly successful event. Trump characterized the atmosphere as warm and noted that the three nations reached a consensus to prevent nuclear conflict. This meeting took place during the Asia-Pacific Economic Cooperation summit, where the leaders issued a joint peace declaration. The report presents these statements as the primary outcome of the diplomatic engagement.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735606.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "史无前例的三方和平宣言",
+     "en": "Unprecedented tripartite peace declaration",
+     "who": "Trump"
+    },
+    {
+     "zh": "绝不能让核冲突发生",
+     "en": "Never allow nuclear conflict to occur",
+     "who": "US, Russia, and China"
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 2,
+   "zh": "AI证明黎曼猜想通过形式化验证",
+   "heat": "809.6万",
+   "link": "https://www.baidu.com/s?wd=AI%E8%AF%81%E6%98%8E%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3%E9%80%9A%E8%BF%87%E5%BD%A2%E5%BC%8F%E5%8C%96%E9%AA%8C%E8%AF%81",
+   "linkLabel": "search Baidu",
+   "en": "AI proves the Riemann Hypothesis through formal verification",
+   "kind": "tech",
+   "note": "Anthropic mathematician Levent Alpöge claims to have proven the Riemann Hypothesis and its generalization in collaboration with the AI model Claude, submitting over 250,000 pages of text and 17 million lines of formalized code. While the proof has not been publicly released in full, experts like Terence Tao and Alex Kontorovich have offered preliminary observations, noting the use of advanced mathematical frameworks. The article highlights skepticism regarding the verification process, pointing out that Lean code only checks logical consistency and may not perfectly match the original mathematical conjecture. Furthermore, the claim does not yet meet the Clay Mathematics Institute's requirements for prize consideration, which demand peer-reviewed publication and a two-year validation period.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/297.htm"
+    }
+   ],
+   "words": [
+    {
+     "zh": "在终点附近飞翔、跳舞、闪耀",
+     "en": "flying, dancing, shining near the finish line",
+     "who": "Levent Alpöge"
+    },
+    {
+     "zh": "运用一切",
+     "en": "use everything",
+     "who": "Alex Kontorovich"
+    }
+   ],
+   "reception": [
+    {
+     "en": "The article reports that mathematician Terence Tao conducted a preliminary review, while others like Alex Kontorovich expressed cautious confidence. It also notes that the proof's timing coincided with Anthropic's recent stock listing, which Alpöge admitted was a poor choice."
+    },
+    {
+     "en": "“don't even look before 500 pages”",
+     "zh": "至少拿出 500 页版本前看都不看"
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 3,
+   "zh": "UP主解读AI声称证明黎曼猜想",
+   "heat": "136.9万",
+   "link": "https://www.baidu.com/s?wd=UP%E4%B8%BB%E8%A7%A3%E8%AF%BBAI%E5%A3%B0%E7%A7%B0%E8%AF%81%E6%98%8E%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3",
+   "linkLabel": "search Baidu",
+   "en": "Bilibili content creator analyzes the claim that AI has proven the Riemann Hypothesis",
+   "kind": "tech"
+  },
+  {
+   "board": "bilibili",
+   "rank": 4,
+   "zh": "U17国少0-5西班牙",
+   "heat": "130.1万",
+   "link": "https://www.baidu.com/s?wd=U17%E5%9B%BD%E5%B0%910-5%E8%A5%BF%E7%8F%AD%E7%89%99",
+   "linkLabel": "search Baidu",
+   "en": "China's U17 national team loses 0-5 to Spain",
+   "kind": "sport"
+  },
+  {
+   "board": "bilibili",
+   "rank": 5,
+   "zh": "爱沙尼亚为何关闭与俄罗斯的口岸",
+   "heat": "82.0万",
+   "link": "https://www.baidu.com/s?wd=%E7%88%B1%E6%B2%99%E5%B0%BC%E4%BA%9A%E4%B8%BA%E4%BD%95%E5%85%B3%E9%97%AD%E4%B8%8E%E4%BF%84%E7%BD%97%E6%96%AF%E7%9A%84%E5%8F%A3%E5%B2%B8",
+   "linkLabel": "search Baidu",
+   "en": "Why Estonia closed its border crossings with Russia",
+   "kind": "world"
+  },
+  {
+   "board": "bilibili",
+   "rank": 6,
+   "zh": "任贤齐入驻B站",
+   "heat": "82.0万",
+   "link": "https://www.baidu.com/s?wd=%E4%BB%BB%E8%B4%A4%E9%BD%90%E5%85%A5%E9%A9%BBB%E7%AB%99",
+   "linkLabel": "search Baidu",
+   "en": "Singer Alex Chi joins Bilibili",
+   "kind": "pop"
+  },
+  {
+   "board": "bilibili",
+   "rank": 7,
+   "zh": "守护解放西传承季开播",
+   "heat": "80.6万",
+   "link": "https://www.baidu.com/s?wd=%E5%AE%88%E6%8A%A4%E8%A7%A3%E6%94%BE%E8%A5%BF%E4%BC%A0%E6%89%BF%E5%AD%A3%E5%BC%80%E6%92%AD",
+   "linkLabel": "search Baidu",
+   "en": "The third season of 'Guarding the West' begins broadcasting",
+   "kind": "pop"
+  },
+  {
+   "board": "bilibili",
+   "rank": 8,
+   "zh": "DK官宣Doran和Kanavi加入",
+   "heat": "75.9万",
+   "link": "https://www.baidu.com/s?wd=DK%E5%AE%98%E5%AE%A3Doran%E5%92%8CKanavi%E5%8A%A0%E5%85%A5",
+   "linkLabel": "search Baidu",
+   "en": "DK esports team announces the addition of Doran and Kanavi",
+   "kind": "games"
+  },
+  {
+   "board": "bilibili",
+   "rank": 9,
+   "zh": "塔克法尔能成为76人的文班吗",
+   "heat": "74.5万",
+   "link": "https://www.baidu.com/s?wd=%E5%A1%94%E5%85%8B%E6%B3%95%E5%B0%94%E8%83%BD%E6%88%90%E4%B8%BA76%E4%BA%BA%E7%9A%84%E6%96%87%E7%8F%AD%E5%90%97",
+   "linkLabel": "search Baidu",
+   "en": "Can Tucker Fahl become the 76ers' Wembanyama?",
+   "kind": "sport"
+  },
+  {
+   "board": "bilibili",
+   "rank": 10,
+   "zh": "数学家称用AI证明了黎曼猜想",
+   "heat": "69.7万",
+   "link": "https://www.baidu.com/s?wd=%E6%95%B0%E5%AD%A6%E5%AE%B6%E7%A7%B0%E7%94%A8AI%E8%AF%81%E6%98%8E%E4%BA%86%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3",
+   "linkLabel": "search Baidu",
+   "en": "Mathematician claims AI has proven the Riemann Hypothesis",
+   "kind": "tech"
+  },
+  {
+   "board": "bilibili",
+   "rank": 11,
+   "zh": "罗小黑史上最长单集",
+   "heat": "69.5万",
+   "link": "https://www.baidu.com/s?wd=%E7%BD%97%E5%B0%8F%E9%BB%91%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%95%BF%E5%8D%95%E9%9B%86",
+   "linkLabel": "search Baidu",
+   "en": "The longest single episode in the history of 'Luo Xiaohei'",
+   "kind": "pop"
+  },
+  {
+   "board": "bilibili",
+   "rank": 12,
+   "zh": "AI攻破黎曼猜想声明细节",
+   "heat": "69.1万",
+   "link": "https://www.baidu.com/s?wd=AI%E6%94%BB%E7%A0%B4%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3%E5%A3%B0%E6%98%8E%E7%BB%86%E8%8A%82",
+   "linkLabel": "search Baidu",
+   "en": "Details of the AI's claim to have broken the Riemann Hypothesis",
+   "kind": "tech"
+  },
+  {
+   "board": "bilipop",
+   "rank": 1,
+   "zh": "当我用AI续写爱情公寓4关谷悠悠婚礼【AI全民制作人】",
+   "heat": "50.7万 views",
+   "link": "https://www.bilibili.com/video/BV1atse6EEfx",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · Nero_闪灵",
+   "en": "When I use AI to continue the story of Guan Gu and You You's wedding in Love Apartment 4 [AI National Producer]",
+   "kind": "pop",
+   "reception": [
+    {
+     "en": "Viewers generally prefer the AI continuation over other plotlines, though some criticize the AI for mimicking desired dialogue rather than authentic character speech patterns. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“So much better than that mess with Zhuge Dali” [a character added in the show’s last season]",
+     "zh": "比什么乱七八糟的 诸葛大力强多了"
+    },
+    {
+     "en": "“It writes what the audience wants to hear”",
+     "zh": "它写的是观众想听的那句话"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "board": "bilipop",
+   "rank": 2,
+   "zh": "菲比：事已至此 先吃饭吧",
+   "heat": "74.1万 views",
+   "link": "https://www.bilibili.com/video/BV1tysi6LET8",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · Lm海洋",
+   "en": "Phoebe: Since it has come to this, let's eat first",
+   "kind": "pop",
+   "reception": [
+    {
+     "en": "Users praise the creator's humor and the cat's status as a top-tier internet cat, while one user attempts to tag others in a separate context. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“I think LM Ocean is the goat of the Phoebe world”",
+     "zh": "我觉得lm海洋才是菲比界的goat"
+    },
+    {
+     "en": "“The author is a god, doing nothing all day but feeding his fat Phoebe”",
+     "zh": "作者是真神了，整天啥也不干，就知道喂他的大胖菲比"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "board": "bilipop",
+   "rank": 3,
+   "zh": "【独家】《罗小黑战记》第44话 冬冬拯救行动方案五【10月国创】",
+   "heat": "296.1万 views",
+   "link": "https://www.bilibili.com/video/BV16hsY6tExz",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 哔哩哔哩国创",
+   "en": "[Exclusive] The Legend of Hei Episode 44: Dongdong's Rescue Action Plan Part 5 [October National Animation]",
+   "kind": "pop",
+   "reception": [
+    {
+     "en": "Viewers are impressed by the episode's length and the precise coordination of the Baiyou report, while others praise the organization's tight structure and the series' shift into the main storyline. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“This is the longest episode ever”",
+     "zh": "这是史上最长时间的一集了吧"
+    },
+    {
+     "en": "“The Baiyou report positions were flawless”",
+     "zh": "白游报的点位更是没有误差"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "board": "bilipop",
+   "rank": 4,
+   "zh": "24小时尾行！跟踪GTA6里的NPC，她的一天有多真实？",
+   "heat": "25.6万 views",
+   "link": "https://www.bilibili.com/video/BV1rxypzfE8y",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 爬爬娘",
+   "en": "24-hour tailing! Tracking an NPC in GTA 6, how realistic is her day?",
+   "kind": "games",
+   "reception": [
+    {
+     "en": "Users are reacting with humor, noting that all tracking attempts failed. Some comment that the game's realism is lacking. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“TL;DR: All tracking failed”",
+     "zh": "省流：全部跟踪失败"
+    },
+    {
+     "en": "“Too fake”",
+     "zh": "太假了"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "board": "bilipop",
+   "rank": 5,
+   "zh": "Claude声称证明黎曼猜想，我准备女装cos元辅了",
+   "heat": "39.1万 views",
+   "link": "https://www.bilibili.com/video/BV1BeyszwEty",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 分析学爱好者",
+   "en": "Claude claims to have proven the Riemann Hypothesis, so I'm preparing to cross-dress as Yuan Fu",
+   "kind": "tech",
+   "reception": [
+    {
+     "en": "The top comment jokes that the place to follow top mathematics is now GitHub. Others say reality has outrun science fiction: the novelist Liu Cixin once imagined humans needing aliens for this proof. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“Liu Cixin was still being conservative” [the science-fiction author; in one of his stories, scientists have to ask aliens for this proof]",
+     "zh": "大刘还是保守了"
+    },
+    {
+     "en": "“A blow-up solution to the Navier-Stokes equations has been worked out too”",
+     "zh": "ns方程无外力爆破解也被搞出来了"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "board": "bilipop",
+   "rank": 6,
+   "zh": "长辈泡的“药酒”，里面到底有什么？",
+   "heat": "76.0万 views",
+   "link": "https://www.bilibili.com/video/BV1nzsq6BERu",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 亿点点不一样",
+   "en": "What is actually inside the 'medicinal wine' brewed by elders?",
+   "kind": "life",
+   "reception": [
+    {
+     "en": "Users are reacting with dark humor and skepticism, joking about the dangers of the topic and suggesting the video was censored. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“The last one who exposed medicinal wine had ruined kidneys”",
+     "zh": "上一个揭露药酒的，肾已经被干烂了"
+    },
+    {
+     "en": "“Why not soak people”",
+     "zh": "为什么不泡人"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "board": "bilipop",
+   "rank": 7,
+   "zh": "90分钟中俄美会晤，摆了哪些事上桌？王骁APEC观察",
+   "heat": "116.9万 views",
+   "link": "https://www.bilibili.com/video/BV18psq6JEgF",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 小王Albert",
+   "en": "90-minute China-Russia-US meeting, what issues were put on the table? Wang Xiao's APEC observation",
+   "kind": "world",
+   "reception": [
+    {
+     "en": "The most-liked comment says what matters is that the three powers sat down at all: if they agree not to fight each other directly, the world stays manageable. Another argues the outcome did Iran a large favor. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“It is important that the three major powers sat down to talk”",
+     "zh": "三大国能够坐下来谈，这就很重要了"
+    },
+    {
+     "en": "“‘King Know-It-All’ [a Chinese nickname for Trump] really did Iran a big favor this time”",
+     "zh": "懂王这次真的帮了伊朗一大把"
+    }
+   ],
+   "sources": []
+  },
+  {
+   "board": "bilipop",
+   "rank": 8,
+   "zh": "“电影永远拍不出来，这种意气风发的感觉！”",
+   "heat": "48.6万 views",
+   "link": "https://www.bilibili.com/video/BV1BWsB6qEWg",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 荒草音乐",
+   "en": "\"Movies can never capture this spirited feeling!\"",
+   "kind": "pop",
+   "reception": [
+    {
+     "en": "Users are celebrating the team's championship by comparing their current demeanor to legendary players and reflecting on the significance of their victory. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“Champions are magical, instantly making the journey back seem weighty.”",
+     "zh": "冠军真神奇啊，一瞬间就把来时路变的厚重了"
+    }
+   ],
+   "sources": []
+  }
+ ]
+}

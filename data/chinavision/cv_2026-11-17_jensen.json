@@ -1,0 +1,134 @@
+{
+ "schema": "chinavision/pull/v0",
+ "id": "cv_2026-11-17_jensen",
+ "pulled": "2026-11-17",
+ "by": "Claude, by web search from the session (search results and snippets; the articles themselves were not opened in full)",
+ "what": "China Vision, first pull. What Chinese-language outlets are saying about the Huang scandal and the US chip rule. Headlines, a translation, and one line on what each says. No Dia, no z: this is a Lumens source, not a read (handoff 11-17, §6).",
+ "filter": "America as the filter: pieces about the US, its chip rule, and what it means for China",
+ "caveats": [
+  "Sohu and Weibo pieces are self-published commentary, not newsroom reporting; they are marked.",
+  "Translations and the one-line gists are Claude's.",
+  "The pull is a search, not a sweep of set outlets; it leans to what ranks. A fixed outlet list is the next step.",
+  "One Taiwanese column and two Epoch Times pieces also surfaced (Chinese-language, hostile to Beijing); left out of this pull and noted here so the choice is visible."
+ ],
+ "headlines": [
+  {
+   "outlet": "商务部 (Ministry of Commerce), via 财闻/中新社",
+   "date": "2026-11-17",
+   "title": "商务部新闻发言人就美商务部发布限制远程获取先进半导体相关措施答记者问",
+   "translation": "Commerce Ministry spokesperson answers a reporter's question on the US Commerce Department's measures limiting remote access to advanced semiconductors",
+   "url": "https://www.caiwennews.com/article/1705285.shtml",
+   "gist": "The official line: the US is stretching 'national security' and abusing export controls; it departs from what the two presidents agreed; China is strongly dissatisfied and will take countermeasures if the US persists.",
+   "read": "official"
+  },
+  {
+   "outlet": "外交部 (Foreign Ministry), via 科技日报 / 17173",
+   "date": "2026-11-17",
+   "title": "美国收紧对五国先进芯片出口！外交部商务部发声：若美方一意孤行将反制",
+   "translation": "US tightens advanced chip exports to five countries; Foreign and Commerce ministries: countermeasures if the US persists",
+   "url": "https://news.17173.com/content/11182026/093752836.shtml",
+   "gist": "Foreign Ministry spokesman Guo Jiakun calls the rule economic coercion and long-arm jurisdiction.",
+   "read": "official"
+  },
+  {
+   "outlet": "虎嗅 (Huxiu)",
+   "date": "2026-11-15",
+   "title": "中国大模型的至暗时刻",
+   "translation": "The darkest moment for China's large models",
+   "url": "https://m.huxiu.com/article/4905740.html",
+   "gist": "The bear case Rui Ma relayed on X: chips harder to buy, overseas GPU rental under review, US labs blocking distillation, optical-module makers watched. The worry is that the slope of progress starts to diverge, not the size of the gap.",
+   "read": "bear"
+  },
+  {
+   "outlet": "虎嗅 (Huxiu)",
+   "date": "2026-11-15",
+   "title": "华尔街：黄仁勋辞职，或成中国的“梦幻剧本”",
+   "translation": "Wall Street: Huang's resignation may be China's 'dream scenario'",
+   "url": "https://m.huxiu.com/article/4905778.html",
+   "gist": "Short-term pain for China's frontier models; but domestic chips and domestic compute get the surest demand in a decade.",
+   "read": "bull for domestic chips"
+  },
+  {
+   "outlet": "搜狐 (Sohu), self-published column",
+   "date": "2026-11-15",
+   "title": "黄仁勋走了，中国的算力账单换了一种算法",
+   "translation": "Huang is gone; China's compute bill is now calculated differently",
+   "url": "https://www.sohu.com/a/1101797989_360352",
+   "gist": "Huang was never an ally of Chinese AI; he was Nvidia's CEO. But he was the strongest voice in Washington against the controls, and that card is gone.",
+   "read": "sober"
+  },
+  {
+   "outlet": "搜狐 (Sohu), self-published column",
+   "date": "2026-11-15",
+   "title": "黄仁勋刚从英伟达辞职，美国主流媒体宣扬AI科技竞争“中国必输”",
+   "translation": "Huang has just resigned and US mainstream media proclaim 'China must lose' the AI race",
+   "url": "https://www.sohu.com/a/1101862132_122543023",
+   "gist": "Answers a Bloomberg opinion piece calling China the biggest loser; says a forecast is being passed off as a result.",
+   "read": "pushback on US framing"
+  },
+  {
+   "outlet": "搜狐 (Sohu), self-published column",
+   "date": "2026-11-13",
+   "title": "黄仁勋辞职，中国成最大输家？彭博社唱衰中国，国产芯片迎来转机",
+   "translation": "Huang resigns, China the biggest loser? Bloomberg talks China down; domestic chips get their opening",
+   "url": "https://www.sohu.com/a/1101065423_122660349",
+   "gist": "The US can limit chips and raise the bar on compute, but cannot choose Chinese firms' technical path for them.",
+   "read": "bull for domestic chips"
+  },
+  {
+   "outlet": "新浪科技 (Sina Tech)",
+   "date": "2026-11-13",
+   "title": "黄仁勋辞职了！以后谁还替中国市场争取英伟达芯片？周鸿祎发声",
+   "translation": "Huang has resigned! Who will fight for Nvidia chips for the Chinese market now? Zhou Hongyi speaks",
+   "url": "https://finance.sina.com.cn/tech/discovery/2026-11-13/doc-iniyqwtz3576493.shtml",
+   "gist": "360's founder: Huang was one of the few US tech leaders to oppose the controls in public; his argument was that a blockade only speeds China's own development.",
+   "read": "sober"
+  },
+  {
+   "outlet": "钛媒体 (TMTPost)",
+   "date": "2026-11-12",
+   "title": "黄仁勋辞职，对中国企业影响几何？",
+   "translation": "Huang resigns: how much does it affect Chinese companies?",
+   "url": "https://www.tmtpost.com/8204069.html",
+   "gist": "Chinese firms still have real demand for Nvidia's advanced compute; controls likely to be enforced harder; brokerages (CITIC, Tianfeng) expect domestic chips to gain share.",
+   "read": "sober"
+  },
+  {
+   "outlet": "FX168, fund manager's note (天弘)",
+   "date": "2026-11-12",
+   "title": "黄仁勋辞去英伟达总裁，对国产芯片影响几何？",
+   "translation": "Huang steps down: what does it mean for domestic chips?",
+   "url": "https://www.fx168news.com/article/1115472",
+   "gist": "'How tight the controls are never depended only on rules, but on channels.' The H200 opening rested on Huang's personal channel to Trump, which cannot be inherited.",
+   "read": "bull for domestic chips"
+  },
+  {
+   "outlet": "新浪 / 微博 video commentary",
+   "date": "2026-11-15",
+   "title": "黄仁勋走了，留给华盛顿的预言：亲手培养了一个不再需要英伟达的中国",
+   "translation": "Huang is gone, and leaves Washington a prophecy: it raised a China that no longer needs Nvidia",
+   "url": "https://www.sina.cn/weibo/detail/5365440224431615.html",
+   "gist": "Even if exports reopened tomorrow, domestic chips are not going back: firms that were cut off once now price 'long-term certainty' over single-card performance.",
+   "read": "bull for domestic chips"
+  },
+  {
+   "outlet": "21财经 (21st Century Business Herald)",
+   "date": "2026-11-18",
+   "title": "美国收紧海外先进算力访问，如何影响中国AI公司？",
+   "translation": "The US tightens access to advanced compute overseas: how does it affect Chinese AI companies?",
+   "url": "https://www.21jingji.com/article/20261118/herald/9ac711963ef08a02b76ee85e13a0d057.html",
+   "gist": "The rule pushes demand toward domestic AI chips; SMIC, Hua Hong and Biren rose on 11-17.",
+   "read": "bull for domestic chips"
+  }
+ ],
+ "theBackground": {
+  "point": "Sailor 11-17: most people miss that the Chinese government would rather Chinese chips be used to train models.",
+  "onRecord": [
+   "2026-01-14: a day after the US cleared H200 license review, Chinese customs were told the H200 was 'not permitted'; Alibaba, ByteDance and Tencent were called in to limit purchases (WinBuzzer 2026-01-14, citing people familiar; CSIS documented it in April 2026 per modeldiplomat.com)",
+   "Nvidia's own 10-Q for the quarter ending 2026-04-26: licenses granted from February 2026, 'we have not generated any revenue under the H200 licensing program, and do not yet know whether any imports will be allowed into China' (sec.gov)",
+   "2026-07-08: The Information reports Beijing plans to approve fewer than 200,000 H200s for Alibaba, ByteDance and DeepSeek, for training only (via modeldiplomat.com)",
+   "Chinese cloud firms reportedly told informally to give at least 30% of accelerator purchases to domestic suppliers (tech-insider.org, April 2026; secondary, to verify)"
+  ],
+  "theOtherHalf": "The government's preference and the firms' are not the same. The Huxiu bear case and TMTPost both say Chinese firms still want Nvidia compute; local data-center tenders still name the H100 and H200. Beijing wants domestic chips used; the labs want the best chips they can get."
+ }
+}

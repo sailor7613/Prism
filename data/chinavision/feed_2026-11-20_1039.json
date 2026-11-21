@@ -1,0 +1,803 @@
+{
+ "schema": "chinavision/feed/v0",
+ "id": "feed_2026-11-20_1039",
+ "takenBeijing": "2026-11-20 10:39",
+ "takenPacific": "2026-11-19 18:39",
+ "what": "望 (wàng): what is trending in Chinese media right now, translated. A feed to explore. Nothing here is scored or read by Prism.",
+ "source": "Each platform's own public hot list, read directly by chinavision-pull.py. Not read this time: Zhihu: HTTPError HTTP Error 403: Forbidden.",
+ "translatedBy": "local:qwen, on this Mac",
+ "notesBy": "Accounts, quotes and reception are written by local:qwen, on this Mac from the news pages it read. Reception is what those pages themselves report; no comment threads are read. Accounts are in its own words; a quote is kept only when it is found exactly in its source and is short. The full texts stay on this Mac (data/chinavision/raw/) and are not shown. Checked by Claude on 11-19: one account was withdrawn (the article was about something else) and one headline translation was corrected (it had left out Russia).",
+ "boards": {
+  "weibo": {
+   "name": "Weibo",
+   "zh": "微博热搜",
+   "about": "what people are posting about"
+  },
+  "baidu": {
+   "name": "Baidu",
+   "zh": "百度热搜",
+   "about": "what people are searching for"
+  },
+  "douyin": {
+   "name": "Douyin",
+   "zh": "抖音热榜",
+   "about": "what people are watching (China's TikTok)"
+  },
+  "toutiao": {
+   "name": "Toutiao",
+   "zh": "今日头条",
+   "about": "the biggest news app's top stories"
+  },
+  "bilibili": {
+   "name": "Bilibili",
+   "zh": "B站热搜",
+   "about": "video site with a young audience"
+  }
+ },
+ "kinds": {
+  "world": "World and state",
+  "america": "About America",
+  "money": "Money and business",
+  "tech": "Tech and AI",
+  "life": "Daily life",
+  "pop": "Pop culture",
+  "games": "Games",
+  "sport": "Sport"
+ },
+ "items": [
+  {
+   "board": "weibo",
+   "rank": 1,
+   "zh": "中俄美元首会晤富有成果",
+   "heat": "103.7万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4%E5%AF%8C%E6%9C%89%E6%88%90%E6%9E%9C",
+   "linkLabel": "search Baidu",
+   "en": "The meeting of the Chinese, Russian and American presidents was fruitful",
+   "kind": "world",
+   "note": "Chinese state media reports that Chinese President Xi Jinping, Russian President Vladimir Putin, and US President Donald Trump held a historic meeting in Shenzhen on November 19. The article states that Xi outlined four principles for managing great power relations, emphasizing mutual respect and peaceful coexistence to avoid conflict. Experts quoted in the report argue that this approach offers a new framework for stability and addresses global hotspots like the Ukraine crisis and nuclear proliferation. The three leaders reportedly exchanged views on major international issues and issued a joint peace declaration following the talks.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735021.shtml"
+    }
+   ]
+  },
+  {
+   "board": "weibo",
+   "rank": 2,
+   "zh": "马斯克从深圳飞到了上海",
+   "heat": "76.4万",
+   "link": "https://www.baidu.com/s?wd=%E9%A9%AC%E6%96%AF%E5%85%8B%E4%BB%8E%E6%B7%B1%E5%9C%B3%E9%A3%9E%E5%88%B0%E4%BA%86%E4%B8%8A%E6%B5%B7",
+   "linkLabel": "search Baidu",
+   "en": "Elon Musk flew from Shenzhen to Shanghai",
+   "kind": "tech",
+   "note": "Elon Musk traveled from Shenzhen to Shanghai as part of a brief 24-hour trip to China, which was highlighted by Tesla executive Tao Lin. During this visit, Musk expressed admiration for the Shanghai Super Factory's manufacturing capabilities and the local team's efficiency. He emphasized that resources should be dedicated to creating useful products rather than short-term speculation. The article notes that the Shanghai factory is a critical hub for Tesla's global production and exports.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/029/778.htm"
+    }
+   ],
+   "words": [
+    {
+     "zh": "我想来上海，感谢亚太以及中国团队",
+     "en": "I want to come to Shanghai, thank the APAC and China teams",
+     "who": "Elon Musk"
+    },
+    {
+     "zh": "一切时间资源都应该用来让自己成为真正有用的人",
+     "en": "All time resources should be used to become a truly useful person",
+     "who": "Elon Musk"
+    }
+   ]
+  },
+  {
+   "board": "weibo",
+   "rank": 3,
+   "zh": "2026APEC东道主成果清单",
+   "heat": "58.9万",
+   "link": "https://www.baidu.com/s?wd=2026APEC%E4%B8%9C%E9%81%93%E4%B8%BB%E6%88%90%E6%9E%9C%E6%B8%85%E5%8D%95",
+   "linkLabel": "search Baidu",
+   "en": "2026 APEC host country achievement list",
+   "kind": "world",
+   "note": "This article outlines China's strategy for hosting the 2026 APEC meetings in Shenzhen, focusing on transforming past diplomatic promises into concrete, actionable results. It highlights key initiatives in digital economy and artificial intelligence cooperation, such as the establishment of a new data flow center in Shenzhen's Qianhai district. The piece also emphasizes how the host city is using the event to test and improve its business environment and regulatory frameworks. Ultimately, the report presents this approach as a method to provide sustainable public goods and drive regional integration in the Asia-Pacific.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/ll/2026/11-20/10735093.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "以规则试点替代空泛承诺",
+     "en": "replace empty promises with rule pilots",
+     "who": "China News Service"
+    },
+    {
+     "zh": "促进APEC数据跨境流动合作中国中心",
+     "en": "China Center for Promoting APEC Cross-border Data Flow Cooperation",
+     "who": "China News Service"
+    }
+   ]
+  },
+  {
+   "board": "weibo",
+   "rank": 4,
+   "zh": "特朗普离开深圳前与王毅面谈",
+   "heat": "58.8万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A6%BB%E5%BC%80%E6%B7%B1%E5%9C%B3%E5%89%8D%E4%B8%8E%E7%8E%8B%E6%AF%85%E9%9D%A2%E8%B0%88",
+   "linkLabel": "search Baidu",
+   "en": "Trump met with Wang Yi before leaving Shenzhen",
+   "kind": "world"
+  },
+  {
+   "board": "weibo",
+   "rank": 5,
+   "zh": "美股再度大跌",
+   "heat": "58.6万",
+   "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E8%82%A1%E5%86%8D%E5%BA%A6%E5%A4%A7%E8%B7%8C",
+   "linkLabel": "search Baidu",
+   "en": "US stocks fell sharply again",
+   "kind": "money"
+  },
+  {
+   "board": "weibo",
+   "rank": 6,
+   "zh": "伊能静没来之前可给张泉灵委屈坏了",
+   "heat": "58.5万",
+   "link": "https://www.baidu.com/s?wd=%E4%BC%8A%E8%83%BD%E9%9D%99%E6%B2%A1%E6%9D%A5%E4%B9%8B%E5%89%8D%E5%8F%AF%E7%BB%99%E5%BC%A0%E6%B3%89%E7%81%B5%E5%A7%94%E5%B1%88%E5%9D%8F%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Before Yi Nengjing arrived, Zhang Quanling was treated unfairly",
+   "kind": "pop"
+  },
+  {
+   "board": "weibo",
+   "rank": 7,
+   "zh": "杨瀚森对阵雄鹿首节登场",
+   "heat": "58.3万",
+   "link": "https://www.baidu.com/s?wd=%E6%9D%A8%E7%80%9A%E6%A3%AE%E5%AF%B9%E9%98%B5%E9%9B%84%E9%B9%BF%E9%A6%96%E8%8A%82%E7%99%BB%E5%9C%BA",
+   "linkLabel": "search Baidu",
+   "en": "Yang Hansen played in the first quarter against the Milwaukee Bucks",
+   "kind": "sport"
+  },
+  {
+   "board": "weibo",
+   "rank": 8,
+   "zh": "多所高校不向2027级研究生提供宿舍",
+   "heat": "58.1万",
+   "link": "https://www.baidu.com/s?wd=%E5%A4%9A%E6%89%80%E9%AB%98%E6%A0%A1%E4%B8%8D%E5%90%912027%E7%BA%A7%E7%A0%94%E7%A9%B6%E7%94%9F%E6%8F%90%E4%BE%9B%E5%AE%BF%E8%88%8D",
+   "linkLabel": "search Baidu",
+   "en": "Several universities will not provide dormitories for graduate students entering in 2027",
+   "kind": "life"
+  },
+  {
+   "board": "weibo",
+   "rank": 9,
+   "zh": "一图读懂APEC合作如何惠及百姓生活",
+   "heat": "58.0万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%80%E5%9B%BE%E8%AF%BB%E6%87%82APEC%E5%90%88%E4%BD%9C%E5%A6%82%E4%BD%95%E6%83%A0%E5%8F%8A%E7%99%BE%E5%A7%93%E7%94%9F%E6%B4%BB",
+   "linkLabel": "search Baidu",
+   "en": "One picture to understand how APEC cooperation benefits people's lives",
+   "kind": "world"
+  },
+  {
+   "board": "weibo",
+   "rank": 10,
+   "zh": "两京十五日 轻喜剧",
+   "heat": "57.8万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%A4%E4%BA%AC%E5%8D%81%E4%BA%94%E6%97%A5%20%E8%BD%BB%E5%96%9C%E5%89%A7",
+   "linkLabel": "search Baidu",
+   "en": "Two Capitals in Fifteen Days, a light comedy",
+   "kind": "pop"
+  },
+  {
+   "board": "weibo",
+   "rank": 11,
+   "zh": "黄金",
+   "heat": "57.6万",
+   "link": "https://www.baidu.com/s?wd=%E9%BB%84%E9%87%91",
+   "linkLabel": "search Baidu",
+   "en": "Gold",
+   "kind": "money"
+  },
+  {
+   "board": "weibo",
+   "rank": 12,
+   "zh": "股市",
+   "heat": "57.5万",
+   "link": "https://www.baidu.com/s?wd=%E8%82%A1%E5%B8%82",
+   "linkLabel": "search Baidu",
+   "en": "Stock market",
+   "kind": "money"
+  },
+  {
+   "board": "baidu",
+   "rank": 1,
+   "zh": "大国外交的“深圳时刻”",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E5%A4%A7%E5%9B%BD%E5%A4%96%E4%BA%A4%E7%9A%84%E2%80%9C%E6%B7%B1%E5%9C%B3%E6%97%B6%E5%88%BB%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "The \"Shenzhen Moment\" in major-power diplomacy",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 2,
+   "zh": "中俄美元首会晤",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4",
+   "linkLabel": "search Baidu",
+   "en": "China-Russia-US heads of state meeting",
+   "kind": "world",
+   "note": "Chinese state media reports that President Xi Jinping of China, President Vladimir Putin of Russia, and President Donald Trump of the United States held a historic trilateral meeting in Shenzhen on November 19. The article presents this event as a unique opportunity for the three major powers to define their relationship based on mutual respect, peaceful coexistence, win-win cooperation, and dialogue. It highlights a joint declaration issued after the talks, which addresses global issues such as the Ukraine crisis, nuclear non-proliferation, and UN reform. The piece frames the summit as a constructive step toward stabilizing international relations and preventing conflict among the world's leading nations.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735021.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "大国和则世界安",
+     "en": "When major powers are at peace, the world is secure",
+     "who": "Xi Jinping"
+    },
+    {
+     "zh": "修昔底德陷阱",
+     "en": "Thucydides Trap",
+     "who": "Xi Jinping"
+    }
+   ]
+  },
+  {
+   "board": "baidu",
+   "rank": 3,
+   "zh": "王毅给深圳办会打100分",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%8E%8B%E6%AF%85%E7%BB%99%E6%B7%B1%E5%9C%B3%E5%8A%9E%E4%BC%9A%E6%89%93100%E5%88%86",
+   "linkLabel": "search Baidu",
+   "en": "Wang Yi gives the Shenzhen conference a score of 100",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 4,
+   "zh": "亚太经合组织互联互通蓝图",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%BA%9A%E5%A4%AA%E7%BB%8F%E5%90%88%E7%BB%84%E7%BB%87%E4%BA%92%E8%81%94%E4%BA%92%E9%80%9A%E8%93%9D%E5%9B%BE",
+   "linkLabel": "search Baidu",
+   "en": "APEC connectivity blueprint",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 5,
+   "zh": "特朗普返美途中发文：一次伟大的访问",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E8%BF%94%E7%BE%8E%E9%80%94%E4%B8%AD%E5%8F%91%E6%96%87%EF%BC%9A%E4%B8%80%E6%AC%A1%E4%BC%9F%E5%A4%A7%E7%9A%84%E8%AE%BF%E9%97%AE",
+   "linkLabel": "search Baidu",
+   "en": "Trump posts on social media during flight back to the US: A great visit",
+   "kind": "america"
+  },
+  {
+   "board": "baidu",
+   "rank": 6,
+   "zh": "彭丽媛邀请“夫人团”打卡深圳",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E5%BD%AD%E4%B8%BD%E5%AA%9B%E9%82%80%E8%AF%B7%E2%80%9C%E5%A4%AB%E4%BA%BA%E5%9B%A2%E2%80%9D%E6%89%93%E5%8D%A1%E6%B7%B1%E5%9C%B3",
+   "linkLabel": "search Baidu",
+   "en": "Peng Liyuan invites the \"First Ladies Group\" to check in at Shenzhen",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 7,
+   "zh": "起床后这4件事易引发心梗",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E8%B5%B7%E5%BA%8A%E5%90%8E%E8%BF%994%E4%BB%B6%E4%BA%8B%E6%98%93%E5%BC%95%E5%8F%91%E5%BF%83%E6%A2%97",
+   "linkLabel": "search Baidu",
+   "en": "These 4 things after waking up are likely to trigger a heart attack",
+   "kind": "life"
+  },
+  {
+   "board": "baidu",
+   "rank": 8,
+   "zh": "苏林抵达昆明 现场响起云南民歌",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E8%8B%8F%E6%9E%97%E6%8A%B5%E8%BE%BE%E6%98%86%E6%98%8E%20%E7%8E%B0%E5%9C%BA%E5%93%8D%E8%B5%B7%E4%BA%91%E5%8D%97%E6%B0%91%E6%AD%8C",
+   "linkLabel": "search Baidu",
+   "en": "Su Lam arrives in Kunming, Yunnan folk songs play on site",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 9,
+   "zh": "中国支持成立新联盟",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E6%94%AF%E6%8C%81%E6%88%90%E7%AB%8B%E6%96%B0%E8%81%94%E7%9B%9F",
+   "linkLabel": "search Baidu",
+   "en": "China supports the establishment of a new alliance",
+   "kind": "world"
+  },
+  {
+   "board": "baidu",
+   "rank": 10,
+   "zh": "当一天深圳人",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E5%BD%93%E4%B8%80%E5%A4%A9%E6%B7%B1%E5%9C%B3%E4%BA%BA",
+   "linkLabel": "search Baidu",
+   "en": "Being a person of Shenzhen for a day",
+   "kind": "life"
+  },
+  {
+   "board": "baidu",
+   "rank": 11,
+   "zh": "熟鸡蛋放口袋半年变“玻璃球”",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%86%9F%E9%B8%A1%E8%9B%8B%E6%94%BE%E5%8F%A3%E8%A2%8B%E5%8D%8A%E5%B9%B4%E5%8F%98%E2%80%9C%E7%8E%BB%E7%92%83%E7%90%83%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "A cooked egg turns into a \"glass ball\" after being kept in a pocket for half a year",
+   "kind": "life"
+  },
+  {
+   "board": "baidu",
+   "rank": 12,
+   "zh": "解锁食物背后的健康真相",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E8%A7%A3%E9%94%81%E9%A3%9F%E7%89%A9%E8%83%8C%E5%90%8E%E7%9A%84%E5%81%A5%E5%BA%B7%E7%9C%9F%E7%9B%B8",
+   "linkLabel": "search Baidu",
+   "en": "Unlocking the health truths behind food",
+   "kind": "life"
+  },
+  {
+   "board": "douyin",
+   "rank": 1,
+   "zh": "中俄美元首和平宣言",
+   "heat": "1200.4万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E5%92%8C%E5%B9%B3%E5%AE%A3%E8%A8%80",
+   "linkLabel": "search Baidu",
+   "en": "Peace declaration by the leaders of China, Russia, and the United States",
+   "kind": "world",
+   "note": "Chinese state media reports that Chinese President Xi Jinping met with Russian President Vladimir Putin and US President Donald Trump in Shenzhen to discuss how major powers should coexist. The article states the leaders issued a joint peace declaration outlining principles such as mutual respect and dialogue to prevent conflict. It highlights the view that this meeting offers a new path for international stability by avoiding historical traps of great power rivalry. Experts quoted in the piece emphasize that the three nations must work together to resolve global hotspots and maintain peace.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735021.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "大国和则世界安",
+     "en": "When major powers are at peace, the world is secure",
+     "who": "Xi Jinping"
+    },
+    {
+     "zh": "修昔底德陷阱",
+     "en": "Thucydides Trap",
+     "who": "Xi Jinping"
+    }
+   ]
+  },
+  {
+   "board": "douyin",
+   "rank": 2,
+   "zh": "U17男足首战对阵西班牙",
+   "heat": "1108.8万",
+   "link": "https://www.baidu.com/s?wd=U17%E7%94%B7%E8%B6%B3%E9%A6%96%E6%88%98%E5%AF%B9%E9%98%B5%E8%A5%BF%E7%8F%AD%E7%89%99",
+   "linkLabel": "search Baidu",
+   "en": "U17 men's national football team faces Spain in their first match",
+   "kind": "sport"
+  },
+  {
+   "board": "douyin",
+   "rank": 3,
+   "zh": "世界目光聚焦APEC",
+   "heat": "1104.3万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%96%E7%95%8C%E7%9B%AE%E5%85%89%E8%81%9A%E7%84%A6APEC",
+   "linkLabel": "search Baidu",
+   "en": "World attention focuses on APEC",
+   "kind": "world",
+   "note": "Over 2,000 business and political leaders from APEC economies and other nations gathered in Shenzhen for the 2026 APEC CEO Summit to discuss regional economic priorities. Attendees emphasized keywords such as stability, openness, and green innovation, expressing a desire for predictable growth amidst rising protectionism and geopolitical uncertainty. Many participants highlighted China's role as a key partner and innovator in areas like artificial intelligence and sustainable development. The report frames these discussions as a collective search for cooperation and mutual benefit within the Asia-Pacific region.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735092.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "没有稳定，就没有增长",
+     "en": "Without stability, there is no growth",
+     "who": "Anindya Novian Bakrie"
+    },
+    {
+     "zh": "互补",
+     "en": "Complementarity",
+     "who": "China News Service"
+    }
+   ]
+  },
+  {
+   "board": "douyin",
+   "rank": 4,
+   "zh": "APEC外宾游深圳邂逅地道美食",
+   "heat": "1104.2万",
+   "link": "https://www.baidu.com/s?wd=APEC%E5%A4%96%E5%AE%BE%E6%B8%B8%E6%B7%B1%E5%9C%B3%E9%82%82%E9%80%85%E5%9C%B0%E9%81%93%E7%BE%8E%E9%A3%9F",
+   "linkLabel": "search Baidu",
+   "en": "APEC guests tour Shenzhen and encounter authentic local cuisine",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 5,
+   "zh": "李在明发文感谢中国热情接待",
+   "heat": "1047.2万",
+   "link": "https://www.baidu.com/s?wd=%E6%9D%8E%E5%9C%A8%E6%98%8E%E5%8F%91%E6%96%87%E6%84%9F%E8%B0%A2%E4%B8%AD%E5%9B%BD%E7%83%AD%E6%83%85%E6%8E%A5%E5%BE%85",
+   "linkLabel": "search Baidu",
+   "en": "Lee Jae-myung posts to thank China for its warm reception",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 6,
+   "zh": "APEC会议围巾的中国式浪漫",
+   "heat": "1044.5万",
+   "link": "https://www.baidu.com/s?wd=APEC%E4%BC%9A%E8%AE%AE%E5%9B%B4%E5%B7%BE%E7%9A%84%E4%B8%AD%E5%9B%BD%E5%BC%8F%E6%B5%AA%E6%BC%AB",
+   "linkLabel": "search Baidu",
+   "en": "The Chinese-style romance of APEC conference scarves",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 7,
+   "zh": "APEC晚宴荔枝冰酒厂家回应",
+   "heat": "934.3万",
+   "link": "https://www.baidu.com/s?wd=APEC%E6%99%9A%E5%AE%B4%E8%8D%94%E6%9E%9D%E5%86%B0%E9%85%92%E5%8E%82%E5%AE%B6%E5%9B%9E%E5%BA%94",
+   "linkLabel": "search Baidu",
+   "en": "APEC dinner lychee ice wine manufacturer responds",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 8,
+   "zh": "马斯克盛赞深圳非常酷",
+   "heat": "932.6万",
+   "link": "https://www.baidu.com/s?wd=%E9%A9%AC%E6%96%AF%E5%85%8B%E7%9B%9B%E8%B5%9E%E6%B7%B1%E5%9C%B3%E9%9D%9E%E5%B8%B8%E9%85%B7",
+   "linkLabel": "search Baidu",
+   "en": "Elon Musk praises Shenzhen as very cool",
+   "kind": "tech"
+  },
+  {
+   "board": "douyin",
+   "rank": 9,
+   "zh": "一组对比照片看深圳沧海桑田",
+   "heat": "928.7万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%80%E7%BB%84%E5%AF%B9%E6%AF%94%E7%85%A7%E7%89%87%E7%9C%8B%E6%B7%B1%E5%9C%B3%E6%B2%A7%E6%B5%B7%E6%A1%91%E7%94%B0",
+   "linkLabel": "search Baidu",
+   "en": "A set of comparison photos shows the dramatic changes in Shenzhen",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 10,
+   "zh": "中方回应高市早苗接机仪式",
+   "heat": "928.6万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E6%96%B9%E5%9B%9E%E5%BA%94%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E6%8E%A5%E6%9C%BA%E4%BB%AA%E5%BC%8F",
+   "linkLabel": "search Baidu",
+   "en": "China responds to Sanae Takaichi's airport welcome ceremony",
+   "kind": "world"
+  },
+  {
+   "board": "douyin",
+   "rank": 11,
+   "zh": "现货黄金跌破3600美元",
+   "heat": "925.7万",
+   "link": "https://www.baidu.com/s?wd=%E7%8E%B0%E8%B4%A7%E9%BB%84%E9%87%91%E8%B7%8C%E7%A0%B43600%E7%BE%8E%E5%85%83",
+   "linkLabel": "search Baidu",
+   "en": "Spot gold falls below $3600",
+   "kind": "money"
+  },
+  {
+   "board": "douyin",
+   "rank": 12,
+   "zh": "挑战给妈妈打电话说我爱你",
+   "heat": "924.7万",
+   "link": "https://www.baidu.com/s?wd=%E6%8C%91%E6%88%98%E7%BB%99%E5%A6%88%E5%A6%88%E6%89%93%E7%94%B5%E8%AF%9D%E8%AF%B4%E6%88%91%E7%88%B1%E4%BD%A0",
+   "linkLabel": "search Baidu",
+   "en": "Challenge: Call your mom and say I love you",
+   "kind": "life"
+  },
+  {
+   "board": "toutiao",
+   "rank": 1,
+   "zh": "中俄美元首和平宣言",
+   "heat": "4105.5万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E5%92%8C%E5%B9%B3%E5%AE%A3%E8%A8%80",
+   "linkLabel": "search Baidu",
+   "en": "Peace declaration by the presidents of China, Russia, and the United States",
+   "kind": "world",
+   "note": "Chinese state media reports that Chinese President Xi Jinping met with Russian President Vladimir Putin and US President Donald Trump in Shenzhen to discuss how major powers should coexist. The article states the leaders issued a joint peace declaration outlining principles such as mutual respect and dialogue to prevent conflict. It highlights the view that this meeting offers a new path for international stability by avoiding historical traps of great power rivalry. Experts quoted in the piece emphasize that the three nations must work together to resolve global hotspots and maintain peace.",
+   "words": [
+    {
+     "zh": "大国和则世界安",
+     "en": "When major powers are at peace, the world is secure",
+     "who": "Xi Jinping"
+    },
+    {
+     "zh": "修昔底德陷阱",
+     "en": "Thucydides Trap",
+     "who": "Xi Jinping"
+    }
+   ],
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735021.shtml"
+    }
+   ]
+  },
+  {
+   "board": "toutiao",
+   "rank": 2,
+   "zh": "王毅给深圳办会打100分",
+   "heat": "3714.8万",
+   "link": "https://www.baidu.com/s?wd=%E7%8E%8B%E6%AF%85%E7%BB%99%E6%B7%B1%E5%9C%B3%E5%8A%9E%E4%BC%9A%E6%89%93100%E5%88%86",
+   "linkLabel": "search Baidu",
+   "en": "Wang Yi [China's Foreign Minister] gives a score of 100 for the Shenzhen conference",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 3,
+   "zh": "APEC新机遇 年轻人如何“接接接”",
+   "heat": "3361.3万",
+   "link": "https://www.baidu.com/s?wd=APEC%E6%96%B0%E6%9C%BA%E9%81%87%20%E5%B9%B4%E8%BD%BB%E4%BA%BA%E5%A6%82%E4%BD%95%E2%80%9C%E6%8E%A5%E6%8E%A5%E6%8E%A5%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "New opportunities from APEC [Asia-Pacific Economic Cooperation]: How young people can \"seize\" them",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 4,
+   "zh": "韩国总统夫人被舞狮英歌舞圈粉",
+   "heat": "3041.5万",
+   "link": "https://www.baidu.com/s?wd=%E9%9F%A9%E5%9B%BD%E6%80%BB%E7%BB%9F%E5%A4%AB%E4%BA%BA%E8%A2%AB%E8%88%9E%E7%8B%AE%E8%8B%B1%E6%AD%8C%E8%88%9E%E5%9C%88%E7%B2%89",
+   "linkLabel": "search Baidu",
+   "en": "The wife of the South Korean president is won over by lion dance and Yingge dance",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 5,
+   "zh": "马斯克从深圳飞到了上海",
+   "heat": "2752.0万",
+   "link": "https://www.baidu.com/s?wd=%E9%A9%AC%E6%96%AF%E5%85%8B%E4%BB%8E%E6%B7%B1%E5%9C%B3%E9%A3%9E%E5%88%B0%E4%BA%86%E4%B8%8A%E6%B5%B7",
+   "linkLabel": "search Baidu",
+   "en": "Elon Musk flew from Shenzhen to Shanghai",
+   "kind": "tech",
+   "note": "Elon Musk traveled from Shenzhen to Shanghai as part of a brief 24-hour trip to China, which was highlighted by Tesla executive Tao Lin. During this visit, Musk expressed admiration for the Shanghai Super Factory's manufacturing capabilities and the local team's efficiency. He emphasized that resources should be dedicated to creating useful products rather than short-term speculation. The article notes that the Shanghai factory is a critical hub for Tesla's global production and exports.",
+   "words": [
+    {
+     "zh": "我想来上海，感谢亚太以及中国团队",
+     "en": "I want to come to Shanghai, thank the APAC and China teams",
+     "who": "Elon Musk"
+    },
+    {
+     "zh": "一切时间资源都应该用来让自己成为真正有用的人",
+     "en": "All time resources should be used to become a truly useful person",
+     "who": "Elon Musk"
+    }
+   ],
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/029/778.htm"
+    }
+   ]
+  },
+  {
+   "board": "toutiao",
+   "rank": 6,
+   "zh": "游客在三亚海边捡到百斤重金枪鱼",
+   "heat": "2490.1万",
+   "link": "https://www.baidu.com/s?wd=%E6%B8%B8%E5%AE%A2%E5%9C%A8%E4%B8%89%E4%BA%9A%E6%B5%B7%E8%BE%B9%E6%8D%A1%E5%88%B0%E7%99%BE%E6%96%A4%E9%87%8D%E9%87%91%E6%9E%AA%E9%B1%BC",
+   "linkLabel": "search Baidu",
+   "en": "Tourist finds a 100-jin [50 kg] bluefin tuna on the beach in Sanya",
+   "kind": "life"
+  },
+  {
+   "board": "toutiao",
+   "rank": 7,
+   "zh": "牛肉为什么突然贵了",
+   "heat": "2253.2万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%9B%E8%82%89%E4%B8%BA%E4%BB%80%E4%B9%88%E7%AA%81%E7%84%B6%E8%B4%B5%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Why has beef suddenly become expensive?",
+   "kind": "money"
+  },
+  {
+   "board": "toutiao",
+   "rank": 8,
+   "zh": "李在明发文感谢中国热情接待",
+   "heat": "2038.7万",
+   "link": "https://www.baidu.com/s?wd=%E6%9D%8E%E5%9C%A8%E6%98%8E%E5%8F%91%E6%96%87%E6%84%9F%E8%B0%A2%E4%B8%AD%E5%9B%BD%E7%83%AD%E6%83%85%E6%8E%A5%E5%BE%85",
+   "linkLabel": "search Baidu",
+   "en": "Lee Jae-myung [South Korean politician] posts to thank China for its warm reception",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 9,
+   "zh": "光影绘湾区 璀璨深圳夜",
+   "heat": "1844.7万",
+   "link": "https://www.baidu.com/s?wd=%E5%85%89%E5%BD%B1%E7%BB%98%E6%B9%BE%E5%8C%BA%20%E7%92%80%E7%92%A8%E6%B7%B1%E5%9C%B3%E5%A4%9C",
+   "linkLabel": "search Baidu",
+   "en": "Light and shadow paint the Greater Bay Area; Shenzhen's dazzling night",
+   "kind": "life"
+  },
+  {
+   "board": "toutiao",
+   "rank": 10,
+   "zh": "深圳市民街头偶遇多国政要",
+   "heat": "1669.2万",
+   "link": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E5%B8%82%E6%B0%91%E8%A1%97%E5%A4%B4%E5%81%B6%E9%81%87%E5%A4%9A%E5%9B%BD%E6%94%BF%E8%A6%81",
+   "linkLabel": "search Baidu",
+   "en": "Shenzhen residents encounter multiple foreign heads of state on the street",
+   "kind": "world"
+  },
+  {
+   "board": "toutiao",
+   "rank": 11,
+   "zh": "酸甜苦辣咸五味辟谣图鉴",
+   "heat": "1510.3万",
+   "link": "https://www.baidu.com/s?wd=%E9%85%B8%E7%94%9C%E8%8B%A6%E8%BE%A3%E5%92%B8%E4%BA%94%E5%91%B3%E8%BE%9F%E8%B0%A3%E5%9B%BE%E9%89%B4",
+   "linkLabel": "search Baidu",
+   "en": "A guide to debunking myths about the five basic tastes: sour, sweet, bitter, spicy, and salty",
+   "kind": "life"
+  },
+  {
+   "board": "toutiao",
+   "rank": 12,
+   "zh": "老人学会网购后下单15吨薯条喂猪",
+   "heat": "1366.6万",
+   "link": "https://www.baidu.com/s?wd=%E8%80%81%E4%BA%BA%E5%AD%A6%E4%BC%9A%E7%BD%91%E8%B4%AD%E5%90%8E%E4%B8%8B%E5%8D%9515%E5%90%A8%E8%96%AF%E6%9D%A1%E5%96%82%E7%8C%AA",
+   "linkLabel": "search Baidu",
+   "en": "After learning online shopping, an elderly person orders 15 tons of french fries to feed pigs",
+   "kind": "life"
+  },
+  {
+   "board": "bilibili",
+   "rank": 1,
+   "zh": "习近平同外国领导人举行双边会晤",
+   "heat": "132.6万",
+   "link": "https://www.baidu.com/s?wd=%E4%B9%A0%E8%BF%91%E5%B9%B3%E5%90%8C%E5%A4%96%E5%9B%BD%E9%A2%86%E5%AF%BC%E4%BA%BA%E4%B8%BE%E8%A1%8C%E5%8F%8C%E8%BE%B9%E4%BC%9A%E6%99%A4",
+   "linkLabel": "search Baidu",
+   "en": "Xi Jinping holds bilateral meetings with foreign leaders",
+   "kind": "world"
+  },
+  {
+   "board": "bilibili",
+   "rank": 2,
+   "zh": "普京感谢中方和习主席组织三方会晤",
+   "heat": "129.8万",
+   "link": "https://www.baidu.com/s?wd=%E6%99%AE%E4%BA%AC%E6%84%9F%E8%B0%A2%E4%B8%AD%E6%96%B9%E5%92%8C%E4%B9%A0%E4%B8%BB%E5%B8%AD%E7%BB%84%E7%BB%87%E4%B8%89%E6%96%B9%E4%BC%9A%E6%99%A4",
+   "linkLabel": "search Baidu",
+   "en": "Putin thanks China and President Xi for organizing a trilateral meeting",
+   "kind": "world"
+  },
+  {
+   "board": "bilibili",
+   "rank": 3,
+   "zh": "特朗普称三国元首会晤创造了历史",
+   "heat": "125.7万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E4%B8%89%E5%9B%BD%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4%E5%88%9B%E9%80%A0%E4%BA%86%E5%8E%86%E5%8F%B2",
+   "linkLabel": "search Baidu",
+   "en": "Trump says the trilateral heads of state meeting created history",
+   "kind": "america"
+  },
+  {
+   "board": "bilibili",
+   "rank": 4,
+   "zh": "APEC与会领导人感谢习近平主席",
+   "heat": "123.8万",
+   "link": "https://www.baidu.com/s?wd=APEC%E4%B8%8E%E4%BC%9A%E9%A2%86%E5%AF%BC%E4%BA%BA%E6%84%9F%E8%B0%A2%E4%B9%A0%E8%BF%91%E5%B9%B3%E4%B8%BB%E5%B8%AD",
+   "linkLabel": "search Baidu",
+   "en": "APEC attending leaders thank President Xi",
+   "kind": "world"
+  },
+  {
+   "board": "bilibili",
+   "rank": 5,
+   "zh": "中俄美元首会晤传递哪些信息",
+   "heat": "123.5万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4%E4%BC%A0%E9%80%92%E5%93%AA%E4%BA%9B%E4%BF%A1%E6%81%AF",
+   "linkLabel": "search Baidu",
+   "en": "What information is conveyed by the China-Russia-US heads of state meeting",
+   "kind": "world",
+   "note": "Chinese state media reports that President Xi Jinping met with Russian President Putin and US President Trump in Shenzhen to discuss how major powers should coexist. The article highlights Xi's four principles for international relations: mutual respect, peaceful coexistence, win-win cooperation, and dialogue. Experts quoted in the piece argue these guidelines help prevent conflict and address global hotspots like the Ukraine crisis. The meeting concluded with a joint declaration on issues including nuclear risk reduction and UN reform.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735021.shtml"
+    }
+   ],
+   "words": [
+    {
+     "zh": "修昔底德陷阱",
+     "en": "Thucydides Trap",
+     "who": "Xi Jinping"
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 6,
+   "zh": "AI泔水正在污染知识",
+   "heat": "121.1万",
+   "link": "https://www.baidu.com/s?wd=AI%E6%B3%94%E6%B0%B4%E6%AD%A3%E5%9C%A8%E6%B1%A1%E6%9F%93%E7%9F%A5%E8%AF%86",
+   "linkLabel": "search Baidu",
+   "en": "AI slop is polluting knowledge",
+   "kind": "tech"
+  },
+  {
+   "board": "bilibili",
+   "rank": 7,
+   "zh": "28款主流AI大模型强度排行",
+   "heat": "16.1万",
+   "link": "https://www.baidu.com/s?wd=28%E6%AC%BE%E4%B8%BB%E6%B5%81AI%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BC%BA%E5%BA%A6%E6%8E%92%E8%A1%8C",
+   "linkLabel": "search Baidu",
+   "en": "Ranking of the strength of 28 mainstream AI large models",
+   "kind": "tech"
+  },
+  {
+   "board": "bilibili",
+   "rank": 8,
+   "zh": "NBA新赛季有哪些交易拖累球队",
+   "heat": "13.7万",
+   "link": "https://www.baidu.com/s?wd=NBA%E6%96%B0%E8%B5%9B%E5%AD%A3%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BA%A4%E6%98%93%E6%8B%96%E7%B4%AF%E7%90%83%E9%98%9F",
+   "linkLabel": "search Baidu",
+   "en": "Which NBA new season trades are dragging down teams",
+   "kind": "sport"
+  },
+  {
+   "board": "bilibili",
+   "rank": 9,
+   "zh": "007电影其实是穿搭指南",
+   "heat": "9.6万",
+   "link": "https://www.baidu.com/s?wd=007%E7%94%B5%E5%BD%B1%E5%85%B6%E5%AE%9E%E6%98%AF%E7%A9%BF%E6%90%AD%E6%8C%87%E5%8D%97",
+   "linkLabel": "search Baidu",
+   "en": "The 007 movies are actually a fashion guide",
+   "kind": "pop"
+  },
+  {
+   "board": "bilibili",
+   "rank": 10,
+   "zh": "揭秘打包二手手机骗局",
+   "heat": "6.0万",
+   "link": "https://www.baidu.com/s?wd=%E6%8F%AD%E7%A7%98%E6%89%93%E5%8C%85%E4%BA%8C%E6%89%8B%E6%89%8B%E6%9C%BA%E9%AA%97%E5%B1%80",
+   "linkLabel": "search Baidu",
+   "en": "Revealing the scam of packing second-hand phones",
+   "kind": "life"
+  },
+  {
+   "board": "bilibili",
+   "rank": 11,
+   "zh": "莉莉来帮你圆梦了",
+   "heat": "6.0万",
+   "link": "https://www.baidu.com/s?wd=%E8%8E%89%E8%8E%89%E6%9D%A5%E5%B8%AE%E4%BD%A0%E5%9C%86%E6%A2%A6%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Lily has come to help you fulfill your dream",
+   "kind": "pop"
+  },
+  {
+   "board": "bilibili",
+   "rank": 12,
+   "zh": "donk首次打瓦试玩",
+   "heat": "6.0万",
+   "link": "https://www.baidu.com/s?wd=donk%E9%A6%96%E6%AC%A1%E6%89%93%E7%93%A6%E8%AF%95%E7%8E%A9",
+   "linkLabel": "search Baidu",
+   "en": "donk首次打瓦试玩",
+   "kind": "life"
+  }
+ ]
+}

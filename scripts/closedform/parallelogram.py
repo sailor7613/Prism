@@ -42,7 +42,16 @@ READ_MODEL = os.environ.get('CF_MODEL_READ', 'claude-sonnet-5-5')   # 11-08 (Sai
 
 def the_object():
     """The object as Prism holds it (data/active/object.json): its body (what is measured), its room (the daily average of the light on the topic), its topic."""
-    return json.load(open(os.path.join(ROOT, 'data', 'active', 'object.json')))
+    # 11-17: a set can be read against another face of the Object. CF_OBJECT names its file (a path under Prism/); unset, it is
+    # the standing object.json. The questions and rules do not change with it: only the Object block they are asked about.
+    return json.load(open(os.path.join(ROOT, os.environ['CF_OBJECT']) if os.environ.get('CF_OBJECT') else os.path.join(ROOT, 'data', 'active', 'object.json')))
+
+
+SIGNS = "no war, steady prices, work, a Congress that uses its power, a dollar holding its share and a steadier mood read realized; their opposites read frustrated."
+MEASURE_NOTE = "war = the fact of the war itself (will it happen, is it happening, boots or no boots)"
+def state_measure(G):
+    """The id of the measure that is the topic's own state by date (the war, on the standing Object)."""
+    return G.get('stateMeasure', 'war')
 
 
 def measure(G, mid):
@@ -82,7 +91,7 @@ def grammar_prompt(meta, items, G):
     posts = json.dumps([{'n': it['n'], 'who': it['who'], 'date': it['date'], 'text': it['text']} for it in items], ensure_ascii=False, indent=1)   # 11-09: items carry their own n (the grammar is asked in chunks)
     user = f"""THE OBJECT: {G['object']} — is it realized, or frustrated.
 THE TOPIC (the face of the object these lines are about): {topic_label(meta, G)}
-z: +1 = the object realized · -1 = the object frustrated. z is read against the object itself, never against what an audience wants (ruled 11-11). The signs are the body's own: no war, steady prices, work, a Congress that uses its power, a dollar holding its share and a steadier mood read realized; their opposites read frustrated.
+z: +1 = the object realized · -1 = the object frustrated. z is read against the object itself, never against what an audience wants (ruled 11-11). The signs are the body's own: {G.get('signs', SIGNS)}
 
 THE BODY — what is measured of the object (each a dated series of readings; a line is read against the one it talks about, as of its own date):
 {gl}
@@ -97,7 +106,7 @@ For every line return:
  "subject": "who is speaking or being spoken for",
  "about": "object"|"shadow",
  "touch": "O"|"T"|"M"|"F"|"X",   // O the object itself · T a dated record (a fact, a vote, a past statement) · M a mechanism (how one thing caused another) · F a frame (a story told about it) · X a challenge (counter-evidence)
- "measure": {enum},   // war = the fact of the war itself (will it happen, is it happening, boots or no boots)
+ "measure": {enum},   // {G.get('measureNote', MEASURE_NOTE)}
  "due": "YYYY-MM-DD" or null,   // ONLY if the line forecasts: the date by which it says the object will have moved — a date it names, or the plain reading of its own words from the post's date ("within a week", "by the midterms", "this summer"). A line about the present or the past: null
  "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // the side THIS line takes on where the object stands, or is being taken, as of its date — by the three rules below
  "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
@@ -196,15 +205,17 @@ def gnostic(pid, h, lines, k, runs, fresh):
             "elsewhere in it. Judge the words in the set, never reputations or outside knowledge. Reply with JSON only.")
     # 11-08: the object's state on each line's date rides along (the war measure), so 'no war' after the strikes reads as the
     # switch it is; and the reading of the measure the line itself talks about (pump, vote, dollar) on that date
-    G = the_object(); wg = measure(G, 'war')
+    G = the_object(); wg = measure(G, state_measure(G)); LG = G['topic'].get('ledger', [])
     def state(day):
-        if not wg or not day: return None
+        if not day: return None
+        if not wg or not wg['readings']:   # 11-17: an Object whose state is kept only as a dated ledger (no z): the last step on or before the day
+            e = [x for x in LG if x[0] <= day]; return e[-1][2] if e else None
         best = None
         for r in wg['readings']:
             if r[0] <= day: best = r
         return (best or wg['readings'][0])[3]
     def own(l):
-        if l.get('measure') in (None, 'shadow', 'war'): return None
+        if l.get('measure') in (None, 'shadow', state_measure(G)): return None
         r = reading_at(G, l['measure'], l['date'])
         return r and {'measure': l['measure'], 'z': r['z'], 'asOf': r['date']}
     L = [{'i': l['i'], 'who': l['who'], 'date': l['date'], 'objectOnThatDate': state(l['date']), 'bodyOnThatDate': own(l), 'due': l.get('due'), 'quote': l['quote'], 'voice': l.get('subject'), 'post': l.get('post')} for l in lines]
@@ -219,7 +230,7 @@ def gnostic(pid, h, lines, k, runs, fresh):
 LINES (every line in the set, in order, with dates):
 {json.dumps(L, ensure_ascii=False, indent=1)}
 
-objectOnThatDate is what the object (the war) actually was on the line's date, from the object's body. bodyOnThatDate, where present, is the reading of the measure the line talks about (the pump, the vote, the dollar; z +1 realized … -1 frustrated, read against the object itself) as of that date. due is the date a forecasting line said the object would have moved by.
+objectOnThatDate is what the object ({G.get('stateName', 'the war')}) actually was on the line's date, from the object's body. bodyOnThatDate, where present, is the reading of the measure the line talks about (the pump, the vote, the dollar; z +1 realized … -1 frustrated, read against the object itself) as of that date. due is the date a forecasting line said the object would have moved by.
 
 A CREDULITY SWITCH is where a speaker's own earlier words in this set come due and he refuses them, or where he takes up what he had refused. Check every line against every earlier line by the same speaker (or an ally in the set). Three kinds count, all equally:
 1. A test he set comes due and he refuses it: he said what would change his mind, or made a bet; objectOnThatDate shows the condition met (or the object moved against his forecast), and he holds the forecast anyway, narrows its terms, or settles the bet himself. (withdrawn)
@@ -304,10 +315,11 @@ def main():
                       'z': None if (g.get('measure') or g.get('tracker') or g.get('gear')) == 'shadow' or g.get('about') == 'shadow' else ZWORDS.get(g.get('z'), 0.0),
                       'zWord': g.get('z'), 'kind': 'teaser' if g.get('kind') == 'teaser' else 'statement', 'lit': g.get('lit', []), 'credulity': g.get('credulity', 'none'), 'whyGrammar': g.get('why'), 'post_text': it['text']})
     # 11-09: the forecast pass — conditional forecasts come due when the war measure says the condition was met
-    FX = forecasts(pid, hg, lines, k, fresh or '--reforecast' in a, G)
+    # 11-17: the forecast question is written for the war (its states, 'if the war comes'). An Object file that sets forecastPass false is read without it
+    FX = {} if G.get('forecastPass') is False else forecasts(pid, hg, lines, k, fresh or '--reforecast' in a, G)
     for f_ in FX.values():   # 11-14: 'within' must be a number of days. A local model answered with the word 'days'; anything that is not a number is read as none
         m_ = re.search(r'\d+', str(f_.get('within') if f_.get('within') is not None else '')); f_['within'] = int(m_.group(0)) if m_ else None
-    WAR_DAY = next((r[0] for r in measure(G, 'war')['readings'] if r[1] <= -1), G['topic']['zero'])
+    WAR_DAY = next((r[0] for r in (measure(G, state_measure(G)) or {'readings': []})['readings'] if r[1] <= -1), G['topic']['zero'])
     def plus(day, n):
         return (datetime.date.fromisoformat(day) + datetime.timedelta(days=int(n))).isoformat()
     seen = set()
@@ -452,7 +464,7 @@ def main():
             if st in UNM or st not in (WT.get('states') or {}):
                 l['forecast'] = {'due': l['due'], 'dueFrom': l.get('dueFrom'), 'says': l.get('forecastSays'), 'state': st, 'negated': l['negated'], 'cameDue': came, 'result': 'unmeasured', 'gap': None, 'exposure': None}; continue
             hit = on_ledger(st, day); right = bool(hit) != l['negated']
-            td = reading_at(G, 'war', day)   # for the pin: where the war measure stood on the day the forecast was judged
+            td = reading_at(G, state_measure(G), day)   # for the pin: where the war measure stood on the day the forecast was judged
             l['forecast'] = {'due': l['due'], 'dueFrom': l.get('dueFrom'), 'says': l.get('forecastSays'), 'state': st, 'negated': l['negated'], 'cameDue': came, 'atDue': td, 'judgedOn': day,
                              'result': ('right' if right else 'wrong') + ('' if came else ' so far'), 'onLedger': hit and f'{hit[2]} ({hit[0]})',
                              'gap': 0.0 if right else 1.0, 'exposure': 0.0 if right else round(l['dia'] / 100, 2)}

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="g4">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>China Vision</title>
+<!-- ======================================================================
+     China Vision — Prism/press/chinavision.html — 2026-11-17
+     A program in the M3P (g4/index.html, #chinavision): a feed of what is trending in Chinese media, translated.
+     It is only a feed to explore. Nothing here is scored, cut or read by Prism (Sailor 11-17: before any of Prism's
+     functions are applied, it is a top-line program that simply feeds translations of trending Chinese media, pop culture included).
+     The data is a pull: Prism/data/chinavision/feed_<date>_<time>.json, listed in data/chinavision/index.json.
+     Each item is one line from a platform's public hot list: its place, the translation, the Chinese as posted, the heat.
+     The menu is inside the prism, as in Chat: rest the pointer on it and it drops down (boards, kinds, earlier pulls).
+     ====================================================================== -->
+<link rel="stylesheet" href="../src/css/prism-grammar.css?v=2">
+<link rel="stylesheet" href="../src/css/g4-os.css?v=2">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { font-family: var(--g4-os); color: var(--lt-cream); background: transparent; overflow: hidden; --top: 150px; }
+  .rect { background: rgba(var(--g4-blue-rgb), .10); border: 1px solid rgba(var(--g4-blue-rgb), .30); color: var(--lt-cream); border-radius: 3px; font: 13px var(--g4-os); cursor: pointer; padding: 7px 12px; }
+  .rect:hover { background: rgba(var(--g4-blue-rgb), .18); }
+  .lab { font-size: 10px; letter-spacing: .16em; text-transform: uppercase; color: rgba(246,241,230,.42); margin: 0 0 8px; }
+  #menu { position: absolute; z-index: 6; left: 16px; top: var(--top); width: 318px; max-height: calc(100% - var(--top) - 16px); overflow-y: auto;
+          padding: 16px 14px 14px; display: flex; flex-direction: column; gap: 18px;
+          background: rgba(7, 12, 28, .93); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+          border: 1px solid var(--g4-rule); border-radius: 4px; box-shadow: 0 18px 50px rgba(0,0,0,.55);
+          opacity: 0; transform: translateY(-10px); pointer-events: none; transition: opacity .22s ease, transform .28s cubic-bezier(.2,.8,.2,1); }
+  #menu::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 2px; background: linear-gradient(90deg, var(--film-0), var(--film-1), var(--film-2), var(--film-3), var(--film-4)); opacity: .75; }
+  #menu.on { opacity: 1; transform: none; pointer-events: auto; }
+  .m { display: block; width: 100%; text-align: left; margin-bottom: 6px; padding: 8px 11px; line-height: 1.3; }
+  .m b { font-weight: 600; font-size: 14px; } .m small { display: block; font-size: 11px; font-style: italic; color: rgba(246,241,230,.46); margin-top: 2px; }
+  .m.on { border-color: var(--film-1); background: rgba(var(--g4-blue-rgb), .22); box-shadow: 0 0 14px rgba(190,232,255,.10); }
+  .kinds { display: flex; flex-wrap: wrap; gap: 6px; } .kinds .rect { padding: 5px 9px; font-size: 12px; } .kinds .rect.on { border-color: var(--film-1); background: rgba(var(--g4-blue-rgb), .22); }
+
+  #main { height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: calc(var(--top) + 6px) max(22px, calc(50% - 430px)) 60px;
+          -webkit-mask-image: linear-gradient(to bottom, transparent calc(var(--top) * .5), #000 var(--top)); mask-image: linear-gradient(to bottom, transparent calc(var(--top) * .5), #000 var(--top)); }
+  h1 { font-size: 30px; font-weight: 600; letter-spacing: .01em; } h1 span { font-weight: 400; color: rgba(246,241,230,.5); font-size: 20px; margin-left: 10px; }
+  #dek { margin: 8px 0 4px; font-size: 15px; line-height: 1.5; color: rgba(246,241,230,.72); max-width: 640px; }
+  #when { font-size: 12px; font-style: italic; color: rgba(246,241,230,.42); margin-bottom: 14px; }
+  #chip { display: inline-block; margin: 0 0 22px; font-size: 12.5px; color: rgba(246,241,230,.6); cursor: pointer; border-bottom: 1px dotted rgba(246,241,230,.3); padding-bottom: 2px; }
+  #chip b { color: #fff; font-weight: 600; }
+  .board { margin: 0 0 30px; }
+  .bh { display: flex; align-items: baseline; gap: 10px; padding-bottom: 7px; border-bottom: 1px solid var(--g4-rule); margin-bottom: 4px; }
+  .bh b { font-size: 17px; font-weight: 600; } .bh i { font-style: normal; font-size: 14px; color: rgba(246,241,230,.5); } .bh small { font-size: 12px; font-style: italic; color: rgba(246,241,230,.4); margin-left: auto; text-align: right; }
+  .row { display: grid; grid-template-columns: 30px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 13px 4px; border-bottom: 1px solid var(--g4-rule-soft); }
+  .note { font-size: 14.5px; line-height: 1.55; color: rgba(246,241,230,.82); margin-top: 8px; max-width: 620px; }
+  .src { font-size: 11.5px; color: rgba(246,241,230,.42); margin-top: 7px; } .src .pub { letter-spacing: .08em; text-transform: uppercase; font-size: 10.5px; }
+  .src a { color: var(--film-1); text-decoration: none; border-bottom: 1px dotted rgba(190,232,255,.4); } .src a:hover { color: #fff; }
+  .rk { font-size: 15px; color: rgba(246,241,230,.38); text-align: right; font-variant-numeric: tabular-nums; }
+  .rk.top { color: var(--film-2); }
+  .en { font-size: 16.5px; line-height: 1.4; } .zh { font-size: 13.5px; line-height: 1.45; color: rgba(246,241,230,.5); margin-top: 3px; }
+  .side { text-align: right; white-space: nowrap; font-size: 11.5px; color: rgba(246,241,230,.4); }
+  .side em { display: block; font-style: normal; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(246,241,230,.34); margin-top: 3px; }
+  .empty { color: rgba(246,241,230,.45); font-style: italic; margin-top: 8vh; text-align: center; line-height: 1.7; }
+  #foot { margin-top: 10px; font-size: 12px; line-height: 1.6; color: rgba(246,241,230,.38); max-width: 640px; }
+  @media (max-width: 620px) { .en { font-size: 15.5px; } .row { grid-template-columns: 24px minmax(0, 1fr); } .side { display: none; } h1 { font-size: 25px; } }
+</style>
+</head>
+<body>
+<div id="menu">
+  <div><div class="lab">Boards</div><div id="boards"></div></div>
+  <div><div class="lab">Kinds</div><div id="kinds" class="kinds"></div></div>
+  <div><div class="lab">Pulls</div><div id="pulls"></div></div>
+</div>
+<div id="main">
+  <h1>China Vision <span>中国视野</span></h1>
+  <div id="dek">What is trending in Chinese media right now, translated. A feed to explore.</div>
+  <div id="when"></div>
+  <div id="chip"></div>
+  <div id="feed"><div class="empty">Loading the feed…</div></div>
+  <div id="foot"></div>
+</div>
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const DIR = '../data/chinavision/';
+  let INDEX = null, FEED = null, board = 'all', kind = 'all', file = null;
+  const stamp = () => /^(localhost|127\.|\[::1\])/.test(location.hostname) ? '?v=' + Date.now() : '';
+  const get = f => fetch(DIR + f + stamp()).then(r => { if (!r.ok) throw new Error(f + ' ' + r.status); return r.json(); });
+
+  function crumb() { try { parent.postMessage({ type: 'g4:crumb', name: 'China Vision', fn: '', crumb: board === 'all' ? 'FEED' : (FEED.boards[board] || {}).name.toUpperCase() }, '*'); } catch (e) {} }
+
+  function draw() {
+    const F = FEED, order = Object.keys(F.boards);
+    const shown = order.filter(b => board === 'all' || b === board);
+    let html = '', n = 0;
+    for (const b of shown) {
+      const rows = F.items.filter(i => i.board === b && (kind === 'all' || i.kind === kind));
+      if (!rows.length) continue; n += rows.length;
+      const B = F.boards[b];
+      html += '<div class="board"><div class="bh"><b>' + esc(B.name) + '</b><i>' + esc(B.zh) + '</i><small>' + esc(B.about) + '</small></div>' +
+        rows.map(i => '<div class="row"><div class="rk' + (i.rank <= 3 ? ' top' : '') + '">' + i.rank + '</div>' +
+          '<div><div class="en">' + esc(i.en) + '</div><div class="zh" lang="zh">' + esc(i.zh) + '</div>' +
+          (i.note ? '<div class="note">' + esc(i.note) + '</div>' : '') +
+          '<div class="src"><span class="pub">' + esc(i.source || B.name) + '</span>' + (i.link ? ' · <a href="' + esc(i.link) + '" target="_blank" rel="noopener">' + esc(i.linkLabel || 'look it up') + ' ↗</a>' : '') + '</div></div>' +
+          '<div class="side">' + esc(i.heat || '') + '<em>' + esc((F.kinds || {})[i.kind] || '') + '</em></div></div>').join('') + '</div>';
+    }
+    $('feed').innerHTML = html || '<div class="empty">Nothing on this board of that kind in this pull.</div>';
+    $('when').textContent = 'Taken ' + (F.takenBeijing || '') + ' Beijing time' + (F.takenPacific ? ' (' + F.takenPacific + ' Pacific)' : '') + ' · ' + F.items.length + ' items';
+    $('chip').innerHTML = '<b>' + (board === 'all' ? 'All boards' : esc(F.boards[board].name)) + '</b>' + (kind === 'all' ? '' : ' · ' + esc(F.kinds[kind])) + ' · ' + n + ' shown ▾';
+    $('foot').innerHTML = esc(F.source || '') + '<br>' + esc(F.translatedBy ? 'Translation: ' + F.translatedBy : '') + '<br>The heat figures are each platform’s own and cannot be compared across boards. Each item is shown here in English with a short account of the story where one has been written. The accounts are summaries in our own words, not the articles; the link goes out to the source or to a search for it.';
+    $('boards').innerHTML = '<button class="rect m' + (board === 'all' ? ' on' : '') + '" data-b="all"><b>All boards</b><small>every list, in turn</small></button>' +
+      order.map(b => '<button class="rect m' + (board === b ? ' on' : '') + '" data-b="' + b + '"><b>' + esc(F.boards[b].name) + ' <span style="font-weight:400;opacity:.6">' + esc(F.boards[b].zh) + '</span></b><small>' + esc(F.boards[b].about) + '</small></button>').join('');
+    const have = new Set(F.items.map(i => i.kind));
+    $('kinds').innerHTML = '<button class="rect' + (kind === 'all' ? ' on' : '') + '" data-k="all">Everything</button>' +
+      Object.keys(F.kinds || {}).filter(k => have.has(k)).map(k => '<button class="rect' + (kind === k ? ' on' : '') + '" data-k="' + k + '">' + esc(F.kinds[k]) + '</button>').join('');
+    $('pulls').innerHTML = (INDEX.feeds || []).map(p => '<button class="rect m' + (p.file === file ? ' on' : '') + '" data-f="' + esc(p.file) + '"><b>' + esc(p.takenBeijing || p.file) + '</b><small>Beijing time · ' + (p.items || '') + ' items</small></button>').join('');
+    crumb();
+  }
+  function load(f) { file = f; return get(f).then(j => { FEED = j; if (board !== 'all' && !FEED.boards[board]) board = 'all'; draw(); $('main').scrollTop = 0; }); }
+  $('menu').addEventListener('click', e => {
+    const t = e.target.closest('button'); if (!t) return;
+    if (t.dataset.b) { board = t.dataset.b; draw(); $('main').scrollTop = 0; }
+    else if (t.dataset.k) { kind = t.dataset.k; draw(); }
+    else if (t.dataset.f) load(t.dataset.f);
+  });
+  get('index.json').then(j => { INDEX = j; return load(j.latest); })
+    .catch(e => { $('feed').innerHTML = '<div class="empty">No feed could be opened.<br>' + esc(e.message) + '</div>'; });
+
+  // the menu inside the prism: the same way as Chat (g4:navsize asks for the large prism; g4:prismhover says when the pointer rests on it)
+  const IN_SHELL = parent !== window; const BIG = () => innerWidth < 760 ? 132 : 204;
+  let closeT = null, onPrism = false, onMenu = false;
+  const menu = on => { clearTimeout(closeT); if (on) $('menu').classList.add('on'); else closeT = setTimeout(() => { if (!onPrism && !onMenu) $('menu').classList.remove('on'); }, 320); };
+  function sizePrism() { const h = BIG(); document.body.style.setProperty('--top', (IN_SHELL ? Math.round(h * .76) : 24) + 'px'); if (IN_SHELL) try { parent.postMessage({ type: 'g4:navsize', h }, '*'); } catch (e) {} }
+  sizePrism(); addEventListener('resize', sizePrism);
+  addEventListener('message', e => { const m = e.data || {}; if (m.type !== 'g4:prismhover') return;
+    onPrism = !!m.on; if (m.on && m.x != null) { const w = $('menu').offsetWidth || 318; $('menu').style.left = Math.max(10, Math.min(innerWidth - w - 10, m.x - w / 2)) + 'px'; if (m.y != null) $('menu').style.top = Math.max(40, m.y - 14) + 'px'; }
+    menu(m.on); });
+  $('menu').addEventListener('pointerenter', () => { onMenu = true; menu(true); });
+  $('menu').addEventListener('pointerleave', () => { onMenu = false; menu(false); });
+  $('chip').onclick = e => { e.stopPropagation(); const open = $('menu').classList.contains('on'); onMenu = !open; if (open) $('menu').classList.remove('on'); else menu(true); };
+  $('main').addEventListener('pointerdown', e => { if (!e.target.closest('#chip')) { onMenu = false; $('menu').classList.remove('on'); } });
+  addEventListener('keydown', e => { if (e.key === 'Escape') { onMenu = false; $('menu').classList.remove('on'); } });
+})();
+</script>
+</body>
+</html>
