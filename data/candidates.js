@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-22T01:26:58.082Z · 16 legislative + 13 news (GDELT, 3d)
+// 2026-11-22T11:41:55.431Z · 16 legislative + 13 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.813,
+      "salience": 0.812,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2347",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.636,
+      "salience": 0.634,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -789,11 +789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.627,
+      "salience": 0.625,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -1046,11 +1046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.591,
+      "salience": 0.589,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1303,11 +1303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.583,
+      "salience": 0.581,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1560,11 +1560,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.521,
+      "salience": 0.519,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2473,11 +2473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.479,
+      "salience": 0.478,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3001,11 +3001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.479,
+      "salience": 0.477,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3917,11 +3917,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.457,
+      "salience": 0.455,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4818,11 +4818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.264,
+      "salience": 0.262,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5717,11 +5717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.176,
+      "salience": 0.174,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6629,11 +6629,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.171,
+      "salience": 0.169,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7549,11 +7549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795310771645,
+    "ts": 1795347686033,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.17,
+      "salience": 0.168,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8459,11 +8459,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.135,
+      "salience": 0.133,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9377,11 +9377,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.092,
+      "salience": 0.09,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10257,11 +10257,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795310771644,
+    "ts": 1795347686032,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.087,
+      "salience": 0.085,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11133,12 +11133,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_contractors-house-trump",
     "source": "news",
-    "ts": 1795310818078,
+    "ts": 1795347715426,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.939,
+      "salience": 0.93,
       "articles": [
         {
           "title": "Trump orders federal contractors to check with White House before responding to Congress",
@@ -11183,6 +11183,27 @@ window.PRISM_CANDIDATES = [
           "image": "https://news4sanantonio.com/resources/media2/16x9/7089/1320/0x370/90/14a58387-8351-44d2-a226-c7e1b03d5ada-GettyImages2303717159.jpg"
         },
         {
+          "title": "Trump orders federal contractors to check with White House before responding to Congress",
+          "url": "https://www.aspenpublicradio.org/2026-11-21/trump-orders-federal-contractors-to-check-with-white-house-before-responding-to-congress",
+          "domain": "aspenpublicradio.org",
+          "seendate": "2026-11-22T00:30:00Z",
+          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/0e/00/8bdf254b4a1089592ab211f30cf5/ap26324673842521.jpg"
+        },
+        {
+          "title": "Trump orders federal contractors to check with White House before responding to Congress",
+          "url": "https://www.wgcu.org/2026-11-21/trump-orders-federal-contractors-to-check-with-white-house-before-responding-to-congress",
+          "domain": "wgcu.org",
+          "seendate": "2026-11-22T00:30:00Z",
+          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/0e/00/8bdf254b4a1089592ab211f30cf5/ap26324673842521.jpg"
+        },
+        {
+          "title": "Trump orders federal contractors to check with White House before responding to Congress",
+          "url": "https://www.kclu.org/politics/2026-11-21/trump-orders-federal-contractors-to-check-with-white-house-before-responding-to-congress",
+          "domain": "kclu.org",
+          "seendate": "2026-11-22T00:30:00Z",
+          "image": "https://npr-production-npr.s3.us-east-1.amazonaws.com/brightspot/0e/00/8bdf254b4a1089592ab211f30cf5/ap26324673842521.jpg"
+        },
+        {
           "title": "Trump orders contractors to check with White House first",
           "url": "https://www.wgal.com/article/white-house-order-federal-contractors-congress/74497986",
           "domain": "wgal.com",
@@ -11205,7 +11226,7 @@ window.PRISM_CANDIDATES = [
         }
       ]
     },
-    "title": "Trump order tells federal contractors to coordinate with White House on Congress inquiries",
+    "title": "Trump orders federal contractors to check with White House before responding to Congress",
     "summary": "2026-11-22 nbcnews.com: Trump orders federal contractors to check with White House before responding to Congress\n2026-11-22 wsbradio.com: Trump orders contractors to consult White House on oversight inquiries\n2026-11-22 turnto10.com: Trump order tells federal contractors to coordinate with White House on Congress inquiries\n2026-11-22 abcnews.com: Trump orders federal contractors to coordinate with White House on congressional inquiries\n2026-11-22 fox17.com: Trump order tells federal contractors to coordinate with White House on Congress inquiries\n2026-11-22 news4sanantonio.com: Trump order tells federal contractors to coordinate with White House on Congress inquiries",
     "framingDraft": null,
     "suggestedAxes": null,
@@ -11218,13 +11239,20 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cap-card-credit",
     "source": "news",
-    "ts": 1795310818078,
+    "ts": 1795347715426,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.884,
+      "salience": 0.919,
       "articles": [
+        {
+          "title": "Trump vows to work with Democrats to cap credit card interest rates at 10 % ",
+          "url": "https://isp.netscape.com:443/pf/story/0001/20261122/098a69b520e520e535eebe595cd0c64a",
+          "domain": "isp.netscape.com",
+          "seendate": "2026-11-22T07:30:00Z",
+          "image": null
+        },
         {
           "title": "Trump says hell work with Democrats to cap credit card interest rates",
           "url": "https://turnto10.com/news/nation-world/trump-democrats-cap-credit-card-interest-rates-talarico-warren-hawley-banks-reserve-federal-new-york-congress-republicans",
@@ -11284,7 +11312,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Trump says hell work with Democrats to cap credit card interest rates",
-    "summary": "2026-11-22 turnto10.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 mcall.com: Trump vows to work with Democrats to cap credit card interest rates at 10 % \n2026-11-22 fox17.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 kval.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 ktvu.com: Trump pledges to work with Democrats to cap credit card interest rates\n2026-11-22 news4sanantonio.com: Trump says hell work with Democrats to cap credit card interest rates",
+    "summary": "2026-11-22 isp.netscape.com: Trump vows to work with Democrats to cap credit card interest rates at 10 % \n2026-11-22 turnto10.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 mcall.com: Trump vows to work with Democrats to cap credit card interest rates at 10 % \n2026-11-22 fox17.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 kval.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 ktvu.com: Trump pledges to work with Democrats to cap credit card interest rates",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11296,12 +11324,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_band-dana-donate",
     "source": "news",
-    "ts": 1795310818079,
+    "ts": 1795347715427,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.734,
+      "salience": 0.67,
       "articles": [
         {
           "title": "Trump , Dana White Donate $500K To Marine Corps Band | Twin Cities News Talk",
@@ -11372,120 +11400,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_alaska-dismiss-doj",
-    "source": "news",
-    "ts": 1795310818079,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.733,
-      "articles": [
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://knst.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "knst.iheart.com",
-          "seendate": "2026-11-20T06:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://790waeb.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "790waeb.iheart.com",
-          "seendate": "2026-11-20T06:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://ktok.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "ktok.iheart.com",
-          "seendate": "2026-11-20T06:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://wham1180.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "wham1180.iheart.com",
-          "seendate": "2026-11-20T06:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://600kcol.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "600kcol.iheart.com",
-          "seendate": "2026-11-20T06:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://wlap.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "wlap.iheart.com",
-          "seendate": "2026-11-20T06:15:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://whoradio.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "whoradio.iheart.com",
-          "seendate": "2026-11-20T05:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://newsradio1470.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "newsradio1470.iheart.com",
-          "seendate": "2026-11-20T05:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://55krc.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "55krc.iheart.com",
-          "seendate": "2026-11-20T05:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://klvi.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "klvi.iheart.com",
-          "seendate": "2026-11-20T05:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://700wlw.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "700wlw.iheart.com",
-          "seendate": "2026-11-20T05:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-          "url": "https://wflafm.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
-          "domain": "wflafm.iheart.com",
-          "seendate": "2026-11-20T05:30:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        }
-      ]
-    },
-    "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-    "summary": "2026-11-20 knst.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 790waeb.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 ktok.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 wham1180.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 600kcol.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 wlap.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_cyber-director-national",
     "source": "news",
-    "ts": 1795310818078,
+    "ts": 1795347715425,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.719,
+      "salience": 0.655,
       "articles": [
         {
           "title": "Report : National Cyber Director To Resign",
@@ -11586,12 +11508,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cyber-director-house",
     "source": "news",
-    "ts": 1795310818078,
+    "ts": 1795347715425,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.718,
+      "salience": 0.653,
       "articles": [
         {
           "title": "White House national cyber director is leaving the administration",
@@ -11685,12 +11607,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-moves-race",
     "source": "news",
-    "ts": 1795310818078,
+    "ts": 1795347715426,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.678,
+      "salience": 0.614,
       "articles": [
         {
           "title": "Trump administration moves to have lawsuit dismissed in challenge to Alaska US Senate race - Las Vegas Sun News",
@@ -11770,12 +11692,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_end-filibuster-final",
     "source": "news",
-    "ts": 1795310818078,
+    "ts": 1795347715426,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.528,
+      "salience": 0.463,
       "articles": [
         {
           "title": "Senate Republican makes final push to end filibuster",
@@ -11841,12 +11763,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_cyber-director-house",
     "source": "news",
-    "ts": 1795310818078,
+    "ts": 1795347715426,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.514,
+      "salience": 0.45,
       "articles": [
         {
           "title": "White House cyber director out after string of outages",
@@ -11889,14 +11811,71 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_ban-congress-democrats",
+    "cid": "cand_news_alaska-dismiss-doj",
     "source": "news",
-    "ts": 1795310818079,
+    "ts": 1795347715427,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.438,
+      "salience": 0.394,
+      "articles": [
+        {
+          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+          "url": "https://knst.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
+          "domain": "knst.iheart.com",
+          "seendate": "2026-11-20T06:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+          "url": "https://790waeb.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
+          "domain": "790waeb.iheart.com",
+          "seendate": "2026-11-20T06:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+          "url": "https://ktok.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
+          "domain": "ktok.iheart.com",
+          "seendate": "2026-11-20T06:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+          "url": "https://wham1180.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
+          "domain": "wham1180.iheart.com",
+          "seendate": "2026-11-20T06:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+          "url": "https://600kcol.iheart.com/content/2026-11-19-doj-seeks-to-dismiss-alaska-senate-election-lawsuit/",
+          "domain": "600kcol.iheart.com",
+          "seendate": "2026-11-20T06:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6affc027b713df529f53c1a4?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+    "summary": "2026-11-20 knst.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 790waeb.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 ktok.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 wham1180.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit\n2026-11-20 600kcol.iheart.com: DOJ Seeks To Dismiss Alaska Senate Election Lawsuit",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_ban-congress-democrats",
+    "source": "news",
+    "ts": 1795347715426,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.374,
       "articles": [
         {
           "title": "House Democrats eye stock trading ban as early priority next Congress",
@@ -11948,12 +11927,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_alaska-department-dismiss",
     "source": "news",
-    "ts": 1795310818079,
+    "ts": 1795347715427,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.348,
+      "salience": 0.284,
       "articles": [
         {
           "title": "Justice Department moves to dismiss Alaska Senate race lawsuit – NBC Connecticut",
@@ -11991,12 +11970,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_assault-can-congress",
     "source": "news",
-    "ts": 1795310818079,
+    "ts": 1795347715427,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.333,
+      "salience": 0.268,
       "articles": [
         {
           "title": "Congress , you can declare that sexual assault has no place in the military . Here how . ",
@@ -12034,12 +12013,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-court-grants",
     "source": "news",
-    "ts": 1795310818079,
+    "ts": 1795347715426,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.304,
+      "salience": 0.24,
       "articles": [
         {
           "title": "Appeals court grants Trump request to halt order restoring Venezuelan TPS",
