@@ -1,6 +1,6 @@
-# Newsroom digest — 2026-11-21
+# Newsroom digest — 2026-11-22
 
-Register: 175 objects · this scan: 2 new, 1 seen again, 0 returned.
+Register: 175 objects · this scan: 0 new, 2 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,8 +12,7 @@ Register: 175 objects · this scan: 2 new, 1 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Voters oust some sheriffs who signed pacts to help Trump immigration enforcement efforts** — appointment · personnel · holder: the President · formed 2026-11-21 · 4 outlets (peak 4) · `obj_thepresi_efforts-enforcement-help-immigration`
-- **UK and EU strike post - Brexit deal on food trade and youth travel** — agreement · agreed · holder: ? · formed 2026-11-21 · 4 outlets (peak 4) · `obj_x_brexit-deal-food-post`
+- none
 
 ## Watching (47)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
