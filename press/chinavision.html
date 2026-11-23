@@ -56,6 +56,11 @@
   .empty { color: rgba(246,241,230,.45); font-style: italic; margin-top: 8vh; text-align: center; line-height: 1.7; }
   /* (11-20) the translation: the page stays in English; a few Chinese characters pass across each line (see the script). */
   .tr[lang="zh"], .tr [lang="zh"] { letter-spacing: .04em; }
+  /* (11-20, still window) the English never moves: letters under the window go clear and the Chinese is laid over that space.
+     Kerning is off at all times so that wrapping letters in spans changes nothing. */
+  .tr { position: relative; font-kerning: none; font-variant-ligatures: none; }
+  .tr .c.hid { color: transparent; -webkit-text-fill-color: transparent; }
+  .tr .ov { position: absolute; white-space: nowrap; pointer-events: none; text-align: center; overflow: visible; }
   .tr .edge { background: linear-gradient(90deg, var(--film-1), var(--film-2), var(--film-3), var(--film-4)); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; text-shadow: 0 0 10px rgba(190,232,255,.35); }
   .row .note, .row .src, .row .blk { opacity: 0; transition: opacity .6s ease .15s; } .row.done .note, .row.done .src, .row.done .blk { opacity: 1; }
   /* (11-18) an item in full: the account, their words, how it was received, the way out. Accounts are ours; quotes are short and credited. */
@@ -242,11 +247,24 @@
   function sweep(el) {
     const en = el.dataset.en || '', zh = el.dataset.zh || ''; if (el.dataset.s || !en || !zh || !el.isConnected) return;
     el.dataset.s = '1'; const g = gen, t0 = performance.now(), w = Math.min(W, zh.length), span = Math.min(en.length, Math.round(w * 1.9)), dur = 1000 + Math.min(1100, en.length * 10);
+    // the English is laid out once, one span per letter, and is not changed again until the pass ends
+    el.innerHTML = [...en].map(ch => '<span class="c">' + esc(ch) + '</span>').join('') + '<span class="ov edge" lang="zh"></span>';
+    const cs = el.querySelectorAll('.c'), ov = el.querySelector('.ov'), fs0 = parseFloat(getComputedStyle(el).fontSize) || 16;
+    let lastA = -1, lastZ = -1;
     const step = now => {
       if (g !== gen || !el.isConnected) return;
       const p = (now - t0) / dur; if (p >= 1) return settle(el);
       const a = Math.round(p * (en.length - span)), z = Math.round(p * (zh.length - w));
-      el.innerHTML = esc(en.slice(0, a)) + '<span class="edge" lang="zh">' + esc(zh.slice(z, z + w)) + '</span>' + esc(en.slice(a + span));
+      if (a === lastA && z === lastZ) return requestAnimationFrame(step);
+      lastA = a; lastZ = z;
+      // the window covers letters a..a+span, but only those on the same line as letter a (a wrapped line is never bridged)
+      const r0 = cs[a].getBoundingClientRect(); let end = a;
+      for (let k = a + 1; k < Math.min(cs.length, a + span); k++) { if (Math.abs(cs[k].getBoundingClientRect().top - r0.top) > 2) break; end = k; }
+      cs.forEach((c, k) => c.classList.toggle('hid', k >= a && k <= end));
+      const er = el.getBoundingClientRect(), r1 = cs[end].getBoundingClientRect(), wid = Math.max(1, r1.right - r0.left);
+      const txt = zh.slice(z, z + w), n = [...txt].length || 1, fs = Math.max(fs0 * .6, Math.min(fs0, wid / (n * 1.04)));
+      ov.textContent = txt;
+      Object.assign(ov.style, { left: (r0.left - er.left) + 'px', top: (r0.top - er.top) + 'px', width: wid + 'px', height: r0.height + 'px', lineHeight: r0.height + 'px', fontSize: fs + 'px' });
       requestAnimationFrame(step);
     };
     requestAnimationFrame(step);

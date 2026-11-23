@@ -95,7 +95,7 @@ z: +1 = the object realized · -1 = the object frustrated. z is read against the
 
 THE BODY — what is measured of the object (each a dated series of readings; a line is read against the one it talks about, as of its own date):
 {gl}
-- shadow: not on the body. A line about WHO IS TO BLAME for a reading, or about a speaker's own record or loyalties, rather than the reading itself. No instrument measures it.
+- shadow: not on the body. A line about WHO IS TO BLAME for a reading, or about a speaker's own record or loyalties, rather than the reading itself. No instrument measures it. This holds when the speaker talks about himself (ruled 11-16): a line about what kind of person he is, his own record or his own attitude is shadow ('I explicitly opposed the Iran war from the outset'). A line stating his position on the object itself stays object ('I'm skeptical of these strikes').
 
 POSTS (in order):
 {posts}
@@ -107,22 +107,27 @@ For every line return:
  "about": "object"|"shadow",
  "touch": "O"|"T"|"M"|"F"|"X",   // O the object itself · T a dated record (a fact, a vote, a past statement) · M a mechanism (how one thing caused another) · F a frame (a story told about it) · X a challenge (counter-evidence)
  "measure": {enum},   // {G.get('measureNote', MEASURE_NOTE)}
- "due": "YYYY-MM-DD" or null,   // ONLY if the line forecasts: the date by which it says the object will have moved — a date it names, or the plain reading of its own words from the post's date ("within a week", "by the midterms", "this summer"). A line about the present or the past: null
- "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // the side THIS line takes on where the object stands, or is being taken, as of its date — by the three rules below
+ "due": "YYYY-MM-DD" or null,   // ONLY if the line forecasts: the date by which it says the object will have moved — a date it names, or the plain reading of its own words from the post's date ("within a week", "by the midterms", "this summer"). A line about the present or the past: null. Not a forecast either (ruled 11-16): a line that scores an earlier forecast ('I'm right yet again'), a wait-and-see ('we have to see how this plays out'), a hope ('let's hope this resolves quickly'), or a judgment of a course if it happened ('it would be a mistake'): null
+ "z": "realized strongly"|"realized"|"leaning realized"|"neither"|"leaning frustrated"|"frustrated"|"frustrated strongly",   // the side THIS line takes on where the object stands, or is being taken, as of its date — by the rules below
  "lit": ["2 to 4 short phrases, copied from the line, that carry it"],
  "credulity": "engaged"|"withdrawn"|"none",   // does the speaker accept (engaged) or refuse (withdrawn) a reading they would otherwise be expected to hold? most lines: none
  "station": "LI"|"RI"|"LP"|"RP",   // only a proposal: Left/Right x Institutional/Populist (outsider); the writer's label wins
- "kind": "statement"|"teaser",   // teaser: the line only announces something to watch or read and names its topic or guest ('X on how it happened', 'Y on why we went to war'). It says nothing itself. Everything else: statement
+ "kind": "statement"|"teaser",   // teaser: the line only announces something to watch or read and names its topic or guest ('X on how it happened', 'Y on why we went to war'). It says nothing itself. When a post ends by handing its questions to a guest or an episode ('X has the numbers'), every line of that post is a teaser, a factual line at the top included (ruled 11-16). Everything else: statement
  "why": "one plain sentence"}}
 HOW TO CHOOSE z (rules 1 to 3 ruled 11-14, after two Sonnet reads of the same lines disagreed on z four times in ten; the disagreement was almost never about strength, it was about whether a line takes a side at all):
 1. A shadow line takes no side: "neither". It is about who is to blame, not about the object.
-2. A line that says nothing about the object's condition takes no side: "neither". A bare question, a hope, a prayer, a wish. And a teaser (kind: teaser, ruled 11-15): it is filed as about the object, "neither", never as shadow, since it blames no one; it is kept and read like any line, and counted apart.
+2. A line that says nothing about the object's condition takes no side: "neither". A bare question, a hope, a prayer, a wish. A question is read as a question unless the post answers it itself (ruled 11-16): do not read a charge or a motive into it. A line that only says what should be done, or what the speaker wants or urges, takes no side ("we should go as fast as we can", "we ought to work with each other"), unless it names what a course costs or gains (rule 3). The test (draft 6b): if you can reach a side only by saying what the line implies, it takes no side. And a teaser (kind: teaser, ruled 11-15): it is filed as about the object, "neither", never as shadow, since it blames no one; it is kept and read like any line, and counted apart.
 3. A line that CARRIES THE LOGIC of a course someone is on takes the side that course leads to, even though the cost it names has not happened. "The first week of a war with Iran could easily kill thousands of Americans", said while men are lobbying for that war, reads frustrated: the speaker is naming what is being wagered. It is an extrapolation, not a forecast; give it no due date unless it says the thing WILL happen. Its strength is how hard the line reads the cost, not whether the cost came true (the body shows that, and the distance between the two is what Prism reads).
    But a line that only weighs a course the line itself says nobody is on ("it would be a mistake to invade") takes no side from the course it weighs: "neither". If it also says where things stand now ("clearly that is not happening"), rule 5 reads that part.
 4. A line that reports SOMEONE PUSHING for a course, as an act (ruled 11-15): lobbying, demanding, calling the president. It is about the object, not the shadow: it says where the object is being taken. It takes the side the push leads to, at leaning strength, because the push has not landed. "Mark Levin was at the White House today, lobbying for war with Iran" and "Senator Ted Cruz demands regime change in Iran" read leaning frustrated.
    But a line about WHY someone wants it, or what kind of person he is, is shadow: "He needs this war". Nothing measured sees a motive.
 5. A line that says a bad state has NOT come takes a side (ruled 11-15): it says where things stand now. "Of course there are no boots on the ground in Iran" reads leaning realized. Read the words, whoever says them and whatever he wants.
 6. A PRAYER looks forward to something that has not happened: "neither" (rule 2). A THANKS looks back at something that did happen and calls it good: leaning realized (ruled 11-15). "Thank God.", posted the day of a ceasefire, reads leaning realized; when the words alone name nothing, the post's date and the object's state on that date say what is being thanked for.
+7. A line that states, as a fact, that a bad state HAS come reads leaning frustrated (ruled 11-16). It is the mirror of rule 5. "We're spending more a year on the military in adjusted dollars than we did during World War II" reads leaning frustrated. Judged by the words. This is about the object's own condition only. A report of wrongdoing, a scandal, a crime, or who knew what is about who is to blame: shadow (rule 1), however bad it sounds (draft 6b: 'It's the scandal of the century' and 'The White House knew about it' are shadow).
+8. Read the side one level up (the deadlock rule, ruled 11-17). If choosing a side would mean picking which of two opposed speakers is right, the side is being read one level too low. Read the line against what both speakers say they serve, which is the object. The thing they argue over (a rule, a policy) is a means: a line only about the means, saying nothing about where the object stands, reads "neither". The test: both speakers would accept the wording of the object.
+9. A line that only states the goal the speakers share is the object said out loud and reads "neither" (ruled 11-18): "We want the United States to be ahead."
+10. Two opposed speakers can both take the same side, both realized or both frustrated, at the same time (dual realization, ruled 11-18). That is a true reading, not a mistake: never change one speaker's side to make the two differ. Two speakers who want opposite rules can each name a course that costs the object, and both read frustrated.
+11. A line saying the rival's gain is not the object's loss is a claim about where the object stands and reads realized (ruled 11-18): "If China were to discover a cure for cancer, it's great for us."
 Answer: {{"lines": [ ... ]}} — valid JSON only. Inside a string never use a double quote; quote words with single quotes."""
     return sys_, user
 
@@ -280,14 +285,14 @@ def main():
     meta, items = parse(src); G = the_object(); PAT = D.patterns()
     pid = meta.get('id') or re.sub(r'[^a-z0-9]+', '_', meta.get('title', os.path.basename(src)).lower()).strip('_')
     h = hashlib.sha1(open(src, 'rb').read()).hexdigest()[:12]
-    hs = h + '-ctx7'   # scoring/second-pass cache key (ctx7 11-16: the band from two yes-or-no answers (verdict, reason); each line shown the Object on its own date; the pattern library asked separately; ctx6 11-15: the 'others' question asks what is in the line, not what the speaker meant; ctx5 11-08: measures, not gears; the line's own measure in the second pass; ctx4 11-07: the war added): the input + the prompt version (11-07: whole post only where the voice isn't the poster's own — ctx2 gave it to every line and flattened them)
+    hs = h + '-ctx8'   # scoring/second-pass cache key (ctx8 11-20, draft 6: the reason question tightened; the band of a prayer; a question is a question; the concession question; ctx7 11-16: the band from two yes-or-no answers (verdict, reason); each line shown the Object on its own date; the pattern library asked separately; ctx6 11-15: the 'others' question asks what is in the line, not what the speaker meant; ctx5 11-08: measures, not gears; the line's own measure in the second pass; ctx4 11-07: the war added): the input + the prompt version (11-07: whole post only where the voice isn't the poster's own — ctx2 gave it to every line and flattened them)
     gpath = os.path.join(OUTD, f'{pid}.grammar.json')
     _PROG['path'] = os.path.join(OUTD, f'_run_{pid}.progress.json'); progress('grammar', posts=[{'n': i, 'who': it['who'], 'date': it['date'], 'station': it['station'], 'text': it['text']} for i, it in enumerate(items)])
     k = None if dry else (('local' if D.is_local(D.MODEL) and D.is_local(READ_MODEL) else None) or D.key() or ('offline' if os.environ.get('CF_ANSWERS') else None))   # 11-13: all-local needs no key
     if not dry and not k:
         print('no ANTHROPIC_API_KEY — run "Run the Closed Form.command" once (it asks for the key)'); sys.exit(2)
     # 1 · grammar — saved and reused (reproducible)
-    hg = h + '-g5'   # grammar cache key (g5 11-15: kind (statement or teaser), and rule 3's own example no longer contradicts rule 5; g4 11-15: rules 4 to 6, a push, an absence, a thanks; g3 11-14: the three rules for choosing z; g2 11-08: measure + due fields)
+    hg = h + '-g7'   # grammar cache key (g7 11-21, draft 6b: rule 7 limited to the object's own condition, wrongdoing stays shadow; a line that only urges takes no side, the 'implies' test; g6 11-20, draft 6: the six 11-16 rulings (the speaker on himself, not a forecast, a teaser is the whole post, a question is a question, a fact held up as a complaint) and the side rulings of 11-17/18 (one level up, the Object said out loud, dual realization, the rival's gain) written into the question; g5 11-15: kind (statement or teaser), and rule 3's own example no longer contradicts rule 5; g4 11-15: rules 4 to 6, a push, an absence, a thanks; g3 11-14: the three rules for choosing z; g2 11-08: measure + due fields)
     reused = os.path.exists(gpath) and not fresh and json.load(open(gpath)).get('hash') == hg
     if reused:
         gram = json.load(open(gpath)); print('grammar: reused', gpath)
@@ -387,7 +392,7 @@ def main():
             if not rs: continue
             r, x = rs[len(rs) // 2]
             rel['lines'][str(l['i'])] = dict(dia=r['dia'], tier=r['tier'], runs=[q[0]['dia'] for q in rs], flags=r['flags'],
-                                            relational={k2: x.get(k2) for k2 in ('object', 'others', 'verdict', 'reason', 'capital', 'facing', 'why')},
+                                            relational={k2: x.get(k2) for k2 in ('object', 'others', 'verdict', 'reason', 'capital', 'concedes', 'facing', 'why')},
                                             patterns=[p.get('n') for p in x.get('patterns', [])])
         json.dump(rel, open(rpath, 'w'), indent=1, ensure_ascii=False)
     for l in lines:

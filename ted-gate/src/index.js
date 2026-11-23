@@ -9,7 +9,7 @@ const PER_PERSON = 15;
 const DAILY_CAP = 600;
 const MAX_Q = 600, MAX_CTX = 2500, MAX_TURNS = 6;
 const CODEX_URL = 'https://sailor7613.github.io/Prism/data/codex.json';
-const ORIGINS = ['https://sailor7613.github.io', 'http://localhost:5500', 'http://127.0.0.1:5500', 'http://localhost:8000', 'http://127.0.0.1:8000'];
+const ORIGINS = ['https://sailor7613.github.io', 'https://m3prism.com', 'https://www.m3prism.com', 'https://m3prism.pages.dev', 'http://localhost:5500', 'http://127.0.0.1:5500', 'http://localhost:8000', 'http://127.0.0.1:8000'];
 
 let codexCache = null, codexAt = 0;
 async function codexText() {

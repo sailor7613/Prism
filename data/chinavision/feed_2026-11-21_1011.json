@@ -1,0 +1,1432 @@
+{
+ "schema": "chinavision/feed/v0",
+ "id": "feed_2026-11-21_1011",
+ "takenBeijing": "2026-11-21 10:11",
+ "takenPacific": "2026-11-20 18:11",
+ "what": "望 (wàng): what is trending in Chinese media right now, translated. A feed to explore. Nothing here is scored or read by Prism.",
+ "source": "Each platform's own public hot list, read directly by chinavision-pull.py. Not read this time: Zhihu: HTTPError HTTP Error 403: Forbidden.",
+ "translatedBy": "local:qwen, on this Mac",
+ "notesBy": "Accounts, quotes and reception are written by local:qwen, on this Mac from the news pages it read. Reception comes from three places, each named beside it: the article itself, the hourly roundup published on Sina, and the top comments under the most-watched videos on Bilibili. What is visible is what was allowed to stay up. Accounts are in its own words; a quote is kept only when it is found exactly in its source and is short. The full texts stay on this Mac (data/chinavision/raw/) and are not shown.",
+ "boards": {
+  "weibo": {
+   "name": "Weibo",
+   "zh": "微博热搜",
+   "about": "what people are posting about"
+  },
+  "baidu": {
+   "name": "Baidu",
+   "zh": "百度热搜",
+   "about": "what people are searching for"
+  },
+  "douyin": {
+   "name": "Douyin",
+   "zh": "抖音热榜",
+   "about": "what people are watching (China's TikTok)"
+  },
+  "toutiao": {
+   "name": "Toutiao",
+   "zh": "今日头条",
+   "about": "the biggest news app's top stories"
+  },
+  "bilibili": {
+   "name": "Bilibili",
+   "zh": "B站热搜",
+   "about": "video site with a young audience"
+  },
+  "bilipop": {
+   "name": "Bilibili videos",
+   "zh": "B站热门视频",
+   "about": "the most-watched videos today, and what viewers wrote under them"
+  }
+ },
+ "kinds": {
+  "world": "World and state",
+  "america": "About America",
+  "money": "Money and business",
+  "tech": "Tech and AI",
+  "life": "Daily life",
+  "pop": "Pop culture",
+  "games": "Games",
+  "sport": "Sport"
+ },
+ "items": [
+  {
+   "board": "weibo",
+   "rank": 1,
+   "zh": "胖东来搬离后原址所开新商场几乎倒闭",
+   "heat": "114.8万",
+   "link": "https://www.baidu.com/s?wd=%E8%83%96%E4%B8%9C%E6%9D%A5%E6%90%AC%E7%A6%BB%E5%90%8E%E5%8E%9F%E5%9D%80%E6%89%80%E5%BC%80%E6%96%B0%E5%95%86%E5%9C%BA%E5%87%A0%E4%B9%8E%E5%80%92%E9%97%AD",
+   "linkLabel": "search Baidu",
+   "en": "The new mall opened on the site where the popular retailer Pangdonglai moved out is nearly bankrupt.",
+   "kind": "money",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "weibo",
+   "rank": 2,
+   "zh": "黎曼猜想",
+   "heat": "82.1万",
+   "link": "https://www.baidu.com/s?wd=%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3",
+   "linkLabel": "search Baidu",
+   "en": "The Riemann Hypothesis.",
+   "kind": "tech",
+   "note": "A mathematician at Anthropic claims to have proved the Riemann Hypothesis and its generalization by collaborating with the AI model Claude. The proof consists of a 250,000-page text and formalized code verified by a tool called Lean, which checks logical steps but does not guarantee semantic alignment with the original problem. Experts note that the mathematical community needs time to verify the work and that the formalization process has known historical limitations.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/297.htm",
+     "title": "黎曼猜想真被 Claude 证明了？Anthropic 数学家仅发布 Lean 代码，陶哲轩称验证仍需时间",
+     "date": "2026-11-20",
+     "titleEn": "Did Claude prove the Riemann Hypothesis? Anthropic mathematician releases only Lean code; Terence Tao says verification will take time"
+    }
+   ],
+   "more": "The claim was made on November 20, shortly after Anthropic went public, which the mathematician admitted was a poor timing choice. Verification requires peer-reviewed publication and a two-year waiting period set by the Clay Mathematics Institute to qualify for the $1 million prize. Initial checks by some mathematicians confirm the Lean code addresses the correct conjecture, though concerns remain about potential kernel flaws in the verification software.",
+   "words": [
+    {
+     "zh": "远远超过了我",
+     "en": "far exceeded me",
+     "who": "Levent Alpöge"
+    },
+    {
+     "zh": "运用一切",
+     "en": "use everything",
+     "who": "Alex Kontorovich"
+    },
+    {
+     "zh": "至少拿出 500 页版本前看都不看",
+     "en": "won't even look before 500 pages",
+     "who": "Yu Deng"
+    }
+   ],
+   "reception": [
+    {
+     "en": "Mathematician Terence Tao provided a preliminary analysis, noting the proof uses modern arithmetic geometry and will take time to verify. Professor Alex Kontorovich expressed increased confidence in the proof's success because it utilizes extensive mathematical tools."
+    }
+   ]
+  },
+  {
+   "board": "weibo",
+   "rank": 3,
+   "zh": "APEC盛会效应拉满",
+   "heat": "66.2万",
+   "link": "https://www.baidu.com/s?wd=APEC%E7%9B%9B%E4%BC%9A%E6%95%88%E5%BA%94%E6%8B%89%E6%BB%A1",
+   "linkLabel": "search Baidu",
+   "en": "The APEC summit has maximum impact.",
+   "kind": "world",
+   "note": "Zheng Hanzhen, vice president of Australian Capital Investment Company, spoke at the APEC Business Leaders Summit in Shenzhen about deepening cross-border investment and industrial synergy in the Asia-Pacific region. He highlighted how China's technological and manufacturing strengths complement other economies, such as Australia's resource endowments and Singapore's financial networks. The article presents his view that mature industrial ecosystems, particularly in sectors like semiconductors and green energy, offer better long-term investment stability than short-term market trends.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/cj/2026/11-20/10735193.shtml",
+     "title": "APEC参会外企高管：亚太产业协同让互补红利加速释放",
+     "date": "2026-11-20",
+     "titleEn": "APEC participating foreign enterprise executives: Asia-Pacific industrial synergy accelerates the release of complementary dividends"
+    }
+   ],
+   "more": "The interview took place on November 20 in Shenzhen, where Zheng observed the efficient connection between technology research and large-scale application in the Greater Bay Area. He cited the sustainable aviation fuel industry as an example of how Chinese R&D can link with Australian demand and Singaporean trade services. Zheng also noted that Chinese companies can adapt their automation and intelligent maintenance technologies to fit the specific needs of Australian mining clients.",
+   "words": [
+    {
+     "zh": "将比较优势转化为区域整体竞争力",
+     "en": "Turn comparative advantages into regional competitiveness",
+     "who": "Zheng Hanzhen"
+    },
+    {
+     "zh": "产业生态的深度往往比短期市场热度更值得关注",
+     "en": "Industrial ecosystem depth matters more than short-term heat",
+     "who": "Zheng Hanzhen"
+    }
+   ]
+  },
+  {
+   "board": "weibo",
+   "rank": 4,
+   "zh": "问界M9车主开辅助驾驶熟睡",
+   "heat": "55.0万",
+   "link": "https://www.baidu.com/s?wd=%E9%97%AE%E7%95%8CM9%E8%BD%A6%E4%B8%BB%E5%BC%80%E8%BE%85%E5%8A%A9%E9%A9%BE%E9%A9%B6%E7%86%9F%E7%9D%A1",
+   "linkLabel": "search Baidu",
+   "en": "Owner of an AITO M9 falls asleep while using assisted driving.",
+   "kind": "tech",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "weibo",
+   "rank": 5,
+   "zh": "特朗普涉中俄美最新表态",
+   "heat": "45.3万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E6%B6%89%E4%B8%AD%E4%BF%84%E7%BE%8E%E6%9C%80%E6%96%B0%E8%A1%A8%E6%80%81",
+   "linkLabel": "search Baidu",
+   "en": "Trump's latest statements regarding China, Russia, and the US.",
+   "kind": "america",
+   "noAccount": "An article was found in the news feeds, but it was not about this line, so no account was written."
+  },
+  {
+   "board": "weibo",
+   "rank": 6,
+   "zh": "比亚迪折叠方向盘能干嘛",
+   "heat": "36.1万",
+   "link": "https://www.baidu.com/s?wd=%E6%AF%94%E4%BA%9A%E8%BF%AA%E6%8A%98%E5%8F%A0%E6%96%B9%E5%90%91%E7%9B%98%E8%83%BD%E5%B9%B2%E5%98%9B",
+   "linkLabel": "search Baidu",
+   "en": "What is the purpose of BYD's folding steering wheel?",
+   "kind": "tech",
+   "note": "BYD has launched the Fangchengbao Tai 9, a new plug-in hybrid SUV starting at 279,900 yuan. The vehicle features a unique folding steering wheel in its top trim, which helps maximize interior space and maneuverability. It is equipped with advanced battery technology, a six-seat layout, and comprehensive luxury amenities like massage seats and large screens. The car is designed to offer extensive electric range and powerful hybrid performance for long-distance travel.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/293.htm",
+     "title": "比亚迪方程豹钛 9 将于 11 月底交付：顶配支持折叠方向盘，27.99 万元起",
+     "date": "2026-11-20",
+     "titleEn": "BYD Fangchengbao Tai 9 deliveries to begin in late November: Top trim supports folding steering wheel, starting at 279,900 yuan"
+    }
+   ],
+   "more": "The SUV measures 5.27 meters in length with a wheelbase of 3.13 meters, allowing for a tight turning radius of 4.95 meters. It uses a 1.5-liter engine paired with dual motors, providing a combined power output of 400 kW and a WLTC pure electric range of 310 km. The total range with a full tank and charge exceeds 1,600 kilometers. Deliveries are scheduled to begin in late November across 39 cities."
+  },
+  {
+   "board": "weibo",
+   "rank": 7,
+   "zh": "张萌回应青稚打听式安慰",
+   "heat": "32.5万",
+   "link": "https://www.baidu.com/s?wd=%E5%BC%A0%E8%90%8C%E5%9B%9E%E5%BA%94%E9%9D%92%E7%A8%9A%E6%89%93%E5%90%AC%E5%BC%8F%E5%AE%89%E6%85%B0",
+   "linkLabel": "search Baidu",
+   "en": "Zhang Meng responds to criticism about her 'inquisitive comfort' style.",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "weibo",
+   "rank": 8,
+   "zh": "王天辰郭晓婷开机",
+   "heat": "30.1万",
+   "link": "https://www.baidu.com/s?wd=%E7%8E%8B%E5%A4%A9%E8%BE%B0%E9%83%AD%E6%99%93%E5%A9%B7%E5%BC%80%E6%9C%BA",
+   "linkLabel": "search Baidu",
+   "en": "Wang Tianchen and Guo Xiaoting start filming a new project.",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "weibo",
+   "rank": 9,
+   "zh": "深圳人又开始原装出街了",
+   "heat": "25.9万",
+   "link": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E5%8F%88%E5%BC%80%E5%A7%8B%E5%8E%9F%E8%A3%85%E5%87%BA%E8%A1%97%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Shenzhen residents are once again going out in their original, unaltered looks.",
+   "kind": "life",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "weibo",
+   "rank": 10,
+   "zh": "这段爆破戏疑似AI做的",
+   "heat": "25.8万",
+   "link": "https://www.baidu.com/s?wd=%E8%BF%99%E6%AE%B5%E7%88%86%E7%A0%B4%E6%88%8F%E7%96%91%E4%BC%BCAI%E5%81%9A%E7%9A%84",
+   "linkLabel": "search Baidu",
+   "en": "This explosion scene is suspected to be made by AI.",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "weibo",
+   "rank": 11,
+   "zh": "特朗普说看看深圳再看看我们",
+   "heat": "25.8万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E8%AF%B4%E7%9C%8B%E7%9C%8B%E6%B7%B1%E5%9C%B3%E5%86%8D%E7%9C%8B%E7%9C%8B%E6%88%91%E4%BB%AC",
+   "linkLabel": "search Baidu",
+   "en": "Trump says, 'Look at Shenzhen, then look at us.'",
+   "kind": "america",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "weibo",
+   "rank": 12,
+   "zh": "孙芮结婚怀孕",
+   "heat": "25.8万",
+   "link": "https://www.baidu.com/s?wd=%E5%AD%99%E8%8A%AE%E7%BB%93%E5%A9%9A%E6%80%80%E5%AD%95",
+   "linkLabel": "search Baidu",
+   "en": "Sun Rui gets married and is pregnant.",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 1,
+   "zh": "两张历史性同框照为何在中国定格",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%A4%E5%BC%A0%E5%8E%86%E5%8F%B2%E6%80%A7%E5%90%8C%E6%A1%86%E7%85%A7%E4%B8%BA%E4%BD%95%E5%9C%A8%E4%B8%AD%E5%9B%BD%E5%AE%9A%E6%A0%BC",
+   "linkLabel": "search Baidu",
+   "en": "Why two historic photos were frozen in time in China",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 2,
+   "zh": "人民日报评“老人拆墙让路遭质疑”",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%BA%BA%E6%B0%91%E6%97%A5%E6%8A%A5%E8%AF%84%E2%80%9C%E8%80%81%E4%BA%BA%E6%8B%86%E5%A2%99%E8%AE%A9%E8%B7%AF%E9%81%AD%E8%B4%A8%E7%96%91%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "People's Daily comments on the controversy surrounding an elderly person who demolished a wall to make way",
+   "kind": "life",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 3,
+   "zh": "特朗普称不支持“台独”引岛内震动",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E4%B8%8D%E6%94%AF%E6%8C%81%E2%80%9C%E5%8F%B0%E7%8B%AC%E2%80%9D%E5%BC%95%E5%B2%9B%E5%86%85%E9%9C%87%E5%8A%A8",
+   "linkLabel": "search Baidu",
+   "en": "Trump's statement that he does not support 'Taiwan independence' causes shock in Taiwan",
+   "kind": "america",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 4,
+   "zh": "科技新国货成“深圳特产”",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%A7%91%E6%8A%80%E6%96%B0%E5%9B%BD%E8%B4%A7%E6%88%90%E2%80%9C%E6%B7%B1%E5%9C%B3%E7%89%B9%E4%BA%A7%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "New domestic tech brands become a 'Shenzhen specialty'",
+   "kind": "tech",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 5,
+   "zh": "深圳人又开始原装出街了",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E6%B7%B1%E5%9C%B3%E4%BA%BA%E5%8F%88%E5%BC%80%E5%A7%8B%E5%8E%9F%E8%A3%85%E5%87%BA%E8%A1%97%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Shenzhen residents are once again going out in original equipment",
+   "kind": "life",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 6,
+   "zh": "AI疑证明黎曼猜想 数学家高兴不起来",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=AI%E7%96%91%E8%AF%81%E6%98%8E%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3%20%E6%95%B0%E5%AD%A6%E5%AE%B6%E9%AB%98%E5%85%B4%E4%B8%8D%E8%B5%B7%E6%9D%A5",
+   "linkLabel": "search Baidu",
+   "en": "AI allegedly proves the Riemann Hypothesis, but mathematicians are not happy",
+   "kind": "tech",
+   "note": "A mathematician at Anthropic claims to have proven the Riemann Hypothesis with the help of the company's AI model, Claude. The proof is extremely long and has not been fully published, consisting mainly of formalized code. Experts are cautiously analyzing the work, noting that verification will take time and that AI-generated proofs can sometimes contain subtle errors.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/297.htm",
+     "title": "黎曼猜想真被 Claude 证明了？Anthropic 数学家仅发布 Lean 代码，陶哲轩称验证仍需时间",
+     "date": "2026-11-20",
+     "titleEn": "Did Claude actually prove the Riemann Hypothesis? Anthropic mathematician only released Lean code, Terence Tao says verification will take time"
+    }
+   ],
+   "more": "The claim was made by Levent Alpöge on November 20, shortly after Anthropic went public. The proof involves over 250,000 pages of text and 17 million lines of Lean code, a tool used to verify mathematical logic. To win the $1 million prize from the Clay Mathematics Institute, the proof must be peer-reviewed and accepted by the mathematical community, a process that has not yet begun.",
+   "words": [
+    {
+     "zh": "远远超过了我",
+     "en": "far surpassed me",
+     "who": "Levent Alpöge"
+    },
+    {
+     "zh": "运用一切",
+     "en": "use everything",
+     "who": "Alex Kontorovich"
+    },
+    {
+     "zh": "至少拿出 500 页版本前看都不看",
+     "en": "don't even look before 500 pages",
+     "who": "Yu Deng"
+    }
+   ],
+   "reception": [
+    {
+     "en": "Mathematicians like Terence Tao and Alex Kontorovich are reviewing the preliminary materials, with some expressing cautious optimism while others highlight the need for rigorous verification. Some experts warn that AI tools may have reliability issues or weaken original propositions."
+    }
+   ]
+  },
+  {
+   "board": "baidu",
+   "rank": 7,
+   "zh": "高市搭讪特朗普被无视 日本网民：丢人",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E9%AB%98%E5%B8%82%E6%90%AD%E8%AE%AA%E7%89%B9%E6%9C%97%E6%99%AE%E8%A2%AB%E6%97%A0%E8%A7%86%20%E6%97%A5%E6%9C%AC%E7%BD%91%E6%B0%91%EF%BC%9A%E4%B8%A2%E4%BA%BA",
+   "linkLabel": "search Baidu",
+   "en": "Takaichi flirts with Trump and is ignored; Japanese netizens say it is embarrassing",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 8,
+   "zh": "华尔街上演“黑色星期五”",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E5%8D%8E%E5%B0%94%E8%A1%97%E4%B8%8A%E6%BC%94%E2%80%9C%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F%E4%BA%94%E2%80%9D",
+   "linkLabel": "search Baidu",
+   "en": "Wall Street experiences a 'Black Friday'",
+   "kind": "money",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 9,
+   "zh": "一家人遛弯误入剧组还上了央视",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%80%E5%AE%B6%E4%BA%BA%E9%81%9B%E5%BC%AF%E8%AF%AF%E5%85%A5%E5%89%A7%E7%BB%84%E8%BF%98%E4%B8%8A%E4%BA%86%E5%A4%AE%E8%A7%86",
+   "linkLabel": "search Baidu",
+   "en": "A family goes for a walk, accidentally stumbles onto a film set, and appears on CCTV",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "baidu",
+   "rank": 10,
+   "zh": "特朗普：中俄美元首会晤意义重大",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4%E6%84%8F%E4%B9%89%E9%87%8D%E5%A4%A7",
+   "linkLabel": "search Baidu",
+   "en": "Trump: The China-Russia-US dollar summit meeting is of great significance",
+   "kind": "america",
+   "note": "According to a China News Service report, US President Donald Trump described a recent trilateral meeting with Chinese and Russian leaders in Shenzhen as highly significant and unprecedented. The article states that the leaders held a successful discussion during the Asia-Pacific Economic Cooperation summit, resulting in a joint peace declaration. Trump characterized the atmosphere of the meeting as warm and the relationship between the three nations as harmonious. The report highlights the leaders' consensus that nuclear conflict must be prevented at all costs.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735606.shtml",
+     "title": "特朗普：中俄美元首会晤“史无前例”“意义重大”",
+     "date": "2026-11-21",
+     "titleEn": "Trump: China-Russia-US summit 'unprecedented' and 'of great significance'"
+    }
+   ],
+   "more": "The meeting took place on November 19 in Shenzhen, China, during the APEC leaders' informal meeting. The three heads of state discussed maintaining world peace and strategic stability among major powers. Following the discussion, they issued the 'China-Russia-US Leaders' Peace Declaration.' The article notes that this was the first time the three leaders met in this specific trilateral format.",
+   "words": [
+    {
+     "zh": "多年来最具重大意义的国际峰会之一",
+     "en": "One of the most significant international summits in many years",
+     "who": "Trump"
+    },
+    {
+     "zh": "史无前例的三方和平宣言",
+     "en": "Unprecedented trilateral peace declaration",
+     "who": "Trump"
+    },
+    {
+     "zh": "绝不能让核冲突发生",
+     "en": "Nuclear conflict must never happen",
+     "who": "Trump"
+    }
+   ]
+  },
+  {
+   "board": "baidu",
+   "rank": 11,
+   "zh": "《GTA6》首日零售额达37.9亿美元",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E3%80%8AGTA6%E3%80%8B%E9%A6%96%E6%97%A5%E9%9B%B6%E5%94%AE%E9%A2%9D%E8%BE%BE37.9%E4%BA%BF%E7%BE%8E%E5%85%83",
+   "linkLabel": "search Baidu",
+   "en": "Retail sales of 'GTA6' reach $3.79 billion on the first day",
+   "kind": "games",
+   "note": "Take-Two Interactive announced that the initial retail sales of Grand Theft Auto VI reached 3.79 billion US dollars on its first day, setting a new record for the entertainment industry. This figure surpasses the total global box office of the movie Avengers: Endgame, which earned approximately 2.9 billion US dollars. The report highlights that this financial success is accompanied by massive spikes in internet traffic and live-streaming viewership across multiple platforms.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/289.htm",
+     "title": "T2 宣布《GTA 6》首日收入 37.9 亿美元创娱乐行业新纪录，远超漫威《复仇者联盟 4》总票房",
+     "date": "2026-11-20",
+     "titleEn": "T2 announced that Grand Theft Auto 6 earned $3.79 billion on its first day, setting a new record for the entertainment industry and far exceeding the total box office of Marvel's Avengers: Endgame"
+    }
+   ],
+   "more": "The sales data is based on global estimates as of November 19, with the article noting a pre-sale figure of 32.5 million units. Internet exchange operator DE-CIX reported a record data throughput of 33.03 Tbps on November 18, while streaming platforms saw a peak of 7.91 million concurrent viewers in the first 24 hours. Rockstar Games president Sam Houser expressed gratitude for the global player response and looked forward to a new chapter for the company.",
+   "words": [
+    {
+     "zh": "刷新了电子游戏乃至整个娱乐行业的首发纪录",
+     "en": "Refreshed the launch record for games and the entire entertainment industry",
+     "who": "Take-Two"
+    }
+   ]
+  },
+  {
+   "board": "baidu",
+   "rank": 12,
+   "zh": "《辟谣箴言》系列漫画",
+   "heat": "",
+   "link": "https://www.baidu.com/s?wd=%E3%80%8A%E8%BE%9F%E8%B0%A3%E7%AE%B4%E8%A8%80%E3%80%8B%E7%B3%BB%E5%88%97%E6%BC%AB%E7%94%BB",
+   "linkLabel": "search Baidu",
+   "en": "'Rumor Debunking Maxims' series of comics",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 1,
+   "zh": "U17男足0:5西班牙",
+   "heat": "1210.4万",
+   "link": "https://www.baidu.com/s?wd=U17%E7%94%B7%E8%B6%B30%3A5%E8%A5%BF%E7%8F%AD%E7%89%99",
+   "linkLabel": "search Baidu",
+   "en": "U17 men's football team loses 0:5 to Spain",
+   "kind": "sport",
+   "noAccount": "Articles near this line were found in the news feeds, but none passed the checks (on the topic, and from the last three days), so no account was written."
+  },
+  {
+   "board": "douyin",
+   "rank": 2,
+   "zh": "终于懂李白走到哪都写诗了",
+   "heat": "1174.3万",
+   "link": "https://www.baidu.com/s?wd=%E7%BB%88%E4%BA%8E%E6%87%82%E6%9D%8E%E7%99%BD%E8%B5%B0%E5%88%B0%E5%93%AA%E9%83%BD%E5%86%99%E8%AF%97%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Finally understand why Li Bai wrote poems wherever he went",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 3,
+   "zh": "亚太前沿领域机遇看中国",
+   "heat": "1165.0万",
+   "link": "https://www.baidu.com/s?wd=%E4%BA%9A%E5%A4%AA%E5%89%8D%E6%B2%BF%E9%A2%86%E5%9F%9F%E6%9C%BA%E9%81%87%E7%9C%8B%E4%B8%AD%E5%9B%BD",
+   "linkLabel": "search Baidu",
+   "en": "See China for opportunities in Asia-Pacific frontier fields",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 4,
+   "zh": "美国三大股指全线大跌",
+   "heat": "1133.8万",
+   "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E5%9B%BD%E4%B8%89%E5%A4%A7%E8%82%A1%E6%8C%87%E5%85%A8%E7%BA%BF%E5%A4%A7%E8%B7%8C",
+   "linkLabel": "search Baidu",
+   "en": "US three major stock indices all fall sharply",
+   "kind": "america",
+   "note": "US stock markets experienced a sharp decline, with the Nasdaq Composite Index falling more than 5% and wiping out all gains for the year. The Dow Jones and S&P 500 indices also dropped over 10% from their historical peaks, entering a technical correction phase. This sell-off was largely driven by investors dumping shares in artificial intelligence companies, causing significant losses in market value. Market anxiety increased, pushing the volatility index to its highest level since April 2025.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/cj/2026/11-21/10735615.shtml",
+     "title": "美股大跌 纳指年内涨幅悉数回吐",
+     "date": "2026-11-21",
+     "titleEn": "US stocks plummet, Nasdaq's year-to-date gains completely wiped out"
+    }
+   ],
+   "more": "The Nasdaq's component stocks lost over $4 trillion in market value this week. Major tech firms like Nvidia, AMD, and SanDisk saw individual stock drops exceeding 10%, while recently listed Anthropic also fell more than 8%. The Cboe Volatility Index, a measure of market fear, rose to levels not seen since April 2025. Looking ahead, the Federal Reserve's upcoming policy meeting and potential interest rate hikes are expected to further influence market trends.",
+   "words": [
+    {
+     "zh": "美国股市三大指数20日大幅下跌",
+     "en": "US stock markets fell sharply on the 20th",
+     "who": "China News Service"
+    },
+    {
+     "zh": "纳指遭遇重创",
+     "en": "Nasdaq suffered heavy blows",
+     "who": "Wall Street Journal"
+    },
+    {
+     "zh": "美股市场正经历人工智能板块的重新定价",
+     "en": "US market undergoing AI sector repricing",
+     "who": "Bloomberg"
+    }
+   ]
+  },
+  {
+   "board": "douyin",
+   "rank": 5,
+   "zh": "泰国总理带夫人在深圳吃夜宵",
+   "heat": "1060.5万",
+   "link": "https://www.baidu.com/s?wd=%E6%B3%B0%E5%9B%BD%E6%80%BB%E7%90%86%E5%B8%A6%E5%A4%AB%E4%BA%BA%E5%9C%A8%E6%B7%B1%E5%9C%B3%E5%90%83%E5%A4%9C%E5%AE%B5",
+   "linkLabel": "search Baidu",
+   "en": "Thai Prime Minister takes wife to eat late-night snacks in Shenzhen",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 6,
+   "zh": "贺炜长文鼓励U17中国队",
+   "heat": "1058.1万",
+   "link": "https://www.baidu.com/s?wd=%E8%B4%BA%E7%82%9C%E9%95%BF%E6%96%87%E9%BC%93%E5%8A%B1U17%E4%B8%AD%E5%9B%BD%E9%98%9F",
+   "linkLabel": "search Baidu",
+   "en": "He Wei writes long article to encourage China's U17 team",
+   "kind": "sport",
+   "noAccount": "An article was found in the news feeds, but it was not about this line, so no account was written."
+  },
+  {
+   "board": "douyin",
+   "rank": 7,
+   "zh": "粤菜亮相APEC欢迎晚宴",
+   "heat": "946.3万",
+   "link": "https://www.baidu.com/s?wd=%E7%B2%A4%E8%8F%9C%E4%BA%AE%E7%9B%B8APEC%E6%AC%A2%E8%BF%8E%E6%99%9A%E5%AE%B4",
+   "linkLabel": "search Baidu",
+   "en": "Cantonese cuisine featured at APEC welcome dinner",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 8,
+   "zh": "灯火里的深圳 照见开放与活力",
+   "heat": "934.3万",
+   "link": "https://www.baidu.com/s?wd=%E7%81%AF%E7%81%AB%E9%87%8C%E7%9A%84%E6%B7%B1%E5%9C%B3%20%E7%85%A7%E8%A7%81%E5%BC%80%E6%94%BE%E4%B8%8E%E6%B4%BB%E5%8A%9B",
+   "linkLabel": "search Baidu",
+   "en": "Shenzhen's lights reflect openness and vitality",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 9,
+   "zh": "外交部回应高市早苗涉台问题表态",
+   "heat": "927.1万",
+   "link": "https://www.baidu.com/s?wd=%E5%A4%96%E4%BA%A4%E9%83%A8%E5%9B%9E%E5%BA%94%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E6%B6%89%E5%8F%B0%E9%97%AE%E9%A2%98%E8%A1%A8%E6%80%81",
+   "linkLabel": "search Baidu",
+   "en": "Foreign Ministry responds to Sanae Takaichi's remarks on Taiwan",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 10,
+   "zh": "高市早苗搭话特朗普遭无视",
+   "heat": "926.3万",
+   "link": "https://www.baidu.com/s?wd=%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E6%90%AD%E8%AF%9D%E7%89%B9%E6%9C%97%E6%99%AE%E9%81%AD%E6%97%A0%E8%A7%86",
+   "linkLabel": "search Baidu",
+   "en": "Sanae Takaichi ignored by Trump when she tried to chat",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 11,
+   "zh": "庞博文20:51不敌农村国宝",
+   "heat": "921.0万",
+   "link": "https://www.baidu.com/s?wd=%E5%BA%9E%E5%8D%9A%E6%96%8720%3A51%E4%B8%8D%E6%95%8C%E5%86%9C%E6%9D%91%E5%9B%BD%E5%AE%9D",
+   "linkLabel": "search Baidu",
+   "en": "Pang Bowen loses to 'Rural National Treasure' at 20:51",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "douyin",
+   "rank": 12,
+   "zh": "冬天吃碳水过热乎日子",
+   "heat": "919.5万",
+   "link": "https://www.baidu.com/s?wd=%E5%86%AC%E5%A4%A9%E5%90%83%E7%A2%B3%E6%B0%B4%E8%BF%87%E7%83%AD%E4%B9%8E%E6%97%A5%E5%AD%90",
+   "linkLabel": "search Baidu",
+   "en": "Eating carbs in winter for a warm life",
+   "kind": "life",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 1,
+   "zh": "全球市场黑色星期五背后原因何在",
+   "heat": "2783.3万",
+   "link": "https://www.baidu.com/s?wd=%E5%85%A8%E7%90%83%E5%B8%82%E5%9C%BA%E9%BB%91%E8%89%B2%E6%98%9F%E6%9C%9F%E4%BA%94%E8%83%8C%E5%90%8E%E5%8E%9F%E5%9B%A0%E4%BD%95%E5%9C%A8",
+   "linkLabel": "search Baidu",
+   "en": "What are the underlying reasons behind the global Black Friday markets?",
+   "kind": "money",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 2,
+   "zh": "特朗普称不支持“台独”引岛内震动",
+   "heat": "2518.4万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E4%B8%8D%E6%94%AF%E6%8C%81%E2%80%9C%E5%8F%B0%E7%8B%AC%E2%80%9D%E5%BC%95%E5%B2%9B%E5%86%85%E9%9C%87%E5%8A%A8",
+   "linkLabel": "search Baidu",
+   "en": "Trump's statement that he does not support \"Taiwan independence\" causes shock within Taiwan.",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 3,
+   "zh": "亚太经合组织贸易数字化合作框架",
+   "heat": "2278.7万",
+   "link": "https://www.baidu.com/s?wd=%E4%BA%9A%E5%A4%AA%E7%BB%8F%E5%90%88%E7%BB%84%E7%BB%87%E8%B4%B8%E6%98%93%E6%95%B0%E5%AD%97%E5%8C%96%E5%90%88%E4%BD%9C%E6%A1%86%E6%9E%B6",
+   "linkLabel": "search Baidu",
+   "en": "APEC (Asia-Pacific Economic Cooperation) trade digitalization cooperation framework.",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 4,
+   "zh": "高市早苗对台湾问题躲闪作答",
+   "heat": "2061.9万",
+   "link": "https://www.baidu.com/s?wd=%E9%AB%98%E5%B8%82%E6%97%A9%E8%8B%97%E5%AF%B9%E5%8F%B0%E6%B9%BE%E9%97%AE%E9%A2%98%E8%BA%B2%E9%97%AA%E4%BD%9C%E7%AD%94",
+   "linkLabel": "search Baidu",
+   "en": "Sanae Takaichi (Japanese politician) gives evasive answers regarding the Taiwan issue.",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 5,
+   "zh": "特朗普：中俄美元首会晤史无前例",
+   "heat": "1865.7万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9A%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E4%BC%9A%E6%99%A4%E5%8F%B2%E6%97%A0%E5%89%8D%E4%BE%8B",
+   "linkLabel": "search Baidu",
+   "en": "Trump: The meeting between the leaders of China, Russia, and the US is unprecedented.",
+   "kind": "world",
+   "note": "US President Donald Trump described a recent three-way meeting between the leaders of the United States, China, and Russia as unprecedented and highly significant. The summit took place in Shenzhen, China, during the APEC leaders' informal meeting, where the three nations discussed maintaining global peace and strategic stability. Trump characterized the atmosphere as warm and friendly, stating that the leaders reached a consensus to prevent nuclear conflict.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735606.shtml",
+     "title": "特朗普：中俄美元首会晤“史无前例”“意义重大”",
+     "date": "2026-11-21",
+     "titleEn": "Trump: China-Russia-US summit 'unprecedented' and 'of great significance'"
+    }
+   ],
+   "more": "The meeting occurred on November 19, with the press conference held on November 20. The outcome was a joint document titled the 'China-Russia-US Leaders' Peace Declaration.' The article reports that the three countries formally agreed that nuclear conflict must never occur.",
+   "words": [
+    {
+     "zh": "史无前例",
+     "en": "unprecedented",
+     "who": "Trump"
+    },
+    {
+     "zh": "绝不能让核冲突发生",
+     "en": "must never let nuclear conflict happen",
+     "who": "Trump"
+    }
+   ]
+  },
+  {
+   "board": "toutiao",
+   "rank": 6,
+   "zh": "胖东来原址开的新商场几乎倒闭",
+   "heat": "1688.1万",
+   "link": "https://www.baidu.com/s?wd=%E8%83%96%E4%B8%9C%E6%9D%A5%E5%8E%9F%E5%9D%80%E5%BC%80%E7%9A%84%E6%96%B0%E5%95%86%E5%9C%BA%E5%87%A0%E4%B9%8E%E5%80%92%E9%97%AD",
+   "linkLabel": "search Baidu",
+   "en": "The new mall opened at the original site of Pangdonglai (a famous Chinese retail chain) is nearly bankrupt.",
+   "kind": "money",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 7,
+   "zh": "金价下跌 现在买金镯子还是再等等",
+   "heat": "1527.5万",
+   "link": "https://www.baidu.com/s?wd=%E9%87%91%E4%BB%B7%E4%B8%8B%E8%B7%8C%20%E7%8E%B0%E5%9C%A8%E4%B9%B0%E9%87%91%E9%95%AF%E5%AD%90%E8%BF%98%E6%98%AF%E5%86%8D%E7%AD%89%E7%AD%89",
+   "linkLabel": "search Baidu",
+   "en": "Gold prices are falling; should you buy gold bracelets now or wait?",
+   "kind": "money",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 8,
+   "zh": "高市搭讪特朗普被无视 日网民：丢人",
+   "heat": "1382.1万",
+   "link": "https://www.baidu.com/s?wd=%E9%AB%98%E5%B8%82%E6%90%AD%E8%AE%AA%E7%89%B9%E6%9C%97%E6%99%AE%E8%A2%AB%E6%97%A0%E8%A7%86%20%E6%97%A5%E7%BD%91%E6%B0%91%EF%BC%9A%E4%B8%A2%E4%BA%BA",
+   "linkLabel": "search Baidu",
+   "en": "Sanae Takaichi (Japanese politician) tried to chat up Trump but was ignored; Japanese netizens say it was embarrassing.",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 9,
+   "zh": "秘鲁发生6.7级地震",
+   "heat": "1250.6万",
+   "link": "https://www.baidu.com/s?wd=%E7%A7%98%E9%B2%81%E5%8F%91%E7%94%9F6.7%E7%BA%A7%E5%9C%B0%E9%9C%87",
+   "linkLabel": "search Baidu",
+   "en": "A 6.7 magnitude earthquake occurred in Peru.",
+   "kind": "world",
+   "noAccount": "An article was found in the news feeds, but it was not about this line, so no account was written."
+  },
+  {
+   "board": "toutiao",
+   "rank": 10,
+   "zh": "金价还能撑多久",
+   "heat": "1131.6万",
+   "link": "https://www.baidu.com/s?wd=%E9%87%91%E4%BB%B7%E8%BF%98%E8%83%BD%E6%92%91%E5%A4%9A%E4%B9%85",
+   "linkLabel": "search Baidu",
+   "en": "How long can gold prices hold up?",
+   "kind": "money",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 11,
+   "zh": "湖南株洲一仓库突发大火？不实",
+   "heat": "1023.9万",
+   "link": "https://www.baidu.com/s?wd=%E6%B9%96%E5%8D%97%E6%A0%AA%E6%B4%B2%E4%B8%80%E4%BB%93%E5%BA%93%E7%AA%81%E5%8F%91%E5%A4%A7%E7%81%AB%EF%BC%9F%E4%B8%8D%E5%AE%9E",
+   "linkLabel": "search Baidu",
+   "en": "A warehouse in Zhuzhu, Hunan, caught fire? False.",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "toutiao",
+   "rank": 12,
+   "zh": "特朗普称赞深圳城市建设",
+   "heat": "926.5万",
+   "link": "https://www.baidu.com/s?wd=%E7%89%B9%E6%9C%97%E6%99%AE%E7%A7%B0%E8%B5%9E%E6%B7%B1%E5%9C%B3%E5%9F%8E%E5%B8%82%E5%BB%BA%E8%AE%BE",
+   "linkLabel": "search Baidu",
+   "en": "Trump praised the urban construction of Shenzhen.",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "bilibili",
+   "rank": 1,
+   "zh": "中俄美元首历史性会晤为何在中国",
+   "heat": "812.0万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E4%BF%84%E7%BE%8E%E5%85%83%E9%A6%96%E5%8E%86%E5%8F%B2%E6%80%A7%E4%BC%9A%E6%99%A4%E4%B8%BA%E4%BD%95%E5%9C%A8%E4%B8%AD%E5%9B%BD",
+   "linkLabel": "search Baidu",
+   "en": "Why did the historic meeting between the Chinese and Russian presidents take place in China?",
+   "kind": "world",
+   "enCheck": "a name in the Chinese is missing from the English",
+   "note": "The article reports that US President Trump, Chinese leaders, and Russian leaders held a historic trilateral meeting in Shenzhen, China. Trump described the summit as significant and noted that the atmosphere was excellent among the three leaders. The meeting resulted in a joint peace declaration emphasizing the prevention of nuclear conflict. The report presents these events as a major diplomatic achievement facilitated by the visit.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "https://www.chinanews.com.cn/gj/2026/11-21/10735613.shtml",
+     "title": "特朗普：中俄美元首会晤具有重大历史意义",
+     "date": "2026-11-21",
+     "titleEn": "Trump: The China-Russia-US summit has major historical significance"
+    }
+   ],
+   "more": "The meeting took place recently, with Trump returning to Washington on November 19 and holding a press conference on November 20. He was accompanied by Vice President Vance and Secretary of State Rubio during the briefing. The three nations formally agreed to a consensus that nuclear conflict must never occur. The article does not provide further details on the implementation of the declaration.",
+   "words": [
+    {
+     "zh": "史无前例的三方和平宣言",
+     "en": "Unprecedented trilateral peace declaration",
+     "who": "Trump"
+    },
+    {
+     "zh": "绝不能让核冲突发生",
+     "en": "Never allow nuclear conflict",
+     "who": "Trump"
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 2,
+   "zh": "AI证明黎曼猜想通过形式化验证",
+   "heat": "753.1万",
+   "link": "https://www.baidu.com/s?wd=AI%E8%AF%81%E6%98%8E%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3%E9%80%9A%E8%BF%87%E5%BD%A2%E5%BC%8F%E5%8C%96%E9%AA%8C%E8%AF%81",
+   "linkLabel": "search Baidu",
+   "en": "AI proves the Riemann Hypothesis through formal verification",
+   "kind": "tech",
+   "note": "An Anthropic mathematician claims to have proven the Riemann Hypothesis and its generalization by collaborating with the AI model Claude. The proof consists of a 250,000-page text and formalized code verified by Lean, a tool that translates mathematical logic into machine-checkable formats. The article notes that while initial checks suggest the formalization is correct, the mathematical community requires extensive time to verify the core ideas.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/297.htm",
+     "title": "黎曼猜想真被 Claude 证明了？Anthropic 数学家仅发布 Lean 代码，陶哲轩称验证仍需时间",
+     "date": "2026-11-20",
+     "titleEn": "Did Riemann Hypothesis Really Get Proven by Claude? Anthropic Mathematician Only Released Lean Code, Terence Tao Says Verification Still Takes Time"
+    }
+   ],
+   "more": "The proof was completed in mid-November, shortly before Anthropic's stock market listing, and includes approximately 17 million lines of Lean code. Experts like Terence Tao and Alex Kontorovich have offered preliminary observations, though full verification is pending. The Clay Mathematics Institute requires formal publication and a two-year review period before considering the million-dollar prize.",
+   "words": [
+    {
+     "zh": "远远超过了我",
+     "en": "far exceeded me",
+     "who": "Levent Alpöge"
+    },
+    {
+     "zh": "运用一切",
+     "en": "use everything",
+     "who": "Alex Kontorovich"
+    },
+    {
+     "zh": "至少拿出 500 页版本前看都不看",
+     "en": "won't even look before 500 pages",
+     "who": "Yu Deng"
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 3,
+   "zh": "我国低轨30组卫星发射成功",
+   "heat": "247.6万",
+   "link": "https://www.baidu.com/s?wd=%E6%88%91%E5%9B%BD%E4%BD%8E%E8%BD%A830%E7%BB%84%E5%8D%AB%E6%98%9F%E5%8F%91%E5%B0%84%E6%88%90%E5%8A%9F",
+   "linkLabel": "search Baidu",
+   "en": "China successfully launches 30 groups of low-orbit satellites",
+   "kind": "tech",
+   "note": "China successfully launched a batch of 30 satellites for its satellite internet network on November 20. The mission took place at the Hainan Commercial Space Launch Site using a Long March 8A carrier rocket. The satellites entered their designated orbits, marking the launch task as a complete success.",
+   "sources": [
+    {
+     "name": "China News Service",
+     "url": "http://www.chinanews.com.cn/tp/hd2011/2026/11-21/1211333.shtml",
+     "title": "中国成功发射卫星互联网低轨30组卫星",
+     "date": "2026-11-21",
+     "titleEn": "China successfully launches 30 groups of low-orbit satellites for satellite internet"
+    }
+   ],
+   "more": "The launch occurred at 19:59 local time. The specific rocket model used was the Long March 8A. The payload consisted of 30 groups of low-orbit satellites intended for internet services. The article includes photographs of the rocket during ignition and waiting phases.",
+   "coverage": [
+    {
+     "outlet": "China News Service",
+     "zh": "中国成功发射卫星互联网低轨30组卫星",
+     "url": "http://www.chinanews.com.cn/tp/hd2011/2026/11-21/1211333.shtml",
+     "date": "2026-11-21",
+     "en": "China successfully launches 30 groups of low-orbit satellites for satellite internet"
+    },
+    {
+     "outlet": "China News Service",
+     "zh": "我国成功发射卫星互联网低轨30组卫星",
+     "url": "https://www.chinanews.com.cn/gn/2026/11-20/10735563.shtml",
+     "date": "2026-11-20",
+     "en": "China successfully launches 30 groups of low-orbit satellites for satellite internet"
+    },
+    {
+     "outlet": "IT Home",
+     "zh": "我国成功发射卫星互联网低轨 30 组卫星",
+     "url": "https://www.ithome.com/1/030/242.htm",
+     "date": "2026-11-20",
+     "en": "China successfully launches 30 groups of low-orbit satellites for satellite internet"
+    }
+   ],
+   "words": [
+    {
+     "zh": "发射任务获得圆满成功",
+     "en": "Launch task achieved complete success",
+     "who": "China News Service"
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 4,
+   "zh": "美股科技股开盘集体下挫",
+   "heat": "172.6万",
+   "link": "https://www.baidu.com/s?wd=%E7%BE%8E%E8%82%A1%E7%A7%91%E6%8A%80%E8%82%A1%E5%BC%80%E7%9B%98%E9%9B%86%E4%BD%93%E4%B8%8B%E6%8C%AB",
+   "linkLabel": "search Baidu",
+   "en": "US tech stocks open collectively lower",
+   "kind": "money",
+   "note": "Nvidia's stock dropped 14%, marking its seventh consecutive weekly decline and wiping out nearly half its market value from recent highs. This sell-off was triggered by CEO Jensen Huang's resignation following a personal scandal, which overshadowed the company's better-than-expected financial results. The broader technology sector also suffered significant losses, with major indices and AI-related stocks falling sharply as investors questioned the sustainability of high valuations and capital spending.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/302.htm",
+     "title": "跌掉一个亚马逊：英伟达市值较 10 月高点蒸发 2.73 万亿美元，纳斯达克创 2020 年 3 月疫情后最差单周表现",
+     "date": "2026-11-21",
+     "titleEn": "Nvidia's market cap has shrunk by $2.73 trillion from its October high, equivalent to losing one Amazon, as the Nasdaq posted its worst single-week performance since March 2020 amid the pandemic"
+    }
+   ],
+   "more": "Nvidia's market capitalization has fallen to approximately $3.03 trillion, a decrease of over $2.73 trillion from its peak of $5.76 trillion. The Nasdaq 100 index experienced its worst single-week performance since March 2020, while the VIX volatility index reached its highest level this year. Market sentiment has shifted due to concerns over AI profitability, leadership instability, and rising interest rates, with traders now expecting a Federal Reserve rate hike in December.",
+   "words": [
+    {
+     "zh": "买方罢工",
+     "en": "Buyer's strike",
+     "who": "Keith Lerner, Truist Advisory Services"
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 5,
+   "zh": "两大千禧年数学难题被AI攻克了吗",
+   "heat": "172.5万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%A4%E5%A4%A7%E5%8D%83%E7%A6%A7%E5%B9%B4%E6%95%B0%E5%AD%A6%E9%9A%BE%E9%A2%98%E8%A2%ABAI%E6%94%BB%E5%85%8B%E4%BA%86%E5%90%97",
+   "linkLabel": "search Baidu",
+   "en": "Have two Millennium Prize mathematical problems been solved by AI?",
+   "kind": "tech",
+   "note": "A mathematician at Anthropic claims to have solved the Riemann Hypothesis, one of the seven Millennium Prize Problems, by collaborating with the AI model Claude. The proof consists of over 250,000 pages of text and millions of lines of formalized code, which have not been fully published. Experts are cautiously analyzing the work, noting that while the formalization appears correct, the mathematical community needs time to verify the underlying logic.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/297.htm",
+     "title": "黎曼猜想真被 Claude 证明了？Anthropic 数学家仅发布 Lean 代码，陶哲轩称验证仍需时间",
+     "date": "2026-11-20",
+     "titleEn": "Did Claude really prove the Riemann Hypothesis? Anthropic mathematician only released Lean code, Terence Tao says verification will take time"
+    }
+   ],
+   "more": "The claim was made on November 20, with the mathematician stating he finished the key work on November 15-16. The proof relies on modern results from the Langlands program and arithmetic geometry. To be eligible for the $1 million prize, the solution must be published in a peer-reviewed journal and withstand at least two years of verification by the mathematical community.",
+   "words": [
+    {
+     "zh": "远远超过了我",
+     "en": "far exceeded me",
+     "who": "Levent Alpöge"
+    },
+    {
+     "zh": "运用一切",
+     "en": "use everything",
+     "who": "Alex Kontorovich"
+    }
+   ],
+   "reception": [
+    {
+     "en": "Fields Medalist Terence Tao provided a preliminary analysis, while other mathematicians expressed cautious optimism but emphasized the long road to official recognition."
+    }
+   ]
+  },
+  {
+   "board": "bilibili",
+   "rank": 6,
+   "zh": "GTA6里NPC的生活有多真实",
+   "heat": "170.5万",
+   "link": "https://www.baidu.com/s?wd=GTA6%E9%87%8CNPC%E7%9A%84%E7%94%9F%E6%B4%BB%E6%9C%89%E5%A4%9A%E7%9C%9F%E5%AE%9E",
+   "linkLabel": "search Baidu",
+   "en": "How realistic is the life of NPCs in GTA 6?",
+   "kind": "games",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "bilibili",
+   "rank": 7,
+   "zh": "西班牙主帅称赞中国3名U17球员",
+   "heat": "111.5万",
+   "link": "https://www.baidu.com/s?wd=%E8%A5%BF%E7%8F%AD%E7%89%99%E4%B8%BB%E5%B8%85%E7%A7%B0%E8%B5%9E%E4%B8%AD%E5%9B%BD3%E5%90%8DU17%E7%90%83%E5%91%98",
+   "linkLabel": "search Baidu",
+   "en": "Spanish coach praises three Chinese U17 players",
+   "kind": "sport",
+   "noAccount": "An article was found in the news feeds, but it was not about this line, so no account was written."
+  },
+  {
+   "board": "bilibili",
+   "rank": 8,
+   "zh": "回看BLG夺冠有何伏笔",
+   "heat": "107.2万",
+   "link": "https://www.baidu.com/s?wd=%E5%9B%9E%E7%9C%8BBLG%E5%A4%BA%E5%86%A0%E6%9C%89%E4%BD%95%E4%BC%8F%E7%AC%94",
+   "linkLabel": "search Baidu",
+   "en": "Looking back at the foreshadowing behind BLG's championship win",
+   "kind": "games",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "bilibili",
+   "rank": 9,
+   "zh": "中国垃圾为什么成抢手货了",
+   "heat": "98.7万",
+   "link": "https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%9E%83%E5%9C%BE%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%90%E6%8A%A2%E6%89%8B%E8%B4%A7%E4%BA%86",
+   "linkLabel": "search Baidu",
+   "en": "Why has Chinese garbage become a sought-after commodity?",
+   "kind": "world",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "bilibili",
+   "rank": 10,
+   "zh": "U17国少0-5西班牙",
+   "heat": "96.1万",
+   "link": "https://www.baidu.com/s?wd=U17%E5%9B%BD%E5%B0%910-5%E8%A5%BF%E7%8F%AD%E7%89%99",
+   "linkLabel": "search Baidu",
+   "en": "China U17 national team loses 0-5 to Spain",
+   "kind": "sport",
+   "noAccount": "An article was found in the news feeds, but it was not about this line, so no account was written."
+  },
+  {
+   "board": "bilibili",
+   "rank": 11,
+   "zh": "罗小黑史上最长单集",
+   "heat": "96.1万",
+   "link": "https://www.baidu.com/s?wd=%E7%BD%97%E5%B0%8F%E9%BB%91%E5%8F%B2%E4%B8%8A%E6%9C%80%E9%95%BF%E5%8D%95%E9%9B%86",
+   "linkLabel": "search Baidu",
+   "en": "The longest single episode in the history of Luo Xiaohei",
+   "kind": "pop",
+   "noAccount": "No recent article about this line was found in the news feeds 望 reads, so no account was written. Lines about entertainment and daily life are the ones most often missing: the feeds are mostly news outlets."
+  },
+  {
+   "board": "bilibili",
+   "rank": 12,
+   "zh": "UP主解读AI声称证明黎曼猜想",
+   "heat": "96.1万",
+   "link": "https://www.baidu.com/s?wd=UP%E4%B8%BB%E8%A7%A3%E8%AF%BBAI%E5%A3%B0%E7%A7%B0%E8%AF%81%E6%98%8E%E9%BB%8E%E6%9B%BC%E7%8C%9C%E6%83%B3",
+   "linkLabel": "search Baidu",
+   "en": "Content creator analyzes AI's claim to have proven the Riemann Hypothesis",
+   "kind": "tech",
+   "note": "A mathematician at Anthropic claims to have proven the Riemann Hypothesis with the help of the AI model Claude, releasing extensive formalized code for verification. The article notes that while experts have begun preliminary checks, the mathematical community requires a lengthy peer-review process before accepting the result. It highlights concerns about AI reliability and the specific rules set by the Clay Mathematics Institute for awarding the prize.",
+   "sources": [
+    {
+     "name": "IT Home",
+     "url": "https://www.ithome.com/1/030/297.htm",
+     "title": "黎曼猜想真被 Claude 证明了？Anthropic 数学家仅发布 Lean 代码，陶哲轩称验证仍需时间",
+     "date": "2026-11-20",
+     "titleEn": "Was the Riemann Hypothesis really proven by Claude? Anthropic mathematician only released Lean code, Terence Tao says verification still takes time"
+    }
+   ],
+   "more": "Levent Alpöge, who holds degrees from Harvard and Princeton, stated the proof involves over 250,000 pages of text and 17 million lines of Lean code, a system used to mechanically verify logical derivations. The Clay Mathematics Institute requires a two-year verification period and publication in a peer-reviewed journal, meaning the current submission does not qualify for the $1 million prize. Alpöge admitted the timing of the announcement was poor because it occurred shortly after Anthropic's stock market listing.",
+   "words": [
+    {
+     "zh": "在终点附近飞翔、跳舞、闪耀",
+     "en": "flying, dancing, shining near the finish",
+     "who": "Levent Alpöge"
+    },
+    {
+     "zh": "至少拿出 500 页版本前看都不看",
+     "en": "won't even look before 500 pages",
+     "who": "Yu Deng"
+    }
+   ],
+   "reception": [
+    {
+     "en": "Fields Medalist Terence Tao provided a preliminary analysis, noting the proof uses modern results from the Langlands program and arithmetic geometry. Professor Alex Kontorovich expressed increased confidence in the proof's success because it utilizes comprehensive mathematical tools."
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 1,
+   "zh": "当我用AI续写爱情公寓4关谷悠悠婚礼【AI全民制作人】",
+   "heat": "66.8万 views",
+   "link": "https://www.bilibili.com/video/BV1atse6EEfx",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · Nero_闪灵",
+   "en": "When I used AI to continue writing the Guanyu and Youyou wedding scene from Love Apartment 4 [AI National Producer]",
+   "kind": "pop",
+   "video": {
+    "owner": "Nero_闪灵",
+    "posted": "2026-11-20 18:00 Beijing time",
+    "length": "21 min 06 s",
+    "views": 668105,
+    "likes": 83418,
+    "replies": 4203,
+    "danmaku": 2641,
+    "about": "The video uses AI to write a continuation of the wedding scene for Guan Gu and Youyou from the show iPartment. The uploader states the goal is to give the couple a happy ending and provide comfort to fans."
+   },
+   "reception": [
+    {
+     "en": "Viewers praise the AI continuation as superior to the official series finale, though some note that while the dialogue is convincing, the AI cannot replicate the actors' natural speech pauses. There is also a specific disagreement regarding the accuracy of Hu Yifei's portrayal in the wedding scene. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“Much better than the messy Zhuge Dali”",
+     "zh": "比什么乱七八糟的 诸葛大力强多了"
+    },
+    {
+     "en": "“AI fills lines but not their speech pauses”",
+     "zh": "AI 补的是台词，补不回他们说话的停顿"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "The commenter states that this AI continuation is better than the official character Zhuge Dali.",
+     "likes": 199
+    },
+    {
+     "gist": "The commenter observes that while the AI reproduces dialogue, it fails to capture the actors' natural pauses, yet they watched until the end despite knowing who was absent.",
+     "likes": 87
+    },
+    {
+     "gist": "The commenter notes that viewers argued over whether a specific line sounded like Hu Yifei, arguing that AI often writes what audiences want to hear rather than what the character would actually say, and they reserve judgment on the wedding scene.",
+     "likes": 8
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 2,
+   "zh": "如果睡觉也能赚钱...",
+   "heat": "48.7万 views",
+   "link": "https://www.bilibili.com/video/BV19JyWzXEQ9",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 刘拖地",
+   "en": "If sleeping could also make money...",
+   "kind": "life",
+   "video": {
+    "owner": "刘拖地",
+    "posted": "2026-11-20 19:00 Beijing time",
+    "length": "3 min 21 s",
+    "views": 486844,
+    "likes": 22243,
+    "replies": 189,
+    "danmaku": 173,
+    "about": "The video discusses the hypothetical scenario of earning money while sleeping."
+   },
+   "reception": [
+    {
+     "en": "Users react by joking that sleeping to earn money is less efficient than selling drugs, while others note the biological necessity of processing waste. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“If there really was sleep outsourcing”",
+     "zh": "如果真有睡眠外包"
+    },
+    {
+     "en": "“My favorite OD zone blogger updated”",
+     "zh": "最爱的od区博主更新了"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "A user suggests that from a capitalist perspective, selling cough medicine, sleeping pills, and anesthetics is more efficient than paying for sleep.",
+     "likes": 255
+    },
+    {
+     "gist": "A user points out that outsourcing sleep implies changing tasks because metabolic waste cannot disappear on its own.",
+     "likes": 5
+    },
+    {
+     "gist": "A user expresses excitement about an update from a blogger in the drug-related community.",
+     "likes": 2
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 3,
+   "zh": "【独家】《罗小黑战记》第44话 冬冬拯救行动方案五【10月国创】",
+   "heat": "301.8万 views",
+   "link": "https://www.bilibili.com/video/BV16hsY6tExz",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 哔哩哔哩国创",
+   "en": "[Exclusive] The Legend of Hei Episode 44: Dongdong's Rescue Action Plan Part 5 [October Domestic Animation]",
+   "kind": "pop",
+   "video": {
+    "owner": "哔哩哔哩国创",
+    "posted": "2026-11-20 12:00 Beijing time",
+    "length": "27 min 02 s",
+    "views": 3017576,
+    "likes": 119429,
+    "replies": 20965,
+    "danmaku": 136091,
+    "about": "The video is the 44th episode of the Chinese animated series 'The Legend of Luo Xiaohei,' titled 'Dongdong Rescue Action Plan Five,' which is exclusively broadcast on Bilibili every Friday at 12:00."
+   },
+   "reception": [
+    {
+     "en": "Viewers are praising the episode's length, the characters' abilities, and the organization's competence, while expressing joy that the story has officially entered its main plotline. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“This is the longest episode in history”",
+     "zh": "这是史上最长时间的一集了吧"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "A commenter notes that this is likely the longest episode ever.",
+     "likes": 38426
+    },
+    {
+     "gist": "A commenter expresses amazement at both Xiaohei's strength and the accuracy of Bai Youbao's location reports.",
+     "likes": 13593
+    },
+    {
+     "gist": "A commenter highlights the organization's tight structure and power, noting the tension beneath the calm surface, and expresses happiness that the main storyline has begun.",
+     "likes": 2870
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 4,
+   "zh": "菲比：事已至此 先吃饭吧",
+   "heat": "90.3万 views",
+   "link": "https://www.bilibili.com/video/BV1tysi6LET8",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · Lm海洋",
+   "en": "Phoebe: Since things have come to this, let's eat first",
+   "kind": "pop",
+   "video": {
+    "owner": "Lm海洋",
+    "posted": "2026-11-20 09:00 Beijing time",
+    "length": "4 min 30 s",
+    "views": 902772,
+    "likes": 53310,
+    "replies": 1282,
+    "danmaku": 932,
+    "about": "The video features the opening of a food stall called 'Hu Nao Da Pai Dang' and focuses on the creator's pet, Phoebe."
+   },
+   "reception": [
+    {
+     "en": "The top comment praises the creator's ability to feed their large pet, Phoebe, while other users simply tag each other without adding substantive commentary. (from the top 3 comments shown to visitors on Bilibili)"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "A user compliments the creator as a god for spending all their time feeding their large pet named Phoebe.",
+     "likes": 891
+    },
+    {
+     "gist": "A user tags three other accounts in the comment section.",
+     "likes": 3
+    },
+    {
+     "gist": "A user tags another account in the comment section.",
+     "likes": 2
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 5,
+   "zh": "Claude声称证明黎曼猜想，我准备女装cos元辅了",
+   "heat": "48.0万 views",
+   "link": "https://www.bilibili.com/video/BV1BeyszwEty",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 分析学爱好者",
+   "en": "Claude claims to have proved the Riemann Hypothesis, so I'm preparing to cross-dress as Yuan Fu",
+   "kind": "tech",
+   "video": {
+    "owner": "分析学爱好者",
+    "posted": "2026-11-21 00:05 Beijing time",
+    "length": "3 min 46 s",
+    "views": 479662,
+    "likes": 14930,
+    "replies": 6615,
+    "danmaku": 720,
+    "about": "The video title suggests that Claude has claimed to prove the Riemann Hypothesis, prompting the creator to joke about cross-dressing as Yuan Fu."
+   },
+   "reception": [
+    {
+     "en": "Users react with skepticism and humor, dismissing the claim as unrealistic while joking that humanity or AI has surpassed the expectations of science fiction authors like Liu Cixin. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“Liu was still conservative”",
+     "zh": "大刘还是保守了"
+    },
+    {
+     "en": "“Wake up, NS equation solutions are also out”",
+     "zh": "别睡了，ns方程无外力爆破解也被搞出来了"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "The commenter advises checking top mathematical platforms like GitHub for better resources.",
+     "likes": 2054
+    },
+    {
+     "gist": "The commenter references Liu Cixin's story 'The Way of Heaven,' joking that humans or AI have exceeded the author's conservative expectations regarding scientific breakthroughs.",
+     "likes": 367
+    },
+    {
+     "gist": "The commenter mocks the idea by claiming that solutions to the Navier-Stokes equations have also been found without external forces.",
+     "likes": 313
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 6,
+   "zh": "非凡之爱国产版：本土特色故事",
+   "heat": "62.3万 views",
+   "link": "https://www.bilibili.com/video/BV1TZsH6gES3",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 趣玩研究社",
+   "en": "Extraordinary Patriotism Domestic Version: Local Characteristic Stories",
+   "kind": "pop",
+   "video": {
+    "owner": "趣玩研究社",
+    "posted": "2026-11-15 19:19 Beijing time",
+    "length": "1 min 28 s",
+    "views": 622529,
+    "likes": 27006,
+    "replies": 1131,
+    "danmaku": 539,
+    "about": "The video appears to be a domestic Chinese version of a story featuring unique local characteristics, as indicated by its title."
+   },
+   "reception": [
+    {
+     "en": "Users are discussing the authenticity of the video's content, with one commenter asserting that all elements have real-world prototypes. Another user questions the narrative by asking if a lack of local characteristics leads to false accusations and imprisonment. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“None are fabricated, all have massive prototypes”",
+     "zh": "没有一个是捏造的，全都有海量原型这一块"
+    },
+    {
+     "en": "“No characteristics, false accusation of rape, sent in for three years?”",
+     "zh": "没有特色诬告qj给送进去关三年？"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "The commenter states that none of the content is fabricated and that every element is based on numerous real-world prototypes.",
+     "likes": 1333
+    },
+    {
+     "gist": "A user with the nickname 'Carrot Defense_Cry' posts a comment that consists only of their username.",
+     "likes": 38
+    },
+    {
+     "gist": "The commenter asks if the absence of local characteristics results in false accusations of rape and a three-year prison sentence.",
+     "likes": 11
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 7,
+   "zh": "你的GTA我的GTA好像不一样！",
+   "heat": "53.1万 views",
+   "link": "https://www.bilibili.com/video/BV1gGsv6EEBQ",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 争取最后的自由",
+   "en": "My GTA and your GTA seem different!",
+   "kind": "games",
+   "video": {
+    "owner": "争取最后的自由",
+    "posted": "2026-11-20 09:16 Beijing time",
+    "length": "12 min 54 s",
+    "views": 531450,
+    "likes": 29469,
+    "replies": 1191,
+    "danmaku": 1890,
+    "about": "The video title suggests a contrast between different experiences of playing Grand Theft Auto, implying a comparison of expectations versus reality."
+   },
+   "reception": [
+    {
+     "en": "Users are reacting with humor and admiration, splitting between joking about the high cost of the game and praising the extreme difficulty of the gameplay shown. (from the top 3 comments shown to visitors on Bilibili)"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "A user jokes that the first thing to do in GTA 6 is to steal a car, buy a gun, rob a bank, and use the money to purchase the game itself.",
+     "likes": 1474
+    },
+    {
+     "gist": "A user claims the player in the video is a true seven-star expert, far superior to a Swedish player who only reached five stars by using car performance.",
+     "likes": 291
+    },
+    {
+     "gist": "A user praises the intense difficulty of the seven-star chase, noting the dense police presence and the player's skilled maneuvers like weaving through traffic and driving against traffic.",
+     "likes": 115
+    }
+   ]
+  },
+  {
+   "board": "bilipop",
+   "rank": 8,
+   "zh": "不是退网，是落网了!海南走私水路不通!",
+   "heat": "40.0万 views",
+   "link": "https://www.bilibili.com/video/BV1wSyWzPEFP",
+   "linkLabel": "watch on Bilibili",
+   "source": "Bilibili · 大漠叔叔",
+   "en": "Not quitting the internet, but getting caught! Hainan smuggling water routes are blocked!",
+   "kind": "world",
+   "video": {
+    "owner": "大漠叔叔",
+    "posted": "2026-11-20 17:14 Beijing time",
+    "length": "8 min 52 s",
+    "views": 400492,
+    "likes": 42465,
+    "replies": 1581,
+    "danmaku": 2763,
+    "about": "The video title and description state that a smuggling route in Hainan is blocked and imply that a suspect has been arrested."
+   },
+   "reception": [
+    {
+     "en": "Users are joking that the suspect was caught rather than quitting the internet, with one comment celebrating the event using exaggerated celebratory phrases. Another user points out that the suspect's face was not blurred in the video cover, while a third makes a self-deprecating joke about being an outlier. (from the top 3 comments shown to visitors on Bilibili)"
+    },
+    {
+     "en": "“Heard Mo Zai was caught”",
+     "zh": "听说漠仔落网了"
+    }
+   ],
+   "sources": [],
+   "comments": [
+    {
+     "gist": "A user asks if official standards are becoming less rigorous because the suspect's face on the video cover was not blurred.",
+     "likes": 254
+    },
+    {
+     "gist": "A user writes that hearing about Mo Zai's arrest feels like a grand celebration with drums, firecrackers, and crowds.",
+     "likes": 171
+    },
+    {
+     "gist": "A user jokes that since many people are commenting '1', they will comment '0' to be slightly different.",
+     "likes": 70
+    }
+   ]
+  }
+ ]
+}

@@ -164,3 +164,75 @@ The Jensen set is no longer unseen: rulings 1 and 3 quote its lines. From here, 
 - **Draft 5 as it now stands:** brief v2, given to the side question only. `derive.py` does this by default from 11-19 (CF_BRIEF_FOR=all restores the old behaviour).
 - **Where Qwen stands on the Jensen set under draft 5:** side 75% with Sonnet (from 64.5%), band 78% with Sonnet (unchanged), all three readers agreeing on the side for 64% of lines (from 56%).
 - Still open: Qwen puts 17 lines in coalition where Sonnet puts 36 and Gemma 63. The readers do not agree on what coalition is. That is the reason question, loose since draft 4.
+
+## Draft 6 — the rulings in the questions (prediction written 2026-11-20, before the run)
+
+**What changed** (backups of both files: `archive/draft6_2026-11-20_before/`):
+- **The side question** (grammar, key g6). Written in: the speaker on himself is shadow; a scored earlier forecast, a wait-and-see, a hope, a judgment of a course if it happened are not forecasts; when a post hands its questions to a guest, every line is a teaser; a question is a question unless the post answers it; a fact that a bad state has come reads leaning frustrated (rule 7); read the side one level up (8); the Object said out loud reads neither (9); dual realization (10); the rival's gain is not our loss reads realized (11).
+- **The band question** (key ctx8). The reason question is tightened: true only for a because in the line's own words, a call or instruction, or a line answering the other side's argument. A question, a fact with no because, a comparison, a value or a feeling: false. A prayer that shuts a side out or calls their position a spell is a verdict; one that names no one is not.
+- **A new question:** "concedes": what the line gives the other side, in its own words, or "".
+- **Qwen** gets brief v3 (v2 plus the two standing rules), on the side question only.
+- **Sonnet gets the same questions** (Draft 5 compared Qwen under new rules with Sonnet under draft 4). Both readers run: Qwen, then Sonnet. Reads: `reads/draft6_qwen/`, `reads/draft6_sonnet/`; comparison `reads/draft6_compare.md`.
+
+**Where things stand (draft 5c Qwen against draft 4 Sonnet):** side agreement 75.0%; band agreement 77.9%; coalition Qwen 17, Sonnet 36 (Gemma 63); neither Qwen 61, Sonnet 62.
+
+**Prediction.**
+- **Side.** It works if Qwen and Sonnet agree on the side for 78% of lines or more. The gain should come from lines both are now told how to read: Patel's questions (Sonnet read them frustrated without the rule), the speaker's lines about himself, the goal said out loud. If agreement falls below 72%, the added rules confuse more than they settle.
+- **Band.** The tighter reason question should close the coalition gap. It works if the two coalition counts are within 10 of each other and band agreement is 78% or more. Expected direction: Sonnet's coalition falls (its questions and bare facts move to fluid) more than Qwen's moves. If both coalition counts fall under 10, the question is now too tight.
+- **Concessions.** No mark; read by eye. The test: the cure-for-cancer line carries a concession, and lines from the other side that allow older chips to be sold carry one. Lines that give nothing should be "". If more than a third of lines carry a concession, the question is being over-read.
+- Run-to-run spread is about 15% on the side (the two brief runs agreed on 85.5%), so a move under 3 points is not read as a change.
+
+### What happened (draft 6, run 2026-11-20 19:33 to 20:38: Qwen 50 minutes, Sonnet 15)
+
+| | draft 5 (Qwen 5c, Sonnet 4) | draft 6 | mark |
+|---|---|---|---|
+| side, Qwen and Sonnet agree | 75.0% | **70.3%** | 78% works · under 72% harms |
+| band, Qwen and Sonnet agree | 77.9% | **85.5%** | 78% or more |
+| coalition, Qwen · Sonnet | 17 · 36 | **10 · 24** | within 10 of each other |
+| concessions, Qwen · Sonnet | — | **1 · 3** | the cure line has one; under a third of lines |
+
+- **Band: works.** The tighter reason question raised agreement by 7.6 points. The coalition gap narrowed (19 → 14) but missed the mark; Qwen at 10 is at the edge of too tight.
+- **Concessions: works.** Both readers gave the cure-for-cancer line one ("China's gain is not America's loss"). Sonnet also: Huawei's record year, America's lost China share. Nothing over-read.
+- **Side: harm by the mark, and all of it on Qwen.** Sonnet's side answers are 90.7% the same as in draft 4. Of the 18 lines that agreed in draft 5 and no longer do:
+  - 10 are scandal lines (Lovely, Ball: "the scandal of the century", "The White House knew about it") that Qwen moved from shadow to frustrated. It read the new rule 7 (a bad state stated as fact) as covering wrongdoing.
+  - 6 are lines that only urge or hope ("go as fast as we can", "work with each other") that Qwen read realized. Every one of its reasons uses "implying".
+- Both causes are in how the draft 6 rules were worded, not in the rulings themselves.
+
+## Draft 6b — two wordings fixed (prediction written 2026-11-21, before the run)
+
+**Change:** rule 7 is limited to the object's own condition; wrongdoing, a scandal, who knew what stay shadow. Rule 2 gains: a line that only urges takes no side unless it names a cost or gain (rule 3), and the test, "if you can reach a side only by saying what the line implies, it takes no side". Brief v4 = v3 plus a sixth thing not to do (the same test). Grammar key g7. The band answers of draft 6 are reused as they are, so only the side can move. Both readers re-read the side question.
+
+**Prediction.**
+- It works if side agreement is back to 75% or more, with the 10 scandal lines shadow for Qwen and the 6 urging lines neither.
+- It is the right fix but not enough if agreement lands between 72% and 75%.
+- It costs something if Sonnet's side answers move by more than 5% from draft 6 (the new words should change little for Sonnet), or if Qwen's neither passes 80.
+
+### What happened (draft 6b, run 2026-11-21 09:06 to 09:26: Qwen 17 minutes, Sonnet 3)
+
+| | draft 5 | draft 6 | draft 6b | mark |
+|---|---|---|---|---|
+| side, Qwen and Sonnet agree | 75.0% | 70.3% | **75.0%** | 75% or more |
+| band, Qwen and Sonnet agree | 77.9% | 85.5% | **85.5%** (the same answers) | |
+| the 10 scandal lines, Qwen shadow | — | 0 | **9** | 10 |
+| the 6 urging lines, Qwen neither | — | 0 | **4** | 6 |
+| Sonnet's side, changed from draft 6 | | | **5.8%** | 5% or less |
+
+- **Works by the mark.** Side agreement is back to 75%, and draft 6's band gain (85.5%) and the concession answers are kept. Draft 6b is the standing draft: on the Jensen set it matches draft 5 on the side and is 7.6 points better on the band.
+- **Sonnet moved 10 lines, a little past the 5% mark.** Most are not the kinds the new words address (Patel's zero-day line, "national treasures", "the leadership fights"), so this looks like Sonnet's own spread more than the wording. Noted, not acted on.
+- **Qwen's "implying" is not gone.** Six lines Qwen still reads frustrated where Sonnet reads shadow, and its reason uses "implies" in each (Bessent and Lutnick, "Nvidia is in this weakened position"). The brief's sixth rule reduced it, did not end it.
+- **Still loose:** coalition, Qwen 10 and Sonnet 24. Qwen reads realized where Sonnet reads neither on 11 lines, now the largest single disagreement.
+- **Next by the workflow:** draft 6b is the third draft since the last grid (4 → 5 → 6), so the full grid (Gemma and DeepSeek too) is due as a checkpoint.
+
+## Checkpoint — the grid under draft 6b (run 2026-11-22: Gemma 11:54–16:51, DeepSeek 16:51–21:50)
+
+| | draft 4 grid | draft 6b grid |
+|---|---|---|
+| band, all four readers agree | 51% | **73%** |
+| side, all four readers agree | 45% | **48%** |
+| side, Sonnet–Gemma · Sonnet–Qwen · Sonnet–DeepSeek | 79 · 65 · 58 | **80 · 75 · 62** |
+| band, Sonnet–Gemma · Sonnet–Qwen · Sonnet–DeepSeek | 77 · 78 · 75 | **85 · 85 · 82** |
+| coalition: Sonnet · Qwen · Gemma · DeepSeek | 36 · 23 · 63 · 17 | **24 · 10 · 24 · 4** |
+
+- **The band question is settled enough.** All four agree on 73% of lines, from 51%. Gemma, which put 63 lines in coalition, now matches Sonnet exactly (24 coalition, 10 denominated). The coalition gap is now Qwen (10) and DeepSeek (4) reading too few, not Gemma reading too many.
+- **The side moved less.** All four agree on 48%. DeepSeek is the outlier: it reads 58 lines realized where the others read 26 to 34, and agrees with Sonnet on only 62%. Qwen is second (realized 34, frustrated 43).
+- **Where this leaves the drafts:** the band is near done; the work left is the side, and in it the lines Qwen and DeepSeek read realized where Sonnet and Gemma read neither. DeepSeek stays tracked for a later phase, as ruled 11-18.

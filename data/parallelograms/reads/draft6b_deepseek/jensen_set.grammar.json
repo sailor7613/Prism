@@ -1,0 +1,2875 @@
+{
+ "hash": "e50e5a74d831-g7",
+ "at": "2026-11-22T17:48:58",
+ "usage": {
+  "model": "local:deepseek",
+  "input_tokens": 75025,
+  "output_tokens": 35984,
+  "calls": 22
+ },
+ "fixedLines": true,
+ "reader": "local:deepseek",
+ "cutsFrom": "data/parallelograms/baselines/sonnet_2026-11-17_jensen/jensen_set.grammar.json",
+ "missing": 0,
+ "lines": [
+  {
+   "post": 0,
+   "quote": "how is shipping chips to China keeping the US ahead if they’re bottlenecked on compute?",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "shipping chips to China",
+    "keeping the US ahead",
+    "bottlenecked on compute"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Questions the effectiveness of shipping chips to China in keeping the US ahead."
+  },
+  {
+   "post": 1,
+   "quote": "We've got Vera Rubin for the United States.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Vera Rubin",
+    "United States"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Affirms Vera Rubin as part of US strength."
+  },
+  {
+   "post": 1,
+   "quote": "Now, am I in the United States? Do you consider me part of the United States?",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "part of the United States"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Questions identity, which is shadow."
+  },
+  {
+   "post": 2,
+   "quote": "You consider Nvidia a United States company?",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Nvidia a United States company"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Questions company's identity, which is shadow."
+  },
+  {
+   "post": 2,
+   "quote": "why is it that we don't come up with a regulation that's more balanced so that Nvidia can win around the world instead of giving up the world?",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "more balanced regulation",
+    "win around the world",
+    "giving up the world"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Criticizes current regulation for causing loss of market."
+  },
+  {
+   "post": 2,
+   "quote": "The chip industry is part of the American ecosystem. It's part of American technology leadership.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "chip industry",
+    "American ecosystem",
+    "technology leadership"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Affirms chip industry's role in US leadership."
+  },
+  {
+   "post": 2,
+   "quote": "your policy, your philosophy, leads to the United States giving up a vast part of the world's market?",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "policy",
+    "giving up",
+    "world's market"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Criticizes policy for leading to market loss."
+  },
+  {
+   "post": 3,
+   "quote": "Fundamentally, you're giving them this capability.",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "giving them this capability"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "Accuses of enabling China's capability."
+  },
+  {
+   "post": 4,
+   "quote": "Comparing AI to anything that you just mentioned is lunacy.",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "lunacy",
+    "comparison"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Dismisses the analogy as illogical."
+  },
+  {
+   "post": 5,
+   "quote": "We still don't want to send enriched uranium to other countries.",
+   "subject": "Dwarkesh Patel",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "don't want",
+    "enriched uranium"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Argues against exporting enriched uranium."
+  },
+  {
+   "post": 6,
+   "quote": "enriched uranium is like compute",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "enriched uranium",
+    "compute"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Draws analogy between enriched uranium and compute."
+  },
+  {
+   "post": 7,
+   "quote": "It's a lousy analogy. It's an illogical analogy.",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "lousy",
+    "illogical"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Dismisses the analogy as poor."
+  },
+  {
+   "post": 8,
+   "quote": "if that compute can run a model that can do zero-day exploits against all American software, how is that not a weapon?",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "zero-day exploits",
+    "weapon"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Suggests compute can be weaponized, threatening US standing."
+  },
+  {
+   "post": 9,
+   "quote": "the way to solve that problem is to have dialogues with the researchers and dialogues with China",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "dialogues",
+    "researchers",
+    "China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Proposes dialogue to maintain US lead."
+  },
+  {
+   "post": 9,
+   "quote": "the United States is ahead",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "United States is ahead"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States US is ahead in AI."
+  },
+  {
+   "post": 9,
+   "quote": "Conceding the entire market is not going to allow the United States to win the technology race long-term",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "conceding",
+    "win the race"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Argues against conceding the market to maintain US lead."
+  },
+  {
+   "post": 10,
+   "quote": "how does selling them chips now help us win in the long term?",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "help us win",
+    "long term"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is a question about the object's condition."
+  },
+  {
+   "post": 10,
+   "quote": "China will still make their version of EVs and they're dominating. Their smartphones are dominating.",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "dominating",
+    "EVs",
+    "smartphones"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line states that China is dominating in certain areas."
+  },
+  {
+   "post": 11,
+   "quote": "you acknowledged that Nvidia's position is very different. You used words like moat.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "different",
+    "moat"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line discusses Nvidia's position without taking a side."
+  },
+  {
+   "post": 11,
+   "quote": "50% of the AI developers are in China. The United States should not give that up.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "50%",
+    "give that up"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line emphasizes China's strength in AI developers."
+  },
+  {
+   "post": 12,
+   "quote": "that doesn't prevent American labs from also being able to use other accelerators",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "prevent",
+    "American labs"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about American labs' capabilities, not taking a side."
+  },
+  {
+   "post": 13,
+   "quote": "our share is growing, not decreasing",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "growing",
+    "not decreasing"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line states that the share is growing."
+  },
+  {
+   "post": 13,
+   "quote": "The premise that even if we competed in China, that we're going to lose that market anyways",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "premise",
+    "lose that market"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line presents a premise without taking a side."
+  },
+  {
+   "post": 13,
+   "quote": "These ecosystems are hard to replace.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "hard to replace"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line implies that ecosystems are strong, supporting US standing."
+  },
+  {
+   "post": 13,
+   "quote": "I don't think the United States is a loser.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "the United States is a loser"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "He affirms that the United States is not a loser."
+  },
+  {
+   "post": 14,
+   "quote": "I'll move on.",
+   "subject": "Dwarkesh Patel",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "move on"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about changing the subject, not the object."
+  },
+  {
+   "post": 15,
+   "quote": "You don't have to move on. I'm enjoying it.",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "move on"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about the conversation, not the object."
+  },
+  {
+   "post": 16,
+   "quote": "maybe the crux… and thanks for walking around the circles with me",
+   "subject": "Dwarkesh Patel",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "crux"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about discussing the discussion, not the object."
+  },
+  {
+   "post": 17,
+   "quote": "Your argument starts from extremes. That if we give them any compute at all in this narrow moment, we will lose everything.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "argument starts from extremes"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "He argues against extreme views, supporting US standing."
+  },
+  {
+   "post": 18,
+   "quote": "what my argument is",
+   "subject": "Dwarkesh Patel",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "my argument"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about his argument, not the object."
+  },
+  {
+   "post": 19,
+   "quote": "any marginal compute is helpful",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "marginal compute is helpful"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "He states that more compute is beneficial."
+  },
+  {
+   "post": 20,
+   "quote": "any marginal sales for the American technology industry is beneficial",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "marginal sales is beneficial"
+   ],
+   "credulity": "engaged",
+   "kind": "statement",
+   "why": "He affirms that sales help the US."
+  },
+  {
+   "post": 21,
+   "quote": "it enables a weapon of a kind",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "enables a weapon of a kind"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Explains how AI chips can be used as weapons."
+  },
+  {
+   "post": 22,
+   "quote": "you might as well say it to microprocessors and DRAMs",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "you might as well say it to microprocessors and DRAMs"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Argues that AI chips are no different from other technologies."
+  },
+  {
+   "post": 23,
+   "quote": "we do have export controls on the technology that is relevant to making the most advanced DRAM",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "export controls on the technology...DRAM"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that export controls exist for advanced DRAM technology."
+  },
+  {
+   "post": 24,
+   "quote": "We sell a lot of DRAM and CPUs into China, and I think it's right.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "sell a lot...China, and I think it's right"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Supports selling AI chips to China."
+  },
+  {
+   "post": 25,
+   "quote": "is that something where we want to minimize China's ability to get there first, to deploy it widely?",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "minimize China's ability...deploy it widely"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks whether we want to minimize China's AI capabilities."
+  },
+  {
+   "post": 26,
+   "quote": "We want the United States to be ahead.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "we want the United States to be ahead"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States the goal of U.S. leadership in AI."
+  },
+  {
+   "post": 26,
+   "quote": "We can control that.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "we can control that"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Confident in U.S. ability to maintain AI leadership."
+  },
+  {
+   "post": 27,
+   "quote": "How do we control that if the chips are already there and they're using them to train that model?",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "chips are already there...train that model"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Questions the effectiveness of current AI chip controls."
+  },
+  {
+   "post": 28,
+   "quote": "We have tons of compute. We have tons of AI researchers.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "tons of compute",
+    "tons of AI researchers"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that they have ample resources and expertise in AI."
+  },
+  {
+   "post": 28,
+   "quote": "We're racing as fast as we can.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "racing as fast as we can"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Expresses commitment to moving quickly in AI development."
+  },
+  {
+   "post": 29,
+   "quote": "we have more nuclear weapons than anybody else, but we don't want to send enriched uranium anywhere.",
+   "subject": "Dwarkesh Patel",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "more nuclear weapons",
+    "don't want to send enriched uranium"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Talks about nuclear weapons, unrelated to AI standing."
+  },
+  {
+   "post": 30,
+   "quote": "it's a chip that they can make themselves",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "chip they can make themselves"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that the chip can be produced by the buyers themselves."
+  },
+  {
+   "post": 31,
+   "quote": "there's a reason they're buying it from you",
+   "subject": "Dwarkesh Patel",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "reason they're buying it from you"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks about the reason for purchasing, not directly about standing."
+  },
+  {
+   "post": 31,
+   "quote": "bottlenecked on compute",
+   "subject": "Dwarkesh Patel",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "bottlenecked on compute"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that they are bottlenecked on compute, indicating a limitation."
+  },
+  {
+   "post": 32,
+   "quote": "our chips are better. On balance, our chips are better.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "chips are better",
+    "on balance"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that their chips are better, indicating a positive standing."
+  },
+  {
+   "post": 32,
+   "quote": "Huawei had a record year",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "Huawei had a record year"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that Huawei had a record year, indicating positive performance."
+  },
+  {
+   "post": 33,
+   "quote": "we used to have a very large share in that market, and we no longer have a large share",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "we used to have a very large share",
+    "we no longer have a large share"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Acknowledges loss of market share"
+  },
+  {
+   "post": 33,
+   "quote": "To concede that market for the United States technology industry is a disservice to our country.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "concede that market",
+    "disservice to our country"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Conceding market is bad for US"
+  },
+  {
+   "post": 33,
+   "quote": "all for the benefit of one company. It makes no sense to me.",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "benefit of one company",
+    "makes no sense"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Critique of benefitting one company"
+  },
+  {
+   "post": 34,
+   "quote": "The elephant in the room here is the race with China.",
+   "subject": "Jo Ling Kent",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "elephant in the room",
+    "race with China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Highlights the competition with China"
+  },
+  {
+   "post": 35,
+   "quote": "we can't slow down AI progress lest we lose to China",
+   "subject": "Jo Ling Kent",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "can't slow down AI progress",
+    "lest we lose to China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Urging to not slow down AI to maintain lead"
+  },
+  {
+   "post": 36,
+   "quote": "Do you think that's a valid argument?",
+   "subject": "Jo Ling Kent",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "valid argument"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks for validation of the argument"
+  },
+  {
+   "post": 37,
+   "quote": "we want America to be as prosperous as we can",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "America to be as prosperous"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Expresses a desire for prosperity"
+  },
+  {
+   "post": 37,
+   "quote": "everybody in America pulls in the same direction as hard as we can",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "pulls in the same direction",
+    "as hard as we can"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Emphasizes unity for success"
+  },
+  {
+   "post": 38,
+   "quote": "So should we slow down and would that affect the race with China?",
+   "subject": "Jo Ling Kent",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "should we slow down",
+    "affect the race with China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks if slowing down affects the race with China."
+  },
+  {
+   "post": 39,
+   "quote": "we should go as fast as we can irrespective of anybody else",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "go as fast as we can",
+    "irrespective of anybody else"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Urges going as fast as possible, indicating a proactive stance."
+  },
+  {
+   "post": 39,
+   "quote": "if China were to discover a cure for cancer, it's great for us",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "China's discovery",
+    "great for us"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that China's advancements are beneficial, indicating realized."
+  },
+  {
+   "post": 39,
+   "quote": "we're packing heat as a nation. This is a nation with extraordinary capability, extraordinary innovators.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "packing heat as a nation",
+    "extraordinary capability"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Highlights national capability, indicating realized."
+  },
+  {
+   "post": 39,
+   "quote": "the technology industry is absolutely one of our national treasures",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "technology industry",
+    "national treasures"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States the industry's importance, indicating realized."
+  },
+  {
+   "post": 40,
+   "quote": "we would never ever and never should ship products before they're ready",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "never ship products before ready"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States caution without indicating standing."
+  },
+  {
+   "post": 40,
+   "quote": "everybody's expecting us to succeed and help America be as prosperous as possible",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "everybody's expecting us to succeed"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Expresses expectation of success, indicating realized."
+  },
+  {
+   "post": 41,
+   "quote": "if we slow down the rate of AI development, then that could do huge damage to the American economy, the American military and put the United States at a disadvantage",
+   "subject": "Jo Ling Kent",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "slow down AI",
+    "huge damage to economy"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Warns of negative impact, indicating frustration."
+  },
+  {
+   "post": 41,
+   "quote": "do you think that we should be pacing the development of AI right now given where we are visav China?",
+   "subject": "Jo Ling Kent",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "pacing the development of AI",
+    "given where we are visav China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A question about pacing AI development, not taking a side."
+  },
+  {
+   "post": 42,
+   "quote": "he is one of the great American patriots",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "great American patriots"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A statement about the speaker's character, not about the object."
+  },
+  {
+   "post": 42,
+   "quote": "he wants America to go as fast as we can, but not faster than we should",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "America to go as fast as we can, but not faster than we should"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A statement about pacing AI development, not taking a side."
+  },
+  {
+   "post": 42,
+   "quote": "the companies that are developing these technologies are perfectly incentivized to do the right thing",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "companies that are developing these technologies are perfectly incentivized to do the right thing"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A statement that supports the object, leans realized."
+  },
+  {
+   "post": 43,
+   "quote": "do not sell powerful AI chips or semiconductor manufacturing equipment to China. What's your response to that?",
+   "subject": "Jo Ling Kent",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "do not sell powerful AI chips or semiconductor manufacturing equipment to China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A statement about not selling chips, not taking a side."
+  },
+  {
+   "post": 44,
+   "quote": "we have to make sure that that uh technology that's created by America advantage America first",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "technology that's created by America advantage America first"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A statement that supports the object, leans realized."
+  },
+  {
+   "post": 44,
+   "quote": "Vera Rubin is shipping in volume production. Um we are several years ahead of China with this technology",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "we are several years ahead of China with this technology"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A statement that supports the object, realized."
+  },
+  {
+   "post": 44,
+   "quote": "we need every single one of these layers, everybody in America to win",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "we need every single one of these layers, everybody in America to win"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "A statement that supports the object, leans realized."
+  },
+  {
+   "post": 45,
+   "quote": "so you disagree with Daario's position that we should not sell?",
+   "subject": "Jo Ling Kent",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "disagree",
+    "Daario's position",
+    "sell"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks about another's position."
+  },
+  {
+   "post": 46,
+   "quote": "I completely disagree that uh we should ban China of all American products.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "disagree",
+    "ban China",
+    "American products"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Supports competition over banning."
+  },
+  {
+   "post": 46,
+   "quote": "Serving the world, having market have capturing market share, capturing economic prosperity, that's all about competing.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "serving the world",
+    "capturing market share"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Emphasizes competition's benefits."
+  },
+  {
+   "post": 46,
+   "quote": "not seed entire markets. Our market is not his to seed.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "not seed markets",
+    "market is ours"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Stresses market control."
+  },
+  {
+   "post": 47,
+   "quote": "you will be attending the state dinner with President Xiinping of China. Is that correct?",
+   "subject": "Jo Ling Kent",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "attending state dinner",
+    "President Xiinping"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Inquires about an event."
+  },
+  {
+   "post": 48,
+   "quote": "what will you say to the president of China?",
+   "subject": "Jo Ling Kent",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "say to president"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks about a conversation."
+  },
+  {
+   "post": 49,
+   "quote": "it would be good for um all countries that are developing and advancing AI to do so in a way where we share best practices",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "share best practices",
+    "advancing AI"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Promotes collaboration."
+  },
+  {
+   "post": 50,
+   "quote": "we ought to make sure that we work with each other as much as we can",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "work with each other",
+    "collaborate"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Stresses the importance of collaboration."
+  },
+  {
+   "post": 50,
+   "quote": "There are, of course, areas where we we can't work together for whatever reason.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "areas where we can't work together",
+    "whatever reason"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States there are areas where collaboration isn't possible."
+  },
+  {
+   "post": 51,
+   "quote": "Jensen Huang out at Nvidia. He resigned before he was fired",
+   "subject": "Breaking Points host",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Jensen Huang out at Nvidia",
+    "resigned before he was fired"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Announces Jensen Huang's resignation."
+  },
+  {
+   "post": 51,
+   "quote": "joining us now to break down what all of this means is Garrison Lovely",
+   "subject": "Breaking Points host",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "breaking down what all of this means",
+    "Garrison Lovely"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "Introduces a guest to discuss the topic."
+  },
+  {
+   "post": 52,
+   "quote": "Nvidia's stock has dropped another 10%",
+   "subject": "Breaking Points host",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "stock has dropped another 10%"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Reports a drop in Nvidia's stock."
+  },
+  {
+   "post": 52,
+   "quote": "What the hell happened and what is it going to mean?",
+   "subject": "Breaking Points host",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "What happened",
+    "what is it going to mean"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks for clarification on the situation."
+  },
+  {
+   "post": 53,
+   "quote": "Jensen Huang has been selling over $7 billion of AI chips to a network of fraudulent smuggling companies",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "selling over $7 billion of AI chips",
+    "fraudulent smuggling companies"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Reports illegal sales impacting standing."
+  },
+  {
+   "post": 53,
+   "quote": "Trump learned about all of this and then let Jensen come with him to China",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "Trump learned about all of this",
+    "let Jensen come with him to China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States Trump's involvement in sales to China."
+  },
+  {
+   "post": 53,
+   "quote": "It's the scandal of the century.",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "scandal of the century"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Highlights the scandal's significance."
+  },
+  {
+   "post": 54,
+   "quote": "the chips are so essential to progress for American AI companies",
+   "subject": "Breaking Points host",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "chips are essential",
+    "American AI companies"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Shows America's standing through essential chips."
+  },
+  {
+   "post": 55,
+   "quote": "Jensen Huang was the most powerful man in AI because he built Nvidia",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "most powerful man",
+    "built Nvidia"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Focuses on personal power, not object."
+  },
+  {
+   "post": 55,
+   "quote": "Nvidia ships from the very beginning of the deep learning revolution back in 2012 were the best way to train and run these large language models",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "best way to train",
+    "large language models"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Highlights Nvidia's dominance."
+  },
+  {
+   "post": 55,
+   "quote": "will still be formidable in developing the most advanced chips in the world",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "still formidable",
+    "most advanced chips"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Continued leadership in AI."
+  },
+  {
+   "post": 55,
+   "quote": "everything touching him and everything close to him has been discredited including these arguments around we need to sell more chips to China to beat China",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "X",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "discredited",
+    "sell more chips to China"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Discredits strategy, suggesting frustration."
+  },
+  {
+   "post": 56,
+   "quote": "What took him out, I mentioned this before but just to reiterate for people, is another affair was revealed.",
+   "subject": "Krystal Ball",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "another affair was revealed"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Personal downfall, not object."
+  },
+  {
+   "post": 56,
+   "quote": "how likely it was they knew about this smuggling operation, whether the woman involved was really a Chinese spy or not",
+   "subject": "Krystal Ball",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "knew about this smuggling",
+    "Chinese spy"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Potential corruption, not object."
+  },
+  {
+   "post": 56,
+   "quote": "let's play C6 here guys",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "F",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "let's play C6 here guys"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "Introduces clip without info."
+  },
+  {
+   "post": 57,
+   "quote": "you're now talking to the planet",
+   "subject": "All-In host",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "you're now talking to the planet"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about talking to the planet."
+  },
+  {
+   "post": 58,
+   "quote": "Jensen can develop the most complex computer chip in the world that nobody can copy for 10 years",
+   "subject": "Donald Trump",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Jensen can develop the most complex computer chip in the world that nobody can copy for 10 years"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about Jensen's chip development strength."
+  },
+  {
+   "post": 58,
+   "quote": "The data centers are great and they make people wealthy and they make states wealthy and it's the oil of the next 20 25 years.",
+   "subject": "Donald Trump",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "The data centers are great and they make people wealthy and they make states wealthy and it's the oil of the next 20 25 years."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about the importance of data centers."
+  },
+  {
+   "post": 58,
+   "quote": "they're just playing right into the hands of a lot of people that don't want to see it happen and that could be political people and it could also be China. And we're not going to let that happen.",
+   "subject": "Donald Trump",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "they're just playing right into the hands of a lot of people that don't want to see it happen and that could be political people and it could also be China. And we're not going to let that happen."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about opposing China's influence."
+  },
+  {
+   "post": 59,
+   "quote": "We're not going to let that happen, sir.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "We're not going to let that happen, sir."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about not letting China take over."
+  },
+  {
+   "post": 60,
+   "quote": "This was a very close relationship between Jensen and Trump.",
+   "subject": "Krystal Ball",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "This was a very close relationship between Jensen and Trump."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about their relationship."
+  },
+  {
+   "post": 60,
+   "quote": "What do we know Garrison specifically about when Trump knew",
+   "subject": "Krystal Ball",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "What do we know Garrison specifically about when Trump knew"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about when Trump knew."
+  },
+  {
+   "post": 61,
+   "quote": "Trump was first briefed in October 2025 that Alice Wong and Jensen Wong had a relationship and was presumed to be a spy.",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Trump was first briefed in October 2025 that Alice Wong and Jensen Wong had a relationship and was presumed to be a spy."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's a statement about Trump's briefing."
+  },
+  {
+   "post": 62,
+   "quote": "it was buying 4 and 1/2 billion dollars of Nvidia chips and was the top customer in all of Southeast Asia",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "4 and 1/2 billion dollars",
+    "top customer",
+    "Southeast Asia"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States a Chinese company's large purchase from Nvidia, suggesting China's strength."
+  },
+  {
+   "post": 62,
+   "quote": "so many companies in China have headquarters in Singapore or are doing remote compute from Southeast Asian countries",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "companies in China",
+    "headquarters in Singapore",
+    "remote compute"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Explains Chinese companies' operations in Southeast Asia, suggesting China's AI strength."
+  },
+  {
+   "post": 62,
+   "quote": "the fact that they got all these ships seems entirely a result of Jensen's relationship with this woman",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "result of Jensen's relationship",
+    "this woman"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Accuses Jensen of a relationship affecting sales, which is about blame."
+  },
+  {
+   "post": 62,
+   "quote": "Jensen has consistently said there's no smuggling. There's no evidence of chip diversions. And that's clearly now, right?",
+   "subject": "Jensen",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "no smuggling",
+    "no evidence",
+    "clearly now"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Supports the idea that there's no issue with chip sales."
+  },
+  {
+   "post": 62,
+   "quote": "this was an effectively criminal operation that was being covered up by Nvidia",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "criminal operation",
+    "covered up by Nvidia"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Accuses Nvidia of covering up, which is about blame."
+  },
+  {
+   "post": 62,
+   "quote": "the fact that Trump is just fine with all this is I mean even for him [laughter] is pretty amazing",
+   "subject": "Trump",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "Trump is just fine",
+    "pretty amazing"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Questions Trump's approval, suggesting a problem."
+  },
+  {
+   "post": 63,
+   "quote": "if they're cooking the books in terms of what they're reporting, that person seems like they would be potentially implicated here too",
+   "subject": "Breaking Points host",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "cooking the books",
+    "potentially implicated"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Accuses of financial wrongdoing, which is about blame."
+  },
+  {
+   "post": 64,
+   "quote": "the general counsel Tim Teeter is the person who I've seen invoked in uh other situations",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "general counsel Tim Teeter",
+    "invoked in other situations"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Accuses Tim Teeter of involvement, which is about blame."
+  },
+  {
+   "post": 65,
+   "quote": "the kind of obvious explanation that this was controlled espionage, counter espionage",
+   "subject": "Breaking Points host",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "controlled espionage",
+    "counter espionage"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line describes a mechanism (espionage) but does not directly take a side on the object's condition."
+  },
+  {
+   "post": 65,
+   "quote": "how vulnerable they are, how prolific espionage might be?",
+   "subject": "Breaking Points host",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "how vulnerable they are",
+    "how prolific espionage might be?"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line asks a question about vulnerability without taking a side."
+  },
+  {
+   "post": 66,
+   "quote": "this is the first [snorts] incredibly consequential general purpose technology with national security implications being developed in the private sector",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "incredibly consequential general purpose technology",
+    "private sector"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line describes the context but does not take a side."
+  },
+  {
+   "post": 67,
+   "quote": "the idea that, you know, they're able to keep any of these important secrets from China or other state actors is laughable",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "they're able to keep any of these important secrets from China",
+    "laughable"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line suggests the US is vulnerable, implying frustration."
+  },
+  {
+   "post": 67,
+   "quote": "Nvidia has been pushing to allow China access to more chips",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "Nvidia has been pushing to allow China access to more chips"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line implies the US is ceding ground to China."
+  },
+  {
+   "post": 67,
+   "quote": "the chips are, you know, the thing that really can determine who has the best models",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "chips are, you know, the thing that really can determine who has the best models"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line describes a mechanism but does not take a side."
+  },
+  {
+   "post": 67,
+   "quote": "if your position is that the United States needs to stay ahead of China, then letting them have access to these chips while also letting these companies run such a loose ship is just a completely incoherent mess",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "letting them have access to these chips",
+    "incoherent mess"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line implies the US is losing ground to China."
+  },
+  {
+   "post": 67,
+   "quote": "we should not be racing to build these labor replacing machines",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "none",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "we should not be racing to build these labor replacing machines"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the speaker's position, not the object."
+  },
+  {
+   "post": 67,
+   "quote": "downstream of uh corruption and a Chinese spy uh affair",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "downstream of corruption",
+    "Chinese spy affair"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It discusses corruption and a spy affair, which are about who is to blame."
+  },
+  {
+   "post": 68,
+   "quote": "there's a reason why this information is being really pushed forward now right after the election too",
+   "subject": "Krystal Ball",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "reason information is pushed",
+    "after the election"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It speculates on why information is being pushed after the election."
+  },
+  {
+   "post": 68,
+   "quote": "The White House knew about it. Nvidia knew about it. Jensen knew about it and no one did anything about it.",
+   "subject": "Krystal Ball",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "White House knew",
+    "no one did anything"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It reports who knew about the situation and that no action was taken."
+  },
+  {
+   "post": 68,
+   "quote": "I think a restriction on these these chips and control over them is important",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "restriction on chips",
+    "control over them"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It states the importance of restricting AI chips, a means to maintaining standing."
+  },
+  {
+   "post": 68,
+   "quote": "a deep state plot against Jensen",
+   "subject": "Krystal Ball",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "deep state plot",
+    "against Jensen"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It suggests a conspiracy against Jensen, which is about who is to blame."
+  },
+  {
+   "post": 69,
+   "quote": "So Jensen, David Sachs, Howard Lutnick, those three men have been pushing the administration to loosen these chip restrictions.",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "pushing to loosen",
+    "chip restrictions"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It reports individuals pushing to loosen chip restrictions, a means."
+  },
+  {
+   "post": 69,
+   "quote": "the way they've been lobbying in DC is incredibly aggressive",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "aggressive lobbying"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It describes aggressive lobbying, a means, without indicating standing."
+  },
+  {
+   "post": 69,
+   "quote": "now that Nvidia is in this weakened position, now that Jensen is out",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "weakened position",
+    "Jensen is out"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It indicates a weakened position, suggesting a negative change in standing."
+  },
+  {
+   "post": 69,
+   "quote": "in my book I argue for a bilateral deal with the US and China to stop building these AI models that are designed to replace us",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "bilateral deal",
+    "stop building AI models"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Proposes a deal to end AI development race."
+  },
+  {
+   "post": 70,
+   "quote": "I see this as a a really positive development for people who want an end to this race",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "positive development",
+    "end to this race"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Views the situation as positive for ending the AI race."
+  },
+  {
+   "post": 71,
+   "quote": "Treasury Secretary Scott Bessent confronted Commerce Secretary Howard Lutnick over a failure to place Nvidia customer MegaSpeed on a list of companies that pose national security concerns",
+   "subject": "Treasury Secretary Scott Bessent",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "confronted",
+    "failure to place MegaSpeed"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Reports a confrontation over enforcement."
+  },
+  {
+   "post": 71,
+   "quote": "Lutnick has spent the last year quote unquote undoing efforts by other administration officials to hold MegaSpeed",
+   "subject": "Lutnick",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "undoing efforts",
+    "hold MegaSpeed"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Accuses Lutnick of weakening enforcement."
+  },
+  {
+   "post": 71,
+   "quote": "Howard Lutnick's former company is does a decent bit of business in terms of data centers",
+   "subject": "Howard Lutnick",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "former company",
+    "data centers"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Notes Lutnick's former business interests."
+  },
+  {
+   "post": 72,
+   "quote": "Lutnick doesn't, you know, own any of it anymore, but has hundreds of millions of dollars in Nvidia positions",
+   "subject": "Lutnick",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "hundreds of millions",
+    "Nvidia positions"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Details Lutnick's financial ties to Nvidia."
+  },
+  {
+   "post": 73,
+   "quote": "the dynamics of the Trump administration are kind of weirdly split on this",
+   "subject": "Breaking Points host",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "weirdly split",
+    "Trump administration"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Describes internal administration dynamics."
+  },
+  {
+   "post": 74,
+   "quote": "they have still not put MegaSpeed on the blacklist. This is a company tied to this suspected spy that is clearly just smuggling these chips.",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "not put MegaSpeed",
+    "blacklist"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Highlights failure to blacklist a suspect company."
+  },
+  {
+   "post": 74,
+   "quote": "Singapore held Alice Wong, the suspected spy earlier this year for I think months. And the US did not speak with her",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Singapore held Alice Wong",
+    "US did not speak with her"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about who is to blame."
+  },
+  {
+   "post": 74,
+   "quote": "the frustration and and anger towards Luttig from other members of the administration",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "frustration and anger towards Luttig"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about who is to blame."
+  },
+  {
+   "post": 74,
+   "quote": "Luttig versus all the other cabinet secretaries standing alone with David Sachs",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Luttig versus all the other cabinet secretaries"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about who is to blame."
+  },
+  {
+   "post": 74,
+   "quote": "you can have a rule, but if the people who are supposed to be enforcing it just aren't, then it doesn't really matter very much.",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "rule",
+    "enforcing it just aren't",
+    "doesn't really matter very much"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about the rule being ineffective."
+  },
+  {
+   "post": 74,
+   "quote": "they can legislate new restrictions and there's a bunch that are going into this must-pass defense authorization bill",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "legislate new restrictions",
+    "must-pass defense authorization bill"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about new restrictions being legislated."
+  },
+  {
+   "post": 75,
+   "quote": "they're likely to succeed much more so now that Jensen is been disgraced in this way",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning realized",
+   "lit": [
+    "Jensen is been disgraced",
+    "they're likely to succeed"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about Jensen's disgrace leading to success."
+  },
+  {
+   "post": 76,
+   "quote": "she is already saying we are going to investigate what the hell is going on here",
+   "subject": "Breaking Points host",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "investigate what the hell is going on here"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about who is to blame."
+  },
+  {
+   "post": 77,
+   "quote": "if the department and the agency responsible for enforcement just isn't doing it and the president is shielding the secretary, then it's like you're kind of in this standoff.",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "M",
+   "measure": "standing",
+   "due": null,
+   "z": "leaning frustrated",
+   "lit": [
+    "department and agency responsible for enforcement just isn't doing it",
+    "standoff"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "It's about the enforcement issue leading to a standoff."
+  },
+  {
+   "post": 78,
+   "quote": "Luttig and Trump have known each other for 30 plus years",
+   "subject": "Luttig and Trump",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Luttig and Trump have known each other for 30 plus years"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about past connections."
+  },
+  {
+   "post": 78,
+   "quote": "Lutnick and Epstein were very close as well",
+   "subject": "Lutnick and Epstein",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Lutnick and Epstein were very close as well"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about personal connections."
+  },
+  {
+   "post": 78,
+   "quote": "this scandal is going to keep growing and growing",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "this scandal is going to keep growing and growing"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the object's condition."
+  },
+  {
+   "post": 79,
+   "quote": "he told his wife this is a disgusting man",
+   "subject": "Lutnick and Epstein",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "he told his wife this is a disgusting man"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about who is to blame."
+  },
+  {
+   "post": 80,
+   "quote": "no he went to the island too.",
+   "subject": "Lutnick",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "no he went to the island too."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about his involvement."
+  },
+  {
+   "post": 81,
+   "quote": "Yeah with his daughters I believe if memory serves.",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Yeah with his daughters I believe if memory serves."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about who was there."
+  },
+  {
+   "post": 82,
+   "quote": "There were a bunch of other teenage girls there.",
+   "subject": "Breaking Points host",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "There were a bunch of other teenage girls there."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about who was present."
+  },
+  {
+   "post": 83,
+   "quote": "Oh that makes it that makes it fine.",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Oh that makes it that makes it fine."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the object's condition."
+  },
+  {
+   "post": 83,
+   "quote": "I want to talk to you some about the the leadership fights",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "leadership fights"
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "Introduces a topic without stating anything."
+  },
+  {
+   "post": 83,
+   "quote": "Nvidia is selling off but most of the market is more or less static",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "selling off",
+    "static"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States a fact about the market without taking a side."
+  },
+  {
+   "post": 83,
+   "quote": "Nvidia is like this single point of failure",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "single point of failure"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Describes Nvidia without taking a side."
+  },
+  {
+   "post": 83,
+   "quote": "is this a bubble? When is the bubble going to pop?",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "X",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "bubble",
+    "pop"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Asks a question without taking a side."
+  },
+  {
+   "post": 83,
+   "quote": "Will Jensen Huang's dick pop the AI bubble?",
+   "subject": "Krystal Ball",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Jensen Huang's dick",
+    "AI bubble"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Makes a humorous comment without taking a side."
+  },
+  {
+   "post": 84,
+   "quote": "I apologize on behalf of Crystal Garrison.",
+   "subject": "Emily Jashinsky",
+   "about": "shadow",
+   "touch": "X",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "apologize"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Apologizes without taking a side."
+  },
+  {
+   "post": 85,
+   "quote": "they still have the best chips and the best engineers and researchers making and designing these chips",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "best chips",
+    "best engineers"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "States that Nvidia has the best chips and engineers."
+  },
+  {
+   "post": 85,
+   "quote": "Jensen is synonymous with the company. It he's the public face. He built it. And there's no succession plan.",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "synonymous",
+    "public face"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "Describes Jensen Huang's role without taking a side."
+  },
+  {
+   "post": 85,
+   "quote": "it could end up being good for American AI companies because they want access to those ships",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "good for American AI companies",
+    "access to those ships"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line suggests American AI companies will benefit."
+  },
+  {
+   "post": 85,
+   "quote": "the Nvidia policy was to effectively not just allow China to buy these ships, but to do so at the expense of American companies getting them",
+   "subject": "Garrison Lovely",
+   "about": "object",
+   "touch": "T",
+   "measure": "standing",
+   "due": null,
+   "z": "frustrated",
+   "lit": [
+    "China to buy these ships",
+    "expense of American companies"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line indicates a policy that favors China over American companies."
+  },
+  {
+   "post": 85,
+   "quote": "I thought Jensen was going to be pushed out. And so I, [snorts] you know, got out of uh my index funds earlier this week.",
+   "subject": "Garrison Lovely",
+   "about": "shadow",
+   "touch": "T",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "Jensen was going to be pushed out",
+    "got out of my index funds"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about the speaker's personal action, not the object."
+  },
+  {
+   "post": 86,
+   "quote": "the darkest moment for Chinese AI",
+   "subject": "Rui Ma",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "darkest moment for Chinese AI"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line suggests Chinese AI is struggling, which is good for America."
+  },
+  {
+   "post": 86,
+   "quote": "Getting compute is harder whichever way you go.",
+   "subject": "Rui Ma",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Getting compute is harder"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line suggests it's harder for China to get compute, which is good for America."
+  },
+  {
+   "post": 86,
+   "quote": "Catching up could get a lot more expensive.",
+   "subject": "Rui Ma",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Catching up could get a lot more expensive"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line suggests it's more expensive for China to catch up, which is good for America."
+  },
+  {
+   "post": 86,
+   "quote": "Now, it feels like every six months it is a \"darkest moment\" for Chinese AI.",
+   "subject": "Rui Ma",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "every six months it is a 'darkest moment' for Chinese AI"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line suggests repeated challenges for Chinese AI, which is good for America."
+  },
+  {
+   "post": 86,
+   "quote": "But I think these are real concerns.",
+   "subject": "Rui Ma",
+   "about": "object",
+   "touch": "F",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "these are real concerns"
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line acknowledges real concerns about Chinese AI, which are good for America."
+  },
+  {
+   "post": 86,
+   "quote": "We'll focus on this topic at @techbuzzchina (and present some hope, I think) next week.",
+   "subject": "Rui Ma",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "We'll focus on this topic at @techbuzzchina (and present some hope, I think) next week."
+   ],
+   "credulity": "none",
+   "kind": "teaser",
+   "why": "The line announces a future discussion but does not take a side."
+  },
+  {
+   "post": 87,
+   "quote": "Nowhere but in America could a company like NVIDIA be possible.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "Nowhere but in America could a company like NVIDIA be possible."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line supports America's leadership in AI."
+  },
+  {
+   "post": 87,
+   "quote": "I did not live up to the standards expected of everyone at NVIDIA, and I have made serious mistakes in my personal life.",
+   "subject": "Jensen Huang",
+   "about": "shadow",
+   "touch": "O",
+   "measure": "shadow",
+   "due": null,
+   "z": "neither",
+   "lit": [
+    "I did not live up to the standards expected of everyone at NVIDIA, and I have made serious mistakes in my personal life."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line is about personal failings, not the object."
+  },
+  {
+   "post": 87,
+   "quote": "If the Board of Directors decides that my return is in the best interest of our shareholders, our employees, the company, and America, I would be honored to answer these calls and return as CEO.",
+   "subject": "Jensen Huang",
+   "about": "object",
+   "touch": "O",
+   "measure": "standing",
+   "due": null,
+   "z": "realized",
+   "lit": [
+    "If the Board of Directors decides that my return is in the best interest of our shareholders, our employees, the company, and America, I would be honored to answer these calls and return as CEO."
+   ],
+   "credulity": "none",
+   "kind": "statement",
+   "why": "The line supports NVIDIA's role in maintaining America's lead in AI."
+  }
+ ]
+}
