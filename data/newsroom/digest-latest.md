@@ -1,6 +1,6 @@
-# Newsroom digest — 2026-11-22
+# Newsroom digest — 2026-11-23
 
-Register: 176 objects · this scan: 1 new, 2 seen again, 0 returned.
+Register: 176 objects · this scan: 0 new, 1 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,7 +12,7 @@ Register: 176 objects · this scan: 1 new, 2 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Former mayor of Mississippi capital city sentenced to more than 3 years for bribery scheme** — indictment · charged · holder: ? · formed 2026-11-21 · 3 outlets (peak 3) · `obj_x_bribery-capital-city-former`
+- none
 
 ## Watching (47)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
