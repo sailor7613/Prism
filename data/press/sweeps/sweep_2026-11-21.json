@@ -1,0 +1,1653 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-21",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 22,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 2,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 5,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 38,
+   "hits": 13,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 14,
+   "hits": 3,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 5,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 2,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 4,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 11,
+   "hits": 4,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 78,
+   "hits": 11,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 60,
+   "hits": 28,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 3,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Iran says it downed US drones over Hormuz as bid to end war remains stalled",
+   "dek": "Iran reiterates conditions for Hormuz reopening as US slaps sanctions on four Iranians it says acted as &#039;oil trustees&#039;.",
+   "opening": "",
+   "published": "2026-11-21T09:30:24+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/21/irans-irgc-downs-us-drone-over-hormuz-as-efforts-to-end-war-remain-stalled?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz"
+    ],
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Swimmer braves tanker attacks to expose Hormuz contamination",
+   "dek": "As tankers burned in Hormuz, swimmer Lewis Pugh exposed another casualty of the US-Israeli war on Iran: marine life.",
+   "opening": "",
+   "published": "2026-11-21T08:39:35+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/21/swimmer-braves-tanker-attacks-to-expose-hormuz-contamination?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "tanker"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fox News Entertainment Newsletter: King Charles and Prince William united on Prince Harry's royal future",
+   "dek": "The Fox News Entertainment Newsletter brings you the latest Hollywood headlines, celebrity interviews and stories from Los Angeles and beyond.",
+   "opening": "CROWN DIVIDED - Prince William draws hard line on Harry, Meghan’s royal future as King Charles leaves door open: experts TROUBLE MOUNTS - Meghan Markle’s estranged father hit with child sex abuse material charges in Philippines as US case unfolds PUT YOUR ENTERTAINMENT KNOWLEDGE TO THE TEST AND SEE HOW YOU SCORE A ROYAL TIMEOUT - Prince William, Kate Middleton get unexpected help enforcing strict rule for George at elite school: experts FAIRYTALE EVENING - Princess Diana’s legendary White House dance with John Travolta almost didn’t happen LIKE WHAT YOU’RE READING? CLICK HERE FOR MORE ENTERTAINMENT NEWS",
+   "published": "2026-11-21T08:34:14-05:00",
+   "link": "https://www.foxnews.com/entertainment/fox-news-entertainment-newsletter-king-charles-prince-william-united-prince-harrys-royal-future",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accused-child-competent-face": [
+     "child",
+     "markle"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Inside the 'Lion’s Den': Real estate brothers bragged about 'hunting' women before 30-year prison terms",
+   "dek": "New Peacock docuseries &quot;The Wolves of Real Estate&quot; reveals texts where Oren Alexander wrote of &quot;hunting&quot; women before his 30-year sex trafficking sentence.",
+   "opening": "The Alexander brothers sold multimillion-dollar mansions, mingled with the wealthy and lived like real estate golden boys. But behind the luxury and excess, prosecutors said, was a decades-long pattern of sexual abuse. In text messages presented at trial and featured in a new docuseries, the brothers and their associates discussed \"hunting\" for women. \"We are running out of prey,\" Oren wrote in one message. Convicted of federal sex trafficking offenses and each sentenced to 30 years in prison, Tal, Oren and Alon Alexander are the subjects of a new Peacock true crime docuseries, \"The Wolves of Real Estate: The Alexander Brothers,\" which features accounts from women who say the trio sexually assaulted them. ALEXANDER BROTHERS ALLEGEDLY PAID FOR COVERAGE OF SEX-TRAFFICKING TRIAL AS WRITERS DENY FAVORABLE TREATMENT \"The brothers at trial, they said, 'We're not predators, we were just playboys,’\" director Emma Schwartz told Fox News Digital. \"But at the same time, you see their own words. Oren says he would hunt women like he hunts a client. And that's not exactly language about seducing people. The word 'hunt' was used a lot in their messages.\" \"The prosecutor's theory to the jury, and the public, was that these men invited women out to the Hamptons, women who traveled through New York , and the whole purpose was to sexually assault or rape them,\" Schwartz said. \"There were messages like, 'Let's orgy them out,' with a clear intent that sex was involved.\" The Alexander brothers, b",
+   "published": "2026-11-21T08:00:49-05:00",
+   "link": "https://www.foxnews.com/us/inside-lions-den-real-estate-brothers-bragged-hunting-women-before-30-year-prison-terms",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_fraud-oakdale-ringleader-sentenced": [
+     "sentenced",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bill Belichick's Tar Heels hold moneyline edge over Virginia in ACC college football toss-up",
+   "dek": "North Carolina and Virginia both sit at 5-5 in college football with bowl game hopes alive as Bill Belichick&apos;s Tar Heels face the Cavaliers in ACC play.",
+   "opening": "College Football has been wild lately. Every week, with the College Football Playoff rankings coming out, it seems like the entire sports universe is up in arms. Personally, I won’t even pay attention to it for another couple of weeks. It doesn’t make sense to get annoyed at the committee for selecting teams when we still have another few weeks of the regular season remaining. Two teams that won’t make the postseason, but should put on a good show this week, clash as North Carolina takes on Virginia. North Carolina is 5-5 for the season, and they’ve only gone 2-4 in ACC matchups. I do wonder at what point the Tar Heels will become a strong college football program. The expectation with the hiring of Bill Belichick was that he would turn the team into a contender. In Year 2, there hasn’t been a ton of progress. There have been some good games, but there hasn’t been a true statement win or consistent improvement. It will be interesting to see where the team goes from here and how they can improve. The best-case scenario this year is that they end up in a bowl game. BILL BELICHICK EARNS FIRST WIN AGAINST RANKED OPPONENT AS UNC UPSETS NO 25 PITT ON ROAD North Carolina started the season overseas against TCU and won the game 15-10, then came back stateside and won the game 35-3 over East Tennessee. The Tar Heels' toughest stretch of the season was against Clemson, Notre Dame, and Pittsburgh . They only beat Pittsburgh, winning on the road over a ranked team, 21-17. North Carolina ",
+   "published": "2026-11-21T07:54:05-05:00",
+   "link": "https://www.foxnews.com/outkick-betting/bill-belichick-tar-heels-moneyline-edge-virginia-acc-college-football-toss-up",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Senate permitting bill speeds up renewables, divides greens over oil and gas",
+   "dek": "A permitting reform bill in the Senate could help speed the development of renewable energy projects, but it's splitting environmentalists over other provisions that help the oil and gas industry.",
+   "opening": "A permitting reform bill in the Senate could help speed the development of renewable energy projects, but it's splitting environmentalists over other provisions that help the oil and gas industry.",
+   "published": "2026-11-21T07:40:17-05:00",
+   "link": "https://www.npr.org/2026/11/21/nx-s1-6046482/senate-permitting-bill-speeds-up-renewables-divides-greens-over-oil-and-gas",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "permitting",
+     "speed",
+     "energy",
+     "projects"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans face 'brutal' 2028 Senate map after Dems 2026 blue wave",
+   "dek": "Incoming NRSC chair Sen. Bernie Moreno calls the GOP&apos;s 2028 Senate map &quot;absolutely brutal&quot; as Republicans must flip six seats to reclaim majority control.",
+   "opening": "Incoming Senate Republican campaign chairman says the party faces a \"very tough\" road ahead as the GOP aims to take back their majority in 2028 after taking significant losses in the midterms earlier this month. Democrats convincingly grabbed control of the Senate and will hold a large 56-44 majority when the new Congress is sworn in at the start of the new year, they also won control of the House and multiple governors' seats flip from red to blue, as well. In the Senate, the new split means Republicans will need to flip at least six seats in the 2028 elections to win back the majority. That number rises to seven seats if they lose the White House in the next election cycle. One senator told Fox News Digital that Republicans can \"forget 2028.\" \"It is an absolutely brutal map,\" Ohio Sen. Bernie Moreno, the incoming National Republican Senatorial Committee chair, recently told Fox News Digital, as he pointed to the states up for grabs in 2028. SENATE REPUBLICANS FEAR 'BRUTAL' 2028 MAP COULD KEEP DEMOCRATS IN POWER FOR YEARS But the first term senator from Ohio added that in \"politics, things change pretty quickly.\" He's not kidding. At the start of the 2026 cycle , the Democrats faced a steep and narrow path to winning back the majority, but by Election Day the party was able to ride a massive blue wave formed by an extremely favorable political climate to flip nine Senate seats . Senate Majority Leader John Thune, looking ahead to the next election, said in an interview on Fo",
+   "published": "2026-11-21T07:30:54-05:00",
+   "link": "https://www.foxnews.com/politics/republicans-face-brutal-2028-senate-map-after-dems-2026-blue-wave",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "republican",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iraqi Forces Enter Stronghold of Powerful Iran-Backed Militia",
+   "dek": "For the first time in over a decade, army and police units were deployed in territory controlled by the group, Kataib Hezbollah. But it was unclear if it would withdraw its forces.",
+   "opening": "",
+   "published": "2026-11-21T07:11:24+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/world/middleeast/iraq-militia-iran-kataib-hezbollah.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Swift assurances from officials after wave of nationwide outages raises questions, expert says",
+   "dek": "SMET CEO Danny Cooper says ruling out a cyberattack too fast risks missing hackers after the JPMorgan Chase, Microsoft outages and air travel ground stop.",
+   "opening": "Amid a slew of high-profile disruptions that struck major pillars of American life over the past week, including a nationwide ground stop that halted air travel, banking outages at JPMorgan Chase and other lenders, and a service disruption at Microsoft, officials were quick to reassure the public that nothing nefarious was behind the failures. During the ground stop, Homeland Security Secretary Markwayne Mullin said the homeland and the banking system remained secure, insisting that the disruptions showed no signs of a cyberattack or malicious activity. Director of National Intelligence Jay Clayton similarly stated that officials saw no evidence of a coordinated or state-sponsored attack, pointing instead to routine patching and system upgrades. DHS CHIEF TELLS AMERICANS TO 'BREATHE' AMID TECH OUTAGES, INSISTS HOMELAND IS 'SECURE' \"Based on what we know today … these are separate service outages associated with maintenance and technical changes,\" Clayton told the House Homeland Security Committee on Wednesday. \"They are not a coordinated or state-sponsored attack.\" Major companies, including Microsoft and JPMorgan Chase , also attributed the disruptions to internal technical issues or software bugs rather than malicious intrusions. US INFRASTRUCTURE CRUMBLES AS ADVERSARIES POWER UP – LEAVING AMERICANS DANGEROUSLY EXPOSED: CYBER EXPERT To Danny Cooper, CEO of critical infrastructure security firm SMET, the speed with which those assurances were issued poses a problem. \"A blank",
+   "published": "2026-11-21T07:00:44-05:00",
+   "link": "https://www.foxnews.com/us/swift-assurances-officials-wave-nationwide-outages-raises-questions-expert-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "speed",
+     "infrastructure"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Utah mommy blogger Ruby Franke's daughter begs parole board not to let her out of prison: 'she is a monster'",
+   "dek": "Shari Franke revealed weekly nightmares of her mother&apos;s house as she urged the Utah Board of Pardons and Parole to keep Ruby Franke behind bars.",
+   "opening": "Shari Franke, the eldest daughter of disgraced Utah parenting blogger and convicted child abuser Ruby Franke, urged the Utah Board of Pardons and Parole to keep her and former associate Jodi Hildebrandt behind bars ahead of their upcoming parole hearings. Ruby Franke, a mother of six children, and Jodi Hildebrandt ran a joint parenting and lifestyle YouTube channel called ConneXions Classrooms before being arrested and charged with six counts of second-degree aggravated child abuse in a St. George courtroom in December 2023. Both were sentenced in February 2024 to four consecutive prison terms of one to 15 years after pleading guilty to four counts of aggravated child abuse. Under Utah law, both face between four and 30 years behind bars, with the state's parole board determining their release. Ruby Franke and Hildebrandt were charged after police rescued two of Franke's malnourished children from Hildebrandt's home on Aug. 30, 2023. The children had endured severe abuse, including forced physical labor, food deprivation, emotional mistreatment and having their hands and feet bound. Franke and Hildebrandt also told the children they were evil and needed to be punished. MOMMY BLOGGER RUBY FRANKE ASKED DAUGHTER FOR ONE THING BEFORE ARREST: MEMOIR The abuse came to light after one of Franke's children escaped Hildebrandt's home and sought help from a neighbor, who called police. In an Instagram post, Shari Franke shared her statement to the Utah Board of Pardons &amp; Parole, wh",
+   "published": "2026-11-21T07:00:11-05:00",
+   "link": "https://www.foxnews.com/us/utah-mommy-blogger-ruby-franke-daughter-begs-parole-board-not-let-her-out-prison-she-is-monster",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_fraud-oakdale-ringleader-sentenced": [
+     "sentenced",
+     "years"
+    ],
+    "obj_x_accused-child-competent-face": [
+     "child",
+     "face"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Houthis Are the World’s Problem",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-21T07:00:00-05:00",
+   "link": "https://www.theatlantic.com/international/2026/11/houthis-saudi-arabia-war/689532/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Skye Perryman celebrates BLOCKING Trump’s vanity arch indefinitely",
+   "dek": "In a big loss for Donald Trump, a judge blocked the president’s 250-foot “triumphal arch” project indefinitely. Skye Perryman, the President and CEO of Democracy Forward, the firm representing the plaintiff in this case, joins The Weeknight. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our",
+   "opening": "",
+   "published": "2026-11-21T06:40:07+00:00",
+   "link": "https://www.youtube.com/shorts/_-Y71bd6yDg",
+   "videoId": "_-Y71bd6yDg",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "arch"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "joins",
+     "arch"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "judge",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MS NOW reacts to Trump’s 'jovial mood' after meeting with autocrats | COMPILATION",
+   "dek": "President Donald Trump held a press conference at the White House to discuss his relationships with Russian President Vladimir Putin and Chinese President Xi Jinping following his trip to China for a trilateral summit with the two leaders. MS NOW Senior National Security Reporter David Rohde, MS NOW Chief White House Reporter Paula Reid MS NOW Business Analyst Ron Insana and President Emeritus of the Council on Foreign Relations Richard Haass join Katy Tur to react to the presser. Susan Rice, former Ambassador to the United Nations and President Obama’s National Security Advisor, joins Nicolle",
+   "opening": "",
+   "published": "2026-11-21T06:31:45+00:00",
+   "link": "https://www.youtube.com/watch?v=vo_1m0Y66ww",
+   "videoId": "vo_1m0Y66ww",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_x_about-california-ceo-china": [
+     "former",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MICHAEL RUIZ: Half of California's DAs sue Newsom over death row clemency",
+   "dek": "Gavin Newsom faces a lawsuit from 29 district attorneys and victims&apos; families who say his mass clemency for 548 death row inmates skipped victim notice.",
+   "opening": "District attorneys in half of California's 58 counties have signed onto a lawsuit alongside victims' families and law enforcement groups against term-limited Gov. Gavin Newsom over his lame-duck move to grant clemency to 548 death row inmates in the Golden State. Many of the prosecutors had publicly condemned the governor's move shortly after he announced it earlier this month. \"Only this Court can stop the Governor’s disregard of the law — his abuse of power,\" former Sacramento District Attorney Anne Marie Schubert wrote in the 58-page petition, filed Monday. \"His eleventh-hour decision to grant commutation en masse intentionally disregarded the statutorily required notice to the victims of these heinous crimes and the prosecutors who obtained those convictions and penalties, and it even interfered with this Court’s mandatory duty to meaningfully review his decisions.\" Schubert, who said she worked through the weekend on the filing, is the president and CEO of the Criminal Justice Legal Foundation, which is spearheading the lawsuit on behalf of 29 district attorneys and the families of more than two dozen victims. MICHAEL RUIZ: CALIFORNIA PROSECUTORS REVOLT AFTER NEWSOM ORDERS STATE'S WORST KILLERS OFF DEATH ROW Marc Klaas , whose 12-year-old daughter Polly was kidnapped at knifepoint from a slumber party at her mother's house and strangled to death in 1993, is among the petitioners. Polly's killer, Richard Allen Davis, has been on death row since 1996. Other victims' famili",
+   "published": "2026-11-21T06:00:58-05:00",
+   "link": "https://www.foxnews.com/us/michael-ruiz-half-california-das-sue-newsom-death-row-clemency",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_california-commute-death-disaster": [
+     "justice",
+     "newsom",
+     "california",
+     "death"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "former"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "attorney",
+     "former"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Chicago Mayor Brandon Johnson fights to stay on 2027 ballot amid City Hall exodus, credit warning",
+   "dek": "A budget dispute, a third CFO departure in roughly a year and a credit warning are adding pressure as Chicago Mayor Brandon Johnson prepares to defend his record with voters.",
+   "opening": "Chicago Mayor Brandon Johnson (D) is fighting to keep his name on the 2027 ballot at the exact moment his administration is engulfed in a fiscal and leadership meltdown at City Hall. Election officials are reviewing challenges to more than 25,000 of Johnson's nominating signatures ahead of the Feb. 23, 2027, mayoral election — a threshold fight unfolding just days after his third chief financial officer in 10 months abruptly resigned, Standard &amp; Poor's placed Chicago's credit rating on negative watch and the City Council voted 45-5 to investigate three years of city financial reporting for possible misstatements. Despite the mounting pressure, Johnson brushed off questions about whether he will survive the ballot challenge. \"Yeah, feeling just fine, I'm going to be on the ballot,\" Johnson told ABC 7 Chicago about the challenge. \"Looking forward to building the safest, most affordable big city in America, and we're going to continue to do that work.\" CHICAGO'S 12-LANGUAGE BALLOTS MAKE ELECTIONS 'HARDER TO MONITOR,' ILLINOIS GOP CHAIR WARNS Johnson needs 12,500 valid signatures to qualify for Chicago's Feb. 23, 2027, mayoral ballot. Hearing officers at the Chicago Board of Elections are reviewing more than 25,000 signatures challenged by supporters of perennial mayoral candidate Willie Wilson. Johnson's campaign says 6,718 signatures were not challenged and projects that he would finish with 14,788 valid signatures if the first day's 32% validation rate holds. That would pu",
+   "published": "2026-11-21T06:00:49-05:00",
+   "link": "https://www.foxnews.com/politics/chicago-mayor-brandon-johnson-fights-stay-2027-ballot-amid-city-hall-exodus-credit-warning",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "campaign",
+     "ballots"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "campaign",
+     "ballot"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ukraine deals major blow to Putin’s Crimea lifeline, European intel assessment claims",
+   "dek": "Gen. Philip Breedlove says cutting the Kerch Bridge will severely damage Russia&apos;s ability to resupply Crimea as Kyiv lands three strikes in four days.",
+   "opening": "Ukraine 's repeated attacks on the Kerch Bridge, one of Russian President Vladimir Putin's most prized infrastructure projects, have dealt a potentially significant blow to Moscow's military supply routes into occupied Crimea, raising questions about Russia's ability to sustain operations as both sides prepare for a difficult winter. A European intelligence assessment dated Nov. 18 and obtained by Fox News Digital describes Ukraine's latest assault as likely its most successful attack on the heavily defended crossing, following a coordinated campaign targeting Russian air defenses, radar and electronic warfare systems. Ret. Gen. Philip Breedlove, former NATO Supreme Allied Commander Europe, told Fox News Digital the consequences could extend far beyond the destruction of a symbolic Russian landmark. \"The Russians are extremely limited in how they get supplies to Crimea and cutting the Kerch bridge will severely, severely damage their ability to resupply Crimea,\" Breedlove said. UKRAINE HITS PUTIN'S PRIZED BRIDGE IN RECORD DRONE BLITZ AS KREMLIN TELLS LAWMAKERS TO PREPARE FOR 'VICTORY' On Nov. 17, Ukrainian missiles and drones struck the 12-mile bridge linking Russia's Krasnodar region to Crimea, collapsing a major section of the roadway into the Kerch Strait and damaging the adjacent railway. The crossing, inaugurated by Putin in 2018, has served as both a critical transportation link and a symbol of Russia's annexation of Crimea in 2014. According to the European intelligenc",
+   "published": "2026-11-21T06:00:22-05:00",
+   "link": "https://www.foxnews.com/world/ukraine-deals-major-blow-putins-crimea-lifeline-european-intel-assessment-claims",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "projects",
+     "infrastructure"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Alice Huang, Accused of Spying on Nvidia’s CEO, Is Linked to Firms With Ties to China’s Military",
+   "dek": "Companies linked to Alice Huang, the woman at the heart of the Nvidia scandal, are part of a network of Chinese tech firms and defense contractors that need advanced computing power.",
+   "opening": "",
+   "published": "2026-11-21T05:13:03+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/us/politics/nvidia-alice-huang-chips-china.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china",
+     "ties"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "2028 presidential contender under fire from state auditor over waste, fraud, abuse fears: 'Troubling response'",
+   "dek": "Kentucky&apos;s top auditor says $1.5 billion in taxpayer waste was uncovered, accusing Democratic Gov. Andy Beshear of brushing off Medicaid and SNAP findings.",
+   "opening": "Kentucky’s top auditor says her office has uncovered $1.5 billion in taxpayer waste across state government and accused Democratic Gov. Andy Beshear, widely believed to have presidential aspirations, of brushing off the findings instead of helping fix them. \"I wish I could say that I had more support and help from the governor's office in Kentucky, but I haven't really and that's one of the reasons why I'm very public with our reports. I'm very public with our findings, because I need the public's help,\" Ball said in an interview this week at a State Financial Officers Foundation (SFOF) conference in Philadelphia. \"I need the backlash that comes when you see money just being flushed down the toilet, when you see that you're losing money, especially in Medicaid. It's money that should go to people who are actually in need, and we're losing those dollars.\" Over the past year, Ball’s office flagged $836 million in wasteful Medicaid spending that was primarily driven by multi-state concurrent enrollment, where Kentucky continued paying monthly managed care capitation fees for individuals simultaneously enrolled in Medicaid in up to eight other states. TRUMP ADMIN PAUSING OVER $1B IN MEDICAID PAYMENTS TO MINNESOTA, CALIFORNIA OVER FRAUD, COMPLIANCE CONCERNS Her audits also flagged ineligible noncitizens receiving benefits, single Social Security numbers being used by up to 10 people at once, duplicate individual payments, and roughly $100 million in SNAP benefit errors, bringing t",
+   "published": "2026-11-21T05:00:44-05:00",
+   "link": "https://www.foxnews.com/politics/2028-presidential-contender-under-fire-from-state-auditor-over-waste-fraud-abuse-fears-troubling-response",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "concerns"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'PEOPLE ARE AT THEIR WITS' END': Dems blast Trump & GOP for still doing nothing to fix economy",
+   "dek": "As Democrats prepare to take control of Congress, Donald Trump continues to defend his tariffs and has yet to secure a deal to end the Iran War and bring down oil prices. Rep. Chellie Pingree of Maine tells MS NOW's Jonathan Capehart that lowering costs for Americans will be a \"day one priority\" for Democrats. Pingree slammed proposed cuts to SNAP and called the Trump Administration's priorities \"ridiculous\" and \"out of touch\" with the needs of everyday Americans. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! ",
+   "opening": "",
+   "published": "2026-11-21T04:49:12+00:00",
+   "link": "https://www.youtube.com/watch?v=Aoz5xjYYIcY",
+   "videoId": "Aoz5xjYYIcY",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "tariffs": [
+     "tariff"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "It’s a Bill on Energy Permits, but Trump’s Pet Projects Are Part of the Debate",
+   "dek": "The pervasive presence of the president hovers over the bipartisan legislation to speed up construction of energy projects that are advancing through Congress.",
+   "opening": "",
+   "published": "2026-11-21T03:41:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/us/politics/baaja-permitting-bill-trump.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "bipartisan",
+     "speed",
+     "energy",
+     "projects"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Approves $7 Billion Settlement Over Claims That Roundup Caused Cancer",
+   "dek": "The ruling, in a nationwide class-action suit, is expected to end tens of thousands of lawsuits by people claiming that Roundup caused non-Hodgkin lymphoma.",
+   "opening": "",
+   "published": "2026-11-21T03:23:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/business/judge-approves-7-billion-settlement-over-claims-that-roundup-caused-cancer.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approves-bayer-billion-cancer": [
+     "approves",
+     "billion",
+     "settlement",
+     "claims",
+     "roundup"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats put law firms on notice for bowing to Trump",
+   "dek": "Democrats are looking to hold the law firms that bent the knee to Donald Trump accountable. The Weeknight hosts break it down. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #trump #democrats #legalfirms",
+   "opening": "",
+   "published": "2026-11-21T02:18:56+00:00",
+   "link": "https://www.youtube.com/shorts/J4MWi1jEj10",
+   "videoId": "J4MWi1jEj10",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "accountable"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump arch blocked INDEFINITELY after 'big' legal smackdown",
+   "dek": "A judge just blocked Donald Trump’s 250-foot \"triumphal arch” project from moving forward indefinitely. Skye Perryman, President and CEO of Democracy Forward, the firm representing the plaintiff, joins The Weeknight to discuss her win. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day cli",
+   "opening": "",
+   "published": "2026-11-21T02:11:28+00:00",
+   "link": "https://www.youtube.com/watch?v=xu3BJE6sNDY",
+   "videoId": "xu3BJE6sNDY",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "arch"
+    ],
+    "obj_hhs_arch-block-family-joins": [
+     "joins",
+     "arch"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "judge",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "California entrepreneur says state avoided economic disaster with billionaire tax rejection",
+   "dek": "California voters rejected Proposition 40, the billionaire wealth tax, in a win Eric Schiffer says spared the state a mass exodus of entrepreneurs.",
+   "opening": "California narrowly avoided what could have been a devastating economic blow when voters rejected a proposed billionaire wealth tax at the ballot box earlier this month, according to a business executive who previously warned of a mass exodus of the state's wealthiest entrepreneurs. Eric Schiffer, CEO of Patriarch and chairman of Reputation Management Consultants, had warned that the measure could drive some of the state's wealthiest residents and businesses elsewhere if approved. But Proposition 40, a ballot initiative that would have imposed a one-time tax equal to 5% of billionaires' net worth in California, was rejected by voters during the Nov. 3 election, with just over 52% voting against the proposal. Schiffer, a California entrepreneur, described its defeat as a major economic victory for the state. BOARDROOM AI TALKS TURN FROM JOB CUTS TO CYBER THREATS \"This would have been a catastrophic, mammoth hit to California and all of the people within it,\" he told FOX Business. \"And California got lucky.\" Schiffer compared the proposed tax to a \"giant missile\" headed toward the state, arguing that voters had prevented serious economic damage and rebuffed what he described as an attempt to \"maul billionaires\" that could have triggered a mass exodus of wealth and jobs from California. \"People are smart. They saw through it,\" he said, asserting that voters recognized the potential economic consequences of driving wealthy entrepreneurs and their businesses out of the state. Schi",
+   "published": "2026-11-21T01:16:36-05:00",
+   "link": "https://www.foxbusiness.com/economy/california-entrepreneur-says-state-avoided-economic-disaster-billionaire-tax-rejection",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "voters",
+     "election"
+    ],
+    "obj_astate_california-commute-death-disaster": [
+     "disaster",
+     "california"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Said to Face S.E.C. Probe Into Its Accounting Practices",
+   "dek": "Questions around the company’s accounting had surfaced amid revelations about its questionable chip sales in Asia.",
+   "opening": "",
+   "published": "2026-11-21T01:06:52+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/business/nvidia-sec-accounting.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Netanyahu’s Chilling Warning Caught on Camera…",
+   "dek": "Watch the full conversation here: https://youtu.be/ugk0vewDuqk Watch more here: https://watchtcn.co/49CDF2t Paid partnership: Mars Men: For a limited time, our listeners get 50% off FOR LIFE, free shipping, AND 3 free gifts at Mars Men at MenGoToMars.com/Tucker #TuckerCarlson #cyberattack #hackers #JoeKent #globalsecurity #AI #planes #NVIDIA #JensenHuang #tech #outage #FAA #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-21T00:00:37+00:00",
+   "link": "https://www.youtube.com/watch?v=TwM2bce1HGA",
+   "videoId": "TwM2bce1HGA",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Two Drinks with . . . Our Shortest-Serving Press Secretary",
+   "dek": "Katie Zacharia lasted five days in the role. In her room at the Trump hotel in Manhattan, she says: &#8216;I never had to lobby anyone to get the job that I got.&#8217;",
+   "opening": "Katie Zacharia, 41, is fresh from the Christian Louboutin store, where she had to buy new red bottoms, after accidentally taking an odd pair to a celebrity poker tournament in Las Vegas this week. &#8220;Thank God I had a right and a left,&#8221; she says, lifting up one matte and one patent shoe. She didn&#8217;t have time to go home to California; she had to fly east, for the premiere of Melania, the Amazon Prime docuseries about the First Lady of the United States, in New York City, where we are meeting. Hence the emergency shopping trip. &#8220;I got absolutely ringed by my husband, who told me, &#8216;You need to stop spending money on shoes&#8212;take them back.&#8217;&#8201;&#8221; The former press secretary of the Donald Trump administration, who lasted just five days in the job after a disastrous first briefing, is pissed off about the reporting that she got kicked out of the poker game early. (&#8220;Trump&#8217;s Ousted Press Secretary Makes Another Quick Exit in an Unexpected Venue,&#8221; read one headline .) &#8220;There was some fake-news article that I got booted out in the beginning,&#8221; she says, &#8220;but I actually got 28 of 50th&#8212;and I haven&#8217;t played poker since college.&#8221; She&#8217;s been feeling a little bruised by all the bad press lately, so she wasn&#8217;t sure about going to Vegas. &#8220;I didn&#8217;t want to do it at first,&#8221; she says. &#8220;But my friends just completely convinced me that it would be better PR for me.&",
+   "published": "2026-11-20T22:30:14+00:00",
+   "link": "https://www.thefp.com/p/two-drinks-with-our-shortest-serving",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "ousted",
+     "role"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "former"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "former"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Stocks Often Prosper After an Abrupt C.E.O. Exit. Is Nvidia Different?",
+   "dek": "The stock value of a top executive is often less important than it initially seems. But Nvidia’s entanglement in U.S.-Chinese relations poses special problems.",
+   "opening": "",
+   "published": "2026-11-20T22:11:57+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/business/nvidia-ceo-stock-succession-jensen-huang.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Wall Street suffers historic losses as Dow, S&P 500 plunge into correction territory",
+   "dek": "Nvidia shares tumbled about 14%, and newly public Anthropic fell 9% as AI fears fueled a brutal sell-off that erased the Nasdaq&apos;s gains for the year.",
+   "opening": "U.S. stocks plunged Friday in one of Wall Street's worst trading sessions in years, when a massive sell-off in artificial intelligence companies wiped out the Nasdaq's gains for the year and pushed the Dow and S&amp;P 500 into correction territory. The historic sell-off sent major U.S. indexes sharply lower, with the Dow Jones Industrial Average falling nearly 950 points, while the S&amp;P 500 dropped 3.7% and the tech-heavy Nasdaq Composite plunged 5.28%. Both the Dow and S&amp;P 500 entered correction territory, meaning they had fallen at least 10% from their recent record highs. The steep decline erased the Nasdaq's gains for the year, marking its second-largest single-day point drop on record. ANTHROPIC'S $1.5 TRILLION IPO SETS OFF A FRESH WAVE OF TECH WEALTH HEADING FOR SOUTH FLORIDA \"It was a brutal day in the stock market with AI fears taking center stage,\" FOX Business anchor Gerri Willis reported Friday on \"Special Report.\" Investors directed much of their selling toward technology companies, putting additional pressure on the Nasdaq, Willis noted. \"Investors saved their real wrath for the tech-heavy Nasdaq,\" Willis said. The massive sell-off came amid mounting concerns about the AI boom, with some of the industry's biggest names suffering steep losses, including chip-making giant Nvidia and newly public AI developer Anthropic. HOLIDAY AIRFARES HIT HIGHEST LEVELS IN A DECADE AS JET FUEL PRICES SURGE Nvidia shares tumbled approximately 14%, while Anthropic fell about ",
+   "published": "2026-11-20T20:28:26-05:00",
+   "link": "https://www.foxbusiness.com/markets/wall-street-suffers-historic-losses-dow-sp-500-plunge-correction-territory",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "concerns"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Rights groups urge sanctions after ICJ finds Myanmar guilty of genocide against Rohingya",
+   "dek": "The International Court of Justice has no power to enforce Thursday's ruling, which orders Myanmar's military-supported government to allow those who fled the violence to return home safely, to pay reparations to the Rohingya Muslims and prosecute those suspected of having committed genocide.",
+   "opening": "",
+   "published": "2026-11-20T19:28:54-05:00",
+   "link": "https://www.pbs.org/newshour/world/rights-groups-urge-sanctions-after-icj-finds-myanmar-guilty-of-genocide-against-rohingya",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Threatens to Bar U.S. Tech Firms From Building Data Centers Abroad",
+   "dek": "The president suggested he would tax the same companies, though it was not clear how he would carry out the plan unveiled at a news conference.",
+   "opening": "",
+   "published": "2026-11-20T18:51:23+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/us/politics/trump-data-centers-ban.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: Stocks tumble as worries about AI rattle market",
+   "dek": "In our news wrap Friday, stocks tumbled to end the week as worries about AI rattled the market, a second federal judge is blocking President Trump's triumphal arch in Washington and a federal appeals court is blocking the Army from detonating several tons of bomb-making chemicals amid concerns over environmental and health risks.",
+   "opening": "",
+   "published": "2026-11-20T18:50:42-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-stocks-tumble-as-worries-about-ai-rattle-market",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "arch"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "judge",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Texas Gov-elect Gina Hinojosa vows to rescind Abbott's H-1B visa restrictions despite admitting program abuse",
+   "dek": "Texas Gov.-elect Gina Hinojosa says she will rescind Greg Abbott&apos;s H-1B hiring freeze on day one, even conceding companies have abused the visa program.",
+   "opening": "Texas Gov.-elect Gina Hinojosa (D) said she plans to rescind Gov. Greg Abbott’s hiring freeze on H-1B visa workers at state agencies and public universities on her first day in office, even as she acknowledged that the federal visa program has been abused. In a recent interview with the Texas Tribune, Hinojosa, a Democrat, dismissed Abbott’s January directive restricting new H-1B visa petitions as a distraction. \"Yeah, that does not make sense to me. I will tell you, I’m not doing culture wars. That’s not what I was elected to do,\" Hinojosa said. Abbott issued the order in January to bar state agencies and public universities from filing new H-1B petitions without written approval from the Texas Workforce Commission, citing reports that employers had displaced U. S. workers with lower-paid foreign labor. OBAMA-APPOINTED JUDGE TORPEDOES TRUMP’S BID TO PROTECT US JOBS BY REFORMING CONTROVERSIAL IMMIGRATION POLICY \"In the most egregious schemes, employers have even fired American workers and replaced them with H-1B employees , often at lower wages,\" Abbott wrote in his January directive. While Hinojosa vowed to scrap the restrictions, she conceded that companies have exploited the visa system. \"There are abuses when it comes to H-1Bs, absolutely,\" Hinojosa told the Texas Tribune. \"Companies should not be getting a bunch of tax breaks for jobs to only then use that money to hire H-1B employees. That’s wrong. That’s happening right now. I don’t support that.\" Hinojosa, a Democrati",
+   "published": "2026-11-20T18:37:39-05:00",
+   "link": "https://www.foxnews.com/politics/texas-gov-elect-gina-hinojosa-vows-rescind-abbotts-h1b-visa-restrictions-despite-admitting-program-abuse",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "abbott",
+     "hinojosa"
+    ],
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "approval"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Brooks and Capehart on Trump's summit with Putin and Xi",
+   "dek": "David Brooks of The Atlantic and Jonathan Capehart of MS NOW join Amna Nawaz to discuss the week in politics, including President Trump's trilateral summit with Xi and Putin, the ongoing debate surrounding data centers, and Elon Musk's attempt to distance himself from MAGA.",
+   "opening": "",
+   "published": "2026-11-20T18:35:27-05:00",
+   "link": "https://www.pbs.org/newshour/show/brooks-and-capehart-on-trumps-summit-with-putin-and-xi",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Court approves $7.25 billion Bayer settlement over claims Roundup weed killer caused cancer",
+   "dek": "Agrochemical maker Bayer will pay up to $7.25 billion over two decades to resolve thousands of claims from U.S. cancer patients asserting the company should have warned people that its popular weed killer Roundup could cause lymphoma, according to a settlement approved Friday by a Missouri judge.",
+   "opening": "",
+   "published": "2026-11-20T18:25:19-05:00",
+   "link": "https://www.pbs.org/newshour/nation/court-approves-7-25-billion-bayer-settlement-over-claims-roundup-weed-killer-caused-cancer",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approves-bayer-billion-cancer": [
+     "approves",
+     "billion",
+     "settlement",
+     "bayer",
+     "claims",
+     "roundup",
+     "weed",
+     "killer"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "At APEC Summit, U.S., China and Russia Vow to Increase Oil Supply Amid Global Energy Transition",
+   "dek": "The United States, China and Russia agreed to boost the supply of refined petroleum products, as oil prices spike because of the Iran war.",
+   "opening": "",
+   "published": "2026-11-20T17:45:55+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/world/asia/russia-china-united-states-oil-joint-statement.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "oil price",
+     "petrol"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic’s I.P.O. Turns Tech Researchers Into Overnight Millionaires",
+   "dek": "Many people who joined the A.I. company a few years ago might have had little reason to think how big Anthropic would become. They are now worth tens of millions of dollars, if not more.",
+   "opening": "",
+   "published": "2026-11-20T17:11:42+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/technology/anthropic-ipo-employees-payout.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Matt Taibbi: The 2028 Race Has Already Begun. Plus…",
+   "dek": "In today&#8217;s Front Page, Matt Taibbi on the start of the 2028 race. A federal judge on the redefinition of genocide. How the right made itself uncool again. And more.",
+   "opening": "It&#8217;s Friday, November 20. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. Today: Judge Roy Altman on the United Nations&#8217; genocide ruling. River Page tackles &#8220;chud fatigue.&#8221; What Trump could learn from Reagan. And much more. But first: Our new reporter at large on 2028. Republicans face a post-Trump crossroads. Democrats are poised for civil war between the socialist left and the moderates, with both claiming the midterm triumph as their own. Few times in American history has the gap between visions of our political future seemed so vast. Are we headed for democratic socialism in the White House, a refashioned MAGA, or something entirely different? Who better to make sense of it than Matt Taibbi ? Matt has been covering presidential elections for more than two decades, and he has done so with radical honesty and verve. He&#8217;s someone who thinks for himself&#8212;belonging to neither the blue or the red team&#8212;and whose perceptive eye has, time and again, spotted where our politics is heading ahead of the pack. We&#8217;ve long admired Matt, who worked with The Free Press on the Twitter Files in 2022 . That&#8217;s why we&#8217;re thrilled that Matt is joining these pages as The Free Press &#8217;s reporter at large for this presidential cycle, delivering regular dispatches from the campaign trail as the country decides on its next chapter. For his inaugural piece, Matt report",
+   "published": "2026-11-20T17:01:13+00:00",
+   "link": "https://www.thefp.com/p/matt-taibbi-the-2028-race-has-already-begun-matt-taibbi",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "judge",
+     "campaign"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "judge",
+     "campaign"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "democratic",
+     "again"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How the Campaign Against Israel Rewrote the Law of Genocide",
+   "dek": "Genocide is the crime of crimes, and it requires a heightened level of proof. In its Myanmar ruling, the ICJ abandoned that standard, writes Roy K. Altman.",
+   "opening": "Yesterday&#8217;s long-awaited ruling by the International Court of Justice (ICJ)&#8212;finding Myanmar guilty of genocide in a case brought by the Republic of The Gambia&#8212;may have imperiled the court&#8217;s own legitimacy. Along the way, the ICJ&#8212;the branch of the United Nations&#8217; judicial system that adjudicates disputes between states&#8212;has violated some foundational precepts of our Western tradition in ways that may expose any government, including our own, to arbitrary genocide prosecutions in the future. The ICJ&#8217;s finding was long awaited not because anyone had shown much interest over the last 10 years in Myanmar&#8217;s brutal campaign against its minority Muslim population, known as the Rohingya, in a war that started in 2016. The outsize attention has had little to do with either Myanmar or The Gambia and a great deal to do with the watered-down definition of genocide the court was being asked to adopt. If you guessed that this may have something to do with the international community&#8217;s obsession with the world&#8217;s only Jewish state, you&#8217;d be right. Read more",
+   "published": "2026-11-20T16:56:49+00:00",
+   "link": "https://www.thefp.com/p/icj-genocide-israel-myanmar",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "brought",
+     "campaign"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Matt Taibbi: Welcome to the 2028 Democratic Primary",
+   "dek": "The presidential campaign starts earlier every cycle. Matt Taibbi, our new reporter-at-large, hits the road to handicap the race.",
+   "opening": "Republicans face a post-Trump crossroads. Democrats are poised for civil war between the socialist left and the moderates, with both claiming the midterm triumph as their own. Few times in American history has the gap between visions of our political future seemed so vast. Are we headed for democratic socialism in the White House, a refashioned MAGA, or something entirely different? Who better to make sense of it than Matt Taibbi? Matt has been covering presidential elections for more than two decades, and he has done so with radical honesty and verve. He&#8217;s someone who thinks for himself&#8212;belonging to neither the blue or the red team&#8212;and whose perceptive eye has, time and again, spotted where our politics is heading ahead of the pack. We&#8217;ve long admired Matt, who worked with The Free Press on the Twitter Files in 2022 . That&#8217;s why we&#8217;re thrilled that Matt is joining these pages as The Free Press&#8217;s reporter-at-large for this presidential cycle, delivering regular dispatches from the campaign trail as the country decides on its next chapter. For his inaugural piece, he reports on the &#8220;Elvis&#8221; candidate wooing moderate Democrats in 2028, asks why everyone in the party seems so glum, and is booted from a Democratic Socialists of America (DSA) meeting in Boston. &#8212;Oliver Wiseman At the &#8220;What&#8217;s Next?&#8221; organizing conference in Denver last Thursday, the unofficial launch of the 2028 presidential campaign cycle",
+   "published": "2026-11-20T16:35:55+00:00",
+   "link": "https://www.thefp.com/p/-taibbi-2028-democrat-president",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "democratic",
+     "again"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Second federal judge blocks construction of Trump's memorial arch",
+   "dek": "A second federal judge has blocked President Donald Trump's administration from building a 250-foot memorial arch in the nation's capital, issuing an order on Friday that keeps the construction work on hold indefinitely, according to plaintiffs' lawyers who sued to challenge the project.",
+   "opening": "",
+   "published": "2026-11-20T16:28:49-05:00",
+   "link": "https://www.pbs.org/newshour/politics/second-federal-judge-blocks-construction-of-trumps-memorial-arch",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks",
+     "construction",
+     "arch",
+     "memorial"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "judge",
+     "blocks",
+     "arch"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump floats an unexpected name to be his successor as powerhouses Rubio and Vance stand by",
+   "dek": "Donald Trump stunned the White House press briefing room by asking Stephen Miller if he wants to run for president, as JD Vance and Marco Rubio looked on.",
+   "opening": "During a lighthearted Friday afternoon moment with the media inside the White House press briefing room, President Donald Trump floated a new name to succeed him as president, while two expected 2028 hopefuls stood by. The president asked the media if they'd like to continue with the press conference — where Trump provided updates on his trip to China where he met with Chinese President Xi Jinping and Russian President Vladimir Putin. This prompted laughs from Vice President JD Vance and Secretary of State Marco Rubio, who flanked him on either side during the briefing. Then, he asked newly-minted Chief of Staff Stephen Miller, whom he called the \"most powerful man in the world,\" to speak with members of the press. MAGA VOTERS REVEAL WHO THEY WANT TO SEE LEAD GOP IN 2028 Miller took the podium and launched into a more than two-minute speech listing Trump's accomplishments from the first two years of his second term in office. \"I just wanted to say that what President Trump has achieved over the last two years is more than any president has achieved by far in American history. We can stand up here for four hours and go through achievement by achievement by achievement,\" Miller said. He then rattled some of them off, including: \"Under his leadership, the next two years are going to be the greatest two years in American history,\" Miller said. \"And I'm so proud to be his chief of staff to oversee on his behalf the staff in this building to keep delivering wins for this extraordin",
+   "published": "2026-11-20T16:28:09-05:00",
+   "link": "https://www.foxnews.com/politics/trump-floats-unexpected-name-successor-powerhouses-rubio-vance-stand",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "succeed"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Trump on data centers: 'Take advantage, don't shut them off'",
+   "dek": "The president said he doesn't want to allow the centers to be built outside the U.S. \"because China will take all of them.\" He added that companies that try to build elsewhere will face \"tremendous penalties.\"",
+   "opening": "",
+   "published": "2026-11-20T16:25:01-05:00",
+   "link": "https://www.pbs.org/newshour/politics/watch-trump-on-data-centers-take-advantage-dont-shut-them-off",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "data",
+     "centers"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tucker Shreds the Government’s Official Narrative Claim by Claim",
+   "dek": "Watch the full conversation here: https://youtu.be/ugk0vewDuqk Watch more here: https://watchtcn.co/49CDF2t Paid partnership: Dose: Daily supplements for the systems that support you. Use code TUCKER for 35% at https://dosedaily.co/tucker #TuckerCarlson #cyberattack #hackers #JoeKent #globalsecurity #AI #planes #NVIDIA #JensenHuang #tech #outage #FAA #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-20T16:00:00+00:00",
+   "link": "https://www.youtube.com/watch?v=6qRcA2W01Xg",
+   "videoId": "6qRcA2W01Xg",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran takes pointed jab at Trump Cabinet secretary for moving onto military base",
+   "dek": "Treasury Secretary Scott Bessent moved to a military base amid reported Iranian assassination threats a senior official says reached an advanced stage.",
+   "opening": "Iran mocked Treasury Secretary Scott Bessent, calling the official \"sweetie\" on social media after reports emerged that he had moved from his Washington, D.C., home onto a military installation amid security threats attributed to Tehran. Bessent made a public appearance Friday, sitting nearby as President Donald Trump addressed reporters in the White House briefing room. \"Are you interviewing from a military base sewer right now, sweetie?\" Iran's South African embassy posted on X alongside a screenshot of Bessent from an earlier television interview. An Iranian official confirmed to Fox News Digital that the X account belongs to the embassy. TRUMP'S TOP OFFICIALS RETREAT BEHIND MILITARY GATES AS EX-FBI DEPUTY POINTS TO WHAT'S FUELING THREATS Bessent is the latest senior Trump administration official to relocate to a military base, joining a growing number of top officials living behind military gates as federal authorities confront security threats extending beyond the White House. \"Obviously, it's a high threat level for us to move,\" Bessent said while addressing the move during a Nov. 15 appearance on Fox Business' \"Sunday Futures with Larry Kudlow.\" A source familiar with the situation previously told Fox News Digital, \"After The Wall Street Journal published an article featuring an online photo that allowed the location of the secretary’s Georgetown home to be geo-located, security concerns began to increase, which have now forced the secretary to relocate to a military b",
+   "published": "2026-11-20T15:36:05-05:00",
+   "link": "https://www.foxnews.com/politics/iran-takes-pointed-jab-trump-cabinet-secretary-moving-military-base",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Trump says he would love former Nvidia CEO Jensen Huang to 'be given a second chance'",
+   "dek": "\"We have to protect our brilliant people. Jensen is one of them,\" Trump said during a news conference at the White House, touting Nvidia as \"a very important company to us.\"",
+   "opening": "",
+   "published": "2026-11-20T15:34:56-05:00",
+   "link": "https://www.pbs.org/newshour/politics/watch-trump-says-he-would-love-former-nvidia-ceo-jensen-huang-to-be-given-a-second-chance",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "former"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "former"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: 'We will not allow that to happen,' Trump says of reported Iran dirty bomb threat",
+   "dek": "\"We know a lot about what's happening in Iran,\" Trump said, speaking during a news briefing at the White House. \"We know everything they say. We know who they are, where they are. We'll find out about it.\"",
+   "opening": "",
+   "published": "2026-11-20T15:12:12-05:00",
+   "link": "https://www.pbs.org/newshour/politics/watch-we-will-not-allow-that-to-happen-trump-says-of-reported-iran-dirty-bomb-threat",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump responds after Vance blames Iran war for midterm losses, VP says his job is to support president",
+   "dek": "President Donald Trump says he would launch the war against Iran again, as JD Vance blames midterm losses on voter anger over the conflict and oil prices.",
+   "opening": "President Donald Trump said Friday that he would still have launched the military operation against Iran, pushing back against reports of friction with Vice President JD Vance after Vance attributed Republican midterm election losses to the ongoing conflict. Speaking to reporters following his trip to Asia, Trump addressed questions about whether he was displeased with Vance’s post-election assessment that the conflict drove Democratic gains in the next Congress. \"I didn't say I was unhappy with it,\" Trump said alongside Vance and Secretary of State Marco Rubio. \"I thought the statement was fine, except I would have had one other thing that if we're asked, I would have said that: ‘Would you do it again?’ Absolutely. The answer is yes, because we cannot allow Iran to have a nuclear weapon.\" VANCE'S SCATHING IRAN WAR POSTMORTEM PUTS POTENTIAL 2028 GOP SHOWDOWN IN FOCUS: 'EVERYONE KNOWS WHY' The remarks followed a series of posts on X by Vance a day after the midterm elections, in which Democrats won majorities in both the House and the Senate — along with the Texas governorship — blaming voter frustration over the conflict and elevated oil prices. \"The reason we lost is the war. The president himself said so last night,\" Vance wrote. \"If you’d like to argue it was worth it, that losing the Senate for the next six years was worth it, then do so. Argue it was a worthwhile cost to pay. Agree or disagree, that’s at least honest. But everyone knows why we lost. And any honest conver",
+   "published": "2026-11-20T15:03:11-05:00",
+   "link": "https://www.foxnews.com/politics/trump-responds-vance-blames-iran-war-midterm-losses-vp-says-job-support-president",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "democratic",
+     "iran",
+     "again"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Holiday airfares hit highest levels in a decade as jet fuel prices surge",
+   "dek": "Holiday airfares hit a decade high as jet fuel prices, double last year&apos;s levels amid the Iran war, squeeze Thanksgiving and Christmas travel budgets.",
+   "opening": "Americans traveling this holiday season are facing some of the highest airfares in a decade due to the surge in jet fuel prices earlier this year stemming from the Iran war. Jet fuel prices first surged this spring and reached a peak of $4.88 a gallon in April, and prices eased below $3 a gallon this summer and rebounded to $4.90 a gallon in late October, according to data from the Argus U.S. Jet Fuel Index. Those higher fuel costs have put upward pressure on airfares paid by consumers and have exacerbated affordability concerns as Americans budget for Thanksgiving and Christmas travel and related spending. \"Airfare this holiday travel season will be the most expensive it's been in at least 10 years, and that's primarily coming as a result of jet fuel prices, which are two times higher than they were at this time last year as the conflict in Iran keeps fuel prices very high,\" Hayley Berg, lead economist at Hopper, told FOX business. THANKSGIVING TRAVEL TO DIP FOR FIRST TIME IN YEARS AS HIGHER COSTS WEIGH ON AMERICANS Travelers tended to book their holiday flights earlier than normal this year, when airfares were lower and there were more options in terms of flight availability. \"We're seeing one key difference in how travelers are preparing for this holiday season, and that difference is people are booking their holiday airfare much sooner than they have historically,\" Berg said. \"As we know, Christmas and Thanksgiving are very busy. A lot of flights sell out. So, the biggest",
+   "published": "2026-11-20T14:34:53-05:00",
+   "link": "https://www.foxbusiness.com/economy/holiday-airfares-hit-highest-levels-decade-jet-fuel-prices-surge",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Court grants request to prevent military from detonating bomb-making chemicals in Iowa",
+   "dek": "The detonation was initially planned for Friday, but the Army pushed it to Monday following an outpouring of public concern about the potential health and environmental consequences.",
+   "opening": "",
+   "published": "2026-11-20T14:27:47-05:00",
+   "link": "https://www.pbs.org/newshour/nation/court-grants-request-to-prevent-military-from-detonating-bomb-making-chemicals-in-iowa",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "detonation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Speaker Mike Johnson calls upon House Republicans to show up for work",
+   "dek": "House Speaker Mike Johnson issued a letter pressing his Republican colleagues to show up for work during the final stretch of the 119th Congress.",
+   "opening": "House Speaker Mike Johnson issued a message Friday calling on his colleagues to show up for work so Republicans can advance their priorities before Democrats take over the chamber next year. \"This week we had to postpone the rule scheduled for the Floor because we didn't have enough Members in town. To state the obvious, barring any serious medical issue, we need every Republican to be here to faithfully complete our full two-year term,\" Johnson wrote . \"Over the next 44 days, we need every House Republican to remain fully engaged so we can get even more of our important priorities signed into law.\" MIKE JOHNSON NOT RUNNING TO LEAD HOUSE GOP AFTER HISTORIC MIDTERM LOSSES While Democrats routed Republicans during the 2026 midterms and will consequently have majorities in both chambers of Congress next year, Republicans still control the House and Senate majorities. \"The Twentieth Amendment to the U.S. Constitution specifies that our clock doesn't run out until noon on January 3rd. LET'S SCORE EVERY POINT WE CAN AND LEAVE IT ALL ON THE FIELD!\" Johnson urged in the letter. REPUBLICAN SENATOR OPENS DOOR ON POSSIBILITY OF A PRESIDENTIAL BID IN SHIFT FROM PAST POSITION Outgoing Rep. Ralph Norman , R-S.C. — who lost the South Carolina special Republican U.S. Senate primary runoff to Sen. Darline Graham, after running unsuccessfully in the Palmetto State's GOP gubernatorial primary — shared Johnson's post on X. \"You don’t deserve a paycheck when you don’t show up for work. And the Am",
+   "published": "2026-11-20T14:07:55-05:00",
+   "link": "https://www.foxnews.com/politics/speaker-mike-johnson-calls-house-republicans-show-work",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesenat_end-filibuster-final-makes": [
+     "republican",
+     "final"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dozens of FBI and DOJ personnel are investigating Peltola's Alaska victory",
+   "dek": "At least 50 FBI agents and over a dozen DOJ lawyers are probing Sen.-elect Mary Peltola over the alleged &quot;Decoy Dan&quot; scheme, with 200 subpoenas sent.",
+   "opening": "At least 50 FBI agents and more than a dozen lawyers from the U.S. Department of Justice (DOJ) are working on an investigation into Sen.-elect Mary Peltola, D-Alaska, and her alleged involvement in recruiting a candidate with the same name as her opponent, Fox News has learned. The Associated Press projected Peltola's victory on Tuesday, forecasting that she'd defeat incumbent Sen. Dan Sullivan , R-Alaska, with 50.1% of the electorate's votes. However, senior DOJ officials have opened an investigation into Peltola's campaign and Democratic operatives to determine if any laws were broken in an effort to recruit Daniel J. Sullivan, a third candidate with almost the exact same name as the incumbent senator, to run. Attorney General Todd Blanche \"sees the Peltola fraud as so egregious, he is putting a lot of resources into the criminal investigation,\" an ally close to Blanche told Fox News Digital. ALASKA DEM PELTOLA DEFEATS SULLIVAN, FLIPPING 9TH GOP SENATE SEAT AFTER 'DECOY DAN' UPROAR The DOJ has sent over 200 subpoenas as part of the probe, which sources told Fox News is focused on the Peltola campaign and the Democratic Senatorial Campaign Committee (DSCC). At least five field offices are involved in the effort and nearly 100 letters have been sent out informing involved parties to preserve their records. TIM SCOTT DECLARES ALLEGED 'DECOY DAN' PLOT A 'CRIMINAL OFFENSE' AS DOJ INVESTIGATION ROCKS ALASKA High-profile elections attorney Marc Elias, whose law firm represents the",
+   "published": "2026-11-20T13:42:29-05:00",
+   "link": "https://www.foxnews.com/politics/dozens-fbi-doj-personnel-investigating-peltolas-alaska-victory",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_absentee-alaska-ballots-brought": [
+     "peltola",
+     "campaign"
+    ],
+    "obj_afederal_alaska-ballot-campaign-data": [
+     "alaska",
+     "peltola",
+     "campaign"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "democratic",
+     "effort"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "attorney",
+     "general",
+     "subpoenas"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Cruz turns tables on Democrats crying foul over GOP's 11th-hour judicial confirmation blitz",
+   "dek": "Ted Cruz accused Senate Democrats of hypocrisy for ramming through 22 federal judges after the 2024 election while blasting Republican hearings as rushed.",
+   "opening": "Sen. Ted Cruz , R-Texas, criticized the \"hypocrisy\" of his Democratic counterparts over their selective outrage stemming from Republican senators' push to confirm President Donald Trump's judicial appointees before Democrats take control of the Senate in January. \"And what did the same Senate Democrats who just gave sanctimonious speeches do? They rammed through 22 federal judges in November and December before leaving,\" Cruz said of Democrats, referring to their actions following the 2024 elections. Cruz's remarks came during a Senate Judiciary Committee nomination hearing on Wednesday, where seven judicial nominees were introduced to committee. The Texas senator was responding to accusations from Sen. Cory Booker, D-N. J., who said Republicans were \"rushing\" the judicial hearings and in his 13 years in office, he has never seen the committee hold \"back-to-back\" hearings without the minority's consent. MAJORITY LEADER THUNE SAYS SENATE GOP WON'T 'STAND IDLY BY' AS DEMOCRATS TAKE CONTROL OF CONGRESS \"You know, you don't need a particularly long memory to recognize the hypocrisy in what Senator Booker said,\" Cruz said, comparing Booker's \"lecture\" of Republicans to the theatrics of Captain Renault in the movie \"Casablanca.\" \"He is shocked, shocked to find gambling in this institution,\" Cruz said. Cruz pointed out that after President Joe Biden lost the White House and Democrats lost control of the Senate in the 2024 election, Senate Democrats \"rammed through\" 22 federal judges",
+   "published": "2026-11-20T13:29:52-05:00",
+   "link": "https://www.foxnews.com/politics/cruz-turns-tables-democrats-crying-foul-gop-11th-hour-judicial-confirmation-blitz",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "hold",
+     "republican",
+     "committee"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "democratic"
+    ],
+    "obj_thesenat_end-filibuster-final-makes": [
+     "republican",
+     "push"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A second judge blocks Trump's arch, saying it's unlikely to succeed in court",
+   "dek": "A federal judge in Virginia said she will issue a preliminary injunction against Trump's arch, going a step further than the D.C. federal judge who temporarily blocked construction earlier this week.",
+   "opening": "A federal judge in Virginia said she will issue a preliminary injunction against Trump's arch, going a step further than the D.C. federal judge who temporarily blocked construction earlier this week. (Image credit: John McDonnell)",
+   "published": "2026-11-20T13:25:09-05:00",
+   "link": "https://www.npr.org/2026/11/20/nx-s1-6048675/trump-arch-blocked-arlington",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks",
+     "construction",
+     "arch"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "judge",
+     "blocks",
+     "arch",
+     "saying",
+     "unlikely",
+     "succeed"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What’s So Important About Nvidia’s Chips?",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-20T13:00:00-05:00",
+   "link": "https://www.theatlantic.com/podcasts/2026/11/whats-so-important-about-nvidias-chips/689521/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "chips"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Justice Department Gives Up on Alaska Senate Lawsuit",
+   "dek": "The Trump administration had sought to block certification of election results if Senator Dan Sullivan, a Republican, lost narrowly in his bid for re-election. Critics had called the suit meritless.",
+   "opening": "",
+   "published": "2026-11-20T12:54:26+00:00",
+   "link": "https://www.nytimes.com/2026/11/19/us/politics/justice-department-gives-up-on-alaska-senate-lawsuit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_hhs_arch-block-family-joins": [
+     "lawsuit",
+     "block"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump initially accepted the midterm results, but most GOP voters doubt they were fair",
+   "dek": "Less than half of Republicans nationwide considered the midterm elections \"free and fair,\" according to new polling.",
+   "opening": "Less than half of Republicans nationwide considered the midterm elections \"free and fair,\" according to new polling. (Image credit: Spencer Platt)",
+   "published": "2026-11-20T12:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/20/nx-s1-6047605/midterm-election-distrust-republicans",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "polling"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Biden memoir draws fire for ‘denial’ as critics flag Gaza, racial-equity omissions",
+   "dek": "Joe Biden&apos;s memoir &quot;Promise Me, America&quot; draws sharp reviews; critics say he stays &quot;stubbornly in denial&quot; about his age, Gaza, and his 2024 reelection bid.",
+   "opening": "Former President Joe Biden’s new memoir has drawn sharp criticism and opened a debate about how Biden’s choices — and his account of them — will shape his legacy. Released Nov. 17, \"Promise Me, America\" defends Biden’s presidency and his decision to seek re-election in 2024. The memoir drew a sharp verdict from The New Yorker writer Amy Davidson Sorkin, who said Biden remains \"stubbornly in denial,\" while other critics scrutinized the book's account of Gaza and what it left out about racial equity. Sorkin’s criticism centers on Biden’s response to questions about his age and his continued insistence that he could have won. \"The true test of a book like this is whether its author will own his losses, too. Biden, for his part, does not,\" added New York Times nonfiction critic Jennifer Szalai. \"He is so preoccupied with burnishing his legacy that he gets awkward and defensive when addressing the two issues many readers will be most curious about: his handling of the war in Gaza, and his decision to run for a second term.\" \"The news of the memoir, in short, is that there is no real news: Biden is as stubbornly in denial as ever, \" Sorkin wrote. BIDEN ADDRESSES INFAMOUS 'WE BEAT MEDICARE' DEBATE MOMENT IN NEW MEMOIR The dispute around Biden's recollection of his tenure centers on two consequential decisions — his choice to seek another term and his administration’s policy toward Israel during the Gaza war. In its review of the memoir, the Associated Press reported that Biden says ",
+   "published": "2026-11-20T11:08:51-05:00",
+   "link": "https://www.foxnews.com/politics/biden-memoir-draws-fire-denial-critics-flag-gaza-racial-equity-omissions",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_centers-communities-data-day": [
+     "centers",
+     "election"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump and Dana White honor Marine Corps band with six-figure checks in first event on new helipad",
+   "dek": "President Donald Trump and Dana White will each donate $100,000 to the Marine Band, America&apos;s oldest continuously active professional musical organization.",
+   "opening": "FIRST ON FOX: President Donald Trump and UFC President and CEO Dana White will announce six-figure personal contributions to one of America's oldest musical institutions. The President’s Own United States Marine Band played a key role in America's 250th birthday celebrations and official state business this year — and a White House official tells Fox News Digital that the pair want to \"express their appreciation for the band’s exceptional talent, professionalism and commitment to excellence.\" Trump and White announced Friday afternoon on the new White House helipad on the South Lawn that they increased their combined gift from $200,000 to $500,000 of their own money after realizing the size of the ensemble. No taxpayer dollars will be used for the $500,000 gift. \"Now, it started off with 200,000, and I said, how many people are there? I thought there were 70, but it’s about 107. And a lot of people joined. So we decided to increase it,\" Trump said during the event, which was the first-ever held on the new South Lawn helipad. \"We’re now making it at 500,000. Now everyone’s going to get a lot of money,\" Trump added. All 135 members of the band will attend alongside senior military leaders, including Secretary of War Pete Hegseth, Acting Navy Secretary Hung Cao and Commandant of the Marine Corps General Eric Smith. TRUMP TAPS ‘TRUE WARRIOR’ HUNG CAO AS NAVY SECRETARY AFTER 4 MONTHS AS ACTING LEADER \"‘The President’s Own’ United States Marine Band proudly embodies American excell",
+   "published": "2026-11-20T10:33:54-05:00",
+   "link": "https://www.foxnews.com/politics/trump-dana-white-honor-marine-corps-band-six-figure-checks-first-event-new-helipad",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_thepenta_against-effectively-effort-end": [
+     "pete",
+     "hegseth"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republican senator opens door on possibility of a presidential bid, in shift from past position",
+   "dek": "Republican Sen. Josh Hawley of Missouri, who previously said he did not intend to pursue a presidential bid, is now opening the door to the possibility.",
+   "opening": "Following the GOP’s widespread midterm losses, Sen. Josh Hawley , R-Mo. — who in September indicated to the Washington Examiner that he had \"no intention\" of running for president in 2028 — is now leaving the door open to a White House bid. \"After this most recent election, I think everybody that cares about the future of the party, the future of the country, has a lot of thinking to do,\" the senator said to The Associated Press when asked about his presidential aspirations. \"So I’ll just say I have a lot of thinking to do.\" Democrats delivered a midterm election drubbing and will control the House and Senate majorities next year. JOSH HAWLEY SHOOTS DOWN PROSPECT OF 2028 WHITE HOUSE BID, SAYS HE HAS 'NO INTENTION' OF RUNNING: REPORT \"I was alarmed by the results of the election, and I’m concerned about the direction of both my party and the country,\" Hawley told NBC News when asked whether he is thinking about running for president. \"And I want to do my part there. I’m trying to think through what my part is. But I certainly want to do my part for the future.\" \"Listen, I don’t want to give you a misconception that, for sure, I have plans or intentions,\" he noted, according to the outlet. \"What I said to you is the honest to goodness truth, which is just that I’ve got four years here to serve in the Senate, and I’m just trying to think about where I am and what’s in front of me, what can I do to help the country go forward.\" \"I'm concerned about what comes next for the party. ",
+   "published": "2026-11-20T10:26:16-05:00",
+   "link": "https://www.foxnews.com/politics/republican-senator-opens-door-possibility-presidential-bid-shift-past-position",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Senate foreign relations chairman warns of 'horrific trend' as Christians killed in Ethiopia",
+   "dek": "The State Department calls for independent investigations after at least 34 people were killed in Ethiopia&apos;s Arsi Zone, most said to be Ethiopian Orthodox Christians.",
+   "opening": "The Republican chairman of the Senate Foreign Relations Committee has warned of an ongoing ‘horrific trend’ of Christians being killed in Africa . Earlier this month, at least 34 people, the majority said to be Ethiopian Orthodox Christians, were killed in a village in the Arsi Zone, about 250 miles southeast of Ethiopia’s capital, Addis Ababa. \"The attacks on Christians in Ethiopia are a horrific trend,\" Sen. Jim Risch, R-Idaho, told Fox News Digital in a statement, adding, \"The instability and violence in Ethiopia has grave consequences for Ethiopian civilians, the region and American interests.\" NIGERIAN PASTOR HIGHLIGHTED BY TRUMP SAYS HE’S NEXT AFTER MILITIA KILLS HIS RELATIVES Open Doors UK &amp; Ireland told Fox News Digital there has been a string of killings in the area, with some 60 Orthodox Christians killed just two weeks before this attack in November. Open Doors is an international organization supporting persecuted Christians. A State Department spokesperson told Fox News Digital they are aware of \"reports of killing in Arsi Zone,\" adding: \"Reports of civilian killings in Ethiopia demand action. We call for independent investigations and accountability.\" The Addis Standard online news outlet reported gunmen approached St. Mary’s Church in Endeto, Robe District, and at the main entrance shouted \"Surrender\" before opening fire. Worshipers here are from the Ethiopian Orthodox Tewahedo Church. Local security guards, who are said to have fired back to protect commun",
+   "published": "2026-11-20T09:33:56-05:00",
+   "link": "https://www.foxnews.com/world/senate-foreign-relations-chairman-warns-horrific-trend-christians-killed-ethiopia",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accountable-committee-epstein-failed": [
+     "republican",
+     "committee"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Wreck of First Australian-Built Warship Is Revealed 128 Years After It Sank",
+   "dek": "The wooden gunboat Spitfire was entombed in waters near the Great Barrier Reef after it went down in a cyclone in 1898.",
+   "opening": "",
+   "published": "2026-11-20T08:13:07+00:00",
+   "link": "https://www.nytimes.com/2026/11/20/world/australia/shipwreck-warship-spitfire-great-barrier-reef.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "fed": [
+     "warsh"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "America's largest IPO ever carries potentially seismic implications for political spending ahead of 2028",
+   "dek": "Anthropic makes its stock market debut Thursday at a $1.5 trillion valuation as its seven co-founders each pledge to give away 80% of their equity.",
+   "opening": "Anthropic’s Thursday stock market debut, valued at around $1.5 trillion, is the largest in American history and, given promises made by its founders, is likely the preface to a similarly historic flood of cash into the political system. Bloomberg projects that each of Anthropic’s seven co-founders will be worth approximately $24.5 billion now that their artificial intelligence firm has gone public. Each of the seven has also pledged to give away 80% of their equity in the firm to philanthropic causes — a promise that has raised eyebrows given Anthropic’s links to a controversial moral philosophy and its history of spending big to influence elections. Effective altruism, which some of Anthropic’s early funders and employees have voiced support for, generally treats massive political and philanthropic giving as a moral obligation to prevent AI \"doomsday\" scenarios, such as a rogue agent working to exterminate the human race. Though the company's founders have distanced themselves from the movement, some early employees and other figures associated with Anthropic have maintained connections to its ideas, particularly its emphasis on preventing potentially catastrophic risks from artificial intelligence. Politically, this has manifested as Anthropic's leaders throwing large sums of money behind efforts to regulate AI development . This approach has often put Anthropic at odds with the White House and its Republican allies, who are pursuing unchained innovation to spur economic gr",
+   "published": "2026-11-20T08:00:30-05:00",
+   "link": "https://www.foxnews.com/politics/americas-largest-ipo-carries-seismic-implications-political-spending-ahead-2028",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_end-filibuster-final-makes": [
+     "republican",
+     "makes"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dems aim to block Iran war funding. And, Army delays lead azide detonation in Iowa",
+   "dek": "Congress needs to pass a funding measure to avoid a shutdown next month, providing Dems an opportunity to leverage power. And, the Army says waiting to detonate lead azide could become dangerous.",
+   "opening": "Congress needs to pass a funding measure to avoid a shutdown next month, providing Dems an opportunity to leverage power. And, the Army says waiting to detonate lead azide could become dangerous. (Image credit: Finn Gomez)",
+   "published": "2026-11-20T07:04:57-05:00",
+   "link": "https://www.npr.org/2026/11/20/g-s1-154582/up-first-newsletter-democrats-iran-war-trump-xi-jinping-iowa-army",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "shutdown": [
+     "shutdown"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "war-funding": [
+     "war funding"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "block",
+     "iran"
+    ],
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "lead",
+     "detonation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Van Hollen scores support from another Dem amid Senate majority leader bid",
+   "dek": "Sen. Elissa Slotkin said she will back Sen. Chris Van Hollen for the Senate Democratic leadership role as he challenges Sen. Chuck Schumer.",
+   "opening": "Sen. Elissa Slotkin, D-Mich., said Thursday she will back Sen. Chris Van Hollen, D-Md., as he challenges current Senate Minority Leader Chuck Schumer for the majority leader slot. Van Hollen announced a bid for the role last week. \"I've been clear as well that I don't think that Senator Schumer is best positioned to be our next leader. I'm encouraged that people like Chris Van Hollen got in the race, and because I've been clear that I wasn't supporting Schumer , I will be supporting Chris Van Hollen,\" Slotkin stated in a video posted to social media. BERNIE SANDERS SAYS HE WON'T BACK SCHUMER AS PUSH FOR NEW LEADERSHIP GAINS STEAM \"But I think no matter the outcome, it's going to be imperative for our leaders to demonstrate how they're going to incorporate that next generation, and what big and bold ideas, specifically, they're going to put forward in the first 100 days,\" she said . Van Hollen shared Slotkin's post on X and wrote , \"@SenatorSlotkin &amp; I agree: the American people spoke, and we need new leadership in the United States Senate. Now is the time to act boldly, and we’re going to work together to deliver results.\" TOP DEM CRIES 'WEAPONIZATION' AS COMMENTS WARNING YOUNG PEOPLE NOT TO JOIN TRUMP ADMIN LAND HER IN HOT WATER Sen.-elect Abdul El-Sayed — who will become the junior senator from Michigan early next year and is backing Van Hollen for the majority leader role — also shared Slotkin's post. \"Michigan for @ChrisVanHollen,\" El-Sayed wrote. His post included a ",
+   "published": "2026-11-20T07:02:29-05:00",
+   "link": "https://www.foxnews.com/politics/van-hollen-scores-support-another-dem-senate-majority-leader-bid",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "push",
+     "schumer",
+     "leadership",
+     "role"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What War Has Brought Iran’s Opposition",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-20T07:00:00-05:00",
+   "link": "https://www.theatlantic.com/international/2026/11/iran-opposition-strategic-options/689510/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Elon Musk's space giant cozies up to Dem power brokers as party vows to put his empire under siege",
+   "dek": "Elon Musk&apos;s SpaceX hired five Democratic lobbyists as Democrats promise probes into Ukraine satellite claims, Pentagon reliance and Chinese investors.",
+   "opening": "Elon Musk’s SpaceX has hired a team of veteran Washington lobbyists with Democratic connections as the party prepares to take control of Congress and intensify scrutiny of his business empire. Democratic lawmakers have signaled plans to investigate several aspects of Musk’s business dealings and government relationships, including allegations that SpaceX improperly restricted Ukraine’s satellite communications, whether the Pentagon has become overly dependent on the company and potential conflicts of interest stemming from Musk’s relationship with the Trump administration. Against that backdrop, newly released public records show SpaceX has retained five veteran lobbyists from Mehlman Consulting, a bipartisan D.C.-based government affairs firm, several of whom have deep ties to Democratic lawmakers and former administrations. SpaceX, with a market capitalization of nearly $2 trillion, is home to Musk's holdings in aerospace engineering, artificial intelligence, telecommunications and space transportation . If Democrats successfully knock it down a peg, the resulting loss in value could send shock waves throughout the economy. DEMOCRATS SET SIGHTS ON ELON MUSK PROBE AFTER MIDTERM WINS, BUT PRITZKER DRAWS A SURPRISING LINE Musk has worked to publicly distance himself from the right wing since the GOP's poor midterm performance, recently stating that he’s \"not MAGA\" at a New York Times summit. \"I feel pretty foolish about having spent so much money and not seeing much. Or maybe ",
+   "published": "2026-11-20T06:00:32-05:00",
+   "link": "https://www.foxnews.com/politics/elon-musks-space-giant-cozies-up-dem-power-brokers-party-vows-put-his-empire-under-siege",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "former",
+     "ties"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Anthropic's $1.5 trillion IPO sets off a fresh wave of tech wealth heading for South Florida",
+   "dek": "Anthropic&apos;s $1.5 trillion IPO is minting new tech millionaires, and South Florida developers say a massive wave of blue-state wealth is heading to the Sunshine State.",
+   "opening": "Now live on the Nasdaq, Anthropic’s $1.5 trillion stock market debut is poised to mint a fresh class of overnight multimillionaires. While Wall Street cheers one of the largest public listings in history, real estate and finance insiders say South Florida is nearing an irreversible \"point of no return,\" as newly liquid tech engineers and institutional backers look to escape high-tax states like California and New York for the Sunshine State’s booming business corridor. Buying a piece of the IPO action themselves, BH Group CEO Isaac Toledano and West Palm Beach developer and former financial executive Kenneth Baboun are predicting a new tech exodus wave ripping through Florida by mid-to-end of 2027. \"I think we're on the verge of it … People do get tired of being abused, if you will, by your government, not letting you work freely and make money. So I think we're very close to reaching that line that will be a point of no return. We're almost there,\" Baboun told Fox News Digital. \"Nobody can ignore and forget what Ken Griffin said a few years ago that Chicago's streets are not safe anymore,\" Toledano also told Fox News Digital. \"Everybody wants to follow the smart money, and definitely, it looks like the smart money made the decision that, what we see in South Florida, it's real, and it's here to stay.\" INSIDE KEN GRIFFIN'S SECRET THREE-YEAR NEGOTIATION FOR FLORIDA'S LARGEST REAL ESTATE DEAL IN HISTORY The AI giant and Claude maker’s highly anticipated IPO was priced at $83 pe",
+   "published": "2026-11-20T06:00:10-05:00",
+   "link": "https://www.foxbusiness.com/real-estate/anthropics-1-5-trillion-ipo-sets-off-fresh-wave-tech-wealth-heading-south-florida",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "former"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "former"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
