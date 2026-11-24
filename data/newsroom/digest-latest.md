@@ -1,18 +1,21 @@
-# Newsroom digest — 2026-11-23
+# Newsroom digest — 2026-11-24
 
-Register: 178 objects · this scan: 0 new, 3 seen again, 0 returned.
+Register: 181 objects · this scan: 3 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (2)
+- **Trump Halts Iowa Detonation Pending Court Approval** — ruling · ruled · holder: the President · formed 2026-11-23 · 4 outlets (peak 4) · `obj_thepresi_approval-court-detonation-halts`
+- **Federal appeals court gives President Donald Trump a path to erasing hush money conviction** — indictment · charged · holder: the President · formed 2026-11-23 · 3 outlets (peak 3) · `obj_thepresi_appeals-conviction-court-donald`
 
 ## Permanence breaks (went silent while unresolved)
-- none today
+- **Survivor Justice Tax Prevention Act — Senate passage of the bill (Bill Passed)** — bill · voted · holder: the Senate · formed 2026-11-19 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 59 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- none
+- **Trump Halts Iowa Detonation Pending Court Approval** — ruling · ruled · holder: the President · formed 2026-11-23 · 4 outlets (peak 4) · `obj_thepresi_approval-court-detonation-halts`
+- **Virginia , Oregon Sue SpaceX Over Grok AI Creation Of Abuse Images** — suit · sued · holder: ? · formed 2026-11-23 · 5 outlets (peak 5) · `obj_x_abuse-creation-grok-images`
+- **Federal appeals court gives President Donald Trump a path to erasing hush money conviction** — indictment · charged · holder: the President · formed 2026-11-23 · 3 outlets (peak 3) · `obj_thepresi_appeals-conviction-court-donald`
 
 ## Watching (47)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
