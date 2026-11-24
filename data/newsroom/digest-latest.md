@@ -1,24 +1,18 @@
 # Newsroom digest — 2026-11-24
 
-Register: 188 objects · this scan: 7 new, 1 seen again, 0 returned.
+Register: 189 objects · this scan: 1 new, 1 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **NY Gov . Hochul vetoes bill that would have required AI accuracy warnings** — veto · vetoed · holder: a state · formed 2026-11-24 · 3 outlets (peak 3) · `obj_astate_accuracy-bill-gov-hochul`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Survivor Justice Tax Prevention Act — Senate passage of the bill (Bill Passed)** — bill · voted · holder: the Senate · formed 2026-11-19 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 60 scans
+- **Survivor Justice Tax Prevention Act — Senate passage of the bill (Bill Passed)** — bill · voted · holder: the Senate · formed 2026-11-19 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 61 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **NY Gov . Hochul vetoes bill that would have required AI accuracy warnings** — veto · vetoed · holder: a state · formed 2026-11-24 · 3 outlets (peak 3) · `obj_astate_accuracy-bill-gov-hochul`
-- **California Democrat Rep . Gomez resigns following ethics report on sexual misconduct allegations** — appointment · personnel · holder: ? · formed 2026-11-24 · 24 outlets (peak 24) · `obj_x_allegations-california-democrat-ethics`
-- **L . A . Rep . Gomez To Resign After Ethics Panel Finds Misconduct** — appointment · personnel · holder: ? · formed 2026-11-24 · 25 outlets (peak 25) · `obj_x_ethics-finds-gomez-misconduct`
-- **LA - area Democratic Rep . Jimmy Gomez to resign after ethics committee finds he made unwelcome sexual advances to staffer** — vote · voted · holder: ? · formed 2026-11-24 · 3 outlets (peak 3) · `obj_x_advances-area-committee-democratic`
-- **China sentences an official to death for spying and leaking national secrets** — indictment · charged · holder: ? · formed 2026-11-24 · 11 outlets (peak 11) · `obj_x_china-death-leaking-national`
-- **Experts say failed climate talks could worsen climate inequality , though all progress is not stalled** — vote · voted · holder: ? · formed 2026-11-24 · 8 outlets (peak 8) · `obj_x_all-climate-could-experts`
-- **States sue HUD over a rule that could cut off housing aid for mixed - status families** — ruling · ruled · holder: ? · formed 2026-11-24 · 12 outlets (peak 12) · `obj_x_aid-could-cut-families`
+- **College student sues federal government after losing eye during No Kings protest** — suit · sued · holder: ? · formed 2026-11-24 · 5 outlets (peak 5) · `obj_x_college-during-eye-federal`
 
 ## Watching (47)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
