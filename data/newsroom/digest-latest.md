@@ -1,20 +1,23 @@
 # Newsroom digest — 2026-11-24
 
-Register: 190 objects · this scan: 1 new, 3 seen again, 0 returned.
+Register: 194 objects · this scan: 4 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **Survivor Justice Tax Prevention Act — Senate passage of the bill (Bill Passed)** — bill · voted · holder: the Senate · formed 2026-11-19 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 62 scans
+- **Survivor Justice Tax Prevention Act — Senate passage of the bill (Bill Passed)** — bill · voted · holder: the Senate · formed 2026-11-19 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 63 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **Teamsters urge US lawmakers to quickly pass Chinese car ban** — vote · voted · holder: Congress · formed 2026-11-24 · 4 outlets (peak 4) · `obj_congress_ban-car-chinese-lawmakers`
+- **Utah moves to drop Kalshi gambling case after company blocks state users** — ruling · ruled · holder: ? · formed 2026-11-24 · 4 outlets (peak 4) · `obj_x_blocks-case-company-drop`
+- **Utah asks to drop charges against Kalshi after it halts trading there** — ruling · ruled · holder: ? · formed 2026-11-24 · 10 outlets (peak 10) · `obj_x_against-asks-charges-drop`
+- **US Army to detonate more than 4 tonnes of lead azide in Iowa on Wednesday** — vote · voted · holder: a federal court · formed 2026-11-24 · 3 outlets (peak 3) · `obj_afederal_army-azide-detonate-iowa`
+- **How tariffs , fuel and fertilizer costs are squeezing the U . S . biggest apple region** — tariff/sanction · imposed · holder: ? · formed 2026-11-24 · 8 outlets (peak 8) · `obj_x_apple-biggest-costs-fertilizer`
 
-## Watching (49)
+## Watching (50)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
