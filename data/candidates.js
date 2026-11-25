@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-25T08:53:12.811Z · 16 legislative + 8 news (GDELT, 3d)
+// 2026-11-25T19:27:09.419Z · 16 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797609,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.799,
+      "salience": 0.797,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2347",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.622,
+      "salience": 0.62,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -789,11 +789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797609,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.612,
+      "salience": 0.61,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -1046,11 +1046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.576,
+      "salience": 0.574,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1303,11 +1303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.568,
+      "salience": 0.566,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1560,11 +1560,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.506,
+      "salience": 0.504,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2473,11 +2473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.465,
+      "salience": 0.463,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3001,11 +3001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.464,
+      "salience": 0.463,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3917,11 +3917,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.442,
+      "salience": 0.44,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4818,11 +4818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.249,
+      "salience": 0.247,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5717,11 +5717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795596732997,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.162,
+      "salience": 0.16,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6629,11 +6629,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.156,
+      "salience": 0.154,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7549,11 +7549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.155,
+      "salience": 0.153,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8459,11 +8459,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795596732998,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.12,
+      "salience": 0.118,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9377,11 +9377,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795596732997,
+    "ts": 1795634797608,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.077,
+      "salience": 0.075,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10257,11 +10257,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795596732997,
+    "ts": 1795634797607,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.073,
+      "salience": 0.071,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11133,12 +11133,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_china-others-tariffs",
     "source": "news",
-    "ts": 1795596792805,
+    "ts": 1795634829413,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.977,
+      "salience": 0.911,
       "articles": [
         {
           "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
@@ -11239,12 +11239,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clinch-democrats-house",
     "source": "news",
-    "ts": 1795596792807,
+    "ts": 1795634829415,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.965,
+      "salience": 0.899,
       "articles": [
         {
           "title": "Democrats clinch historic House majority of at least 259 seats",
@@ -11345,12 +11345,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_newsom-targets-trump",
     "source": "news",
-    "ts": 1795596792805,
+    "ts": 1795634829413,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.835,
+      "salience": 0.769,
       "articles": [
         {
           "title": "Trump targets Newsom over erasure of death sentences",
@@ -11444,12 +11444,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_commutations-criticizes-death",
     "source": "news",
-    "ts": 1795596792806,
+    "ts": 1795634829414,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.816,
+      "salience": 0.75,
       "articles": [
         {
           "title": "Trump Criticizes Newsom Death Sentence Commutations",
@@ -11550,12 +11550,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_accommodations-appeals-court",
     "source": "news",
-    "ts": 1795596792807,
+    "ts": 1795634829414,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.695,
+      "salience": 0.629,
       "articles": [
         {
           "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
@@ -11628,12 +11628,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asylum-bid-border",
     "source": "news",
-    "ts": 1795596792807,
+    "ts": 1795634829414,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.599,
+      "salience": 0.533,
       "articles": [
         {
           "title": "Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border",
@@ -11678,12 +11678,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_anti-ban-corruption",
     "source": "news",
-    "ts": 1795596792806,
+    "ts": 1795634829414,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.394,
+      "salience": 0.328,
       "articles": [
         {
           "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
@@ -11721,12 +11721,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_appeals-could-court",
     "source": "news",
-    "ts": 1795596792807,
+    "ts": 1795634829415,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.281,
+      "salience": 0.215,
       "articles": [
         {
           "title": "Pregnant workers could lose workplace protections after appeals court strikes down law",
