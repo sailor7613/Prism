@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-24T23:58:19.944Z · 16 legislative + 12 news (GDELT, 3d)
+// 2026-11-25T08:53:12.811Z · 16 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.8,
+      "salience": 0.799,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2347",
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.623,
+      "salience": 0.622,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -789,11 +789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.614,
+      "salience": 0.612,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -1046,11 +1046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.578,
+      "salience": 0.576,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1303,11 +1303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.57,
+      "salience": 0.568,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1560,11 +1560,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795564650577,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.508,
+      "salience": 0.506,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2473,11 +2473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.466,
+      "salience": 0.465,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3001,11 +3001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.466,
+      "salience": 0.464,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3917,11 +3917,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.443,
+      "salience": 0.442,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4818,11 +4818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.251,
+      "salience": 0.249,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5717,11 +5717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795564650577,
+    "ts": 1795596732997,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.163,
+      "salience": 0.162,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6629,11 +6629,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.158,
+      "salience": 0.156,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7549,11 +7549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.157,
+      "salience": 0.155,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8459,11 +8459,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795564650578,
+    "ts": 1795596732998,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.122,
+      "salience": 0.12,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9377,11 +9377,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795564650577,
+    "ts": 1795596732997,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.079,
+      "salience": 0.077,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10257,11 +10257,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795564650577,
+    "ts": 1795596732997,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.074,
+      "salience": 0.073,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11131,103 +11131,209 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_democrats-house-majority",
+    "cid": "cand_news_china-others-tariffs",
     "source": "news",
-    "ts": 1795564699940,
+    "ts": 1795596792805,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.997,
+      "salience": 0.977,
       "articles": [
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.khqa.com/news/nation-world/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources/article_8a5d2b28-1913-547e-af6b-97ebb15f9c31.html",
+          "domain": "khqa.com",
+          "seendate": "2026-11-25T05:15:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/khqa.com/content/tncms/assets/v3/editorial/7/68/7688d2ab-4d39-54df-8c03-a93d58b757ea/6b0634fe919bd.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.capitalgazette.com/2026/11/24/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources-say/",
+          "domain": "capitalgazette.com",
+          "seendate": "2026-11-25T05:15:00Z",
+          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/11/Trump_Tariffs_Congress_5_166_e0fadd.jpg"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.advocate-news.com/2026/11/24/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources-say/",
+          "domain": "advocate-news.com",
+          "seendate": "2026-11-25T05:15:00Z",
+          "image": "https://www.advocate-news.com/wp-content/uploads/2026/11/Trump_Tariffs_Congress_5_166_e0fadd.jpg"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.ukiahdailyjournal.com/2026/11/24/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources-say/",
+          "domain": "ukiahdailyjournal.com",
+          "seendate": "2026-11-25T05:15:00Z",
+          "image": "https://www.ukiahdailyjournal.com/wp-content/uploads/2026/11/Trump_Tariffs_Congress_5_166_e0fadd.jpg"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.aol.com/articles/us-ready-slap-tariffs-china-005200000.html",
+          "domain": "aol.com",
+          "seendate": "2026-11-25T04:45:00Z",
+          "image": "https://hermes.media.static.aol.com/media/2026/11/25/439c7e21-f11e-3a52-b6a0-9f3ddadd5e1c/17eee6fd-7556-4d37-9aed-8a962ea78918.jpg"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.news4jax.com/news/politics/2026/11/25/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources-say/",
+          "domain": "news4jax.com",
+          "seendate": "2026-11-25T04:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/WCKS5TMRDNABJAM5EYX2PNVKOM.jpg?api_key=news4jax_3f10b25586458189"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.citizensvoice.com/2026/11/24/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources-say/",
+          "domain": "citizensvoice.com",
+          "seendate": "2026-11-25T04:45:00Z",
+          "image": "https://www.citizensvoice.com/wp-content/uploads/2026/11/Trump_Tariffs_Congress_5_166_e0fadd.jpg"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.wsls.com/news/politics/2026/11/25/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources-say/",
+          "domain": "wsls.com",
+          "seendate": "2026-11-25T04:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/WCKS5TMRDNABJAM5EYX2PNVKOM.jpg?api_key=wsls_8c3a4bc35af7684e"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "http://www.bozemandailychronicle.com/wire/business/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources/article_d59b187f-2838-5539-8497-ed41a0c0c777.html",
+          "domain": "bozemandailychronicle.com",
+          "seendate": "2026-11-25T04:45:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/bozemandailychronicle.com/content/tncms/assets/v3/editorial/8/d1/8d1c02bd-04fa-5ff0-9f19-c0d9b57425e0/6afae45ca61ad.image.jpg?crop=1763%2C926%2C0%2C124"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://www.republicanherald.com/2026/11/24/us-ready-to-slap-tariffs-on-china-eu-and-others-over-subsidized-production-ap-sources-say/",
+          "domain": "republicanherald.com",
+          "seendate": "2026-11-25T04:45:00Z",
+          "image": "https://www.republicanherald.com/wp-content/uploads/2026/11/Trump_Tariffs_Congress_5_166_e0fadd.jpg"
+        },
+        {
+          "title": "US prepares new tariffs on China , EU and others , sources say",
+          "url": "https://www.wvtm13.com/article/us-new-tariffs-china-eu-subsidized-production/74525712",
+          "domain": "wvtm13.com",
+          "seendate": "2026-11-25T04:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/4537e7c2-2ea6-4675-a343-60e3b5561811.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.0168xh"
+        },
+        {
+          "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+          "url": "https://isp.netscape.com:443/news/world/story/0001/20261125/d97ed6f4017152ca4c18de5517db6d51",
+          "domain": "isp.netscape.com",
+          "seendate": "2026-11-25T03:45:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+    "summary": "2026-11-25 khqa.com: US ready to slap tariffs on China , EU and others over subsidized production , AP sources say\n2026-11-25 capitalgazette.com: US ready to slap tariffs on China , EU and others over subsidized production , AP sources say\n2026-11-25 advocate-news.com: US ready to slap tariffs on China , EU and others over subsidized production , AP sources say\n2026-11-25 ukiahdailyjournal.com: US ready to slap tariffs on China , EU and others over subsidized production , AP sources say\n2026-11-25 aol.com: US ready to slap tariffs on China , EU and others over subsidized production , AP sources say\n2026-11-25 news4jax.com: US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_clinch-democrats-house",
+    "source": "news",
+    "ts": 1795596792807,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.965,
+      "articles": [
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.kcra.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "kcra.com",
+          "seendate": "2026-11-25T03:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990 - Boston News , Weather , Sports",
+          "url": "https://whdh.com/news/democrats-clinch-a-historic-house-majority-of-at-least-259-seats-the-largest-since-1990/",
+          "domain": "whdh.com",
+          "seendate": "2026-11-25T02:45:00Z",
+          "image": null
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wmur.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wmur.com",
+          "seendate": "2026-11-25T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wesh.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wesh.com",
+          "seendate": "2026-11-25T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wlwt.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wlwt.com",
+          "seendate": "2026-11-25T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wtae.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wtae.com",
+          "seendate": "2026-11-25T02:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wgal.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wgal.com",
+          "seendate": "2026-11-25T02:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wdsu.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wdsu.com",
+          "seendate": "2026-11-25T01:30:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990",
+          "url": "https://www.kob.com/ap-top-news/democrats-clinch-a-historic-house-majority-of-at-least-259-seats-the-largest-since-1990/",
+          "domain": "kob.com",
+          "seendate": "2026-11-25T00:45:00Z",
+          "image": "https://www.kob.com/wp-content/uploads/apimg/2026/11/Congress_99_76.jpg"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wbaltv.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wbaltv.com",
+          "seendate": "2026-11-25T00:15:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990",
+          "url": "https://abcnews.com/Politics/wireStory/democrats-clinch-historic-house-majority-259-seats-largest-138418247",
+          "domain": "abcnews.com",
+          "seendate": "2026-11-24T23:45:00Z",
+          "image": "https://i.abcnewsfe.com/a/e324c4b7-5928-48f8-9923-548b0c994212/wirestory_07b3ccbe60db7c1d3d3f3087d8fca721_16x9.jpg"
+        },
         {
           "title": "Democrats clinch historic House majority of at least 259 seats",
           "url": "https://www.koat.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
           "domain": "koat.com",
           "seendate": "2026-11-24T23:30:00Z",
           "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
-        },
-        {
-          "title": "Democrats clinch a historic House majority , largest since 1990",
-          "url": "https://www.chicagotribune.com/2026/11/24/democrats-historic-house-majority/",
-          "domain": "chicagotribune.com",
-          "seendate": "2026-11-24T21:45:00Z",
-          "image": "https://www.chicagotribune.com/wp-content/uploads/2026/11/Congress_99_76_93d1b0-1.jpg"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990",
-          "url": "https://www.ksl.com:443/article/51647925/democrats-clinch-a-historic-house-majority-of-at-least-259-seats-the-largest-since-1990",
-          "domain": "ksl.com",
-          "seendate": "2026-11-24T21:45:00Z",
-          "image": "https://img.ksl.com/slc/3209/320960/32096069.jpg?filter=kslv2/responsive_story_lg"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 259 seats",
-          "url": "https://www.ky3.com/2026/11/24/democrats-clinch-historic-house-majority-least-259-seats-largest-since-1990/",
-          "domain": "ky3.com",
-          "seendate": "2026-11-24T21:30:00Z",
-          "image": "https://gray-ky3-prod.gtv-cdn.com/resizer/v2/FNQ657IZ6NEHBEGYVE3MVT5S6M.jpg?auth=33f3c81ee011c3ac97f66ede79ec39b71eac4682b73e79e95736be51cdbefa65&smart=true"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 259 seats",
-          "url": "https://www.pressdemocrat.com/2026/11/24/democrats-clinch-largest-majority-since-1990/",
-          "domain": "pressdemocrat.com",
-          "seendate": "2026-11-24T21:30:00Z",
-          "image": "https://www.pressdemocrat.com/wp-content/uploads/2026/11/Congress_99_76_93d1b0-1.jpg"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 259 seats",
-          "url": "https://www.capitalgazette.com/2026/11/24/democrats-clinch-largest-majority-since-1990/",
-          "domain": "capitalgazette.com",
-          "seendate": "2026-11-24T21:30:00Z",
-          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/11/Congress_99_76_93d1b0-1.jpg"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990",
-          "url": "https://www.aol.com/articles/democrats-clinch-historic-house-majority-185403000.html",
-          "domain": "aol.com",
-          "seendate": "2026-11-24T20:15:00Z",
-          "image": "https://hermes.media.static.aol.com/media/2026/11/24/292addcf-23ee-3950-a3d9-402ebbf0bec8/70bb9c0d-1ddd-4995-adb1-94f9cd1de850.jpg"
-        },
-        {
-          "title": "North Carolina victory gives Democrats historic House majority of at least 258 seats , largest in decades",
-          "url": "https://www.fox5dc.com/news/north-carolina-victory-gives-democrats-historic-house-majority-least-258-seats-largest-decades",
-          "domain": "fox5dc.com",
-          "seendate": "2026-11-23T03:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/11/1280/720/1122_getty-hubbard-scaled.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 258 seats , the largest since 1992",
-          "url": "https://www.twincities.com/2026/11/22/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the-largest-since-1992/",
-          "domain": "twincities.com",
-          "seendate": "2026-11-23T02:30:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/11/Congress_9321__6d20e0-1.jpg"
-        },
-        {
-          "title": "Democrats clinch House majority of at least 258 seats , largest since 1992",
-          "url": "https://www.turnto23.com/politics/america-votes/democrats-clinch-house-majority-of-at-least-258-seats-largest-since-1992",
-          "domain": "turnto23.com",
-          "seendate": "2026-11-22T22:30:00Z",
-          "image": "https://ewscripps.brightspotcdn.com/f5/1b/fc890cc442dfbe9555254758a47c/ap26324474497275-1.jpg"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 258 seats",
-          "url": "https://www.wpbf.com/article/democrats-house-majority-258-seats/74501795",
-          "domain": "wpbf.com",
-          "seendate": "2026-11-22T22:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/d3e3cd2d-a6f7-43f6-ba6e-30fa859eb816.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 258 seats , the largest since 1992",
-          "url": "https://www.presstelegram.com/2026/11/22/democrats-clinch-a-historic-house-majority-of-at-least-258-seats-the-largest-since-1992/",
-          "domain": "presstelegram.com",
-          "seendate": "2026-11-22T22:30:00Z",
-          "image": "https://www.presstelegram.com/wp-content/uploads/2026/11/Congress_9321__6d20e0-1-1.jpg"
         }
       ]
     },
-    "title": "Democrats clinch a historic House majority of at least 258 seats , the largest since 1992",
-    "summary": "2026-11-24 koat.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-24 chicagotribune.com: Democrats clinch a historic House majority , largest since 1990\n2026-11-24 ksl.com: Democrats clinch a historic House majority of at least 259 seats , the largest since 1990\n2026-11-24 ky3.com: Democrats clinch a historic House majority of at least 259 seats\n2026-11-24 pressdemocrat.com: Democrats clinch a historic House majority of at least 259 seats\n2026-11-24 capitalgazette.com: Democrats clinch a historic House majority of at least 259 seats",
+    "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990",
+    "summary": "2026-11-25 kcra.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 whdh.com: Democrats clinch a historic House majority of at least 259 seats , the largest since 1990 - Boston News , Weather , Sports\n2026-11-25 wmur.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wesh.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wlwt.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wtae.com: Democrats clinch historic House majority of at least 259 seats",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11239,12 +11345,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_newsom-targets-trump",
     "source": "news",
-    "ts": 1795564699938,
+    "ts": 1795596792805,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.891,
+      "salience": 0.835,
       "articles": [
         {
           "title": "Trump targets Newsom over erasure of death sentences",
@@ -11259,13 +11365,6 @@ window.PRISM_CANDIDATES = [
           "domain": "wwaytv3.com",
           "seendate": "2026-11-24T06:15:00Z",
           "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.wwaytv3.com/content/uploads/2025/07/b/z/ap25188783406048-scaled.jpg"
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-          "url": "https://abcnews.com/Politics/wireStory/trump-targets-newsom-democrats-justice-department-speech-focused-138377258",
-          "domain": "abcnews.com",
-          "seendate": "2026-11-24T04:45:00Z",
-          "image": "https://i.abcnewsfe.com/a/b9522118-eff1-4955-8c57-be91c8a765ac/wirestory_5fff1865550ea7699667120234f2ebd4_16x9.jpg"
         },
         {
           "title": "Trump targets Newsom in Justice Department speech over erasure of death row sentences in California",
@@ -11333,7 +11432,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-    "summary": "2026-11-24 ironmountaindailynews.com: Trump targets Newsom over erasure of death sentences\n2026-11-24 wwaytv3.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime\n2026-11-24 abcnews.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime\n2026-11-24 wptf.com: Trump targets Newsom in Justice Department speech over erasure of death row sentences in California\n2026-11-24 lasvegassun.com: Trump targets Newsom in Justice Department speech over erasure of death row sentences in California - Las Vegas Sun News\n2026-11-24 lasvegassun.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime - Las Vegas Sun News",
+    "summary": "2026-11-24 ironmountaindailynews.com: Trump targets Newsom over erasure of death sentences\n2026-11-24 wwaytv3.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime\n2026-11-24 wptf.com: Trump targets Newsom in Justice Department speech over erasure of death row sentences in California\n2026-11-24 lasvegassun.com: Trump targets Newsom in Justice Department speech over erasure of death row sentences in California - Las Vegas Sun News\n2026-11-24 lasvegassun.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime - Las Vegas Sun News\n2026-11-24 kob.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11345,12 +11444,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_commutations-criticizes-death",
     "source": "news",
-    "ts": 1795564699939,
+    "ts": 1795596792806,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.872,
+      "salience": 0.816,
       "articles": [
         {
           "title": "Trump Criticizes Newsom Death Sentence Commutations",
@@ -11449,92 +11548,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_conviction-court-erasing",
-    "source": "news",
-    "ts": 1795564699940,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.762,
-      "articles": [
-        {
-          "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-          "url": "https://www.channel3000.com/news/federal-appeals-court-gives-president-donald-trump-a-path-to-erasing-hush-money-conviction/article_7c477816-8d1a-53ab-844f-d37b436325f9.html",
-          "domain": "channel3000.com",
-          "seendate": "2026-11-24T03:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/channel3000.com/content/tncms/assets/v3/editorial/5/8c/58c0d8e1-a9c1-4cfa-a570-107868a8ee55/6b008b70dd3ff.image.jpg?crop=1024%2C538%2C0%2C72"
-        },
-        {
-          "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction – WTOP News",
-          "url": "https://wtop.com/national/2026/11/federal-appeals-court-gives-president-donald-trump-a-new-pathway-to-erasing-his-hush-money-criminal-conviction/",
-          "domain": "wtop.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://wtop.com/wp-content/uploads/2026/11/Trump_11268-scaled.jpg"
-        },
-        {
-          "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-          "url": "https://www.clickondetroit.com/news/national/2026/11/23/federal-appeals-court-gives-president-donald-trump-a-path-to-erasing-hush-money-conviction/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/YJHKKD2JMBEJJGVQYKHGEXU2V4.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-          "url": "https://lancasteronline.com/news/national/federal-appeals-court-gives-president-donald-trump-a-path-to-erasing-hush-money-conviction/article_18d0416d-c1aa-5a37-a083-fd42b9577413.html",
-          "domain": "lancasteronline.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/lancasteronline.com/content/tncms/assets/v3/editorial/c/ed/ced539d3-4c07-5882-907a-3fd62c91cb69/6b04b4ca1d2d1.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-          "url": "https://www.kitv.com/news/national/federal-appeals-court-gives-president-donald-trump-a-path-to-erasing-hush-money-conviction/article_2dccb364-a772-5580-accd-5951c86b8db1.html",
-          "domain": "kitv.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/kitv.com/content/tncms/assets/v3/editorial/9/20/9206848d-8bfe-4795-99b8-f9f096b0c412/6b04ba620eb2e.image.jpg?crop=1024%2C538%2C0%2C72"
-        },
-        {
-          "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-          "url": "https://www.durangoherald.com/articles/associated-press/federal-appeals-court-gives-president-donald-trump-a-path-to-erasing-hush-money-conviction/",
-          "domain": "durangoherald.com",
-          "seendate": "2026-11-23T22:30:00Z",
-          "image": "https://imengine.public.prod.dur.navigacloud.com/?uuid=F1C285BA-839B-5973-A421-D6ACC2A9D1BD&function=cover&type=preview&source=false"
-        },
-        {
-          "title": "President Trump get path to erasing hush money conviction from fed court",
-          "url": "https://www.pressdemocrat.com/2026/11/23/federal-appeals-court-gives-president-donald-trump-a-path-to-erasing-hush-money-conviction/",
-          "domain": "pressdemocrat.com",
-          "seendate": "2026-11-23T22:30:00Z",
-          "image": "https://www.pressdemocrat.com/wp-content/uploads/2026/11/Trump_88765.jpg"
-        },
-        {
-          "title": "Federal appeals court gives Trump path to erasing hush money conviction – NBC Chicago",
-          "url": "https://www.nbcchicago.com/news/national-international/federal-appeals-court-trump-path-erasing-hush-money-conviction/4020573/",
-          "domain": "nbcchicago.com",
-          "seendate": "2026-11-23T22:30:00Z",
-          "image": "https://media.nbcchicago.com/2026/11/TRUMP-RUSSIA.jpg?quality=85&strip=all"
-        }
-      ]
-    },
-    "title": "Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-    "summary": "2026-11-24 channel3000.com: Federal appeals court gives President Donald Trump a path to erasing hush money conviction\n2026-11-24 wtop.com: Federal appeals court gives President Donald Trump a path to erasing hush money conviction – WTOP News\n2026-11-24 clickondetroit.com: Federal appeals court gives President Donald Trump a path to erasing hush money conviction\n2026-11-24 lancasteronline.com: Federal appeals court gives President Donald Trump a path to erasing hush money conviction\n2026-11-24 kitv.com: Federal appeals court gives President Donald Trump a path to erasing hush money conviction\n2026-11-23 durangoherald.com: Federal appeals court gives President Donald Trump a path to erasing hush money conviction",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_accommodations-appeals-court",
     "source": "news",
-    "ts": 1795564699939,
+    "ts": 1795596792807,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.751,
+      "salience": 0.695,
       "articles": [
         {
           "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
@@ -11607,12 +11628,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asylum-bid-border",
     "source": "news",
-    "ts": 1795564699939,
+    "ts": 1795596792807,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.655,
+      "salience": 0.599,
       "articles": [
         {
           "title": "Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border",
@@ -11655,57 +11676,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_filibuster-lauds-pence",
-    "source": "news",
-    "ts": 1795564699940,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.506,
-      "articles": [
-        {
-          "title": "Pence lauds Thune for saving the filibuster",
-          "url": "https://www.thedigitalcourier.com/news/national/pence-lauds-thune-for-saving-the-filibuster/article_623185af-abca-5c8a-8fe0-f403f9d3311b.html",
-          "domain": "thedigitalcourier.com",
-          "seendate": "2026-11-24T06:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/thedigitalcourier.com/content/tncms/custom/image/d5c5849c-f9cb-11ef-a09f-13ffcb644ca4.png?crop=80%2C80%2C145%2C0"
-        },
-        {
-          "title": "Pence lauds Thune for saving the filibuster",
-          "url": "https://www.kten.com/news/pence-lauds-thune-for-saving-the-filibuster/article_cb8d64a4-0f27-574a-b604-bfaec6d5b901.html",
-          "domain": "kten.com",
-          "seendate": "2026-11-24T03:30:00Z",
-          "image": null
-        },
-        {
-          "title": "Pence lauds Thune for saving the filibuster",
-          "url": "https://www.hazard-herald.com/news/national/pence-lauds-thune-for-saving-the-filibuster/article_a6c093a1-4c3e-58bf-88ab-63caf51a88b6.html",
-          "domain": "hazard-herald.com",
-          "seendate": "2026-11-24T02:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/hazard-herald.com/content/tncms/custom/image/13ce1438-8da1-11e7-89b3-47080abc53bf.png"
-        }
-      ]
-    },
-    "title": "Pence lauds Thune for saving the filibuster",
-    "summary": "2026-11-24 thedigitalcourier.com: Pence lauds Thune for saving the filibuster\n2026-11-24 kten.com: Pence lauds Thune for saving the filibuster\n2026-11-24 hazard-herald.com: Pence lauds Thune for saving the filibuster",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_anti-ban-corruption",
     "source": "news",
-    "ts": 1795564699939,
+    "ts": 1795596792806,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.45,
+      "salience": 0.394,
       "articles": [
         {
           "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
@@ -11741,85 +11719,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_cap-card-credit",
-    "source": "news",
-    "ts": 1795564699939,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.432,
-      "articles": [
-        {
-          "title": "Trump vows to work with Democrats to cap credit card interest rates at 10 % ",
-          "url": "https://isp.netscape.com:443/pf/story/0001/20261122/098a69b520e520e535eebe595cd0c64a",
-          "domain": "isp.netscape.com",
-          "seendate": "2026-11-22T07:30:00Z",
-          "image": null
-        },
-        {
-          "title": "Trump says hell work with Democrats to cap credit card interest rates",
-          "url": "https://turnto10.com/news/nation-world/trump-democrats-cap-credit-card-interest-rates-talarico-warren-hawley-banks-reserve-federal-new-york-congress-republicans",
-          "domain": "turnto10.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://turnto10.com/resources/media2/16x9/2258/1320/0x118/90/f58c9fb2-6d3d-40dd-a8f7-c1bd921b45a6-GettyImages2198985878.jpg"
-        },
-        {
-          "title": "Trump vows to work with Democrats to cap credit card interest rates at 10 % ",
-          "url": "https://www.mcall.com/2026/11/21/trump-vows-to-work-with-democrats-to-cap-credit-card-interest-rates-at-10/",
-          "domain": "mcall.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://www.mcall.com/wp-content/uploads/2026/11/Trump_Credit_Cards_11235-1-1.jpg"
-        },
-        {
-          "title": "Trump says hell work with Democrats to cap credit card interest rates",
-          "url": "https://fox17.com/news/nation-world/trump-democrats-cap-credit-card-interest-rates-talarico-warren-hawley-banks-reserve-federal-new-york-congress-republicans",
-          "domain": "fox17.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://fox17.com/resources/media2/16x9/2258/1320/0x118/90/f58c9fb2-6d3d-40dd-a8f7-c1bd921b45a6-GettyImages2198985878.jpg"
-        },
-        {
-          "title": "Trump says hell work with Democrats to cap credit card interest rates",
-          "url": "https://kval.com/news/nation-world/trump-democrats-cap-credit-card-interest-rates-talarico-warren-hawley-banks-reserve-federal-new-york-congress-republicans",
-          "domain": "kval.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://kval.com/resources/media2/16x9/2258/1320/0x118/90/f58c9fb2-6d3d-40dd-a8f7-c1bd921b45a6-GettyImages2198985878.jpg"
-        },
-        {
-          "title": "Trump pledges to work with Democrats to cap credit card interest rates",
-          "url": "https://www.ktvu.com/money/trump-pledges-work-democrats-cap-credit-card-interest-rates",
-          "domain": "ktvu.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/11/1280/720/gettyimages-2285789144.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Trump says hell work with Democrats to cap credit card interest rates",
-          "url": "https://news4sanantonio.com/news/nation-world/trump-democrats-cap-credit-card-interest-rates-talarico-warren-hawley-banks-reserve-federal-new-york-congress-republicans",
-          "domain": "news4sanantonio.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://news4sanantonio.com/resources/media2/16x9/2258/1320/0x118/90/f58c9fb2-6d3d-40dd-a8f7-c1bd921b45a6-GettyImages2198985878.jpg"
-        }
-      ]
-    },
-    "title": "Trump says hell work with Democrats to cap credit card interest rates",
-    "summary": "2026-11-22 isp.netscape.com: Trump vows to work with Democrats to cap credit card interest rates at 10 % \n2026-11-22 turnto10.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 mcall.com: Trump vows to work with Democrats to cap credit card interest rates at 10 % \n2026-11-22 fox17.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 kval.com: Trump says hell work with Democrats to cap credit card interest rates\n2026-11-22 ktvu.com: Trump pledges to work with Democrats to cap credit card interest rates",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_appeals-could-court",
     "source": "news",
-    "ts": 1795564699940,
+    "ts": 1795596792807,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.337,
+      "salience": 0.281,
       "articles": [
         {
           "title": "Pregnant workers could lose workplace protections after appeals court strikes down law",
@@ -11846,106 +11753,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Pregnant workers could lose workplace protections after appeals court strikes down law",
     "summary": "2026-11-23 fox5atlanta.com: Pregnant workers could lose workplace protections after appeals court strikes down law\n2026-11-23 fox5dc.com: Pregnant workers could lose workplace protections after appeals court strikes down law\n2026-11-23 fox32chicago.com: Pregnant workers could lose workplace protections after appeals court strikes down law",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_ahead-difficulties-leads",
-    "source": "news",
-    "ts": 1795564699939,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.284,
-      "articles": [
-        {
-          "title": "Trump sees difficulties ahead if Schumer leads Senate",
-          "url": "https://kfgo.com/2026/11/22/trump-sees-difficulties-ahead-if-schumer-leads-senate/",
-          "domain": "kfgo.com",
-          "seendate": "2026-11-22T19:00:00Z",
-          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/22/2026-11-22T154144Z_1_LYNXNPEMAL0AM_RTROPTP_3_USA-CONGRESS.JPG"
-        },
-        {
-          "title": "Trump sees difficulties ahead if Schumer leads Senate",
-          "url": "https://www.aol.com/articles/trump-sees-difficulties-ahead-schumer-154144000.html",
-          "domain": "aol.com",
-          "seendate": "2026-11-22T18:45:00Z",
-          "image": "https://hermes.media.transform.aol.com/2fd8162323c6cdc5c0875719420e84a9e8c106fa/w_1200,c_scale,f_auto,q_auto/https://hermes.media.static.aol.com/media/2026/11/22/2b242df9-1936-338b-9d65-84105ece0df5/76006363-56fd-4541-adb5-585520f53086.jpg"
-        },
-        {
-          "title": "Trump sees difficulties ahead if Schumer leads Senate",
-          "url": "https://mymixfm.com/2026/11/22/trump-sees-difficulties-ahead-if-schumer-leads-senate/",
-          "domain": "mymixfm.com",
-          "seendate": "2026-11-22T18:45:00Z",
-          "image": "https://storage.googleapis.com/media.mwcradio.com/mimesis/2026-11/22/2026-11-22T154144Z_1_LYNXNPEMAL0AM_RTROPTP_3_USA-CONGRESS.JPG"
-        }
-      ]
-    },
-    "title": "Trump sees difficulties ahead if Schumer leads Senate",
-    "summary": "2026-11-22 kfgo.com: Trump sees difficulties ahead if Schumer leads Senate\n2026-11-22 aol.com: Trump sees difficulties ahead if Schumer leads Senate\n2026-11-22 mymixfm.com: Trump sees difficulties ahead if Schumer leads Senate",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_contractors-house-inquiries",
-    "source": "news",
-    "ts": 1795564699939,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.278,
-      "articles": [
-        {
-          "title": "Trump orders contractors to consult White House on oversight inquiries",
-          "url": "https://www.wsbradio.com/news/politics/trump-orders-federal/CRCLMFT66M4ZTDFRWTWSALZRFY/",
-          "domain": "wsbradio.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://cmg-cmg-rd-20021-prod.cdn.arcpublishing.com/resizer/v2/https%3A%2F%2Fcloudfront-us-east-1.images.arcpublishing.com%2Fcmg%2FWW3GM4XGKM3W7AWVCNSLFSHYHQ.jpg?auth=14428e0728fd566607cdb46a410f242b37af077ce9262ab17d92a3d2e16fb59a&smart=true"
-        },
-        {
-          "title": "Trump order tells federal contractors to coordinate with White House on Congress inquiries",
-          "url": "https://turnto10.com/news/nation-world/trump-order-federal-contractors-white-house-congress-",
-          "domain": "turnto10.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://turnto10.com/resources/media2/16x9/7089/1320/0x370/90/14a58387-8351-44d2-a226-c7e1b03d5ada-GettyImages2303717159.jpg"
-        },
-        {
-          "title": "Trump orders federal contractors to coordinate with White House on congressional inquiries",
-          "url": "https://abcnews.com/Politics/trump-orders-federal-contractors-coordinate-white-house-congressional/story?id=138344717",
-          "domain": "abcnews.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://i.abcnewsfe.com/a/8697f964-7304-4346-b739-6b826efb69fb/trump-ballroom-ap-jt-261121_1795278166444_hpMain_16x9.jpg"
-        },
-        {
-          "title": "Trump order tells federal contractors to coordinate with White House on Congress inquiries",
-          "url": "https://fox17.com/news/nation-world/trump-order-federal-contractors-white-house-congress-",
-          "domain": "fox17.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://fox17.com/resources/media2/16x9/7089/1320/0x370/90/14a58387-8351-44d2-a226-c7e1b03d5ada-GettyImages2303717159.jpg"
-        },
-        {
-          "title": "Trump order tells federal contractors to coordinate with White House on Congress inquiries",
-          "url": "https://news4sanantonio.com/news/nation-world/trump-order-federal-contractors-white-house-congress-",
-          "domain": "news4sanantonio.com",
-          "seendate": "2026-11-22T00:30:00Z",
-          "image": "https://news4sanantonio.com/resources/media2/16x9/7089/1320/0x370/90/14a58387-8351-44d2-a226-c7e1b03d5ada-GettyImages2303717159.jpg"
-        }
-      ]
-    },
-    "title": "Trump order tells federal contractors to coordinate with White House on Congress inquiries",
-    "summary": "2026-11-22 wsbradio.com: Trump orders contractors to consult White House on oversight inquiries\n2026-11-22 turnto10.com: Trump order tells federal contractors to coordinate with White House on Congress inquiries\n2026-11-22 abcnews.com: Trump orders federal contractors to coordinate with White House on congressional inquiries\n2026-11-22 fox17.com: Trump order tells federal contractors to coordinate with White House on Congress inquiries\n2026-11-22 news4sanantonio.com: Trump order tells federal contractors to coordinate with White House on Congress inquiries",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

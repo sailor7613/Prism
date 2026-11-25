@@ -1,18 +1,23 @@
-# Newsroom digest — 2026-11-24
+# Newsroom digest — 2026-11-25
 
-Register: 195 objects · this scan: 1 new, 1 seen again, 0 returned.
+Register: 198 objects · this scan: 3 new, 1 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (1)
+- **Groups sue Trump administration after changes made to Philadelphia slavery exhibit** — suit · sued · holder: the President · formed 2026-11-25 · 4 outlets (peak 4) · `obj_thepresi_administration-changes-exhibit-groups`
 
 ## Permanence breaks (went silent while unresolved)
-- **Survivor Justice Tax Prevention Act — Senate passage of the bill (Bill Passed)** — bill · voted · holder: the Senate · formed 2026-11-19 · 0 outlets (peak 0) · `obj_bill_hr-119-2347` · silent 0d after 64 scans
+- **Senate reaches bipartisan deal on permitting bill to speed approvals of new energy projects** — agreement · agreed · holder: the Senate · formed 2026-09-30 · 4 outlets (peak 5) · `obj_thesenat_approvals-bill-bipartisan-deal` · silent 5d after 5 scans
+- **Denmark ratifies Trump security deal over Greenland** — vote · voted · holder: the President · formed 2026-11-19 · 3 outlets (peak 4) · `obj_thepresi_deal-denmark-greenland-ratifies` · silent 5d after 5 scans
+- **Senate Republicans block latest Democratic effort to end the war in Iran** — ruling · ruled · holder: the Senate · formed 2026-11-19 · 19 outlets (peak 19) · `obj_thesenat_block-democratic-effort-end` · silent 5d after 3 scans
+- **A second judge blocks Trump arch , saying it unlikely to succeed in court** — ruling · ruled · holder: a federal court · formed 2026-11-20 · 4 outlets (peak 6) · `obj_afederal_arch-blocks-court-judge` · silent 5d after 5 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- **What Nvidia CEO Jensen Huang will face when he testifies before Congress** — hearing · compelled · holder: Congress · formed 2026-11-24 · 3 outlets (peak 3) · `obj_congress_before-ceo-congress-face`
+- **Fort Hood shooter Nidal Hasan asks court to delay firing - squad execution so he can fight sentence** — suit · sued · holder: ? · formed 2026-11-25 · 24 outlets (peak 24) · `obj_x_asks-can-court-delay`
+- **Groups sue Trump administration after changes made to Philadelphia slavery exhibit** — suit · sued · holder: the President · formed 2026-11-25 · 4 outlets (peak 4) · `obj_thepresi_administration-changes-exhibit-groups`
+- **US ready to slap tariffs on China , EU and others over subsidized production , AP sources say** — tariff/sanction · imposed · holder: ? · formed 2026-11-25 · 11 outlets (peak 11) · `obj_x_china-others-production-ready`
 
 ## Watching (50)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
