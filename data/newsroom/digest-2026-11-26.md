@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-11-26
 
-Register: 210 objects · this scan: 4 new, 2 seen again, 0 returned.
+Register: 211 objects · this scan: 1 new, 8 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -16,12 +16,9 @@ Register: 210 objects · this scan: 4 new, 2 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Second Judge Blocks Trump Birthright Citizenship Order** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 6 outlets (peak 6) · `obj_afederal_birthright-blocks-citizenship-judge`
-- **U . S . Judge rules FCC violated ABC free speech rights to please Trump** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 5 outlets (peak 5) · `obj_afederal_abc-fcc-free-judge`
-- **US judge blocks FCC from targeting Disney - owned ABC stations** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 3 outlets (peak 3) · `obj_afederal_abc-blocks-disney-fcc`
-- **US to hike tariffs on China , EU , Brazil and others over subsidized factories** — tariff/sanction · imposed · holder: ? · formed 2026-11-26 · 3 outlets (peak 3) · `obj_x_brazil-china-factories-hike`
+- **Judge Blocks FCC From Revoking ABC Broadcast Licenses** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 13 outlets (peak 13) · `obj_afederal_abc-blocks-broadcast-fcc`
 
-## Watching (54)
+## Watching (55)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`

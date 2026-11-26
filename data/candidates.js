@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-26T03:39:47.658Z · 16 legislative + 6 news (GDELT, 3d)
+// 2026-11-26T17:07:24.715Z · 16 legislative + 8 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795664372539,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.795,
+      "salience": 0.793,
       "congressGovUrl": null,
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795664372539,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.618,
+      "salience": 0.616,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -789,11 +789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795664372539,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.609,
+      "salience": 0.606,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -1046,11 +1046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795664372539,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.573,
+      "salience": 0.57,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1303,11 +1303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.565,
+      "salience": 0.562,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1560,11 +1560,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.503,
+      "salience": 0.5,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2473,11 +2473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.461,
+      "salience": 0.459,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3001,11 +3001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795664372539,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.461,
+      "salience": 0.459,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3917,11 +3917,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.438,
+      "salience": 0.436,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4818,11 +4818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.246,
+      "salience": 0.243,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5717,11 +5717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.158,
+      "salience": 0.156,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6629,11 +6629,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.153,
+      "salience": 0.15,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7549,11 +7549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795664372539,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.151,
+      "salience": 0.149,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8459,11 +8459,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808680,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.117,
+      "salience": 0.114,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9377,11 +9377,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808679,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.074,
+      "salience": 0.071,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10257,11 +10257,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795664372538,
+    "ts": 1795712808679,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.069,
+      "salience": 0.067,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11133,12 +11133,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_china-others-tariffs",
     "source": "news",
-    "ts": 1795664387652,
+    "ts": 1795712844711,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.86,
+      "salience": 0.776,
       "articles": [
         {
           "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
@@ -11239,12 +11239,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clinch-democrats-historic",
     "source": "news",
-    "ts": 1795664387654,
+    "ts": 1795712844712,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.847,
+      "salience": 0.763,
       "articles": [
         {
           "title": "Democrats clinch historic House majority of at least 259 seats",
@@ -11343,14 +11343,71 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_newsom-targets-trump",
+    "cid": "cand_news_birthright-blocks-citizenship",
     "source": "news",
-    "ts": 1795664387653,
+    "ts": 1795712844712,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.718,
+      "salience": 0.698,
+      "articles": [
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://talkradio1059.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "talkradio1059.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order | WJBO Newsradio 1150 AM & 98 . 7 FM",
+          "url": "https://wjbo.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "wjbo.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://kfab.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "kfab.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://kprcradio.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "kprcradio.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://talkradio1080.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "talkradio1080.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+    "summary": "2026-11-26 talkradio1059.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 wjbo.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order | WJBO Newsradio 1150 AM & 98 . 7 FM\n2026-11-26 kfab.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 kprcradio.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 talkradio1080.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_newsom-targets-trump",
+    "source": "news",
+    "ts": 1795712844711,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.634,
       "articles": [
         {
           "title": "Trump targets Newsom over erasure of death sentences",
@@ -11444,12 +11501,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_commutations-criticizes-death",
     "source": "news",
-    "ts": 1795664387653,
+    "ts": 1795712844712,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.699,
+      "salience": 0.615,
       "articles": [
         {
           "title": "Trump Criticizes Newsom Death Sentence Commutations",
@@ -11548,14 +11605,57 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_asylum-bid-border",
+    "cid": "cand_news_countries-dozen-house",
     "source": "news",
-    "ts": 1795664387654,
+    "ts": 1795712844712,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.481,
+      "salience": 0.535,
+      "articles": [
+        {
+          "title": "The White House is proposing new tariffs on more than a dozen countries",
+          "url": "https://www.kvnf.org/2026-11-25/the-white-house-is-proposing-new-tariffs-on-more-than-a-dozen-countries",
+          "domain": "kvnf.org",
+          "seendate": "2026-11-26T04:15:00Z",
+          "image": null
+        },
+        {
+          "title": "The White House is proposing new tariffs on more than a dozen countries",
+          "url": "https://www.capeandislands.org/2026-11-25/the-white-house-is-proposing-new-tariffs-on-more-than-a-dozen-countries",
+          "domain": "capeandislands.org",
+          "seendate": "2026-11-26T03:30:00Z",
+          "image": null
+        },
+        {
+          "title": "The White House is proposing new tariffs on more than a dozen countries",
+          "url": "https://www.redriverradio.org/2026-11-25/the-white-house-is-proposing-new-tariffs-on-more-than-a-dozen-countries",
+          "domain": "redriverradio.org",
+          "seendate": "2026-11-26T03:30:00Z",
+          "image": null
+        }
+      ]
+    },
+    "title": "The White House is proposing new tariffs on more than a dozen countries",
+    "summary": "2026-11-26 kvnf.org: The White House is proposing new tariffs on more than a dozen countries\n2026-11-26 capeandislands.org: The White House is proposing new tariffs on more than a dozen countries\n2026-11-26 redriverradio.org: The White House is proposing new tariffs on more than a dozen countries",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_asylum-bid-border",
+    "source": "news",
+    "ts": 1795712844712,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.397,
       "articles": [
         {
           "title": "Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border",
@@ -11600,12 +11700,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_anti-ban-corruption",
     "source": "news",
-    "ts": 1795664387653,
+    "ts": 1795712844712,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.276,
+      "salience": 0.192,
       "articles": [
         {
           "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
