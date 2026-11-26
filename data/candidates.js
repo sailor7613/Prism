@@ -1,16 +1,16 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-25T19:27:09.419Z · 16 legislative + 8 news (GDELT, 3d)
+// 2026-11-26T03:39:47.658Z · 16 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795634797609,
+    "ts": 1795664372539,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.797,
-      "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/2347",
+      "salience": 0.795,
+      "congressGovUrl": null,
       "votes": [
         {
           "voteId": "s-119-2-270",
@@ -419,7 +419,7 @@ window.PRISM_CANDIDATES = [
         }
       ]
     },
-    "title": "Bipartisan American Affordability and Jobs Act of 2026 (3 roll calls)",
+    "title": "hr-119-2347 (3 roll calls)",
     "summary": "2026-11-19 senate: On Passage of the Bill — Bill Passed (62-33; D 14-30 · R 47-2 · I 1-1)\n2026-11-10 senate: On the Motion to Proceed — Motion to Proceed Agreed to (62-21; D 15-19 · R 46-1 · I 1-1)\n2026-11-09 senate: On Cloture on the Motion to Proceed — Cloture on the Motion to Proceed Agreed to (73-25; D 21-23 · R 51-1 · I 1-1)",
     "framingDraft": null,
     "suggestedAxes": null,
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372539,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.62,
+      "salience": 0.618,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -789,11 +789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795634797609,
+    "ts": 1795664372539,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.61,
+      "salience": 0.609,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -1046,11 +1046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372539,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.574,
+      "salience": 0.573,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1303,11 +1303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.566,
+      "salience": 0.565,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1560,11 +1560,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.504,
+      "salience": 0.503,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2473,11 +2473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.463,
+      "salience": 0.461,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3001,11 +3001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372539,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.463,
+      "salience": 0.461,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3917,11 +3917,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.44,
+      "salience": 0.438,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4818,11 +4818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.247,
+      "salience": 0.246,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5717,11 +5717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.16,
+      "salience": 0.158,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6629,11 +6629,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.154,
+      "salience": 0.153,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7549,11 +7549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372539,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.153,
+      "salience": 0.151,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8459,11 +8459,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.118,
+      "salience": 0.117,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9377,11 +9377,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795634797608,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.075,
+      "salience": 0.074,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10257,11 +10257,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795634797607,
+    "ts": 1795664372538,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.071,
+      "salience": 0.069,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11133,12 +11133,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_china-others-tariffs",
     "source": "news",
-    "ts": 1795634829413,
+    "ts": 1795664387652,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.911,
+      "salience": 0.86,
       "articles": [
         {
           "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
@@ -11237,14 +11237,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_clinch-democrats-house",
+    "cid": "cand_news_clinch-democrats-historic",
     "source": "news",
-    "ts": 1795634829415,
+    "ts": 1795664387654,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.899,
+      "salience": 0.847,
       "articles": [
         {
           "title": "Democrats clinch historic House majority of at least 259 seats",
@@ -11297,6 +11297,13 @@ window.PRISM_CANDIDATES = [
         },
         {
           "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.wmtw.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "wmtw.com",
+          "seendate": "2026-11-25T01:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
           "url": "https://www.wdsu.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
           "domain": "wdsu.com",
           "seendate": "2026-11-25T01:30:00Z",
@@ -11322,17 +11329,10 @@ window.PRISM_CANDIDATES = [
           "domain": "abcnews.com",
           "seendate": "2026-11-24T23:45:00Z",
           "image": "https://i.abcnewsfe.com/a/e324c4b7-5928-48f8-9923-548b0c994212/wirestory_07b3ccbe60db7c1d3d3f3087d8fca721_16x9.jpg"
-        },
-        {
-          "title": "Democrats clinch historic House majority of at least 259 seats",
-          "url": "https://www.koat.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
-          "domain": "koat.com",
-          "seendate": "2026-11-24T23:30:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
         }
       ]
     },
-    "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990",
+    "title": "Democrats clinch historic House majority of at least 259 seats",
     "summary": "2026-11-25 kcra.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 whdh.com: Democrats clinch a historic House majority of at least 259 seats , the largest since 1990 - Boston News , Weather , Sports\n2026-11-25 wmur.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wesh.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wlwt.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wtae.com: Democrats clinch historic House majority of at least 259 seats",
     "framingDraft": null,
     "suggestedAxes": null,
@@ -11345,12 +11345,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_newsom-targets-trump",
     "source": "news",
-    "ts": 1795634829413,
+    "ts": 1795664387653,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.769,
+      "salience": 0.718,
       "articles": [
         {
           "title": "Trump targets Newsom over erasure of death sentences",
@@ -11444,12 +11444,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_commutations-criticizes-death",
     "source": "news",
-    "ts": 1795634829414,
+    "ts": 1795664387653,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.75,
+      "salience": 0.699,
       "articles": [
         {
           "title": "Trump Criticizes Newsom Death Sentence Commutations",
@@ -11548,92 +11548,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_accommodations-appeals-court",
-    "source": "news",
-    "ts": 1795634829414,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.629,
-      "articles": [
-        {
-          "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-          "url": "https://www.wwaytv3.com/appeals-court-says-federal-law-requiring-accommodations-for-pregnant-workers-is-unconstitutional/",
-          "domain": "wwaytv3.com",
-          "seendate": "2026-11-24T01:45:00Z",
-          "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.wwaytv3.com/content/uploads/2019/01/m/h/1280x960_30308B00-XZTGI.jpg"
-        },
-        {
-          "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-          "url": "https://www.twincities.com/2026/11/22/appeals-court-says-federal-law-requiring-accommodations-for-pregnant-workers-is-unconstitutional/",
-          "domain": "twincities.com",
-          "seendate": "2026-11-23T02:30:00Z",
-          "image": "https://www.twincities.com/wp-content/uploads/2026/11/Pregnant_Workers_Law_68484.jpg"
-        },
-        {
-          "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-          "url": "https://www.wbrz.com/news/appeals-court-says-federal-law-requiring-accommodations-for-pregnant-workers-is-unconstitutional",
-          "domain": "wbrz.com",
-          "seendate": "2026-11-23T02:30:00Z",
-          "image": "https://dcer237tfveol.cloudfront.net/v2/nFAj5w6Jkym6wKHEkBJzyw1rHfrW9MIjWA_ytGhJl5FisNrLPoMtb8IqtFg2y6FJtSgIU5iixw6OvSrObwWvhBTFlMUl6IYDNS4WeAQqH-L43IqOs10exKYM17lFpXnOE"
-        },
-        {
-          "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-          "url": "https://www.clickondetroit.com/business/2026/11/22/appeals-court-says-federal-law-requiring-accommodations-for-pregnant-workers-is-unconstitutional/",
-          "domain": "clickondetroit.com",
-          "seendate": "2026-11-23T00:30:00Z",
-          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/3XUWAQDJKRF2TO4FRZVSABNGGM.jpg?api_key=clickondetroit_06f87fefb2123598"
-        },
-        {
-          "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-          "url": "https://abc7news.com/story/appeals-court-says-federal-law-requiring-accommodations-pregnant-workers-is-unconstitutional/20067627/",
-          "domain": "abc7news.com",
-          "seendate": "2026-11-22T22:30:00Z",
-          "image": "https://cdn.abcotvs.com/dip/images/20067625_112226-kgo-ap-pregnancy-accomodations-img.png"
-        },
-        {
-          "title": "Appeals court says federal pregnant workers accommodations law is unconstitutional",
-          "url": "https://www.dailyherald.com/2026/11/22/appeals-court-federal-law-requiring-accommodations-pregnant-workers-unconstitutional/",
-          "domain": "dailyherald.com",
-          "seendate": "2026-11-22T22:30:00Z",
-          "image": "https://www.dailyherald.com/wp-content/uploads/2026/11/Pregnant_Workers_Law_68484.jpg"
-        },
-        {
-          "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-          "url": "https://www.wishtv.com/news/politics/appeals-court-says-federal-law-requiring-accommodations-for-pregnant-workers-is-unconstitutional/",
-          "domain": "wishtv.com",
-          "seendate": "2026-11-22T22:30:00Z",
-          "image": "https://www.wishtv.com/wp-content/uploads/2026/11/22/AP26326693568484-scaled-e1795380549277.jpg"
-        },
-        {
-          "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-          "url": "http://www.thegazette.com/news/national/appeals-court-says-federal-law-requiring-accommodations-for-pregnant-workers-is-unconstitutional/article_90caf552-ed55-5c0c-af5d-f3156fadf6a3.html",
-          "domain": "thegazette.com",
-          "seendate": "2026-11-22T20:30:00Z",
-          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/b/32/b3283a98-c211-53b6-95d0-51d5eb0d9fd2/6b034800189c3.image.jpg?crop=3511%2C1843%2C0%2C248"
-        }
-      ]
-    },
-    "title": "Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional",
-    "summary": "2026-11-24 wwaytv3.com: Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional\n2026-11-23 twincities.com: Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional\n2026-11-23 wbrz.com: Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional\n2026-11-23 clickondetroit.com: Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional\n2026-11-22 abc7news.com: Appeals court says federal law requiring accommodations for pregnant workers is unconstitutional\n2026-11-22 dailyherald.com: Appeals court says federal pregnant workers accommodations law is unconstitutional",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_asylum-bid-border",
     "source": "news",
-    "ts": 1795634829414,
+    "ts": 1795664387654,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.533,
+      "salience": 0.481,
       "articles": [
         {
           "title": "Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border",
@@ -11678,12 +11600,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_anti-ban-corruption",
     "source": "news",
-    "ts": 1795634829414,
+    "ts": 1795664387653,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.328,
+      "salience": 0.276,
       "articles": [
         {
           "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
@@ -11710,49 +11632,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
     "summary": "2026-11-23 nebraska.tv: Democrats eye stock trading ban in early test of anti - corruption promises\n2026-11-23 wgxa.tv: Democrats eye stock trading ban in early test of anti - corruption promises\n2026-11-23 wtov9.com: Democrats eye stock trading ban in early test of anti - corruption promises",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_appeals-could-court",
-    "source": "news",
-    "ts": 1795634829415,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.215,
-      "articles": [
-        {
-          "title": "Pregnant workers could lose workplace protections after appeals court strikes down law",
-          "url": "https://www.fox5atlanta.com/news/pregnant-workers-workplace-protections-appeals-court",
-          "domain": "fox5atlanta.com",
-          "seendate": "2026-11-23T03:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/11/1280/720/gettyimages-808230532.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Pregnant workers could lose workplace protections after appeals court strikes down law",
-          "url": "https://www.fox5dc.com/news/pregnant-workers-workplace-protections-appeals-court",
-          "domain": "fox5dc.com",
-          "seendate": "2026-11-23T03:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/11/1280/720/gettyimages-808230532.jpg?ve=1&tl=1"
-        },
-        {
-          "title": "Pregnant workers could lose workplace protections after appeals court strikes down law",
-          "url": "https://www.fox32chicago.com/news/pregnant-workers-workplace-protections-appeals-court",
-          "domain": "fox32chicago.com",
-          "seendate": "2026-11-23T00:30:00Z",
-          "image": "https://images.foxtv.com/static.livenowfox.com/www.livenowfox.com/content/uploads/2026/11/1280/720/gettyimages-808230532.jpg?ve=1&tl=1"
-        }
-      ]
-    },
-    "title": "Pregnant workers could lose workplace protections after appeals court strikes down law",
-    "summary": "2026-11-23 fox5atlanta.com: Pregnant workers could lose workplace protections after appeals court strikes down law\n2026-11-23 fox5dc.com: Pregnant workers could lose workplace protections after appeals court strikes down law\n2026-11-23 fox32chicago.com: Pregnant workers could lose workplace protections after appeals court strikes down law",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,

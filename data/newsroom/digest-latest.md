@@ -1,23 +1,32 @@
-# Newsroom digest — 2026-11-25
+# Newsroom digest — 2026-11-26
 
-Register: 199 objects · this scan: 0 new, 2 seen again, 0 returned.
+Register: 206 objects · this scan: 7 new, 0 seen again, 0 returned.
 
-## Queued for drafting (0)
-- (nothing cleared the bar)
+## Queued for drafting (3)
+- **Judge blocks FCC early review of ABC licenses , citing likely First Amendment violation** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 13 outlets (peak 13) · `obj_afederal_abc-amendment-blocks-citing`
+- **Judge blocks FCC from early license review for ABC , which network says has had a chilling effect** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 8 outlets (peak 8) · `obj_afederal_abc-blocks-chilling-early`
+- **RJ Luis Jr . sues SEC , commissioner Greg Sankey in LSU eligibility case** — suit · sued · holder: a regulator · formed 2026-11-26 · 4 outlets (peak 4) · `obj_aregulat_case-commissioner-eligibility-greg`
 
 ## Permanence breaks (went silent while unresolved)
-- **Senate reaches bipartisan deal on permitting bill to speed approvals of new energy projects** — agreement · agreed · holder: the Senate · formed 2026-09-30 · 4 outlets (peak 5) · `obj_thesenat_approvals-bill-bipartisan-deal` · silent 5d after 5 scans
-- **Denmark ratifies Trump security deal over Greenland** — vote · voted · holder: the President · formed 2026-11-19 · 3 outlets (peak 4) · `obj_thepresi_deal-denmark-greenland-ratifies` · silent 5d after 5 scans
-- **Senate Republicans block latest Democratic effort to end the war in Iran** — ruling · ruled · holder: the Senate · formed 2026-11-19 · 19 outlets (peak 19) · `obj_thesenat_block-democratic-effort-end` · silent 5d after 3 scans
-- **A second judge blocks Trump arch , saying it unlikely to succeed in court** — ruling · ruled · holder: a federal court · formed 2026-11-20 · 4 outlets (peak 6) · `obj_afederal_arch-blocks-court-judge` · silent 5d after 5 scans
+- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 12 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction` · silent 5d after 4 scans
+- **Court approves $7 . 25 billion settlement with Bayer over claims Roundup weed killer caused cancer** — vote · voted · holder: a federal court · formed 2026-11-21 · 5 outlets (peak 5) · `obj_afederal_approves-bayer-billion-cancer` · silent 5d after 3 scans
+- **Judge Orders Halt On Iowa Lead Detonation Plan** — ruling · ruled · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_detonation-halt-iowa-judge` · silent 5d after 2 scans
+- **Voters oust some sheriffs who signed pacts to help Trump immigration enforcement efforts** — appointment · personnel · holder: the President · formed 2026-11-21 · 5 outlets (peak 5) · `obj_thepresi_efforts-enforcement-help-immigration` · silent 5d after 8 scans
+- **UK and EU strike post - Brexit deal on food trade and youth travel** — agreement · agreed · holder: ? · formed 2026-11-21 · 4 outlets (peak 4) · `obj_x_brexit-deal-food-post` · silent 5d after 5 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- none
+- **Australia strikes deal on online safety law despite US objections** — agreement · agreed · holder: ? · formed 2026-11-26 · 6 outlets (peak 6) · `obj_x_australia-deal-despite-law`
+- **CBS News investigation finds US - based firms with Chinese owners buying advanced Nvidia most advanced chips** — vote · voted · holder: ? · formed 2026-11-26 · 4 outlets (peak 4) · `obj_x_advanced-based-buying-cbs`
+- **Trump newest order curtailing birthright citizenship is blocked by second judge** — ruling · ruled · holder: the President · formed 2026-11-26 · 3 outlets (peak 3) · `obj_thepresi_birthright-blocked-citizenship-curtailing`
+- **Judge blocks FCC from early license review for ABC , which network says has had a chilling effect** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 8 outlets (peak 8) · `obj_afederal_abc-blocks-chilling-early`
+- **Judge blocks FCC early review of ABC licenses , citing likely First Amendment violation** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 13 outlets (peak 13) · `obj_afederal_abc-amendment-blocks-citing`
+- **RJ Luis Jr . sues SEC , commissioner Greg Sankey in LSU eligibility case** — suit · sued · holder: a regulator · formed 2026-11-26 · 4 outlets (peak 4) · `obj_aregulat_case-commissioner-eligibility-greg`
+- **MLB sues MLBPA to proactively disarm union nuclear option** — suit · sued · holder: ? · formed 2026-11-26 · 6 outlets (peak 6) · `obj_x_disarm-mlb-mlbpa-nuclear`
 
-## Watching (50)
+## Watching (51)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
