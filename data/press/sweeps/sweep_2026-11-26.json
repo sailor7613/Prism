@@ -1,0 +1,2625 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-26",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 51,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 5,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 4,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 35,
+   "hits": 13,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 17,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 2,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 9,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 4,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 4,
+   "hits": 4,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 86,
+   "hits": 18,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 64,
+   "hits": 53,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 2,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "US judge blocks Trump’s FCC attempt to target Disney’s ABC stations",
+   "dek": "The judge said the FCC chair has taken US President Donald Trump&#039;s rhetoric ‌‌as his &#039;marching orders&#039;.",
+   "opening": "",
+   "published": "2026-11-26T15:29:03+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/26/us-judge-blocks-trumps-fcc-attempt-to-target-disneys-abc-stations?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "judge",
+     "orders"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_birthright-blocks-citizenship-judge": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_abc-blocks-disney-fcc": [
+     "judge",
+     "blocks",
+     "disney",
+     "stations"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MS NOW Highlights - November 25",
+   "dek": "Watch highlights and must-see interviews from your favorite MS NOW shows. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #TrumpAdministration #PeteHegseth #Nvidia",
+   "opening": "",
+   "published": "2026-11-26T15:00:39+00:00",
+   "link": "https://www.youtube.com/watch?v=CAr2NOaKr5Y",
+   "videoId": "CAr2NOaKr5Y",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Can Trump continue with Iran war despite funding restrictions?",
+   "dek": "A Congress budget bill could serve as a pressure tactic on Trump to end the war but could also trigger a shutdown.",
+   "opening": "",
+   "published": "2026-11-26T14:17:21+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/26/can-trump-continue-with-iran-war-despite-funding-restrictions?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "shutdown": [
+     "shutdown"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Latest Tariffs Revive Focus on Pressuring China",
+   "dek": "President Trump sent a message to trading partners across Asia, many of which depend on trade and investment from both the United States and China, that he is ready to escalate tariffs.",
+   "opening": "",
+   "published": "2026-11-26T14:00:33+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/trump-tariffs-asia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_x_china-others-production-ready": [
+     "ready",
+     "tariffs",
+     "china"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "tariffs",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Symbolic’: Why did UK sanction Yemen’s Houthis amid attacks on Saudi?",
+   "dek": "UK sanctions Iran-backed group and its leaders, accusing them of undermining stability in the Middle East.",
+   "opening": "",
+   "published": "2026-11-26T12:10:49+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/26/symbolic-why-did-uk-sanction-yemens-houthis-amid-attacks-on-saudi?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
+   "dek": "The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the countries to buy advanced A.I. chips.",
+   "opening": "",
+   "published": "2026-11-26T12:04:01+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "chips"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Proscribing free speech’: Why a Jewish group is challenging UK’s Hamas ban",
+   "dek": "The Jewish Network for Palestine says the complete ban on Hamas was being used to stifle free speech.",
+   "opening": "",
+   "published": "2026-11-26T11:16:03+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/26/proscribing-free-speech-why-a-jewish-group-is-challenging-uks-hamas-ban?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_abc-fcc-free-judge": [
+     "free",
+     "speech"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Are Trump’s tariffs aimed at securing US-friendly trade deals?",
+   "dek": "New US policy threatens further tariff hikes on China, India, Vietnam if trade negotiations fall through.",
+   "opening": "",
+   "published": "2026-11-26T11:07:30+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/26/are-trumps-tariffs-aimed-at-securing-us-friendly-trade-deals?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff",
+     "trade deal"
+    ],
+    "obj_x_china-others-production-ready": [
+     "tariffs",
+     "china"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "tariffs",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What We’re Grateful For",
+   "dek": "This Thanksgiving, Free Press staff and contributors count their blessings.",
+   "opening": "This year, America celebrated 250 years since its founding. There were fireworks and parades, but of all the traditions this country has handed down, one of the best may be the one that arrives today: a day set aside, by Abraham Lincoln&#8217;s proclamation, to say thank you. This has also been a year in which much has felt uncertain&#8212;politically, technologically, economically&#8212;and everything seemed to speed up. Maybe that&#8217;s why, when we asked our Free Press staff and contributors what they&#8217;re grateful for, so many of their answers came back to slowing down and focusing on what&#8217;s right in front of us: new babies, a diner that doesn&#8217;t deliver, grandparents down the block. Others cast a much wider net and said they were grateful for a country that, at 250, still has its best days ahead of it. Before we get to the responses, we want to express our collective gratitude for you, Free Press subscribers. You make everything we do possible. And if you&#8217;re not yet a paid subscriber, there&#8217;s no better time to join. Right now you can get 25 percent off your first year. Already a subscriber? You can give the gift of The Free Press at the same discount. Get 25% Off Happy Thanksgiving.&nbsp;&#8212;The Editors Suzy Weiss, co-founder and reporter As AI becomes more powerful and the headlines scarier, I&#8217;ve found myself grasping for the basics. I&#8217;m grateful for long, lazy meals at home, and my new hobby, which is hand-built pottery, whic",
+   "published": "2026-11-26T11:03:34+00:00",
+   "link": "https://www.thefp.com/p/what-we-are-grateful-for-2026",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Egypt detains driver suspected of causing Cairo fuel tanker crash and inferno that left 31 dead",
+   "dek": "The driver accused of sparking Cairo&apos;s deadly fuel tanker fire on the Ring Road is in custody as prosecutors detail the crash that led to the blaze.",
+   "opening": "Egyptian authorities said Thursday that a driver suspected of causing a fuel tanker crash in Cairo — sparking a massive inferno described by a witness as \"God’s hellfire\" and leaving 31 dead — has been taken into custody. The deadly blaze erupted Wednesday during rush hour on a major highway surrounding the Egyptian capital, burning 27 vehicles and also leaving 26 injured. As of Thursday, traffic on the Ring Road returned to normal after most of the wreckage was cleared. \"It was God’s hellfire on the Ring Road,\" Salah Ahmed, a microbus driver who witnessed the inferno, told The Associated Press. \"People are still in shock.\" Another witness said to Reuters that victims were found trapped in their vehicles as \"they did not have time to get out.\" STATE DEPARTMENT PRESSES EGYPT TO RESPECT RELIGIOUS FREEDOM AS CHRISTIAN CONVERT FACES POSSIBLE EXECUTION Video footage taken near the scene showed a blaze completely engulfing the highway as people gathered to look at the flames. Egyptian prosecutors said in a statement that authorities had detained the driver of a vehicle suspected of causing the fuel tanker to overturn, which resulted in the fire. They said the driver told investigators he was speeding between lanes when he hit the oil tanker in the rear right. He then lost control of his car and veered far to the right while one of the fuel truck’s tires burst. That caused the fuel tanker to hit the concrete wall of the highway and overturn, leading to the spill of fuel and the fire",
+   "published": "2026-11-26T10:41:46-05:00",
+   "link": "https://www.foxnews.com/world/egypt-detains-driver-suspected-causing-cairo-fuel-tanker-crash-inferno-left-31-dead",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Holder says 2028 Democratic presidential candidates must campaign for restoring US as a 'DEI-infused nation'",
+   "dek": "Obama Attorney General Eric Holder says no Democrat can win the 2028 nomination without pledging to return America to a &quot;DEI-infused nation.&quot;",
+   "opening": "Obama-era Attorney General Eric Holder suggested that any Democrat who wants to win in 2028 needs to campaign to restore America to being a \"DEI-infused nation\" once again. Holder appeared on Monday’s episode of MS Now host Nicolle Wallace’s \" The Best People \" podcast, where they talked about how the Democratic Party should respond to the impact of the second Trump administration and chart a new course for America going forward. \"What do you see in the crop of 2028 Democratic presidential candidates that gives you hope that we're not just going to get through these two years but potentially head to something better?\" Wallace asked. \"Because I don't think a person can be nominated as the next Democratic candidate for president who won't say, ‘What has happened before is unacceptable. This is my plan to get us back to, you know, a DEI-infused nation. We're going to confront our history. We're going to make our political system more fair. We're going to hold accountable to the extent that we can people who did inappropriate things in the prior four years,’\" he said. DEMOCRATS SIZE UP 2028 IN DENVER. WE ASKED WHO’S READY TO RUN He added, \"I don't think a Democratic candidate can win the nomination without saying those things and then actually hope for re-election without doing those kinds of things and I think the American people are looking for fighters.\" Wallace went on to agree that voters have been seeking such leaders for years, caring less about how far-left they are. \"Thi",
+   "published": "2026-11-26T10:40:50-05:00",
+   "link": "https://www.foxnews.com/media/holder-says-2028-democratic-presidential-candidates-must-campaign-restoring-us-dei-infused-nation",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "democratic",
+     "again"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "attorney",
+     "general"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "saying"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "FIFA confirms criminal cyberattack, says $4.2B World Cup stake sale files were untouched",
+   "dek": "World soccer&apos;s governing body confirmed a cyberattack compromised less than 0.1% of its data, while a source said records from a shelved $4.2B World Cup stake sale remained secure.",
+   "opening": "FIFA confirmed Thursday it suffered a criminal cyberattack that exposed a limited amount of personal and business data, though files tied to the organization's scrapped $4.2 billion World Cup stake sale were reportedly untouched. The intrusion impacted less than 0.1% of FIFA's total data, Reuters reported, citing a source close to the matter who said that files linked to the abandoned \"FIFA Forward Enterprise\" initiative remained secure. In July, FIFA President Gianni Infantino shelved that controversial proposal following widespread backlash. Under that plan, FIFA aimed to bring in up to $4.2 billion from private investors in exchange for a 20% equity stake in a new commercial subsidiary managing major tournaments, including the World Cup. FEDERAL JURY CONVICTS HUAWEI OF STEALING US TRADE SECRETS, VIOLATING IRAN SANCTIONS \"FIFA can confirm that it has been the victim of a criminal cyberattack resulting in unauthorized access to a limited set of personal and business information,\" a FIFA spokesperson told FOX Business in a statement, adding that the organization \"is working closely with the relevant authorities, including law enforcement.\" The spokesperson said FIFA \"condemns in the strongest possible terms the unlawful acquisition and publication of information, particularly personal data,\" noting that such actions \"constitute a serious and unacceptable violation of privacy and can have significant consequences for the individuals concerned.\" The disclosure comes amid height",
+   "published": "2026-11-26T10:10:02-05:00",
+   "link": "https://www.foxbusiness.com/sports/fifa-confirms-cyberattack-world-cup-stake-sale-files",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "BetMGM Bonus Code FOXNEWS Covers Your First Thanksgiving NFL Bet up to $1500",
+   "dek": "BetMGM bonus code FOXNEWS covers new users&apos; first Thanksgiving NFL bet up to $1,500, including Chiefs at Bills on Thanksgiving night.",
+   "opening": "Thanksgiving night ends with the best rivalry of the decade. The 8-2 Chiefs visit the 9-1 Bills, and Kansas City is an underdog on the road. BetMGM is offering new users bonus code FOXNEWS to cover their first Thanksgiving NFL bet up to $1,500. If your first bet loses, BetMGM refunds your stake in bonus bets. Buffalo has the AFC's best record and is hosting its first-ever Thanksgiving game. Josh Allen has won five straight regular-season meetings with Kansas City. The Chiefs counter with one of the league's best defenses, allowing just over 16 points per game. Odds are subject to change The defense. The Chiefs allow the fewest points of any team playing on Thanksgiving. Elite defenses keep games close, and close games give the underdog a chance. The price. It's rare to get plus money on an 8-2 Kansas City team. The market is giving Buffalo full credit for its home crowd and its recent run in this series. Streaks end. Allen's five-game regular-season winning streak against Kansas City is impressive, but the Chiefs have shown time and again that they win the games that matter most. First Bet Cover is built for exactly this kind of swing. Bet $100 on Kansas City to win outright and you collect $228 if the Chiefs pull it off. If Buffalo wins, BetMGM refunds your $100 in bonus bets. The Bills are 7-2 against the spread as favorites and have covered four straight. Thanksgiving night favorites have also won and covered in eight of the last nine games. That's the risk, and the refund",
+   "published": "2026-11-26T10:08:43-05:00",
+   "link": "https://www.foxnews.com/outkick-betting/betmgm-bonus-code-foxnews-covers-your-first-thanksgiving-nfl-bet-up-1500",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "refund"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Tried to Cripple Huawei. Now It Is Central to China’s A.I. Push.",
+   "dek": "As China’s access to Nvidia’s advanced chips shrinks, Huawei is becoming increasingly indispensable to Beijing despite a wide technological gap with its American rival.",
+   "opening": "",
+   "published": "2026-11-26T10:01:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/huawei-trump-china-ai.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "chips"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Thanksgiving on Ozempic: Clever tricks to survive the feast without offending the host",
+   "dek": "Dietitian Patricia Araujo shares tips for Thanksgiving dinner on GLP-1 drugs like Ozempic and Wegovy, from protein picks to portion control.",
+   "opening": "With roughly 15% of Americans now reporting they have used a GLP-1 medication for weight loss, many Thanksgiving dinner plates may be a little less crowded this year. Less \"food noise\" and a smaller appetite can make it tricky for people taking Ozempic, Wegovy or other glucagon-like peptide-1 drugs to navigate the etiquette of a traditionally large feast. Patricia Araujo, a registered dietitian at Northwestern Medicine in Chicago, shared her practical tips for enjoying the holiday meal — without overdoing it or making your host feel slighted. HOW SKIPPING BREAKFAST TO SAVE ROOM FOR DINNER SHOCKS YOUR BLOOD SUGAR AND METABOLISM Handling topics around food and diet can be challenging for patients on a GLP-1, according to Araujo. While people shouldn’t feel pressured to disclose anything about their personal or medical history , it can be helpful to think ahead of time about how much they want to share, she advised. If guests question why you aren't eating a certain dish or urge you to take seconds, Araujo recommends having a polite response ready, such as, \"That looks delicious. Thank you for offering. I've had enough,\" or simply, \"I'm comfortably full right now.\" THE 8 HEALTHIEST BEANS YOU SHOULD BE EATING MORE OFTEN, ACCORDING TO NUTRITION EXPERT People don’t necessarily have to tell others that they’re taking medication, she noted. \"Sometimes just sharing that they're working on eating smaller portions, or they're making some dietary changes , but still acknowledging that th",
+   "published": "2026-11-26T09:50:55-05:00",
+   "link": "https://www.foxnews.com/health/thanksgiving-ozempic-clever-tricks-survive-feast-without-offending-host",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_china-others-production-ready": [
+     "ready",
+     "others"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Betr Promo Code FOXNEWS: Unlock $200 + 4 Free Picks Ahead of a Stacked Thanksgiving NFL Slate",
+   "dek": "Betr promo code FOXNEWS unlocks $200 in bonuses plus four free picks for new users ahead of the Thanksgiving NFL slate, including Bears-Lions and Chiefs-Bills.",
+   "opening": "The Thanksgiving slate doesn't get much better than this. A division showdown in Detroit, a rivalry game in Dallas and a battle between the AFC's top two teams in Buffalo. Betr is offering new users promo code FOXNEWS to unlock $200 in bonuses plus four free picks ahead of a stacked Thanksgiving NFL slate. Odds are subject to change Amon-Ra St. Brown receptions (higher) | Bears at Lions: In a game with a 55.5 total, Detroit's top target should be busy all afternoon. St. Brown thrives on short and intermediate routes, and volume is the angle here. Caleb Williams passing yards (higher) | Bears at Lions: Chicago has been strong on the road, and keeping pace with Detroit at home means Williams will need to throw. A shootout environment favors the higher number. CeeDee Lamb receptions (higher) | Eagles at Cowboys: Dallas is a heavy favorite, and Lamb is the engine of the offense. Expect him to rack up catches early before the Cowboys lean on the run. James Cook rushing attempts (higher) | Chiefs at Bills: Kansas City's defense is built to take away the big play. Buffalo will want to keep the game on its terms, and that means a heavy dose of Cook in a tight, physical game. Spreading your four free picks across all three games keeps you invested from the 1 p.m. kickoff to the final whistle in Buffalo. Each pick leans on volume rather than big plays, which holds up even if one game gets out of hand. A full day of football and four free picks to play with. Sign up with Betr promo code",
+   "published": "2026-11-26T09:40:24-05:00",
+   "link": "https://www.foxnews.com/outkick-betting/betr-promo-code-foxnews-unlock-200-4-free-picks-ahead-stacked-thanksgiving-nfl-slate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_abc-blocks-chilling-early": [
+     "early",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Apple pulls Chinese-developed AI chatbot from App Store over reports of sexual messages to kids",
+   "dek": "Apple pulled the Talkie AI chatbot app from the App Store worldwide after reports alleged its virtual characters sent inappropriate messages to children.",
+   "opening": "Apple has yanked an AI chatbot app with roughly 11 million monthly users from its App Store worldwide after reports alleged the platform’s virtual characters sent sexually inappropriate messages to children . The app, Talkie, is developed by Shanghai-based MiniMax and was removed this week following Wednesday reports by Australia's ABC News and the United Kingdom's Bureau of Investigative Journalism that its AI-generated characters sent abusive messages to minors. Although Talkie carries an 18+ rating on both the Apple App Store and Google Play Store and states that children aged under 14 or under 16 cannot sign up, depending on the country, child safety advocates have criticized its lax verification safeguards that allow users to self-report their age. INSTAGRAM'S AI MAY CATCH TEENS LYING ABOUT THEIR AGE Apple told FOX Business that the company enforces strict App Review Guidelines prohibiting offensive, sexual or pornographic material and previously took action against the platform. Apple originally rejected Talkie: Personalized AI Chats in July 2023 for carrying a 13+ rating, requiring the developer to raise it to 18+ before launch. Apple later removed that app in December 2024 over objectionable user-generated content and subsequently pulled the developer's other app, Talkie Lab - AI Playground, for sexual content. Apple also noted that as of Nov. 16, developers can declare whether their apps include \"Dating and Relationships\" features — which automatically triggers a min",
+   "published": "2026-11-26T09:35:42-05:00",
+   "link": "https://www.foxbusiness.com/technology/apple-pulls-chinese-developed-ai-chatbot-from-app-store-over-reports-sexual-messages-kids",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_allegations-california-democrat-ethics": [
+     "following",
+     "report",
+     "sexual"
+    ],
+    "obj_x_australia-deal-despite-law": [
+     "australia",
+     "safety"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based",
+     "chinese"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "review",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Use Underdog Promo Code FOXNEWS to Unlock Play $10, Get $50 Promo for the Thanksgiving NFL Triple-Header",
+   "dek": "Use Underdog promo code FOXNEWS to unlock the play $10, get $50 promo for the Thanksgiving NFL triple-header, including Bears-Lions and Chiefs-Bills.",
+   "opening": "Thanksgiving means football from lunch to bedtime. Today's triple-header starts with an NFC North showdown in Detroit, moves to Dallas for the late afternoon, and closes with an AFC heavyweight fight in Buffalo. Use Underdog promo code FOXNEWS to unlock the play $10, get $50 promo for the Thanksgiving NFL triple-header. Odds are subject to change Jared Goff passing yards (higher) | Bears at Lions: The 55.5 total is tied for the highest of the season, which tells you the market expects a shootout. Detroit is unbeaten at home, and Goff is comfortable at Ford Field on a holiday stage. Expect him to throw early and often. CeeDee Lamb receiving yards (higher) | Eagles at Cowboys: Dallas is the biggest favorite of the day, and Lamb is the centerpiece of its passing game. Even if the Cowboys build a lead, he'll see plenty of volume before the fourth quarter. Josh Allen rushing yards (higher) | Chiefs at Bills: Kansas City has one of the league's stingiest defenses, allowing just over 16 points per game. When the pocket breaks down, Allen takes off, and in a game this close, he'll be willing to put his body on the line. Bears-Lions could decide who leads the NFC North. Chiefs-Bills pits the AFC's two best records against each other, with Buffalo at 9-1 and Kansas City at 8-2. Even Eagles-Cowboys carries the weight of a rivalry that never needs a reason. Three games, three time slots and one long day of football. Use Underdog promo code FOXNEWS to play $10, get $50 in bonus entries on",
+   "published": "2026-11-26T09:27:56-05:00",
+   "link": "https://www.foxnews.com/outkick-betting/use-underdog-promo-code-foxnews-unlock-play-10-get-50-promo-thanksgiving-nfl-triple-header",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_abc-blocks-chilling-early": [
+     "early",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "From Starbucks to takeout, Reddit thread exposes how everyday purchases drain your budget",
+   "dek": "Reddit users in their 30s say fast food bills of $400-500 a month and daily morning coffee added up to sums that shocked them when they did the math.",
+   "opening": "What's a quick way to blow money without realizing it? That's a question currently generating a solid amount of attention and buzz on Reddit at the moment. As the loyal readers know, I'm a big fan of Reddit, and just because it's Thanksgiving isn't an excuse to not dive in. REDDIT USERS SHARE FRUGAL HABITS THEY TRIED ONCE AND REALIZED WERE 'ACTUALLY GENIUS' SAVES That leads us to a pretty fascinating thread. I was scrolling Reddit on Thanksgiving morning as I sipped on my black coffee when I stumbled on a thread titled, \"People in your 30s, what 'small' spending habit from your 20s added up to a number that genuinely shocked you when you finally did the math?\" REDDIT USERS REVEAL 'RICH PEOPLE' HABITS THEY TRIED ONCE AND COULD NEVER GO BACK FROM I hit click as fast as I could. The discussion didn't disappoint. Check out some of the answers below: AMERICANS ARE DITCHING A LONGTIME WEEKLY TRADITION AS RESTAURANT DINING HITS RECORD LOW There is one very noticeable trend in the answers. Eating out and constantly ordering coffee is a quick way to blow a lot of money. The crazy thing is it's an easy fix most people don't want to make. You can make lunch at your house, and it will almost certainly be better than anything you get from a fast food restaurant. SIGN UP FOR THE DAILY OUTKICK NEWSLETTER The same goes for coffee. Go to the grocery store and get as much coffee as you want for a fraction of the price. It's crazy to me that more people don't do that. I can't remember the last ",
+   "published": "2026-11-26T09:05:13-05:00",
+   "link": "https://www.foxnews.com/outkick-culture/starbucks-takeout-reddit-thread-exposes-everyday-purchases-drain-budget",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Norse Atlantic airline suspends all flights, on brink of bankruptcy amid rising fuel costs",
+   "dek": "Norse Atlantic suspended all flights as its board warned it may file for bankruptcy without urgent short-term financing, leaving PIA passengers stranded.",
+   "opening": "Norwegian airline Norse Atlantic suspended all flights Thursday as its board warned the company may imminently file for bankruptcy if it can't secure short-term financing. \"If a short-term financing solution is not secured urgently, it is the Board's intention to file for bankruptcy,\" the company said in a statement . The airline, which provides long-haul flights between the U.S. and Europe, said it had been discussing with investors a possible takeover that \"would include a financing solution.\" SHIPPING GIANT WARNS STRAIT OF HORMUZ CHAOS IS 'NEW NORMAL' AS TEHRAN SHIFTS 4M BARRELS But, the company added, \"There can be no assurance that a viable solution will be found.\" Pakistan International Airlines (PIA), which contracts jets from Norse through a wet-lease program, shifted all United Kingdom flights to its own Boeing 777 planes, claiming Norse announced the suspension with no notice as PIA passengers were preparing to board. Norse, amid rising fuel costs from the Iran war , began leasing out its Boeing 787 fleet to other airlines as it struggled to make a profit on trans-Atlantic flights. In July, IndiGo, India's largest carrier, announced it would conclude its own wet-lease program with Norse by the end of October. Norse's stock price plummeted and closed down 85%. Most of its value has been wiped out since the start of the year and the stock is now trading at $0.010. Jet fuel prices in Europe have more than doubled since March amid fallout from the Iran war and the restr",
+   "published": "2026-11-26T08:56:57-05:00",
+   "link": "https://www.foxnews.com/world/norse-atlantic-airlines-suspends-all-flights-brink-bankruptcy-amid-rising-fuel-costs",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of",
+     "fuel price"
+    ],
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_against-asks-charges-drop": [
+     "trading",
+     "there"
+    ],
+    "obj_x_apple-biggest-costs-fertilizer": [
+     "fuel",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Your holiday shopping data needs a cleanup before Black Friday",
+   "dek": "Data brokers may expose your name, home address and phone number to scammers sending fake USPS delivery texts ahead of the Black Friday shopping rush.",
+   "opening": "Your phone buzzes: \"USPS: Your package could not be delivered due to an incomplete address. Update your details within 12 hours.\" You did order something last week. Probably several things. So your thumb hovers over the link. That's the whole trick. Black Friday lands on Nov. 27 this year, and the holiday delivery rush is already underway. That gives scammers plenty of opportunities to send fake delivery alerts that arrive when you're expecting a package. Meanwhile, your shopping habits and personal details may be circulating through data brokers . Here's how that information can make scams more convincing and what you can do to clean it up before the holiday shopping rush gets even busier. Missed CyberGuy LIVE? Watch the replay and discover 5 ways to travel smarter and save money. Our free CyberGuy LIVE class, 5 Ways to Travel Smarter and Save Money, has ended, but you can still watch the full replay. Kurt \"CyberGuy\" Knutsson walks you through five practical ways to protect your phone and personal information, avoid common travel scams, find better deals, save money on bookings and use technology to make your travels easier and less stressful. No technical experience is needed. Watch the free replay + downloadable checklist now at CyberGuyLive.com. A SCAMMER HAS YOUR NAME, PHONE NUMBER AND ADDRESS. WHAT CAN THEY ACTUALLY DO? Every time you shop online, sign up for a discount or share your contact information, you may add to a growing collection of personal data. Some busines",
+   "published": "2026-11-26T08:43:19-05:00",
+   "link": "https://www.foxnews.com/tech/holiday-shopping-data-needs-cleanup-before-black-friday",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_appeals-conviction-court-donald": [
+     "gives",
+     "money"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Seth Meyers Drags Jensen Huang’s Daily 90-Minute Therapy Sessions",
+   "dek": "“You’re in therapy for an hour and a half every day? Well, now everything’s falling into place — you’d have to sell secrets to China to afford that much therapy,” Meyers said.",
+   "opening": "",
+   "published": "2026-11-26T08:21:26+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/arts/television/late-night-meyers-huang-therapy-fallon.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_china-death-leaking-national": [
+     "china",
+     "secrets"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump, NATO chief push Russia to avoid any actions that would 'expand the war' with Ukraine",
+   "dek": "President Donald Trump and NATO chief Mark Rutte, who met Wednesday night at Mar-a-Lago, urged Russia to avoid actions that might expand the Ukraine war.",
+   "opening": "President Donald Trump and NATO Secretary-General Mark Rutte are calling on Russia to avoid making any moves \"that intentionally, or unintentionally, expand the war\" against Ukraine. The declaration came after the pair got together at Trump's Mar-a-Lago residence in Florida on Thanksgiving Eve for what was described as an \"outstanding meeting.\" However, Russia hit Kyiv with ballistic missiles overnight, according to the mayor of the Ukrainian capital. \"The meeting was very impactful, with the war between Russia and Ukraine and the conflict in Iran being the primary subjects, as well as all of the record setting achievements that we have made together at the summits in the Hague and at Ankara,\" Trump and Rutte said in a joint statement. \"We also discussed the importance of Russia avoiding any actions that intentionally, or unintentionally, expand the war, and the importance of obtaining a peaceful resolution to the war as rapidly as possible,\" the statement added. \"Lastly, we talked about the importance of continuing to expand defense spending and investment in our industrial base, both in the United States and across NATO.\" PUTIN'S WAR DEATH TOLL REPORTEDLY TOPS 700,000 AS RUSSIA SCRAMBLES FOR RECRUITS On Thursday, Trump said on Truth Social that \"during my conversations in China with President Vladimir Putin, of Russia, I spent a lot of time talking about the fact that I would like to see President Putin pull back all Military aggression against territories throughout Europe",
+   "published": "2026-11-26T08:16:51-05:00",
+   "link": "https://www.foxnews.com/politics/trump-nato-chief-push-russia-avoid-actions-expand-war-ukraine",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "iran",
+     "resolution"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "capital"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "china",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Parents of potential first Gen Z saint share daughter's powerful final message of hope",
+   "dek": "Maria Middleton&apos;s parents recall her words after a terminal brain tumor diagnosis as bishops advance her cause to become the first Gen Z saint.",
+   "opening": "The parents of a Doylestown, Pennsylvania, teenager who could become the Catholic Church's first Gen Z saint are sharing their daughter's powerful message of hope, recalling how she remained steadfast in her faith while braving a terminal brain tumor diagnosis. \"I will not despair. I will choose hope,\" Maria Middleton told her parents just two weeks after her diagnosis. Her father, Brian Middleton, recounted the conversation Tuesday on \"The Story with Martha MacCallum.\" Brian, along with his wife, Susan, joined the show to reflect on their daughter's legacy and the movement to canonize her as a saint. GEN Z FLOCKING TO CATHOLIC CHURCHES IN NYC FOR YOUTH GROUPS, SOCIAL EVENTS AMID CONVERSION BOOM \"Maria made a decision that she wasn't going to cling to life, that she was going to spend it in self-transcendent service to others,\" Brian said, recalling his daughter's determination to not let her diagnosis define her remaining time. \"Two weeks after she was diagnosed, we asked her how she was doing. And she said, 'Mom and Dad, regardless of the circumstances of my life, my mission and purpose remain the same, and it's to know, love and serve God... my emotions will rise and fall, but my faith is not an emotion. It's a commitment and I will not despair. I will choose hope,'\" he added. \"Her faith was so well integrated into her life that her decisions were always based on what was good, what was true, what was beautiful,\" Susan chimed in. \"That's how Maria navigated through life, a",
+   "published": "2026-11-26T08:16:33-05:00",
+   "link": "https://www.foxnews.com/media/parents-potential-first-gen-z-saint-share-daughter-powerful-final-message-hope",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_administration-changes-exhibit-groups": [
+     "groups",
+     "made"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Pro wrestling star Dustin Rhodes announces death of 3-year-old grandson",
+   "dek": "Dustin Rhodes announced his 3-year-old grandson Rowan died, as the AEW star and ex-wife Terri Runnels ask fans for prayers and privacy for the family.",
+   "opening": "Pro wrestling star Dustin Rhodes suffered an immeasurable loss in his family on Wednesday. The All Elite Wrestling (AEW) competitor announced on social media his 3-year-old grandson, Rowan, had died. No cause of death was announced. CLICK HERE FOR MORE OUTKICK PRO WRESTLING COVERAGE \"Guys my grandson Rowan has passed. Please keep us all in your prayers during this time,\" he wrote on X, adding that he was with his daughter Dakota. Terri Runnels, a former WWE star, also shared the news on her Facebook page. Rhodes and Runnels were previously married and had a daughter together. THE CRAIG CARTON SHOW–UNFILTERED, UNAPOLOGETIC AND UNMISSABLE. DOWNLOAD HIS DAILY PODCAST NOW! \"On behalf of Dakota, Bleau, and their families, we share the tragic news of the untimely passing of their sweet beautiful boy, Rowan Dane Oney,\" she wrote on her social media page. \"We ask that you respect their privacy at this time. Please no calls or visits. We will post more details soon. Please be in prayer for our family.\" Rhodes, the son of Dusty Rhodes and half-brother of Cody Rhodes , had a legendary career in the WWE as Goldust. He was an intercontinental champion three times and a hardcore champion seven times. He’s appeared in several promotions after his run in WWE was finished, including in AEW – where he is now. Runnels first appeared in World Championship Wrestling before going to WWE. She was the valet for Goldust in WWE for a few years before having storylines with other wrestlers. She also he",
+   "published": "2026-11-26T08:11:35-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/pro-wrestling-star-dustin-rhodes-announces-death-3-year-old-grandson",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "former",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Remembering Dolly Parton's Cowboys halftime show on our first Thanksgiving without her, Rodgers memes & naps",
+   "dek": "Screencaps, America&apos;s Best Daily Column, hails the Bears-Lions Thanksgiving game as the most important ever, with both 6+ wins over .500 since 1956.",
+   "opening": "Welcome to Screencaps , \"America's Best Daily Column,\" as named by the readers. Screencaps, which publishes seven days a week, is a mix of sports, pop culture, and emails from sane readers from around the world. This column isn't for the coastal elites. Give us a week to steal your heart. Our track record is pretty good. Let's have some fun. 📩 Email: joe.kinsey@outkick.com Send photos, stories, tips, rants—whatever you've got. 📰 Screencaps Page: 👉 Read the latest Screencaps We were robbed of what would've been must-see TV in New York City this morning with the Macy's parade with wind gusts up to 36 mph. I was hoping for balloons to go flying as the handlers were left no choice but to let go of the ropes. The parade has been postponed until Saturday. ZERO BS. JUST DAKICH. TAKE THE DON'T @ ME PODCAST ON THE ROAD. DOWNLOAD NOW! Instead, we need to give thanks that we're about to get a Bears-Lions game that is going to be an incredible scene. Keep in mind that the Lions are 1-8 on Thanksgiving Day over the last nine years; the Bears are 3-1 against the Lions over that period. How big is this game? The last time the Bears and Lions played with both teams 6+ wins over .500 was 1956. Let's just go ahead and call this the most important Bears-Lions game in history. \"Well hey! It's Dolly here, and I want to wish all of you and your family blessings this Thanksgiving,\" Parton told her fans in 2025 during her final Thanksgiving message. \"I am so thankful for all of you and for the memor",
+   "published": "2026-11-26T07:54:11-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/remembering-dolly-parton-cowboys-halftime-show-first-thanksgiving-without-her-rodgers-memes-naps",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "city",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "CFP selection committee continues to churn out inexplicable, indefensible rankings | Ian Miller",
+   "dek": "The Indiana Hoosiers dropped six spots in the College Football Playoff rankings after an overtime loss to Washington, while Alabama fell just three.",
+   "opening": "The College Football Playoff selection committee released its updated rankings Tuesday evening to, well, less controversy than a typical week. There was movement near the top of the rankings, thanks to the UCLA Bruins suffering their first loss of the season in triple overtime at Michigan and the Indiana Hoosiers falling in overtime to the Washington Huskies in Seattle. Then there's the Tennessee Volunteers-Alabama Crimson Tide debate, which this week resulted in a long-awaited changing of the order between the two teams. After weeks of the Crimson Tide sitting above UT, despite a head-to-head loss, the Volunteers jumped them to sit at No. 5. That might have been reasonable, considering the committee's absurd \"logic,\" but there's plenty from this week's poll that isn't. And it's yet again a sign of how the committee just makes things up as they go. CFP SELECTION COMMITTEE HAS OFFICIALLY DISCREDITED ITSELF WITH LATEST RANKINGS First? How they've handled the Hoosiers this season, and particularly the last few weeks. Just three polls ago, Indiana was ranked No. 4 by the selection committee. After not playing for a bye week, they dropped all the way to No. 9. That was bizarre enough, considering again, they didn't play. The committee's excuse for this was that all of the Hoosiers' Big Ten opponents lost in the same week, devaluing their strength of schedule. We'll come back to that. After the bye week, Indiana beat the then-No. 18 team, the USC Trojans, at home by two scores. It ",
+   "published": "2026-11-26T07:34:32-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/cfp-selection-committee-continues-churn-inexplicable-indefensible-rankings-ian-miller",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "again"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says",
+   "dek": "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like.",
+   "opening": "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like. (Image credit: Timothy A. Clary)",
+   "published": "2026-11-26T07:24:29-05:00",
+   "link": "https://www.npr.org/2026/11/26/g-s1-155950/up-first-newsletter-thanksgiving-weather-travel-trump-tariffs-iowa-detonation-fcc-free-speech",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "judge",
+     "lead"
+    ],
+    "obj_afederal_abc-fcc-free-judge": [
+     "judge",
+     "violated",
+     "free",
+     "speech"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dak Prescott's 1,000-yard, 11-touchdown surge over three games makes Cowboys heavy Thanksgiving favorites",
+   "dek": "Happy Thanksgiving! Dak Prescott and the Dallas Cowboys already beat the Philadelphia Eagles 38-21 this season ahead of their Thanksgiving rematch.",
+   "opening": "Happy Thanksgiving to all you turkeys out there. I hope your plate is full, your turkey is moist, the stuffing is aplenty, and most of all, that we make a ton of money today. By the time this game comes on, you probably will be either about to start your dinner or heading to the in-laws for the next meal. What could be better today? Well, a win in this game would be a bit of help, and let’s see if we can get that with the Eagles and Cowboys . The Philadelphia Eagles were impressive on Sunday, and that’s saying something. The team has been a bit of a disaster this season, specifically with Jalen Hurts and his injury situation. They come into today’s game with a 3-7 record and are probably just trying to play spoiler for any opponent at this point in their season. They aren’t mathematically eliminated from the postseason or anything, but they might as well be. And that’s taking into consideration the win they had Sunday. Before we go and say that Joe Milton III is the answer at quarterback, let’s just admit that the Steelers aren’t exactly a great team. They are fine, but a really bad first quarter did Pittsburgh in for the game. The Eagles only scored six points the remainder of the game, and the Steelers outscored them 16-6 from the start of the second quarter on. A win is a win, but I don’t think want anyone thinking the Eagles have figured something out. The good news for them is that they at least put up some points against a defense that is certainly better than what Dall",
+   "published": "2026-11-26T07:24:21-05:00",
+   "link": "https://www.foxnews.com/outkick-betting/dak-prescott-1000-yard-11-touchdown-surge-three-games-makes-cowboys-heavy-thanksgiving-favorites",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "saying"
+    ],
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "some",
+     "help"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Patrick Mahomes and Josh Allen set up for another shootout as Chiefs face Bills on Thanksgiving",
+   "dek": "The Chiefs and Bills meet on Thanksgiving Day with Patrick Mahomes and Josh Allen poised for an NFL shootout; the series is tied 5-5 since 2020.",
+   "opening": "I don’t know if you know this or not, but we are at the main course of your Thanksgiving Day with this game. Sure, you could’ve finished and might be in a food coma by the time this game kicks off, but the NFL has done a great job of giving us one game that we absolutely cannot miss late in the day. Any time the Chiefs and the Bills take each other on, it is must-see television, and that’s precisely what we get this week. THE CRAIG CARTON SHOW–UNFILTERED, UNAPOLOGETIC AND UNMISSABLE. DOWNLOAD HIS DAILY PODCAST NOW! The Kansas City Chiefs are one of the best teams in football again. They are coming off yet another win – a 34-7 drubbing of the Arizona Cardinals. I do think it is fair to ask if the Chiefs are actually good, or just taking advantage of an easy schedule. Their eight wins have been over Denver, Indianapolis, Miami, Las Vegas, Los Angeles (Chargers), New York (Jets), Atlanta, and Arizona. Outside of Denver, whom they played at home and in the first week of the season, there isn’t one quality win in that group. In fact, none of those teams have winning records. So, are the Chiefs actually good? Maybe. Patrick Mahomes has played much more like Patrick Mahomes in the past two games, throwing for 672 yards over the two games and eight touchdowns. We know he doesn’t really have a deep receiving corps, but he is making it work. I’ve harped about this for years, but Rashee Rice, Josh Downs, and Xavier Worthy are the options, and I don’t think any of them would be a true No",
+   "published": "2026-11-26T07:23:40-05:00",
+   "link": "https://www.foxnews.com/outkick-betting/patrick-mahomes-josh-allen-set-up-another-shootout-chiefs-face-bills-thanksgiving",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "city",
+     "years"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "face"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Secret Pentagon UFO hunt drew blueprints for hidden Nevada bunker to store ‘exotic’ materials",
+   "dek": "Declassified Pentagon records reveal Bigelow Aerospace planned a secret underground vault in Nevada to store recovered UAP hardware and samples.",
+   "opening": "Buried beneath 15 to 20 feet of Nevada earth, behind 3-foot-thick reinforced concrete walls, a steel vault door and a heavily guarded access tunnel, a Pentagon contractor drew up plans to build a 5,000-square-foot subterranean fortress. The bunker was designed to store what was described as acquired \"exotic material or tissue\" – including recovered hardware and biological samples tied to unidentified anomalous phenomena (UAP), the Pentagon’s broader term for UFOs and other unexplained sightings in the air, space or sea. The blueprint was not drawn from science fiction. It is detailed inside a 538-page declassified contractor report released by the Department of War as part of the Trump administration's latest batch of UAP records, exposing how close a private firm came to building a secure repository under a $22 million Pentagon program . EX-PENTAGON OFFICIAL SAYS UAP FILES REVEAL 'TREASURE TROVE' OF INTELLIGENCE DATING BACK TO THE 1940S The vault plans highlight the ambitions behind the Advanced Aerospace Weapon System Applications Program – also referred to in Pentagon correspondence as the Advanced Aerospace Threat Identification Program . Launched in 2008 through a $10 million congressional earmark steered by then-Senate Majority Leader Harry Reid, D-Nev., and the late Sen. Daniel Inouye, D-Hawaii, the effort was billed as a study of foreign aerospace threats out to 40 years in the future. Internal Defense Intelligence Agency (DIA) briefing notes from May 2009 say Reid wa",
+   "published": "2026-11-26T07:00:48-05:00",
+   "link": "https://www.foxnews.com/us/secret-pentagon-ufo-hunt-drew-blueprints-hidden-nevada-bunker-store-exotic-materials",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "effort"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump administration proposes new tariffs on goods from major U.S. trading partners",
+   "dek": "President Trump's new proposed tariffs are already meeting pushback from Democrats and some free trade advocates.",
+   "opening": "President Trump's new proposed tariffs are already meeting pushback from Democrats and some free trade advocates.",
+   "published": "2026-11-26T06:43:47-05:00",
+   "link": "https://www.npr.org/2026/11/26/nx-s1-6054103/trump-administration-proposes-new-tariffs-on-goods-from-major-u-s-trading-partners",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sen. Tim Kaine, D-Va., shares why he opposes Trump's proposed tariffs",
+   "dek": "NPR's A Martinez speaks with Virginia Sen. Tim Kaine about the Democrat's opposition to President Trump's new tariffs.",
+   "opening": "NPR's A Martinez speaks with Virginia Sen. Tim Kaine about the Democrat's opposition to President Trump's new tariffs.",
+   "published": "2026-11-26T06:43:10-05:00",
+   "link": "https://www.npr.org/2026/11/26/nx-s1-6053944/sen-tim-kaine-d-va-shares-why-he-opposes-trumps-proposed-tariffs",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump country cracked: 5 races that saw double-digit Trump territory fall to Democrats in 2026",
+   "dek": "Donald Trump carried Mississippi by nearly 23 points, yet Scott Colom beat Cindy Hyde-Smith by less than one, ending a 44-year GOP Senate drought.",
+   "opening": "Donald Trump carried Mississippi by nearly 23 points in 2024. Two years later, Democrat Scott Colom won the state’s Senate race, ending a Republican hold that had lasted more than four decades. Colom’s victory was part of a string of Democratic breakthroughs during the midterms in places Trump had carried by double digits. Democrats also won Senate races in Kansas and South Carolina, captured the Texas governor’s office and flipped a Republican-held House seat deep in Trump country in Indiana that had not elected a Democrat since 1990. The results stand out for more than the presidential margins as well — Democrats broke Senate streaks that had lasted decades and defeated Republican incumbents in races many expected the GOP to hold, including one where the Democratic challenger spent next to nothing on television advertisements. FOX NEWS VOTER POLL: HOW DEMOCRATS TOOK CONTROL OF THE SENATE Here are five of the year’s most striking upsets: Trump carried the state by nearly 23 points in 2024, and a Democrat had not won a U.S. Senate race in Mississippi since 1982. Several major election forecasters rated the contest Solid Republican for much of the cycle, before shifting it to Likely Republican as the race tightened. Colom, a district attorney, defeated Republican incumbent Sen. Cindy Hyde-Smith, R-Miss., by less than one percentage point, 49.36% to 48.54%, according to Associated Press election results. Hyde-Smith had Trump’s backing, and the president rallied for her in the c",
+   "published": "2026-11-26T06:00:51-05:00",
+   "link": "https://www.foxnews.com/politics/trump-country-cracked-5-races-double-digit-trump-territory-fall-democrats-2026",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "exit-poll": [
+     "voter poll"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "mississippi",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New report shows EXTREME MEASURES Trump considered to reinstall Nvidia CEO",
+   "dek": "Jen Psaki shares new reporting from the Washington Post that Donald Trump considered using a wartime law to strong arm Nvidia into restoring Jensen Huang as the company's leader. Rep. Chris Deluzio joins Jen Psaki to discuss. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://",
+   "opening": "",
+   "published": "2026-11-26T05:45:24+00:00",
+   "link": "https://www.youtube.com/watch?v=bWBUfjx3LuM",
+   "videoId": "bWBUfjx3LuM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Holiday staples still surging ahead of Thanksgiving dinner. Economist shares how to save on the spread",
+   "dek": "Diesel costs are driving up meat, dairy and fresh food prices this Thanksgiving, but an expert says brand flexibility can keep meals affordable.",
+   "opening": "The turkey may be a holiday bargain, but rising prices for meat, dairy and fresh foods could make the rest of the Thanksgiving spread cost much more this year. Richard Volpe, a professor of agribusiness at Cal Poly San Luis Obispo, told Fox News Digital that sustained high energy costs in the midst of the Iran war — particularly for diesel — are pushing up grocery prices just as households prepare to host holiday meals. Surging prices of ham and eggnog, in particular, could put a damper on some holiday favorites. \"Most of the biggest increases are things like fruits, vegetables and meats,\" Volpe said. \"Fresh and refrigerated foods feel those costs sooner than shelf-stable products.\" 7 COSTCO THANKSGIVING FOOD DEALS AND STEALS THAT SHOPPERS CAN'T MISS THIS HOLIDAY SEASON Dairy is also especially energy and transportation intensive, putting holiday staples such as butter and eggnog under pressure. Volpe said shoppers willing to switch brands and take advantage of store promotions can keep holiday meals more affordable . \"If you are less worried about brand or banner loyalty, and you’re able to follow promotions and look for these sort of aggressive, enticing deals, there are still ways to achieve savings and to keep those Thanksgiving and holiday dinners relatively affordable,\" Volpe said. He also acknowledged that high beef and pork prices could contribute to some households deciding to dine on a different main dish for their holiday meals this year. \"Beef and pork are particu",
+   "published": "2026-11-26T05:00:15-05:00",
+   "link": "https://www.foxnews.com/politics/holiday-staples-surging-ahead-thanksgiving-dinner-economist-shares-how-save-spread",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_apple-biggest-costs-fertilizer": [
+     "costs",
+     "biggest"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's vanity projects got $300M mystery boost as midterms posed threat to funding: NYT",
+   "dek": "David Fahrenthold, investigative reporter for the New York Times, explains to Jen Psaki new reporting that just as it was becoming clear that it was likely that Democrats would gain the power to control funding for Donald Trump's vanity projects around Washington, D.C., the National Parks Service account he'd been using to funnel money to those projects received a $300 million boost with unidentified origins. Watch the full episode here: https://youtu.be/qlrHPnT8SJE MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Memb",
+   "opening": "",
+   "published": "2026-11-26T04:54:54+00:00",
+   "link": "https://www.youtube.com/watch?v=SXiL6v5HfLA",
+   "videoId": "SXiL6v5HfLA",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thepresi_appeals-conviction-court-donald": [
+     "donald",
+     "money"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ex-Pentagon spokesperson: 'The buck never stops with Donald Trump'",
+   "dek": "Donald Trump is celebrating the Army’s detonation of five tons of lead azide from the safety of his Mar-a-Lago resort while Iowans shelter indoors. Chris Meagher, former Chief Pentagon Spokesperson, joins The Weeknight to react. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click he",
+   "opening": "",
+   "published": "2026-11-26T02:52:10+00:00",
+   "link": "https://www.youtube.com/shorts/N6OerO7Xuyg",
+   "videoId": "N6OerO7Xuyg",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "lead",
+     "detonation"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "army",
+     "lead",
+     "azide"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Blocks F.C.C. From Targeting Disney’s Local ABC Licenses",
+   "dek": "A preliminary injunction halted an early regulatory review of the network’s operations in eight cities, including New York, Los Angeles and Chicago.",
+   "opening": "",
+   "published": "2026-11-26T02:01:20+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/business/media/disney-fcc-abc-ruling.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "judge",
+     "blocks",
+     "early",
+     "review",
+     "network"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "judge",
+     "blocks",
+     "early",
+     "review",
+     "licenses"
+    ],
+    "obj_afederal_birthright-blocks-citizenship-judge": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_abc-blocks-disney-fcc": [
+     "judge",
+     "blocks",
+     "targeting",
+     "disney"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Rejoiced in the Market’s Nvidia Surge. It Didn’t Last Long.",
+   "dek": "The retreat of the stock market in recent days shows how President Trump’s push to reinstall the company’s chief executive has collided with the realities of his other policies.",
+   "opening": "",
+   "published": "2026-11-26T01:53:20+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/us/politics/trump-nvidia-stock-market.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Pritzker accused of turning education tax credit into partisan fight by opting out of program: 'Sad to see'",
+   "dek": "Illinois Gov. JB Pritzker opted out of the federal scholarship tax credit program, drawing accusations from parents and education advocacy groups of putting politics over education.",
+   "opening": "Illinois Gov. JB Pritzker , a Democrat, is being accused of putting partisan politics over kids' educational needs after he decided to opt out of the Federal Scholarship Tax Credit program, prompting criticism from parents and education advocacy groups. Pritzker announced on Tuesday that his state will not opt into the program, which was signed into law by President Donald Trump last year as part of the One Big Beautiful Bill Act. The governor described the program as a school voucher, while advocacy groups argued that he mischaracterized the plan. \"At a time when public school education needs investments more than ever, we should not siphon money from public schools for private education – especially as the Trump Administration's policies decimate education,\" Pritzker said in a statement. \"We have a responsibility to do right by all of our students. Taxpayer funding should not subsidize donations to private schools that could discriminate based on religion, sexual orientation, or other characteristics.\" The program allows people to receive federal tax credits for donations up to $1,700 to authorized scholarship-granting organizations (SGOs), which distribute the donated scholarship funds to eligible families to be used on private or public educational expenses, including private school tuition, tutoring services, textbooks and more. GOV HOCHUL'S PLAN TO OPT NEW YORK INTO FEDERAL SCHOOL CHOICE PROGRAM DRAWS UNION OPPOSITION In an interview with Fox News Digital, Teach Coaliti",
+   "published": "2026-11-26T01:46:28-05:00",
+   "link": "https://www.foxnews.com/politics/pritzker-accused-turning-education-tax-credit-partisan-fight-opting-out-program-sad-see",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_appeals-conviction-court-donald": [
+     "donald",
+     "money"
+    ],
+    "obj_x_allegations-california-democrat-ethics": [
+     "democrat",
+     "sexual"
+    ],
+    "obj_x_aid-could-cut-families": [
+     "could",
+     "families"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "U.S. Judge rules FCC violated ABC's free speech rights to please Trump",
+   "dek": "A federal judge has blocked the Trump administration from moving to review all local broadcast licenses held by ABC. The stations air in six of the largest U.S. markets.",
+   "opening": "A federal judge has blocked the Trump administration from moving to review all local broadcast licenses held by ABC. The stations air in six of the largest U.S. markets. (Image credit: Heather Diehl/Thibault Camus/Pool)",
+   "published": "2026-11-26T00:23:18-05:00",
+   "link": "https://www.npr.org/2026/11/26/nx-s1-6000576/fcc-disney-abc-first-amendment-trump-brendan-carr",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_birthright-blocked-citizenship-curtailing": [
+     "blocked",
+     "judge"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "judge",
+     "review"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "judge",
+     "review",
+     "licenses"
+    ],
+    "obj_afederal_abc-fcc-free-judge": [
+     "judge",
+     "rules",
+     "violated",
+     "free",
+     "speech",
+     "rights",
+     "please"
+    ],
+    "obj_afederal_abc-blocks-disney-fcc": [
+     "judge",
+     "stations"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Banks Went Down. Here’s What’s Coming.",
+   "dek": "Watch the full conversation here: https://youtu.be/H9AxUtUmp-U Watch more here: https://watchtcn.co/49CDF2t #TuckerCarlson #JensenHuang #NVIDIA #cyberattacks #America #debt #AI #gold #government #Iranwar #China #housingmarket #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-26T00:00:21+00:00",
+   "link": "https://www.youtube.com/watch?v=AiQe6UHTSDo",
+   "videoId": "AiQe6UHTSDo",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Elon Musk, SpaceX pledge major stock donations to active Trump Accounts",
+   "dek": "SpaceX will give one share of its Class A common stock to every active Trump Account, with Elon Musk pledging to personally match the donation.",
+   "opening": "SpaceX announced Wednesday that it will contribute one share of its stock to every currently active Trump Account, with CEO Elon Musk pledging to personally match the company's donation. The aerospace company's commitment follows Musk's pledge earlier this year to give every child in America a share of the company. Musk elaborated on the planned stock giveaway in a post on X Wednesday evening, saying every child in America would receive an additional share from him personally. \"Every child in America will receive two SpaceX shares, one from the company and one from me personally,\" Musk wrote. TRUMP ACCOUNTS HIT MAJOR MILESTONE AS FAMILY CONTRIBUTIONS SURPASS $1 BILLION SpaceX said the planned contribution, which could be worth billions of dollars, would give the next generation of Americans a stake in the company's future. \"SpaceX is building the infrastructure of the future and working to make life multiplanetary,\" the company said in a statement. \"We believe ownership of the company creating these systems should extend to the next generation of Americans for their long-term benefit.\" SpaceX, whose shares were trading just above $127 Wednesday, said it would contribute one newly issued share of its Class A common stock to every currently active Trump Account. SpaceX President and Chief Operating Officer Gwynne Shotwell also announced a separate personal donation of more than 2 million shares of the company's stock. Musk pledged last month to give every child in America a sha",
+   "published": "2026-11-25T23:29:55-05:00",
+   "link": "https://www.foxbusiness.com/markets/elon-musk-spacex-pledge-major-stock-donations-active-trump-accounts",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Evening Wire: Macy’s Day Parade Postponed & Iowa Rocked By Planned Detonation",
+   "dek": "New York’s iconic Macy’s Thanksgiving Day Parade is postponed for bad weather, Multiple intelligence agencies suffer serious cyber breaches, and Middletown Iowa is rocked by a massive planned detonation. Get the facts first with Evening Wire. - - - Ep. 3215 - - - Wake up with new Morning Wire merch: https://bit.ly/4lIubt3 - - - Today’s Sponsor: Quince - Give the gift of quality this holiday season. Download the Quince app for app-exclusive offers, or go to Quince.com. Get free shipping on your order and 365-day returns. Now available in Canada and the UK, too. And when Quince asks where you he",
+   "opening": "",
+   "published": "2026-11-25T22:59:45+00:00",
+   "link": "https://www.youtube.com/watch?v=QRmEt8Cta_k",
+   "videoId": "QRmEt8Cta_k",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "detonation"
+    ],
+    "obj_thepresi_approval-court-detonation-halts": [
+     "iowa",
+     "detonation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Road Fire Near Cairo Kills Dozens After Petroleum-Laden Truck Crashes",
+   "dek": "The blaze killed at least 31 and injured at least 21 near Giza, beside the Nile River, officials said.",
+   "opening": "",
+   "published": "2026-11-25T21:37:07+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/world/middleeast/road-fire-near-cairo-kills-dozens-after-petroleum-laden-truck-crashes.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "petrol"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Rumored $300 Million Score on Nvidia’s Stock Surge Isn’t Backed by Trading Records",
+   "dek": "Three data providers say they have no evidence to support the online claim that insider trading generated a 9,000 percent return.",
+   "opening": "",
+   "published": "2026-11-25T21:36:24+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/business/nvidia-stock-insider-trading-rumor.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Stocks Slump Again as Investors Fret About A.I., Tariffs and Inflation",
+   "dek": "Nvidia and other tech companies fell as investors weighed developments in global trade and the path of interest rates.",
+   "opening": "",
+   "published": "2026-11-25T21:32:42+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/business/stocks-sp500-nvidia-ai.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Netanyahu declares corruption trial has 'fallen apart' after judges question key charges",
+   "dek": "Israeli Prime Minister Benjamin Netanyahu declared his corruption trial &quot;fell apart&quot; as judges urged prosecutors to rethink the bribery and fraud cases.",
+   "opening": "The decade-long legal battle against Israeli Prime Minister Benjamin Netanyahu suffered a major blow Wednesday after judges cast doubt on key corruption charges, prompting the Israeli leader to declare that his trial had \"fallen apart\" and demand an immediate end to the proceedings. A three-judge panel at the Jerusalem District Court suggested that Attorney General Gali Baharav-Miara consider dropping the most serious case against Netanyahu, questioned whether a criminal offense occurred in a second case and recommended resolving a third through a plea deal. \"Today, the trial fell apart,\" Netanyahu said in an evening address following the proceedings, according to The Times of Israel . FROM INTELLIGENCE SHARING TO MISSILE DEFENSE, HOW ISRAEL'S PARTNERSHIP PROTECTS AMERICAN SECURITY \"Ten years ago, I said, ‘There will be nothing because there was nothing.’ But it took 10 years for this truth to be revealed to everyone,\" he said. \"Citizens of Israel, this trial must end immediately. And what also needs to end immediately is what came out of it — the hatred, the incitement, the division.\" The court's intervention dealt a major setback to prosecutors more than six years after Netanyahu's trial began and roughly a decade after authorities launched the initial probe into him. Judges had summoned Baharav-Miara to court Wednesday amid concerns over the strength of the prosecution's evidence and whether continuing the cases served the public interest. \"We’re now at a crossroad and nee",
+   "published": "2026-11-25T21:26:48-05:00",
+   "link": "https://www.foxnews.com/world/netanyahu-declares-corruption-trial-fallen-apart-judges-question-key-charges",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "attorney",
+     "general"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "judge"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "years",
+     "bribery"
+    ],
+    "obj_x_against-asks-charges-drop": [
+     "charges",
+     "there"
+    ],
+    "obj_thepresi_birthright-blocked-citizenship-curtailing": [
+     "second",
+     "judge"
+    ],
+    "obj_afederal_birthright-blocks-citizenship-judge": [
+     "second",
+     "judge"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "MASSIVE insider trading questions raised after $340K in suspicious bets",
+   "dek": "MASSIVE insider trading questions raised after $340K in suspicious bets on Jensen Huang’s return to Nvidia. Meanwhile, Trump personally intervened to secure Huang’s reinstatement, potentially gaining up to $15 million on his Nvidia holdings as the stock surged more than 30%.",
+   "opening": "",
+   "published": "2026-11-25T21:22:43+00:00",
+   "link": "https://www.youtube.com/shorts/2V67_63XVNo",
+   "videoId": "2V67_63XVNo",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Iowa Lead Bomb Is Worse Than You Think | The Kyle Kulinski Show",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-11-25T19:30:09+00:00",
+   "link": "https://www.youtube.com/watch?v=_ibWvtOL4m0",
+   "videoId": "_ibWvtOL4m0",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "lead"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "lead",
+     "iowa"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "2nd Circuit deals blow to Manhattan DA, breathes new life into Trump's hush money appeal",
+   "dek": "President Donald Trump&apos;s bid to move his New York hush money case to federal court is revived after the 2nd Circuit cited errors in a prior denial.",
+   "opening": "A federal appeals court handed President Donald Trump a legal victory Monday, reviving his bid to wrest his New York hush money case from state court and potentially overturn his felony conviction on presidential immunity grounds. The 2nd U.S. Circuit Court of Appeals ruled that an August decision by the late U. S. District Judge Alvin Hellerstein, a Clinton appointee who died in October, that denied Trump's second transfer bid was improper. The criminal case centered on Trump's reimbursement of his then-attorney Michael Cohen, who paid adult film actress Stormy Daniels $130,000 shortly before the 2016 election to keep her from publicizing an alleged sexual encounter with Trump a decade earlier. Trump, who denies the encounter, was found guilty in May 2024 of 34 felony counts of falsifying business records. FEDERAL APPEALS COURT REFUSES TO REHEAR TRUMP APPEAL OF $83M E JEAN CARROLL DEFAMATION JUDGMENT At his January 2025 sentencing — days before his second inauguration — Trump received an unconditional discharge, leaving him with no prison time or fine, though the felony conviction remains on his record. Trump has continued fighting to move the case out of state court, scoring a victory before a three-judge appellate panel Monday. \"We disagree with the district court,\" said circuit judges Raymond J. Lohier Jr., an Obama appointee; José A. Cabranes, a Clinton appointee; and John M. Walker Jr., a George H. W. Bush appointee. The panel found Hellerstein made two legal errors: A ",
+   "published": "2026-11-25T19:00:15-05:00",
+   "link": "https://www.foxnews.com/politics/second-circuit-deals-blow-manhattan-da-breathes-new-life-trump-hush-money-appeal",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "judge"
+    ],
+    "obj_thepresi_appeals-conviction-court-donald": [
+     "appeals",
+     "donald",
+     "hush",
+     "money",
+     "conviction"
+    ],
+    "obj_thepresi_birthright-blocked-citizenship-curtailing": [
+     "second",
+     "judge"
+    ],
+    "obj_afederal_birthright-blocks-citizenship-judge": [
+     "second",
+     "judge"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "WATCH: Vance defends Iowa lead azide detonation as he visits Air Force troops in Ohio",
+   "dek": "Vice President JD Vance, second lady Usha Vance and their four children visited Wright-Patterson Air Force Base in Ohio on Wednesday, serving a Thanksgiving meal to troops and joining them for lunch.",
+   "opening": "",
+   "published": "2026-11-25T18:51:49-05:00",
+   "link": "https://www.pbs.org/newshour/politics/watch-vance-defends-iowa-lead-azide-detonation-as-he-visits-air-force-troops-in-ohio",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "lead",
+     "detonation"
+    ],
+    "obj_thepresi_approval-court-detonation-halts": [
+     "iowa",
+     "detonation"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "lead",
+     "azide",
+     "iowa",
+     "wednesday"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Trump's newest tariffs could impact Americans and the economy",
+   "dek": "The Trump administration announced plans for a new round of tariffs on China, the European Union and 12 other major trading partners. China would face the highest rate with a new 20% tariff on most products. To discuss how this will impact Americans and the economy, Lisa Desjardins spoke with Gavin Bade of The Wall Street Journal.",
+   "opening": "",
+   "published": "2026-11-25T18:50:40-05:00",
+   "link": "https://www.pbs.org/newshour/show/how-trumps-newest-tariffs-could-impact-americans-and-the-economy",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_x_china-others-production-ready": [
+     "tariffs",
+     "china"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "tariffs",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What the Army's Iowa detonation means for nearby communities",
+   "dek": "The Army blew up a highly volatile lead chemical compound in Iowa after a federal court gave the green light. Officials called the operation a success, but did not take questions from reporters. Surrounding communities remain on alert, and three states say they're monitoring the effects. Stephanie Sy reports, and Lisa Desjardins discusses more with Eliza Billingham of Iowa Public Radio.",
+   "opening": "",
+   "published": "2026-11-25T18:49:33-05:00",
+   "link": "https://www.pbs.org/newshour/show/what-the-armys-iowa-detonation-means-for-nearby-communities",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "lead",
+     "detonation"
+    ],
+    "obj_thepresi_approval-court-detonation-halts": [
+     "iowa",
+     "detonation"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "army",
+     "lead",
+     "iowa"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: Severe weather threatens holiday travel for millions",
+   "dek": "In our news wrap Wednesday, severe weather is threatening Thanksgiving travel for millions of Americans, authorities in Egypt say at least 30 are dead after a crash involving a fuel tanker sparked a massive fire near Cairo and the Treasury Department's financial crimes enforcement network suffered what it calls a \"cybersecurity incident.\"",
+   "opening": "",
+   "published": "2026-11-25T18:45:42-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-severe-weather-threatens-holiday-travel-for-millions",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ben Shapiro and Amna Nawaz discuss GOP's future on 'Settle In'",
+   "dek": "Political commentator Ben Shapiro has been a prominent and often controversial force in conservative media since he was a teenager. Now in his early 40s, he hosts one of America's most popular podcasts and remains editor emeritus of The Daily Wire. Amna Nawaz sat down with Shapiro on \"Settle In\" to discuss the GOP's path forward after the midterms and other hot-button issues.",
+   "opening": "",
+   "published": "2026-11-25T18:35:11-05:00",
+   "link": "https://www.pbs.org/newshour/show/ben-shapiro-and-amna-nawaz-discuss-gops-future-on-settle-in",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Douglas Murray: When Writers Stop Believing in Free Speech",
+   "dek": "PEN America long rallied around authors facing persecution. Now its members seem more interested in policing one another, writes Douglas Murray.",
+   "opening": "Happy Thanksgiving from The Free Press! As you travel to spend time with family and friends, we&#8217;re celebrating the holiday with our biggest sale of the year: 25 percent off everything we have to offer. That means columns from Douglas Murray (scroll down for his latest), Ross Douthat, Abigail Shrier, Niall Ferguson, Nellie Bowles, and so many more. It also means access to our livestreams, podcasts, videos, and live events. Most importantly, it means joining a community united by the founding mission of this publication: that the truth matters, and that the only way to find it is to think for yourself. We hope you&#8217;ll join us. &#8212;The Editors Subscribe now Is there anything on Earth worse than writers&#8217; associations? I don&#8217;t mean the sort of samizdat groups that exist in closed societies, where organization is needed. I mean the sort of organizations in the West that specialize in self-congratulatory backslapping and professions of their own &#8220;bravery.&#8221; No other line of work makes such a fuss of itself. Firefighters&#8217; associations do not endlessly applaud themselves for their courage. Police and the military tend to demonstrate their own accountability with actions, not words. Awards seasons are not rolling events in these professions. But for a certain type of writer, you can never have enough self-applause. Which is one of the reasons why it is not endlessly sad to watch PEN America pull itself apart. There was a time when PEN was an o",
+   "published": "2026-11-25T18:15:51+00:00",
+   "link": "https://www.thefp.com/p/douglas-murray-when-writers-stop",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_afederal_abc-fcc-free-judge": [
+     "free",
+     "speech"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Officials Brief Congressional Staff on Intelligence Surrounding Nvidia Affair",
+   "dek": "After President Trump said Jensen Huang was not a security threat, U.S. intelligence agencies told aides to lawmakers there was no evidence the woman at the heart of the scandal took directions from the Chinese spy agency.",
+   "opening": "",
+   "published": "2026-11-25T18:14:37+00:00",
+   "link": "https://www.nytimes.com/2026/11/24/us/politics/intelligence-nvidia-affair-congressional-briefing.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "affair"
+    ],
+    "obj_congress_ban-car-chinese-lawmakers": [
+     "lawmakers",
+     "chinese"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Socialists on blast for pledging to weed money out of politics but accepting business execs' checks anyway",
+   "dek": "An investigation of FEC records found 24 corporate executives gave $675,300 to DSA-endorsed candidates like Rashida Tlaib and progressive PACs.",
+   "opening": "Far-left lawmakers are facing accusations of hypocrisy for criticizing corporate influence in politics while accepting campaign contributions from influential executives in industries including defense and healthcare. A new investigation looking into Federal Election Commission filings found socialist-aligned candidates who pledged to reject corporate PAC contributions still took the cash from PAC's and corporate executives. \"If you're taking money from them, at least be man enough to admit you're going to take the money,\" Rep.-elect Jerry Carl, R-Ala., told Fox News Digital in reference to Rep. Rashida Tlaib, D-Mich. Filings first flagged by anti-DEI nonprofit 1792 Exchange were reviewed by Fox News Digital. They show Tlaib accepted checks in 2023 and 2025 totaling $10,600 from L3Harris executive defense contractor Faisal Munir, even after she authored an op-ed in 2025 criticizing lawmakers who financially benefit from the defense industry. RADICAL SOCIALIST WING'S HUGE NIGHT REVEALS ASCENDING CLOUT WITHIN DEMOCRATIC PARTY Other Democratic Socialists of America (DSA) members, such as, Reps.-elect Donavan McKinney, D-Mich., Claire Valdez, D-N.Y., and Darializa Avila Chevalier, D-N.Y., publicly pledged to reject corporate PAC contributions , according to End Citizens United . Yet all three took cash from PACs and corporate executives, as noted in the investigation. While still candidates, however, they never specified if their pledge to reject corporate money also applies to t",
+   "published": "2026-11-25T18:00:23-05:00",
+   "link": "https://www.foxnews.com/politics/socialists-blast-pledging-weed-money-out-politics-accepting-business-execs-checks-anyway",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Georgia's Fulton County ordered to give copy of 2020 election records seized by FBI to state board",
+   "dek": "A judge on Tuesday ordered Georgia's Fulton County to turn over a digital copy of ballots and other election records seized by the FBI earlier this year to the State Election Board, which had been trying for more than two years to obtain certain records from the 2020 election in the state's most populous county.",
+   "opening": "",
+   "published": "2026-11-25T17:48:11-05:00",
+   "link": "https://www.pbs.org/newshour/politics/georgias-fulton-county-ordered-to-give-copy-of-2020-election-records-seized-by-fbi-to-state-board",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_abc-blocks-chilling-early": [
+     "judge",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "KRYSTAL: Voters Must Hold Democrats Accountable on Dark Money",
+   "dek": "KRYSTAL: Voters Must Hold Democrats Accountable on Dark Money Krystal Ball argues the DNC’s new pledge against super PAC and dark money spending will only have teeth if the Democratic base demands accountability. She points to AIPAC Tracker’s impact, where public pressure over Israel lobby funding has proven more powerful than formal enforcement mechanisms.",
+   "opening": "",
+   "published": "2026-11-25T17:39:44+00:00",
+   "link": "https://www.youtube.com/shorts/Xfltx5ucI2M",
+   "videoId": "Xfltx5ucI2M",
+   "publication": "breaking-points",
+   "source": "breaking-points",
+   "station": "LP+RP",
+   "matched": {
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "voters",
+     "enforcement"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "North Korea Kicks Out Swiss Diplomats in Spat Linked to Ukraine War",
+   "dek": "The move followed Switzerland’s decision to impose sanctions on an international youth camp in North Korea, which is accused of hosting Ukrainian children for indoctrination.",
+   "opening": "",
+   "published": "2026-11-25T17:00:25+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/world/asia/north-korea-switzerland-diplomats.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "These young Republicans have a message for their party: It's time to 'grow up'",
+   "dek": "Three weeks after midterm elections that devastated the Republican Party, several dozen of its more youthful members gathered at a brewery to sort through the pieces.",
+   "opening": "",
+   "published": "2026-11-25T17:00:15-05:00",
+   "link": "https://www.pbs.org/newshour/politics/these-young-republicans-have-a-message-for-their-party-its-time-to-grow-up",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's birthright citizenship restrictions struck down again by DC federal judge he called 'hater'",
+   "dek": "Judge Christopher Cooper struck down Trump&apos;s second birthright citizenship order, citing the Fourteenth Amendment and rejecting surrogacy-based exclusions.",
+   "opening": "A DC federal judge, previously dubbed by President Donald Trump as an \"anti- Trump Hater,\" blocked Trump's second attempt to restrict birthright citizenship in a Wednesday ruling. U.S. District Judge Christopher Cooper , who was recently in Trump's crosshairs after ruling against efforts to shut down the Kennedy Center for renovations and add Trump's name to the cultural institution, issued a 67-page ruling striking down an August executive order that barred U.S. -born children whose parents are suspected terrorists or gang members, or children born through surrogacy to foreign parents, from citizenship eligibility. Cooper's ruling comes months after the Supreme Court struck down Trump's initial executive order, signed on his first day back in office. The order attempted to deny birthright citizenship to U.S.-born children whose mothers were in the country illegally or temporarily and whose fathers were neither U.S. citizens nor green card holders. WHITE HOUSE RIPS ‘ACTIVIST’ BIDEN JUDGE WHO UPENDED TRUMP BIRTHRIGHT CITIZENSHIP ORDER \"As the Supreme Court has made clear, however, the President cannot carve out new exceptions to birthright citizenship for children born within the United States and subject to its laws,\" Cooper ruled. Trump's second executive order was already partially blocked on Sept. 2 by U.S. District Judge Deborah Boardman in Maryland, whose injunction protected U.S.-born children of mothers who were in the country illegally or temporarily and whose fathers",
+   "published": "2026-11-25T16:48:11-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-birthright-citizenship-restrictions-struck-down-dc-federal-judge-called-hater",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "judge"
+    ],
+    "obj_thepresi_birthright-blocked-citizenship-curtailing": [
+     "birthright",
+     "citizenship",
+     "blocked",
+     "second",
+     "judge"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "judge",
+     "citing",
+     "first"
+    ],
+    "obj_afederal_birthright-blocks-citizenship-judge": [
+     "second",
+     "judge",
+     "birthright",
+     "citizenship"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "South African President Wins Reprieve From ‘Farmgate’ Impeachment Investigation",
+   "dek": "A court threw out a report suggesting that Cyril Ramaphosa may have tried to conceal the theft of more than half a million dollars of U.S. currency.",
+   "opening": "",
+   "published": "2026-11-25T16:22:17+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/world/africa/south-africa-ramaphosa-farmgate.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tucker Tells the Full Story of Trump’s Recent Phone Call",
+   "dek": "Watch the full conversation @TheBrandonStraka here: https://www.youtube.com/watch?v=kckVByHcgsk Watch more here: https://watchtcn.co/49CDF2t @TheBrandonStraka #TuckerCarlson #DonaldTrump #Israel #Iran #war #peace #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-25T16:00:22+00:00",
+   "link": "https://www.youtube.com/watch?v=c2nGdH4PG4Q",
+   "videoId": "c2nGdH4PG4Q",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Administration Unveils New Tariffs for China, EU and More, Citing Unfair Practices",
+   "dek": "The latest escalation came as the administration confronts continued legal obstacles and new scrutiny from an incoming Democratic-led Congress.",
+   "opening": "",
+   "published": "2026-11-25T15:58:36+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/business/trump-tariffs-trade.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "democratic"
+    ],
+    "obj_x_china-others-production-ready": [
+     "tariffs",
+     "china"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "tariffs",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump could avoid Dems' ‘extreme’ amnesty push by signing immigration reform before new Congress",
+   "dek": "House Republicans say President Donald Trump could sign the Dignity Act this Congress, but warn delay would bring a bill more like an amnesty bill.",
+   "opening": "House Republicans are optimistic that President Donald Trump could sign a bipartisan immigration reform bill before Democrats take control of Congress. They warn that if the president waits until January it could result in legislation containing more \"extreme\" language that opens the door for amnesty. \"Yes, it's going to happen under this Congress,\" Rep. Don Bacon, R-Neb., told Fox News Digital, pointing to the country's labor shortages and Republicans' declining support among Hispanic voters as reasons to pursue immigration reform. \"I think it's a win-win for a country, we get a much-needed workforce while providing some accountability for misbehavior.\" Bacon's remarks come after Trump signaled during a recent \"60 Minutes\" interview that he would be open to immigration reform, potentially creating an opportunity for lawmakers to advance the Dignity Act, a bill introduced by Rep. Maria Elvira Salazar, R-Fla., in 2025. WHITE HOUSE DOUBLES DOWN AFTER TRUMP ANGERS BASE BY FLOATING ILLEGAL ALIEN DEAL WITH DEMS The legislation, which now has over a dozen Republican co-sponsors, would provide certain undocumented immigrants who meet eligibility requirements with renewable legal status and work authorization, without establishing a direct pathway to citizenship. However, Bacon warned that delaying the legislation until the 120th Congress, when Democrats will control both chambers, could result in a more expansive immigration package. \"Unfortunately, I think the Dems will make it mor",
+   "published": "2026-11-25T15:38:15-05:00",
+   "link": "https://www.foxnews.com/politics/trump-sign-dignity-act-dems-extreme-amnesty-push-house-republican-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ],
+    "obj_thesenat_end-filibuster-final-makes": [
+     "republican",
+     "push"
+    ],
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "voters",
+     "some",
+     "immigration"
+    ],
+    "obj_x_aid-could-cut-families": [
+     "could",
+     "status"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "when",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Presidential contender's 'remarkably tone-deaf’ move against Trump triggers parental uproar: 'Unconscionable'",
+   "dek": "Illinois Democratic Gov. JB Pritzker faces fierce school choice backlash after opting out of the federal scholarship tax credit. Critics cite politics.",
+   "opening": "Illinois Democratic Gov. JB Pritzker, widely believed to have presidential aspirations in 2028, is facing pushback from conservative education and school choice advocates over a move to opt out of a Trump federal scholarship tax credit program. Critics say the decision was made based on politics and not student outcomes. Pritzker announced Tuesday that the state will opt out of the Trump administration’s Federal Scholarship Tax Credit program, refusing to allow Illinois students to receive scholarships funded through the federal school-choice initiative. In a press release , Pritzker argued that participating in what he labeled a \"school voucher program\" would siphon money and attention away from public education while subsidizing donations to private schools that could discriminate based on religion, sexual orientation or other characteristics. GOV KATHY HOCHUL SIGNS NEW YORK ONTO TRUMP'S SCHOOL CHOICE PROGRAM DESPITE TEACHERS UNION OPPOSITION \"At a time when public school education needs investments more than ever, we should not siphon money from public schools for private education — especially as the Trump Administration’s policies decimate education,\" Pritzker wrote. \"We have a responsibility to do right by all of our students. Taxpayer funding should not subsidize donations to private schools that could discriminate based on religion, sexual orientation, or other characteristics.\" Prominent conservative education activists and groups lambasted the move on social media, ",
+   "published": "2026-11-25T15:37:46-05:00",
+   "link": "https://www.foxnews.com/politics/presidential-contenders-remarkably-tone-deaf-move-against-trump-triggers-parental-uproar-unconscionable",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_accuracy-bill-gov-hochul": [
+     "hochul",
+     "would"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ],
+    "obj_thepresi_administration-changes-exhibit-groups": [
+     "groups",
+     "made"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "EXCLUSIVE: White House accuses South Korea of breaking promise to Trump as US tech giant faces $688M in fines",
+   "dek": "The White House says Seoul broke a promise to President Donald Trump on fair treatment for U.S. tech companies as regulators fined Coupang $688 million.",
+   "opening": "FIRST ON FOX — The White House accused South Korea of breaking a promise to President Donald Trump to treat U.S. tech companies fairly, telling Fox News Digital that Seoul has since hit Coupang with hundreds of millions of dollars in fines. South Korean regulators have hit Coupang with roughly $688 million in fines, including a provisional $224 million penalty against its food delivery service, which was announced this month. A White House official said the administration opposes South Korean President Lee Jae Myung's alleged discrimination against U.S. companies and that the White House expects South Korea to keep its commitment to fair treatment for U.S. technology companies, including Coupang. EXPLOSIVE HOUSE REPORT REVEALS SECRET OPERATION INSIDE CHINA AT CENTER OF SOUTH KOREA'S FIGHT WITH US COMPANY A South Korean embassy official punched back at the White House's allegation that there was a direct targeting of Coupang, stating that the nation abides by the agreement with the Trump administration and is committed to a fair and nondiscriminatory business environment. \"All investigations and decisions undertaken by the Korean government, including the recent fine imposed on food delivery service providers for anticompetitive conduct by the Korean Fair Trade Commission have been conducted lawfully and in accordance with applicable laws and regulations,\" a spokesperson for the Embassy of the Republic of Korea told Fox News Digital. \"Furthermore, the right to seek legal remed",
+   "published": "2026-11-25T15:16:44-05:00",
+   "link": "https://www.foxnews.com/politics/exclusive-white-house-accuses-south-korea-breaking-promise-trump-us-tech-giant-faces-688m-fines",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_brexit-deal-food-post": [
+     "food",
+     "trade"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "china",
+     "official"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Aren’t the Midterms Over in Louisiana? Ask the Supreme Court.",
+   "dek": "A landmark Supreme Court ruling reshaped the state’s congressional map and set up runoffs for two open seats.",
+   "opening": "",
+   "published": "2026-11-25T15:00:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/us/politics/why-arent-the-midterms-over-in-louisiana-ask-the-supreme-court.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Putin's war death toll reportedly tops 700,000 as Russia scrambles for recruits",
+   "dek": "Kremlin spokesman Dmitry Peskov dismisses an investigation estimating 700,000 Russian troops have died in Vladimir Putin&apos;s war against Ukraine.",
+   "opening": "The Kremlin on Wednesday dismissed a new investigation estimating that at least 700,000 Russian troops have died in President Vladimir Putin's war against Ukraine , as experts warn that mounting military losses are undermining Moscow's ability to sustain its offensive. The findings, published Monday by independent Russian news outlets Meduza and Mediazona , are based on leaked Russian government records and statistical analysis. \"The only entity that can officially disclose casualty figures is the Russian Defense Ministry,\" Kremlin spokesman Dmitry Peskov told reporters Wednesday, according to The Moscow Times. PUTIN'S WAR MACHINE TIED TO TROUBLING RECRUITMENT OF YOUNG WOMEN AS NEW DEALS EMERGE Peskov urged reporters to disregard other figures but offered no updated official death toll. The investigation draws on records obtained by the hacking groups Belarusian Cyber Partisans and Silent Crow after they breached Russia's federal statistics agency, Rosstat. Researchers identified at least 490,000 registered military deaths by late September 2026. However, delays in registering fatalities and soldiers who remain officially listed as missing but are believed to be dead led researchers to estimate that the actual toll had likely reached 700,000 or more by that time. Keti Korkiya, a research analyst at the Foundation for Defense of Democracies (FDD), told Fox News Digital that she considered the estimate of more than 700,000 Russian military deaths plausible, noting that Britain'",
+   "published": "2026-11-25T14:34:13-05:00",
+   "link": "https://www.foxnews.com/world/putins-war-death-toll-reportedly-tops-700000-russia-scrambles-recruits",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_china-death-leaking-national": [
+     "official",
+     "death"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "investigation",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "DOJ lawyers ordered to swarm 'frivolous' 97,000-lawsuit wave from ICE detainees",
+   "dek": "Attorney General Todd Blanche is mobilizing civil litigators across the Justice Department to fight 97,000 habeas corpus petitions from detained migrants.",
+   "opening": "Attorney General Todd Blanche is mobilizing civil litigators across the Justice Department in an all-hands-on-deck push to fight tens of thousands of legal filings by detained migrants asking federal courts to review whether their imprisonment is lawful. Blanche issued a three-page memo Tuesday calling on attorneys working outside of immigration issues to assist in the lawsuits described by Blanche as \"frivolous\" and an attempt to \"thwart President Trump's promise to the American people to prioritize their safety and security.\" The pre-Thanksgiving memo comes as the Justice Department has been hit with 97, 000 habeas corpus petition filings since January 2025, including close to 10,000 new petitions filed since October. Typically, the Justice Department faces only a few hundred habeas corpus cases a year. As President Donald Trump has made mass deportations a centerpiece of his second administration, with Department of Homeland Security figures showing nearly 1.2 million illegal immigrants removed to date, the Justice Department has seen a wave of petitions. DHS TOUTS HIGHEST ICE DEPORTATIONS IN HISTORY, AS MULLIN SAYS AGENCY HAS BEEN ‘UNLEASHED’ The surge in lawsuits comes after the Trump administration changed its detention policy to deny bond hearings to migrants arrested inside the U.S. — even those who have lived in the country for years. Without access to bond hearings before immigration judges, detainees have turned directly to federal district courts to challenge thei",
+   "published": "2026-11-25T14:24:48-05:00",
+   "link": "https://www.foxnews.com/politics/doj-lawyers-ordered-swarm-frivolous-97000-lawsuit-wave-ice-detainees",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "attorney",
+     "general"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Newsom shredded for ‘hypocritical’ claim Trump 'sells' pardons after moving to spare 548 death row inmates",
+   "dek": "Gavin Newsom faces &quot;arrogance and hypocrisy&quot; backlash over calls to reform presidential pardon powers as he vows to spare 548 California death row inmates.",
+   "opening": "California Gov. Gavin Newsom's calls for federal reforms to presidential pardon powers are garnering intense backlash for \"hypocrisy\" after he used his state-level executive powers to spare hundreds of death row inmates from receiving the death penalty. Trump vowed Monday to direct the Justice Department (DOJ) to seek the death penalty for child murderers and speed up federal executions after Newsom’s announcement. Online fury erupted after Newsom posted a video defending his decision to commute the death sentences of 548 criminals while accusing President Donald Trump of turning \"the power of mercy into a business.\" \"Gavin, is the arsonist calling for a ban on fire,\" Rep. Nancy Mace, R-S.C., posted on X. \"Man who commuted 548 death row sentences is now deeply concerned about abuse of the pardon power.\" NEWSOM ORDERS CALIFORNIA’S MOST REVILED KILLERS OFF DEATH ROW – 10 OF THE WORST WHO COULD BENEFIT One X user noted how Trump \"just told the DOJ to fast-track the death penalty for child killers and predators. [Gavin Newsom], on the other hand, is proudly defending his decision to spare 548 of the worst of the worst. \"Tells you everything you need to know.\" Another user posted , \"Are you f---ing kidding me? His arrogance and hypocrisy are immeasurable.\" \"After pardoning everyone on death row in California, Newsom calls for reform of the president’s pardon powers,\" another wrote on X. \"You can’t make this stuff up.\" Trump called out Newsom at the DOJ alongside Attorney General T",
+   "published": "2026-11-25T14:16:34-05:00",
+   "link": "https://www.foxnews.com/politics/newsom-shredded-hypocritical-claim-trump-sells-pardons-after-moving-spare-548-death-row-inmates",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_california-commute-death-disaster": [
+     "justice",
+     "newsom",
+     "commute",
+     "california",
+     "death",
+     "sentences"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "attorney",
+     "general"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "sentences",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Data centers in space’: FCC clears SpaceX for 1M satellites to ‘extend America’s lead in superintelligence’",
+   "dek": "The FCC approved Elon Musk&apos;s SpaceX plan for up to 1 million solar-powered satellites to build artificial intelligence data centers in orbit.",
+   "opening": "The Federal Communications Commission (FCC) has authorized Elon Musk’s SpaceX to deploy up to 1 million satellites to build artificial intelligence data centers to orbit the Earth. The FCC approved SpaceX’s \"Starmind\" constellation – a network of solar-powered orbital compute modules designed to process massive amounts of data in space. By shifting power-hungry AI infrastructure into orbit, the project aims to bypass terrestrial electricity, land, and cooling bottlenecks. AI DATA CENTERS COULD LEAVE EARTH AS SPACEX EYES ORBITAL INFRASTRUCTURE \"DATA CENTERS IN SPACE,\" read a graphic posted to X by the FCC and Chairman Brendan Carr on Wednesday. Musk hailed the approval in a reply. \"Much appreciated,\" Musk wrote on X. \"This will be a great asset to America and the world.\" Musk teased this in an overnight X post after the midterms crippled the Republican Party, including in Texas, where Musk had invested hundreds of millions to elect lawmakers more friendly to data center buildouts in America. DATA CENTERS WERE ON THE BALLOT, AND VOTERS SENT UNMISTAKABLE MESSAGE \"Data centers in space looking pretty appealing right now,\" Musk wrote shortly after massive Democratic victories were declared overnight from Texas. In the news release shared on X by Carr, the FCC referenced a Kardashev Type II civilization, a hypothetical stage of technological advancement capable of harnessing all the energy emitted by the sun, roughly ten billion times more power than what humanity currently uses. \"",
+   "published": "2026-11-25T14:13:43-05:00",
+   "link": "https://www.foxbusiness.com/politics/data-centers-space-fcc-clears-spacex-1m-satellites-extend-americas-lead-superintelligence",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "energy",
+     "infrastructure"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "lead",
+     "wednesday"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How an Iranian Ally Gained the Upper Hand in Yemen’s War",
+   "dek": "The Iran-backed Houthis are on a winning streak, securing strategic territory as they fight Saudi Arabia and its Yemeni allies in an asymmetrical war of attrition.",
+   "opening": "",
+   "published": "2026-11-25T13:59:32+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/world/middleeast/yemen-houthis-war-government-losses.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Defending Aden, Yemen’s Holdout Against the Houthis",
+   "dek": "The war in Iran has reignited Yemen’s decade-old civil war. Saudi-backed troops are scrambling to defend against advancing Houthi fighters as the wounded are taken to the port city of Aden, the government’s provisional capital.",
+   "opening": "",
+   "published": "2026-11-25T13:39:46+00:00",
+   "link": "https://www.nytimes.com/video/world/middleeast/100000011300541/defending-aden-yemens-holdout-against-the-houthis.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "capital",
+     "city"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why deep pockets weren’t enough to save the GOP in 2026: 'Money is not magic'",
+   "dek": "Despite a $1.7 billion GOP war chest plus $665.4 million from Trump&apos;s MAGA Inc. and Elon Musk&apos;s America PAC, Republicans still lost badly in the midterms.",
+   "opening": "Before polling began to show dire warning signs for the GOP ahead of the midterm elections , some in conservative circles felt they had a not-so-secret weapon that would give them an edge over their Democratic rivals — a massive amount of cash. Across the Republican National Committee, Senate Leadership Fund, Congressional Leadership Fund, National Republican Congressional Committee and the National Republican Senatorial Committee, the GOP brought in roughly $1.7 billion in funds to fuel its ill-fated midterm campaigns. The five equivalent Democratic committees, meanwhile, raised well over $300 million less than that total but walked away with massive pickups in even traditionally deep red strongholds like Texas, South Carolina, Kansas and Mississippi. Experts from across the political spectrum explained this result to Fox News Digital by arguing that the impact of money on politics is less than what many in the public may assume and that massive fundraising hauls can only take a party so far when it faces political headwinds as strong as those weathered by the GOP in the run-up to election night. MUSK PICKS HIS FIRST GOP WARRIORS AS A 2026 MONEY SURGE TAKES SHAPE On top of their already significant nine-figure lead, GOP electoral efforts were also buoyed by a duo of PACs — President Donald Trump’s MAGA Inc. and Elon Musk’s America PAC — which themselves collected an additional $665.4 million for Republicans to burn through. Despite such a massive financial edge, the GOP suff",
+   "published": "2026-11-25T13:25:28-05:00",
+   "link": "https://www.foxnews.com/politics/why-deep-pockets-werent-enough-save-gop-2026-money-not-magic",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "polling"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "democratic"
+    ],
+    "obj_thepresi_appeals-conviction-court-donald": [
+     "donald",
+     "money"
+    ],
+    "obj_x_advances-area-committee-democratic": [
+     "democratic",
+     "committee"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why the Nvidia Rally Fizzled",
+   "dek": "Jensen Huang may be running Nvidia again, but investors are losing faith in the artificial intelligence boom the chipmaker has underpinned.",
+   "opening": "",
+   "published": "2026-11-25T12:53:55+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/business/dealbook/nvidia-huang-ai-rally.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump officials reportedly at odds over tech titan's comeback as national security concerns linger",
+   "dek": "Jensen Huang returned to Nvidia after Trump and JD Vance intervened, but federal probes into Megaspeed and alleged chip diversion to China remain ongoing.",
+   "opening": "President Donald Trump and Vice President JD Vance helped bring Jensen Huang back to the helm of Nvidia — a move that has reportedly exposed divisions within the administration and prompted one expert to warn it is \"sending the wrong message.\" The push to get Huang his job back has reportedly put Commerce Secretary Howard Lutnick at odds with Treasury Secretary Scott Bessent over the handling of national-security concerns involving Huang’s relationship with a woman whose alleged ties to Chinese intelligence remain in dispute, as well as questions about advanced U.S. chips reaching China. Vance reportedly worked with Nvidia's board over the weekend to get Huang his job back, while Secretary of State Marco Rubio, who reportedly warned Trump about intelligence concerning the relationship, took another approach. Rubio has not publicly weighed in on the CEO's reinstatement and his office did not respond to Fox News Digital's request for comment. The Vice President told CNN on Wednesday that Attorney General Todd Blanche assured him that Huang was not under investigation. \"But most importantly, at just, I think, a personal level, we received the assurances that he was not under any significant, he was under no investigation, and the accusations against him were based on anonymous reporting, not on actual evidence,\" he said. Vance continued, saying that he didn't think it was appropriate anyone should lose their job \"because anonymous sources accuse them of things in the New York Ti",
+   "published": "2026-11-25T12:43:04-05:00",
+   "link": "https://www.foxnews.com/politics/trump-officials-odds-tech-titan-comeback-national-security-concerns-linger",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "concerns",
+     "china",
+     "ties"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "attorney",
+     "general",
+     "nvidia",
+     "chips"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "china",
+     "national"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ],
+    "obj_x_china-others-production-ready": [
+     "china",
+     "sources"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "investigation",
+     "based",
+     "chinese"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Group of Senate Democrats push to add freshman to leadership",
+   "dek": "Several Democratic senators have been signaling this move, saying the party needs to acknowledge the diverse class of incoming freshman that catapulted the party to victory in November.",
+   "opening": "Several Democratic senators have been signaling this move, saying the party needs to acknowledge the diverse class of incoming freshman that catapulted the party to victory in November. (Image credit: Chip Somodevilla/Getty Images)",
+   "published": "2026-11-25T12:30:47-05:00",
+   "link": "https://www.npr.org/2026/11/25/g-s1-155518/senate-democrats-freshman-leadership-schumer-van-hollen",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push",
+     "leadership"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Libyans pledge to retaliate after Ukraine strikes Russian warship near Benghazi, killing 2 soldiers",
+   "dek": "The Libyan National Army mourns two soldiers who died Tuesday from a Ukrainian drone strike on a Russian warship in Benghazi, vowing retaliation.",
+   "opening": "The Libyan National Army (LNA) has vowed to retaliate after a Ukrainian drone attack on a Russian warship moored at a Benghazi port killed two Libyan soldiers. \"With deep sadness and sorrow, and with hearts believing in the decree and destiny of Allah, the General Command of the Libyan Arab Armed Forces mourns two of its heroic sons belonging to the Naval Forces General Staff,\" the LNA wrote in a Facebook post on Tuesday. Calling the Ukrainian attack \"sinful aggression,\" the LNA also quoted the Quran, writing, \"And those who have wronged are going to know to what [kind of] return they will be returned.\" RUSSIA WARNS OF 'PREVENTIVE NUCLEAR ATTACK' AS MEDVEDEV CLAIMS UKRAINE, NATO CROSSED LINE The LNA said the soldiers, identified as Al-Taher Abdullah al-Sadiq and Lieutenant Ali Mohammed al-Said, died Tuesday from injuries sustained during the Sunday attack. Libya's eastern government, the Government of National Stability, was joined by the country's U.N.-recognized western government, the Government of National Unity, based in the capital, Tripoli, in criticizing the attack. US CALLS TURKEY-LIBYA MARITIME DEAL 'UNHELPFUL AND PROVOCATIVE' AMID REGIONAL BACKLASH \"The Ministry of Foreign Affairs and International Cooperation of the Government of National Unity has expressed its condemnation and denunciation of statements made by the Ukrainian President regarding the execution of military operations targeting Russian naval vessels in the vicinity of the city of Benghazi,\" the Mini",
+   "published": "2026-11-25T11:57:41-05:00",
+   "link": "https://www.foxnews.com/world/libyans-pledge-retaliate-ukraine-strikes-russian-warship-benghazi-killing-2-soldiers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "fed": [
+     "warsh"
+    ],
+    "obj_x_brexit-deal-food-post": [
+     "strike",
+     "post"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "capital",
+     "city"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Christians increasingly targeted across Europe as watchdog warns of rising hostility",
+   "dek": "Anti-Christian hate crimes in Europe rose 44% last year, says the Vienna observatory, which documented 2,465 incidents in 2025 across the continent.",
+   "opening": "Attacks targeting Christians across Europe rose 44% last year, according to a new report from the Vienna-based Observatory on Intolerance and Discrimination Against Christians in Europe (OIDAC). Their research documented 2,465 anti-Christian hate crimes and incidents in 2025, with France , England and Wales, Germany and Austria recording the highest totals. \"Our primary concern with the new data is that anti-Christian attacks that target persons, individuals themselves, have risen,\" OIDAC executive director Anja Tang told Fox News Digital. \"Clergy and people responsible for places of worship were those who were most attacked and also where numbers increased most strongly.\" CHRISTIAN WOMAN PLEADS NOT GUILTY TO NEW 'ORWELLIAN' CHARGES FOR STANDING AND SILENT PRAYER She added, \"These would be people who were present, were visible, recognizable as Christians and kind of associated with a church.\" Tang noted that while OIDAC’s numbers are \"quite conservative,\" saying \"aggression against individuals is highly underreported\" across Europe. The group said French authorities recorded a 70% increase in attacks on individuals, the highest in Europe, although Tang notes the French government has not yet published a detailed explanation of the increase. OIDAC argues the increase in attacks against individuals warrants separate attention from incidents involving vandalism, theft and arson targeting religious property. The findings come as the Organization for Security and Co-operation in E",
+   "published": "2026-11-25T11:51:21-05:00",
+   "link": "https://www.foxnews.com/world/christians-increasingly-targeted-across-europe-watchdog-warns-rising-hostility",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Federal grand jury hears evidence in Ilhan Omar investigation, as court records use 3 versions of her name",
+   "dek": "A federal grand jury in Minnesota is hearing evidence as investigators examine whether Ilhan Omar used a false name or birth date to get U.S. citizenship.",
+   "opening": "A federal grand jury in Minnesota is hearing evidence in the investigation into Rep. Ilhan Omar, D-Minn., sources told Fox News. Federal prosecutors described the case in newly unsealed court records as a \"pre-indictment investigation.\" It remains unclear what evidence the panel has heard or whether it will return charges. There are at least two active investigations underway, according to sources: One into allegations of immigration fraud and another into Omar's finances. ILHAN OMAR APPEARS CLUELESS ON BASIS FOR FEDERAL PROBES: ‘YOU PROBABLY HAVE MORE DETAILS ON THAT’ Omar has repeatedly denied wrongdoing to Fox News Digital in connection with the investigations, but the investigations remain ongoing, and no official charges have been filed to date. The immigration investigation reportedly originated under then-President Barack Obama, while former President Joe Biden's administration opened the investigation into her finances. In a detail sources say is relevant to the immigration probe, court records use three versions of Omar’s name. Investigators are examining whether she used a false name or birthdate to obtain U.S. citizenship. FEDERAL AGENTS SEIZE PHONE OF REP ILHAN OMAR IN RAID TIED TO IMMIGRATION FRAUD PROBE The Justice Department’s Oct. 7 brief identifies her as Ilhan Nur Said Elmi, also known as Ilhan Abdullahi Omar. Both names appear together twice in the unredacted portions of the recently released documents. Separately, the warrant return filed by agents stated ",
+   "published": "2026-11-25T11:40:20-05:00",
+   "link": "https://www.foxnews.com/politics/federal-grand-jury-hears-evidence-ilhan-omar-investigation-court-records-use-3-versions-her-name",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_against-asks-charges-drop": [
+     "charges",
+     "there"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Every Angle on the Huang Scandal. How to Avoid an AI Dark Age. Does Meghan Markle Deserve an Apology? Plus. . .",
+   "dek": "In today&#8217;s Front Page, a recap of Jensen Huang&#8217;s scandal. Kat Rosenfield on the Melania documentary. Rod Dreher on the Christians perverting Christianity. And more.",
+   "opening": "It&#8217;s Wednesday, November 25. This is The Front Page , your daily window into the world of The Free Press &#8212;and our take on the world at large. On Tuesday, a day after his astonishing return as CEO of Nvidia, Jensen Huang apologized for making &#8220;some terrible mistakes,&#8221; and said he was in therapy &#8220;every day.&#8221; The story remains the biggest in the world, encompassing the global economy, the technology transforming our world, the race with China, and more. We&#8217;ve published a lot on it in the last few days. So we wanted to kick off today&#8217;s Front Page with a quick recap of what you might have missed. There&#8217;s Joe Nocera on why Huang was too big to fail: Aaron MacLean on whether the White House has endangered America by facilitating Huang&#8217;s comeback: Niall Ferguson on the great man theory of AI, and whether Huang can save us from a crash: Matt Pottinger on the logic of Huang&#8217;s return: Ross Douthat on his own test for AI superintelligence&#8212;when can it do Jensen Huang&#8217;s job?: And if you want to go back a little further, read Bethany McLean from last month on the warning signs of the financial trouble stored up in the AI sector: We also have one new tech story this morning. It&#8217;s by Palantir CTO Shyam Sankar , and it&#8217;s about why everything keeps breaking and what we can do to stop it. A series of alarming outages over the last few weeks has many wondering if we&#8217;re at the start of some kind of tech",
+   "published": "2026-11-25T11:03:52+00:00",
+   "link": "https://www.thefp.com/p/every-angle-on-the-huang-scandal",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "nvidia",
+     "jensen",
+     "huang",
+     "when"
+    ],
+    "obj_x_california-estranged-expected-father": [
+     "markle",
+     "meghan"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Watch the Task Force Panel Discussions From the DealBook Summit",
+   "dek": "See the full conversations, led by journalists from The Times, about the impact of the midterm elections, what to expect next in the A.I. revolution, how to make America healthier and the future of work and purpose.",
+   "opening": "",
+   "published": "2026-11-25T11:01:04+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/business/dealbook/watch-task-force-dealbook-summit.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Prosecutors drop felony charge from 2020 against incoming House Dem",
+   "dek": "LaKesha Womack settled a 2019 Budget Car Rental bill for a Toyota Corolla she never returned, allowing prosecutors to drop the felony charge.",
+   "opening": "This story discusses suicide. If you or someone you know is having thoughts of suicide, please contact the 988 Suicide &amp; Crisis Lifeline at 988 or 1-800-273-TALK (8255). Nearly two weeks after she was declared the winner in the Nov. 3 election , flipping a Republican-held seat, a North Carolina Democrat settled a 2019 rental car bill for a car she did not return, allowing prosecutors to drop a felony charge. Mecklenburg County District Attorney Spencer B. Merriweather III, a fellow Democrat, dropped the case that featured a court summons served to Rep.-elect LaKesha Womack, D-N.C., at a campaign event Oct. 11, more than six years after the Jan. 14, 2020 summons was secured by prosecutors. Womack said she did not know she was wanted for a felony because she was homeless at the time and not able to receive mail. She paid off the rental car company as part of an agreement last week. DEMOCRAT WHO TOPPLED GOP INCUMBENT WILL HEAD TO COURT ON FELONY CHARGE JUST DAYS AFTER ELECTION UPSET \"On November 16, 2026, this office was informed of an agreement reached between Defendant Womack and the rental dealer,\" Merriweather's DA office wrote in a statement Tuesday. \"In the days that followed, we were able to confirm that the victim rental corporation received a sum of money from the Defendant equal to an assessed rental cost from the day the vehicle was deemed overdue until the day it came back into the possession of the victim corporation. \"In a subsequent phone call with a prosecuto",
+   "published": "2026-11-25T10:25:23-05:00",
+   "link": "https://www.foxnews.com/politics/prosecutors-drop-felony-charge-2020-incoming-house-dem",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_blocks-case-company-drop": [
+     "drop",
+     "case",
+     "company"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Confessions of a Former Prepper",
+   "dek": "With outages dominating the news, stockpiling canned food, water, and survival gear has gone mainstream. Jon Stokes spent years preparing for collapse. Now he says he regrets all of it.",
+   "opening": "It doesn&#8217;t take a conspiratorial person to look at the headlines lately and consider ordering water and canned food in bulk. Hackers switched supermarket freezers across Europe to defrost, spoiling millions of dollars&#8217; worth of food. Every flight in America was grounded for hours. On a single Tuesday, Chase, Wells Fargo, United, Apple, and Marriott all &#8230; Read more",
+   "published": "2026-11-25T10:03:07+00:00",
+   "link": "https://www.thefp.com/p/confessions-of-a-former-prepper",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "former",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump admin to raise tariffs on China, EU, other trading partners",
+   "dek": "The Trump administration proposed new Section 301 tariffs targeting China, the EU, Brazil and 12 other trading partners to curb subsidized foreign manufacturing.",
+   "opening": "The Trump administration proposed a sweeping new round of import duties on Wednesday designed to curb subsidized foreign manufacturing overcapacity and rebuild tariffs that the Supreme Court struck down in February. Pursued under Section 301 of the Trade Act of 1974, the trade actions target 14 major economies following an eight-month unfair trade practices investigation, alongside a separate tariff escalation aimed squarely at Brazil. Under the 14-economy overcapacity plan, Washington proposed new tariffs of up to 20% on Chinese goods—a rate that remains within the second-term cap negotiated under a year-old bilateral trade truce set to expire Jan. 10. Those duties would stack on top of roughly 25% in tariffs imposed during Trump’s first term, though about $30 billion worth of Chinese imports being weighed for tariff reductions under a bilateral process are excluded. A senior U.S. official told Reuters that the broader overcapacity levies will stay within ceilings established by trade agreements signed with the administration, rather than imposing an across-the-board hike. Those limits include a 15% cap agreed to by the European Union, Japan, South Korea and Taiwan, as well as a 19% cap agreed to by Malaysia. US FOOD IMPORTER SUES TRUMP ADMINISTRATION OVER 50% TARIFFS ON CANADIAN GOODS In addition to China, the EU, Japan, South Korea, Taiwan and Malaysia, the proposed overcapacity tariffs cover India, Vietnam, Thailand, Singapore, Indonesia, Cambodia, Bangladesh and Switzerl",
+   "published": "2026-11-25T09:55:44-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-global-economy/trump-admin-raise-tariffs-china-eu-other-trading-partners",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tariffs": [
+     "tariff",
+     "section 301"
+    ],
+    "obj_x_brexit-deal-food-post": [
+     "food",
+     "trade"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "china",
+     "official"
+    ],
+    "obj_x_college-during-eye-federal": [
+     "sues",
+     "during"
+    ],
+    "obj_x_china-others-production-ready": [
+     "tariffs",
+     "china",
+     "subsidized"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "investigation",
+     "chinese"
+    ],
+    "obj_x_disarm-mlb-mlbpa-nuclear": [
+     "sues",
+     "union"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "hike",
+     "tariffs",
+     "china",
+     "brazil",
+     "subsidized"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Yemeni military official brands Iran Houthis’ ‘godfather,’ says Tehran is directing war",
+   "dek": "Yemeni armed forces say Iran&apos;s IRGC and Hezbollah experts are directing Houthis&apos; missile, drone and naval attacks on shipping near Bab el-Mandeb.",
+   "opening": "Yemen’s military is vowing to defeat the Iran-backed Houthis and retake one of the world’s most strategic maritime choke points, warning that Tehran is directly involved in the planning and execution of a war with implications far beyond Yemen’s borders. In an on-the-record briefing Tuesday attended by Fox News Digital, Col. Majed Abdullah Al-Nuzaily, the official spokesperson for the Yemeni Armed Forces, acknowledged recent military setbacks but insisted that government forces were prepared to counter the Houthi offensive. \"This is not a conventional battle against an isolated local armed group,\" Al-Nuzaily said. \"What we have seen on the battlefield proves that we are not facing the Houthis alone. This is an Iranian battle: Iranian in its weapons, in its planning and command, and in its direction and timing.\" RUBIO ACCUSES IRAN OF FLYING IRGC PERSONNEL INTO YEMEN AS HOUTHI THREAT ESCALATES The colonel said external supply networks had provided the Houthis with ballistic and cruise missiles, sophisticated drones and advanced electronic warfare capabilities, enabling the group to threaten neighboring countries and international shipping. \" Iran is the Houthis' patro n, their godfather,\" he said. Al-Nuzaily said Yemen’s Interior Ministry had identified 21 foreign experts working with the Houthis, including 14 from Iran’s Islamic Revolutionary Guard Corps (IRGC) and seven from Hezbollah , allegedly assisting with missile and drone operations, naval attacks and the selection of ",
+   "published": "2026-11-25T09:50:17-05:00",
+   "link": "https://www.foxnews.com/world/yemeni-military-official-brands-iran-houthis-godfather-says-tehran-directing-war",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran",
+     "houthi",
+     "irgc"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dow closes higher after erasing 1,100-point loss as S&P 500, Nasdaq slip",
+   "dek": "U.S. equities pared losses on Wednesday, with the Dow Jones Industrial Average finishing up 164 points after falling 1,100 at the session low.",
+   "opening": "U.S. equities pared major losses on Wednesday as fresh tariff proposals rattled Wall Street ahead of the Thanksgiving holiday. The Dow Jones Industrial Average staged a dramatic comeback, ending the session up 164.25 points, or 0.33%, after falling 1,100 at session lows. The tech-heavy Nasdaq Composite fell 0.62%, while the S&amp;P 500 closed 0.25% lower. Investors also digested the latest trade news out of Washington. The Trump administration proposed new duties on a wide range of imports from 14 major U.S. trading partners, including China, following a probe into excess industrial capacity. China faces the steepest levy at 20%, which would stack on top of roughly 25% tariffs enacted during President Donald Trump's first term. FED'S FAVORED INFLATION GAUGE ROSE IN OCTOBER AHEAD OF EXPECTED FED RATE HIKE NEXT MONTH Renewed trade friction – combined with rising oil prices linked to the unresolved U.S.-Iran war – has complicated the inflation picture. Traders are currently pricing in a 97% probability of a Federal Reserve interest rate hike in December and a 63% chance of another increase in January, according to CME Group's FedWatch tool. The Federal Reserve's preferred inflation gauge ticked higher in October as central bank policymakers weigh an interest rate hike next month. The Commerce Department on Wednesday reported that the personal consumption expenditures (PCE) index rose 0.3% on a monthly basis in October and was up 3.8% from a year ago. Both figures were in line wi",
+   "published": "2026-11-25T09:38:08-05:00",
+   "link": "https://www.foxbusiness.com/markets/stocks-11-25-2026",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "oil price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "tariffs": [
+     "tariff"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "fed": [
+     "rate hike"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "iran"
+    ],
+    "obj_thepresi_appeals-conviction-court-donald": [
+     "donald",
+     "erasing"
+    ],
+    "obj_x_china-others-production-ready": [
+     "tariffs",
+     "china"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "hike",
+     "tariffs",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Thanksgiving Day hours: What’s open and closed across grocery, retail and restaurants",
+   "dek": "Planning a Thanksgiving Day errand? Here&apos;s your full 2026 guide to which major retailers, grocery stores and restaurants are open or closed on Thursday.",
+   "opening": "With families across the country gathering for Thanksgiving on Thursday, many major U.S. retailers are shutting their doors to give employees the day off. However, a handful of pharmacies, grocers and restaurants will remain open for last-minute shoppers. Here is a breakdown of what is open and closed on Thanksgiving Day this year: Individual Ace Hardware stores determine their own holiday hours, but most are closed on Thanksgiving. \"As co-ops, our stores are independently owned and operated. Each Ace Hardware location has the ability to determine their operating hours, so the hours may vary per location for the upcoming holidays,\" a spokesperson told FOX Business. Aldi stores are closed on Thanksgiving Day, just as they are on New Year’s Day, Easter Sunday and Christmas Day , its website states. THANKSGIVING DINNER PRICES HIT AN ALL-TIME HIGH – AND ONE STAPLE IS DRIVING THE SURGE Best Buy stores are closed for the holiday. The retailer will be open for extended hours on Black Friday. Chick-fil-A restaurants are closed on Thanksgiving \"so our restaurant teams can spend time with family and friends,\" the chain's website states. Chipotle locations are closed on Thanksgiving, a spokesperson confirmed to FOX Business in an email. Costco warehouses are closed for the holiday. Most Denny's locations remain open on their full 24-hour schedule. \"Denny’s is open on Thanksgiving Day – most locations operate their full 24-hour schedule,\" its website states. Select Dunkin' locations will",
+   "published": "2026-11-25T09:17:46-05:00",
+   "link": "https://www.foxbusiness.com/lifestyle/thanksgiving-day-hours-whats-open-closed-across-grocery-retail-restaurants",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_aid-could-cut-families": [
+     "states",
+     "families"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US economy grew at a solid pace in third quarter, revised data shows",
+   "dek": "The Commerce Department released its second estimate of third quarter GDP which showed the economy grew at a solid annualized rate of 4.3% in the quarter.",
+   "opening": "The U.S. economy grew at a steady pace in the third quarter, according to the Commerce Department's first revision of the data. The Bureau of Economic Analysis (BEA) on Wednesday released its second reading of third-quarter GDP , which showed the economy grew at an annualized rate of 4.3% in the three-month period including July, August and September. That figure topped the estimate of economists polled by LSEG, who predicted the economy would grow at an annual rate of 3.5% in the quarter. It comes after the U.S. economy grew at a rate of 2.1% in the first-quarter of 2026 and a 2.2% rate in the second-quarter. Taken together with those GDP figures, it suggests the U.S. economy grew at a rate of about at a rate of about 2.87% in the first three quarters of this year. Last year, the economy grew at a rate of about 2.1% for 2025 as a whole. FED'S FAVORED INFLATION GAUGE ROSE IN OCTOBER AHEAD OF EXPECTED FED RATE HIKE NEXT MONTH The BEA reported that the main contributors to the rise in real GDP in the third quarter were increases in investment, consumer spending and government spending – which were partly offset by a decrease in exports. Imports also increased in the quarter. The leading contributors to the upward revision were higher investment and consumer spending than previously reported. The investment revision was driven by intellectual property products, notably software, based on revisions to the Bureau of Labor Statistics' producer price index. The shift in consumer spe",
+   "published": "2026-11-25T08:46:51-05:00",
+   "link": "https://www.foxbusiness.com/economy/us-economy-q3-2026-second-estimate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "fed": [
+     "rate hike"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fed's favored inflation gauge rose in October ahead of expected Fed rate hike next month",
+   "dek": "The Commerce Department released the October PCE inflation data which showed that the Federal Reserve&apos;s favored inflation gauge ticked higher last month.",
+   "opening": "The Federal Reserve's preferred inflation gauge ticked higher in October as central bank policymakers weigh an interest rate hike next month. The Commerce Department on Wednesday reported that the personal consumption expenditures (PCE) index rose 0.3% on a monthly basis in October and was up 3.8% from a year ago. Both figures were in line with the expectations of economists polled by LSEG. Core PCE, which excludes volatile measurements of food and energy prices, was up 0.3% on a monthly basis and 3.3% year over year. The monthly figure was in line with the expectations of LSEG economists, while the annual figure was slightly hotter than the estimate of 3.2%. BILL ACKMAN SAYS FEDERAL RESERVE IS ‘ABOUT TO MAKE ANOTHER MISTAKE’ Federal Reserve policymakers are focused on the PCE headline figure as they try to bring inflation back to their long-run target of 2%, though they view core data as a better indicator of inflation. Compared with September's readings, headline PCE ticked up to 3.8% from an initially reported 3.6% that was revised to 3.7%, while core PCE rose from 3.1% to 3.3%. Goods prices were up 3% year over year, while services prices increased 2.3% from a year ago. The personal savings rate as a percentage of disposable personal income was 4.1% in October, up from a reading of 3.6% in September. Over the last two years, the savings rate has declined from a peak of 6.2% in April 2025 and from 5.6% in January 2026. WHY THE FED ISN'T READY TO DECLARE VICTORY ON INFLATIO",
+   "published": "2026-11-25T08:33:31-05:00",
+   "link": "https://www.foxbusiness.com/economy/october-2026-pce-inflation",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "fed": [
+     "rate hike"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Christian filmmaker's discovery of Jewish roots sparks mission to uncover centuries-old secret",
+   "dek": "Evangelical Christian Laurie Cardoza-Moore says her film traces Anussim, descendants of Jews forced to convert during the Inquisition around 500 years ago.",
+   "opening": "A leading evangelical Christian leader has embarked on a journey to trace the descendants of Jews forcibly converted to Catholicism in Spain and Portugal during the Inquisition around 500 years ago, hoping to help those of Hispanic and Latino descent, known as Anussim or crypto-Jews, rediscover their Jewish roots. Through her film, \"The Lost Jews of the Inquisition,\" Laurie Cardoza-Moore told Fox News Digital that she hopes to help people like herself uncover a history they may not even know their families carry. She says the Israeli government believes there could be millions of \"Anussim,\" or hidden Jews. \"Some know their family history, while others don’t,\" she said. CHRISTIAN LEADERS HOLD EMERGENCY SUMMIT IN JERUSALEM TO CONFRONT GLOBAL RISE IN ANTISEMITISM Emmy Award-winning documentary filmmaker and host of the television show \"Focus on Israel,\" Cardoza-Moore also serves as president of Proclaiming Justice to the Nations (PJTN). She is also a member of the Tennessee Textbook and Instructional Materials Quality Commission. For Cardoza-Moore, the journey began in 2002, in the aftermath of 9/11, when she decided to introduce a resolution in the Tennessee state legislature expressing support for Israel in its war on terror. The following year, she was invited by the Jewish Federation of Nashville on a mission to Israel. During a visit to the Diaspora Museum at Tel Aviv University, now known as the ANU Museum of the Jewish People, Cardoza-Moore discovered that the surnames on",
+   "published": "2026-11-25T07:53:06-05:00",
+   "link": "https://www.foxnews.com/world/christian-filmmakers-discovery-jewish-roots-sparks-mission-uncover-centuries-old-secret",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "some",
+     "help"
+    ],
+    "obj_x_aid-could-cut-families": [
+     "could",
+     "families"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Federal jury convicts Huawei of stealing US trade secrets, violating Iran sanctions",
+   "dek": "A federal jury in Brooklyn found Chinese telecom giant Huawei and three subsidiaries guilty on 10 of 12 counts, including bank fraud, trade secret theft and Iran sanctions violations.",
+   "opening": "A federal jury in Brooklyn convicted Chinese telecom giant Huawei Technologies and three subsidiaries on Tuesday of conspiring to steal trade secrets from American companies, defrauding major global banks and violating U.S. sanctions on Iran, according to the Justice Department. Following a three-month trial in the Eastern District of New York, jurors found Huawei and its affiliates — Huawei Device Co. Ltd., Futurewei Technologies Inc. and Huawei Device USA Inc. — guilty on 10 of 12 counts, including bank fraud, wire fraud, money laundering conspiracy, conspiracy to steal trade secrets and violations of the International Emergency Economic Powers Act (IEEPA). Jurors acquitted Huawei on two counts: racketeering conspiracy and conspiracy to obstruct justice. \"No person or company is above the law,\" Attorney General Todd Blanche said in a statement announcing the verdict. \"For over two decades, Huawei built its global empire on a foundation of fraud, theft, and deception,\" Assistant Attorney General Tysen A. Duva of the Justice Department’s Criminal Division added. \"Huawei’s crimes threatened the U.S. financial system, took advantage of American companies that compete honestly in the global telecommunications market, and undermined our national security.\" CYBERSECURITY EXPERT SOUNDS ALARM OVER US INFRASTRUCTURE VULNERABILITIES AMID WIDESPREAD OUTAGES To obtain billions of dollars and maintain access to U.S.-dollar clearing services, Huawei misled major global financial instituti",
+   "published": "2026-11-25T07:19:28-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-tech/federal-jury-convicts-huawei-stealing-us-trade-secrets-violating-iran-sanctions",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "dollar": [
+     "dollar"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "attorney",
+     "general"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "national",
+     "secrets"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republican wants FBI and CIA answers before questioning Nvidia chief",
+   "dek": "\"The public is rightly concerned,\" says the Republican lawmaker, who wants to know what the FBI and CIA knew about potential national security threats and whether Jensen Huang was warned.",
+   "opening": "\"The public is rightly concerned,\" says the Republican lawmaker, who wants to know what the FBI and CIA knew about potential national security threats and whether Jensen Huang was warned. (Image credit: Samuel Corum)",
+   "published": "2026-11-25T06:50:05-05:00",
+   "link": "https://www.npr.org/2026/11/25/nx-s1-6052417/nvidia-jensen-huang-reaction-republicans-congress-investigation",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Marco Rubio's 2028 stock surges among House Republicans as Trump insiders split on Vance",
+   "dek": "House Republicans are pushing Secretary of State Marco Rubio to launch a 2028 presidential run, calling him the GOP&apos;s unifier after midterm losses.",
+   "opening": "As Republicans continue to pick up the pieces from their 2026 midterm losses, one Trump administration official is catching some GOP lawmakers' eyes as the party's next great hope. \"[Secretary of State Marco Rubio] is the whole package. He's intelligent, charismatic, level-headed, cool-tempered and very knowledgeable about the issues and eloquent in explaining them,\" Rep. Nicole Malliotakis, R-N.Y., told Fox News Digital. \"I think there is a lot of interest from Republicans in seeing him explore a run.\" Indeed, multiple House Republicans who spoke with Fox News Digital said they and their colleagues are pushing Rubio to run for president in 2028. The Cabinet official himself has publicly dismissed any talk about his future political plans, but his name is on the rise among Republicans who have said the party needs to pivot from the issues that cost them votes in November. HOUSE CONSERVATIVE EMERGES WITH 2028 PRESIDENTIAL PICK AFTER GOP'S MIDTERM MASSACRE: 'I AM ALL IN' \"Now that we lost majorities, we can't push policy, so we will have to do better at communicating,\" Rep. Marlin Stutzman, R-Ind., told Fox News Digital on election night. \"I am all in for Marco. He can be a unifier.\" They're notable comments coming from the Indiana Republican, who was among the founding members of the conservative House Freedom Caucus. MAGA VOTERS REVEAL WHO THEY WANT TO SEE LEAD GOP IN 2028 Rubio has long been held up as a potential 2028 contender, despite a previous unsuccessful White House b",
+   "published": "2026-11-25T06:00:37-05:00",
+   "link": "https://www.foxnews.com/politics/marco-rubios-2028-stock-surges-among-house-republicans-trump-insiders-split-vance",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesenat_end-filibuster-final-makes": [
+     "republican",
+     "push"
+    ],
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "voters",
+     "some"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump's Nvidia power play opens Pandora's box Democrats could weaponize, analyst warns",
+   "dek": "Eric Schiffer says Trump&apos;s push to reinstate Nvidia CEO Jensen Huang opens a Pandora&apos;s box Democrats may exploit, but national security won.",
+   "opening": "The Trump administration’s efforts to reinstate Jensen Huang as CEO of Nvidia have set a new bar for shaping a private corporation, according to Eric Schiffer, chairman and CEO of Reputation Management Consultants, a crisis management and brand protection firm. \"Trump came in to really give a second life to Jensen, where he would have been dead,\" Schiffer told Fox News Digital Tuesday. Schiffer said the intervention has opened a kind of Pandora’s box that Democrats may seek to exploit to benefit ideological allies in the private sector. Still, he said the national security interests underpinning Trump’s efforts to intervene on behalf of Huang fall within the responsibilities of the presidency. JENSEN HUANG'S NVIDIA RETURN SENDS CHINA A CLEAR MESSAGE: THE AI RACE IS ON Asked whether he believes Democrats may use the moment as a precedent to tip the scales in favor of ideological allies down the road, Schiffer said he sees that possibility in the cards. \"I think that, of course, they would have that capability. I think that that is a risk,\" Schiffer said. But Schiffer said the justification would likely depend on the circumstances. \"If the Democrats had a similar situation or it's a leading organization that is so critical to both national security and the economy, then it would make sense,\" Schiffer said. \"However, if the Democrats — and perhaps the future president that might be a Democrat — is empowering a crony … then I think they're going to be open to significant criticis",
+   "published": "2026-11-25T06:00:17-05:00",
+   "link": "https://www.foxnews.com/politics/trumps-nvidia-power-play-opens-pandoras-box-democrats-could-weaponize-analyst-warns",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "push"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "china",
+     "national"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "He pulled $100K weeks living at his parents' house — then started giving it all away to strangers",
+   "dek": "Content creator Josh Liljenquist breaks down how his Christian faith, strict brand-deal rules and 40 million followers power a mission to lift up struggling Americans.",
+   "opening": "As millions of Americans gather around the dinner table this Thanksgiving week to count their blessings, 28-year-old influencer Josh Liljenquist is focused on multiplying them for strangers who have nearly run out of hope. Known online as \"@joshlilj,\" the Minnesota native has turned an audience of more than 40 million followers and 10.6 billion views into roughly $3 million in aid for struggling families — proving that viral social media reach can fund real-world homes, vehicles and second chances. \"My real mission is to inspire people to love their neighbors and go out and do a simple act of kindness that can inspire other people to go out and do the same,\" Liljenquist told Fox News Digital. Raised in Fairmont, Minnesota, Liljenquist studied education at Minnesota State University, with plans to become an elementary school teacher before student-teaching convinced him the classroom wasn't the right fit. During the COVID-19 pandemic in 2020, he began posting family clips and historical storytelling videos, including a video on George Stinney Jr. — a 14-year-old Black boy who was wrongfully executed in 1944 — that celebrities including Billie Eilish and Polo G shared, racking up 14 million views in just 12 hours. HOW A 24-YEAR-OLD BUILT A $37 MILLION MEDIA EMPIRE BY ASKING BILLIONAIRES FOR ADVICE \"When you look at numbers on a screen, all you think of is numbers. You don't picture actual people,\" Liljenquist reflected. \"Maybe that's what I meant when I said I wanted to teach, ",
+   "published": "2026-11-25T06:00:08-05:00",
+   "link": "https://www.foxbusiness.com/media/he-pulled-100k-weeks-living-his-parents-house-started-giving-all-away-strangers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_college-during-eye-federal": [
+     "student",
+     "during"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nation’s largest grocery chain cuts thousands of jobs — sparks fury over who it’s hiring instead: 'Insanity'",
+   "dek": "Kroger faces backlash over cutting 3,000 U.S. jobs while recruiting for a new Bangalore hub, as critics accuse the grocer of offshoring American roles.",
+   "opening": "Kroger, the largest traditional grocery chain in the nation, is facing strong blowback on social media over its plan to slash 3,000 jobs in the United States while advertising new positions overseas in India. The controversy comes as the Cincinnati-based grocer begins executing a three-year plan it has previously announced to cut $5 billion in costs as part of a restructuring that will eliminate roughly 37% of its U.S. corporate workforce by 2029. While Kroger maintains the reductions are aimed at lowering shelf prices through technology and leaner operations, simultaneous recruiting for a new hub in Bangalore has fueled online accusations that the company is offshoring American jobs while asking shoppers to bear high food prices. \"‘They’re doing the jobs Americans don’t want to do,’\" Theo Wold, a former White House deputy assistant for domestic policy during President Donald Trump's first term, posted on X . \"No. They are taking jobs from Americans because it’s cheaper for corporations to hire foreigners.\" KEY AMERICAN INDUSTRY SEEING BLUE-COLLAR JOBS BOOM AS TRUMP'S RE-SHORING POLICIES PAY OFF In an interview with Fox News Digital, Wold said situations like this need to \"start to be an honest conversation about penalizing businesses that take jobs and send them overseas.\" Rep. Nancy Mace (R-SC) responded on X by saying, \"Hire American.\" \"This insanity has to stop,\" retired Lt. Col. Buzz Patterson posted on X . \"Reshore ALL US companies. We’re rapidly becoming India, and I d",
+   "published": "2026-11-25T05:00:11-05:00",
+   "link": "https://www.foxnews.com/politics/nations-largest-grocery-chain-cuts-thousands-jobs-sparks-fury-who-hiring-instead-insanity",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Senate GOP takes risky bet on Dems as holiday shutdown deadline looms: 'It's a gamble'",
+   "dek": "Senate Republicans are betting on Senate Democrats to avert another government shutdown as Democrats aim to use funding to end the eight-month Iran war.",
+   "opening": "Congress is nearing the deadline to avert a government shutdown, and Senate Republicans are taking a leap of faith as the clock ticks: trusting Senate Democrats to dodge a holiday disaster. When the upper chamber returns on Nov. 30, there will be just shy of two weeks for both sides to reach an agreement to thwart another partisan closure. At the center of the issue is the Iran war: Democrats intend to use the government’s purse strings to bring the eight-month conflict to an end. Republicans, meanwhile, want to put together an emergency supplemental funding package with hundreds of billions of dollars dedicated to the military, munitions and war effort. They have, for now, pressed pause on ramming those tax dollars through the party-line budget reconciliation process, and instead are opening the door to work with Democrats. DEMOCRATS COULD ENTER CONGRESSIONAL MAJORITY IN A GOVERNMENT SHUTDOWN There’s history here: Senate Democrats have twice now ushered in a government shutdown. And though Republicans agreed behind closed doors to move forward with their counterparts, they know it’s a leap in the dark. \"Each side is a gamble,\" Sen. Tim Sheehy, R-Mont., told Fox News Digital. \"I mean, obviously, if it's party-line, when you look at the House side, you know, we got members not showing up,\" he continued. \"So, either way, it's a gamble. It’s a toss-up whether we try to do [appropriations] or reconciliation.\" There is a middle ground beginning to form, however. Senate Democrats a",
+   "published": "2026-11-25T05:00:09-05:00",
+   "link": "https://www.foxnews.com/politics/senate-gop-takes-risky-bet-dems-holiday-shutdown-deadline-looms-its-gamble",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "dollar": [
+     "dollar"
+    ],
+    "shutdown": [
+     "shutdown",
+     "appropriations"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "effort",
+     "iran"
+    ],
+    "obj_x_all-climate-could-experts": [
+     "could",
+     "though"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "when",
+     "congress"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}

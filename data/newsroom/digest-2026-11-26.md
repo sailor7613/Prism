@@ -1,11 +1,9 @@
 # Newsroom digest — 2026-11-26
 
-Register: 206 objects · this scan: 7 new, 0 seen again, 0 returned.
+Register: 210 objects · this scan: 4 new, 2 seen again, 0 returned.
 
-## Queued for drafting (3)
-- **Judge blocks FCC early review of ABC licenses , citing likely First Amendment violation** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 13 outlets (peak 13) · `obj_afederal_abc-amendment-blocks-citing`
-- **Judge blocks FCC from early license review for ABC , which network says has had a chilling effect** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 8 outlets (peak 8) · `obj_afederal_abc-blocks-chilling-early`
-- **RJ Luis Jr . sues SEC , commissioner Greg Sankey in LSU eligibility case** — suit · sued · holder: a regulator · formed 2026-11-26 · 4 outlets (peak 4) · `obj_aregulat_case-commissioner-eligibility-greg`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 12 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction` · silent 5d after 4 scans
@@ -18,15 +16,12 @@ Register: 206 objects · this scan: 7 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Australia strikes deal on online safety law despite US objections** — agreement · agreed · holder: ? · formed 2026-11-26 · 6 outlets (peak 6) · `obj_x_australia-deal-despite-law`
-- **CBS News investigation finds US - based firms with Chinese owners buying advanced Nvidia most advanced chips** — vote · voted · holder: ? · formed 2026-11-26 · 4 outlets (peak 4) · `obj_x_advanced-based-buying-cbs`
-- **Trump newest order curtailing birthright citizenship is blocked by second judge** — ruling · ruled · holder: the President · formed 2026-11-26 · 3 outlets (peak 3) · `obj_thepresi_birthright-blocked-citizenship-curtailing`
-- **Judge blocks FCC from early license review for ABC , which network says has had a chilling effect** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 8 outlets (peak 8) · `obj_afederal_abc-blocks-chilling-early`
-- **Judge blocks FCC early review of ABC licenses , citing likely First Amendment violation** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 13 outlets (peak 13) · `obj_afederal_abc-amendment-blocks-citing`
-- **RJ Luis Jr . sues SEC , commissioner Greg Sankey in LSU eligibility case** — suit · sued · holder: a regulator · formed 2026-11-26 · 4 outlets (peak 4) · `obj_aregulat_case-commissioner-eligibility-greg`
-- **MLB sues MLBPA to proactively disarm union nuclear option** — suit · sued · holder: ? · formed 2026-11-26 · 6 outlets (peak 6) · `obj_x_disarm-mlb-mlbpa-nuclear`
+- **Second Judge Blocks Trump Birthright Citizenship Order** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 6 outlets (peak 6) · `obj_afederal_birthright-blocks-citizenship-judge`
+- **U . S . Judge rules FCC violated ABC free speech rights to please Trump** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 5 outlets (peak 5) · `obj_afederal_abc-fcc-free-judge`
+- **US judge blocks FCC from targeting Disney - owned ABC stations** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 3 outlets (peak 3) · `obj_afederal_abc-blocks-disney-fcc`
+- **US to hike tariffs on China , EU , Brazil and others over subsidized factories** — tariff/sanction · imposed · holder: ? · formed 2026-11-26 · 3 outlets (peak 3) · `obj_x_brazil-china-factories-hike`
 
-## Watching (51)
+## Watching (54)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
 - **Former state senator sentenced to 16 months in child solicitation case** — indictment · charged · holder: the Senate · formed 2026-09-23 · 4 outlets (peak 4) · `obj_thesenat_case-child-former-months`
 - **CNN , MS NOW and Politico back at the White House after judge ordered Trump to lift ban** — ruling · ruled · holder: the House · formed 2026-09-24 · 18 outlets (peak 18) · `obj_thehouse_back-ban-cnn-house`
