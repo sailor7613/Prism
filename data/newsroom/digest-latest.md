@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-11-26
 
-Register: 211 objects · this scan: 1 new, 8 seen again, 0 returned.
+Register: 211 objects · this scan: 0 new, 7 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -16,7 +16,7 @@ Register: 211 objects · this scan: 1 new, 8 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Judge Blocks FCC From Revoking ABC Broadcast Licenses** — ruling · ruled · holder: a federal court · formed 2026-11-26 · 13 outlets (peak 13) · `obj_afederal_abc-blocks-broadcast-fcc`
+- none
 
 ## Watching (55)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
