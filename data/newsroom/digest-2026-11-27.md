@@ -1,6 +1,6 @@
 # Newsroom digest — 2026-11-27
 
-Register: 212 objects · this scan: 1 new, 2 seen again, 0 returned.
+Register: 212 objects · this scan: 0 new, 1 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
@@ -12,7 +12,7 @@ Register: 212 objects · this scan: 1 new, 2 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **New trade war could be brewing following tariff proposal** — tariff/sanction · imposed · holder: ? · formed 2026-11-26 · 25 outlets (peak 25) · `obj_x_brewing-could-following-proposal`
+- none
 
 ## Watching (55)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
