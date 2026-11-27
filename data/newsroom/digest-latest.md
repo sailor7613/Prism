@@ -1,22 +1,18 @@
-# Newsroom digest — 2026-11-26
+# Newsroom digest — 2026-11-27
 
-Register: 211 objects · this scan: 0 new, 7 seen again, 0 returned.
+Register: 212 objects · this scan: 1 new, 2 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- **A judge blocks construction of Trump arch moments after it won federal approval** — ruling · ruled · holder: a federal court · formed 2026-11-06 · 12 outlets (peak 25) · `obj_afederal_approval-arch-blocks-construction` · silent 5d after 4 scans
-- **Court approves $7 . 25 billion settlement with Bayer over claims Roundup weed killer caused cancer** — vote · voted · holder: a federal court · formed 2026-11-21 · 5 outlets (peak 5) · `obj_afederal_approves-bayer-billion-cancer` · silent 5d after 3 scans
-- **Judge Orders Halt On Iowa Lead Detonation Plan** — ruling · ruled · holder: a federal court · formed 2026-11-21 · 3 outlets (peak 3) · `obj_afederal_detonation-halt-iowa-judge` · silent 5d after 2 scans
-- **Voters oust some sheriffs who signed pacts to help Trump immigration enforcement efforts** — appointment · personnel · holder: the President · formed 2026-11-21 · 5 outlets (peak 5) · `obj_thepresi_efforts-enforcement-help-immigration` · silent 5d after 8 scans
-- **UK and EU strike post - Brexit deal on food trade and youth travel** — agreement · agreed · holder: ? · formed 2026-11-21 · 4 outlets (peak 4) · `obj_x_brexit-deal-food-post` · silent 5d after 5 scans
+- none today
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- none
+- **New trade war could be brewing following tariff proposal** — tariff/sanction · imposed · holder: ? · formed 2026-11-26 · 25 outlets (peak 25) · `obj_x_brewing-could-following-proposal`
 
 ## Watching (55)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`

@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-26T17:07:24.715Z · 16 legislative + 8 news (GDELT, 3d)
+// 2026-11-27T01:49:51.480Z · 16 legislative + 7 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.793,
+      "salience": 0.791,
       "congressGovUrl": null,
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.616,
+      "salience": 0.614,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -789,11 +789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.606,
+      "salience": 0.605,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -1046,11 +1046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.57,
+      "salience": 0.569,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1303,11 +1303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.562,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1560,11 +1560,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135766,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.5,
+      "salience": 0.499,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2473,11 +2473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.459,
+      "salience": 0.457,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3001,11 +3001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.459,
+      "salience": 0.457,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3917,11 +3917,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.436,
+      "salience": 0.434,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4818,11 +4818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.243,
+      "salience": 0.241,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5717,11 +5717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135766,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.156,
+      "salience": 0.154,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6629,11 +6629,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.15,
+      "salience": 0.149,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7549,11 +7549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.149,
+      "salience": 0.147,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8459,11 +8459,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795712808680,
+    "ts": 1795744135767,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.114,
+      "salience": 0.113,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9377,11 +9377,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795712808679,
+    "ts": 1795744135766,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.071,
+      "salience": 0.069,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10257,11 +10257,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795712808679,
+    "ts": 1795744135766,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.067,
+      "salience": 0.065,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11131,14 +11131,177 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_china-others-tariffs",
+    "cid": "cand_news_corruption-democratic-how",
     "source": "news",
-    "ts": 1795712844711,
+    "ts": 1795744191476,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.776,
+      "salience": 0.996,
+      "articles": [
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://wcti12.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "wcti12.com",
+          "seendate": "2026-11-27T01:15:00Z",
+          "image": "https://wcti12.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://katv.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "katv.com",
+          "seendate": "2026-11-27T01:15:00Z",
+          "image": "https://katv.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://komonews.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "komonews.com",
+          "seendate": "2026-11-27T00:15:00Z",
+          "image": "https://komonews.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://news3lv.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "news3lv.com",
+          "seendate": "2026-11-27T00:15:00Z",
+          "image": "https://news3lv.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://ktul.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "ktul.com",
+          "seendate": "2026-11-26T23:45:00Z",
+          "image": "https://ktul.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://wwmt.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "wwmt.com",
+          "seendate": "2026-11-26T22:45:00Z",
+          "image": "https://wwmt.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://abc6onyourside.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "abc6onyourside.com",
+          "seendate": "2026-11-26T22:45:00Z",
+          "image": "https://abc6onyourside.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://katu.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "katu.com",
+          "seendate": "2026-11-26T22:30:00Z",
+          "image": "https://katu.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://13wham.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "13wham.com",
+          "seendate": "2026-11-26T22:30:00Z",
+          "image": "https://13wham.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://turnto10.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "turnto10.com",
+          "seendate": "2026-11-26T22:15:00Z",
+          "image": "https://turnto10.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        },
+        {
+          "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+          "url": "https://kfdm.com/news/nation-world/democratic-majorities-vow-to-take-on-political-corruption-how-will-they-do-it-trump-white-house",
+          "domain": "kfdm.com",
+          "seendate": "2026-11-26T22:15:00Z",
+          "image": "https://kfdm.com/resources/media2/16x9/6000/1320/0x313/90/a9a69be0-0303-493a-adf7-780c1763e13b-GettyImages2305643148.jpg"
+        }
+      ]
+    },
+    "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
+    "summary": "2026-11-27 wcti12.com: Democratic majorities vow to take on political corruption . How will they do it ? \n2026-11-27 katv.com: Democratic majorities vow to take on political corruption . How will they do it ? \n2026-11-27 komonews.com: Democratic majorities vow to take on political corruption . How will they do it ? \n2026-11-27 news3lv.com: Democratic majorities vow to take on political corruption . How will they do it ? \n2026-11-26 ktul.com: Democratic majorities vow to take on political corruption . How will they do it ? \n2026-11-26 wwmt.com: Democratic majorities vow to take on political corruption . How will they do it ? ",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_birthright-blocks-citizenship",
+    "source": "news",
+    "ts": 1795744191475,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.773,
+      "articles": [
+        {
+          "title": "Judge blocks latest Trump effort to restrict birthright citizenship",
+          "url": "https://www.wwaytv3.com/judge-blocks-latest-trump-effort-to-restrict-birthright-citizenship/",
+          "domain": "wwaytv3.com",
+          "seendate": "2026-11-27T00:45:00Z",
+          "image": "https://www.wwaytv3.com/content/uploads/2025/01/d/v/mgn-1280x960-50121p00-qoxpw-e1785868070820.jpg"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://talkradio1059.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "talkradio1059.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order | WJBO Newsradio 1150 AM & 98 . 7 FM",
+          "url": "https://wjbo.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "wjbo.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://kfab.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "kfab.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://kprcradio.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "kprcradio.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        },
+        {
+          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+          "url": "https://talkradio1080.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
+          "domain": "talkradio1080.iheart.com",
+          "seendate": "2026-11-26T12:45:00Z",
+          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
+        }
+      ]
+    },
+    "title": "Second Judge Blocks Trump Birthright Citizenship Order",
+    "summary": "2026-11-27 wwaytv3.com: Judge blocks latest Trump effort to restrict birthright citizenship\n2026-11-26 talkradio1059.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 wjbo.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order | WJBO Newsradio 1150 AM & 98 . 7 FM\n2026-11-26 kfab.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 kprcradio.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 talkradio1080.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_china-others-tariffs",
+    "source": "news",
+    "ts": 1795744191475,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.721,
       "articles": [
         {
           "title": "US ready to slap tariffs on China , EU and others over subsidized production , AP sources say",
@@ -11239,12 +11402,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_clinch-democrats-historic",
     "source": "news",
-    "ts": 1795712844712,
+    "ts": 1795744191476,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.763,
+      "salience": 0.709,
       "articles": [
         {
           "title": "Democrats clinch historic House majority of at least 259 seats",
@@ -11278,6 +11441,13 @@ window.PRISM_CANDIDATES = [
           "title": "Democrats clinch historic House majority of at least 259 seats",
           "url": "https://www.wlwt.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
           "domain": "wlwt.com",
+          "seendate": "2026-11-25T02:45:00Z",
+          "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+        },
+        {
+          "title": "Democrats clinch historic House majority of at least 259 seats",
+          "url": "https://www.koco.com/article/democrats-clinch-house-majority-at-least-259-seats/74524468",
+          "domain": "koco.com",
           "seendate": "2026-11-25T02:45:00Z",
           "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
         },
@@ -11322,174 +11492,11 @@ window.PRISM_CANDIDATES = [
           "domain": "wbaltv.com",
           "seendate": "2026-11-25T00:15:00Z",
           "image": "https://kubrick.htvapps.com/htv-prod/images/3e764310-b286-4ddf-a5be-647e58e5ef13.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
-        },
-        {
-          "title": "Democrats clinch a historic House majority of at least 259 seats , the largest since 1990",
-          "url": "https://abcnews.com/Politics/wireStory/democrats-clinch-historic-house-majority-259-seats-largest-138418247",
-          "domain": "abcnews.com",
-          "seendate": "2026-11-24T23:45:00Z",
-          "image": "https://i.abcnewsfe.com/a/e324c4b7-5928-48f8-9923-548b0c994212/wirestory_07b3ccbe60db7c1d3d3f3087d8fca721_16x9.jpg"
         }
       ]
     },
     "title": "Democrats clinch historic House majority of at least 259 seats",
-    "summary": "2026-11-25 kcra.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 whdh.com: Democrats clinch a historic House majority of at least 259 seats , the largest since 1990 - Boston News , Weather , Sports\n2026-11-25 wmur.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wesh.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wlwt.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wtae.com: Democrats clinch historic House majority of at least 259 seats",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_birthright-blocks-citizenship",
-    "source": "news",
-    "ts": 1795712844712,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.698,
-      "articles": [
-        {
-          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
-          "url": "https://talkradio1059.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
-          "domain": "talkradio1059.iheart.com",
-          "seendate": "2026-11-26T12:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Second Judge Blocks Trump Birthright Citizenship Order | WJBO Newsradio 1150 AM & 98 . 7 FM",
-          "url": "https://wjbo.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
-          "domain": "wjbo.iheart.com",
-          "seendate": "2026-11-26T12:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
-          "url": "https://kfab.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
-          "domain": "kfab.iheart.com",
-          "seendate": "2026-11-26T12:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
-          "url": "https://kprcradio.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
-          "domain": "kprcradio.iheart.com",
-          "seendate": "2026-11-26T12:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        },
-        {
-          "title": "Second Judge Blocks Trump Birthright Citizenship Order",
-          "url": "https://talkradio1080.iheart.com/content/2026-11-26-second-judge-blocks-trumps-birthright-citizenship-order/",
-          "domain": "talkradio1080.iheart.com",
-          "seendate": "2026-11-26T12:45:00Z",
-          "image": "https://i.iheart.com/v3/re/assets.getty/6b0805eecd85598654ee9d4b?ops=gravity(%22north%22),fit(1200,675),quality(65)"
-        }
-      ]
-    },
-    "title": "Second Judge Blocks Trump Birthright Citizenship Order",
-    "summary": "2026-11-26 talkradio1059.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 wjbo.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order | WJBO Newsradio 1150 AM & 98 . 7 FM\n2026-11-26 kfab.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 kprcradio.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order\n2026-11-26 talkradio1080.iheart.com: Second Judge Blocks Trump Birthright Citizenship Order",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_newsom-targets-trump",
-    "source": "news",
-    "ts": 1795712844711,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.634,
-      "articles": [
-        {
-          "title": "Trump targets Newsom over erasure of death sentences",
-          "url": "https://www.ironmountaindailynews.com/opinion/2026/11/trump-targets-newsom-over-erasure-of-death-sentences/",
-          "domain": "ironmountaindailynews.com",
-          "seendate": "2026-11-24T06:30:00Z",
-          "image": "https://ogden_images.s3.amazonaws.com/www.ironmountaindailynews.com/images/2026/11/23164147/AP-Trump-DOJ-Speech.jpg"
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-          "url": "https://www.wwaytv3.com/trump-targets-newsom-and-democrats-in-justice-department-speech-focused-on-violent-crime/",
-          "domain": "wwaytv3.com",
-          "seendate": "2026-11-24T06:15:00Z",
-          "image": "https://wpcdn.us-east-1.vip.tn-cloud.net/www.wwaytv3.com/content/uploads/2025/07/b/z/ap25188783406048-scaled.jpg"
-        },
-        {
-          "title": "Trump targets Newsom in Justice Department speech over erasure of death row sentences in California",
-          "url": "https://www.wptf.com/2026/11/23/19469/",
-          "domain": "wptf.com",
-          "seendate": "2026-11-24T02:15:00Z",
-          "image": "https://media-cdn.socastsrm.com/wordpress/wp-content/blogs.dir/3836/files/2026/11/gettyimages-2306567026-1200x675.jpg"
-        },
-        {
-          "title": "Trump targets Newsom in Justice Department speech over erasure of death row sentences in California - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/nov/23/trump-targets-newsom-in-justice-department-speech-/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-11-24T01:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime - Las Vegas Sun News",
-          "url": "https://lasvegassun.com/news/2026/nov/23/trump-targets-newsom-and-democrats-in-justice-depa/",
-          "domain": "lasvegassun.com",
-          "seendate": "2026-11-24T01:45:00Z",
-          "image": null
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-          "url": "https://www.kob.com/ap-top-news/trump-targets-newsom-and-democrats-in-justice-department-speech-focused-on-violent-crime/",
-          "domain": "kob.com",
-          "seendate": "2026-11-24T01:15:00Z",
-          "image": "https://www.kob.com/wp-content/uploads/apimg/2026/11/Trump_Justice_Department_2_636.jpg"
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-          "url": "https://www.wcax.com/2026/11/24/trump-targets-newsom-democrats-justice-department-speech-focused-violent-crime/",
-          "domain": "wcax.com",
-          "seendate": "2026-11-24T01:15:00Z",
-          "image": "https://gray-wcax-prod.gtv-cdn.com/resizer/v2/7BJKT6QXSVGKLD2TLELRNYIBBI.jpg?auth=567685cad3e2df4505710a94fc50633a8553007d8e5995e8616119e024083479&smart=true"
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime – WTOP News",
-          "url": "https://wtop.com/us-politics/2026/11/trump-will-address-a-justice-department-transformed-by-his-pursuit-of-political-adversaries/",
-          "domain": "wtop.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://wtop.com/wp-content/uploads/2026/11/Trump_Justice_Department_2_636-scaled.jpg"
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-          "url": "http://www.dailyadvance.com/news/national/trump-targets-newsom-and-democrats-in-justice-department-speech-focused-on-violent-crime/article_691b523d-6f44-5ec0-9a50-d459d00acc3b.html",
-          "domain": "dailyadvance.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/dailyadvance.com/content/tncms/assets/v3/editorial/f/50/f50c783c-2ef3-538d-bf89-7a6705d82df6/6b0451d3e77e5.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-          "url": "https://www.yakimaherald.com/news/nation_and_world/nation/trump-targets-newsom-and-democrats-in-justice-department-speech-focused-on-violent-crime/article_ac6b06e7-47db-55b6-92c4-dfa43c5f284a.html",
-          "domain": "yakimaherald.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/yakimaherald.com/content/tncms/assets/v3/editorial/f/79/f7935c3a-33b3-55eb-92aa-21d0ec89f840/6b044fa125b5b.image.jpg?crop=1763%2C926%2C0%2C124"
-        },
-        {
-          "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-          "url": "http://www.hngnews.com/nation_world/trump-targets-newsom-and-democrats-in-justice-department-speech-focused-on-violent-crime/article_f5031f3f-d723-54fa-b109-84b74d74b35e.html",
-          "domain": "hngnews.com",
-          "seendate": "2026-11-24T00:30:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/hngnews.com/content/tncms/assets/v3/editorial/5/c4/5c482732-e31b-564b-ae75-bc68ba831cfe/6b044f8147e69.image.jpg?crop=1763%2C926%2C0%2C124"
-        }
-      ]
-    },
-    "title": "Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
-    "summary": "2026-11-24 ironmountaindailynews.com: Trump targets Newsom over erasure of death sentences\n2026-11-24 wwaytv3.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime\n2026-11-24 wptf.com: Trump targets Newsom in Justice Department speech over erasure of death row sentences in California\n2026-11-24 lasvegassun.com: Trump targets Newsom in Justice Department speech over erasure of death row sentences in California - Las Vegas Sun News\n2026-11-24 lasvegassun.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime - Las Vegas Sun News\n2026-11-24 kob.com: Trump targets Newsom and Democrats in Justice Department speech focused on violent crime",
+    "summary": "2026-11-25 kcra.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 whdh.com: Democrats clinch a historic House majority of at least 259 seats , the largest since 1990 - Boston News , Weather , Sports\n2026-11-25 wmur.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wesh.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 wlwt.com: Democrats clinch historic House majority of at least 259 seats\n2026-11-25 koco.com: Democrats clinch historic House majority of at least 259 seats",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11501,12 +11508,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_commutations-criticizes-death",
     "source": "news",
-    "ts": 1795712844712,
+    "ts": 1795744191476,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.615,
+      "salience": 0.56,
       "articles": [
         {
           "title": "Trump Criticizes Newsom Death Sentence Commutations",
@@ -11607,12 +11614,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_countries-dozen-house",
     "source": "news",
-    "ts": 1795712844712,
+    "ts": 1795744191476,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.535,
+      "salience": 0.48,
       "articles": [
         {
           "title": "The White House is proposing new tariffs on more than a dozen countries",
@@ -11650,12 +11657,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_asylum-bid-border",
     "source": "news",
-    "ts": 1795712844712,
+    "ts": 1795744191476,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.397,
+      "salience": 0.343,
       "articles": [
         {
           "title": "Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border",
@@ -11689,49 +11696,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border",
     "summary": "2026-11-24 wcti12.com: Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border\n2026-11-24 nbcmontana.com: Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border\n2026-11-24 wpde.com: Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border\n2026-11-24 wjla.com: Fact Check Team : Supreme Court to review Trump bid to suspend asylum at southern border",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_anti-ban-corruption",
-    "source": "news",
-    "ts": 1795712844712,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.192,
-      "articles": [
-        {
-          "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
-          "url": "https://nebraska.tv/news/nation-world/democrats-eye-stock-trading-ban-in-early-test-of-anti-corruption-promises",
-          "domain": "nebraska.tv",
-          "seendate": "2026-11-23T21:30:00Z",
-          "image": "https://nebraska.tv/resources/media2/16x9/8466/1320/0x441/90/3e344ca5-42f5-46d7-a74a-2f7faa83419a-GettyImages2303766798.jpg"
-        },
-        {
-          "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
-          "url": "https://wgxa.tv/news/connect-to-congress/democrats-eye-stock-trading-ban-in-early-test-of-anti-corruption-promises",
-          "domain": "wgxa.tv",
-          "seendate": "2026-11-23T21:30:00Z",
-          "image": "https://wgxa.tv/resources/media2/16x9/8466/1320/0x441/90/3e344ca5-42f5-46d7-a74a-2f7faa83419a-GettyImages2303766798.jpg"
-        },
-        {
-          "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
-          "url": "https://wtov9.com/news/connect-to-congress/democrats-eye-stock-trading-ban-in-early-test-of-anti-corruption-promises",
-          "domain": "wtov9.com",
-          "seendate": "2026-11-23T21:30:00Z",
-          "image": "https://wtov9.com/resources/media2/16x9/8466/1320/0x441/90/3e344ca5-42f5-46d7-a74a-2f7faa83419a-GettyImages2303766798.jpg"
-        }
-      ]
-    },
-    "title": "Democrats eye stock trading ban in early test of anti - corruption promises",
-    "summary": "2026-11-23 nebraska.tv: Democrats eye stock trading ban in early test of anti - corruption promises\n2026-11-23 wgxa.tv: Democrats eye stock trading ban in early test of anti - corruption promises\n2026-11-23 wtov9.com: Democrats eye stock trading ban in early test of anti - corruption promises",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
