@@ -1,0 +1,2107 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-27",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 53,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 7,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 14,
+   "hits": 4,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 35,
+   "hits": 11,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 9,
+   "hits": 0,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 9,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 2,
+   "hits": 2,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 5,
+   "hits": 3,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 65,
+   "hits": 16,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 54,
+   "hits": 41,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 1,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 3,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "Black Friday Deals and Holiday Sales Are Big Money for Influencers",
+   "dek": "A growing part of a brand’s Black Friday and Cyber Monday marketing strategy rests on paying top dollar for social media influencers to post videos.",
+   "opening": "",
+   "published": "2026-11-27T15:29:05+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/influencers-black-friday-deals-holiday-shopping.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Climate Talks Imploded, but the ‘Age of Electricity’ Rolls On, Energy Chief Says",
+   "dek": "Fatih Birol, head of the International Energy Agency, said that market forces, data centers and energy security are driving the clean transition anyway.",
+   "opening": "",
+   "published": "2026-11-27T15:18:58+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/fatih-birol-iea-cop31-electrification.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_all-climate-could-experts": [
+     "climate",
+     "talks"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Playing with fire’: Republicans incensed after Trump gets Huang reinstated",
+   "dek": "Former Trump officials warn his push to reinstate NVIDIA&#039;s CEO could be the final straw for Republicans.",
+   "opening": "",
+   "published": "2026-11-27T15:12:09+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/27/playing-with-fire-republicans-incensed-after-trump-gets-huang-reinstated?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "former"
+    ],
+    "obj_thesenat_end-filibuster-final-makes": [
+     "final",
+     "push"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "former"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Funeral prayers held for 31 victims of Egypt tanker crash",
+   "dek": "Funeral prayers were held at Cairo’s Al-Azhar Mosque on Friday for 31 people killed when a car collided with a tanker",
+   "opening": "",
+   "published": "2026-11-27T15:07:22+00:00",
+   "link": "https://www.aljazeera.com/video/newsfeed/2026/11/27/funeral-prayers-held-for-31-victims-of-egypt-tanker-crash?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Puma Shen, Critic of China, Could be the Next Mayor of Taipei",
+   "dek": "Puma Shen, who has been sanctioned by China for his efforts to prepare civilians for an invasion, could become Taiwan’s next political star if he wins.",
+   "opening": "",
+   "published": "2026-11-27T13:33:49+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/world/asia/puma-shen-taiwan-election-china.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Answers with Andrew Weissmann — How can Congress use the ‘power of the purse’ to get compliance?",
+   "dek": "This week, Andrew Weissmann answers more Member-submitted questions with special guest MS NOW Political Analyst and host of ‘Political Potluck,’ Fmr. Sen. Claire McCaskill. They discuss the new class of Democrats entering Congress and what to expect in the new year. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most i",
+   "opening": "",
+   "published": "2026-11-27T13:00:09+00:00",
+   "link": "https://www.youtube.com/watch?v=lOMWKNINSUM",
+   "videoId": "lOMWKNINSUM",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump embraced Xi, then slapped new tariffs on China: What’s his game plan?",
+   "dek": "US president&#039;s new tariff regime targets China hardest, just weeks before Trump and Xi meet again in Miami.",
+   "opening": "",
+   "published": "2026-11-27T12:48:44+00:00",
+   "link": "https://www.aljazeera.com/features/2026/11/27/trump-embraced-xi-then-slapped-new-tariffs-on-china-whats-his-game-plan?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_x_china-others-production-ready": [
+     "tariffs",
+     "china"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "tariffs",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Saudi strike kills ’11 civilians’ in Yemen’s Taiz: Houthi media",
+   "dek": "Hostilities between Iran-backed Houthis and Saudi-backed coalition continue to push Yemen into a humanitarian crisis.",
+   "opening": "",
+   "published": "2026-11-27T12:00:22+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/27/saudi-strike-kills-11-civilians-in-yemens-taiz-houthi-media?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Italians killed in Kuwait: Why is Iran denying responsibility?",
+   "dek": "Iran has openly claimed its strikes on Gulf states throughout the war. So why is it denying an attack on Kuwait?",
+   "opening": "",
+   "published": "2026-11-27T11:51:26+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/27/italians-killed-in-kuwait-why-is-iran-denying-responsibility?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TGIF: A Gratitude Special",
+   "dek": "Today in TGIF: The return of Jensen Huang, South Africa&#8217;s AI agenda&#8212;and a moment of thanks.",
+   "opening": "Welcome to our Thanksgiving TGIF. It&#8217;s a short one because it&#8217;s really a placeholder for you to say what you&#8217;re thankful for this year. Have some fun in the comments section! I&#8217;ll start. I&#8217;m thankful for human ingenuity, especially for artificial intelligence. It&#8217;s incredible to be alive at the dawn of a new technological era, like being alive for the first days of manmade fire or the wheel or electricity. Was the wheel good? I think so, but I&#8217;m sure things were lost in the pre-wheel days. I&#8217;m sure there were people arguing that the wheel was ruining all of us. Wheels allow people to do bad things faster! Ban wheels! And yet, wheels won. It&#8217;s thrilling to know we&#8217;re all alive to see the world shift again, perhaps the most profound shift yet, perhaps much bigger than fire. No one knows what it will be like, what battles will need to be fought, how we&#8217;ll need to change, what traits will be selected for in future human evolution, and what traits will be lost. But every day this year I woke up curious. I read about the latest on this particular technology and am surprised by what it&#8217;s doing. Like, it just helped solve another complex math problem called the Riemann hypothesis. You can read a neuroscientist&#8217;s gorgeous lament about that. You can choose to deny AI&#8217;s grandeur or to see only the evil that will no doubt come of this. But me, I just can&#8217;t believe the human mind and what we&#8217;ve",
+   "published": "2026-11-27T11:03:14+00:00",
+   "link": "https://www.thefp.com/p/tgif-a-gratitude-special-jensen-huang-nvidia-holiday-season",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "again"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "From Wirecutter: Don’t let Inflated Prices Ruin your Black Friday",
+   "dek": "Black Friday and Cyber Week deals aren’t what they used to be. As inflation continues to drive up prices, today’s “sale” price often matches what an item cost at full price just a year or two ago. In this episode of The Wirecutter Show, Wirecutter’s deals editor Nathan Burrow shares strategies for clawing back savings on your holiday purchases. He explains why it’s worth using&nbsp; price history trackers to verify actual savings, smart ways to layer passive store credit card perks, and why buying certified refurbished gear is a smart way to&nbsp; stretch your dollar further.&nbsp; Plus, he wa",
+   "opening": "Black Friday and Cyber Week deals aren’t what they used to be. As inflation continues to drive up prices, today’s “sale” price often matches what an item cost at full price just a year or two ago. In this episode of The Wirecutter Show, Wirecutter’s deals editor Nathan Burrow shares strategies for clawing back savings on your holiday purchases. He explains why it’s worth using&nbsp; price history trackers to verify actual savings, smart ways to layer passive store credit card perks, and why buying certified refurbished gear is a smart way to&nbsp; stretch your dollar further.&nbsp; Plus, he warns shoppers about the rise of AI-generated fake storefronts popping up online. This episode covers: How to shop early sales strategically: Wirecutter’s deals team has seen fewer price drops this fall, and we aren’t anticipating major drops for Black Friday and Cyber week. If you see a deal that fits your budget now, we recommend snagging it.&nbsp; How to verify real discounts: If you’re shopping on Amazon, price trackers like Keepa and CamelCamelCamel can help you spot whether prices have been inflated right before the holidays, and what products went on deep discounts during prior Black Friday sales events. How to save with certified refurbished gear: Buying factory-refurbished appliances and electronics (like Dyson vacuums or KitchenAid mixers) with manufacturer warranties can cut costs by 20% to 25%. How to spot scam sites: Vibe coding allows bad actors to create fake retailer websit",
+   "published": "2026-11-27T11:00:00+00:00",
+   "link": "https://www.nytimes.com/the-daily",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Man United vs Brentford: Premier League – Pochettino, predictions, lineups",
+   "dek": "Relegation-threatened Manchester United host Brentford in new manager Mauricio Pochettino&#039;s first home game in charge.",
+   "opening": "",
+   "published": "2026-11-27T10:48:54+00:00",
+   "link": "https://www.aljazeera.com/sports/2026/11/27/manchester-united-brentford-pochettino-first-home-game-premier-league-football?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "brent"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Australia sanctions suspects in Iran-linked anti-Semitic attacks",
+   "dek": "Sanctions aim to restrict funds for two men alleged to have planned attacks for IRGC.",
+   "opening": "",
+   "published": "2026-11-27T10:31:20+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/27/australia-sanctions-suspects-in-iran-linked-anti-semitic-attacks?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran",
+     "irgc"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang Is Back, and So Is His Plaque at Denny’s",
+   "dek": "The chain said it had restored a plaque honoring Mr. Huang above a booth in San Jose, Calif., where he is said to have developed the idea for Nvidia.",
+   "opening": "",
+   "published": "2026-11-27T10:17:23+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/dennys-jensen-huang-nvidia-plaque.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ugly fan fights break out at Thanksgiving NFL games just like old Black Friday brawls, Milton goes off & food!",
+   "dek": "Brittany Mahomes is crying about the refs again after the Chiefs&apos; loss to the Bills, and Screencaps readers pile on with takes from Rodgers to stuffing.",
+   "opening": "Welcome to Screencaps , \"America's Best Daily Column,\" as named by the readers. Screencaps, which publishes seven days a week, is a mix of sports, pop culture, and emails from sane readers from around the world. This column isn't for the coastal elites. Give us a week to steal your heart. Our track record is pretty good. Let's have some fun. 📩 Email: joe.kinsey@outkick.com Send photos, stories, tips, rants—whatever you've got. 📰 Screencaps Page: 👉 Read the latest Screencaps Do you miss the days when Christmas shoppers would brawl their way to a stack of 32\" LCD TVs at Circuit City? Do you miss when Americans would tackle each other like it's 4th and 1 at the goal line in order to get a $5 toaster oven at Sears? The NFL has you covered. Instead of fighting over consumer goods, Roger Goodell's team figured out how to get Americans fighting again: more NFL games over the holidays, the biggest rivalries and close games. COWBOYS &amp; 49ERS FANS THROW FISTS IN BAR BRAWL AS HANK JR CLASSIC BLARES, MOWING OLYMPICS &amp; NCAA MEAT JUDGING Thanksgiving over-delivered, if you're into holiday battles. \"Come on, man, it's Thanksgiving,\" a fan could be heard as Lions and Bears fans punched each other in the Motor City during one of the greatest regular-season games you're ever going to see. That was followed by what we all witnessed in Dallas where Jerry's team blew a 21-point fourth quarter lead and that led to this ugly incident. That's an Eagles fan throwing around what sure looks like",
+   "published": "2026-11-27T10:12:19-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/ugly-fan-fights-break-out-thanksgiving-nfl-games-like-old-black-friday-brawls-milton-goes-off-food",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "again"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Are tech founders and CEOs 'too big to fail?' Jensen Huang’s Nvidia return sparks debate",
+   "dek": "Jensen Huang&apos;s return as Nvidia CEO just 11 days after resigning spotlights &quot;key-man risk&quot; and what experts call a lack of succession planning at Big Tech.",
+   "opening": "The return of Jensen Huang as Nvidia CEO less than two weeks after his resignation is raising questions over whether co-founders and leaders of major tech companies are being viewed as \"too big to fail.\" Huang, who co-founded Nvidia in 1993, stepped down as chief executive on Nov. 12 after reports emerged about his extramarital affairs. While the board said during a Nov. 17 earnings call that it wasn't planning to reinstate him, it ultimately reversed course on Nov. 23. The Huang case at Nvidia follows the saga of OpenAI co-founder Sam Altman, who was ousted as CEO by the AI giant's board following a 2023 power struggle in which he was accused of not being candid with the board. Altman was reinstated within a week after many of the ChatGPT-maker's employees threatened to quit. Huang’s central role in Nvidia’s ascent to become one of the world’s most valuable companies has highlighted \"key-man risk\" – a firm’s reliance on a single leader for critical operational and strategic decisions. WHAT JENSEN HUANG'S RETURN MEANS FOR NVIDIA – AND WALL STREET Dan Ives, partner and senior managing director at Yorkville Ives, told FOX Business that \"Jensen and the other major tech CEOs are the linchpin to the AI Revolution and the global economy. It's key-man risk front and center in this tech world and that is not changing. Jensen is not replaceable.\" Gil Luria, managing director at D.A. Davidson, said that the Nvidia situation is \"highly unusual\" as it's the most profitable company in the",
+   "published": "2026-11-27T10:06:33-05:00",
+   "link": "https://www.foxbusiness.com/markets/tech-founders-too-big-fail-jensen-huangs-nvidia-return-sparks-debate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "ousted",
+     "role"
+    ],
+    "obj_x_blocks-case-company-drop": [
+     "case",
+     "company"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How to Live Calmly, Despite Stock Market Whiplash",
+   "dek": "Nvidia has been down, up, and down again, and the market has followed. But there’s no need for long-term, diversified investors to alter their course, our columnist says.",
+   "opening": "",
+   "published": "2026-11-27T10:02:53+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/nvidia-jensen-huang-trump-markets.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "As Prices Rise, Americans Are Making Trade-Offs Rather Than Cutting Back",
+   "dek": "Within strong consumer spending lie the decisions many families are making to stretch their dollars to cover the meals, trips and activities they value most.",
+   "opening": "",
+   "published": "2026-11-27T10:02:41+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/inflation-consumer-spending-trade-offs-holidays.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Journalist Fights for Free Speech in Egypt, and to Stay Out of Jail",
+   "dek": "The fate of Lina Attalah and her news outlet, Mada Masr, in two court cases is seen a test of whether the country’s independent press can survive.",
+   "opening": "",
+   "published": "2026-11-27T10:02:40+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/world/middleeast/egypt-journalist-trial-lina-attalah-mada-masr.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_abc-fcc-free-judge": [
+     "free",
+     "speech"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bob Newhart faced $6M lawsuit threat after trying to quit hit sitcom: book",
+   "dek": "CBS threatened Bob Newhart with a $6 million lawsuit when he tried to quit &quot;The Bob Newhart Show&quot; before its sixth season, a new biography reveals.",
+   "opening": "Bob Newhart could make millions laugh, but a $6 million lawsuit was no laughing matter. The comedy legend once tried to quit his hit CBS sitcom, \"The Bob Newhart Show,\" only to discover the network wasn't ready to let its ratings star walk away. The contract dispute is detailed in Michael Seth Starr's biography, \"Bob Newhart: The Life and Laughter of an American Treasure,\" which chronicles the comedian's nearly 65-year career. BOB NEWHART, LEGENDARY COMEDIAN AND SITCOM STAR, DEAD AT 94 Newhart wasn't exactly in a position to face a multimillion-dollar lawsuit. \"I don't have $6 million,\" the comedian later admitted. \"And my wife wouldn't lend me any of her money.\" Although he publicly credited fan support for his decision, Newhart later acknowledged that financial pressure played a major role in his return. \"When I said I wanted to quit, the people in the cast and the production crew were all affected, of course and they helped influence me to change my mind. Then there were letters from fans and people I met on the street. But I guess the main reason I decided to come back was that CBS threatened to sue me for $6 million because there was a year left on my contract.\" According to Starr's biography, Newhart approached CBS executives Bob Daly and Robert Wussler about leaving \"The Bob Newhart Show\" before its sixth season. His attorney warned that if a replacement series failed to generate comparable revenue, CBS could seek damages Newhart estimated at \"about fifty or sixty mill",
+   "published": "2026-11-27T10:00:14-05:00",
+   "link": "https://www.foxnews.com/entertainment/bob-newhart-faced-6m-lawsuit-threat-after-trying-quit-hit-sitcom-book",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ],
+    "obj_x_all-climate-could-experts": [
+     "failed",
+     "could"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "face",
+     "when"
+    ],
+    "obj_x_china-others-production-ready": [
+     "ready",
+     "production"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "which",
+     "network"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Before sunrise at Macy's, a familiar Black Friday ritual returns despite weeks of online deals",
+   "dek": "Black Friday produces more foot traffic at physical stores than any other day despite growing competition from e-commerce and brands rolling out steep holiday discounts online weeks in advance, according to retail technology company Sensormatic Solutions.",
+   "opening": "",
+   "published": "2026-11-27T09:59:54-05:00",
+   "link": "https://www.pbs.org/newshour/economy/before-sunrise-at-macys-a-familiar-black-friday-ritual-returns-despite-weeks-of-online-deals",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_australia-deal-despite-law": [
+     "online",
+     "despite"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nature video captures elk fending off two wolves in a dramatic animal fight caught on camera",
+   "dek": "Wildlife footage shows a massive elk fending off two wolves, jacking up one with its antlers in a stunning display of raw power in the animal kingdom.",
+   "opening": "Another incredible nature video has hit the web. As our loyal readers and OutKick Outdoors followers know, there aren't many things on the internet more entertaining than wildlife footage. It gets the blood pumping and tends to be incredibly unpredictable. That's what makes it so much fun and enjoyable. VIRAL WILDLIFE VIDEO CAPTURES DEER FLIPPING BOBCAT INTO THE AIR DURING WILD CONFRONTATION Well, we have an absolute banger today. Facebook user Billy Fabian recently shared footage of an elk fending off a pair of wolves that wanted to mix it up. It didn't go well for the wolves, one of them specifically. The large male elk stood its ground and then jacked up one of the wolves with its antlers. That's a lesson the wolf probably won't forget in the near future. The incident occurred in Wyoming, according to Whiskey Riff . VIRAL VIDEO CAPTURES TWO MASSIVE BUCKS IN INTENSE ANTLER FIGHT DURING DEER RUT IN TEXAS Check out the awesome footage below, and let me know your thoughts at David.Hookstead@outkick.com . That's definitely some of the best footage that we've seen in a long time. It's also a blunt reminder of the size difference between elks and wolves. An adult male elk in North America can weigh up to 1,000 pounds. Many wolves don't break 100 pounds. That's a significant gap in weight. SIGN UP FOR THE DAILY OUTKICK NEWSLETTER I guess we have weight classes in boxing for a reason, and it's no different in the animal kingdom when it comes to raw power. Do you have any great natu",
+   "published": "2026-11-27T09:32:30-05:00",
+   "link": "https://www.foxnews.com/outkick-culture/nature-video-captures-elk-fending-off-two-wolves-dramatic-animal-fight-caught-camera",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What's Really Happening With The U.S. Economy?",
+   "dek": "Americans remain frustrated by high prices despite slowing inflation and recent economic gains, while stock market volatility and tech outages raise new concerns heading into the holiday shopping season. John Bickley and Georgia Howe sit down with Cato Institute economist Scott Lincicome to examine what's driving falling gas prices, how the midterm results could reshape economic policy, and why the AI boom may be fueling a surge in new businesses. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Sub",
+   "opening": "",
+   "published": "2026-11-27T09:30:19+00:00",
+   "link": "https://www.youtube.com/watch?v=z83T4Y8fEvA",
+   "videoId": "z83T4Y8fEvA",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US pilot tells Trump which fighter jet is ‘world’s greatest’ during Thanksgiving phone call",
+   "dek": "An F-16 pilot told President Donald Trump the jet is the &quot;world&apos;s greatest&quot; during a Thanksgiving call, saying &quot;you couldn&apos;t pay me to switch airplanes.&quot;",
+   "opening": "President Donald Trump learned what the \"world's greatest\" fighter jet is, according to an F-16 pilot, during a phone call on Thanksgiving Day. \"So could I ask, before I give my little speech to you — a little quick one — could I ask, so the F-16, you love it, right?\" Trump asked U.S. Air Force Lt. Col. Brant Smith. \"World's greatest fighter jet, sir,\" Smith replied. Trump spoke to Smith from his Mar-a-Lago resort in Florida as the president and first lady Melania made calls to service members from all six branches of the U.S. military. A LOOK AT HOW THE TRUMPS SPEND THEIR THANKSGIVING HOLIDAY THROUGH THE YEARS Trump asked Smith to compare his F-16 to other fighter jets like the F-22 or F-35 , to which Smith replied: \"The F-16 all day.\" TRUMP SAYS AIR FORCE PILOTS DESCRIBED A ROUND UFO FLYING THREE TIMES FASTER THAN AN F-22 FIGHTER JET \"You couldn't pay me to switch airplanes,\" Smith added. \"I love flying this airplane. And I think there are very few pilots in this room that would argue with me. Both of those airplanes (F-22 and F-35) are great, and they have their place in the world and in the war. But, this is a lot of fun. We get to do it all, and it does it all very well,\" Smith said. The president also asked Smith about his service and queried about what he was doing at the time. \"We are pre-installing the air base in Saudi Arabia ,\" Smith replied. CENTCOM'S THANKSGIVING MESSAGE TO TROOPS 'IS ONE OF DEEP GRATITUDE' FOR THEIR 'EXCEPTIONAL WORK' PROTECTING US \"You have a p",
+   "published": "2026-11-27T09:25:40-05:00",
+   "link": "https://www.foxnews.com/politics/us-pilot-tells-trump-which-fighter-jet-worlds-greatest-thanksgiving-phone-call",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "hormuz": [
+     "centcom"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Wife of Patrick Mahomes unleashes fire and fury towards refs after botched call in Buffalo",
+   "dek": "Tyler Bass drilled a field goal after a blocked punt lifted the Buffalo Bills past the Kansas City Chiefs 13-10 in a Thanksgiving football thriller.",
+   "opening": "Thursday delivered us quite possibly the greatest slate of Thanksgiving football games of all time, and it ended with a bang. Josh Allen and the Buffalo Bills stunned the Kansas City Chiefs at the buzzer, 13-10, thanks in large part to a blocked punt in the waning seconds. The Bills deflected the kick, it was returned by Greg Dortch to Kansas City's 39, and Tyler Bass drilled the long field goal to walk it off. It was the perfect day of football — including two stunning comebacks in Detroit and Dallas. Again, I'd argue it was the greatest Thanksgiving slate ever. BUFFALO BILLS OUTLAST KANSAS CITY CHIEFS IN DEFENSIVE STRUGGLE TO MAINTAIN TOP SEED STATUS IN AFC Of course — because we can't have nice things — it didn't come without some controversy at the end. In another stunning turn of events, this one actually worked against the Chiefs! That's right. Rashee Rice had a catch overturned late in the fourth quarter that took away a Kansas City first down, even though it certainly looked like a catch. The refs looked it over, decided it didn't count, and forced the Chiefs to punt instead. You rarely see a call go against the Chiefs. It's been a running joke amongst NFL fans for years now. So, yes, seeing one screw them over was a stunner. Don't take my word for it, though! Just ask Brittany Mahomes , the firecracker wife of star QB Patrick Mahomes: \"Guess we can't even play football without it getting called against us,\" Mahomes said, via her Instagram story after the game. \"Not s",
+   "published": "2026-11-27T09:13:46-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/wife-patrick-mahomes-unleashes-fire-fury-towards-refs-botched-call-buffalo",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "city",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Treasure hunters searching a field uncover 5,500-coin hoard hiding 'national treasure'",
+   "dek": "Archaeologist Anne Skogsfjord spotted the rare Saint Olaf coin inside Norway&apos;s largest Viking Age hoard, the first such find there since 1924, officials said.",
+   "opening": "Archaeologists in Norway have uncovered an extraordinarily rare 1,000-year-old coin minted during the reign of Viking King Olaf Haraldsson, better known as Saint Olaf, inside the largest Viking Age coin hoard ever found in the country. The discovery, announced by the Museum of Cultural History in Oslo, marks the first time a coin of this type has been found in Norway since 1924. The Olaf coin went on display Nov. 20 at the Historical Museum in Oslo — part of the University of Oslo's Museum of Cultural History — as part of a new exhibition showcasing the Mørstad Hoard. PUZZLING SOUND IN BACKYARD LEADS HOMEOWNER TO MASSIVE 1,000-YEAR-OLD TREASURE The hoard was originally discovered on April 10 by metal detectorists Vegard Sørlie and Rune Sætre in Rena, Innlandet County, and the site has since been secured and investigated for further research. Officials said the latest count puts the cache at 5,500 coins, though researchers believe the total could soon exceed 6,000. The star of the hoard, officials said, is a coin depicting Haraldsson, who ruled from 1015 to 1028. Haraldsson, who became a saint after his death, occupies \"a unique place in Norwegian history ,\" officials said. RARE COIN BEARING FACE OF KING WITH INFAMOUS NICKNAME UNEARTHED AFTER 1,000 YEARS \"Fewer than 20 of his coins have survived to the present day, and most have been found outside Norway,\" the release said. \"Only four examples of the type found in the Mørstad Hoard have previously been discovered, including ju",
+   "published": "2026-11-27T09:00:36-05:00",
+   "link": "https://www.foxnews.com/travel/treasure-hunters-searching-field-uncover-5500-coin-hoard-hiding-national-treasure",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_accused-child-competent-face": [
+     "ruled",
+     "face"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "death",
+     "national"
+    ],
+    "obj_x_all-climate-could-experts": [
+     "could",
+     "though"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Josh Holloway reveals Kevin Costner's high standards on the Yellowstone set before his exit",
+   "dek": "Josh Holloway recalls Kevin Costner calling his own take &quot;lazy&quot; on the &quot;Yellowstone&quot; set, revealing the high standards the star kept through season five.",
+   "opening": "Josh Holloway is pulling back the curtain on what life was like on the set of \"Yellowstone.\" The neo-Western series created by Taylor Sheridan dominated TV for all five of its seasons. The success of Sheridan's crowning achievement also led to multiple prequels and spinoffs . The \"Yellowstone\" universe is a powerhouse, and Holloway played a major role. He starred as villain Roarke Morris in season three of the series, and very briefly appeared in season four. LUKE GRIMES SAYS HE HASN'T SPOKEN TO KEVIN COSTNER SINCE 'YELLOWSTONE' Now, he's shining a light on what Kevin Costner was like on set, and the high standards and work ethic the legendary actor brought to the series. Holloway recently appeared on the \"Inside of You\" podcast hosted by Michael Rosenbaum, and explained that Costner wasn't afraid to call himself out on set when he didn't perform at a high level. ZOE SALDAÑA SAYS TAYLOR SHERIDAN GIVES STARS TWO CHOICES: 'MAKE SURE THAT YOU DON'T F--K UP... OR YOU QUIT' \"What I was impressed with with him, he did a close-up with me where he’s telling me about the rules or something, and he did it, and he just went inside and he was like, ‘Ah, that sh*t was lazy.’ And then he came up and I was like, ‘He cares. He’s still working.’ And he brought it. He's in this. So, I was impressed with that. You know, that he’s still keeping his standard high. I respected that. I was like, ‘Hell yeah,'\" Holloway explained. You can watch Holloway's comments in the video below starting around 1",
+   "published": "2026-11-27T08:49:45-05:00",
+   "link": "https://www.foxnews.com/outkick-culture/josh-holloway-reveals-kevin-costner-high-standards-yellowstone-set-before-exit",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Google Gemini may expose private emails to reviewers",
+   "dek": "A researcher claims Google Gemini pulled private Gmail billing details into chats, and Google confirms some connected-app data may face human review.",
+   "opening": "Think about everything sitting in your Gmail inbox right now. Maybe there's a conversation with your doctor, a recent bank statement or a personal message you never intended anyone else to read. Your Google Drive may hold years of private documents. You probably don't spend much time thinking about who might see that information beyond the people you share it with. But what happens when you connect those services to Google's Gemini AI assistant ? An independent researcher has raised concerns about how Gemini handles information retrieved from connected Gmail and Google Drive accounts. The findings prompted questions about whether some private content could end up in conversations reviewed by humans. We contacted Google, and the company confirmed that some information retrieved from connected Gmail and Drive accounts may be seen by human reviewers under certain circumstances. Google stressed that these connections are off by default. Here's what you should know before giving Gemini access to your personal information. Missed CyberGuy LIVE? Watch the replay and discover 5 ways to travel smarter and save money. Our free CyberGuy LIVE class, 5 Ways to Travel Smarter and Save Money, has ended, but you can still watch the full replay. Kurt \"CyberGuy\" Knutsson walks you through five practical ways to protect your phone and personal information, avoid common travel scams, find better deals, save money on bookings and use technology to make your travels easier and less stressful. No t",
+   "published": "2026-11-27T08:38:58-05:00",
+   "link": "https://www.foxnews.com/tech/google-gemini-expose-private-emails-reviewers",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "face",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "From Hollywood mogul to Biden-Harris insiders, Democrats turn to familiar faces to shape their next chapter",
+   "dek": "Abdul El-Sayed&apos;s transition team director previously claimed Zionists were &quot;controlling&quot; U.S. politics, while Tyler Perry co-chairs Georgia&apos;s team.",
+   "opening": "On the heels of the blue wave in the 2026 U.S. midterms, incoming Democratic leaders are tapping an eclectic mix of political veterans, business executives and entertainment figures to help shape their transitions into power. From a Hollywood mogul and former Biden administration officials to figures with ties to Republican leaders, the appointments offer an early glimpse into the people Democrats are turning to as they prepare to govern — and the experience and connections they hope to bring into their new administrations. Several incoming Democrats are turning to familiar faces from the Biden administration. In New Mexico, Gov.-elect Deb Haaland tapped former Biden presidential speechwriter Felicia Salazar and former Interior Department official Joan Mooney for her transition team, while California Gov.-elect Xavier Becerra selected Arsenio Mataka, who previously served as his senior counselor at the Department of Health and Human Services under Biden, to direct policy for his transition team. In Ohio, Democratic Gov.-elect Amy Acton tapped Elisabeth Hire, a former aide to then-Vice President Biden, as a transition co-chair. Haaland's campaign and Becerra's campaign each did not respond to Fox News Digital's request for comment. The transition teams will help incoming leaders prepare to take office, including identifying potential administration officials, shaping policy priorities and laying the groundwork for their first days in power. The selections also offer a window i",
+   "published": "2026-11-27T08:00:33-05:00",
+   "link": "https://www.foxnews.com/politics/from-hollywood-mogul-biden-harris-insiders-democrats-turn-familiar-faces-shape-next-chapter",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "former",
+     "ties"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "former"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "early",
+     "first"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Supplements in the spotlight as longevity doctor shares his personal daily routine",
+   "dek": "Dr. Kien Vuu shares his daily supplement stack, from creatine and NMN to glutathione, each supporting muscle health, cellular energy and longevity.",
+   "opening": "Nearly eight in 10 Americans take at least one dietary supplement for their health, according to a September 2026 Pew Research Center survey — yet clinicians warn that routine supplementation isn't always necessary or safe. Dr. Kien Vuu, a Los Angeles-based physician specializing in l ongevity and author of the book \"Thrive State,\" spoke to Fox News Digital about the role supplements play in overall health. \"Supplements are a signal,\" he told Fox News Digital during an event at Soft Bar + Cafe in Brooklyn, New York. \"How we live life are signals. How we eat, how we sleep, how we move, how we connect with people, they're all signals to the body — and supplements can play a very important role.\" DOCTOR'S 10 RULES FOR LIVING LONGER, CELEBRATING MORE BIRTHDAYS AND MAKING EXTRA YEARS COUNT Certain supplements can support muscle growth, metabolism and cellular energy, but they work best when they're paired with \" lifestyle choices and targeted support,\" the expert said. Vuu, a partner with longevity and supplement brand Solaray, shared the supplements he takes on a daily basis. Creatine, an amino acid-based compound, has become popular among fitness enthusiasts, as it has been shown to aid in boosting energy during exercise. The supplement is \"really important\" for muscle health and recovery , Vuu said. COMMON GYM SUPPLEMENT COULD HELP FIGHT DEPRESSION, NEW RESEARCH SUGGESTS The supplement has also demonstrated cognitive benefits, assisting with memory and processing speed, accordi",
+   "published": "2026-11-27T08:00:26-05:00",
+   "link": "https://www.foxnews.com/health/supplements-spotlight-longevity-doctor-shares-personal-daily-routine",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "speed",
+     "energy"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Thanksgiving scraps reinvented by top chefs for delicious, easy-to-make meals",
+   "dek": "Turkey pot pie and a turkey potato hash lead a slew of creative Thanksgiving leftovers recipes, from hearty turkey soup to crispy croquettes.",
+   "opening": "With the fridge bursting with leftovers from the big Thanksgiving feast, it's easy to get overwhelmed by the task of using up all that extra food. There's nothing wrong with reheating a plate full of turkey, stuffing, cranberry sauce, mashed potatoes and other Thanksgiving classics , of course. But for those who want to get creative in the kitchen and keep their palates guessing, there are plenty of ways to liven up leftovers. FOUR FOODS YOU SHOULD NEVER STORE IN THE FREEZER AND WHERE TO KEEP THEM INSTEAD The following chef-created recipes and meal ideas breathe new life into Thanksgiving food in the days that follow the holiday — from a turkey pot pie with a unique topping to a memorable turkey tikka masala . Check these out. Jessica Randhawa of the Forked Spoon in California serves up a comforting turkey soup that's kid-approved. \"Made with hearty vegetables, leftover Thanksgiving turkey and pearled barley, my turkey soup recipe is one of my son's favorite leftover Thanksgiving meals, as he is a big fan of hearty and meaty soups,\" she told Fox News Digital. Making turkey stock is a great way to use all the bones and giblets that get left behind when the bird goes in the oven, Randhawa noted. INA GARTEN SAYS A THANKSGIVING PIE SHORTCUT MAKES HER DESSERT 'ACTUALLY BETTER' Lanie Smith of the Vintage Cook in Kansas also opts for soup after Thanksgiving . \"My favorite way to use leftover turkey is by making a broth-forward turkey soup for the freezer,\" she told Fox News Digital.",
+   "published": "2026-11-27T07:00:41-05:00",
+   "link": "https://www.foxnews.com/food-drink/thanksgiving-scraps-reinvented-top-chefs-delicious-easy-to-make-meals",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_allegations-california-democrat-ethics": [
+     "california",
+     "following"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Illegal immigrant allegedly confessed to killing elderly military veteran for $50K in home attack: docs",
+   "dek": "Axel Chavez allegedly confessed to murdering Utah veteran James Witten, saying in court documents he was paid $50,000 to carry out the killing.",
+   "opening": "An illegal immigrant accused of murdering a military veteran in Utah in May now claims he was paid $50,000 to carry out the killing, according to court documents. James Witten, 71, a U.S. Army and Air Force veteran, was shot and killed outside his home in West Point, Utah, on May 30. According to the Department of Homeland Security, Witten was hanging porch decorations when a car pulled up in front of his house and an occupant opened fire, shooting him multiple times. The two suspects then fled the scene. WAVE OF ALLEGED MIGRANT MURDERS IGNITES FURY ACROSS US AS OFFICIALS WARN OF MORE CARNAGE, CRACKDOWN NEEDED Axel Chavez, an illegal immigrant from El Salvador, was charged with murder with a dangerous weapon, discharge of a firearm causing serious injury, dangerous weapon conduct by a restricted person and obstruction of justice. He was arrested in Las Vegas on June 16. A second suspect, Abner Avila, was also arrested and charged with murder. In court documents, prosecutors said it's believed that Avila is also in the U.S. illegally. BIDEN ADMIN RELEASED ILLEGAL IMMIGRANT ACCUSED OF FATALLY STABBING FAIRFAX COUNTY MOTHER READ THE COURT DOCUMENTS: CLICK HERE FOR MORE FROM THE FOX TRUE CRIME HUB According to recently unsealed court documents relating to Avila's arrest, Chavez allegedly confessed to the murder and said they had agreed to carry out the killing for $50,000. The court documents don't mention if Chavez revealed who agreed to pay them to carry out the murder. SEND US",
+   "published": "2026-11-27T07:00:22-05:00",
+   "link": "https://www.foxnews.com/us/illegal-immigrant-allegedly-confessed-killing-elderly-military-veteran-50k-home-attack-docs",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "saying"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fox News ‘Antisemitism Exposed’ Newsletter: 'Hulk' actor Ruffalo no like Schumer",
+   "dek": "Fox News&apos; &quot;Antisemitism Exposed&quot; newsletter brings you stories on the rising anti-Jewish prejudice across the U.S. and the world.",
+   "opening": "Fox News' \"Antisemitism Exposed\" newsletter brings you stories on the rising anti-Jewish prejudice across the U.S. and the world. IN TODAY’S NEWSLETTER: - Actor Mark Ruffalo doubles down on Schumer 'religious loyalties' jab - Ex-'SNL' star Bowen Yang sorry for 'Zio' slur, then adds 'Free Palestine' - El-Sayed shrugs off Jewish fears: 'You should be uncomfortable' TOP STORY: Actor Mark Ruffalo demanded Sen. Chuck Schumer step aside, suggesting the Jewish senator is ruled by \"entrenched religious beliefs and loyalties .\" ADL chief Jonathan Greenblatt fired back: \"Which religion? Loyal to whom?\" Instead of backing off, Ruffalo, famous for playing The Hulk in the Marvel movies, doubled down, citing Schumer's 2018 AIPAC remarks. #EndJewHatred founder Brooke Goldstein said the unspoken message is unmistakable: \"He's a Jew. We can't trust him.\" VIDEO: Hunter College was the site of a protest after the school’s student government canceled an event that involved a Jewish organization. WATCH HERE : SLUR STORM : Former \"SNL\" star Bowen Yang called singer-songwriter Regina Spektor \"Zio\" on his \"Las Culturistas\" podcast, a slur for Jews popularized by ex-KKK leader David Duke . His apology claimed he didn't know its history, then he posted, \"At the same time, Free Palestine.\" ADL chief Jonathan Greenblatt called it \"a textbook example of normalizing antisemitism\" and \"pathetic.\" SORRY, NOT SORRY: Michigan Sen.-elect Abdul El-Sayed brushed off fears that his Israel rhetoric fuels antisemit",
+   "published": "2026-11-27T06:37:26-05:00",
+   "link": "https://www.foxnews.com/us/fox-news-antisemitism-exposed-newsletter-hulk-actor-ruffalo-no-like-schumer",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_college-during-eye-federal": [
+     "college",
+     "student",
+     "protest"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Campus assault survivor warns colleges, families must step up to protect students amid wave of attacks",
+   "dek": "Survivor Skyler Boschen says recent attacks at NYU, Northwestern, Barnard and Stevens will continue unless colleges support survivors and parents act.",
+   "opening": "At least four young women have been attacked on or near U.S. college campuses in the last month, with one sexual assault survivor warning that these crimes will keep happening unless both universities and families step up. Licensed therapist Skyler Boschen said colleges must offer better support for survivors, while parents need to teach their children boundaries early and ensure young men have role models who break the cycle of violence at home. The recent attacks have happened on students attending four major universities – Stevens Institute of Technology, New York University , Northwestern and Ivy League Columbia. STUDENT ASSAULTED IN DORM AT $100K-A-YEAR COLLEGE, POLICE HUNT FOR SUSPECT: REPORT New York University, Nov. 15 THREE SCHOOL SAFETY STEPS EVERY PARENT SHOULD KNOW BEFORE CLASSES BEGIN Northwestern University, Nov. 15 CONVICTED RAPIST WHO PREYED ON WOMEN AT AMERICA'S TOP PARTY SCHOOL FACES RECKONING AFTER COURTHOUSE DASH US DEPARTMENT OF EDUCATION DATA REVEALS 1,100 SEXUAL ASSAULT ALLEGATIONS AGAINST PUBLIC SCHOOL STAFF Columbia University's Barnard College, Nov. 12 AMERICA'S TOP PARTY COLLEGE HIT BY ANOTHER SEX ATTACK WEEKS AFTER BRUTAL CAMPUS RAPE CASE Stevens Institute of Technology, Oct. 23 COLLEGE STUDENT ACCUSED OF LOCKING FELLOW STUDENT IN BEDROOM DURING ATTACK AS ROOMMATES RACED TO SAVE HER Boschen, 24, said she was just 17 years old when an alleged attacker raped her \"five times over the course of five hours\" inside her dorm at the University of Missouri-",
+   "published": "2026-11-27T06:00:59-05:00",
+   "link": "https://www.foxnews.com/us/campus-assault-survivor-warns-colleges-families-must-step-protect-students-amid-wave-attacks",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_allegations-california-democrat-ethics": [
+     "report",
+     "sexual"
+    ],
+    "obj_x_college-during-eye-federal": [
+     "college",
+     "student",
+     "during"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How to spot real Black Friday savings this holiday season amid the affordability squeeze",
+   "dek": "A marketing professor warns that Black Friday deals aren&apos;t always real discounts, citing shrinkflation and inflation as factors that obscure true savings.",
+   "opening": "Black Friday deals are everywhere, but a sale price does not always mean real savings. With budgets under pressure, amid a persisting affordability crisis and rising fuel prices with the raging Iran conflict, shoppers are looking for ways to stretch their money during the holiday shopping season this year. The forecasts point to a season of cautious spending. Visa Business and Economics Insights expects holiday sales to increase 4.5% from last year — but after accounting for higher prices, the actual increase in what shoppers buy is projected to be just 1.1%. That makes it all the more important for shoppers to know what they’re paying for and whether a sale is truly a deal. \"It's still a good time to shop. It's just that you just have to be a little bit more careful,\" Dinesh Gauri, a marketing professor at the University at Buffalo, told Fox News Digital when discussing holiday and Black Friday shopping. 7 HOLIDAY SHOPPING SCAMS TO WATCH FOR THIS SEASON Gauri revealed that shopping during Black Friday does not always produce the best deal — especially when it comes to essential technology like cell phones. He advised shoppers to set a budget and research prices before making a purchase, especially for big-ticket items. \"Have a number in mind and do your research before you go about spending the money,\" he said, recommending price-tracking sites and extra promotions. Gauri cited higher gas prices compared with last year as a potential pressure point for consumers, particularl",
+   "published": "2026-11-27T06:00:26-05:00",
+   "link": "https://www.foxnews.com/politics/how-spot-real-black-friday-savings-holiday-season-amid-affordability-squeeze",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fox News Digital's News Quiz: November 27, 2026",
+   "dek": "Test your knowledge of the Army&apos;s Iowa explosives detonation, President Donald Trump&apos;s Thanksgiving turkey pardon and more in this week&apos;s Fox News Digital News Quiz.",
+   "opening": "Test your news knowledge with this week's Fox News Digital News Quiz, featuring a controversial Army detonation in Iowa and President Donald Trump's Thanksgiving turkey pardon. Looking for another challenge? A woman threatening to reveal a mayor's home address, and Hunter Schafer appearing on Variety's list of potential Bond girls were featured in last week's News Quiz. Test your knowledge of maritime mysteries, patriotic performers and a lot more in this week's American Culture Quiz. If you're looking to play even more, you can find all of our quizzes by clicking here. Check back next week for the latest News Quiz from Fox News Digital. Thanks for playing!",
+   "published": "2026-11-27T06:00:21-05:00",
+   "link": "https://www.foxnews.com/lifestyle/fox-news-digital-news-quiz-november-27-2026",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "detonation"
+    ],
+    "obj_thepresi_approval-court-detonation-halts": [
+     "iowa",
+     "detonation"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "army",
+     "iowa"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "In Praise of My Typewriter",
+   "dek": "The A.I. projects editor at The New York Times uses chatbots every day. But when it’s time to write, he reaches for an Olivetti Lettera 22 from the 1950s.",
+   "opening": "",
+   "published": "2026-11-27T05:45:53+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/world/ai-typewriter-russia-brazil-mirumi.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "reaches",
+     "projects"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge Blocks F.C.C. From Targeting Disney’s Local ABC Licenses",
+   "dek": "A preliminary injunction halted an early regulatory review of the network’s operations in eight cities, including New York, Los Angeles and Chicago.",
+   "opening": "",
+   "published": "2026-11-27T05:19:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/25/business/media/disney-fcc-abc-ruling.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "judge",
+     "blocks",
+     "early",
+     "review",
+     "network"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "judge",
+     "blocks",
+     "early",
+     "review",
+     "licenses"
+    ],
+    "obj_afederal_birthright-blocks-citizenship-judge": [
+     "judge",
+     "blocks"
+    ],
+    "obj_afederal_abc-blocks-disney-fcc": [
+     "judge",
+     "blocks",
+     "targeting",
+     "disney"
+    ],
+    "obj_afederal_abc-blocks-broadcast-fcc": [
+     "judge",
+     "blocks",
+     "licenses"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+   "dek": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process.",
+   "opening": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process. (Image credit: Olivier Touron)",
+   "published": "2026-11-27T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/27/nx-s1-6037854/trump-effectively-ended-asylum-supreme-court",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "some",
+     "immigration"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump doubles down on support for Nvidia CEO amid national security concerns",
+   "dek": "President Donald Trump defends reinstated Nvidia CEO Jensen Huang against national security concerns, saying he has &quot;a lot of information&quot; leading him to believe Huang is fine.",
+   "opening": "President Donald Trump doubled down Thursday on his support for reinstated Nvidia CEO Jensen Huang, defending the tech executive amid national security concerns and predicting he would be even more successful during his second stint leading the chipmaking giant. Speaking to reporters following a Thanksgiving event at Mar-a-Lago, Trump was pressed on how he could be certain Huang did not pose a national security threat. \"Based on information and belief, I think he's absolutely fine,\" Trump responded. When asked what information he was referring to, Trump replied, \"The information I have, which is a lot of information.\" TRUMP ADMIN ADDS MEGASPEED TO COMMERCE DEPARTMENT TRADE BLACKLIST AFTER NVIDIA SCANDAL The president said he had not spoken with Huang since his reinstatement this week but expected to do so soon. He recalled an earlier conversation in which Huang expressed excitement about returning to lead the company. \"He is so happy to be going back. He calls it his second term,\" Trump said. Trump expressed confidence that Huang's reinstatement would benefit the American economy and the world, predicting the executive would surpass his previous success. \"He's going to do a better job in the second time than even in the first. If that's possible,\" Trump said. The president emphasized Huang's importance to Nvidia's technological development, saying that the company's Blackwell chip would soon become obsolete and that upcoming chips would surpass its capabilities. DENNY'S FACES",
+   "published": "2026-11-27T02:58:41-05:00",
+   "link": "https://www.foxbusiness.com/politics/trump-doubles-down-support-nvidia-ceo-amid-national-security-concerns",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "concerns"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "chips"
+    ],
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "saying"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "nvidia",
+     "jensen",
+     "huang",
+     "when"
+    ],
+    "obj_x_brewing-could-following-proposal": [
+     "trade",
+     "could",
+     "following"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia Halts Sales to Southeast Asia as U.S. Tightens China Restrictions",
+   "dek": "The shipping halt, which hit four countries, follows a new U.S. rule that would require licenses for companies in the countries to buy advanced A.I. chips.",
+   "opening": "",
+   "published": "2026-11-27T02:45:41+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/nvidia-southeast-asia-sales.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "chips"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "After the Iowa Detonation, a Family Gathered for an Unusual Thanksgiving",
+   "dek": "A family came together at a farmhouse in southeast Iowa the day after the explosion at an ammunition plant. It felt as if a storm had passed.",
+   "opening": "",
+   "published": "2026-11-27T00:33:25+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/us/iowa-detonation-family-thanksgiving.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "detonation"
+    ],
+    "obj_thepresi_approval-court-detonation-halts": [
+     "iowa",
+     "detonation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tucker Reacts to Viral SNL Skit of Himself",
+   "dek": "Watch the full conversation @TheBrandonStraka here: https://www.youtube.com/watch?v=kckVByHcgsk Watch more here: https://watchtcn.co/49CDF2t @TheBrandonStraka #TuckerCarlson #DonaldTrump #Israel #Iran #war #peace #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-27T00:00:11+00:00",
+   "link": "https://www.youtube.com/watch?v=PV2brMqWTiQ",
+   "videoId": "PV2brMqWTiQ",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Strobe Talbott, former deputy secretary of state and Brookings Institution president, dies at 80",
+   "dek": "Strobe Talbott, the former deputy secretary of state who advised Bill Clinton on Russian affairs and led the Brookings Institution, has died at 80.",
+   "opening": "Strobe Talbott, a former deputy secretary of state whose deep expertise on the Soviet Union shaped U.S. foreign policy before he went on to lead the Brookings Institution, died Thursday at the age of 80. Talbott’s son, Devin Talbott, said his father died peacefully after a long illness at his home in East Hampton, New York, The Associated Press reported. An Ohio native, Talbott began his journalism career as an intern at Time magazine while studying at Yale and Oxford, where he was roommates with future President Bill Clinton . Clinton later joked that his job in their shared apartment was to make Talbott breakfast every morning. NATO WARNS PUTIN COULD STRIKE BEFORE EUROPEAN ARMY RESPONDS, POINTS TO US AS MILITARY MODEL While at Time, Talbott was tapped to translate the leaked memoirs of Nikita Khrushchev, the former Soviet leader ousted in 1964, which earned him a full-time role at the magazine. Over a 21-year career there, he focused on U.S.-Soviet relations, led the Washington bureau, and wrote as a foreign affairs columnist. In 1994, Talbott joined the Clinton administration as deputy secretary of state, helping guide U.S. relations with Russia and other post-Soviet states. In a statement, Bill Clinton said no one was better suited to advise him on Russian affairs than Talbott, noting that former Secretary of State Hillary Clinton also relied on his counsel. TRUMP PUSHED NATO TO SPEND BIG — NOW COMES THE HARDER QUESTION: CAN EUROPE ACTUALLY FIGHT? \"He was analytical, comp",
+   "published": "2026-11-26T22:10:20-05:00",
+   "link": "https://www.foxnews.com/politics/strobe-talbott-former-deputy-secretary-state-brookings-institution-president-dies-80",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "ousted",
+     "role"
+    ],
+    "obj_x_brexit-deal-food-post": [
+     "strike",
+     "post"
+    ],
+    "obj_x_aid-could-cut-families": [
+     "states",
+     "could"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "army",
+     "lead"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How he helped Talarico FLIP Texas",
+   "dek": "Senator-elect James Talarico’s Speechwriter and Creative Director Antonio Esparza spoke with MS NOW about how he and Talarico utilized social media to win his Senate race in Texas. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/",
+   "opening": "",
+   "published": "2026-11-26T21:30:19+00:00",
+   "link": "https://www.youtube.com/shorts/UIr0J-iJG5k",
+   "videoId": "UIr0J-iJG5k",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "talarico"
+    ],
+    "midterms": [
+     "senate race"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Putin's grip on Crimea tested amid major blackout as Zelenskyy warns of looming Russian strike",
+   "dek": "A massive blackout crippled Crimea, testing Vladimir Putin&apos;s grip as outages hit Sevastopol and Simferopol and Zelenskyy warned of a new Russian strike.",
+   "opening": "Russian President Vladimir Putin's control over Crimea faced renewed pressure Thursday as a massive blackout crippled the Russian-occupied peninsula, disrupting public transport and leaving people without heat, according to reports. The blackout came after Ukrainian strikes had damaged the Kerch Strait Bridge last week, disrupting a key Russian military supply route, and as Ukrainian President Volodymyr Zelenskyy warned that Moscow was preparing another large-scale attack on Ukraine. Russian-controlled utilities blamed the Crimea blackout on an accident at energy facilities outside the region, after reports of explosions and air raid sirens sounded across the Black Sea peninsula, according to the Kyiv Post . PUTIN LAUNCHES UKRAINE BARRAGE HOURS AFTER TRUMP MEETING AMID ALLEGED RUSSIAN MISSILE BREACH OF NATO AIRSPACE Meanwhile, Zelenskyy said Ukrainian intelligence suggested that Russia was preparing to target the country's energy infrastructure, logistics networks and essential services. \"Unfortunately, the Russians are already completing preparations for a new massive strike,\" Zelenskyy wrote on X Thursday following a coordination meeting. \"According to intelligence, energy facilities and logistics infrastructure, as well as essential services facilities in cities and communities, will once again be the targets.\" The Ukrainian leader also urged residents to remain vigilant, warning of renewed missile attacks. \"In the coming days, please pay attention to the alarms of missile",
+   "published": "2026-11-26T21:25:49-05:00",
+   "link": "https://www.foxnews.com/world/putins-grip-crimea-tested-amid-major-blackout-zelenskyy-warns-imminent-russia-strike",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "energy",
+     "infrastructure"
+    ],
+    "obj_x_brexit-deal-food-post": [
+     "strike",
+     "post"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "FLASHBACK: Two presidents pulled off secret Thanksgiving surprises for US troops — see the moments",
+   "dek": "Two presidents pulled off secret Thanksgiving trips to war zones, with Donald Trump serving turkey at Bagram Airfield and George W. Bush visiting Iraq.",
+   "opening": "Under a cloak of secrecy, two American presidents made surprise Thanksgiving visits to war zones, bringing a taste of home to U.S. troops serving thousands of miles from their families. Sixteen years apart, President George W. Bush celebrated with American troops in Iraq in 2003, while President Donald Trump served Thanksgiving dinner to service members in Afghanistan in 2019. Both visits were carried out under tight secrecy, catching troops by surprise as they spent the holiday far from home. Trump secretly traveled to Bagram Airfield in Afghanistan on Nov. 28, 2019, when he served turkey, posed for photos and thanked American troops for their sacrifices amid the ongoing war. INSIDE TRUMP’S INTIMATE MEETING WITH NATION’S BRAVEST SOLDIERS DURING WHIRLWIND TEXAS TRIP \"There's nowhere I'd rather celebrate this Thanksgiving than right here with the toughest, strongest, best and bravest warriors on the face of the Earth,\" Trump told the troops at the time, later adding, \"And you don't even know how much the people of our country love and respect you.\" The visit came as roughly 12,000 American troops remained in Afghanistan more than 18 years after the U.S. invasion. ARMY VET LAWMAKER MARKS ABBEY GATE ANNIVERSARY WITH BLISTERING MESSAGE FOR BIDEN-HARRIS: 'ABJECT FAILURE' During the visit, Trump met with Afghan President Ashraf Ghani to discuss efforts to end the war and told American troops that the Taliban wanted to reach a deal with the United States. He said his administration ",
+   "published": "2026-11-26T21:00:39-05:00",
+   "link": "https://www.foxnews.com/politics/flashback-two-presidents-pulled-off-secret-thanksgiving-surprises-us-troops-see-moments",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_aid-could-cut-families": [
+     "states",
+     "families"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "face",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ben Shapiro Celebrates Iranians Selling Organs For Food | The Kyle Kulinski Show",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-11-26T21:00:11+00:00",
+   "link": "https://www.youtube.com/watch?v=UOkZjumIXtU",
+   "videoId": "UOkZjumIXtU",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Denny's faces backlash over heartfelt tribute to reinstated Nvidia CEO Jensen Huang",
+   "dek": "Denny&apos;s faces backlash on social media after restoring its commemorative plaque honoring Nvidia CEO Jensen Huang, with users mocking the tribute post.",
+   "opening": "Denny's is facing backlash on social media after posting a lengthy tribute to Nvidia CEO Jensen Huang and revealing that it had restored a commemorative plaque honoring the tech executive following his brief departure from the company. In a post to X on Wednesday, the restaurant chain served up a heartfelt message reaffirming its decades-long relationship with Huang, who worked at Denny's as a teenager before going on to co-found Nvidia at one of its Silicon Valley locations in 1993. \"Some things you just don't take off the menu. Jensen Huang is one of them,\" Denny's wrote, adding that it \"couldn't be prouder of the history we share.\" The restaurant chain also addressed the removal of a commemorative plaque marking the booth where Huang and his co-founders discussed the idea that would ultimately become Nvidia. NVIDIA REINSTATES JENSEN HUANG AS CEO EFFECTIVE IMMEDIATELY FOLLOWING US GOVERNMENT INPUT The plaque was reportedly removed amid controversy surrounding the chipmaking giant's leader, including reports that Huang was the target of a foreign intelligence effort . Denny's said it contacted Nvidia's communications team on Nov. 10, emphasizing that Huang remained an important part of the restaurant chain's history. However, the company said it did not learn until Nov. 13 that the plaque had been removed. In its post, Denny's highlighted Huang's humble beginnings as a dishwasher and server , emphasizing that its relationship with the billionaire executive extended beyond Nv",
+   "published": "2026-11-26T20:57:05-05:00",
+   "link": "https://www.foxbusiness.com/lifestyle/dennys-faces-backlash-over-heartfelt-tribute-reinstated-nvidia-ceo-jensen-huang",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "THE IRAN WAR IS F*CKED | The Kyle Kulinski Show",
+   "dek": "Support The Show On Patreon!: https://www.patreon.com/seculartalk Subscribe to Krystal Kyle & Friends On Substack!: https://krystalkyleandfriends.substack.com Join our Discord!: https://discord.gg/teyN4ce Follow Kyle on Twitter: http://www.twitter.com/kylekulinski \"The first time I ever really listened to Kyle Kulinski’s show was in the back of a cab last summer. The driver had his phone hooked up through the stereo and was pumping out an episode through the car speakers — loudly, as if looking to convert a captive audience. “Do you like Kyle Kulinski?” The driver, Ahmed, was a recent immigran",
+   "opening": "",
+   "published": "2026-11-26T20:30:18+00:00",
+   "link": "https://www.youtube.com/watch?v=WPlcgX0zvPY",
+   "videoId": "WPlcgX0zvPY",
+   "publication": "secular-talk",
+   "source": "secular-talk",
+   "station": "LP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Democrats, Republicans find rare common ground when asked what they're thankful for",
+   "dek": "Democrats and Republicans on Capitol Hill may clash on policy, but this Thanksgiving, lawmakers say family is what they&apos;re most thankful for.",
+   "opening": "An ocean of ideological differences separates Democrats and Republicans on Capitol Hill, but they're largely in agreement over one thing this Thanksgiving, and it's usually miles away from Washington, D.C. \"I'm thankful for family ,\" Rep. Eric Burlison, R-Mo., told Fox News Digital. \"It's what drives me to keep going, to keep doing this, keep fighting for the country.\" Families across America are gathering for Thanksgiving, kicking off a holiday season that's meant for reflection and refocusing on things that matter most. And members of Congress who spoke with Fox News Digital about that special day are no different. \"You know, elections can be a bumpy road in many ways, and it's easy to take a shot at somebody who's running — we put ourselves out there. But it's the family, really, and I'm grateful that my wife and my three kids who are in their 20s are so supportive,\" Rep. John Mannion, D-N.Y., said. \"So that's what I'm thankful for.\" Reps. Randy Fine, R-Fla., and Tim Burchett, R-Tenn., singled out their children. AMERICA SAW THE BLUE WAVE COMING — BUT DRASTICALLY UNDERESTIMATED THE EXTENT OF THE DEM TSUNAMI \"I'm very grateful to how great my boys are doing despite the challenges of this job, and just my whole family for putting up with all of this and being there for me,\" Fine said. Burchett told Fox News Digital he was \"more than blessed.\" \"I've got a beautiful wife and a daughter, and I never thought I was gonna have a family. And I prayed, asked Jesus that I'd have a fa",
+   "published": "2026-11-26T20:00:34-05:00",
+   "link": "https://www.foxnews.com/politics/democrats-republicans-find-rare-common-ground-when-asked-what-theyre-thankful",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Two Italians Killed in Iranian Drone Attack on Kuwait, Officials Say",
+   "dek": "The deaths follow a series of strikes on Gulf Arab states that host U.S. military facilities in recent weeks as talks to end the war continue to stall.",
+   "opening": "",
+   "published": "2026-11-26T19:33:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/world/middleeast/italians-killed-iran-drone-attack-kuwait.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tough Love: Will I Be Single Forever?",
+   "dek": "&#8216;I am aging out of my chance to have a child,&#8217; writes a 43-year-old woman who has never met the right guy. &#8216;I don&#8217;t know how to handle these emotions.&#8217; Abigail Shrier weighs in.",
+   "opening": "Happy Thanksgiving, one and all! Freya here, the editor of Tough Love. I imagine a lot of you are in a turkey coma, surrounded by people you adore, feeling unutterably grateful&#8212;but I know some of you are not. That&#8217;s because, in the last few weeks, I&#8217;ve noticed an overwhelming theme in the letters Abigail has received: A lot of readers have asked her, &#8220;Why don&#8217;t I have a boyfriend yet?&#8221; The question has come from women&#8212;and a couple of gay men&#8212;everywhere from the nation&#8217;s capital to the capital of Arkansas; most of them are in their early 30s, but since the dawn of the column, the same question has been asked by a 23-year-old in Arizona and a 52-year-old in Virginia. Nobody&#8217;s too young to feel lonely, or too old to date. But for everyone, there&#8217;s something about the holidays&#8212;when work is on pause and friends are scattered to the four corners of the earth&#8212;that makes you take a long, hard look at your life, and what&#8217;s missing. Into that void steps Abigail, with a letter to a 43-year-old woman who&#8217;s always the bridesmaid, never the bride, and believes: &#8220;I am doomed to be a swinging single for the rest of my life.&#8221; Abigail&#8217;s reply is a lament that we live in an age where it&#8217;s fashionable to pretend we can do without love. (It&#8217;s also a taste of what&#8217;s to come in Abigail&#8217;s next book, The Plot Against Love, which you can preorder now.) But it&#8217;s also",
+   "published": "2026-11-26T19:01:02+00:00",
+   "link": "https://www.thefp.com/p/tough-love-will-i-be-single-forever",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "early",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "News Wrap: EPA reports 'zero' airborne lead in Iowa",
+   "dek": "In our news wrap Thursday, the EPA is reporting \"zero\" airborne lead in Middletown, Iowa, a day after the Army detonated nearly five tons of toxic explosives, the Trump administration is planning for new, sharp tariffs on 14 countries, and President Trump says he told Russian president Vladimir Putin to \"pull back on military aggression\" in Europe.",
+   "opening": "",
+   "published": "2026-11-26T18:50:47-05:00",
+   "link": "https://www.pbs.org/newshour/show/news-wrap-epa-reports-zero-airborne-lead-in-iowa",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "iowa",
+     "lead"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "army",
+     "lead",
+     "iowa"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How Democrats' election successes could lead to new climate change policies",
+   "dek": "Even though it did not play a major role on the campaign trail, with Democrats' commanding wins nationwide as well as at the state level, some environmental groups are convinced that more substantive action is just around the corner. Caroline Spears, executive director of the advocacy group the Climate Cabinet, joins Williams Brangham to discuss.",
+   "opening": "",
+   "published": "2026-11-26T18:40:45-05:00",
+   "link": "https://www.pbs.org/newshour/show/how-democrats-election-successes-could-lead-to-new-climate-change-policies",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "role"
+    ],
+    "obj_x_all-climate-could-experts": [
+     "climate",
+     "could",
+     "though"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran accuses Zelenskyy of 'false flag' Kuwait drone strike op to get Trump's attention",
+   "dek": "A former Iran nuclear adviser claimed Thursday the Kuwait drone attack was a Ukrainian &quot;false flag&quot; staged to get President Donald Trump&apos;s attention.",
+   "opening": "A former adviser to Iran's nuclear negotiating team accused Ukraine on Thursday of orchestrating a deadly drone attack in Kuwait to prove its worth to President Donald Trump, as Tehran continued to deny responsibility. And while Kuwaiti and Italian officials blamed Iran for the strike, which killed two Italian defense technicians and wounded two others, Iran’s embassy in Rome warned against \"false flag\" operations it said were aimed at widening the Persian Gulf conflict and now drawing Europe into the crisis. Mohammad Marandi, who served as an adviser during talks with the U.S. in Pakistan and has been dubbed Iran's \" English-language mouthpiece ,\" claimed Ukrainian forces were operating across the Middle East, including in northern Iraq and Syria, also in remarks reported by the Fars News Agency, which is affiliated with the Islamic Revolutionary Guard Corps (IRGC). IRAN TARGETS US AIR BASE IN KUWAIT AFTER US DEFENSIVE STRIKES AMID CRITICISM FROM GULF STATES \"It is widely believed in Iran that the attack on Kuwait was a false flag operation, likely carried out by the Ukrainian regime, because its operatives are now present across the region, including in northern Iraq and Syria. Ukraine aims to demonstrate its potential to Trump,\" Marandi said on X. Fars also cited a security source who claimed Ukrainian operatives had deployed thousands of drones and other unmanned aircraft in several Middle Eastern countries, including Iraq's Kurdistan region, according to Iran Internation",
+   "published": "2026-11-26T18:19:59-05:00",
+   "link": "https://www.foxnews.com/world/iran-accuses-zelenskyy-false-flag-kuwait-drone-strike-op-get-trumps-attention",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran",
+     "irgc"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "After Democrats' midterm wins, some hope attacks on DEI will ease",
+   "dek": "After the midterms, a Democratic congressman declared that DEI is back. What does Democrats' ascendance portend for diversity initiatives that the Trump administration relentlessly attacked?",
+   "opening": "After the midterms, a Democratic congressman declared that DEI is back. What does Democrats' ascendance portend for diversity initiatives that the Trump administration relentlessly attacked?",
+   "published": "2026-11-26T18:06:14-05:00",
+   "link": "https://www.npr.org/2026/11/26/nx-s1-6036795-e1/after-democrats-midterm-wins-some-hope-attacks-on-dei-will-ease",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Universities, schools nationwide use Thanksgiving as chance to promote 'Day of Mourning' and decolonization",
+   "dek": "Campus Thanksgiving events have been reframed as a &quot;National Day of Mourning&quot; for Indigenous remembrance, with Salem State and Pratt citing historical harm.",
+   "opening": "Thanksgiving is a day of celebration and spending time with family for the vast majority of Americans, but for several students on college campuses across the country, the national holiday is a source of anguish that is being expressed in the form of protests and counter-programming events. On Nov. 18, George Washington University hosted an event called \"Breaking Bread: The Cost of Celebration\" that was described as a chance for students to examine Thanksgiving, Christmas and Independence Day through an intersectional lens, including experiences of \"belonging, exclusion, cultural erasure, and historical harm.\" \"Through facilitated dialogue and shared reflection, students will engage in meaningful conversations about historical memory, social responsibility, and the complexities of celebrating within a diverse society,\" the student life event description read. At the University of Wisconsin at Milwaukee, the American Indian Student Center &amp; Electa Quinney Institute for American Indian Education hosted a Nov. 17 event called \"AlterNative Giving,\" which was described as \"a community gathering that offers a meaningful alternative to the traditional Thanksgiving narrative. Instead of focusing on colonial histories, we come together to honor Indigenous ways of knowing, being, and giving.\" TRUMP DEI CRACKDOWN ‘MISSES CORE IDEOLOGY' AND MUST TARGET LINGERING DANGER ON CAMPUSES, WATCHDOG WARNS Salem State University promoted an event that labeled Thanksgiving as a \"National Day of",
+   "published": "2026-11-26T18:00:47-05:00",
+   "link": "https://www.foxnews.com/politics/universities-schools-nationwide-use-thanksgiving-chance-promote-day-mourning-decolonization",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_college-during-eye-federal": [
+     "college",
+     "student"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Youth ATVs recalled over high-speed crash hazard, risk of death",
+   "dek": "A recall was announced for youth all-terrain vehicles sold on Amazon because of a high-speed crash hazard that could lead to serious injury or even death.",
+   "opening": "A recall was issued for youth ATVs over a high-speed crash hazard that could lead to serious injury or even death, according to federal regulators. YALE-Direct recalled Yatorp youth ATV models MXMOTO MX49-A2 and MXRACING MX49-A1, the U.S. Consumer Product Safety Commission announced on Wednesday. About 162 youth ATVs are affected by the recall, the commission said. Officials said the ATVs violate the federal mandatory ATV safety standard, posing a risk of serious injury or death. STELLANTIS RECALLS NEARLY 82,000 RAM TRUCKS OVER ANTI-LOCK BRAKE SOFTWARE BUG \"The youth ATVs fail to meet mechanical suspension and maximum speed requirements for ATVs intended for children ages six and older, posing a high-speed crash hazard,\" the commission wrote. \"Additionally, the youth ATVs are missing safety reflectors, reducing visibility of the youth ATVs to other vehicles, posing a deadly crash hazard.\" \"The youth ATVs lack a mandated CPSC-approved ATV action plan, which is required for any manufacturer or distributor to manufacture, import, sell, or distribute any newly assembled or unassembled ATV in the United States,\" the commission added. \"ATV action plans are required to promote ATV safety, including free rider training, dissemination of safety information, age recommendations and other safety measures.\" HONDA RECALLS 810K VEHICLES OVER DANGEROUS TAKATA AIRBAG INFLATOR RUPTURE RISK The items were sold online on Amazon between March and July for about $611. The ATVs were sold in red an",
+   "published": "2026-11-26T17:58:58-05:00",
+   "link": "https://www.foxbusiness.com/economy/youth-atvs-recalled-over-high-speed-crash-hazard-risk-death",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_aid-could-cut-families": [
+     "states",
+     "could"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "lead",
+     "wednesday"
+    ],
+    "obj_x_australia-deal-despite-law": [
+     "online",
+     "safety"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Maddow on what Dems can get done under ‘PROFOUNDLY WEAK’ lame-duck Trump",
+   "dek": "“Democrats have a lot of room to maneuver in terms of what they focus on, but I also think it means they have a lot of choice…” Rachel Maddow analyzes what Democrats can and may tackle when they take control of Capitol Hill next year. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Become an MS NOW Member! Join us here http://ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day cl",
+   "opening": "",
+   "published": "2026-11-26T17:30:00+00:00",
+   "link": "https://www.youtube.com/shorts/ARgK6RTJrsU",
+   "videoId": "ARgK6RTJrsU",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Judge declines to issue a long-term ban on taxpayer-funded, pro-Trump ads critics called propaganda",
+   "dek": "A federal judge on Wednesday sided against Democrats on the federal government's taxpayer-funded ads that promoted partisan messages and President Donald Trump ahead of the midterm elections, declining to extend a temporary ban.",
+   "opening": "",
+   "published": "2026-11-26T17:20:22-05:00",
+   "link": "https://www.pbs.org/newshour/politics/judge-declines-to-issue-a-long-term-ban-on-taxpayer-funded-pro-trump-ads-critics-called-propaganda",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Latest Tariffs Revive Focus on Pressuring China",
+   "dek": "President Trump sent a message to trading partners across Asia, many of which depend on trade and investment from both the United States and China, that he is ready to escalate tariffs.",
+   "opening": "",
+   "published": "2026-11-26T17:03:32+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/trump-tariffs-asia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_x_china-others-production-ready": [
+     "ready",
+     "tariffs",
+     "china"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "tariffs",
+     "china"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Army Knew Much Earlier of the Explosive Risk in Iowa, Evidence Suggests",
+   "dek": "Efforts to get rid of unstable explosives at an Iowa plant began more than a year ago but weren’t completed at that time, setting the stage for Wednesday’s controversial blast.",
+   "opening": "",
+   "published": "2026-11-26T16:50:50+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/us/iowa-lead-ammunition-stockpile-history.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_army-azide-detonate-iowa": [
+     "army",
+     "iowa",
+     "wednesday"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "UK shields fighter jets, contacts reservists in Cold War-scale push amid Russia threat",
+   "dek": "Wes Streeting says the United Kingdom is contacting former service members to update its strategic reserve as Russian sabotage rises across Europe.",
+   "opening": "The United Kingdom is bolstering its military readiness amid growing threats from Russia, contacting former service members to assess its reserves as the Royal Air Force reportedly strengthens defenses against potential drone attacks. Britain's Ministry of Defence has written to former service members to verify their contact information and military skills to ensure the country is prepared for a national emergency or potential conflict, Secretary of State for Defence Wes Streeting confirmed Friday. The outreach comes as the International Institute for Strategic Studies warned Thursday that suspected Russian-directed sabotage across Europe could trigger a \"mass-casualty event.\" NATO WARNS PUTIN COULD STRIKE BEFORE EUROPEAN ARMY RESPONDS, POINTS TO US AS MILITARY MODEL The think tank found that sabotage incidents rose 16% in the year through September 2026, with Germany and Poland accounting for more than half of the cases. Researchers warned that a major attack could spark calls for retaliation and divide European governments. \"I want the country to be alert, not alarmed,\" Streeting told BBC Radio 4's \"Today\" program. \"You can't not look at what's going on in Europe and not be concerned about a threat environment which has deteriorated in recent years and is sadly increasing,\" he said. Streeting said the government needed updated records of its strategic reserve in case former service members were called upon to respond to a domestic disaster or overseas conflict. He cited Rus",
+   "published": "2026-11-26T16:14:20-05:00",
+   "link": "https://www.foxnews.com/world/uk-shields-fighter-jets-contacts-reservists-cold-war-scale-push-amid-russia-threat",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "eu-stocks": [
+     "strategic reserve"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "former",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tucker and Glenn Greenwald on the GTA 6 Phenomenon",
+   "dek": "Watch the full conversation here: https://youtu.be/rJy7wOapsts Watch more here: https://watchtcn.co/49CDF2t Paid partnership: Reminisce Angus Ranch: Holiday stocking stuffers are here! Shop now at Remangus.com Hallow prayer app: Get 3 months free at https://Hallow.com/Tucker #TuckerCarlson #GlennGreenwald #Midterms #Democrats #Republicans #debt #AI #Israel #Iran #exposed #GTA #nuclearwar #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-26T16:00:16+00:00",
+   "link": "https://www.youtube.com/watch?v=-1UD1b1Y0Ck",
+   "videoId": "-1UD1b1Y0Ck",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump takes on Somali welfare dependency in Thanksgiving message, lays out who should stay in US",
+   "dek": "President Donald Trump says only 2% of Minnesota&apos;s Somali community should stay, claiming on Truth Social the rest should be thrown out to save the state.",
+   "opening": "In a lengthy Thanksgiving message on Truth Social Thursday, President Donald Trump praised a small fraction of the Somali community, saying they should be allowed to remain in the United States, while calling for the immediate removal of those receiving government assistance while unemployed. The holiday post mixed praise for \"AMERICAN PATRIOTS\" with criticism of the \"Radical Far Left\" and Minnesota’s Somali community, which Trump has frequently accused of public assistance fraud in the state. \"I want to thank the 2% of our Somalian population that have a job, and are actually willing to work, without receiving Government Assistance,\" Trump wrote in the post. \"These are wonderful American ‘citizens,’ and should be allowed to stay in our Country, and celebrate Thanksgiving with us. The others should be thrown out, immediately, thereby saving the Great State of Minnesota, which has no chance if they are allowed to stay.\" SOMALIS IN MINNESOTA UNLEASH FURY ON TRUMP AFTER FEDS RAID ILHAN OMAR'S DC HOME Ken Martin, chair of the Democratic National Committee, said Trump was spending the holiday \"spewing hatred, attacking immigrants and bragging about his ballroom,\" saying he should instead be reminded that Thanksgiving is about \"gratitude, generosity and community, not bigotry and interior decorating.\" \"As a proud Minnesotan, let me make something abundantly clear: our Somali American neighbors are part of the fabric of our state,\" Martin wrote on X. \"They are small business owners,",
+   "published": "2026-11-26T15:58:30-05:00",
+   "link": "https://www.foxnews.com/politics/trump-takes-somali-welfare-dependency-thanksgiving-message-lays-who-should-stay-us",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_advances-area-committee-democratic": [
+     "democratic",
+     "committee"
+    ],
+    "obj_x_aid-could-cut-families": [
+     "states",
+     "mixed"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "STUNNING: Hegseth, Lutnick ENGULFED in controversy",
+   "dek": "Watch highlights and must-see interviews from your favorite MS NOW shows. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context and news coverage of the most important stories of our day click here: https://www.ms.now/ #TrumpAdministration #PeteHegseth #Nvidia",
+   "opening": "",
+   "published": "2026-11-26T15:00:39+00:00",
+   "link": "https://www.youtube.com/watch?v=CAr2NOaKr5Y",
+   "videoId": "CAr2NOaKr5Y",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Nvidia CEO's comeback fuels debate over misogyny and impunity for the rich and powerful",
+   "dek": "Just over a year ago, the chief executive officer of an Ohio tech company was forced to resign when he was caught on video embracing an employee at a Coldplay concert. The CEO of McDonald's was among several pushed out over a consensual relationship at the height of the #MeToo movement.",
+   "opening": "",
+   "published": "2026-11-26T14:33:22-05:00",
+   "link": "https://www.pbs.org/newshour/nation/nvidia-ceos-comeback-fuels-debate-over-misogyny-and-impunity-for-the-rich-and-powerful",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Amtrak ridership hits record as high gas prices drive more Americans to train travel",
+   "dek": "The rail operator posted its third consecutive year of record passenger volume, fueled in part by high airfares and gas prices, as revenue climbed to $4.1 billion.",
+   "opening": "Amtrak said this week that it hit a record 37.1 million riders over the past year, a 7.4% jump fueled in part by Americans ditching expensive flights and high gas prices. For the 12-month period ending Sept. 30, the rail service brought in $4.1 billion in total operating revenue, up 4.9% from the previous year. The company posted an adjusted net loss of $492.7 million — a 19% improvement over the previous year. It marks the third straight year of record-breaking passenger volume for the rail operator. \"I have no doubt that the airline prices, gas prices pushed people to say, 'Maybe I should ride the train instead',\" interim President Byl Herrmann said in an interview. HOLIDAY AIRFARES HIT HIGHEST LEVELS IN A DECADE AS JET FUEL PRICES SURGE He said significant infrastructure investments in the Northeast corridor were key to improving reliability and boosting ridership, as are new, more reliable trainsets, which in some cases will replace trains that are more than 40 years old. Amtrak plans to replace its Northeast regional trainsets by 2028 and last year began replacing its higher-speed Acela trains with new trainsets. \"Frankly, I want to be in a range where I'm competing with the airlines, and some of these airlines, we're going to surpass them in the next few years for the number of passengers they have,\" Herrmann said. THANKSGIVING TRAVEL TO DIP FOR FIRST TIME IN YEARS AS HIGHER COSTS WEIGH ON AMERICANS One of Amtrak's goals is to cut the journey between New York and Washin",
+   "published": "2026-11-26T14:13:20-05:00",
+   "link": "https://www.foxbusiness.com/lifestyle/amtrak-ridership-hits-record-high-gas-prices-drive-more-americans-train-travel",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "obj_thesenat_approvals-bill-bipartisan-deal": [
+     "speed",
+     "infrastructure"
+    ],
+    "obj_x_apple-biggest-costs-fertilizer": [
+     "fuel",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Ukrainian intelligence says North Korea paused missile deliveries to Russia amid friction over South Korea",
+   "dek": "North Korea paused ballistic missile and artillery shipments to Russia after friction over Moscow&apos;s outreach to South Korea, Ukrainian intelligence said.",
+   "opening": "North Korea has temporarily halted shipments of ballistic missiles and artillery shells to Russia following diplomatic friction between the two allies over Moscow's outreach to South Korea, Ukrainian military intelligence said Thursday. According to Ukraine's GUR military intelligence agency, North Korean Foreign Minister Choe Son Hui announced the freeze on KN-23 ballistic missile and artillery deliveries last month after Russian Deputy Foreign Minister Andrey Rudenko suggested Moscow would help de-escalate tensions between Seoul and Pyongyang, Reuters reported. Choe demanded that Russia clarify its policy toward South Korea, GUR said, though Reuters noted it could not independently verify the report or confirm public remarks from either official. PUTIN'S WAR DEATH TOLL REPORTEDLY TOPS 700,000 AS RUSSIA SCRAMBLES FOR RECRUITS The reported pause also suspends Russian military flights over North Korea and stalls a Kremlin request to expand North Korea's troop deployment in Russia from roughly 8,500 to 50,000, according to the outlet. Rudenko, who oversees Asian relations, said last month that Seoul had signaled interest in normalizing ties and resuming direct flights with Moscow once the Ukraine war ends. Despite the reported freeze, North Korean troops remain active in Russia, with 11th Corps units serving in the Kursk region and a missile unit operating in Voronezh since mid-summer, GUR said. Russian President Vladimir Putin also hosted top Kim Jong Un aide Jo Yong Won at th",
+   "published": "2026-11-26T14:10:13-05:00",
+   "link": "https://www.foxnews.com/world/ukrainian-intelligence-north-korea-paused-missile-deliveries-russia-friction-south-korea",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_allegations-california-democrat-ethics": [
+     "following",
+     "report"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "official",
+     "death"
+    ],
+    "obj_x_all-climate-could-experts": [
+     "could",
+     "though"
+    ],
+    "obj_x_brewing-could-following-proposal": [
+     "could",
+     "following"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Politics, money and Thanksgiving dinner: Just two words can help avoid argument",
+   "dek": "Dr. Joel Davis Brown says swapping &quot;yes, but&quot; for &quot;yes, and&quot; can keep Thanksgiving dinner talk civil as post-midterm politics turn tense at the table.",
+   "opening": "As Americans across the country sit down to Thanksgiving dinner just weeks after Democrats' midterm sweep drastically reshaped the political landscape going into 2027, conversations about politics and the economy could turn tense. Dr. Joel Davis Brown, a leadership expert, executive coach and author who studies how people communicate and navigate conflict, says swapping out the word \"but\" when discussing controversial topics can help keep the discussions civil. \"‘But’ shows disagreement,\" Brown told Fox News Digital. \"It’s a way of telling the person that what they said should not be heard, and it really stifles conversation.\" Instead, Brown suggests trying \"yes, and.\" That doesn’t mean you have to agree, he said. Rather, it signals that you’ve heard the other person and leaves room to share a different view. \"‘Yes, I’ve heard you and I have a different opinion,’\" Brown said. \"We can listen to varying opinions.\" FOOD PRICES ARE RISING BEFORE THANKSGIVING. AN ECONOMIST SHARES WAYS TO SAVE If a hot-button topic comes up, Brown recommends asking the person to \"tell me more about that.\" The question, he says, can help you understand how someone arrived at their view instead of turning the exchange into a debate. He also cautions against opening with \"I disagree,\" which can put people \"in an oppositional place\" before they have fully heard one another. Rather than trading facts and figures to win an argument, he said, people may make more headway by sharing personal stories and li",
+   "published": "2026-11-26T14:00:55-05:00",
+   "link": "https://www.foxnews.com/politics/politics-money-thanksgiving-dinner-two-words-help-avoid-argument",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_democrats-leadership-ousted-progressive": [
+     "democrats",
+     "leadership"
+    ],
+    "obj_x_brexit-deal-food-post": [
+     "post",
+     "food"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bangkok oil refinery explosion injures at least 9, Thailand company monitoring air quality",
+   "dek": "Nine people are injured, three critically, after an explosion at Bangchak Corporation&apos;s oil refinery in Bangkok, Thailand, as residents get phone alerts.",
+   "opening": "At least nine people have been injured in an oil refinery explosion in Bangkok, Thailand, on Thursday, with three in critical condition. The explosion occurred at a Bangchak Corporation-owned facility, the company confirmed in a statement posted to Facebook. The company also claimed it was able to control and extinguish a large blaze caused by the explosion within 30 minutes of the blast. EMERGENCY CREWS RESPONDING TO MASSIVE EXPLOSION AT NEW ORLEANS-AREA OIL REFINERY: SHERIFF Additionally, it claimed monitoring showed no reduction in normal air quality. \"Since the incident occurred, the company has continuously monitored air quality in real time using automatic ambient air quality monitoring (AQM) stations, which the company has installed in the Phra Khanong, Bang Na, and Bang Nam Phueng areas to measure air quality around the refinery resulting from operations,\" the company wrote. TWO INJURED AFTER EXPLOSION RIPS THROUGH CHEMICAL PLANT, SPARKING HAZMAT RESPONSE, SHELTER-IN-PLACE ORDER \"It was found that the air quality in the surrounding area of the refinery is within normal standards. Furthermore, at 5: 30 PM (17: 30 hrs.), the Pollution Control Department measured the air quality within a 3–4 km radius around the refinery—the same radial area—and confirmed that the measurement results are within normal standards,\" the statement added. The company said it has also paused all production operations at the facility. 'PURE HELL' IN MOSCOW AS UKRAINIAN DRONES STRIKE MAJOR REFIN",
+   "published": "2026-11-26T13:21:59-05:00",
+   "link": "https://www.foxnews.com/world/bangkok-oil-refinery-explosion-injures-least-9-thailand-company-monitoring-air-quality",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "refiner"
+    ],
+    "obj_afederal_abc-blocks-disney-fcc": [
+     "owned",
+     "stations"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump heads to Arizona next week for a high-stakes expansion of TSMC's computer chip factories",
+   "dek": "President Donald Trump, who has staked his economic policy on growth in the artificial intelligence sector, will travel to Arizona on Dec. 4 to speak at the groundbreaking for a new Taiwan Semiconductor Manufacturing Co. computer chip foundry, according to both the White House and the Taiwan-based company.",
+   "opening": "",
+   "published": "2026-11-26T12:52:23-05:00",
+   "link": "https://www.pbs.org/newshour/politics/trump-heads-to-arizona-next-week-for-a-high-stakes-expansion-of-tsmcs-computer-chip-factories",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "tsmc",
+     "semiconductor"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump demands probe into 'fake' pre-election GDP data after Q3 growth revised up to 4.3%",
+   "dek": "President Donald Trump called for an investigation into the Bureau of Economic Analysis after third-quarter U.S. GDP growth was revised up 0.9 percentage points to 4.3%.",
+   "opening": "President Donald Trump demanded an immediate investigation Thursday morning into the federal agency responsible for tracking U.S. economic growth, alleging without evidence that officials deliberately understated third-quarter gross domestic product (GDP) days before the midterm elections . In a post on Truth Social, Trump pointed to Wednesday’s revision from the Commerce Department’s Bureau of Economic Analysis (BEA), which raised annualized third-quarter GDP growth to 4.3% — up 0.9 percentage points from the 3.4% advance estimate published on Oct. 29, five days before the Nov. 3 elections. ELON MUSK SAYS HE IS ‘NOT MAGA,' IN DEPARTURE FROM PAST COMMENTS \"It was just revealed that the REAL Numbers on the Economy, published before the Election, were FAKE, and a correction was issued yesterday by the people in the Government Agency that does these numbers,\" Trump wrote. \"The American Economy under The Trump Administration is doing FAR BETTER than the good numbers already released. Third Quarter GDP Growth has now been corrected to be 4.3%, instead of 3.4%, a major difference!\" The president questioned why the \"correct\" number wasn't issued before the midterm elections earlier this month, in which the Republican Party suffered heavy losses. \"I am asking for an immediate investigation of this situation,\" Trump said. \"This is not a small error, this is a massive, and purposeful, error.\" CLICK HERE TO GET FOX BUSINESS ON THE GO According to the BEA, the 0.9 percentage-point upward",
+   "published": "2026-11-26T12:21:34-05:00",
+   "link": "https://www.foxbusiness.com/politics/trump-demands-probe-pre-election-gdp-data-revision",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What We’re Grateful For",
+   "dek": "This Thanksgiving, Free Press staff and contributors count their blessings.",
+   "opening": "This year, America celebrated 250 years since its founding. There were fireworks and parades, but of all the traditions this country has handed down, one of the best may be the one that arrives today: a day set aside, by Abraham Lincoln&#8217;s proclamation, to say thank you. This has also been a year in which much has felt uncertain&#8212;politically, technologically, economically&#8212;and everything seemed to speed up. Maybe that&#8217;s why, when we asked our Free Press staff and contributors what they&#8217;re grateful for, so many of their answers came back to slowing down and focusing on what&#8217;s right in front of us: new babies, a diner that doesn&#8217;t deliver, grandparents down the block. Others cast a much wider net and said they were grateful for a country that, at 250, still has its best days ahead of it. Before we get to the responses, we want to express our collective gratitude for you, Free Press subscribers. You make everything we do possible. And if you&#8217;re not yet a paid subscriber, there&#8217;s no better time to join. Right now you can get 25 percent off your first year. Already a subscriber? You can give the gift of The Free Press at the same discount. Get 25% Off Happy Thanksgiving.&nbsp;&#8212;The Editors Suzy Weiss, co-founder and reporter As AI becomes more powerful and the headlines scarier, I&#8217;ve found myself grasping for the basics. I&#8217;m grateful for long, lazy meals at home, and my new hobby, which is hand-built pottery, whic",
+   "published": "2026-11-26T11:03:34+00:00",
+   "link": "https://www.thefp.com/p/what-we-are-grateful-for-2026",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "2026's biggest political turkeys: Scandals, gaffes and other memorable unfortunate moments from this year",
+   "dek": "Eric Swalwell&apos;s California gubernatorial collapse, Tim Walz&apos;s fraud scandal and more: the political figures whose 2026 ended in scandal and defeat.",
+   "opening": "As 2026 comes to a close, several political blunders, missteps, and serious allegations have left prominent politicians and notable figures presumably looking back with regret. Here are the top political turkeys who made headlines for unfortunate reasons this year. Heading into 2026, Eric Swalwell was a well-known member of Congress and the leading Democratic contender in the race for governor of California. By March, he had become the frontrunner in the race and looked poised to take control of the nation’s largest economy in a state where Democrats rarely lose in statewide general elections. Shortly after, that all changed when allegations of sexual assault and other misconduct surfaced in April, prompting prominent Democrats to swiftly withdraw their endorsements and call for Swalwell to abandon his gubernatorial bid. SWALWELL’S FORMER DEM RIVAL UNLOADS ON HIS ‘LIGHTWEIGHT’ CAREER AS SEXUAL ASSAULT ALLEGATIONS EMERGE Swalwell denied the sexual assault allegations, but within days he suspended his campaign and resigned from Congress amid bipartisan calls for his ouster, which effectively ended his political career and put him in potential legal jeopardy. Swalwell faces a federal investigation and separate probes in New York and Los Angeles into sexual assault allegations, which he denies. FBI agents seized his electronic devices and searched his Washington home in August, and in October searched a Beverly Hills mansion where he had stayed. No criminal charges have been file",
+   "published": "2026-11-26T11:00:02-05:00",
+   "link": "https://www.foxnews.com/politics/2026-biggest-political-turkeys-scandals-gaffes-memorable-unfortunate-moments-year",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "former"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "general",
+     "former"
+    ],
+    "obj_x_allegations-california-democrat-ethics": [
+     "california",
+     "sexual"
+    ],
+    "obj_x_ethics-finds-gomez-misconduct": [
+     "misconduct",
+     "democratic"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "when",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Egypt detains driver suspected of causing Cairo fuel tanker crash and inferno that left 31 dead",
+   "dek": "The driver accused of sparking Cairo&apos;s deadly fuel tanker fire on the Ring Road is in custody as prosecutors detail the crash that led to the blaze.",
+   "opening": "Egyptian authorities said Thursday that a driver suspected of causing a fuel tanker crash in Cairo — sparking a massive inferno described by a witness as \"God’s hellfire\" and leaving 31 dead — has been taken into custody. The deadly blaze erupted Wednesday during rush hour on a major highway surrounding the Egyptian capital, burning 27 vehicles and also leaving 26 injured. As of Thursday, traffic on the Ring Road returned to normal after most of the wreckage was cleared. \"It was God’s hellfire on the Ring Road,\" Salah Ahmed, a microbus driver who witnessed the inferno, told The Associated Press. \"People are still in shock.\" Another witness said to Reuters that victims were found trapped in their vehicles as \"they did not have time to get out.\" STATE DEPARTMENT PRESSES EGYPT TO RESPECT RELIGIOUS FREEDOM AS CHRISTIAN CONVERT FACES POSSIBLE EXECUTION Video footage taken near the scene showed a blaze completely engulfing the highway as people gathered to look at the flames. Egyptian prosecutors said in a statement that authorities had detained the driver of a vehicle suspected of causing the fuel tanker to overturn, which resulted in the fire. They said the driver told investigators he was speeding between lanes when he hit the oil tanker in the rear right. He then lost control of his car and veered far to the right while one of the fuel truck’s tires burst. That caused the fuel tanker to hit the concrete wall of the highway and overturn, leading to the spill of fuel and the fire",
+   "published": "2026-11-26T10:41:46-05:00",
+   "link": "https://www.foxnews.com/world/egypt-detains-driver-suspected-causing-cairo-fuel-tanker-crash-inferno-left-31-dead",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "tanker"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "FIFA confirms criminal cyberattack, says $4.2B World Cup stake sale files were untouched",
+   "dek": "World soccer&apos;s governing body confirmed a cyberattack compromised less than 0.1% of its data, while a source said records from a shelved $4.2B World Cup stake sale remained secure.",
+   "opening": "FIFA confirmed Thursday it suffered a criminal cyberattack that exposed a limited amount of personal and business data, though files tied to the organization's scrapped $4.2 billion World Cup stake sale were reportedly untouched. The intrusion impacted less than 0.1% of FIFA's total data, Reuters reported, citing a source close to the matter who said that files linked to the abandoned \"FIFA Forward Enterprise\" initiative remained secure. In July, FIFA President Gianni Infantino shelved that controversial proposal following widespread backlash. Under that plan, FIFA aimed to bring in up to $4.2 billion from private investors in exchange for a 20% equity stake in a new commercial subsidiary managing major tournaments, including the World Cup. FEDERAL JURY CONVICTS HUAWEI OF STEALING US TRADE SECRETS, VIOLATING IRAN SANCTIONS \"FIFA can confirm that it has been the victim of a criminal cyberattack resulting in unauthorized access to a limited set of personal and business information,\" a FIFA spokesperson told FOX Business in a statement, adding that the organization \"is working closely with the relevant authorities, including law enforcement.\" The spokesperson said FIFA \"condemns in the strongest possible terms the unlawful acquisition and publication of information, particularly personal data,\" noting that such actions \"constitute a serious and unacceptable violation of privacy and can have significant consequences for the individuals concerned.\" The disclosure comes amid height",
+   "published": "2026-11-26T10:10:02-05:00",
+   "link": "https://www.foxbusiness.com/sports/fifa-confirms-cyberattack-world-cup-stake-sale-files",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "obj_x_brewing-could-following-proposal": [
+     "trade",
+     "following",
+     "proposal"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump Tried to Cripple Huawei. Now It Is Central to China’s A.I. Push.",
+   "dek": "As China’s access to Nvidia’s advanced chips shrinks, Huawei is becoming increasingly indispensable to Beijing despite a wide technological gap with its American rival.",
+   "opening": "",
+   "published": "2026-11-26T10:01:56+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/huawei-trump-china-ai.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "nvidia",
+     "chips"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Apple pulls Chinese-developed AI chatbot from App Store over reports of sexual messages to kids",
+   "dek": "Apple pulled the Talkie AI chatbot app from the App Store worldwide after reports alleged its virtual characters sent inappropriate messages to children.",
+   "opening": "Apple has yanked an AI chatbot app with roughly 11 million monthly users from its App Store worldwide after reports alleged the platform’s virtual characters sent sexually inappropriate messages to children . The app, Talkie, is developed by Shanghai-based MiniMax and was removed this week following Wednesday reports by Australia's ABC News and the United Kingdom's Bureau of Investigative Journalism that its AI-generated characters sent abusive messages to minors. Although Talkie carries an 18+ rating on both the Apple App Store and Google Play Store and states that children aged under 14 or under 16 cannot sign up, depending on the country, child safety advocates have criticized its lax verification safeguards that allow users to self-report their age. INSTAGRAM'S AI MAY CATCH TEENS LYING ABOUT THEIR AGE Apple told FOX Business that the company enforces strict App Review Guidelines prohibiting offensive, sexual or pornographic material and previously took action against the platform. Apple originally rejected Talkie: Personalized AI Chats in July 2023 for carrying a 13+ rating, requiring the developer to raise it to 18+ before launch. Apple later removed that app in December 2024 over objectionable user-generated content and subsequently pulled the developer's other app, Talkie Lab - AI Playground, for sexual content. Apple also noted that as of Nov. 16, developers can declare whether their apps include \"Dating and Relationships\" features — which automatically triggers a min",
+   "published": "2026-11-26T09:35:42-05:00",
+   "link": "https://www.foxbusiness.com/technology/apple-pulls-chinese-developed-ai-chatbot-from-app-store-over-reports-sexual-messages-kids",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_allegations-california-democrat-ethics": [
+     "following",
+     "report",
+     "sexual"
+    ],
+    "obj_x_australia-deal-despite-law": [
+     "australia",
+     "safety"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based",
+     "chinese"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "review",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Norse Atlantic airline suspends all flights, on brink of bankruptcy amid rising fuel costs",
+   "dek": "Norse Atlantic suspended all flights as its board warned it may file for bankruptcy without urgent short-term financing, leaving PIA passengers stranded.",
+   "opening": "Norwegian airline Norse Atlantic suspended all flights Thursday as its board warned the company may imminently file for bankruptcy if it can't secure short-term financing. \"If a short-term financing solution is not secured urgently, it is the Board's intention to file for bankruptcy,\" the company said in a statement . The airline, which provides long-haul flights between the U.S. and Europe, said it had been discussing with investors a possible takeover that \"would include a financing solution.\" SHIPPING GIANT WARNS STRAIT OF HORMUZ CHAOS IS 'NEW NORMAL' AS TEHRAN SHIFTS 4M BARRELS But, the company added, \"There can be no assurance that a viable solution will be found.\" Pakistan International Airlines (PIA), which contracts jets from Norse through a wet-lease program, shifted all United Kingdom flights to its own Boeing 777 planes, claiming Norse announced the suspension with no notice as PIA passengers were preparing to board. Norse, amid rising fuel costs from the Iran war , began leasing out its Boeing 787 fleet to other airlines as it struggled to make a profit on trans-Atlantic flights. In July, IndiGo, India's largest carrier, announced it would conclude its own wet-lease program with Norse by the end of October. Norse's stock price plummeted and closed down 85%. Most of its value has been wiped out since the start of the year and the stock is now trading at $0.010. Jet fuel prices in Europe have more than doubled since March amid fallout from the Iran war and the restr",
+   "published": "2026-11-26T08:56:57-05:00",
+   "link": "https://www.foxnews.com/world/norse-atlantic-airlines-suspends-all-flights-brink-bankruptcy-amid-rising-fuel-costs",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of",
+     "fuel price"
+    ],
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_against-asks-charges-drop": [
+     "trading",
+     "there"
+    ],
+    "obj_x_apple-biggest-costs-fertilizer": [
+     "fuel",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump, NATO chief push Russia to avoid any actions that would 'expand the war' with Ukraine",
+   "dek": "President Donald Trump and NATO chief Mark Rutte, who met Wednesday night at Mar-a-Lago, urged Russia to avoid actions that might expand the Ukraine war.",
+   "opening": "President Donald Trump and NATO Secretary-General Mark Rutte are calling on Russia to avoid making any moves \"that intentionally, or unintentionally, expand the war\" against Ukraine. The declaration came after the pair got together at Trump's Mar-a-Lago residence in Florida on Thanksgiving Eve for what was described as an \"outstanding meeting.\" However, Russia hit Kyiv with ballistic missiles overnight, according to the mayor of the Ukrainian capital. \"The meeting was very impactful, with the war between Russia and Ukraine and the conflict in Iran being the primary subjects, as well as all of the record setting achievements that we have made together at the summits in the Hague and at Ankara,\" Trump and Rutte said in a joint statement. \"We also discussed the importance of Russia avoiding any actions that intentionally, or unintentionally, expand the war, and the importance of obtaining a peaceful resolution to the war as rapidly as possible,\" the statement added. \"Lastly, we talked about the importance of continuing to expand defense spending and investment in our industrial base, both in the United States and across NATO.\" PUTIN'S WAR DEATH TOLL REPORTEDLY TOPS 700,000 AS RUSSIA SCRAMBLES FOR RECRUITS On Thursday, Trump said on Truth Social that \"during my conversations in China with President Vladimir Putin, of Russia, I spent a lot of time talking about the fact that I would like to see President Putin pull back all Military aggression against territories throughout Europe",
+   "published": "2026-11-26T08:16:51-05:00",
+   "link": "https://www.foxnews.com/politics/trump-nato-chief-push-russia-avoid-actions-expand-war-ukraine",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "iran",
+     "resolution"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "capital"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "china",
+     "death"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Storms disrupt Thanksgiving travel. And, FCC violated ABC's free speech, judge says",
+   "dek": "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like.",
+   "opening": "The East Coast's weather is a major concern this holiday, as it could lead to coastal flooding. And, the judge says the FCC can't punish ABC for satire Trump doesn't like. (Image credit: Timothy A. Clary)",
+   "published": "2026-11-26T07:24:29-05:00",
+   "link": "https://www.npr.org/2026/11/26/g-s1-155950/up-first-newsletter-thanksgiving-weather-travel-trump-tariffs-iowa-detonation-fcc-free-speech",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "judge",
+     "lead"
+    ],
+    "obj_afederal_abc-fcc-free-judge": [
+     "judge",
+     "violated",
+     "free",
+     "speech"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump administration proposes new tariffs on goods from major U.S. trading partners",
+   "dek": "President Trump's new proposed tariffs are already meeting pushback from Democrats and some free trade advocates.",
+   "opening": "President Trump's new proposed tariffs are already meeting pushback from Democrats and some free trade advocates.",
+   "published": "2026-11-26T06:43:47-05:00",
+   "link": "https://www.npr.org/2026/11/26/nx-s1-6054103/trump-administration-proposes-new-tariffs-on-goods-from-major-u-s-trading-partners",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Sen. Tim Kaine, D-Va., shares why he opposes Trump's proposed tariffs",
+   "dek": "NPR's A Martinez speaks with Virginia Sen. Tim Kaine about the Democrat's opposition to President Trump's new tariffs.",
+   "opening": "NPR's A Martinez speaks with Virginia Sen. Tim Kaine about the Democrat's opposition to President Trump's new tariffs.",
+   "published": "2026-11-26T06:43:10-05:00",
+   "link": "https://www.npr.org/2026/11/26/nx-s1-6053944/sen-tim-kaine-d-va-shares-why-he-opposes-trumps-proposed-tariffs",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump country cracked: 5 races that saw double-digit Trump territory fall to Democrats in 2026",
+   "dek": "Donald Trump carried Mississippi by nearly 23 points, yet Scott Colom beat Cindy Hyde-Smith by less than one, ending a 44-year GOP Senate drought.",
+   "opening": "Donald Trump carried Mississippi by nearly 23 points in 2024. Two years later, Democrat Scott Colom won the state’s Senate race, ending a Republican hold that had lasted more than four decades. Colom’s victory was part of a string of Democratic breakthroughs during the midterms in places Trump had carried by double digits. Democrats also won Senate races in Kansas and South Carolina, captured the Texas governor’s office and flipped a Republican-held House seat deep in Trump country in Indiana that had not elected a Democrat since 1990. The results stand out for more than the presidential margins as well — Democrats broke Senate streaks that had lasted decades and defeated Republican incumbents in races many expected the GOP to hold, including one where the Democratic challenger spent next to nothing on television advertisements. FOX NEWS VOTER POLL: HOW DEMOCRATS TOOK CONTROL OF THE SENATE Here are five of the year’s most striking upsets: Trump carried the state by nearly 23 points in 2024, and a Democrat had not won a U.S. Senate race in Mississippi since 1982. Several major election forecasters rated the contest Solid Republican for much of the cycle, before shifting it to Likely Republican as the race tightened. Colom, a district attorney, defeated Republican incumbent Sen. Cindy Hyde-Smith, R-Miss., by less than one percentage point, 49.36% to 48.54%, according to Associated Press election results. Hyde-Smith had Trump’s backing, and the president rallied for her in the c",
+   "published": "2026-11-26T06:00:51-05:00",
+   "link": "https://www.foxnews.com/politics/trump-country-cracked-5-races-double-digit-trump-territory-fall-democrats-2026",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm",
+     "senate race"
+    ],
+    "exit-poll": [
+     "voter poll"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "mississippi",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Holiday staples still surging ahead of Thanksgiving dinner. Economist shares how to save on the spread",
+   "dek": "Diesel costs are driving up meat, dairy and fresh food prices this Thanksgiving, but an expert says brand flexibility can keep meals affordable.",
+   "opening": "The turkey may be a holiday bargain, but rising prices for meat, dairy and fresh foods could make the rest of the Thanksgiving spread cost much more this year. Richard Volpe, a professor of agribusiness at Cal Poly San Luis Obispo, told Fox News Digital that sustained high energy costs in the midst of the Iran war — particularly for diesel — are pushing up grocery prices just as households prepare to host holiday meals. Surging prices of ham and eggnog, in particular, could put a damper on some holiday favorites. \"Most of the biggest increases are things like fruits, vegetables and meats,\" Volpe said. \"Fresh and refrigerated foods feel those costs sooner than shelf-stable products.\" 7 COSTCO THANKSGIVING FOOD DEALS AND STEALS THAT SHOPPERS CAN'T MISS THIS HOLIDAY SEASON Dairy is also especially energy and transportation intensive, putting holiday staples such as butter and eggnog under pressure. Volpe said shoppers willing to switch brands and take advantage of store promotions can keep holiday meals more affordable . \"If you are less worried about brand or banner loyalty, and you’re able to follow promotions and look for these sort of aggressive, enticing deals, there are still ways to achieve savings and to keep those Thanksgiving and holiday dinners relatively affordable,\" Volpe said. He also acknowledged that high beef and pork prices could contribute to some households deciding to dine on a different main dish for their holiday meals this year. \"Beef and pork are particu",
+   "published": "2026-11-26T05:00:15-05:00",
+   "link": "https://www.foxnews.com/politics/holiday-staples-surging-ahead-thanksgiving-dinner-economist-shares-how-save-spread",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "diesel"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_x_apple-biggest-costs-fertilizer": [
+     "costs",
+     "biggest"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
