@@ -1,9 +1,9 @@
 # Newsroom digest — 2026-11-28
 
-Register: 215 objects · this scan: 1 new, 0 seen again, 0 returned.
+Register: 217 objects · this scan: 2 new, 0 seen again, 0 returned.
 
-## Queued for drafting (1)
-- **Court rejects Argentina request to stop united kingdom oil activity near Falklands - Dominican Republic Post – Caribbean News , Business , Travel & Culture** — vote · voted · holder: a federal court · formed 2026-11-28 · 3 outlets (peak 3) · `obj_afederal_activity-argentina-business-caribbean`
+## Queued for drafting (0)
+- (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
 - **Pregnant workers ruling puts $1 . 7 trillion COVID - era House vote under scrutiny** — ruling · ruled · holder: the House · formed 2026-11-23 · 7 outlets (peak 7) · `obj_thehouse_covid-era-house-pregnant` · silent 5d after 2 scans
@@ -13,7 +13,8 @@ Register: 215 objects · this scan: 1 new, 0 seen again, 0 returned.
 - none today
 
 ## New objects (all)
-- **Court rejects Argentina request to stop united kingdom oil activity near Falklands - Dominican Republic Post – Caribbean News , Business , Travel & Culture** — vote · voted · holder: a federal court · formed 2026-11-28 · 3 outlets (peak 3) · `obj_afederal_activity-argentina-business-caribbean`
+- **Argentina loses bid to halt oil drilling off nearby united kingdom - held Falkland Islands** — ruling · ruled · holder: ? · formed 2026-11-28 · 6 outlets (peak 6) · `obj_x_argentina-bid-drilling-falkland`
+- **In Strip Club Heiress , Laurel Woods explores her dad murder conviction – The Oakland Press** — indictment · charged · holder: ? · formed 2026-11-28 · 16 outlets (peak 16) · `obj_x_club-conviction-dad-explores`
 
 ## Watching (55)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
