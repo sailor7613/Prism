@@ -1,18 +1,19 @@
-# Newsroom digest — 2026-11-27
+# Newsroom digest — 2026-11-28
 
-Register: 213 objects · this scan: 0 new, 1 seen again, 0 returned.
+Register: 214 objects · this scan: 1 new, 0 seen again, 0 returned.
 
 ## Queued for drafting (0)
 - (nothing cleared the bar)
 
 ## Permanence breaks (went silent while unresolved)
-- none today
+- **Pregnant workers ruling puts $1 . 7 trillion COVID - era House vote under scrutiny** — ruling · ruled · holder: the House · formed 2026-11-23 · 7 outlets (peak 7) · `obj_thehouse_covid-era-house-pregnant` · silent 5d after 2 scans
+- **Pregnant workers could lose workplace protections after appeals court strikes down law** — ruling · ruled · holder: a federal court · formed 2026-11-23 · 3 outlets (peak 3) · `obj_afederal_appeals-could-court-down` · silent 5d after 2 scans
 
 ## Returned after a break
 - none today
 
 ## New objects (all)
-- none
+- **Traveling with children in Mexico ? New rules require proof of relationship .** — ruling · ruled · holder: ? · formed 2026-11-28 · 4 outlets (peak 4) · `obj_x_children-mexico-proof-relationship`
 
 ## Watching (55)
 - **FACT FOCUS : No , Biden did not revoke the White House press passes of more than 400 journalists** — vote · voted · holder: the President · formed 2026-09-23 · 3 outlets (peak 3) · `obj_thepresi_400-biden-did-fact`
