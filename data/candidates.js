@@ -1,15 +1,15 @@
 // Auto-generated — legislative: scripts/fetch-activity.js · news: scripts/fetch-news.js
-// 2026-11-28T08:06:12.957Z · 16 legislative + 8 news (GDELT, 3d)
+// 2026-11-28T17:40:27.268Z · 16 legislative + 6 news (GDELT, 3d)
 // Consumed by the admin-surface 📡 newsroom → PrismDB.importCandidates
 window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-2347",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579612,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-2347",
-      "salience": 0.786,
+      "salience": 0.784,
       "congressGovUrl": null,
       "votes": [
         {
@@ -532,11 +532,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_sjres-119-197",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "sjres-119-197",
-      "salience": 0.608,
+      "salience": 0.607,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-joint-resolution/197",
       "votes": [
         {
@@ -789,11 +789,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-7008",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579612,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-7008",
-      "salience": 0.599,
+      "salience": 0.597,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/7008",
       "votes": [
         {
@@ -1046,11 +1046,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9340",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9340",
-      "salience": 0.563,
+      "salience": 0.561,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9340",
       "votes": [
         {
@@ -1303,11 +1303,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3633",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3633",
-      "salience": 0.555,
+      "salience": 0.553,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
       "votes": [
         {
@@ -1560,11 +1560,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hjres-119-1",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hjres-119-1",
-      "salience": 0.493,
+      "salience": 0.491,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-joint-resolution/1",
       "votes": [
         {
@@ -2473,11 +2473,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-4668",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-4668",
-      "salience": 0.452,
+      "salience": 0.45,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/4668",
       "votes": [
         {
@@ -3001,11 +3001,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-5334",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-5334",
-      "salience": 0.451,
+      "salience": 0.45,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/5334",
       "votes": [
         {
@@ -3917,11 +3917,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4795",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4795",
-      "salience": 0.429,
+      "salience": 0.427,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4795",
       "votes": [
         {
@@ -4818,11 +4818,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-3276",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-3276",
-      "salience": 0.236,
+      "salience": 0.234,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/3276",
       "votes": [
         {
@@ -5717,11 +5717,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-6500",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-6500",
-      "salience": 0.148,
+      "salience": 0.147,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/6500",
       "votes": [
         {
@@ -6629,11 +6629,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-9500",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-9500",
-      "salience": 0.143,
+      "salience": 0.141,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/9500",
       "votes": [
         {
@@ -7549,11 +7549,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-2403",
     "source": "legislative",
-    "ts": 1795853158964,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-2403",
-      "salience": 0.142,
+      "salience": 0.14,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/2403",
       "votes": [
         {
@@ -8459,11 +8459,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_hr-119-4646",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "hr-119-4646",
-      "salience": 0.107,
+      "salience": 0.105,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/house-bill/4646",
       "votes": [
         {
@@ -9377,11 +9377,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-32",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579611,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-32",
-      "salience": 0.064,
+      "salience": 0.062,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/32",
       "votes": [
         {
@@ -10257,11 +10257,11 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_leg_s-119-307",
     "source": "legislative",
-    "ts": 1795853158963,
+    "ts": 1795887579610,
     "raw": {
       "method": "legislative_rollcall_v1",
       "billId": "s-119-307",
-      "salience": 0.059,
+      "salience": 0.058,
       "congressGovUrl": "https://www.congress.gov/bill/119th-congress/senate-bill/307",
       "votes": [
         {
@@ -11133,12 +11133,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_birthright-judge-trump",
     "source": "news",
-    "ts": 1795853172953,
+    "ts": 1795887627264,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.927,
+      "salience": 0.868,
       "articles": [
         {
           "title": "Judge blocks latest Trump effort to restrict birthright citizenship",
@@ -11232,12 +11232,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_corruption-democratic-how",
     "source": "news",
-    "ts": 1795853172953,
+    "ts": 1795887627265,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.809,
+      "salience": 0.749,
       "articles": [
         {
           "title": "Democratic majorities vow to take on political corruption . How will they do it ? ",
@@ -11336,22 +11336,65 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_arizona-chip-computer",
+    "cid": "cand_news_agenda-delivered-his",
     "source": "news",
-    "ts": 1795853172953,
+    "ts": 1795887627265,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.788,
+      "salience": 0.655,
       "articles": [
         {
-          "title": "Trump heads to Arizona for high - stakes expansion of TSMC computer chip factories",
-          "url": "https://www.wcvb.com/article/trump-arizona-tsmc-chip-groundbreaking/74541430",
-          "domain": "wcvb.com",
-          "seendate": "2026-11-26T22:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/e126daca-0766-40bf-96fe-68d37594dfc6.jpg?crop=1.00xw%3A0.846xh%3B0%2C0.154xh"
+          "title": "Voters delivered a rebuke . But Trump is sticking to his agenda",
+          "url": "https://www.clickorlando.com/news/politics/2026/11/28/voters-delivered-a-rebuke-but-trump-is-sticking-to-his-agenda/",
+          "domain": "clickorlando.com",
+          "seendate": "2026-11-28T15:15:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5ZTQGPQIKBFSVGBSCIIGXIXVBY.jpg?api_key=clickorlando_488cff2bcc157b2e"
         },
+        {
+          "title": "Voters delivered a rebuke . But Trump is sticking to his agenda",
+          "url": "https://www.clickondetroit.com/news/politics/2026/11/28/voters-delivered-a-rebuke-but-trump-is-sticking-to-his-agenda/",
+          "domain": "clickondetroit.com",
+          "seendate": "2026-11-28T13:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5ZTQGPQIKBFSVGBSCIIGXIXVBY.jpg?api_key=clickondetroit_06f87fefb2123598"
+        },
+        {
+          "title": "Voters delivered a rebuke . But Trump is sticking to his agenda",
+          "url": "https://www.news4jax.com/news/politics/2026/11/28/voters-delivered-a-rebuke-but-trump-is-sticking-to-his-agenda/",
+          "domain": "news4jax.com",
+          "seendate": "2026-11-28T13:45:00Z",
+          "image": "https://bc.gmg.io/image/upload/c_thumb,q_auto,w_700,f_jpg/media/gmg/5ZTQGPQIKBFSVGBSCIIGXIXVBY.jpg?api_key=news4jax_3f10b25586458189"
+        },
+        {
+          "title": "Voters delivered a rebuke . But Trump is sticking to his agenda",
+          "url": "http://www.thegazette.com/news/national/voters-delivered-a-rebuke-but-trump-is-sticking-to-his-agenda/article_6c845ca4-a4aa-5a09-8fd9-ff1d7f572b5d.html",
+          "domain": "thegazette.com",
+          "seendate": "2026-11-28T13:30:00Z",
+          "image": "https://bloximages.chicago2.vip.townnews.com/thegazette.com/content/tncms/assets/v3/editorial/1/63/16393ced-1306-59fe-877a-5b2a73483542/6b0ace4c35b93.image.jpg?crop=5555%2C2916%2C0%2C393"
+        }
+      ]
+    },
+    "title": "Voters delivered a rebuke . But Trump is sticking to his agenda",
+    "summary": "2026-11-28 clickorlando.com: Voters delivered a rebuke . But Trump is sticking to his agenda\n2026-11-28 clickondetroit.com: Voters delivered a rebuke . But Trump is sticking to his agenda\n2026-11-28 news4jax.com: Voters delivered a rebuke . But Trump is sticking to his agenda\n2026-11-28 thegazette.com: Voters delivered a rebuke . But Trump is sticking to his agenda",
+    "framingDraft": null,
+    "suggestedAxes": null,
+    "prevalentAxisGuess": null,
+    "members": [],
+    "bills": [],
+    "fitness": null,
+    "status": "new"
+  },
+  {
+    "cid": "cand_news_arizona-chip-computer",
+    "source": "news",
+    "ts": 1795887627265,
+    "raw": {
+      "method": "gdelt_docapi_v1",
+      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
+      "timespan": "3d",
+      "salience": 0.5,
+      "articles": [
         {
           "title": "Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories",
           "url": "https://isp.netscape.com:443/pf/story/0001/20261125/cdc7faa84895ddeb19bd114061e9dd85",
@@ -11372,13 +11415,6 @@ window.PRISM_CANDIDATES = [
           "domain": "capitalgazette.com",
           "seendate": "2026-11-26T02:45:00Z",
           "image": "https://www.capitalgazette.com/wp-content/uploads/2026/11/APTOPIX_Trump_7381__27d6b5.jpg"
-        },
-        {
-          "title": "Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories",
-          "url": "https://www.gjsentinel.com/news/us/trump-heads-to-arizona-next-week-for-a-high-stakes-expansion-of-tsmcs-computer-chip/article_83fcc7a9-1153-5287-89c9-6628bc45c04b.html",
-          "domain": "gjsentinel.com",
-          "seendate": "2026-11-26T02:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/gjsentinel.com/content/tncms/assets/v3/editorial/7/36/73632adf-2528-5f39-9eed-35f61027cc1c/6b062210368fe.image.jpg?crop=1763%2C926%2C0%2C125"
         },
         {
           "title": "Trump will head to Arizona for a high - stakes expansion of TSMC computer chip factories",
@@ -11418,57 +11454,7 @@ window.PRISM_CANDIDATES = [
       ]
     },
     "title": "Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories",
-    "summary": "2026-11-26 wcvb.com: Trump heads to Arizona for high - stakes expansion of TSMC computer chip factories\n2026-11-26 isp.netscape.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 clickondetroit.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 capitalgazette.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 gjsentinel.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 ksl.com: Trump will head to Arizona for a high - stakes expansion of TSMC computer chip factories",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_builds-huang-jensen",
-    "source": "news",
-    "ts": 1795853172953,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.443,
-      "articles": [
-        {
-          "title": "Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
-          "url": "https://www.bostonherald.com/2026/11/25/nvidia-vance/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-11-26T19:45:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/11/Vance_67953-1.jpg"
-        },
-        {
-          "title": "Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
-          "url": "https://www.capitalgazette.com/2026/11/25/nvidia-vance/",
-          "domain": "capitalgazette.com",
-          "seendate": "2026-11-26T02:45:00Z",
-          "image": "https://www.capitalgazette.com/wp-content/uploads/2026/11/Vance_67953-1.jpg"
-        },
-        {
-          "title": "Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
-          "url": "https://www.wboc.com/news/international/vance-says-jensen-huang-wont-need-a-pardon-as-scrutiny-of-nvidia-scandal-builds-in/article_e076b964-948b-5bf9-9371-e22a7dc980d4.html",
-          "domain": "wboc.com",
-          "seendate": "2026-11-26T01:45:00Z",
-          "image": "https://bloximages.newyork1.vip.townnews.com/wboc.com/content/tncms/assets/v3/editorial/0/66/06698f4b-695a-5df4-91de-1cc73f753245/6b0758940fbf8.image.jpg?crop=1763%2C926%2C0%2C125"
-        },
-        {
-          "title": "Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
-          "url": "https://www.dailypress.com/2026/11/25/nvidia-vance/",
-          "domain": "dailypress.com",
-          "seendate": "2026-11-26T01:15:00Z",
-          "image": "https://www.dailypress.com/wp-content/uploads/2026/11/Vance_67953-1.jpg"
-        }
-      ]
-    },
-    "title": "Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
-    "summary": "2026-11-26 bostonherald.com: Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington\n2026-11-26 capitalgazette.com: Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington\n2026-11-26 wboc.com: Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington\n2026-11-26 dailypress.com: Vance says Jensen Huang wont need a pardon as scrutiny of Nvidia scandal builds in Washington",
+    "summary": "2026-11-26 isp.netscape.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 clickondetroit.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 capitalgazette.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 ksl.com: Trump will head to Arizona for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 wral.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories\n2026-11-26 citizensvoice.com: Trump heads to Arizona next week for a high - stakes expansion of TSMC computer chip factories",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
@@ -11480,12 +11466,12 @@ window.PRISM_CANDIDATES = [
   {
     "cid": "cand_news_his-job-keep",
     "source": "news",
-    "ts": 1795853172953,
+    "ts": 1795887627264,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.428,
+      "salience": 0.369,
       "articles": [
         {
           "title": "Commentary | Schumer will likely keep his job . But , the vote matters",
@@ -11521,57 +11507,14 @@ window.PRISM_CANDIDATES = [
     "status": "new"
   },
   {
-    "cid": "cand_news_change-could-deep",
-    "source": "news",
-    "ts": 1795853172953,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.417,
-      "articles": [
-        {
-          "title": "Midterm wins , near - misses could signal political change in the Deep South",
-          "url": "https://www.bostonherald.com/2026/11/25/deep-south-midterm-wins/",
-          "domain": "bostonherald.com",
-          "seendate": "2026-11-27T00:30:00Z",
-          "image": "https://www.bostonherald.com/wp-content/uploads/2026/11/202611250330MCT_____PHOTO____US-NEWS-MIDTERMS-DEEPSOUTH-CHANGES-FILEPIC-2-GET-1.jpg"
-        },
-        {
-          "title": "Midterm wins , near - misses could signal political change in the Deep South",
-          "url": "https://www.pressdemocrat.com/2026/11/25/deep-south-midterm-wins/",
-          "domain": "pressdemocrat.com",
-          "seendate": "2026-11-26T04:30:00Z",
-          "image": "https://www.pressdemocrat.com/wp-content/uploads/2026/11/202611250330MCT_____PHOTO____US-NEWS-MIDTERMS-DEEPSOUTH-CHANGES-FILEPIC-2-GET-1.jpg"
-        },
-        {
-          "title": "Midterm wins , near - misses could signal political change in the Deep South",
-          "url": "https://www.dailyherald.com/2026/11/25/deep-south-midterm-wins/",
-          "domain": "dailyherald.com",
-          "seendate": "2026-11-26T03:15:00Z",
-          "image": "https://www.dailyherald.com/wp-content/uploads/2026/11/202611250330MCT_____PHOTO____US-NEWS-MIDTERMS-DEEPSOUTH-CHANGES-FILEPIC-2-GET-1.jpg"
-        }
-      ]
-    },
-    "title": "Midterm wins , near - misses could signal political change in the Deep South",
-    "summary": "2026-11-27 bostonherald.com: Midterm wins , near - misses could signal political change in the Deep South\n2026-11-26 pressdemocrat.com: Midterm wins , near - misses could signal political change in the Deep South\n2026-11-26 dailyherald.com: Midterm wins , near - misses could signal political change in the Deep South",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
     "cid": "cand_news_countries-dozen-house",
     "source": "news",
-    "ts": 1795853172953,
+    "ts": 1795887627264,
     "raw": {
       "method": "gdelt_docapi_v1",
       "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
       "timespan": "3d",
-      "salience": 0.291,
+      "salience": 0.231,
       "articles": [
         {
           "title": "The White House is proposing new tariffs on more than a dozen countries",
@@ -11598,49 +11541,6 @@ window.PRISM_CANDIDATES = [
     },
     "title": "The White House is proposing new tariffs on more than a dozen countries",
     "summary": "2026-11-26 kvnf.org: The White House is proposing new tariffs on more than a dozen countries\n2026-11-26 capeandislands.org: The White House is proposing new tariffs on more than a dozen countries\n2026-11-26 redriverradio.org: The White House is proposing new tariffs on more than a dozen countries",
-    "framingDraft": null,
-    "suggestedAxes": null,
-    "prevalentAxisGuess": null,
-    "members": [],
-    "bills": [],
-    "fitness": null,
-    "status": "new"
-  },
-  {
-    "cid": "cand_news_abc-blocks-early",
-    "source": "news",
-    "ts": 1795853172953,
-    "raw": {
-      "method": "gdelt_docapi_v1",
-      "query": "(congress OR senate OR \"white house\" OR \"supreme court\")",
-      "timespan": "3d",
-      "salience": 0.291,
-      "articles": [
-        {
-          "title": "Judge blocks FCC from early license review for ABC",
-          "url": "https://www.wcvb.com/article/judge-blocks-fcc-early-license-review-abc/74536498",
-          "domain": "wcvb.com",
-          "seendate": "2026-11-26T04:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/fb36475e-4ac7-4b81-983c-d948a30b1e90.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Judge blocks FCC from early license review for ABC",
-          "url": "https://www.wbaltv.com/article/judge-blocks-fcc-early-license-review-abc/74536498",
-          "domain": "wbaltv.com",
-          "seendate": "2026-11-26T03:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/fb36475e-4ac7-4b81-983c-d948a30b1e90.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        },
-        {
-          "title": "Judge blocks FCC from early license review for ABC",
-          "url": "https://www.kcra.com/article/judge-blocks-fcc-early-license-review-abc/74536498",
-          "domain": "kcra.com",
-          "seendate": "2026-11-26T03:15:00Z",
-          "image": "https://kubrick.htvapps.com/htv-prod/images/fb36475e-4ac7-4b81-983c-d948a30b1e90.jpg?crop=1.00xw%3A0.846xh%3B0%2C0"
-        }
-      ]
-    },
-    "title": "Judge blocks FCC from early license review for ABC",
-    "summary": "2026-11-26 wcvb.com: Judge blocks FCC from early license review for ABC\n2026-11-26 wbaltv.com: Judge blocks FCC from early license review for ABC\n2026-11-26 kcra.com: Judge blocks FCC from early license review for ABC",
     "framingDraft": null,
     "suggestedAxes": null,
     "prevalentAxisGuess": null,
