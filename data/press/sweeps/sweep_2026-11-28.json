@@ -1,0 +1,1756 @@
+{
+ "schema": "press/sweep/v1",
+ "date": "2026-11-28",
+ "index": "roster",
+ "objects": [
+  "blockade",
+  "bypass",
+  "chips",
+  "diesel",
+  "diesel-cargo",
+  "dollar",
+  "dyed-diesel",
+  "eu-stocks",
+  "exit-poll",
+  "farm-relief",
+  "fed",
+  "forever-war",
+  "gecf",
+  "ghost-fleet",
+  "gulf-pact",
+  "heating-oil",
+  "hormuz",
+  "housing",
+  "iran",
+  "iran-strikes",
+  "iran-terms",
+  "iran-war",
+  "iron-gate",
+  "june-mou",
+  "me-sen",
+  "midterms",
+  "refining-margin",
+  "russia-sanctions",
+  "shutdown",
+  "tariffs",
+  "tx-sen",
+  "venezuela",
+  "war-cost",
+  "war-funding",
+  "war-powers",
+  "wh-memo"
+ ],
+ "registerObjects": 54,
+ "route": "press-sweep.py on the GitHub Action (keyless; captions via yt-dlp, non-fatal)",
+ "publications": {
+  "daily-show": {
+   "station": "LI",
+   "items": 3,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCwWhs_6x42TyRM4Wstoq8HA"
+   ],
+   "note": null
+  },
+  "al-jazeera": {
+   "station": "LI",
+   "items": 25,
+   "hits": 5,
+   "feeds": [
+    "www.aljazeera.com/xml/rss/all.xml"
+   ],
+   "note": null
+  },
+  "ms-now": {
+   "station": "LI",
+   "items": 15,
+   "hits": 6,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCaXkIU1QidjPwiAYu6GcHjg"
+   ],
+   "note": null
+  },
+  "npr-pbs": {
+   "station": "LI",
+   "items": 34,
+   "hits": 9,
+   "feeds": [
+    "feeds.npr.org/1001/rss.xml",
+    "feeds.npr.org/1014/rss.xml",
+    "www.pbs.org/newshour/feeds/rss/headlines"
+   ],
+   "note": null
+  },
+  "atlantic": {
+   "station": "LI",
+   "items": 10,
+   "hits": 1,
+   "feeds": [
+    "www.theatlantic.com/feed/all/"
+   ],
+   "note": null
+  },
+  "the-close": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "odd-lots": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "surveillance": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "bloomberg-streams": {
+   "station": "RI",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCIALMKvObZNtJ6AmdCLP7Lg"
+   ],
+   "note": null
+  },
+  "breaking-points": {
+   "station": "LP+RP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCDRIjKy6eZOvKtOELtTdeUA"
+   ],
+   "note": null
+  },
+  "secular-talk": {
+   "station": "LP",
+   "items": 1,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCldfgbzNILYZA4dmDt4Cd6A"
+   ],
+   "note": null
+  },
+  "hasan": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCnI_h3e6b5jGLfly2SY57SA"
+   ],
+   "note": null
+  },
+  "chapo": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "tcn": {
+   "station": "RP",
+   "items": 5,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCjjBjVc0b1cIpNGEeZtS2lg"
+   ],
+   "note": null
+  },
+  "freepress": {
+   "station": "RP",
+   "items": 6,
+   "hits": 1,
+   "feeds": [
+    "www.thefp.com/feed"
+   ],
+   "note": null
+  },
+  "tim-dillon": {
+   "station": "RP",
+   "items": 0,
+   "hits": 0,
+   "note": "no feed on file — add `feeds` to the roster entry"
+  },
+  "nyt": {
+   "station": "LI",
+   "items": 47,
+   "hits": 11,
+   "feeds": [
+    "rss.nytimes.com/services/xml/rss/nyt/HomePage.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Politics.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/Business.xml",
+    "rss.nytimes.com/services/xml/rss/nyt/World.xml",
+    "feeds.simplecast.com/54nAGcIl"
+   ],
+   "note": null
+  },
+  "fox": {
+   "station": "RI?",
+   "items": 45,
+   "hits": 35,
+   "feeds": [
+    "moxie.foxnews.com/google-publisher/latest.xml",
+    "moxie.foxnews.com/google-publisher/politics.xml",
+    "moxie.foxnews.com/google-publisher/world.xml",
+    "moxie.foxbusiness.com/google-publisher/latest.xml"
+   ],
+   "note": null
+  },
+  "grayzone": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "thegrayzone.com/feed/"
+   ],
+   "note": null
+  },
+  "shapiro": {
+   "station": "RP",
+   "items": 2,
+   "hits": 1,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCxUQLGMbb2cI8CqiwZ0WhAQ"
+   ],
+   "note": null
+  },
+  "kirk": {
+   "station": "RP",
+   "items": 4,
+   "hits": 0,
+   "feeds": [
+    "www.youtube.com/feeds/videos.xml?channel_id=UCVrK_pMRp_q8IelpfUCTGLQ"
+   ],
+   "note": null
+  },
+  "bad-faith": {
+   "station": "LP",
+   "items": 0,
+   "hits": 0,
+   "feeds": [
+    "badfaith.libsyn.com/rss"
+   ],
+   "note": null
+  }
+ },
+ "queue": [
+  {
+   "title": "‘VERY DANGEROUS’: Economist on the message Trump’s reinstatement of Nvidia CEO sends to companies",
+   "dek": "“Every CEO across the country has noticed this. They’ve noticed that if you want to keep your job, you have to keep the White House happy rather than your customers happy. That incentive is very very dangerous,” says Justin Wolfers, professor of Economics and Public Policy at the University of Michigan and host of Platypus Economics. Wolfers joins The Weekend to discuss this and much more. #Nvidia #StockMarket #Economy MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Subscribe to MS NOW’s We the People Newsletter for exclusive content ",
+   "opening": "",
+   "published": "2026-11-28T13:47:37+00:00",
+   "link": "https://www.youtube.com/watch?v=q9aOCrJHKIo",
+   "videoId": "q9aOCrJHKIo",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Iran points to Europe’s war role after Italians killed in Kuwait strike",
+   "dek": "Italy and Kuwait say an Iranian drone was involved, but Tehran says the US and Israel may be looking to escalate war.",
+   "opening": "",
+   "published": "2026-11-28T13:42:53+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/28/iran-points-to-europes-war-role-after-italians-killed-in-kuwait-strike?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran",
+     "tehran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘CRUCIAL pushback coming from inside the cabinet’: Conservative analyst on Nvidia reinstatement",
+   "dek": "President Trump is facing bipartisan backlash, including from members of his own cabinet, for the reinstatement of Nvidia CEO Jensen Huang. David Drucker, Bloomberg Opinion columnist, contributing writer for The Dispatch, and MS NOW contributor, Toluse Olorunnipa, staff writer for The Atlantic, and Marc Caputo White House reporter for Axios join The Weekend to discuss the grilling Huang will meet next week during his congressional testimony. #Nvidia #JensenHuang #DOJ MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow » Subscribe to MS NOW’",
+   "opening": "",
+   "published": "2026-11-28T13:35:25+00:00",
+   "link": "https://www.youtube.com/watch?v=J7NVxQfZJA8",
+   "videoId": "J7NVxQfZJA8",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Bootleg alcohol poisonings in Iran see dozens dead and badly injured",
+   "dek": "A spate of alcohol poisonings in Iran has led to deaths and serious injuries including blindness.",
+   "opening": "",
+   "published": "2026-11-28T13:12:56+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/28/bootleg-alcohol-poisonings-in-iran-see-dozens-dead-and-badly-injured?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Norse Atlantic ends flights: How Iran war continues to batter aviation",
+   "dek": "The Norwegian budget carrier is the latest airline to fold under fuel costs driven by the Strait of Hormuz crisis.",
+   "opening": "",
+   "published": "2026-11-28T12:56:53+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/28/norse-atlantic-ends-flights-how-iran-war-continues-to-batter-aviation?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "hormuz": [
+     "hormuz"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "iran"
+    ],
+    "obj_x_apple-biggest-costs-fertilizer": [
+     "fuel",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Manchester United vs Brentford LIVE: Premier League",
+   "dek": "Follow updates with build-up and team news coverage from our live text commentary stream as Bruno Fernandes headlines.",
+   "opening": "",
+   "published": "2026-11-28T12:06:46+00:00",
+   "link": "https://www.aljazeera.com/sports/liveblog/2026/11/28/manchester-united-vs-brentford-live-premier-league?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "diesel": [
+     "brent"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Yemen government forces hit Houthi positions as UN warns of hunger crisis",
+   "dek": "About 1.8 million people face emergency levels of hunger in government-held areas, according to the UN.",
+   "opening": "",
+   "published": "2026-11-28T09:35:15+00:00",
+   "link": "https://www.aljazeera.com/news/2026/11/28/yemen-governmen-forces-hit-houthi-positions-as-un-warns-of-hunger-crisis?traffic_source=rss",
+   "publication": "al-jazeera",
+   "source": "al-jazeera",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "COP31 climate talks fail to reach an agreement on fossil fuel language",
+   "dek": "U.N. climate talks collapsed over whether to mention fossil fuels that cause global warning. Several countries and the E.U. would not accept a final proposal without this.",
+   "opening": "U.N. climate talks collapsed over whether to mention fossil fuels that cause global warning. Several countries and the E.U. would not accept a final proposal without this. (Image credit: Khalil Hamra)",
+   "published": "2026-11-28T09:28:45-05:00",
+   "link": "https://www.npr.org/2026/11/28/nx-s1-6050187/cop31-talks-fall-apart",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_x_all-climate-could-experts": [
+     "climate",
+     "talks"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Dismemberment of adult film actor once tied to Jeffrey Dahmer was committed by transgender killer",
+   "dek": "Billy London&apos;s 1990 West Hollywood killing was so gruesome that detectives wondered if Jeffrey Dahmer had struck in Los Angeles. The truth took 30 years.",
+   "opening": "Billy London was ready to leave West Hollywood and the gay adult film industry behind for good. Instead, his head and feet were discovered in a dumpster—a killing so reminiscent of Jeffrey Dahmer that detectives wondered if the \"Milwaukee Cannibal\" had slipped into Los Angeles. More than three decades later, a new true-crime documentary from Investigation Discovery, \"My Brother's Killer,\" explores how the real culprit was far closer to home. The case remained unsolved for more than 30 years. Then in 2023, the LAPD announced that it secured a confession from a convicted killer — a biological male, former White supremacist and fellow adult film actor who, according to the Los Angeles Times, now identifies as an Orthodox Jewish woman. YOGURT SHOP MURDERS FUEL FAMILY QUESTIONS ABOUT ACCOMPLICE AS RAGE LINGERS OVER WRONGFULLY ACCUSED \"This is a really important next feature of what I believe the film can do when it comes out,\" director Rachel Mason told Fox News Digital. \"There are absolutely other crimes and other victims out there and they all have not necessarily been identified. The crimes have not even come to light.\" Ahead of the film's airing on Dec. 3, Mason has set up a website where anyone with information can provide tips. It notes that Darrell Lynn Madden, now known as DarraLynn Madden, \"is suspected of being involved with the deaths of several men in California, Arizona, Texas and Oklahoma between the years 1985 and 2007.\" \"If you have information, please provide it,\"",
+   "published": "2026-11-28T08:00:59-05:00",
+   "link": "https://www.foxnews.com/us/dismemberment-adult-film-actor-tied-jeffrey-dahmer-committed-transgender-killer",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "former"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "former"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "former",
+     "years"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Broadcast networks use airport immigration arrest to attack ICE, just like usual",
+   "dek": "A Media Research Center study found the Big Three networks gave ICE 93% negative coverage while illegal immigrants&apos; crimes got just seconds of airtime.",
+   "opening": "When it comes to illegal immigration , no one should be turning the channel to the broadcast news networks for a \"mainstream media\" presentation. It is better to imagine it under the title \"Abolish ICE Theater.\" That was on flagrant display in January with the aggressive law-enforcement presence in Minneapolis, when two protesters were killed in confrontations with officers in January. A Media Research Center study found the network newscasts did over two hours of coverage in a 10-day period and were 93% negative toward ICE. The actual criminal acts of illegal immigrants were a tiny fraction of the coverage: 13 seconds on ABC, 16 seconds on CBS and 89 seconds on NBC. That pattern has continued, as if the sides here weren’t about immigration law, but about President Donald Trump . ICE receives the same severely negative coverage the president gets, while illegal immigrants receive the sympathetic coverage constantly delivered to the anti-Trump side, whatever the circumstances. ANTI-ICE PROTESTERS AT SEATTLE-TACOMA AIRPORT FORCE SECURITY PRESENCE DURING BUSY HOLIDAY TRAVEL On Nov. 21, ICE agents came to a jet bridge at the Seattle airport to detain Ricardo Larrondo Mendoza, a Mexican national who had reportedly overstayed his visa by more than 10 years. In the altercation, his daughter, Sofia Hernandez Mejia, also a visa overstayer, allegedly hurled hot coffee on the officers. The illegal immigrants were reportedly going to board a flight from Seattle to Los Angeles. This led t",
+   "published": "2026-11-28T08:00:28-05:00",
+   "link": "https://www.foxnews.com/opinion/broadcast-networks-use-airport-immigration-arrest-attack-ice",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "immigration",
+     "enforcement"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Does ‘man flu’ really exist? Here’s what an emergency room physician says",
+   "dek": "Dr. Stephanie Widmer confirms the &quot;man flu&quot; is not a real medical diagnosis, though some data suggests men may face worse outcomes than women.",
+   "opening": "When a minor cold knocks a man onto the couch for days, it’s often dismissed as a classic case of the \"man flu\" — but is there real science behind it? Dr. Stephanie Widmer, a New York City emergency medicine physician, medical toxicologist and Fox News medical contributor, confirmed that the \"man flu\" is not a real medical diagnosis . \"It is very interesting that ‘man flu’ is becoming a very commonly used term,\" she told Fox News Digital. MEN AND WOMEN WHO SMOKE MARIJUANA MAY EXPERIENCE DIFFERENT EFFECTS, STUDY SUGGESTS But the question remains: Do men actually get \"sicker\" or experience more severe symptoms than women when they have a cold or the flu ? While some evidence already points to biological differences in how men's and women’s immune systems respond, the doctor noted that the issue \"deserves a little bit more attention\" from researchers. \"At the end of the day, there is no evidence ... that men have more severe symptoms, suffer more, or experience more pain or discomfort when it comes to the flu, colds or other respiratory viruses and viral illnesses ,\" she said. CLICK HERE FOR MORE HEALTH STORIES There is some data, however, suggesting that men may be hospitalized more or may experience worse mortality after a flu infection than women, according to Widmer. \"But again, that doesn't mean they are necessarily experiencing more severe symptoms,\" she said. \"It doesn't prove that the man flu does exist, so to speak.\" While some theorize that women tolerate illness bette",
+   "published": "2026-11-28T08:00:25-05:00",
+   "link": "https://www.foxnews.com/health/does-man-flu-really-exist-heres-what-emergency-room-physician-says",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "face",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani eyes 2028 kingmaker role as expert warns socialist movement could gain power even in defeat",
+   "dek": "Zohran Mamdani is reportedly meeting with labor leaders to build a socialist coalition capable of winning the White House in the 2028 election.",
+   "opening": "New York City Mayor Zohran Mamdani's efforts to shape the 2028 Democratic presidential field could help socialists build lasting political influence, even if their preferred candidate ultimately loses the nomination, according to political analysts. \"The 2026 midterm bluenami showed us that the Democrat party is shifting far left, and Mamdani is hoping to capitalize on that momentum,\" Nicole Huyer, senior research associate for the Heritage Foundation's Institute for Economic Policy Studies, told Fox News Digital. \"What’s really interesting, is that Mamdani seems to be thinking beyond individual candidates for 2028, and more toward building an organized political infrastructure for socialists,\" she added. Mamdani, a self-described Democratic socialist, stunned the political establishment in 2025 when he defeated former Gov. Andrew Cuomo in New York City's Democratic mayoral primary before winning the general election, marking a major victory for the socialist movement. The New York City leader recently held private meetings with top union leaders as part of a broader effort to encourage labor-aligned and leftist candidates to launch White House bids in 2028, Axios reported Nov. 8 , citing four anonymous sources. MAMDANI MAKES BEHIND-THE-SCENES MOVES TO SHAPE 2028 DEMOCRATIC PRESIDENTIAL RACE Mamdani has argued that progressive Democrats cannot afford to let their midterm gains slip away, according to the report. \"He’s making sure that whoever the candidate is in 2028 will hav",
+   "published": "2026-11-28T08:00:06-05:00",
+   "link": "https://www.foxnews.com/politics/mamdani-eyes-2028-kingmaker-role-expert-warns-socialist-movement-could-gain-power-even-defeat",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "democratic",
+     "effort"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "general",
+     "former"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "former",
+     "mayor",
+     "city"
+    ],
+    "obj_x_allegations-california-democrat-ethics": [
+     "democrat",
+     "report"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Big Ten playoff panic, SEC upset threats and a $26 million Deion Sanders question await on rivalry Saturday",
+   "dek": "Deion Sanders may coach his final Colorado game against UCF, while the Big Ten and SEC brace for rivalry week chaos before playoff rankings.",
+   "opening": "The final weekend of the college football regular season is already underway, and Saturday could lead to a conundrum within two of the biggest conferences. By Sunday morning, the Big Ten could be asking how many College Football Playoff bids it has left, the SEC could be arguing about a three-loss Tennessee team and Colorado could be doing some very expensive math. If you’d told us before the season that USC-UCLA would have playoff implications, most of us would’ve assumed the Trojans were the ones trying to lock up a spot. SEC THREATENS THE NUCLEAR OPTION AS LSU’S REBELLION PUTS CONFERENCE FUTURE AT RISK, RJ LUIS PLANS TO SUE But, since there has been nothing predictable about the 2026 season, it's fitting that the Big Ten conference needs a smooth weekend to avoid a chaotic ending that could see the Bruins joining Indiana as teams missing the playoff. In the SEC, it's business as usual with the Georgia Bulldogs leading the charge, as Texas follows closely behind in terms of playoff rankings. On Friday night, even though Texas A&amp;M was pesky, the Longhorns clinched a spot in the conference title game and will play Georgia next week in Atlanta for the final SEC championship. But, there is no semblance of LSU and Ole Miss in the postseason conversation, rather replaced by a team like Tennessee. That's right, Lane Kiffin and Pete Golding are both missing the CFP, while Alabama can secure its spot in the postseason behind freshman quarterback Keelon Russell against the pesky ",
+   "published": "2026-11-28T07:40:45-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/big-ten-playoff-panic-sec-upset-threats-26-million-deion-sanders-question-rivalry-saturday",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_all-climate-could-experts": [
+     "could",
+     "though"
+    ],
+    "obj_x_disarm-mlb-mlbpa-nuclear": [
+     "nuclear",
+     "option"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Week in Politics: Trump's Thanksgiving messaging; Congress' pre-holiday to-do list",
+   "dek": "We look at President Trump's messaging over Thanksgiving, as well as what Congress can get done before the holidays.",
+   "opening": "We look at President Trump's messaging over Thanksgiving, as well as what Congress can get done before the holidays.",
+   "published": "2026-11-28T07:39:24-05:00",
+   "link": "https://www.npr.org/2026/11/28/nx-s1-6052169/week-in-politics-trumps-thanksgiving-messaging-congress-pre-holiday-to-do-list",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Fugitive football coach fled into woods of small mountain town – year later, hunt for truth faces steep climb",
+   "dek": "Travis Turner, the fugitive football coach who vanished in Southwest Virginia, remains missing a year later as U.S. Marshals and state police search on.",
+   "opening": "The search for a star football coach who disappeared amid child abuse allegations continues a year after he fled in the heavily wooded mountains of Southwest Virginia, leaving his belongings behind and his community hunting for answers. Travis L. Turner, 46, the former head football coach at Union High School in Big Stone Gap, fled his Appalachia home on Nov. 20, 2025, shortly before state police arrived to question him in a child sexual abuse investigation . Turner, according to his wife, Leslie Caudill Turner, walked into the woods behind their property with a firearm while police were on the way to his home. Authorities sought to question Turner but had not yet obtained an arrest warrant. Days later, prosecutors charged Turner with five counts each of possessing child sexual abuse material and using a computer to solicit a minor. At the time, Virginia State Police said that \" additional charges are pending .\" MISSING VIRGINIA COACH TRAVIS TURNER FUELS TENSE SCHOOL BOARD MEETING AS JUDGE SEALS CASE RECORDS: REPORT Since Turner is considered a fugitive , the U.S. Marshals Service joined the search, alongside VSP. Brady McCarron, deputy chief of the U.S. Marshals Service Office of Public Affairs, confirmed with Fox News Digital that a reward of up to $5,000 for information leading to Turner remains active. \"There is not much we can reveal about the search,\" McCarron said. \"We continue to coordinate with all of our partners in the search, as we have throughout the search.\" VSP",
+   "published": "2026-11-28T07:00:54-05:00",
+   "link": "https://www.foxnews.com/us/fugitive-football-coach-fled-woods-small-mountain-town-year-later-hunt-truth-faces-steep-climb",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_abuse-creation-grok-images": [
+     "virginia",
+     "abuse"
+    ],
+    "obj_x_allegations-california-democrat-ethics": [
+     "report",
+     "sexual"
+    ],
+    "obj_x_against-asks-charges-drop": [
+     "charges",
+     "there"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "investigation"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Princess Diana regretted explosive affair confession, feared it would hurt William and Harry: author",
+   "dek": "Royal biographer Ingrid Seward says Princess Diana regretted speaking of James Hewitt, fearing the confession would wound Prince William and Prince Harry.",
+   "opening": "Princess Diana regretted publicly admitting her affair with James Hewitt, fearing her confession would hurt the two people she loved most: Prince William and Prince Harry. The late Princess of Wales privately admitted that she wished she had kept quiet about the former cavalry officer, royal biographer Ingrid Seward told Fox News Digital. Seward, who was among the last journalists to interview Diana before her death in 1997, revisits the royal's turbulent life in her forthcoming book, \"Catherine &amp; Diana.\" The book examines how Diana and Kate Middleton navigated life in the royal spotlight and the lessons that shaped their journeys. PRINCESS DIANA FEARED PRINCE HARRY WOULD ‘WITHER’ IN PRINCE WILLIAM’S SHADOW: EXPERT \"She said to me that she wished she hadn't spoken about James Hewitt because she knew it would upset both William and Harry and that James Hewitt had been extremely good to them both,\" Seward told Fox News Digital. \"And I think he really embraced who those two young boys were,\" Seward said. \"He used to ride with Harry a lot. Harry's a very good rider. And I think they both rather hero-worshipped Hewitt. He was very handsome. He was a brilliant polo player. He was a brilliant rider. He was very athletic. And I think Diana just wished she hadn't mentioned it.\" Fox News Digital reached out to Buckingham Palace for comment. A spokesperson for Buckingham Palace and Kensington Palace each told Fox News Digital that they do not comment on books. Fox News may be compen",
+   "published": "2026-11-28T07:00:41-05:00",
+   "link": "https://www.foxnews.com/entertainment/princess-diana-regretted-explosive-affair-confession-feared-hurt-william-harry-author",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "former",
+     "affair"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "The Houthis Are the Future of Warfare",
+   "dek": "",
+   "opening": "",
+   "published": "2026-11-28T07:00:00-05:00",
+   "link": "https://www.theatlantic.com/ideas/2026/11/houthis-future-warfare-technology/689559/?utm_source=feed",
+   "videoId": null,
+   "publication": "atlantic",
+   "source": "atlantic",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "houthi"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Transportation secretary Sean Duffy flies $148K Jetson ONE at NASA",
+   "dek": "Sean Duffy flew a $148,000 Jetson ONE solo over NASA&apos;s Kennedy Space Center, and two days later five eVTOLs flew in formation at a public airshow.",
+   "opening": "Seeing a $148,000 flying machine lift off at NASA's Kennedy Space Center would be impressive on its own. Now put U.S. Transportation Secretary Sean Duffy in the pilot's seat. That's exactly what happened recently when Duffy took a Jetson ONE for a solo flight over the Florida spaceport. Two days later, five of these personal electric aircraft were flying in formation during a public airshow. Jetson says Duffy became the first sitting U.S. transportation secretary to pilot a personal electric vertical takeoff and landing aircraft, better known as an eVTOL. His flight also raises an interesting question about where personal aviation is heading. After all, we're talking about an aircraft that can fly without its operator needing a pilot's license under certain FAA rules. But before you start clearing space in your garage, let's look at what this aircraft can actually do and where you can legally fly it. Missed CyberGuy LIVE? Watch the replay and discover 5 ways to travel smarter and save money. Our free CyberGuy LIVE class, 5 Ways to Travel Smarter and Save Money, has ended, but you can still watch the full replay. Kurt \"CyberGuy\" Knutsson walks you through five practical ways to protect your phone and personal information, avoid common travel scams, find better deals, save money on bookings and use technology to make your travels easier and less stressful. No technical experience is needed. Watch the free replay + downloadable checklist now at CyberGuyLive.com. AIR TAXIS CUT HO",
+   "published": "2026-11-28T06:58:32-05:00",
+   "link": "https://www.foxnews.com/tech/transportation-secretary-sean-duffy-flies-148k-jetson-one-nasa",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ],
+    "obj_afederal_abc-fcc-free-judge": [
+     "rules",
+     "free"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TRUMP IN A BIND: Why Democrats aren't afraid of Trump's veto power",
+   "dek": "Rep.-elect Dan Koh talks with Jen Psaki about why he thinks Democrats should pursue a bold, progressive agenda and dare Donald Trump to veto their popular ideas, knowing that Americans will know who the obstacles are to policies they supported in the midterm blue wave election and will remember in 2028. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journalism. For more context ",
+   "opening": "",
+   "published": "2026-11-28T06:31:38+00:00",
+   "link": "https://www.youtube.com/watch?v=Z463BhtA8F0",
+   "videoId": "Z463BhtA8F0",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Flight passengers clash over armrest space as shrinking economy seats leave almost no room",
+   "dek": "As airline seats shrink, larger passengers and fellow flyers clash over travelers spilling into neighboring seats. An etiquette expert details the best way to handle tough issues.",
+   "opening": "As economy seats shrink to 17 inches across on some airplanes, flight passengers are clashing over armrests, policies and the space available to them. Flyers have less patience for declining etiquette and armrest disputes , a recent survey from The Points Guy and YouGov reported. When taller or wider passengers encroach on a neighbor's space, frustrated travelers are increasingly taking to social media to air grievances. PASSENGER SAYS AIRLINE FORCED HER TO BUY SECOND SEAT, SPARKING VIRAL DEBATE OVER 'CUSTOMER OF SIZE' POLICY \"The seats are getting smaller and smaller. I've experienced it myself,\" Florida-based etiquette expert and former flight attendant Jacqueline Whitmore told Fox News Digital. \"I always ask for an aisle seat instead of a middle seat or a window seat because you just never know who you're going to be seated next to,\" she continued. A recent Reddit post criticizing larger fellow passengers was upvoted over 4,000 times. After being seated next to a \"larger passenger\" on six out of eight flights, one Reddit user had had enough. PASSENGERS RIP AIRLINE FOR NEW SEATING POLICY: 'IT IS AS BAD AS EVERYONE IS SAYING' \"I am not the person who wants to shame or insult anyone’s body, especially not on a flight where we’re all uncomfortable and packed in like sardines,\" the Reddit user wrote. \"But I am struggling with the fact that there seems to be little done at the policy level to ensure comfort in these situations,\" the poster said. \"On my most recent flight, I was ",
+   "published": "2026-11-28T06:00:49-05:00",
+   "link": "https://www.foxnews.com/travel/flight-passengers-clash-armrest-space-shrinking-economy-seats-leave-almost-no-room",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "saying"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Socialist newcomers’ old words take new turn as they prepare to enter Congress",
+   "dek": "Zohran Mamdani-backed DSA candidates and Rep. Randy Fine face scrutiny over past comments on policing, ICE, Islamophobia and the 9/11 attacks.",
+   "opening": "As January approaches and newly elected lawmakers prepare to take their oaths of office, past statements could prove troublesome as they jockey for committee assignments with powerbrokers seeking to protect the image of their respective parties. The midterm elections sent a new crop of lawmakers affiliated with the Democratic Socialists of America to Congress — in a few cases, unexpectedly. While some sought to moderate their image after the primary season, controversial remarks made on the campaign trail or years before their candidacies could follow them to Capitol Hill as they seek committee assignments and influence within the Democratic caucus. Fox News Digital reviewed some of the most controversial remarks made by the incoming lawmakers — comments that could complicate their efforts to build influence in the new Congress. Darializa Avila Chevalier: ‘Defund and abolish’ In an early test of his political sway, New York City Mayor Zohran Mamdani endorsed a duo of DSA-aligned Democrats in primaries for congressional districts encompassing portions of four of the city’s five boroughs. MAMDANI-BACKED SOCIALIST WITH HISTORY OF ANTI-AMERICAN RHETORIC WINS VICIOUS DEM PRIMARY RACE Darializa Avila Chevalier , a left-wing graduate student at the City University of New York, was one such candidate. She defeated longtime Rep. Adriano Espaillat, chairman of the Congressional Hispanic Caucus, by a relatively small margin during a June primary contest. Before and after Chevalier’s pri",
+   "published": "2026-11-28T06:00:36-05:00",
+   "link": "https://www.foxnews.com/politics/socialist-newcomers-old-words-take-new-turn-prepare-enter-congress",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "city",
+     "years"
+    ],
+    "obj_x_advances-area-committee-democratic": [
+     "democratic",
+     "committee"
+    ],
+    "obj_x_college-during-eye-federal": [
+     "student",
+     "during"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "face",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'Flying saucers,' a 1,650 mph radar track and Skinwalker Ranch troops: 10 wild finds in unsealed UFO files",
+   "dek": "Three unseen military UFO videos from the Middle East and a 1,650 mph radar track over the western United States headline 40 declassified Pentagon files.",
+   "opening": "Newly declassified Pentagon and CIA records – including three previously unseen military UFO videos from the Middle East and a radar track clocked at roughly 1,650 mph over the western United States – pull back the curtain on decades of government investigations into unexplained aerial encounters. The trove of 40 documents and three videos, released Nov. 20, includes everything from 1952 CIA \"flying saucer\" warnings to 2026 military infrared footage of unidentified objects. Alongside a 494-page progress report from defense contractor Bigelow Aerospace detailing a $22 million Pentagon UFO program , the files span more than 70 years of unexplained encounters across land, sea and air. A War Department official declined to offer any analysis of the release to Fox News Digital \"so the American people can make up their own minds regarding the files.\" NEW TRUMP UFO FILE DUMP INCLUDES MILITARY FOOTAGE OF MYSTERIOUS STAR-SHAPED OBJECT From a glowing disc reported over Montana nuclear missile silos to plans for a secret underground Nevada vault, here are 10 wild finds from the newly released files. The latest release includes three previously unseen military videos from the Middle East , recorded on heat-seeking and night-vision cameras in 2020, 2023 and 2026 and sent by U.S. Central Command to the Pentagon's All-domain Anomaly Resolution Office (AARO). BURCHETT TELLS ‘RUTHLESS’ MORE UFO VIDEOS TO COME The shortest clip, a 13-second video from 2023, shows a camera turning to follow a s",
+   "published": "2026-11-28T06:00:33-05:00",
+   "link": "https://www.foxnews.com/us/flying-saucers-1650-mph-radar-track-skinwalker-ranch-troops-10-wild-finds-unsealed-ufo-files",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "resolution"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "finds"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "French man accused of flying to US to murder woman he went on one date with 3 years earlier",
+   "dek": "Terry Kanmacher allegedly waited 45 minutes before allegedly stabbing Lauren Becker outside her Omaha daycare, then tried to flee the United States, police say.",
+   "opening": "A French man is suspected of traveling to the United States to murder a woman he had gone on a date with three years earlier, according to police. Lauren Becker , 22, was stabbed to death on Tuesday morning as she was walking into her job at an Omaha, Nebraska, daycare center, where her alleged killer waited for 45 minutes before stabbing her, police said during a news conference. The suspect, identified as 21-year-old French national Terry Kanmacher, had been living in France before he arrived in Omaha and allegedly killed Becker. Becker and Kanmacher developed an online relationship in 2023, and the French national traveled to Omaha for two weeks that summer. The two met in person once before Becker ended the relationship in September, according to police. CALIFORNIA MOM BEGGED FOR HELP BEFORE EX GUNNED HER DOWN IN FRONT OF THEIR 4-YEAR-OLD SON: DA Becker had reported concerns about Kanmacher to police in Omaha in October 2023 after learning that he allegedly made threats against her online, authorities said. Omaha Police Chief Todd Schmaderer said Becker's concerns about Kanmacher were \"very detail-oriented,\" adding that many of her concerns \"mirrored what took place.\" \"It is clear that Miss Becker had ended the hopes of a relationship and was afraid of Kanmacher,\" Schmaderer said. Police said Kanmacher arrived in Omaha on Nov. 22 and stayed at an Airbnb before going to the daycare center, Kids Can Community Center, and allegedly killing Becker just two days later. AMERICA",
+   "published": "2026-11-28T06:00:19-05:00",
+   "link": "https://www.foxnews.com/us/french-man-accused-flying-us-murder-woman-one-date-3-years-earlier",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_california-commute-death-disaster": [
+     "california",
+     "death"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "concerns"
+    ],
+    "obj_x_china-death-leaking-national": [
+     "death",
+     "national"
+    ],
+    "obj_x_children-mexico-proof-relationship": [
+     "traveling",
+     "relationship"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Texas attorney general-elect refuses to defend Ten Commandments classroom law",
+   "dek": "Texas Attorney General-elect Nathan Johnson says he won&apos;t defend the Ten Commandments law requiring displays in every public school classroom.",
+   "opening": "Texas Attorney General -elect Nathan Johnson said this week that he won't defend a law requiring public schools across the state to display the Ten Commandments as the U.S. Supreme Court weighs whether to review the case. In an interview with The Dallas Morning News , Johnson, the first Democrat to be elected Texas attorney general in nearly three decades, called the law \"unconstitutional,\" marking a distinct split with outgoing Republican Attorney General Ken Paxton, who championed the bill. \"My jurisprudential opinion is that the law is unconstitutional,\" Johnson said. \"The court will have the ultimate say as to what's constitutional and what is not, but I'm the one who says what the state's position is, and it will not be the position the state has previously taken,\" he continued. TEXAS DEM JAMES TALARICO RIPS 'UN-CHRISTIAN' COURT DECISION ON WHAT'S ALLOWED IN CLASSROOMS Under state law, Senate Bill 10 requires that a \"conspicuous\" copy of the Ten Commandments be displayed in every classroom in every public school and open-enrollment charter school across Texas. In April, the 5th U.S. Circuit Court of Appeals ruled that the law did not violate the Constitution, a major victory for proponents of the legislation, including religious freedom advocates, who have long argued the biblical text is a crucial component of America's legal, moral and historical heritage. However, the law may still face legal scrutiny if the Supreme Court opts to review the case. AMERICA SAW THE BLUE ",
+   "published": "2026-11-28T05:32:06-05:00",
+   "link": "https://www.foxnews.com/politics/texas-attorney-general-elect-refuses-defend-ten-commandments-classroom-law",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "tx-sen": [
+     "talarico",
+     "paxton"
+    ],
+    "obj_x_accused-child-competent-face": [
+     "ruled",
+     "face"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "attorney",
+     "general"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "face"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "review",
+     "first"
+    ],
+    "obj_afederal_barring-canada-court-law": [
+     "religious",
+     "public"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump’s Embrace of Xi and Huang Stuns China Critics in Washington",
+   "dek": "Warnings from hard-liners have grown more urgent amid what some call a winner-take-all race for A.I. dominance.",
+   "opening": "",
+   "published": "2026-11-28T05:19:36+00:00",
+   "link": "https://www.nytimes.com/2026/11/28/us/politics/trump-china-critics-nvidia.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Shop Small Business Saturday for fruit trees, Advent calendars and more",
+   "dek": "Shop Small Business Saturday finds from four brands, including olive trees, pickle Advent calendars, craft beef jerky and freeze-dried dog food.",
+   "opening": "Small Business Saturday is a good excuse to check a few names off your holiday shopping list while supporting small businesses. We've rounded up finds from four brands, including an olive tree you can grow indoors, a pickle Advent calendar and a tote made with pieces handcrafted by military spouses. PlantOGram makes it easy to give someone a tree they can grow at home. Original price: $167.80 This olive tree from PlantOGram is a Tuscan variety you can keep in a pot by a sunny window. It's a timeless gift symbolizing peace, prosperity and longevity. A Kesar mango tree is a variety from western India that grows sweet mangoes with golden-orange flesh. It's celebrated for its incredible sweetness and rich tropical flavor. PlantOGram’s Super Hass is a dwarf variety that grows large, creamy avocados. It comes in three sizes, starting at 1 to 2 feet tall. GiveThemBeer is a family-owned business based in St. Petersburg, Florida. It started with craft beer gifts and now offers everything from whiskey and wine to specialty snacks, plus more than 20 Advent calendars for adults. Count down to Christmas with GiveThemBeer's 2026 Advent Calendar. Each door has a full-size can from an American brewery, with picks including dark brews and Belgian-style beers. The Great American Jerky Tour comes with five bags of beef jerky, each from a different American maker. They come packed in a reusable metal ammo can, making it a fun gift for anyone who loves jerky or spends a lot of time outdoors. Give",
+   "published": "2026-11-28T05:00:48-05:00",
+   "link": "https://www.foxnews.com/deals/shopping-with-friends-small-business-saturday",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_advanced-based-buying-cbs": [
+     "finds",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why Mamdani’s move to close infamous NYC jail could be 'massive hit' that reverberates for years: expert",
+   "dek": "Zohran Mamdani&apos;s Rikers Island closure plan leaves 4,160 jail beds for a city of nearly 9 million, and one expert warns of overcrowding and violence.",
+   "opening": "New York City Mayor Zohran Mamdani (D) announced that Rikers Island would be closed \"once and for all\" by 2032, a promise one crime expert said doesn't add up and could release violent criminals back onto the streets. Mamdani pledged to replace the city's largest jail with four smaller ones across different boroughs, while corrections officers and criminal justice scholars have raised concerns that shrinking the population of more than 6,000 inmates could carry lasting consequences. Rafael Mangual, head of research for policing and public safety at the Manhattan Institute, told Fox News Digital there won't be enough beds to accommodate a city of nearly 9 million people. \"If New York City gets this wrong, make no mistake, there will be a massive hit to public safety ,\" Mangual said. MAMDANI IN HOT SEAT OVER POST MOURNING DEATH OF INMATE CHARGED WITH CALLOUS CRIME: 'ABSOLUTELY SHAMEFUL' The replacement jails in Manhattan, Brooklyn, Queens and the Bronx will have a capacity of 4,160 beds, with an additional 340 therapeutic beds for inmates with mental illnesses and other medical needs. They will be placed closer to public transit and courthouses. Mamdani said the decision to push the closure of Rikers back by five years was because of \"prior administration delays.\" The city will also invest $146 million in support services. The mayor’s office directed Fox News Digital to its Rikers Island closure plan and Mamdani’s remarks at a press conference last week, where he defended his p",
+   "published": "2026-11-28T05:00:03-05:00",
+   "link": "https://www.foxnews.com/politics/why-mamdanis-move-close-infamous-nyc-jail-could-be-massive-hit-reverberates-years-expert",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_california-commute-death-disaster": [
+     "justice",
+     "death"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "city",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Hegseth high on blue wave veterans' list of Trump military problems to fix",
+   "dek": "Rep.-elect Rebecca Bennett, a former Navy helicopter pilot, talks with Jen Psaki about what she hopes to be able to do as part of the new incoming Democratic majority to put an end to Donald Trump's war on Iran, re-assert the power of Congress to authorize wars, and to put an end to Pete Hegseth's disastrous tenure as defense secretary. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opi",
+   "opening": "",
+   "published": "2026-11-28T04:50:24+00:00",
+   "link": "https://www.youtube.com/watch?v=xvGjNjt0THI",
+   "videoId": "xvGjNjt0THI",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "democratic",
+     "iran"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "'STAGGERING': Trump's bizarre fealty to Putin will find no accommodation in new Congress",
+   "dek": "Rep. Madeleine Dean reacts to Donald Trump's declaration that Russian president Vladimir Putin is his friend while Trump's son-in-law sings Putin's praises and sets the stage for a very different reception for Trump's bizarre allegiance when the new Democratic Congress replaces the spinelessness of Mike Johnson's Republicans. MS NOW: My Source for News, Opinion, and the World. » Subscribe to MS NOW: https://www.youtube.com/@msnow Become an MS NOW Member! Join us here ms.now/membership MS NOW is the go-to destination for domestic and international breaking news, and best-in-class opinion journa",
+   "opening": "",
+   "published": "2026-11-28T04:48:07+00:00",
+   "link": "https://www.youtube.com/watch?v=8eEzsSb2BFI",
+   "videoId": "8eEzsSb2BFI",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "democratic"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "when",
+     "congress"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Supreme Court Rulings Cheered by Republicans Wound Up Hurting Them",
+   "dek": "Decisions on voting rights, immigration and corruption generated a backlash that helped spur turnout that drove the Democratic sweep of Congress.",
+   "opening": "",
+   "published": "2026-11-28T02:46:33+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/us/politics/supreme-court-rulings-midterms-voting.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "democratic"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Planning Board to Hold Last-Minute Meeting to Consider Trump’s D.C. Construction",
+   "dek": "President Trump will lose control over the National Capital Planning Commission after Democrats take control of Congress in January. It could give final approval to some of his prized projects.",
+   "opening": "",
+   "published": "2026-11-28T02:33:52+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/us/politics/planning-board-trump-construction-meeting.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_approval-arch-blocks-construction": [
+     "construction",
+     "approval"
+    ],
+    "obj_afederal_appeals-could-court-down": [
+     "could",
+     "lose"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "A Journalist Fights for Free Speech in Egypt, and to Stay Out of Jail",
+   "dek": "The fate of Lina Attalah and her news outlet, Mada Masr, in two court cases is seen as a test of whether the country’s independent press can survive.",
+   "opening": "",
+   "published": "2026-11-28T00:21:34+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/world/middleeast/egypt-journalist-trial-lina-attalah-mada-masr.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_abc-fcc-free-judge": [
+     "free",
+     "speech"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Arch Manning, Longhorns avoid scare against Texas A&M to punch ticket to SEC Championship Game",
+   "dek": "Arch Manning and the Texas Longhorns survived a turnover-filled rivalry battle with Texas A&amp;M, with Tawfiq Byard&apos;s pick highlighting a tense night.",
+   "opening": "Texas came into Friday's game against Texas A&amp;M in good shape. They were on track to take on Georgia in the SEC Championship game and also earn a spot in the College Football Playoff. Of course, that all hinged on them taking care of the Aggies. In the first quarter, Texas A&amp;M stood tall defensively to hold the Longhorns to just a field goal. Unfortunately, the Aggies also dealt with some sloppiness on special teams and failed to put any points on the board during a promising-looking drive late in the frame. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE It didn't take too much longer for Arch Manning and the Texas offense to find the end zone. Manning found wide receiver Cam Coleman for six with a short, three-yard touchdown pass. The Aggies got rid of their goose egg with a late first-half field goal to send this game to the room with the Longhorns leading 10-3. That is a result you've got to think the Aggies would be pleased with, even if there were some elements of their game to clean up. As the second half got underway, the Aggies forced the Longhorns to punt on their first possession, but then came another miscue. Texas A&amp;M receiver Mario Craver caught a pass for ten yards, but fumbled the ball, which was recovered by the Longhorns. The play was reviewed and upheld after it was confirmed that Craver had made the catch before fumbling. That gave Texas a short field, but the Aggies' defense managed to stand pat and held them to a field goal that made it a two-pos",
+   "published": "2026-11-27T23:25:11-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/arch-manning-longhorns-avoid-scare-against-texas-am-punch-ticket-sec-championship-game",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_arch-blocks-court-judge": [
+     "second",
+     "arch"
+    ],
+    "obj_x_college-during-eye-federal": [
+     "college",
+     "during"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Former SEC head coach who landed in the Group of 5 abruptly steps down after underwhelming five-year run",
+   "dek": "Joe Moorhead is out at Akron football after five seasons, ending a run that saw the Zips go 2-10 this year and never post a winning record under his watch.",
+   "opening": "Joe Moorhead exited Mississippi State in 2019 after a two-year stint as head coach in the Southeastern Conference. He was then named Oregon's offensive coordinator. Two years later, Moorhead returned to the head-coaching ranks, taking on the challenge of turning around a program competing at the Group of 5 level. After compiling a 15-44 record over five seasons at Akron, Moorhead says he is ready for another challenge. CLICK HERE FOR MORE OUTKICK SPORTS COVERAGE Moorhead released a statement saying he decided to step down to pursue other opportunities. \"After careful consideration and thoughtful discussions with my family, I informed University of Akron officials of my decision to pursue other opportunities at the conclusion of this season,\" he wrote on social media after the Zips' 17-9 loss to Buffalo on Friday. \"I am thankful to the school administrators, past and present, for providing me with the chance to lead this team for the past five seasons.\" \"Lastly, I would like to express my most sincere gratitude to everyone who poured their heart and soul into this program, especially and most importantly our players. My family and I are excited for the next chapter in our journey and wish Zips football nothing but the best moving forward.\" The Zips finished the 2026 season with a 2-10 record. None of Moorhead’s five seasons at Akron ended with a winning record, with the 2025 season's 5-7 mark representing the best finish of his tenure. COLLEGE FOOTBALL COACHING CAROUSEL COULD ",
+   "published": "2026-11-27T22:45:17-05:00",
+   "link": "https://www.foxnews.com/outkick-sports/former-sec-head-coach-landed-group-5-abruptly-steps-down-underwhelming-five-year-run",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "former",
+     "mississippi",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How to Live Calmly, Despite Stock Market Whiplash",
+   "dek": "Nvidia has been down, up, and down again, and the market has followed. But there’s no need for long-term, diversified investors to alter their course, our columnist says.",
+   "opening": "",
+   "published": "2026-11-27T22:16:28+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/nvidia-jensen-huang-trump-markets.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "‘Work twice as hard for half as much’: What Dems’ HISTORIC firsts mean under Trump",
+   "dek": "On “Clock It with Symone and Eugene,” the two hosts reflect on Symone’s sit down with Gov.-elect Keisha Lance Bottoms, who is set to become Georgia’s first Black woman governor. They weigh in on what the historic wins from the midterms mean for the lawmakers and the future of the country. “If you see a marginalized person in a position of power, know that person has worked twice as hard to get half as much. And they will have to work twice and three times as hard to keep that power,” Eugene says. Visit ms.now/clockit to watch the full episodes of Clock It. MS NOW: My Source for News, Opinion, ",
+   "opening": "",
+   "published": "2026-11-27T22:00:20+00:00",
+   "link": "https://www.youtube.com/watch?v=6M9KN70Bnbw",
+   "videoId": "6M9KN70Bnbw",
+   "publication": "ms-now",
+   "source": "ms-now",
+   "station": "LI",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Quebec Can Keep Its Ban on Religious Symbols, Canada’s Top Court Rules",
+   "dek": "In a landmark decision, the Supreme Court backed the province’s use of a constitutional override while leaving the door open to future legal scrutiny.",
+   "opening": "",
+   "published": "2026-11-27T21:17:12+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/world/canada/canada-supreme-court-quebec-religion-bill-21.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_barring-canada-court-law": [
+     "canada",
+     "quebec",
+     "religious",
+     "symbols"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Wall Street stages major comeback during Thanksgiving-shortened trading week",
+   "dek": "Wall Street staged a strong comeback as the S&amp;P 500 posted its largest weekly gain in more than a year, with investors returning to battered AI stocks.",
+   "opening": "Wall Street staged a strong comeback this week, with all three major U.S. stock indexes posting gains of more than 5% during the Thanksgiving-shortened trading week and the S&amp;P 500 recording its largest weekly gain in more than a year. The rebound came on the heels of last week's historic sell-off, when mounting concerns surrounding the artificial intelligence (AI) boom sent stocks tumbling. The S&amp;P 500 gained 5.6% for the week, marking its strongest weekly performance since April 2025, while the Dow Jones Industrial Average climbed 5.46% and the tech-heavy Nasdaq Composite surged 6.68%. All three major U.S. indexes finished higher Friday as investors returned from the Thanksgiving holiday. MAMDANI TARGETS AMAZON ON BLACK FRIDAY AS 150K CUSTOMERS PUSH BACK AGAINST DELIVERY CRACKDOWN The Dow rose nearly 592 points, or 1.18%, while the S&amp;P 500 gained 1.6% and the Nasdaq jumped 2.31%. Much of the rebound was driven by investors returning to battered AI stocks, many of which suffered steep losses during the previous week's sell-off. Chipmakers Micron and Marvell gained 7.6% and 7.3%, respectively, while Nvidia shares finished Friday's session 0.8% higher. Other major technology companies , including Amazon, Microsoft, Meta and Oracle, also posted gains, while Tesla shares surged 5%. BLACK FRIDAY SHOPPERS BRAVE EARLY LINES, PACKED AISLES TO SCORE IN-STORE DEALS \"The market is so oversold that a bounce was inevitable,\" Jamie Cox, managing partner at Harris Financial Gro",
+   "published": "2026-11-27T21:00:10-05:00",
+   "link": "https://www.foxbusiness.com/markets/wall-street-stages-major-comeback-thanksgiving-shortened-trading-week",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "concerns"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "when"
+    ],
+    "obj_afederal_abc-blocks-chilling-early": [
+     "early",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Taliban reportedly strips women of their names in Afghan province, now being called 'goat' or 'grandmother'",
+   "dek": "The Taliban reportedly banned women&apos;s names from official records in an Afghan province, five years after reclaiming power amid Biden&apos;s chaotic withdrawal.",
+   "opening": "The Taliban have reportedly banned the use of women's names in official documents in a northern Afghan province, with some women being referred to by degrading animal names, according to a report by Spanish newspaper El País . The latest assault on women's rights under Taliban rule reportedly extends to medical records and prescriptions in Afghanistan's Balkh province, raising fears that the restrictions could spread nationwide. Healthcare workers and other public employees have been instructed to address women as \"Bibi,\" meaning grandmother or old woman, according to reporting by Afghan news outlet Zan Times and The Guardian cited by El País. MOSCOW, TALIBAN FORGE MILITARY ALLIANCE IN POWER GRAB AFTER US AFGHANISTAN EXIT: REPORTS Afghan women's rights activist Lalah Osmany, who is based in Germany, told El País that testimony from women, doctors and civil rights activists indicates some women are also being referred to in degrading terms such as \"goat\" or \"cow.\" \"This is a systematic process of dehumanization,\" Osmany told the newspaper. An Afghan activist speaking under a pseudonym confirmed the reported order to El País, although she said it had so far been ignored. Zubaida Akbar, who directs the Afghanistan program at women's rights organization Femena, warned that the Taliban could eventually impose the ban nationwide, citing previous instances in which local restrictions were expanded across the country. IRAN FLOGS FEMALE SINGER 74 TIMES FOR PERFORMING WITHOUT HIJAB IN ",
+   "published": "2026-11-27T20:42:28-05:00",
+   "link": "https://www.foxnews.com/world/taliban-strips-women-names-afghan-province-called-goat-grandmother",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "iran"
+    ],
+    "obj_afederal_appeals-could-court-down": [
+     "workers",
+     "could"
+    ],
+    "obj_x_advanced-based-buying-cbs": [
+     "news",
+     "based"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani handed out $95K in staff raises the same day he warned of $12B budget deficit: report",
+   "dek": "New York City Mayor Zohran Mamdani approved $850,000 in raises for City Hall aides in his first year, according to payroll records reviewed by the New York Post.",
+   "opening": "New York City Mayor Zohran Mamdani approved roughly $850,000 in pay raises for dozens of City Hall aides during his first year in office, according to municipal payroll records reviewed by the New York Post . The records show the raises were distributed to at least 46 staffers since Mamdani took office in January, bringing total compensation increases near $1 million. The Post counted 21 new hires who received raises totaling $450,000 before their first anniversary on the job, more than twice the combined number of first-year employees who got raises under Eric Adams and Bill de Blasio. MAMDANI TURNS ON NEW YORK CITY TEACHERS UNION WITH LAWSUIT BLOCKING PAY RAISES FOR EDUCATORS On Jan. 28, five City Hall employees were granted salary increases totaling $95,000 on the same day Mamdani announced New York City faced an estimated $12 billion budget deficit, the records show. The mayor’s office later lowered that projected deficit to approximately $5.4 billion. The mayor’s office on Nov. 12 confirmed the city’s fiscal 2027 budget rose $3.3 billion from the budget adopted in June, reaching $129.2 billion. MAMDANI'S TAXPAYER-FUNDED INFLUENCER ARMY ACCUSED OF PLOTTING PRESSURE CAMPAIGN AGAINST NYC CEOS The payroll disclosures detail significant salary adjustments across several executive staff positions. Julia Simcoe and Jacob Russell each received raises of more than $60,000, bringing their salaries to $148,000 and $145,000, respectively, the Post reported. Three other City Hall sta",
+   "published": "2026-11-27T19:23:58-05:00",
+   "link": "https://www.foxnews.com/politics/mamdani-handed-95k-staff-raises-same-day-warned-12b-budget-deficit-report",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "city"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Brooks and Capehart on Trump's new tariffs, Nvidia's future and Democratic leadership",
+   "dek": "David Brooks of The Atlantic and Jonathan Capehart of MS NOW join Nick Schifrin to discuss the week in politics, including President Trump's relationship with Russia's Vladimir Putin, Jensen Huang's return to Nvidia and sweeping new tariffs on China, Europe and others.",
+   "opening": "",
+   "published": "2026-11-27T18:40:22-05:00",
+   "link": "https://www.pbs.org/newshour/show/brooks-and-capehart-on-trumps-new-tariffs-nvidias-future-and-democratic-leadership",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "nvidia",
+     "china"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ],
+    "obj_x_china-others-production-ready": [
+     "tariffs",
+     "china",
+     "others"
+    ],
+    "obj_x_brazil-china-factories-hike": [
+     "tariffs",
+     "china",
+     "others"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani targets Amazon on Black Friday as 150K customers push back against delivery crackdown",
+   "dek": "Mamdani pushes union-backed Amazon delivery regulations on Black Friday as 150,000 customers oppose a bill that could raise prices and threaten 5,000 local jobs.",
+   "opening": "As Americans hunt for Black Friday bargains, New York City Mayor Zohran Mamdani is pushing new regulations on Amazon that the retail giant warns could leave New Yorkers paying more for everything from groceries to Christmas gifts. The Democratic Socialist mayor released a video Friday demanding passage of the Delivery Protection Act , union-backed legislation that would impose new licensing and employment requirements on delivery operations across the nation's largest city. More than 150,000 Amazon customers have emailed their City Council members urging them to oppose the legislation since Nov. 19 , Amazon told Fox News Digital. The figure is up from roughly 60,000 emails generated within the campaign's first 36 hours, as previously reported by FOX Business. AMAZON WARNS NYC OF $5 FEES DUE TO MAYOR’S DELIVERY BILL; MAMDANI CRIES ‘GREED’ \"It's Black Friday. The busiest — and most dangerous — time of year for delivery workers,\" Mamdani wrote on X. \"Pass the Delivery Protection Act now.\" The video features select delivery workers accusing Amazon of controlling their schedules, routes and uniforms while using subcontractors to shield itself from responsibility for working conditions. Amazon has warned customers that the legislation could add up to $5 per order. An economic analysis cited by the company estimated annual consumer cost increases of between $409 and $664. \"If Jeff Bezos adds $5 to your order, it’s not because of City Council's efforts to protect workers' rights and ",
+   "published": "2026-11-27T18:35:51-05:00",
+   "link": "https://www.foxbusiness.com/fox-news-politics/mamdani-targets-amazon-black-friday-150k-customers-push-back-against-delivery-crackdown",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "city"
+    ],
+    "obj_afederal_appeals-could-court-down": [
+     "workers",
+     "could"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "With Abbott out, what does the future look like for data centers in Texas?",
+   "dek": "Texas has been one of the most welcoming states for data centers, but that might change with a new governor coming in.",
+   "opening": "Texas has been one of the most welcoming states for data centers, but that might change with a new governor coming in.",
+   "published": "2026-11-27T17:20:33-05:00",
+   "link": "https://www.npr.org/2026/11/27/nx-s1-6048749/with-abbott-out-what-does-the-future-look-like-for-data-centers-in-texas",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tx-sen": [
+     "abbott"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "From turkey shortages to helicopter deliveries: The extraordinary history of Thanksgiving during war",
+   "dek": "The U.S. military has delivered Thanksgiving dinner to troops from Civil War Union troops to Vietnam&apos;s War Zone D, a tradition born in wartime.",
+   "opening": "In November 1966, 12 American soldiers stationed at an isolated outpost in a Vietnamese war zone were about as far from a traditional Thanksgiving at home as they could get. Their only means of resupply was by air. But the U.S. military was determined to get them Thanksgiving dinner anyway. A mess sergeant at Bien Hoa prepared turkey and all the trimmings, packed the meal into insulated containers and sent it by helicopter into War Zone D, where three officers and nine enlisted men of a 5th Special Forces detachment sat down to Thanksgiving dinner, according to Defense Department records preserved by the National Archives. The delivery was one piece of a massive logistical effort the U.S. military has undertaken during wars spanning generations to get traditional Thanksgiving meals to troops serving in combat zones. From civilians sending tens of thousands of turkeys to Union troops during the Civil War to helicopters carrying hot meals to soldiers in Korea, the holiday has been observed through some of the nation's most consequential conflicts. Thanksgiving became a national tradition in the midst of war. President Abraham Lincoln issued his 1863 Thanksgiving proclamation as the Civil War entered its third year, calling on Americans to observe the final Thursday of November as a day of \"Thanksgiving and Praise.\" By the following year, Americans on the home front were mounting a massive effort to get Thanksgiving dinner to Union troops. Former War Department official Charles ",
+   "published": "2026-11-27T17:00:54-05:00",
+   "link": "https://www.foxnews.com/politics/turkey-shortages-helicopter-deliveries-extraordinary-history-thanksgiving-war",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_china-death-leaking-national": [
+     "official",
+     "national"
+    ],
+    "obj_x_brewing-could-following-proposal": [
+     "could",
+     "following"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "New California law could keep teens in booster seats until age 16 unless they pass test",
+   "dek": "Assemblymember Lori Wilson&apos;s seat belt fit test bill requires minors to pass five criteria before riding without a booster seat or in the front seat.",
+   "opening": "Beginning in the new year, minors will be required to pass a five-step seat belt fit test before they can ride without a booster seat or sit in the front seat of a vehicle. The bill's author, Assemblymember Lori Wilson, cited figures showing that child injuries and fatalities in crashes have risen since the pandemic, with children ages 8 to 12 disproportionately affected. \"Extending the required age for booster use and implementing straightforward testing can significantly enhance child safety,\" CalMatters reported. \"So the best thing to do to keep your child safe while riding in a vehicle matches what our law is,\" Wilson said of the bill in April 2025. \"It really is to take into consideration all the varying types of seats that we sit on in the car. This is about safety. \"This is about making sure that if something happens, you are safe, and I think that’s the key thing that we’re trying to drive home is that it is not about treating people like babies.\" 3 CAR SEAT INSTALLATION MISTAKES YOU NEED TO AVOID Previously, children ages 8 and older — or those at least 4 feet, 9 inches tall — could ride without a booster seat. Under the new law, Assembly Bill 435 , children ages 8 to 15 may use a regular seat belt without a booster only if they meet all five criteria: MELATONIN WARNINGS: NEARLY HALF OF PARENTS GIVE IT TO THEIR KIDS TO HELP THEM SLEEP, BUT EXPERTS URGE CAUTION Improper car seat and booster use remains widespread, according to federal and industry studies. GOT A TIP? ",
+   "published": "2026-11-27T16:50:25-05:00",
+   "link": "https://www.foxnews.com/politics/california-law-keep-teens-booster-seats-age-16-unless-pass-test",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_astate_accuracy-bill-gov-hochul": [
+     "required",
+     "warnings"
+    ],
+    "obj_x_all-climate-could-experts": [
+     "experts",
+     "could"
+    ],
+    "obj_congress_ban-car-chinese-lawmakers": [
+     "urge",
+     "pass"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Black Friday shoppers brave early lines, packed aisles to score in-store deals",
+   "dek": "Walmart U.S. Chief Merchandising Officer Julie Barber told FOX Business that in-store traffic started strong on Black Friday as crowds lined up early for holiday deals.",
+   "opening": "Shoppers turned out in droves across the country on Friday, hoping to nab the best holiday deals in stores. Walmart U.S. Chief Merchandising Officer Julie Barber told FOX Business that store traffic was going strong after the retail giant kicked off its in-store Black Friday event at 6 a.m. local time nationwide. \"From an in-store standpoint, what we've tried to do is get some really key, great items that are in-store only to drive traffic,\" Barber said. She added that customers are approaching their shopping lists this year with clear priorities. \"What's interesting about this year is that customers are being pretty intentional about how they're shopping,\" Barber said. BATH &amp; BODY WORKS CEO PLEDGES TO KEEP PRICES AFFORDABLE AS SHOPPERS HUNT FOR BLACK FRIDAY DEALS She pointed to Walmart’s 2026 Holiday Trend Report, released last month, which found roughly seven in 10 shoppers said that lower prices would make holiday shopping easier. Some customers planned ahead using Walmart’s AI assistant , Sparky, to compare items and prices. \"We're pretty excited about the resiliency of our customer right now,\" Barber said. According to Barber, lines formed outside some Walmart locations as early as 3 a.m. She said NeeDoh sensory toys were already more than 80% sold by midday, alongside strong demand for Pokémon cards, TVs, home goods and fashion. \"With the weather cooling off … I saw a lot of people this morning buying slippers and PJs,\" Barber said of Walmart shoppers in the Oklahom",
+   "published": "2026-11-27T16:22:33-05:00",
+   "link": "https://www.foxbusiness.com/lifestyle/black-friday-shoppers-brave-early-lines-packed-aisles-score-in-store-deals",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_afederal_abc-blocks-chilling-early": [
+     "early",
+     "which"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What the Hell Is Going On?",
+   "dek": "Watch the full conversation here: https://youtu.be/rJy7wOapsts Watch more here: https://watchtcn.co/49CDF2t Paid partnership: Reminisce Angus Ranch: Holiday stocking stuffers are here! Shop now at Remangus.com Hallow prayer app: Get 3 months free at https://Hallow.com/Tucker #TuckerCarlson #GlennGreenwald #Midterms #Democrats #Republicans #debt #AI #Israel #Iran #exposed #GTA #nuclearwar #news #politics #podcast",
+   "opening": "",
+   "published": "2026-11-27T16:00:24+00:00",
+   "link": "https://www.youtube.com/watch?v=BMu7Gt7B01g",
+   "videoId": "BMu7Gt7B01g",
+   "publication": "tcn",
+   "source": "tcn",
+   "station": "RP",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "midterms": [
+     "midterm"
+    ],
+    "obj_thesenat_block-democratic-effort-end": [
+     "republicans",
+     "iran"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Canada's Supreme Court largely upholds a Quebec ban on religious symbols for public servants",
+   "dek": "The 2019 law, known as Bill 21, bans religious symbols — including Muslim headscarves, Sikh turbans, Jewish skullcaps and Christian crosses — for workers covered by it.",
+   "opening": "",
+   "published": "2026-11-27T15:48:47-05:00",
+   "link": "https://www.pbs.org/newshour/world/canadas-supreme-court-largely-upholds-a-quebec-ban-on-religious-symbols-for-public-servants",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_barring-canada-court-law": [
+     "canada",
+     "upholds",
+     "quebec",
+     "religious",
+     "symbols",
+     "public"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Black Friday Deals and Holiday Sales Are Big Money for Influencers",
+   "dek": "A growing part of a brand’s Black Friday and Cyber Monday marketing strategy rests on paying top dollar for social media influencers to post videos.",
+   "opening": "",
+   "published": "2026-11-27T15:29:06+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/influencers-black-friday-deals-holiday-shopping.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Army deems lead azide detonation a success but criticism lingers over notification",
+   "dek": "So far, the EPA said there has continued to be \"zero\" airborne lead detected in the region since Wednesday's controlled detonation. While that's reassuring, residents and some elected officials have criticized the Army for not being more transparent and providing more notice when it first determined the stockpile was unstable.",
+   "opening": "",
+   "published": "2026-11-27T15:25:15-05:00",
+   "link": "https://www.pbs.org/newshour/nation/army-deems-lead-azide-detonation-a-success-but-criticism-lingers-over-notification",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_afederal_detonation-halt-iowa-judge": [
+     "lead",
+     "detonation"
+    ],
+    "obj_afederal_army-azide-detonate-iowa": [
+     "army",
+     "lead",
+     "azide",
+     "wednesday"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Climate Talks Imploded, but the ‘Age of Electricity’ Rolls On, Energy Chief Says",
+   "dek": "Fatih Birol, head of the International Energy Agency, said that market forces, data centers and energy security are driving the clean transition anyway.",
+   "opening": "",
+   "published": "2026-11-27T15:18:58+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/fatih-birol-iea-cop31-electrification.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "obj_x_all-climate-could-experts": [
+     "climate",
+     "talks"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "U.S. military says it disabled another ship that tried to breach naval blockade on Iranian ports",
+   "dek": "A military aircraft fired \"precision munitions\" at the stern of the Palau-flagged M/V Pacific Archer on Thursday, and the \"ship's propulsion was ultimately disabled and the civilian crew was unharmed,\" U.S. Central Command said in a statement.",
+   "opening": "",
+   "published": "2026-11-27T14:39:21-05:00",
+   "link": "https://www.pbs.org/newshour/world/u-s-military-says-it-disabled-another-ship-that-tried-to-breach-naval-blockade-on-iranian-ports",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "iran": [
+     "iran"
+    ],
+    "iran-terms": [
+     "naval blockade"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Biden book sales lag way behind Obama, Clinton memoirs in first week",
+   "dek": "President Joe Biden&apos;s memoir, &quot;Promise Me, America,&quot; sold 21,000 copies in its first week, per Circana, far behind presidents Barack Obama and Bill Clinton&apos;s totals.",
+   "opening": "Former President Joe Biden's new memoir, \"Promise Me, America,\" sold only 21,000 copies in its first week of publication, falling well short of memoirs by former presidents Barack Obama and Bill Clinton, according to market research firm Circana. In 2020, Obama's \"A Promised Land\" sold more than 800,000 copies within the first 24 hours of publication, reaching 1 million copies sold by the end of its first week. Clinton's \"My Life\" hit the 1 million copies benchmark within two weeks of its release. BIDEN MEMOIR DRAWS FIRE FOR ‘DENIAL’ AS CRITICS FLAG GAZA, RACIAL-EQUITY OMISSIONS Despite its apparently low sales numbers, Biden's book still topped the New York Times Best Sellers list for nonfiction. The book's publisher, Little, Brown and Company, said in a statement it was \"immensely proud\" of the book reaching the top of the chart. JOE BIDEN ADDRESSES CRITICS WHO SAID HE HID HIS STAGE 4 CANCER DIAGNOSIS IN UPCOMING MEMOIR Biden's promotion of the book had been limited by his relatively scant appearances to promote it, an effort hampered by the former president's 2025 prostate cancer diagnosis. \"Some days are better than others. It hasn't stopped me. But sometimes it slows me down. What that means is, unfortunately, I won't be able to do as many conversations about my book as I'd hoped. However, I'm hopeful the words on the page speak for themselves,\" Biden wrote in a Nov. 8 post on X. The book's diminished sales numbers compared to Biden's Democratic predecessors appear to fo",
+   "published": "2026-11-27T14:38:23-05:00",
+   "link": "https://www.foxnews.com/politics/biden-book-sales-lag-way-behind-obama-clinton-memoirs-first-week",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "democratic",
+     "effort"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Tiny English village battles government over migrant housing plan amid crime fears for women",
+   "dek": "Piddington villagers voted 285-26 to secede from the UK after learning plans would house over 1,200 male asylum seekers at MoD Bicester nearby.",
+   "opening": "A rural Oxfordshire village of just over 350 people is taking on the British government, finding itself at the center of a national debate over immigration and public safety. Residents of Piddington, a small community about 10 miles from the famous Oxford University and known more for its rural setting and centuries-old parish church than political activism, voted overwhelmingly in September to secede from the United Kingdom in a symbolic referendum. The 285-26 vote came after residents learned Prime Minister Andy Burnham’s government planned to house more than 1,200 male asylum seekers at a former Ministry of Defence base in Bicester — less than a mile from the village. What began as a local planning dispute has since become one of Britain's most closely watched immigration battles. The controversy intensified earlier this month when the government approved plans for the asylum accommodation center despite objections from local officials, residents and the Thames Valley Police and Crime Commissioner. WHO IS ANDY BURNHAM? BRITAIN'S NEW PRIME MINISTER AND LONGTIME TRUMP CRITIC \"The Piddington situation reflects a political choice by the Burnham government to start locating asylum seekers across the whole country, to share the burden equally,\" Alan Mendoza, executive director of the Henry Jackson Society, told Fox News Digital. He added that most locations selected to house migrants \"do not vote Labour usually,\" adding that some residents view the policy \"as a form of political",
+   "published": "2026-11-27T14:37:23-05:00",
+   "link": "https://www.foxnews.com/world/tiny-english-village-battles-government-over-migrant-housing-plan-amid-crime-fears-women",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "some",
+     "immigration"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ],
+    "obj_x_australia-deal-despite-law": [
+     "safety",
+     "despite",
+     "objections"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Why buying a home is harder today than in the 1980s",
+   "dek": "A new analysis says saving for a home down payment now takes 10.5 years, more than triple the 1980s, as home prices outpace household incomes.",
+   "opening": "Aspiring homebuyers must spend significantly more time to save for a down payment than they did in the 1980s, when mortgage rates were even higher than they are now, according to a new analysis. Young adults are facing a more challenging housing market than their parents when they were buying their first homes in the 1980s, with a Realtor.com analysis noting that mortgage rates reached a record 18.63% in 1981 while inflation averaged 13.5% in 1980. Those figures are well above current mortgage rates , which are averaging 7.21%, while inflation is above the Federal Reserve's target but sits at 3.7% in the most recent data. Home prices are a key variable in the affordability equation, and prevailing prices are making it far more difficult to save for a down payment. \"The reality is that today's aspiring buyers face a different housing market than generations before,\" said Hannah Jones, senior economist at Realtor.com. \"While mortgage rates were significantly higher in the 1980s, home prices were far more attainable relative to household incomes, allowing buyers to save for a down payment in a fraction of the time it takes today.\" HOME BUILDERS PIVOT TO REMODELING AND REPAIRS AS HIGH RATES SLOW NEW CONSTRUCTION: REPORT The analysis found that in the 1980s, the typical home cost about 3.2 times the median annual income. Today, that ratio has risen to 4.8. Home prices have risen more than fivefold, while household incomes have grown less than fourfold. Even with mortgage rates rel",
+   "published": "2026-11-27T14:20:02-05:00",
+   "link": "https://www.foxbusiness.com/economy/why-buying-home-harder-today-than-1980s",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "housing": [
+     "home prices",
+     "mortgage rate"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "face",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Powerful NY Democrat Andrea Stewart-Cousins dead at 76, reports say",
+   "dek": "Andrea Stewart-Cousins, the trailblazing Democratic leader of the New York state Senate since 2019, was found dead at her Yonkers home Friday at age 76.",
+   "opening": "Andrea Stewart-Cousins, the trailblazing majority leader of the New York State Senate, has died at age 76, according to multiple reports. Stewart-Cousins, the first Black woman to lead the state's upper chamber, was found dead in her Yonkers home on Friday morning, police sources told the New York Post . Her daughter reportedly tried to get in touch with her on Thursday night before calling for a welfare check. Stewart-Cousins, a Democrat, was first elected to the state senate in 2007. She then became majority leader in January 2019 after Democrats won a majority in the chamber in the 2018 midterm elections. NYC MAYOR MAMDANI ANNOUNCES DELAYED PLAN TO CLOSE CITY'S LARGEST JAIL \"She was a groundbreaking leader who shattered one of New York ’s highest glass ceilings,\" Mike Murphy, a spokesman for the Democratic majority, said in a statement. Stewart-Cousins entered a state government marked by a tumultuous Democratic conference amid feuds and power struggles, Politico reported. In 2018, Democrats eventually won 39 of the state Senate’s 63 seats, giving the party its first stable majority since World War II. The next year, state lawmakers spent their time addressing progressive pieces of legislation, such as immigration, abortion protections and tenants' rights, according to the report. NYC SUSPECT IN CHINATOWN FATAL BEATING HAD 5 OPEN CASES AS MAMDANI PUSHES PLAN TO CLOSE RIKERS The Business Council of New York State issued this statement: \"We are deeply saddened to learn of th",
+   "published": "2026-11-27T14:10:31-05:00",
+   "link": "https://www.foxnews.com/politics/powerful-ny-democrat-andrea-stewart-cousins-dead-76-reports-say",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "city"
+    ],
+    "obj_x_allegations-california-democrat-ethics": [
+     "democrat",
+     "report"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Mamdani's top 4 socialist promises met with reality checks as his first year in office nears its end",
+   "dek": "Mayor Zohran Mamdani&apos;s rent freeze covers only about 1 million rent-stabilized units, while his city-run grocery pilot faces long lines and shortages.",
+   "opening": "New York City Mayor Zohran Mamdani , a socialist, has begun delivering on several of his signature campaign promises in his first year leading the largest city in the U.S. But the limited scope of those efforts raises questions about how much of his far-left agenda he can realistically implement. Fox News Digital breaks down some of Mamdani's most controversial campaign promises and those he's made a priority in the first of his four years in office. NYC MAYOR TOUTS ‘SOCIALIST’ WINS IN FIRST 100 DAYS ALONGSIDE BERNIE SANDERS On the campaign trail, Mamdani pitched freezing monthly rent costs as a key strategy to lower the cost of housing for New Yorkers. Roughly 67.7% of those who live in the five boroughs of the city are renters, according to the most recent government data released in 2024. \"As mayor, I will freeze the rent every year that I’m in office. That’s a guarantee,\" Mamdani said in a campaign video posted near the beginning of his campaign in 2024. True to his word, the New York City Rent Guidelines Board announced Mamdani’s promised freeze in June, detailing a 0% increase in one-year leases beginning between October 2026 and October 2027 and a 0% increase for two-year leases beginning in the same window. Mamdani hailed the announcement as a significant victory for the city, highlighting the longer-lease lock. \"This is a historic victory for New York City tenants. After reviewing the data and hearing from New Yorkers across the city, the independent RGB has delivere",
+   "published": "2026-11-27T14:00:09-05:00",
+   "link": "https://www.foxnews.com/politics/mamdanis-top-4-socialist-promises-met-reality-checks-his-first-year-office-nears-its-end",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_bribery-capital-city-former": [
+     "mayor",
+     "city",
+     "years"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US military disables tanker ship attempting to slip through Iran blockade on Thanksgiving Day",
+   "dek": "CENTCOM video shows a U.S. strike disabling a commercial vessel in the Gulf of Oman after it tried to evade the naval blockade of all Iranian ports.",
+   "opening": "A U.S. military aircraft disabled a commercial vessel in the Gulf of Oman on Thursday after it tried to evade the naval blockade of all Iranian ports, which has been in effect since mid-July. The Palau-flagged M/V Pacific Archer left Bandar Abbas, a major port city on Iran's southern coast, before the U.S. Central Command (CENTCOM) fired precision munitions at the ship's stern, destroying its propulsion. A video released by the military shows a projectile hitting the back of the ship and causing an explosion. The civilian crew was unharmed in the strike, CENTCOM said. So far, U.S. forces have redirected 158 compliant commercial vessels and disabled six that refused to comply. TRUMP DARES IRAN TO BREACH US PORT BLOCKADE AS TEHRAN REPORTEDLY READIES 14 OIL TANKERS President Donald Trump said Thursday, while celebrating Thanksgiving at Mar-a-Lago in Palm Beach, Florida, that victory in the Iran war would come \"whenever I want it.\" \"We have victory at hand. It's going to be whenever, sort of, whatever I want it to be. To be honest, and we're trying to be nice, we're giving them every chance to make a deal and save a lot of lives. But I am not sure if they are going to take advantage of that,\" he said in a phone call to U.S. service members. Trump also praised U.S. troops for their role in preventing Iran from obtaining a nuclear weapon. TRUMP PAUSES TURKEY PARDON TO SALUTE US TROOPS GUARDING STRAIT OF HORMUZ: 'WATCH OVER AND PROTECT' \"Each of you is playing an essential role to p",
+   "published": "2026-11-27T13:48:07-05:00",
+   "link": "https://www.foxnews.com/world/us-military-disables-tanker-ship-attempting-slip-through-iran-blockade-thanksgiving-day",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "hormuz",
+     "strait of",
+     "tanker"
+    ],
+    "iran": [
+     "iran",
+     "tehran"
+    ],
+    "hormuz": [
+     "hormuz",
+     "centcom"
+    ],
+    "iran-war": [
+     "iran war"
+    ],
+    "iran-terms": [
+     "naval blockade"
+    ],
+    "blockade": [
+     "port blockade"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Puma Shen, Critic of China, Could be the Next Mayor of Taipei",
+   "dek": "Puma Shen, who has been sanctioned by China for his efforts to prepare civilians for an invasion, could become Taiwan’s next political star if he wins.",
+   "opening": "",
+   "published": "2026-11-27T13:33:49+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/world/asia/puma-shen-taiwan-election-china.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "russia-sanctions": [
+     "sanction"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "GOP senator shares tragic update about husband's death",
+   "dek": "Sen. Deb Fischer&apos;s office says Bruce Fischer died by suicide, revising the belief he passed peacefully at home as the family asks for understanding.",
+   "opening": "This story discusses suicide. If you or someone you know is having thoughts of suicide, please contact the National Suicide Prevention Lifeline at 988 or 1-800-273-TALK (8255). Bruce Fischer, the husband of Sen. Deb Fischer, R-Neb., died by suicide on Sunday, the senator's office said Friday. \"There has been a sad update in the death of Senator Fischer’s husband, Bruce,\" a spokesperson for Fischer's office said in a statement posted to X. \"Initially, it was believed that Bruce passed peacefully at home. Upon further investigation, it was learned that Bruce chose to end his life.\" \"The family is deeply grateful for the recent outpouring of sympathy for their loss and asks for understanding in this time of mourning,\" the statement continued. REPUBLICAN SENATOR'S HUSBAND DEAD: 'OUR FAMILY IS HEARTBROKEN' The spokesperson added that there will be no further comment on the matter, \"and no other details will be provided.\" The update comes after Fischer announced on Monday that her husband had died the past weekend. \"It is with a heavy heart that I share the passing of my beloved husband, Bruce,\" Fischer said in a statement posted on social media at the time. \"Bruce was my partner in life, my greatest source of strength, and the heart of our family. His kindness, integrity, and quiet strength left a lasting impression on all who knew him.\" \"On November 22, Bruce passed away peacefully while doing what he loved most, spending time outdoors,\" the statement continued. AMERICANS COULD F",
+   "published": "2026-11-27T12:16:21-05:00",
+   "link": "https://www.foxnews.com/politics/gop-senator-shares-tragic-update-about-husbands-death",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "obj_x_china-death-leaking-national": [
+     "death",
+     "national"
+    ],
+    "obj_x_against-asks-charges-drop": [
+     "asks",
+     "there"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Republicans rethink tariffs, giving Democrats an opening to challenge Trump",
+   "dek": "After devastating election losses that centered on rising costs, many Republicans said they're open to reconsidering some of the levies that have become a central plank of Trump's global trade agenda.",
+   "opening": "",
+   "published": "2026-11-27T11:51:50-05:00",
+   "link": "https://www.pbs.org/newshour/politics/republicans-rethink-tariffs-giving-democrats-an-opening-to-challenge-trump",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "tariffs": [
+     "tariff"
+    ],
+    "obj_x_apple-biggest-costs-fertilizer": [
+     "tariffs",
+     "costs"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "TGIF: A Gratitude Special",
+   "dek": "Today in TGIF: The return of Jensen Huang, South Africa&#8217;s AI agenda&#8212;and a moment of thanks.",
+   "opening": "Welcome to our Thanksgiving TGIF. It&#8217;s a short one because it&#8217;s really a placeholder for you to say what you&#8217;re thankful for this year. Have some fun in the comments section! I&#8217;ll start. I&#8217;m thankful for human ingenuity, especially for artificial intelligence. It&#8217;s incredible to be alive at the dawn of a new technological era, like being alive for the first days of manmade fire or the wheel or electricity. Was the wheel good? I think so, but I&#8217;m sure things were lost in the pre-wheel days. I&#8217;m sure there were people arguing that the wheel was ruining all of us. Wheels allow people to do bad things faster! Ban wheels! And yet, wheels won. It&#8217;s thrilling to know we&#8217;re all alive to see the world shift again, perhaps the most profound shift yet, perhaps much bigger than fire. No one knows what it will be like, what battles will need to be fought, how we&#8217;ll need to change, what traits will be selected for in future human evolution, and what traits will be lost. But every day this year I woke up curious. I read about the latest on this particular technology and am surprised by what it&#8217;s doing. Like, it just helped solve another complex math problem called the Riemann hypothesis. You can read a neuroscientist&#8217;s gorgeous lament about that. You can choose to deny AI&#8217;s grandeur or to see only the evil that will no doubt come of this. But me, I just can&#8217;t believe the human mind and what we&#8217;ve",
+   "published": "2026-11-27T11:03:14+00:00",
+   "link": "https://www.thefp.com/p/tgif-a-gratitude-special-jensen-huang-nvidia-holiday-season",
+   "publication": "freepress",
+   "source": "free-press",
+   "station": "RP",
+   "matched": {
+    "obj_thesenat_block-democratic-effort-end": [
+     "latest",
+     "again"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Jensen Huang Is Back, and So Is His Plaque at Denny’s",
+   "dek": "The chain said it had restored a plaque honoring Mr. Huang above a booth in San Jose, Calif., where he is said to have developed the idea for Nvidia.",
+   "opening": "",
+   "published": "2026-11-27T10:17:23+00:00",
+   "link": "https://www.nytimes.com/2026/11/26/business/dennys-jensen-huang-nvidia-plaque.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Are tech founders and CEOs 'too big to fail?' Jensen Huang’s Nvidia return sparks debate",
+   "dek": "Jensen Huang&apos;s return as Nvidia CEO just 11 days after resigning spotlights &quot;key-man risk&quot; and what experts call a lack of succession planning at Big Tech.",
+   "opening": "The return of Jensen Huang as Nvidia CEO less than two weeks after his resignation is raising questions over whether co-founders and leaders of major tech companies are being viewed as \"too big to fail.\" Huang, who co-founded Nvidia in 1993, stepped down as chief executive on Nov. 12 after reports emerged about his extramarital affairs. While the board said during a Nov. 17 earnings call that it wasn't planning to reinstate him, it ultimately reversed course on Nov. 23. The Huang case at Nvidia follows the saga of OpenAI co-founder Sam Altman, who was ousted as CEO by the AI giant's board following a 2023 power struggle in which he was accused of not being candid with the board. Altman was reinstated within a week after many of the ChatGPT-maker's employees threatened to quit. Huang’s central role in Nvidia’s ascent to becoming one of the world’s most valuable companies has highlighted \"key-man risk\" – a firm’s reliance on a single leader for critical operational and strategic decisions. WHAT JENSEN HUANG'S RETURN MEANS FOR NVIDIA – AND WALL STREET Dan Ives, partner and senior managing director at Yorkville Ives, told FOX Business that \"Jensen and the other major tech CEOs are the linchpin to the AI Revolution and the global economy. It's key-man risk front and center in this tech world and that is not changing. Jensen is not replaceable.\" Gil Luria, managing director at D.A. Davidson, said that the Nvidia situation is \"highly unusual\" as it's the most profitable company in t",
+   "published": "2026-11-27T10:06:33-05:00",
+   "link": "https://www.foxbusiness.com/markets/tech-founders-too-big-fail-jensen-huangs-nvidia-return-sparks-debate",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "chips": [
+     "nvidia"
+    ],
+    "obj_x_blocks-case-company-drop": [
+     "case",
+     "company"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "nvidia",
+     "jensen",
+     "huang"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "As Prices Rise, Americans Are Making Trade-Offs Rather Than Cutting Back",
+   "dek": "Within strong consumer spending lie the decisions many families are making to stretch their dollars to cover the meals, trips and activities they value most.",
+   "opening": "",
+   "published": "2026-11-27T10:02:41+00:00",
+   "link": "https://www.nytimes.com/2026/11/27/business/inflation-consumer-spending-trade-offs-holidays.html",
+   "publication": "nyt",
+   "source": "nyt",
+   "station": "LI",
+   "matched": {
+    "dollar": [
+     "dollar"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "What's Really Happening With The U.S. Economy?",
+   "dek": "Americans remain frustrated by high prices despite slowing inflation and recent economic gains, while stock market volatility and tech outages raise new concerns heading into the holiday shopping season. John Bickley and Georgia Howe sit down with Cato Institute economist Scott Lincicome to examine what's driving falling gas prices, how the midterm results could reshape economic policy, and why the AI boom may be fueling a surge in new businesses. Get the facts first with Morning Wire. Start your morning with 15 minutes of what matters — and none of what doesn’t. Welcome to Morning Wire. 🔔 Sub",
+   "opening": "",
+   "published": "2026-11-27T09:30:19+00:00",
+   "link": "https://www.youtube.com/watch?v=z83T4Y8fEvA",
+   "videoId": "z83T4Y8fEvA",
+   "publication": "shapiro",
+   "source": "shapiro",
+   "station": "RP",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "US pilot tells Trump which fighter jet is ‘world’s greatest’ during Thanksgiving phone call",
+   "dek": "An F-16 pilot told President Donald Trump the jet is the &quot;world&apos;s greatest&quot; during a Thanksgiving call, saying &quot;you couldn&apos;t pay me to switch airplanes.&quot;",
+   "opening": "President Donald Trump learned what the \"world's greatest\" fighter jet is, according to an F-16 pilot, during a phone call on Thanksgiving Day. \"So could I ask, before I give my little speech to you — a little quick one — could I ask, so the F-16, you love it, right?\" Trump asked U.S. Air Force Lt. Col. Brant Smith. \"World's greatest fighter jet, sir,\" Smith replied. Trump spoke to Smith from his Mar-a-Lago resort in Florida as the president and first lady Melania made calls to service members from all six branches of the U.S. military. A LOOK AT HOW THE TRUMPS SPEND THEIR THANKSGIVING HOLIDAY THROUGH THE YEARS Trump asked Smith to compare his F-16 to other fighter jets like the F-22 or F-35 , to which Smith replied: \"The F-16 all day.\" TRUMP SAYS AIR FORCE PILOTS DESCRIBED A ROUND UFO FLYING THREE TIMES FASTER THAN AN F-22 FIGHTER JET \"You couldn't pay me to switch airplanes,\" Smith added. \"I love flying this airplane. And I think there are very few pilots in this room that would argue with me. Both of those airplanes (F-22 and F-35) are great, and they have their place in the world and in the war. But, this is a lot of fun. We get to do it all, and it does it all very well,\" Smith said. The president also asked Smith about his service and queried about what he was doing at the time. \"We are pre-installing the air base in Saudi Arabia ,\" Smith replied. CENTCOM'S THANKSGIVING MESSAGE TO TROOPS 'IS ONE OF DEEP GRATITUDE' FOR THEIR 'EXCEPTIONAL WORK' PROTECTING US \"You have a p",
+   "published": "2026-11-27T09:25:40-05:00",
+   "link": "https://www.foxnews.com/politics/us-pilot-tells-trump-which-fighter-jet-worlds-greatest-thanksgiving-phone-call",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "hormuz": [
+     "centcom"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "From Hollywood mogul to Biden-Harris insiders, Democrats turn to familiar faces to shape their next chapter",
+   "dek": "Abdul El-Sayed&apos;s transition team director previously claimed Zionists were &quot;controlling&quot; U.S. politics, while Tyler Perry co-chairs Georgia&apos;s team.",
+   "opening": "On the heels of the blue wave in the 2026 U.S. midterms, incoming Democratic leaders are tapping an eclectic mix of political veterans, business executives and entertainment figures to help shape their transitions into power. From a Hollywood mogul and former Biden administration officials to figures with ties to Republican leaders, the appointments offer an early glimpse into the people Democrats are turning to as they prepare to govern — and the experience and connections they hope to bring into their new administrations. Several incoming Democrats are turning to familiar faces from the Biden administration. In New Mexico, Gov.-elect Deb Haaland tapped former Biden presidential speechwriter Felicia Salazar and former Interior Department official Joan Mooney for her transition team, while California Gov.-elect Xavier Becerra selected Arsenio Mataka, who previously served as his senior counselor at the Department of Health and Human Services under Biden, to direct policy for his transition team. In Ohio, Democratic Gov.-elect Amy Acton tapped Elisabeth Hire, a former aide to then-Vice President Biden, as a transition co-chair. Haaland's campaign and Becerra's campaign each did not respond to Fox News Digital's request for comment. The transition teams will help incoming leaders prepare to take office, including identifying potential administration officials, shaping policy priorities and laying the groundwork for their first days in power. The selections also offer a window i",
+   "published": "2026-11-27T08:00:33-05:00",
+   "link": "https://www.foxnews.com/politics/from-hollywood-mogul-biden-harris-insiders-democrats-turn-familiar-faces-shape-next-chapter",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "midterms": [
+     "midterm"
+    ],
+    "obj_x_about-california-ceo-china": [
+     "california",
+     "former",
+     "ties"
+    ],
+    "obj_thejusti_affair-attorney-california-ceo": [
+     "california",
+     "former"
+    ],
+    "obj_afederal_abc-amendment-blocks-citing": [
+     "early",
+     "first"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "How to spot real Black Friday savings this holiday season amid the affordability squeeze",
+   "dek": "A marketing professor warns that Black Friday deals aren&apos;t always real discounts, citing shrinkflation and inflation as factors that obscure true savings.",
+   "opening": "Black Friday deals are everywhere, but a sale price does not always mean real savings. With budgets under pressure, amid a persisting affordability crisis and rising fuel prices with the raging Iran conflict, shoppers are looking for ways to stretch their money during the holiday shopping season this year. The forecasts point to a season of cautious spending. Visa Business and Economics Insights expects holiday sales to increase 4.5% from last year — but after accounting for higher prices, the actual increase in what shoppers buy is projected to be just 1.1%. That makes it all the more important for shoppers to know what they’re paying for and whether a sale is truly a deal. \"It's still a good time to shop. It's just that you just have to be a little bit more careful,\" Dinesh Gauri, a marketing professor at the University at Buffalo, told Fox News Digital when discussing holiday and Black Friday shopping. 7 HOLIDAY SHOPPING SCAMS TO WATCH FOR THIS SEASON Gauri revealed that shopping during Black Friday does not always produce the best deal — especially when it comes to essential technology like cell phones. He advised shoppers to set a budget and research prices before making a purchase, especially for big-ticket items. \"Have a number in mind and do your research before you go about spending the money,\" he said, recommending price-tracking sites and extra promotions. Gauri cited higher gas prices compared with last year as a potential pressure point for consumers, particularl",
+   "published": "2026-11-27T06:00:26-05:00",
+   "link": "https://www.foxnews.com/politics/how-spot-real-black-friday-savings-holiday-season-amid-affordability-squeeze",
+   "publication": "fox",
+   "source": "fox",
+   "station": "RI?",
+   "matched": {
+    "diesel": [
+     "fuel price"
+    ],
+    "iran": [
+     "iran"
+    ],
+    "obj_congress_before-ceo-congress-face": [
+     "what",
+     "when"
+    ]
+   },
+   "baseline": false
+  },
+  {
+   "title": "Trump effectively ended asylum. Advocates look to the Supreme Court to restore it",
+   "dek": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process.",
+   "opening": "Trump's sweeping immigration changes — an asylum ban, mass firings and new legal maneuvers — have all but ended asylum. The high court will soon consider whether some shifts deny people due process. (Image credit: Olivier Touron)",
+   "published": "2026-11-27T05:00:00-05:00",
+   "link": "https://www.npr.org/2026/11/27/nx-s1-6037854/trump-effectively-ended-asylum-supreme-court",
+   "publication": "npr-pbs",
+   "source": "npr-pbs",
+   "station": "LI",
+   "matched": {
+    "obj_thepresi_efforts-enforcement-help-immigration": [
+     "some",
+     "immigration"
+    ]
+   },
+   "baseline": false
+  }
+ ],
+ "log": []
+}
